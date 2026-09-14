@@ -30,9 +30,14 @@ def _all_names(conn: sqlite3.Connection, limit: int) -> list[str]:
 
 
 def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
-    """一轮完整采集：发现 + 快照。每日跑一次。"""
+    """一轮完整采集：发现 + 快照。每日跑一次。
+
+    渠道顺序刻意如此：watchlist > Trending > 搜索 > 历史池刷新。
+    因为请求预算有限，谁先来谁占名额，所以把「用户明确关心的」放在最前面。
+    """
     today = settings.today()
     now_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    cap = max(1, settings.max_candidates)
 
     repo_rows: list[dict] = []
     snap_rows: list[dict] = []
@@ -63,68 +68,77 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
             }
         )
 
-    # ── 渠道 A：Search API 找近期创建的新项目（自带星数，零额外请求）──
-    search_total = 0
-    langs = settings.languages or ["All"]
-    for lang in langs:
-        remaining = settings.max_candidates - len(seen_ids)
-        if remaining <= 0:
-            log.info("候选池已达上限 %d，跳过之后的搜索渠道", settings.max_candidates)
-            break
-        per_lang = max(1, remaining // max(1, len(langs)))
-        for rank, repo in enumerate(
-            github_api.search_recent_repos(
-                http,
-                lookback_days=settings.search_lookback_days,
-                min_stars=settings.search_min_stars,
-                language=lang,
-                max_items=per_lang,
-            ),
-            start=1,
-        ):
-            accept(repo, "search_api", "gh_search", rank)
-            search_total += 1
+    # 计数放进 dict，这样即使中途异常也能带着已有成绩落到持久化步骤
+    counts = {"watchlist": 0, "trending": 0, "search": 0, "pool_refresh": 0}
+    errors: list[str] = []
 
-    # ── 渠道 B：Trending 页（只有名字，需补一次请求）──
-    trending_hits = trending.fetch_trending(http, settings.trending_since, settings.languages)
-    trending_resolved = 0
-    for hit in trending_hits:
-        if len(seen_ids) >= settings.max_candidates:
-            break
-        repo = github_api.get_repo(http, hit["full_name"])
-        if repo:
-            accept(repo, "github_api", "gh_trending", hit.get("rank"))
-            trending_resolved += 1
+    try:
+        # ── 渠道 A：种子池（watchlist）──────────────────────────
+        # 放在最前面且不设上限：这些是用户显式关注的项目，必须保证一定进池。
+        # 早先版本里 Search 渠道会先把名额吃光，导致 watchlist 反而进不来，已修正。
+        for name in settings.seed_repos:
+            if len(seen_ids) >= cap:
+                log.warning("候选池已满，%d 个 watchlist 仓库未能纳入", len(settings.seed_repos))
+                break
+            repo = github_api.get_repo(http, name)
+            if repo:
+                accept(repo, "github_api", "seed", None)
+                counts["watchlist"] += 1
 
-    # ── 渠道 C：种子池（watchlist + 上一期候选池）──
-    pool: list[str] = list(settings.seed_repos)
-    pool.extend(_all_names(conn, settings.max_candidates))
-    dedup_pool: list[str] = []
-    seen_names: set[str] = set()
-    for name in pool:
-        key = name.lower()
-        if key not in seen_names:
-            seen_names.add(key)
-            dedup_pool.append(name)
+        # ── 渠道 B：Trending 页（只有名字，需补一次请求）──
+        for hit in trending.fetch_trending(http, settings.trending_since, settings.languages):
+            if len(seen_ids) >= cap:
+                break
+            repo = github_api.get_repo(http, hit["full_name"])
+            if repo:
+                accept(repo, "github_api", "gh_trending", hit.get("rank"))
+                counts["trending"] += 1
 
-    known_ids = {r["repo_id"] for r in db.candidate_repos(conn, settings.max_candidates)}
-    pool_budget = max(0, settings.max_candidates - len(seen_ids))
-    refreshed = 0
-    for name in dedup_pool[:pool_budget]:
-        existing = conn.execute(
-            "SELECT repo_id FROM repo WHERE lower(full_name) = ?", (name.lower(),)
-        ).fetchone()
-        if existing and existing["repo_id"] in seen_ids:
-            continue  # 本轮已经通过搜索或 Trending 采过了
-        repo = github_api.get_repo(http, name)
-        if repo:
-            accept(repo, "github_api", "seed", None)
-            refreshed += 1
-        if len(seen_ids) >= settings.max_candidates:
-            log.info("已达候选池上限 %d，停止扩充", settings.max_candidates)
-            break
+        # ── 渠道 C：Search API 找近期创建的新项目（自带星数，零额外请求）──
+        # 只用「剩余预算」，不挤占 A/B —— 否则新项目会把老项目和 watchlist 全挤出去。
+        langs = settings.languages or ["All"]
+        for idx, lang in enumerate(langs):
+            left = cap - len(seen_ids)
+            if left <= 0:
+                log.info("候选池已达上限 %d，跳过之后的搜索渠道", cap)
+                break
+            per_lang = max(1, left // (len(langs) - idx))
+            for rank, repo in enumerate(
+                github_api.search_recent_repos(
+                    http,
+                    lookback_days=settings.search_lookback_days,
+                    min_stars=settings.search_min_stars,
+                    language=lang,
+                    max_items=per_lang,
+                ),
+                start=1,
+            ):
+                accept(repo, "search_api", "gh_search", rank)
+                counts["search"] += 1
 
-    # ── 落库 ──
+        # ── 渠道 D：刷新上一期的历史候选池，保证老项目的时间序列不断档 ──
+        for name in _all_names(conn, cap):
+            if len(seen_ids) >= cap:
+                log.info("已达候选池上限 %d，停止扩充", cap)
+                break
+            existing = conn.execute(
+                "SELECT repo_id FROM repo WHERE lower(full_name) = ?", (name.lower(),)
+            ).fetchone()
+            if existing and existing["repo_id"] in seen_ids:
+                continue  # 本轮已经通过前面渠道采过了
+            repo = github_api.get_repo(http, name)
+            if repo:
+                accept(repo, "github_api", "pool", None)
+                counts["pool_refresh"] += 1
+
+    except Exception as exc:  # noqa: BLE001
+        # 关键：任何意外都不能丢掉已经采到的数据。
+        # 之前这里没有兜底，一次响应体截断就让整轮 800 个仓库全部作废。
+        msg = f"{type(exc).__name__}: {exc}"
+        errors.append(msg)
+        log.exception("采集中途出错，将保存已获取的 %d 个仓库", len(repo_rows))
+
+    # ── 落库（无论上方是否出错都执行）──
     db.upsert_repos(conn, repo_rows, today)
     n_snap = db.upsert_snapshots(conn, snap_rows)
     for rid, items in channels.items():
@@ -137,17 +151,16 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
         "date": today,
         "repos_upserted": len(repo_rows),
         "snapshots_written": n_snap,
-        "from_search": search_total,
-        "from_trending": trending_resolved,
-        "refreshed_from_pool": refreshed,
         "candidates_total": len(seen_ids),
+        "by_channel": counts,
+        "errors": errors,
         "json": str(json_path),
         "http": http.stats(),
-        "known_pool_size": len(known_ids),
     }
     log.info(
-        "采集完成 %s：快照 %d 个（搜索 %d / Trending %d / 池内刷新 %d）",
-        today, n_snap, search_total, trending_resolved, refreshed,
+        "采集完成 %s：快照 %d 个（watchlist %d / Trending %d / 搜索 %d / 池内刷新 %d）",
+        today, n_snap, counts["watchlist"], counts["trending"],
+        counts["search"], counts["pool_refresh"],
     )
     return stats
 

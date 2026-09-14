@@ -12,6 +12,7 @@
 
 from __future__ import annotations
 
+import http.client
 import json
 import logging
 import time
@@ -21,6 +22,18 @@ import urllib.request
 from dataclasses import dataclass, field
 
 log = logging.getLogger("star_pulse.net")
+
+# 需要重试的瞬时网络故障。
+# 特别注意 http.client.HTTPException：IncompleteRead 就在这里，
+# 它是代理/网关截断响应体时抛出的，**不是 OSError 的子类**。
+# 早先版本漏了它，导致一次响应截断就打挂整轮采集（实测踩到）。
+TRANSIENT_ERRORS = (
+    urllib.error.URLError,
+    http.client.HTTPException,
+    TimeoutError,
+    ConnectionError,
+    OSError,
+)
 
 
 class BudgetExceeded(RuntimeError):
@@ -179,13 +192,13 @@ class Http:
                 log.error("HTTP %s %s -> %s", exc.code, url, body[:200])
                 return Response(exc.code, resp_headers, body, url)
 
-            except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            except TRANSIENT_ERRORS as exc:
                 self._last_request_at = time.time()
                 if attempt <= max_attempts:
                     backoff = min(60, 2 ** attempt)
-                    self._sleep(backoff, f"网络错误 {exc}，第 {attempt} 次重试")
+                    self._sleep(backoff, f"网络错误 {type(exc).__name__}，第 {attempt} 次重试")
                     continue
-                log.error("网络请求最终失败 %s -> %s", url, exc)
+                log.error("网络请求最终失败 %s -> %s: %s", url, type(exc).__name__, exc)
                 return None
 
     def stats(self) -> str:

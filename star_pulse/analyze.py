@@ -264,3 +264,169 @@ def category_breakdown(rows: list[dict], repo_meta: dict[str, dict]) -> list[tup
         label = classify({**meta, "full_name": row["full_name"]})
         counts[label] = counts.get(label, 0) + 1
     return sorted(counts.items(), key=lambda kv: -kv[1])
+
+
+# ── 日维度查询（供站点看板使用）─────────────────────────────────
+def all_snapshot_dates(conn: sqlite3.Connection) -> list[str]:
+    """全部快照日期，升序。"""
+    return [
+        r["snap_date"]
+        for r in conn.execute(
+            "SELECT DISTINCT snap_date FROM snapshot ORDER BY snap_date"
+        ).fetchall()
+    ]
+
+
+def daily_rows(conn: sqlite3.Connection, day: str) -> list[dict]:
+    """某一天采集到的全部仓库及其星数。"""
+    return [
+        dict(r)
+        for r in conn.execute(
+            """
+            SELECT r.full_name, r.language, r.description, r.repo_created,
+                   s.stars, s.forks
+            FROM snapshot s JOIN repo r ON r.repo_id = s.repo_id
+            WHERE s.snap_date = :day AND r.is_fork = 0 AND r.is_archived = 0
+            ORDER BY s.stars DESC
+            """,
+            {"day": day},
+        ).fetchall()
+    ]
+
+
+def daily_gain(
+    conn: sqlite3.Connection, day: str, prev_day: str, limit: int | None = None
+) -> list[dict]:
+    """单日涨幅榜：day 相对于 prev_day 的新增 Star。
+
+    注意与周增榜的区别：这里只比较**相邻两个快照日**，
+    要求两个日期都真实存在（不取「最近一次」），所以口径最干净。
+    """
+    limit_sql = f"LIMIT {int(limit)}" if limit else ""
+    rows = conn.execute(
+        f"""
+        SELECT r.full_name, r.language,
+               s1.stars - s0.stars AS delta,
+               s1.stars AS stars
+        FROM snapshot s1
+        JOIN snapshot s0 ON s0.repo_id = s1.repo_id AND s0.snap_date = :prev
+        JOIN repo r      ON r.repo_id  = s1.repo_id
+        WHERE s1.snap_date = :day
+          AND r.is_fork = 0 AND r.is_archived = 0
+          AND s1.stars > s0.stars
+        ORDER BY delta DESC
+        {limit_sql}
+        """,
+        {"day": day, "prev": prev_day},
+    ).fetchall()
+    return [dict(r) for r in rows]
+
+
+def daily_summary(conn: sqlite3.Connection) -> list[dict]:
+    """逐日汇总，正好对应「每天的情况」这个需求。
+
+    每一天给出：当天入库仓库数、全网池内新增星数合计、当天涨幅冠军、
+    以及当天相对前一天新出现的仓库数（候选池扩张情况）。
+    """
+    dates = all_snapshot_dates(conn)
+    out: list[dict] = []
+    for i, day in enumerate(dates):
+        prev = dates[i - 1] if i > 0 else None
+        count = conn.execute(
+            "SELECT COUNT(*) c FROM snapshot WHERE snap_date = ?", (day,)
+        ).fetchone()["c"]
+
+        item = {
+            "date": day,
+            "repos": count,
+            "is_first": prev is None,
+            "total_gain": 0,
+            "gainers": 0,
+            "top_name": None,
+            "top_delta": 0,
+            "new_repos": 0,
+            "prev": prev,
+        }
+        if prev:
+            agg = conn.execute(
+                """
+                SELECT COALESCE(SUM(s1.stars - s0.stars), 0) AS total,
+                       COUNT(*) AS gainers
+                FROM snapshot s1
+                JOIN snapshot s0 ON s0.repo_id = s1.repo_id AND s0.snap_date = :prev
+                JOIN repo r ON r.repo_id = s1.repo_id
+                WHERE s1.snap_date = :day AND s1.stars > s0.stars
+                  AND r.is_fork = 0 AND r.is_archived = 0
+                """,
+                {"day": day, "prev": prev},
+            ).fetchone()
+            item["total_gain"] = int(agg["total"] or 0)
+            item["gainers"] = int(agg["gainers"] or 0)
+            top = daily_gain(conn, day, prev, limit=1)
+            if top:
+                item["top_name"] = top[0]["full_name"]
+                item["top_delta"] = top[0]["delta"]
+            item["new_repos"] = conn.execute(
+                """
+                SELECT COUNT(*) c FROM snapshot s1
+                WHERE s1.snap_date = :day
+                  AND NOT EXISTS (SELECT 1 FROM snapshot s0
+                                  WHERE s0.repo_id = s1.repo_id AND s0.snap_date = :prev)
+                """,
+                {"day": day, "prev": prev},
+            ).fetchone()["c"]
+        out.append(item)
+    return out
+
+
+def growth_series(
+    conn: sqlite3.Connection, dates: list[str], limit: int = 8
+) -> tuple[list[str], list[dict]]:
+    """挑出「累计增量最大」的若干个仓库，返回它们相对首日的累计增量走势。
+
+    为什么用「相对首日的累计增量」而不是星数绝对值：后者跨度可达 20 倍
+    （3 万星 vs 26 万星），画在同一张折线图上什么都看不出来。
+    """
+    if len(dates) < 2:
+        return dates, []
+    first, last = dates[0], dates[-1]
+    movers = conn.execute(
+        """
+        SELECT r.full_name, r.language,
+               s1.stars - s0.stars AS gain
+        FROM snapshot s1
+        JOIN snapshot s0 ON s0.repo_id = s1.repo_id AND s0.snap_date = :first
+        JOIN repo r      ON r.repo_id  = s1.repo_id
+        WHERE s1.snap_date = :last AND s1.stars > s0.stars
+          AND r.is_fork = 0 AND r.is_archived = 0
+        ORDER BY gain DESC
+        LIMIT :limit
+        """,
+        {"first": first, "last": last, "limit": limit},
+    ).fetchall()
+
+    series = []
+    for row in movers:
+        points = conn.execute(
+            """
+            SELECT s.snap_date, s.stars FROM snapshot s
+            JOIN repo r ON r.repo_id = s.repo_id
+            WHERE r.full_name = :name AND s.snap_date BETWEEN :first AND :last
+            ORDER BY s.snap_date
+            """,
+            {"name": row["full_name"], "first": first, "last": last},
+        ).fetchall()
+        if len(points) < 2:
+            continue
+        base = points[0]["stars"]
+        series.append(
+            {
+                "full_name": row["full_name"],
+                "language": row["language"],
+                "total_gain": row["gain"],
+                "points": [
+                    {"date": p["snap_date"], "gain": p["stars"] - base} for p in points
+                ],
+            }
+        )
+    return dates, series

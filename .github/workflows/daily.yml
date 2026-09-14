@@ -36,11 +36,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m star_pulse run-daily
 
-      - name: 提交数据
+      - name: 重建站点
+        if: always()
+        run: python -m star_pulse site
+
+      - name: 提交数据与站点
+        if: always()
         run: |
           git config user.name  "star-pulse-bot"
           git config user.email "star-pulse-bot@users.noreply.github.com"
-          git add data/snapshots
+          git add data/snapshots docs
           if git diff --staged --quiet; then
             echo "没有新数据，跳过提交"
           else

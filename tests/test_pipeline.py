@@ -183,6 +183,34 @@ def test_json_roundtrip(tmp: Path) -> None:
     print(f"  [PASS] JSON 快照可完整重建 SQLite（{snaps} 条记录，排名一致）")
 
 
+def test_site_build(tmp: Path) -> None:
+    """站点看板：核心板块必须齐全，且不能残留未替换的占位符。"""
+    from star_pulse import site as site_builder
+
+    settings, conn = _seed(tmp / "site")
+    stats = site_builder.build_site(settings, conn)
+    docs = Path(stats["docs"])
+    html = (docs / "index.html").read_text(encoding="utf-8")
+
+    for section in ("每天的情况", "当日涨幅榜", "累计增长榜", "每日新增走势", "领涨仓库走势"):
+        assert section in html, f"看板缺少板块：{section}"
+    assert html.count("<canvas") == 2, "应有 2 个图表"
+    assert "const D = {" in html, "图表数据未内联（那样本地打开就看不到图）"
+    assert "__" not in html, "存在未替换的占位符"
+    assert (docs / "data.json").is_file(), "缺少 data.json"
+    assert (docs / ".nojekyll").is_file(), "缺少 .nojekyll（分支部署 Pages 需要）"
+
+    # 每日汇总必须能逐日算出来，且首日标记为基线
+    summary = analyze.daily_summary(conn)
+    assert len(summary) == 2, f"应有 2 天，实际 {len(summary)}"
+    assert summary[0]["is_first"] is True and summary[0]["total_gain"] == 0
+    assert summary[1]["total_gain"] == sum(d for _f, _s, d, *_ in PUBLISHED_W37), (
+        "第二天的全网新增合计应等于本周新增之和"
+    )
+    assert summary[1]["top_name"] == "ayghri/i-have-adhd", "当日冠军应为 i-have-adhd"
+    print(f"  [PASS] 看板生成正确（{len(summary)} 天，当日冠军 {summary[1]['top_name']}）")
+
+
 def main() -> int:
     print("star-pulse 回归测试")
     print("=" * 58)
@@ -193,6 +221,7 @@ def main() -> int:
         test_span_drop(tmp)
         test_idempotent_snapshot(tmp)
         test_json_roundtrip(tmp)
+        test_site_build(tmp)
     print("=" * 58)
     print("全部通过")
     return 0

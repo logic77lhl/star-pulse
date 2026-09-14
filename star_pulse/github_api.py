@@ -21,6 +21,12 @@ log = logging.getLogger("star_pulse.github")
 API = "https://api.github.com"
 SEARCH_RESULT_CAP = 1000
 
+# 每页条数刻意不用上限 100。
+# 实测：单页 100 条时响应体约 550 KB，会被中间代理在 ~512 KB 处截断，
+# 抛出 IncompleteRead 并导致该页永久失败。降到 50 条（约 275 KB）可稳定通过。
+# 代价只是多几个请求，而 Search 配额（认证 30 次/分钟）完全够用。
+SEARCH_PER_PAGE = 50
+
 
 def normalize_repo(raw: dict) -> dict | None:
     """把 API 返回的仓库对象映射成 repo 表需要的字段。"""
@@ -89,7 +95,10 @@ def search_recent_repos(
         query += f" language:{language}"
 
     collected: list[dict] = []
-    max_pages = min(10, max(1, (max_items + 99) // 100))
+    max_pages = min(
+        SEARCH_RESULT_CAP // SEARCH_PER_PAGE,
+        max(1, -(-max_items // SEARCH_PER_PAGE)),  # 向上取整
+    )
     for page in range(1, max_pages + 1):
         resp = http.get_json(
             f"{API}/search/repositories",
@@ -97,24 +106,26 @@ def search_recent_repos(
                 "q": query,
                 "sort": "stars",
                 "order": "desc",
-                "per_page": 100,
+                "per_page": SEARCH_PER_PAGE,
                 "page": page,
             },
         )
         if resp is None:
+            # 不要静默退出：这会让候选池悄悄变小，而日志里什么都看不出来
+            log.warning("搜索第 %d 页请求失败，已获取 %d 条后中止", page, len(collected))
             break
         if resp.status == 422:
-            log.info("搜索已达 1000 条上限，停止翻页（q=%s）", query)
+            log.info("搜索已达 %d 条上限，停止翻页（q=%s）", SEARCH_RESULT_CAP, query)
             break
         if resp.status != 200:
-            log.warning("搜索失败 HTTP %s（q=%s）", resp.status, query)
+            log.warning("搜索失败 HTTP %s（q=%s，第 %d 页）", resp.status, query, page)
             break
         data = resp.json() or {}
         items = data.get("items") or []
         if not items:
             break
         collected.extend(items)
-        if len(items) < 100 or len(collected) >= data.get("total_count", 0):
+        if len(items) < SEARCH_PER_PAGE or len(collected) >= data.get("total_count", 0):
             break
 
     repos: list[dict] = []

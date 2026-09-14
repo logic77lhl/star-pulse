@@ -1,8 +1,10 @@
 # star-pulse
 
-本地生成「GitHub 星耀榜」：每日采快照，每周出周报（含周增 Star 排名、分类透视、防刷星标记）。
+本地生成「GitHub 星耀榜」：每日采快照，每周出周报（含周增 Star 排名、分类透视、防刷星标记），并自动生成一个**每天情况汇总的在线看板**。
 
 零第三方依赖，只用 Python 3.11+ 标准库。CI 里不需要 `pip install`。
+
+> 在线看板：`https://<你的用户名>.github.io/star-pulse/`
 
 ---
 
@@ -95,6 +97,7 @@ python -m star_pulse report --period this-week
 | `python -m star_pulse snapshot --repos a/b c/d` | 给指定仓库拍快照，用于验证 |
 | `python -m star_pulse report --period last-week` | 生成周报。**每周跑这个** |
 | `python -m star_pulse report --period 2026-09-06:2026-09-13` | 任意区间 |
+| `python -m star_pulse site` | 生成 `docs/` 在线看板（Pages 用） |
 | `python -m star_pulse stats` | 查看快照覆盖情况 |
 | `python -m star_pulse rebuild` | 从 JSON 快照重建 SQLite |
 | `python tests/test_pipeline.py` | 回归测试（用已发布榜单做基准） |
@@ -111,27 +114,48 @@ git init
 git add .
 git commit -m "feat: star-pulse 初始版本"
 
-# 在 GitHub 上新建一个仓库（建议 Private），然后：
-git remote add origin https://github.com/<你的用户名>/star-pulse.git
-git branch -M main
-git push -u origin main
+# 在 GitHub 上新建一个公开仓库（Pages 在免费账号下只支持公开仓库）
+# 用 gh 一条命令搞定：
+gh repo create star-pulse --public --source=. --remote=origin --push
 ```
 
 ### 2. 打开 Actions
 
 推上去之后，`.github/workflows/` 下两条工作流就位，**不需要做任何额外配置**：
 
+Token 用的是 Actions 内置的 `secrets.GITHUB_TOKEN`，对单个仓库有 **1000 次/小时** 配额，
+默认候选池 800 个足够，**不需要另外配置 PAT**。
+
 | 工作流 | 触发时间 | 做什么 |
 |---|---|---|
-| `daily snapshot` | 每天 04:00（UTC+8） | 采集快照并提交 `data/snapshots/` |
-| `weekly report` | 每周一 10:00（UTC+8） | 跑回归测试 → 生成周报 → 提交 `reports/` |
+| `daily snapshot` | 每天 04:00（UTC+8） | 采集快照 → 重建看板 → 提交 `data/snapshots/` 与 `docs/` |
+| `weekly report` | 每周一 10:00（UTC+8） | 跑回归测试 → 生成周报 → 归档并重建看板 → 提交 |
 
 两条都带 `workflow_dispatch`，可以在 Actions 页面点 **Run workflow** 手动补跑。
 
-Token 用 Actions 内置的 `secrets.GITHUB_TOKEN`，对单个仓库有 **1000 次/小时** 配额，
-默认候选池 800 个足够，**不需要另外配置 PAT**。
+### 3. 打开 GitHub Pages（看板地址）
 
-### 3. 想启用 LLM 中文解读（可选）
+仓库 **Settings → Pages**：
+
+- **Source** 选 `Deploy from a branch`
+- **Branch** 选 `main`，**Folder** 选 `/docs`
+- 保存后约 1 分钟，看板就在 `https://<你的用户名>.github.io/star-pulse/` 上线
+
+> 为什么用「分支部署」而不是 `upload-pages-artifact`：
+> `GITHUB_TOKEN` 推送的提交**不会触发**其他工作流（GitHub 的有意设计），
+> 所以「push 触发 Pages 部署工作流」这条路根本不会启动。
+> 直接从分支`/docs` 部署就没有这个问题——提交即上线，不需要额外工作流。
+>
+> 注意：GitHub Pages 对**免费账号只在公开仓库上可用**。
+
+也可以用命令行一步配好：
+
+```bash
+gh api -X POST /repos/<你的用户名>/star-pulse/pages \
+  -f "source[branch]=main" -f "source[path]=/docs"
+```
+
+### 4. 想启用 LLM 中文解读（可选）
 
 仓库 **Settings → Secrets and variables → Actions** 里添加三个 secret：
 
@@ -148,6 +172,26 @@ LLM_MODEL      gpt-4o-mini
 - ⚠️ **定时工作流会在仓库连续 60 天无活动后被 GitHub 自动禁用。** 本项目的每日提交本身构成仓库活动，通常能维持；但建议每两个月去 Actions 页面确认一下状态。
 - `GITHUB_TOKEN` 推送的提交**不会触发**其他工作流（GitHub 的有意设计），所以不必担心循环触发，`[skip ci]` 只是显式保险。
 - 首次推送后，**第 8 天**才会有第一份真正的周增榜。在此之前报告会如实标注「本期无增量榜」。
+
+---
+
+## 在线看板（每天的情况）
+
+`python -m star_pulse site` 会生成 `docs/`，部署到 Pages 后就是你的看板：
+
+| 板块 | 内容 |
+|---|---|
+| 概览卡片 | 快照天数、追踪仓库数、最新入库数、日均新增 |
+| **每天的情况** | 逐日表：当天入库仓库数 / 新增星数合计 / 上涨仓库数 / **当日涨幅冠军** / 新进候选数 |
+| 当日涨幅榜 | 最新一天 Top 15（单日维度，不是周维度） |
+| 累计增长榜 | 区间内 Top 15 |
+| 每日新增走势 | 柱状图：每天全部追踪仓库的新增星数合计，一眼看出「今天热不热闹」 |
+| 领涨仓库走势 | 折线图：区间累计增量最大的 8 个仓库的**相对首日累计增量**（不用绝对星数，否则 3 万星和 26 万星没法画在同一张图上） |
+| 最新快照明细 | 前 100 个仓库的星数、Fork、语言 |
+| 历史周报 | 归档链接 |
+
+看板是**完全自包含**的 HTML（图表数据直接内联，不依赖 fetch），
+所以本地双击打开也能看，不只是在 Pages 上能看。同时输出 `docs/data.json` 供二次消费。
 
 ---
 
@@ -184,15 +228,17 @@ star-pulse/
 │   ├── net.py                 # 限流感知 HTTP 客户端（核心）
 │   ├── github_api.py          # REST /repos + Search API
 │   ├── trending.py            # Trending HTML 解析（尽力而为）
-│   ├── pipeline.py            # 采集流水线
+│   ├── pipeline.py            # 采集流水线（渠道优先级在这里）
 │   ├── db.py                  # SQLite + JSON 快照
-│   ├── analyze.py             # 增量计算、防刷星、分类
-│   ├── render.py              # Markdown / HTML 报告
+│   ├── analyze.py             # 增量计算、防刷星、分类、日维度汇总
+│   ├── render.py              # Markdown / HTML 周报
+│   ├── site.py                # docs/ 在线看板生成
 │   └── llm.py                 # 可选解读
 ├── tests/test_pipeline.py     # 回归测试
-├── examples/reports/          # 示例报告（用已发布的 2026-W37 数据生成）
+├── examples/reports/          # 示例周报（用已发布的 2026-W37 数据生成）
 ├── data/snapshots/*.json      # 快照事实来源（提交进 git）
-├── reports/                   # 产出报告
+├── reports/                   # 周报产出
+├── docs/                      # Pages 站点（提交进 git）
 └── .github/workflows/         # daily.yml / weekly.yml
 ```
 
@@ -232,3 +278,6 @@ SQLite（`data/pulse.db`）只是为了查询方便，**不提交**。CI 每次�
 - **Trending 解析依赖 HTML 结构**。GitHub 改版会导致该渠道失效；届时解析器会打警告并返回空列表，Search API 自动兜底，主流程不受影响。
 - **分类基于关键词**，是有意为之（可回归测试、无幻觉）。它只影响可读性，不影响排名。想更准可以接 LLM，但请注意别让它碰到数字。
 - **星数快照有采样时点偏差**。每天固定时刻采一次，不是全天精确积分，这是所有同类周榜的共同特征。
+- **仓库体积会持续增长**。候选池 800 时，每天的 JSON 快照约 180 KB，一年约 60 MB。
+  如果在意体积，把 `max_candidates` 降到 300–500（一年约 25–35 MB），
+  或定期归档 `data/snapshots/` 里一年以上的文件。

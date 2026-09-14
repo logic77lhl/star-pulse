@@ -1,0 +1,28 @@
+{
+ "generated_at": "2026-09-14T13:51:32+08:00",
+ "tz_offset_hours": 8,
+ "snapshot_dates": [
+  "2026-09-14"
+ ],
+ "tracked_repos": 800,
+ "latest_date": "2026-09-14",
+ "daily_summary": [
+  {
+   "date": "2026-09-14",
+   "repos": 800,
+   "is_first": true,
+   "total_gain": 0,
+   "gainers": 0,
+   "top_name": null,
+   "top_delta": 0,
+   "new_repos": 0,
+   "prev": null
+  }
+ ],
+ "cumulative_top": [],
+ "daily_top": [],
+ "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",
+ "reports": [
+  "2026-W38_2026-09-14_2026-09-14.html"
+ ]
+}

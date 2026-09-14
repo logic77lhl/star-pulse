@@ -17,6 +17,7 @@ import sys
 from pathlib import Path
 
 from . import analyze, db, github_api, llm, pipeline, render
+from . import site as site_builder
 from .config import load_settings
 from .net import BudgetExceeded, Http
 
@@ -114,6 +115,14 @@ def cmd_run_daily(settings, args) -> int:
         return 3
 
     print(json.dumps(stats, ensure_ascii=False, indent=2))
+    if stats.get("errors"):
+        # 数据已经落库了，所以这里返回 0（让后续的站点重建与提交照常进行），
+        # 但要把问题喊出来 —— 静默的部分失败比彻底失败更危险。
+        print()
+        print("⚠️ 本轮采集有中断，已保存获取到的部分：", file=sys.stderr)
+        for e in stats["errors"]:
+            print(f"   {e}", file=sys.stderr)
+        print("   下一天的采集会自动补齐时间序列（快照表是同一天幂等覆盖）。", file=sys.stderr)
     return 0
 
 
@@ -184,6 +193,19 @@ def cmd_report(settings, args) -> int:
     return 0
 
 
+def cmd_site(settings, args) -> int:
+    """生成 docs/ 静态站点（GitHub Pages 用）。"""
+    conn = prepare(settings)
+    stats = site_builder.build_site(settings, conn)
+    print(json.dumps(stats, ensure_ascii=False, indent=2))
+    dates = analyze.all_snapshot_dates(conn)
+    if len(dates) < 8:
+        print()
+        print(f"提示：已积累 {len(dates)} 天快照，还需约 {8 - len(dates)} 天才能形成完整的 7 天窗口。")
+        print("站点现在就可用，只是「累计增长榜」会基于当前已有的区间。")
+    return 0
+
+
 def cmd_rebuild(settings, args) -> int:
     if settings.db_path.exists():
         settings.db_path.unlink()
@@ -218,6 +240,7 @@ def main(argv: list[str] | None = None) -> int:
     p_daily.add_argument("--limit", type=int, default=0, help="临时覆盖候选池上限，便于小规模试跑")
     sub.add_parser("rebuild", help="从 JSON 快照重建 SQLite")
     sub.add_parser("stats", help="查看快照覆盖情况")
+    sub.add_parser("site", help="生成 docs/ 静态站点（GitHub Pages）")
 
     p_snap = sub.add_parser("snapshot", help="给指定仓库拍快照")
     p_snap.add_argument("--repos", nargs="+", required=True, help="owner/repo，可空格或逗号分隔")
@@ -240,6 +263,7 @@ def main(argv: list[str] | None = None) -> int:
         "report": cmd_report,
         "rebuild": cmd_rebuild,
         "stats": cmd_stats,
+        "site": cmd_site,
     }
     return handlers[args.command](settings, args)
 

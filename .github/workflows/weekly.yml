@@ -46,17 +46,20 @@ jobs:
             echo "最新一期：$latest"
           fi
 
+      - name: 重建站点（含归档本期周报）
+        run: python -m star_pulse site
+
       - name: 写入运行摘要
         run: |
           if [ -f reports/LATEST.md ]; then
             cat reports/LATEST.md >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - name: 提交报告
+      - name: 提交报告与站点
         run: |
           git config user.name  "star-pulse-bot"
           git config user.email "star-pulse-bot@users.noreply.github.com"
-          git add reports data/snapshots
+          git add reports data/snapshots docs
           if git diff --staged --quiet; then
             echo "没有变更，跳过提交"
           else

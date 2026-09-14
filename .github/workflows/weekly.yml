@@ -1,0 +1,66 @@
+name: weekly report
+
+# 周一 02:00 UTC = 周一 10:00（UTC+8）。此时上一自然周（周一~周日）已完整闭合。
+on:
+  schedule:
+    - cron: "0 2 * * 1"
+  workflow_dispatch: # 手动补跑
+
+permissions:
+  contents: write
+
+concurrency:
+  group: star-pulse-weekly
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # 先跑回归测试。用的是已发布并三源互证的历史榜单做基准，
+      # 一旦增量计算被改坏，这里会立刻拦住，而不是产出一份错榜单。
+      - name: 回归测试
+        run: python tests/test_pipeline.py
+
+      - name: 生成周报
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # LLM 三项是可选的。没配也不会失败，只是少一段中文解读。
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: python -m star_pulse report --period last-week
+
+      - name: 维护 LATEST 与索引
+        run: |
+          latest=$(ls -t reports/*.md 2>/dev/null | head -1 || true)
+          if [ -n "$latest" ]; then
+            cp "$latest" reports/LATEST.md
+            echo "最新一期：$latest"
+          fi
+
+      - name: 写入运行摘要
+        run: |
+          if [ -f reports/LATEST.md ]; then
+            cat reports/LATEST.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: 提交报告
+        run: |
+          git config user.name  "star-pulse-bot"
+          git config user.email "star-pulse-bot@users.noreply.github.com"
+          git add reports data/snapshots
+          if git diff --staged --quiet; then
+            echo "没有变更，跳过提交"
+          else
+            week=$(date -u +%G-W%V)
+            git commit -m "chore(report): ${week} 星耀榜 [skip ci]"
+            git push
+          fi

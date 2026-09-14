@@ -1,0 +1,21 @@
+{
+ "period": [
+  "2026-09-14",
+  "2026-09-14"
+ ],
+ "week": "2026-W38",
+ "coverage": {
+  "distinct_days": 1,
+  "first_day": "2026-09-14",
+  "last_day": "2026-09-14",
+  "rows_total": 30,
+  "warm": false
+ },
+ "dropped": [],
+ "dropped_count": 0,
+ "breakdown": [],
+ "max_span_days": 10,
+ "warm": false,
+ "warmup_note": "「本周新增 Star」需要至少两个时间点的快照相减，当前只有 1 天数据，因此本期暂不输出增量榜。这是设计使然，不是故障：GitHub 没有提供星数增量的官方接口，任何声称能直接查到周增量、又拿不出历史快照的方案，数据都不可信。",
+ "top": []
+}

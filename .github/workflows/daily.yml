@@ -1,0 +1,49 @@
+name: daily snapshot
+
+# GitHub Actions 的 cron 一律按 UTC 计。
+# "0 20 * * *" UTC = 次日 04:00（UTC+8），此时前一天的星数已稳定定格。
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch: # 支持手动补跑
+
+# 需要写权限才能把快照提交回仓库。默认的 GITHUB_TOKEN 只有只读权限。
+permissions:
+  contents: write
+
+# 防止两次运行叠加（补跑时尤其容易撞上）
+concurrency:
+  group: star-pulse-daily
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # 本项目零第三方依赖，因此不需要 pip install —— 这是刻意的设计，
+      # 既省 CI 时间，也免掉供应链风险。
+      - name: 采集快照
+        env:
+          # Actions 内置的 GITHUB_TOKEN 对此仓库有 1000 次/小时的配额。
+          # 候选池默认 800，足够；无需额外配置 PAT。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m star_pulse run-daily
+
+      - name: 提交数据
+        run: |
+          git config user.name  "star-pulse-bot"
+          git config user.email "star-pulse-bot@users.noreply.github.com"
+          git add data/snapshots
+          if git diff --staged --quiet; then
+            echo "没有新数据，跳过提交"
+          else
+            git commit -m "chore(data): 快照 $(date -u +%F) [skip ci]"
+            git push
+          fi

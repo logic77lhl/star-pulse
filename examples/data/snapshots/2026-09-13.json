@@ -1,0 +1,126 @@
+{
+ "date": "2026-09-13",
+ "count": 10,
+ "repos": [
+  {
+   "full_name": "mattpocock/skills",
+   "repo_id": 900004,
+   "stars": 260499,
+   "forks": 5789,
+   "open_issues": 3,
+   "language": "Shell",
+   "description": "A public collection of agent skills for coding workflows.",
+   "repo_created": "2026-02-18",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "repo_id": 900005,
+   "stars": 257128,
+   "forks": 5714,
+   "open_issues": 3,
+   "language": "JavaScript",
+   "description": "Agent harness performance optimization: skills, instincts, memory.",
+   "repo_created": "2026-03-27",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "microsoft/markitdown",
+   "repo_id": 900008,
+   "stars": 183244,
+   "forks": 4072,
+   "open_issues": 3,
+   "language": "Python",
+   "description": "Python tool for converting files and office documents to Markdown.",
+   "repo_created": "2024-11-13",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "repo_id": 900003,
+   "stars": 136630,
+   "forks": 3036,
+   "open_issues": 3,
+   "language": "JavaScript",
+   "description": "Makes your AI agent think like the laziest senior dev in the room.",
+   "repo_created": "2026-04-03",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "repo_id": 900002,
+   "stars": 59677,
+   "forks": 1326,
+   "open_issues": 3,
+   "language": "JavaScript",
+   "description": "Agent skill that compiles a codebase into verifiable architecture diagrams.",
+   "repo_created": "2026-05-11",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "heygen-com/hyperframes",
+   "repo_id": 900007,
+   "stars": 49224,
+   "forks": 1094,
+   "open_issues": 3,
+   "language": "TypeScript",
+   "description": "Video generation framework built for agents.",
+   "repo_created": "2026-06-21",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "ayghri/i-have-adhd",
+   "repo_id": 900000,
+   "stars": 43461,
+   "forks": 966,
+   "open_issues": 3,
+   "language": "Python",
+   "description": "Output style rules that make a coding agent lead with the next action instead of burying it in filler.",
+   "repo_created": "2026-08-20",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "cathrynlavery/diagram-design",
+   "repo_id": 900006,
+   "stars": 38872,
+   "forks": 864,
+   "open_issues": 3,
+   "language": "HTML",
+   "description": "39 editorial diagram types for coding agents. Self-contained HTML and SVG.",
+   "repo_created": "2026-06-09",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "THU-MAIC/OpenMAIC",
+   "repo_id": 900009,
+   "stars": 36200,
+   "forks": 804,
+   "open_issues": 3,
+   "language": "TypeScript",
+   "description": "Open multi-agent interactive classroom for immersive learning.",
+   "repo_created": "2026-05-30",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "repo_id": 900001,
+   "stars": 29949,
+   "forks": 666,
+   "open_issues": 3,
+   "language": "JavaScript",
+   "description": "A spy satellite simulator in your browser, except the data is real.",
+   "repo_created": "2026-07-02",
+   "is_archived": 0,
+   "is_fork": 0
+  }
+ ]
+}

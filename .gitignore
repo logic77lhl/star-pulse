@@ -1,0 +1,29 @@
+# 机密
+.env
+
+# 运行产物
+logs/
+*.log
+
+# SQLite 只是可随时重建的缓存，不提交。
+# 真正的数据源是 data/snapshots/*.json（文本、diff 友好），那个必须提交。
+# 注意用 **/ 前缀：不带前缀的 data/*.db 只匹配仓库根目录下的 data/。
+**/data/*.db
+**/data/*.db-journal
+**/data/*.db-wal
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+_probe/

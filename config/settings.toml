@@ -1,0 +1,36 @@
+# star-pulse 运行配置
+# 修改后无需重启，下次运行自动生效
+
+[candidate]
+# 候选池上限。每日快照会对池内每个仓库发 1 次 REST 请求。
+# 认证后配额 5000 次/小时，800 有大量富余；未认证只有 60 次/小时，建议 <= 40。
+max_candidates = 800
+# 用 Search API 找「近期创建且已有一定星数」的新项目，回溯天数
+search_lookback_days = 14
+# 新项目的星数门槛
+search_min_stars = 50
+# 语言过滤。["All"] 表示不过滤
+languages = ["All"]
+# Trending 页窗口：daily 或 weekly
+trending_since = "daily"
+# 是否为每个语言子页各抓一次 Trending（更全，但请求更多）
+trending_per_language = false
+
+[report]
+# 榜单长度
+top_n = 20
+# 报告日期归属时区偏移（小时）。8 = UTC+8
+tz_offset_hours = 8
+# 增量时间跨度上限。超过此天数的仓库视为快照断档，从榜上剔除并记录
+# 设小更严格；设大可保留更多数据但会混入不公平比较
+max_span_days = 10
+
+[network]
+# 两次请求之间的最小间隔（秒）。GitHub 有二级限流，串行 + 间隔最安全
+request_gap_seconds = 0.15
+# 遇到限流时最长等待（秒）。超过则中止本次运行，避免 CI 卡死
+max_wait_seconds = 1800
+# 单个请求超时
+timeout_seconds = 30
+# 失败重试次数
+retries = 3

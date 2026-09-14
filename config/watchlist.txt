@@ -1,0 +1,17 @@
+# 固定关注的仓库。每行一个 owner/repo，以 # 开头为注释。
+#
+# 这些仓库每天都会被拍快照，无论它们是否出现在 Trending 或搜索结果里。
+# 适合放：你真正关心的项目、上一期榜单里你想持续追踪的项目。
+#
+# 已内置 2026-W37 周榜前 10 作为示例种子，可直接删改。
+
+ayghri/i-have-adhd
+bilawalsidhu/gods-eye-view
+tt-a1i/archify
+DietrichGebert/ponytail
+mattpocock/skills
+affaan-m/ECC
+cathrynlavery/diagram-design
+heygen-com/hyperframes
+microsoft/markitdown
+THU-MAIC/OpenMAIC

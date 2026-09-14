@@ -1,11 +1,12 @@
 {
- "generated_at": "2026-09-14T16:52:03+08:00",
+ "generated_at": "2026-09-15T07:02:54+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
-  "2026-09-14"
+  "2026-09-14",
+  "2026-09-15"
  ],
- "tracked_repos": 800,
- "latest_date": "2026-09-14",
+ "tracked_repos": 857,
+ "latest_date": "2026-09-15",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -17,10 +18,203 @@
    "top_delta": 0,
    "new_repos": 0,
    "prev": null
+  },
+  {
+   "date": "2026-09-15",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 22353,
+   "gainers": 532,
+   "top_name": "alibaba/open-code-review",
+   "top_delta": 1771,
+   "new_repos": 57,
+   "prev": "2026-09-14"
   }
  ],
- "cumulative_top": [],
- "daily_top": [],
+ "cumulative_top": [
+  {
+   "full_name": "alibaba/open-code-review",
+   "delta": 1771,
+   "stars": 25575,
+   "language": "Go"
+  },
+  {
+   "full_name": "JustVugg/colibri",
+   "delta": 1676,
+   "stars": 31972,
+   "language": "C"
+  },
+  {
+   "full_name": "debpalash/VoiceStudio",
+   "delta": 1642,
+   "stars": 29070,
+   "language": "Python"
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "delta": 1154,
+   "stars": 33498,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "delta": 1008,
+   "stars": 62168,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "delta": 801,
+   "stars": 138368,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "ayghri/i-have-adhd",
+   "delta": 785,
+   "stars": 45391,
+   "language": "Python"
+  },
+  {
+   "full_name": "ever-co/ever-gauzy",
+   "delta": 577,
+   "stars": 5935,
+   "language": "TypeScript"
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "delta": 568,
+   "stars": 262039,
+   "language": "Shell"
+  },
+  {
+   "full_name": "asgeirtj/system_prompts_leaks",
+   "delta": 487,
+   "stars": 66729,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "delta": 487,
+   "stars": 258368,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "Chuloo/mural",
+   "delta": 462,
+   "stars": 775,
+   "language": "Kotlin"
+  },
+  {
+   "full_name": "SnailSploit/Claude-Red",
+   "delta": 414,
+   "stars": 4691,
+   "language": "Python"
+  },
+  {
+   "full_name": "Mantitup-Org/vista",
+   "delta": 409,
+   "stars": 1315,
+   "language": "TypeScript"
+  },
+  {
+   "full_name": "multimodal-art-projection/YuE",
+   "delta": 400,
+   "stars": 8297,
+   "language": "Python"
+  }
+ ],
+ "daily_top": [
+  {
+   "full_name": "alibaba/open-code-review",
+   "language": "Go",
+   "delta": 1771,
+   "stars": 25575
+  },
+  {
+   "full_name": "JustVugg/colibri",
+   "language": "C",
+   "delta": 1676,
+   "stars": 31972
+  },
+  {
+   "full_name": "debpalash/VoiceStudio",
+   "language": "Python",
+   "delta": 1642,
+   "stars": 29070
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "language": "JavaScript",
+   "delta": 1154,
+   "stars": 33498
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "language": "JavaScript",
+   "delta": 1008,
+   "stars": 62168
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 801,
+   "stars": 138368
+  },
+  {
+   "full_name": "ayghri/i-have-adhd",
+   "language": "Python",
+   "delta": 785,
+   "stars": 45391
+  },
+  {
+   "full_name": "ever-co/ever-gauzy",
+   "language": "TypeScript",
+   "delta": 577,
+   "stars": 5935
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 568,
+   "stars": 262039
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 487,
+   "stars": 258368
+  },
+  {
+   "full_name": "asgeirtj/system_prompts_leaks",
+   "language": "JavaScript",
+   "delta": 487,
+   "stars": 66729
+  },
+  {
+   "full_name": "Chuloo/mural",
+   "language": "Kotlin",
+   "delta": 462,
+   "stars": 775
+  },
+  {
+   "full_name": "SnailSploit/Claude-Red",
+   "language": "Python",
+   "delta": 414,
+   "stars": 4691
+  },
+  {
+   "full_name": "Mantitup-Org/vista",
+   "language": "TypeScript",
+   "delta": 409,
+   "stars": 1315
+  },
+  {
+   "full_name": "multimodal-art-projection/YuE",
+   "language": "Python",
+   "delta": 400,
+   "stars": 8297
+  }
+ ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",
  "reports": [
   "2026-W38_2026-09-14_2026-09-14.html"

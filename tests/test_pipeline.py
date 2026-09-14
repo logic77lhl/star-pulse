@@ -200,6 +200,23 @@ def test_site_build(tmp: Path) -> None:
     assert (docs / "data.json").is_file(), "缺少 data.json"
     assert (docs / ".nojekyll").is_file(), "缺少 .nojekyll（分支部署 Pages 需要）"
 
+    # 版面：项目名单排在最前，趋势与榜单默认收起
+    assert html.index("项目名单") < html.index('<details class="trends">'), (
+        "项目名单必须排在趋势与榜单之前"
+    )
+    assert '<details class="trends"' in html, "趋势区应当是折叠块"
+    assert "<details class=\"trends\" open" not in html, "趋势区必须默认收起"
+    for tid in ('id="projTable"', 'id="projQ"', 'id="projLang"', 'id="projSort"'):
+        assert tid in html, f"项目名单缺少工具栏元素：{tid}"
+
+    # 每条记录独占一行 —— 整张表挤成一行会让 git 完全没法做增量压缩
+    assert html.count("<tr data-name=") == sum(
+        1 for ln in html.splitlines() if ln.startswith("<tr data-name=")
+    ), "项目名单必须一行一条记录"
+    assert "<tr data-name=" in html
+    # 简介只放一份：重复存 data 属性会把页面从 ~400 KB 撑到 500 KB
+    assert "data-desc=" not in html, "简介不应重复存一份 data 属性"
+
     # 每日汇总必须能逐日算出来，且首日标记为基线
     summary = analyze.daily_summary(conn)
     assert len(summary) == 2, f"应有 2 天，实际 {len(summary)}"

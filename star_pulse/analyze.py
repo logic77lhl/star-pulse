@@ -294,6 +294,38 @@ def daily_rows(conn: sqlite3.Connection, day: str) -> list[dict]:
     ]
 
 
+def project_rows(
+    conn: sqlite3.Connection, day: str, prev_day: str | None = None
+) -> list[dict]:
+    """「项目本身」看板：某天入库的全部仓库 + 相对前一日的星数增量。
+
+    与 `daily_rows` 的区别是多了 delta 一列，与 `daily_gain` 的区别是
+    **不做 limit、不筛掉没涨的仓库** —— 这里要的是完整名单，用来浏览项目，
+    而不是排名。
+
+    prev_day 传 None（首日）时左右连接自然失配，delta 归零、has_prev=0，
+    所以调用方不需要为「没有前一天」写分支。
+    """
+    return [
+        dict(r)
+        for r in conn.execute(
+            """
+            SELECT r.full_name, r.language, r.description, r.repo_created,
+                   s.stars, s.forks,
+                   s.stars - COALESCE(s0.stars, s.stars) AS delta,
+                   CASE WHEN s0.repo_id IS NULL THEN 0 ELSE 1 END AS has_prev
+            FROM snapshot s
+            JOIN repo r ON r.repo_id = s.repo_id
+            LEFT JOIN snapshot s0
+                   ON s0.repo_id = s.repo_id AND s0.snap_date = :prev
+            WHERE s.snap_date = :day AND r.is_fork = 0 AND r.is_archived = 0
+            ORDER BY s.stars DESC
+            """,
+            {"day": day, "prev": prev_day or ""},
+        ).fetchall()
+    ]
+
+
 def daily_gain(
     conn: sqlite3.Connection, day: str, prev_day: str, limit: int | None = None
 ) -> list[dict]:

@@ -1,13 +1,17 @@
 """静态站点生成（GitHub Pages）。
 
 产出 docs/ 目录，作为「每天的情况」看板：
-  docs/index.html          日维度看板：每日汇总表 + 每日涨幅榜 + 走势图 + 报告索引
+  docs/index.html          看板：项目名单（主角）+ 折叠的趋势与榜单 + 报告索引
   docs/reports/*.html      历史周报归档
-  docs/data.json           全量结构化数据，供二次消费
+  docs/data.json           汇总层结构化数据，供二次消费
   docs/.nojekyll           阻止 Jekyll 处理（Pages 从分支部署时需要）
 
-站点是**完全自包含**的（图表数据直接内联在 HTML 里），不依赖 fetch，
-所以本地双击打开也能看，不只是在 Pages 上能看。
+版面取向：**项目名单排在最前**，趋势图和榜单收进 `<details>` 默认折叠。
+理由是这个看板的主用途是「看有哪些项目、各自什么情况」，趋势只是佐证。
+
+项目名单是**服务端全量渲染**的（不截断），再叠一层纯 DOM 的搜索/筛选/排序；
+所以停用 JS 也仍是一份完整可读的名单。图表则相反 —— 折叠区里的 canvas
+在展开前量不到尺寸，必须等 `toggle` 事件里再创建，否则会按 0×0 画出空白。
 """
 
 from __future__ import annotations
@@ -40,10 +44,15 @@ h2:first-of-type { margin-top:34px; }
 .card .k { font-size:13px; color:#888780; margin:0 0 4px; }
 .card .v { font-size:24px; font-weight:600; margin:0; font-variant-numeric:tabular-nums; letter-spacing:-.02em; }
 .card .u { font-size:13px; font-weight:400; color:#888780; }
-table { width:100%; border-collapse:collapse; font-size:14px; background:#fff;
-  border:1px solid #e3e1da; border-radius:10px; overflow:hidden; }
+table { width:100%; border-collapse:separate; border-spacing:0; font-size:14px; background:#fff;
+  border:1px solid #e3e1da; border-radius:10px; }
 th { text-align:left; padding:10px 13px; background:#f1efe8; font-weight:600; font-size:13px;
-  color:#444441; white-space:nowrap; }
+  color:#444441; white-space:nowrap; position:sticky; top:0; z-index:2;
+  box-shadow:inset 0 -1px 0 #e3e1da; }
+th:first-child { border-top-left-radius:10px; }
+th:last-child { border-top-right-radius:10px; }
+tr:last-child td:first-child { border-bottom-left-radius:10px; }
+tr:last-child td:last-child { border-bottom-right-radius:10px; }
 td { padding:10px 13px; border-top:1px solid #eeece6; vertical-align:top; }
 td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
 td.num { font-weight:600; }
@@ -60,17 +69,42 @@ a:hover { text-decoration:underline; }
 ul.reports { background:#fff; border:1px solid #e3e1da; border-radius:10px;
   padding:8px 18px 8px 34px; font-size:14px; margin:0; }
 ul.reports li { margin:9px 0; }
+.down { color:#1D9E75; font-weight:600; }
+td.desc { color:#6b6a66; font-size:13px; max-width:430px; }
+.toolbar { display:flex; flex-wrap:wrap; gap:9px; align-items:center; margin:14px 0 12px; }
+.toolbar input, .toolbar select { font:inherit; font-size:14px; padding:8px 11px;
+  border:1px solid #e3e1da; border-radius:8px; background:#fff; color:inherit; }
+.toolbar input { flex:1 1 230px; min-width:170px; }
+.toolbar select { flex:0 0 auto; }
+.toolbar .count { color:#888780; font-size:13px; margin-left:auto; white-space:nowrap; }
+details.trends { margin:34px 0 0; }
+details.trends > summary { cursor:pointer; list-style:none; user-select:none;
+  background:#fff; border:1px solid #e3e1da; border-radius:10px; padding:14px 18px;
+  font-size:16px; font-weight:600; display:flex; align-items:center; gap:9px; }
+details.trends > summary::-webkit-details-marker { display:none; }
+details.trends > summary::before { content:"▸"; color:#888780; font-weight:400;
+  display:inline-block; transition:transform .15s ease; }
+details.trends[open] > summary::before { transform:rotate(90deg); }
+details.trends > summary:hover { border-color:#c9c6bc; }
+details.trends > summary .hint { font-weight:400; font-size:13px; color:#888780; }
+details.trends .tbody h2 { margin-top:34px; }
 footer { margin-top:46px; padding-top:16px; border-top:1px solid #e3e1da; color:#888780; font-size:13px; }
 @media (prefers-color-scheme: dark) {
   body { background:#1b1b19; color:#e8e6e1; }
-  .card, table, .chart, ul.reports { background:#262624; border-color:#3a3a37; }
-  th { background:#302f2c; color:#d3d1c7; }
+  .card, table, .chart, ul.reports, details.trends > summary { background:#262624; border-color:#3a3a37; }
+  th { background:#302f2c; color:#d3d1c7; box-shadow:inset 0 -1px 0 #3a3a37; }
   td { border-top-color:#3a3a37; }
   a { color:#AFA9EC; }
   h1, h2 { color:#eeecea; }
-  .sub, .note, .muted, footer, .card .k, .card .u, .rank { color:#9b9993; }
+  .sub, .note, .muted, footer, .card .k, .card .u, .rank, .toolbar .count,
+  details.trends > summary .hint { color:#9b9993; }
   .banner { background:#412402; border-color:#854F0B; color:#FAC775; }
   .up { color:#F09595; }
+  .down { color:#5DCAA5; }
+  td.desc { color:#a8a69f; }
+  .toolbar input, .toolbar select { background:#262624; border-color:#3a3a37; color:#e8e6e1; }
+  details.trends > summary:hover { border-color:#4d4d49; }
+  details.trends > summary::before { color:#9b9993; }
 }
 @media (max-width:640px){ body{padding:22px 12px 40px} h1{font-size:22px} }
 """
@@ -150,6 +184,59 @@ def _gain_table(rows: list[dict], window: str, label: str) -> str:
     )
 
 
+def _fmt_delta(delta: int, has_prev: bool) -> str:
+    """增量单元格。首日没有对比基线时给「—」而不是 0，避免被误读成「真的没涨」。"""
+    if not has_prev:
+        return '<span class="muted">—</span>'
+    if delta > 0:
+        return f'<span class="up">+{delta:,}</span>'
+    if delta < 0:
+        return f'<span class="down">{delta:,}</span>'
+    return '<span class="muted">0</span>'
+
+
+def _project_table(rows: list[dict], day: str | None) -> str:
+    """「项目本身」名单：全量仓库，可搜索 / 筛选 / 排序。
+
+    全部行都服务端渲染（不截断），再叠加一层纯 DOM 的搜索与排序 —— 这样
+    即使停用 JS 也仍是一张完整可读的名单，而不是一片空白。
+
+    两个刻意的取舍：
+      * 简介只写进可见单元格，**不再另存一份 data-desc**。之前那样做会把
+        页面从 ~400 KB 撑到 500 KB，而搜索完全可以读单元格文本。
+      * 每行一个换行。整张表挤在一行（约 400 KB 单行）会让 git 完全没法做
+        增量压缩，每天都要重存一份完整 blob。
+    """
+    if not rows:
+        return '<p class="muted">暂无数据。</p>'
+    lines = []
+    for i, r in enumerate(rows, 1):
+        # 简介里可能带换行，会把「一行一条记录」的结构打散，先压平。
+        desc = " ".join((r.get("description") or "").split())
+        short = desc[:80] + ("…" if len(desc) > 80 else "")
+        desc_cell = esc(short) if short else '<span class="muted">—</span>'
+        lines.append(
+            f'<tr data-name="{esc(r["full_name"].lower())}" '
+            f'data-lang="{esc(r.get("language") or "")}" '
+            f'data-stars="{r["stars"]}" data-forks="{r["forks"]}" '
+            f'data-delta="{r["delta"]}" data-created="{esc(r.get("repo_created") or "")}">'
+            f'<td class="rank">{i}</td>'
+            f'<td>{_repo_link(r["full_name"])}</td>'
+            f'<td>{esc(r.get("language") or "—")}</td>'
+            f'<td class="num">{r["stars"]:,}</td>'
+            f'<td class="num">{r["forks"]:,}</td>'
+            f'<td class="num">{_fmt_delta(r["delta"], bool(r["has_prev"]))}</td>'
+            f'<td class="desc">{desc_cell}</td></tr>'
+        )
+    return (
+        '<table id="projTable"><thead><tr><th>#</th><th>项目</th><th>语言</th>'
+        '<th class="num">星数</th><th class="num">Fork</th>'
+        '<th class="num">当日新增</th><th>简介</th></tr></thead><tbody>\n'
+        + "\n".join(lines)
+        + "\n</tbody></table>"
+    )
+
+
 def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     """生成 docs/ 静态站点。返回生成摘要。"""
     docs = settings.root / "docs"
@@ -165,17 +252,31 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     tracked = conn.execute(
         "SELECT COUNT(DISTINCT repo_id) c FROM snapshot"
     ).fetchone()["c"]
-    latest_rows = analyze.daily_rows(conn, latest) if latest else []
+
+    # 「项目本身」名单 —— 看板的主角。相对前一日给增量，首日没有基线则显示「—」。
+    prev = dates[-2] if len(dates) >= 2 else None
+    projects = analyze.project_rows(conn, latest, prev) if latest else []
+
+    langs = conn.execute(
+        """
+        SELECT r.language AS lang, COUNT(*) AS n
+        FROM snapshot s JOIN repo r ON r.repo_id = s.repo_id
+        WHERE s.snap_date = :day AND r.is_fork = 0 AND r.is_archived = 0
+          AND r.language IS NOT NULL AND r.language <> ''
+        GROUP BY r.language ORDER BY n DESC, r.language
+        """,
+        {"day": latest or ""},
+    ).fetchall()
 
     # 日均新增：只看有前一日对比的那些天
     comparable = [s for s in summary if not s["is_first"]]
     avg_gain = round(sum(s["total_gain"] for s in comparable) / len(comparable)) if comparable else 0
 
     cards = (
-        _card("快照天数", str(len(dates)), "天")
-        + _card("追踪仓库", f"{tracked:,}", "个")
-        + _card("最新入库", f"{summary[-1]['repos']:,}" if summary else "0", "个")
-        + _card("日均新增", f"{avg_gain:,}", "star")
+        _card("项目名单", f"{len(projects):,}", "个")
+        + _card("累计追踪", f"{tracked:,}", "个")
+        + _card("覆盖语言", str(len(langs)), "种")
+        + _card("快照天数", str(len(dates)), "天")
     )
 
     banner = ""
@@ -215,22 +316,29 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         else '<p class="muted">只有一天数据，还无法计算累计增长。</p>'
     )
 
-    # 最新快照明细
-    detail_rows = []
-    for r in latest_rows[:100]:
-        detail_rows.append(
-            f'<tr><td>{_repo_link(r["full_name"])}</td>'
-            f'<td class="num">{r["stars"]:,}</td>'
-            f'<td class="num">{r["forks"]:,}</td>'
-            f'<td>{esc(r.get("language") or "—")}</td></tr>'
-        )
-    detail_block = (
-        "<table><thead><tr><th>项目</th><th class=\"num\">星数</th>"
-        "<th class=\"num\">Fork</th><th>语言</th></tr></thead><tbody>"
-        + "".join(detail_rows) + "</tbody></table>"
-        if detail_rows
-        else '<p class="muted">暂无数据。</p>'
+    # 「项目本身」名单 + 工具栏
+    lang_options = "".join(
+        f'<option value="{esc(r["lang"])}">{esc(r["lang"])}（{r["n"]:,}）</option>'
+        for r in langs
     )
+    toolbar = (
+        '<div class="toolbar">'
+        '<input id="projQ" type="search" autocomplete="off" '
+        'placeholder="搜索项目名或简介…" aria-label="搜索项目">'
+        f'<select id="projLang" aria-label="按语言筛选"><option value="">全部语言</option>'
+        f"{lang_options}</select>"
+        '<select id="projSort" aria-label="排序方式">'
+        '<option value="stars:desc">星数 从高到低</option>'
+        '<option value="stars:asc">星数 从低到高</option>'
+        '<option value="delta:desc">当日新增 从高到低</option>'
+        '<option value="forks:desc">Fork 从高到低</option>'
+        '<option value="created:desc">创建时间 最新</option>'
+        '<option value="name:asc">名称 A→Z</option>'
+        "</select>"
+        f'<span class="count" id="projCount">共 {len(projects):,} 个</span>'
+        "</div>"
+    )
+    projects_block = _project_table(projects, latest)
 
     # 历史报告索引
     report_files = sorted(reports_out.glob("*.html"), reverse=True)
@@ -243,14 +351,26 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     )
 
     body = f"""<h1>star-pulse · GitHub 星耀榜</h1>
-<p class="sub">每日快照 · 每天的情况一目了然</p>
+<p class="sub">每日快照 · 项目名单在前，趋势在后</p>
 <p class="note">数据截至 <b>{esc(str(latest or "—"))}</b>　·　时区 UTC+{settings.tz_offset_hours}　·　
 每日 04:00 自动采集</p>
 <div class="cards">{cards}</div>
 {banner}
 
+<h2>项目名单</h2>
+<p class="note">共 <b>{len(projects):,}</b> 个追踪仓库，数据日期 {esc(str(latest or "—"))}。
+可搜索项目名/简介、按语言筛选、按星数或当日新增排序。<br>
+「当日新增」是相对上一次快照的净增；首日没有对比基线时显示「—」。</p>
+{toolbar}
+{projects_block}
+
+<details class="trends">
+<summary>趋势与榜单<span class="hint">默认收起 · 点击展开每日走势与涨幅榜</span></summary>
+<div class="tbody">
+
 <h2>每天的情况</h2>
-<p class="note">「新增星数合计」是当天全部追踪仓库的星数净增之和；首日没有对比基线。</p>
+<p class="note">「新增星数合计」是当天全部追踪仓库的星数净增之和；首日没有对比基线。
+可比日均 {avg_gain:,} star。</p>
 {_daily_table(summary)}
 
 <h2>当日涨幅榜</h2>
@@ -268,9 +388,8 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
 否则 3 万星和 26 万星的曲线没法画在同一张图上）。</p>
 <div class="chart"><canvas id="trendChart" role="img" aria-label="领涨仓库累计增量走势"></canvas></div>
 
-<h2>最新快照明细（前 100）</h2>
-<p class="note">数据日期 {esc(str(latest or "—"))}</p>
-{detail_block}
+</div>
+</details>
 
 <h2>历史周报</h2>
 {reports_block}
@@ -298,37 +417,118 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         ensure_ascii=False,
     )
 
-    script = f"""<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    # 这段 JS 用普通字符串而非 f-string：JS 里大括号太多，逐个转义极易出错，
+    # 改成占位符替换更稳。
+    js = """<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-const D = {chart_payload};
+const D = __PAYLOAD__;
 const PALETTE = ['#7F77DD','#1D9E75','#D85A30','#378ADD','#BA7517','#D4537E','#639922','#888780'];
 
-new Chart(document.getElementById('dailyChart'), {{
-  type: 'bar',
-  data: {{ labels: D.daily.labels, datasets: [{{ label: '新增星数合计', data: D.daily.values,
-    backgroundColor: '#7F77DD', borderRadius: 3 }}] }},
-  options: {{ responsive: true, maintainAspectRatio: false,
-    plugins: {{ legend: {{ display: false }},
-      tooltip: {{ callbacks: {{ label: c => '+' + c.parsed.y.toLocaleString('en-US') + ' stars' }} }} }},
-    scales: {{ x: {{ grid: {{ display: false }}, ticks: {{ autoSkip: false, maxRotation: 45 }} }},
-      y: {{ beginAtZero: true, grid: {{ color: 'rgba(128,128,128,.18)' }},
-        ticks: {{ callback: v => v.toLocaleString('en-US') }} }} }} }}
-}});
+/* ── 项目名单：搜索 / 语言筛选 / 排序。纯 DOM 操作，不依赖任何库。 ── */
+(function () {
+  const tbl = document.getElementById('projTable');
+  if (!tbl || !tbl.tBodies.length) return;
+  const tb = tbl.tBodies[0];
+  const rows = Array.prototype.slice.call(tb.rows);
+  const q = document.getElementById('projQ');
+  const langSel = document.getElementById('projLang');
+  const sortSel = document.getElementById('projSort');
+  const out = document.getElementById('projCount');
+  const low = s => (s || '').toLowerCase();
+  const num = (tr, k) => Number(tr.dataset[k]) || 0;
+  // 预先拼好「项目名 + 简介」，避免每次按键都读一遍 DOM 文本。
+  const hay = new Map();
+  for (const tr of rows) {
+    const cell = tr.cells[6];
+    hay.set(tr, (tr.dataset.name + ' ' + (cell ? cell.textContent : '')).toLowerCase());
+  }
 
-new Chart(document.getElementById('trendChart'), {{
-  type: 'line',
-  data: {{ labels: D.trend.labels, datasets: D.trend.series.map((s, i) => ({{
-    label: s.name, data: s.values, borderColor: PALETTE[i % PALETTE.length],
-    backgroundColor: 'transparent', borderWidth: 2, tension: .25,
-    pointRadius: 2, pointHoverRadius: 4 }})) }},
-  options: {{ responsive: true, maintainAspectRatio: false, interaction: {{ mode: 'index', intersect: false }},
-    plugins: {{ legend: {{ position: 'bottom', labels: {{ boxWidth: 10, usePointStyle: true, font: {{ size: 11 }} }} }},
-      tooltip: {{ callbacks: {{ label: c => c.dataset.label + '  +' + c.parsed.y.toLocaleString('en-US') }} }} }},
-    scales: {{ x: {{ grid: {{ display: false }} }},
-      y: {{ beginAtZero: true, grid: {{ color: 'rgba(128,128,128,.18)' }},
-        ticks: {{ callback: v => '+' + v.toLocaleString('en-US') }} }} }} }}
-}});
+  function rank() {
+    let n = 0;
+    for (const tr of rows) if (!tr.hidden) tr.cells[0].textContent = String(++n);
+  }
+  function view() {
+    const needle = q.value.trim().toLowerCase();
+    const lg = langSel.value;
+    let shown = 0;
+    for (const tr of rows) {
+      const hit = (!needle || hay.get(tr).indexOf(needle) !== -1)
+               && (!lg || tr.dataset.lang === lg);
+      tr.hidden = !hit;
+      if (hit) shown++;
+    }
+    out.textContent = '显示 ' + shown.toLocaleString('en-US')
+                    + ' / ' + rows.length.toLocaleString('en-US') + ' 个';
+    rank();
+  }
+  function reorder() {
+    const parts = sortSel.value.split(':');
+    const key = parts[0], s = parts[1] === 'asc' ? 1 : -1;
+    const sorted = rows.slice().sort(function (a, b) {
+      if (key === 'name') return s * a.dataset.name.localeCompare(b.dataset.name);
+      if (key === 'created') return s * (a.dataset.created || '').localeCompare(b.dataset.created || '');
+      return s * (num(a, key) - num(b, key));
+    });
+    const frag = document.createDocumentFragment();
+    for (const tr of sorted) frag.appendChild(tr);
+    tb.appendChild(frag);
+    rank();
+  }
+  q.addEventListener('input', view);
+  langSel.addEventListener('change', view);
+  sortSel.addEventListener('change', function () { reorder(); view(); });
+  view();
+})();
+
+/* ── 图表。折叠区里的 canvas 在展开前量不到尺寸，必须等展开后再建，
+      否则 Chart.js 会按 0×0 初始化，展开后是一片空白。 ── */
+(function () {
+  const box = document.querySelector('details.trends');
+  let built = false;
+  function build() {
+    if (built) return;
+    built = true;
+    if (typeof Chart === 'undefined') {
+      document.querySelectorAll('.chart').forEach(function (el) {
+        el.innerHTML = '<p class="muted">图表库没能从 CDN 加载（需要联网）。'
+                     + '上方表格里的数据是完整的。</p>';
+      });
+      return;
+    }
+    new Chart(document.getElementById('dailyChart'), {
+      type: 'bar',
+      data: { labels: D.daily.labels, datasets: [{ label: '新增星数合计', data: D.daily.values,
+        backgroundColor: '#7F77DD', borderRadius: 3 }] },
+      options: { responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false },
+          tooltip: { callbacks: { label: c => '+' + c.parsed.y.toLocaleString('en-US') + ' stars' } } },
+        scales: { x: { grid: { display: false }, ticks: { autoSkip: false, maxRotation: 45 } },
+          y: { beginAtZero: true, grid: { color: 'rgba(128,128,128,.18)' },
+            ticks: { callback: v => v.toLocaleString('en-US') } } } }
+    });
+
+    new Chart(document.getElementById('trendChart'), {
+      type: 'line',
+      data: { labels: D.trend.labels, datasets: D.trend.series.map((s, i) => ({
+        label: s.name, data: s.values, borderColor: PALETTE[i % PALETTE.length],
+        backgroundColor: 'transparent', borderWidth: 2, tension: .25,
+        pointRadius: 2, pointHoverRadius: 4 })) },
+      options: { responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, usePointStyle: true, font: { size: 11 } } },
+          tooltip: { callbacks: { label: c => c.dataset.label + '  +' + c.parsed.y.toLocaleString('en-US') } } },
+        scales: { x: { grid: { display: false } },
+          y: { beginAtZero: true, grid: { color: 'rgba(128,128,128,.18)' },
+            ticks: { callback: v => '+' + v.toLocaleString('en-US') } } } }
+    });
+  }
+  if (!box) { build(); return; }
+  if (box.open) build();
+  box.addEventListener('toggle', function () { if (box.open) build(); });
+})();
 </script>"""
+
+    script = js.replace("__PAYLOAD__", chart_payload)
 
     (docs / "index.html").write_text(
         _page("star-pulse · GitHub 星耀榜", body, script), encoding="utf-8"

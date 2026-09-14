@@ -5,7 +5,7 @@
   {
    "full_name": "mattpocock/skills",
    "repo_id": 1148788086,
-   "stars": 261465,
+   "stars": 261471,
    "forks": 22058,
    "open_issues": 494,
    "language": "Shell",
@@ -17,8 +17,8 @@
   {
    "full_name": "affaan-m/ECC",
    "repo_id": 1136590548,
-   "stars": 257880,
-   "forks": 38566,
+   "stars": 257881,
+   "forks": 38567,
    "open_issues": 201,
    "language": "JavaScript",
    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
@@ -29,7 +29,7 @@
   {
    "full_name": "microsoft/markitdown",
    "repo_id": 888092115,
-   "stars": 183697,
+   "stars": 183700,
    "forks": 13519,
    "open_issues": 649,
    "language": "Python",
@@ -41,7 +41,7 @@
   {
    "full_name": "huggingface/transformers",
    "repo_id": 155220641,
-   "stars": 165657,
+   "stars": 165659,
    "forks": 34562,
    "open_issues": 2449,
    "language": "Python",
@@ -53,8 +53,8 @@
   {
    "full_name": "DietrichGebert/ponytail",
    "repo_id": 1266797999,
-   "stars": 137562,
-   "forks": 7383,
+   "stars": 137567,
+   "forks": 7384,
    "open_issues": 263,
    "language": "JavaScript",
    "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
@@ -65,8 +65,8 @@
   {
    "full_name": "asgeirtj/system_prompts_leaks",
    "repo_id": 976921297,
-   "stars": 66237,
-   "forks": 10822,
+   "stars": 66242,
+   "forks": 10823,
    "open_issues": 56,
    "language": "JavaScript",
    "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok B",
@@ -77,8 +77,8 @@
   {
    "full_name": "tt-a1i/archify",
    "repo_id": 1211139949,
-   "stars": 61153,
-   "forks": 4026,
+   "stars": 61160,
+   "forks": 4027,
    "open_issues": 167,
    "language": "JavaScript",
    "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
@@ -89,7 +89,7 @@
   {
    "full_name": "calesthio/OpenMontage",
    "repo_id": 1195360525,
-   "stars": 58677,
+   "stars": 58681,
    "forks": 7373,
    "open_issues": 320,
    "language": "Python",
@@ -101,7 +101,7 @@
   {
    "full_name": "heygen-com/hyperframes",
    "repo_id": 1177402105,
-   "stars": 49714,
+   "stars": 49716,
    "forks": 4539,
    "open_issues": 132,
    "language": "TypeScript",
@@ -113,9 +113,9 @@
   {
    "full_name": "ayghri/i-have-adhd",
    "repo_id": 1238120057,
-   "stars": 44602,
-   "forks": 2569,
-   "open_issues": 64,
+   "stars": 44606,
+   "forks": 2570,
+   "open_issues": 65,
    "language": "Python",
    "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
    "repo_created": "2026-05-13",
@@ -125,7 +125,7 @@
   {
    "full_name": "cathrynlavery/diagram-design",
    "repo_id": 1212769188,
-   "stars": 39361,
+   "stars": 39368,
    "forks": 2499,
    "open_issues": 42,
    "language": "HTML",
@@ -149,7 +149,7 @@
   {
    "full_name": "yuliskov/SmartTube",
    "repo_id": 283211901,
-   "stars": 33513,
+   "stars": 33514,
    "forks": 2037,
    "open_issues": 712,
    "language": "Java",
@@ -161,7 +161,7 @@
   {
    "full_name": "bilawalsidhu/gods-eye-view",
    "repo_id": 1277471539,
-   "stars": 32339,
+   "stars": 32344,
    "forks": 6474,
    "open_issues": 200,
    "language": "JavaScript",
@@ -173,8 +173,8 @@
   {
    "full_name": "JustVugg/colibri",
    "repo_id": 1286080397,
-   "stars": 30286,
-   "forks": 3276,
+   "stars": 30296,
+   "forks": 3279,
    "open_issues": 125,
    "language": "C",
    "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
@@ -185,7 +185,7 @@
   {
    "full_name": "debpalash/VoiceStudio",
    "repo_id": 1206390571,
-   "stars": 27418,
+   "stars": 27428,
    "forks": 3378,
    "open_issues": 49,
    "language": "Python",
@@ -197,7 +197,7 @@
   {
    "full_name": "Swordfish90/cool-retro-term",
    "repo_id": 14614344,
-   "stars": 26287,
+   "stars": 26288,
    "forks": 1018,
    "open_issues": 567,
    "language": "QML",
@@ -209,7 +209,7 @@
   {
    "full_name": "vxcontrol/pentagi",
    "repo_id": 913030762,
-   "stars": 24124,
+   "stars": 24128,
    "forks": 3106,
    "open_issues": 62,
    "language": "Go",
@@ -221,7 +221,7 @@
   {
    "full_name": "alibaba/open-code-review",
    "repo_id": 1241960226,
-   "stars": 23799,
+   "stars": 23804,
    "forks": 1759,
    "open_issues": 150,
    "language": "Go",
@@ -233,7 +233,7 @@
   {
    "full_name": "tonhowtf/omniget",
    "repo_id": 1155787322,
-   "stars": 11926,
+   "stars": 11928,
    "forks": 1038,
    "open_issues": 39,
    "language": "Rust",
@@ -257,7 +257,7 @@
   {
    "full_name": "multimodal-art-projection/YuE",
    "repo_id": 920995232,
-   "stars": 7896,
+   "stars": 7897,
    "forks": 874,
    "open_issues": 14,
    "language": "Python",
@@ -269,7 +269,7 @@
   {
    "full_name": "lnkiai/m3e-canvas",
    "repo_id": 1354310030,
-   "stars": 6577,
+   "stars": 6578,
    "forks": 666,
    "open_issues": 4,
    "language": "TypeScript",
@@ -281,7 +281,7 @@
   {
    "full_name": "tech-leads-club/agent-skills",
    "repo_id": 1137515077,
-   "stars": 5781,
+   "stars": 5784,
    "forks": 503,
    "open_issues": 31,
    "language": "TypeScript",
@@ -293,8 +293,8 @@
   {
    "full_name": "jihe520/MathModelAgent",
    "repo_id": 924706399,
-   "stars": 5440,
-   "forks": 413,
+   "stars": 5441,
+   "forks": 412,
    "open_issues": 43,
    "language": "Python",
    "description": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
@@ -305,7 +305,7 @@
   {
    "full_name": "ever-co/ever-gauzy",
    "repo_id": 189829392,
-   "stars": 5354,
+   "stars": 5358,
    "forks": 956,
    "open_issues": 468,
    "language": "TypeScript",
@@ -317,7 +317,7 @@
   {
    "full_name": "SnailSploit/Claude-Red",
    "repo_id": 1172273835,
-   "stars": 4276,
+   "stars": 4277,
    "forks": 600,
    "open_issues": 13,
    "language": "Python",
@@ -353,7 +353,7 @@
   {
    "full_name": "sdli1995/dlssg_for_sm86",
    "repo_id": 1360432710,
-   "stars": 2484,
+   "stars": 2486,
    "forks": 147,
    "open_issues": 97,
    "language": null,
@@ -377,8 +377,8 @@
   {
    "full_name": "melgarafael/DeskcommCRM",
    "repo_id": 1223939135,
-   "stars": 2323,
-   "forks": 606,
+   "stars": 2325,
+   "forks": 607,
    "open_issues": 142,
    "language": "TypeScript",
    "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
@@ -402,7 +402,7 @@
    "full_name": "Rion-Wu-tech/wechat-intelligence-hub",
    "repo_id": 1357272370,
    "stars": 2133,
-   "forks": 2594,
+   "forks": 2595,
    "open_issues": 6,
    "language": "Python",
    "description": "Local-first WeChat intelligence system with a read-only CLI, Codex skills, searchable chat history, daily briefings, follow-ups and opportunity tracking.",
@@ -449,7 +449,7 @@
   {
    "full_name": "Edge0-AI/Edge0",
    "repo_id": 1361439328,
-   "stars": 1628,
+   "stars": 1629,
    "forks": 129,
    "open_issues": 14,
    "language": "Python",
@@ -533,7 +533,7 @@
   {
    "full_name": "danielblnc/DLSS-NR-on-AMD",
    "repo_id": 1355366032,
-   "stars": 1168,
+   "stars": 1169,
    "forks": 52,
    "open_issues": 128,
    "language": null,
@@ -629,7 +629,7 @@
   {
    "full_name": "crwdla/tokentab",
    "repo_id": 1360488682,
-   "stars": 915,
+   "stars": 917,
    "forks": 212,
    "open_issues": 0,
    "language": "Python",
@@ -641,7 +641,7 @@
   {
    "full_name": "Mantitup-Org/vista",
    "repo_id": 1356772546,
-   "stars": 905,
+   "stars": 906,
    "forks": 15,
    "open_issues": 18,
    "language": "TypeScript",
@@ -666,7 +666,7 @@
    "full_name": "byJoey/warp-masque-actions",
    "repo_id": 1357414008,
    "stars": 831,
-   "forks": 2910,
+   "forks": 2911,
    "open_issues": 5,
    "language": "JavaScript",
    "description": "GitHub Actions 自动生成 Cloudflare WARP (MASQUE) 密钥与 mihomo 配置，产物只存 artifact",
@@ -677,7 +677,7 @@
   {
    "full_name": "AI-FanGe/Microduck-build-tutorial",
    "repo_id": 1357411595,
-   "stars": 826,
+   "stars": 827,
    "forks": 217,
    "open_issues": 9,
    "language": "Python",
@@ -831,6 +831,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "rizqinrr/viserys-agent",
+   "repo_id": 1367501425,
+   "stars": 630,
+   "forks": 0,
+   "open_issues": 0,
+   "language": "JavaScript",
+   "description": "",
+   "repo_created": "2026-09-12",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "OpenWAM-Official/OpenWAM",
    "repo_id": 1358848972,
    "stars": 629,
@@ -839,18 +851,6 @@
    "language": "Python",
    "description": "Official repository for \"OpenWAM: An Open, Modular Exploration Towards Systematic World–Action Model Pretraining\".",
    "repo_created": "2026-09-06",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "rizqinrr/viserys-agent",
-   "repo_id": 1367501425,
-   "stars": 629,
-   "forks": 0,
-   "open_issues": 0,
-   "language": "JavaScript",
-   "description": "",
-   "repo_created": "2026-09-12",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -905,7 +905,7 @@
   {
    "full_name": "yifanzhang-pro/recurrent-looped-tranformer",
    "repo_id": 1367606050,
-   "stars": 600,
+   "stars": 601,
    "forks": 65,
    "open_issues": 1,
    "language": "HTML",
@@ -954,7 +954,7 @@
    "full_name": "eternityspring/reelbench-skills",
    "repo_id": 1365350772,
    "stars": 576,
-   "forks": 77,
+   "forks": 78,
    "open_issues": 0,
    "language": "HTML",
    "description": "Learning notes and tooling skills for AI video - AI 视频相关的学习与工具 skill",
@@ -966,7 +966,7 @@
    "full_name": "ArasTey/lunel",
    "repo_id": 1362322371,
    "stars": 575,
-   "forks": 1439,
+   "forks": 1443,
    "open_issues": 2,
    "language": "Python",
    "description": "",
@@ -1025,7 +1025,7 @@
   {
    "full_name": "wilsjo2/OptiScaler-DLSSNR-PreSR-Multipass",
    "repo_id": 1358635004,
-   "stars": 501,
+   "stars": 502,
    "forks": 28,
    "open_issues": 34,
    "language": "C++",
@@ -1157,12 +1157,24 @@
   {
    "full_name": "jnz/INSLIB",
    "repo_id": 1361242474,
-   "stars": 433,
+   "stars": 434,
    "forks": 64,
    "open_issues": 0,
    "language": "C",
    "description": "Open Source Inertial Navigation Library",
    "repo_created": "2026-09-08",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "i-am-manware/Manware-s-AI-Learning-Toolkit",
+   "repo_id": 1358378778,
+   "stars": 429,
+   "forks": 53,
+   "open_issues": 2,
+   "language": null,
+   "description": "An AI toolkit that turns agents into teachers rather than code yapping machines",
+   "repo_created": "2026-09-05",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -1175,18 +1187,6 @@
    "language": "Python",
    "description": "VideoDeltaNet-H3: Live T2VA / I2VA / FL2VA generation based on Minimax H3.",
    "repo_created": "2026-09-02",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "i-am-manware/Manware-s-AI-Learning-Toolkit",
-   "repo_id": 1358378778,
-   "stars": 428,
-   "forks": 53,
-   "open_issues": 2,
-   "language": null,
-   "description": "An AI toolkit that turns agents into teachers rather than code yapping machines",
-   "repo_created": "2026-09-05",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -1265,7 +1265,7 @@
   {
    "full_name": "LunarXuan/image-prompt-reverse",
    "repo_id": 1353853430,
-   "stars": 377,
+   "stars": 378,
    "forks": 32,
    "open_issues": 0,
    "language": null,
@@ -1433,12 +1433,24 @@
   {
    "full_name": "aizhimou/javranking-extension",
    "repo_id": 1359600707,
-   "stars": 330,
+   "stars": 332,
    "forks": 20,
    "open_issues": 1,
    "language": "TypeScript",
    "description": "Show all JAV cover and ranking in one click.",
    "repo_created": "2026-09-07",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "zjwzcx/Awesome-Astra-Embodied-AI",
+   "repo_id": 1367271141,
+   "stars": 328,
+   "forks": 2,
+   "open_issues": 0,
+   "language": null,
+   "description": "GPT-6 Astra for embodied AI and robotics.",
+   "repo_created": "2026-09-12",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -1455,18 +1467,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "zjwzcx/Awesome-Astra-Embodied-AI",
-   "repo_id": 1367271141,
-   "stars": 327,
-   "forks": 2,
-   "open_issues": 0,
-   "language": null,
-   "description": "GPT-6 Astra for embodied AI and robotics.",
-   "repo_created": "2026-09-12",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "deepseek-ai/deepseek-recipe",
    "repo_id": 1363568952,
    "stars": 323,
@@ -1479,6 +1479,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "showlab/Show-Harness",
+   "repo_id": 1359995118,
+   "stars": 317,
+   "forks": 16,
+   "open_issues": 0,
+   "language": "Python",
+   "description": "Just a VLM Agent Can Play Robots",
+   "repo_created": "2026-09-07",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "biusberline/cloudflare-turnstile-solver",
    "repo_id": 1359247858,
    "stars": 317,
@@ -1487,18 +1499,6 @@
    "language": "Python",
    "description": "A small Python library and CLI for working with Cloudflare Turnstile on your own pages - read the sitekey, build the token, verify the result.",
    "repo_created": "2026-09-06",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "showlab/Show-Harness",
-   "repo_id": 1359995118,
-   "stars": 316,
-   "forks": 16,
-   "open_issues": 0,
-   "language": "Python",
-   "description": "Just a VLM Agent Can Play Robots",
-   "repo_created": "2026-09-07",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -1517,7 +1517,7 @@
   {
    "full_name": "Chuloo/mural",
    "repo_id": 1367251447,
-   "stars": 312,
+   "stars": 313,
    "forks": 90,
    "open_issues": 13,
    "language": "Swift",
@@ -1599,6 +1599,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "Kablex/ComfyUI-Ref2VA-VSA",
+   "repo_id": 1358168733,
+   "stars": 300,
+   "forks": 38,
+   "open_issues": 0,
+   "language": "Python",
+   "description": "",
+   "repo_created": "2026-09-05",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "browser-use/browser-use-pi",
    "repo_id": 1358512221,
    "stars": 300,
@@ -1606,18 +1618,6 @@
    "open_issues": 0,
    "language": "JavaScript",
    "description": "A tiny TypeScript web agent, hill climbed on real browser evals.",
-   "repo_created": "2026-09-05",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "Kablex/ComfyUI-Ref2VA-VSA",
-   "repo_id": 1358168733,
-   "stars": 299,
-   "forks": 38,
-   "open_issues": 0,
-   "language": "Python",
-   "description": "",
    "repo_created": "2026-09-05",
    "is_archived": 0,
    "is_fork": 0
@@ -1733,8 +1733,8 @@
   {
    "full_name": "nhovongoc0-max/meme-radar",
    "repo_id": 1366032081,
-   "stars": 279,
-   "forks": 116,
+   "stars": 280,
+   "forks": 117,
    "open_issues": 0,
    "language": "JavaScript",
    "description": "Meme雷达开源版：本地只读、多链 Meme 候选扫描与人工复核工具",
@@ -1770,7 +1770,7 @@
    "full_name": "zhihui-hu/one-ip",
    "repo_id": 1362204453,
    "stars": 273,
-   "forks": 118,
+   "forks": 119,
    "open_issues": 1,
    "language": "TypeScript",
    "description": "瞬息洞察 IP 纯净底色与风险评级。仅需一键探寻，物理坐标、机房源流与代理轨迹尽收眼底。",
@@ -1961,7 +1961,7 @@
   {
    "full_name": "TokenRhythm/NeoHorse",
    "repo_id": 1356900025,
-   "stars": 249,
+   "stars": 250,
    "forks": 6,
    "open_issues": 1,
    "language": null,
@@ -2175,6 +2175,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "qingjian-team/qingjian",
+   "repo_id": 1359963149,
+   "stars": 220,
+   "forks": 23,
+   "open_issues": 14,
+   "language": "Rust",
+   "description": "青简 Qingjian：用 Rust 写的拼音输入法，候选词旁多一条正在学的语言的译词",
+   "repo_created": "2026-09-07",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "MirroS-Lab/S-Space",
    "repo_id": 1359035587,
    "stars": 220,
@@ -2183,18 +2195,6 @@
    "language": "Python",
    "description": "S-Space: Exploring Spatial Workspace in Multimodal Models",
    "repo_created": "2026-09-06",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "qingjian-team/qingjian",
-   "repo_id": 1359963149,
-   "stars": 219,
-   "forks": 23,
-   "open_issues": 14,
-   "language": "Rust",
-   "description": "青简 Qingjian：用 Rust 写的拼音输入法，候选词旁多一条正在学的语言的译词",
-   "repo_created": "2026-09-07",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -2381,7 +2381,7 @@
   {
    "full_name": "Omni-Interaction-Gander/Omni-Interaction-Agent",
    "repo_id": 1359813254,
-   "stars": 202,
+   "stars": 203,
    "forks": 13,
    "open_issues": 1,
    "language": "Python",
@@ -2883,6 +2883,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "mangfufu/director-desk",
+   "repo_id": 1359359114,
+   "stars": 163,
+   "forks": 49,
+   "open_issues": 1,
+   "language": "JavaScript",
+   "description": "AI 短剧白模预演与摄影机调度工具",
+   "repo_created": "2026-09-06",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "KyThuatUAV/ESP32_FC",
    "repo_id": 1359481595,
    "stars": 163,
@@ -2931,18 +2943,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "mangfufu/director-desk",
-   "repo_id": 1359359114,
-   "stars": 162,
-   "forks": 49,
-   "open_issues": 1,
-   "language": "JavaScript",
-   "description": "AI 短剧白模预演与摄影机调度工具",
-   "repo_created": "2026-09-06",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "BuzzPlay/infinite-world",
    "repo_id": 1356832501,
    "stars": 161,
@@ -2979,6 +2979,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "Colinjqq/content-forecast",
+   "repo_id": 1361023994,
+   "stars": 159,
+   "forks": 8,
+   "open_issues": 0,
+   "language": "Python",
+   "description": "A creator-first AI skill for topic generation, script review, filming guidance, and view forecasting.",
+   "repo_created": "2026-09-08",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "linranff/GTA_SZ",
    "repo_id": 1359153546,
    "stars": 158,
@@ -2999,18 +3011,6 @@
    "language": "Python",
    "description": "Kill the tool-call tax: harness tool latency back below model TPS. Fast local lanes, persistent pools, session caches. Scratch lab turned real.",
    "repo_created": "2026-09-02",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "Colinjqq/content-forecast",
-   "repo_id": 1361023994,
-   "stars": 158,
-   "forks": 8,
-   "open_issues": 0,
-   "language": "Python",
-   "description": "A creator-first AI skill for topic generation, script review, filming guidance, and view forecasting.",
-   "repo_created": "2026-09-08",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -3245,7 +3245,7 @@
   {
    "full_name": "vianziro/Whatsapp-Dekstop",
    "repo_id": 1359951632,
-   "stars": 145,
+   "stars": 146,
    "forks": 12,
    "open_issues": 5,
    "language": "Go",
@@ -3353,7 +3353,7 @@
   {
    "full_name": "yunxiangcai88-ai/SIPM-READOUT",
    "repo_id": 1355063702,
-   "stars": 139,
+   "stars": 140,
    "forks": 3,
    "open_issues": 0,
    "language": "Python",
@@ -3699,6 +3699,30 @@
    "is_fork": 0
   },
   {
+   "full_name": "fanfanyuyang/bid-agent-vscode",
+   "repo_id": 1357350878,
+   "stars": 121,
+   "forks": 5,
+   "open_issues": 0,
+   "language": "Python",
+   "description": "Intelligent Parsing Agent for Electrical Tender Documents – A seven-step workflow + document processing ledger, enabling multi-format uploads, automatic equipment parameter extraction, evidence review",
+   "repo_created": "2026-09-04",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "max99x/wutw-public",
+   "repo_id": 1367375031,
+   "stars": 121,
+   "forks": 11,
+   "open_issues": 0,
+   "language": "GDScript",
+   "description": "Worlds Upon The Wind: a peaceful roguelite deckbuilder about resettling a shattered world.",
+   "repo_created": "2026-09-12",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "Atomburstofficial/geiger",
    "repo_id": 1359384189,
    "stars": 120,
@@ -3719,30 +3743,6 @@
    "language": "Python",
    "description": "一个适用于多任务系统+LVGL 8.x 的轻量 MVVM 支持库。",
    "repo_created": "2026-09-01",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "fanfanyuyang/bid-agent-vscode",
-   "repo_id": 1357350878,
-   "stars": 120,
-   "forks": 5,
-   "open_issues": 0,
-   "language": "Python",
-   "description": "Intelligent Parsing Agent for Electrical Tender Documents – A seven-step workflow + document processing ledger, enabling multi-format uploads, automatic equipment parameter extraction, evidence review",
-   "repo_created": "2026-09-04",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "max99x/wutw-public",
-   "repo_id": 1367375031,
-   "stars": 120,
-   "forks": 10,
-   "open_issues": 0,
-   "language": "GDScript",
-   "description": "Worlds Upon The Wind: a peaceful roguelite deckbuilder about resettling a shattered world.",
-   "repo_created": "2026-09-12",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -3987,6 +3987,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "maverickgao8848/kouyu",
+   "repo_id": 1358761059,
+   "stars": 117,
+   "forks": 13,
+   "open_issues": 1,
+   "language": "CSS",
+   "description": "A guided English speaking practice Skill with gentle correction and a local review workbench",
+   "repo_created": "2026-09-06",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "cth9191/motion-design",
    "repo_id": 1357504161,
    "stars": 116,
@@ -4055,18 +4067,6 @@
    "language": "Python",
    "description": "",
    "repo_created": "2026-09-10",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "maverickgao8848/kouyu",
-   "repo_id": 1358761059,
-   "stars": 116,
-   "forks": 13,
-   "open_issues": 1,
-   "language": "CSS",
-   "description": "A guided English speaking practice Skill with gentle correction and a local review workbench",
-   "repo_created": "2026-09-06",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -4205,7 +4205,7 @@
   {
    "full_name": "nex-agi/Nex-N2.5",
    "repo_id": 1359941870,
-   "stars": 109,
+   "stars": 110,
    "forks": 3,
    "open_issues": 1,
    "language": null,
@@ -4323,18 +4323,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "mycelium-mesh/amneziawg-ui",
-   "repo_id": 1356071067,
-   "stars": 107,
-   "forks": 4,
-   "open_issues": 2,
-   "language": "Go",
-   "description": "Графический WEB интерфейс UI в браузере + VPN AmneziaWG 3.1 на VPS в Docker одной командой. Без мусора и лишних зависимостей",
-   "repo_created": "2026-09-03",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "owngoal-dev/Fila",
    "repo_id": 1356671035,
    "stars": 107,
@@ -4343,6 +4331,18 @@
    "language": "Swift",
    "description": "Root file manager for jailbroken iOS — RootHide and rootless, iOS 15+",
    "repo_created": "2026-09-04",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "mycelium-mesh/amneziawg-ui",
+   "repo_id": 1356071067,
+   "stars": 107,
+   "forks": 4,
+   "open_issues": 2,
+   "language": "Go",
+   "description": "Графический WEB интерфейс UI в браузере + VPN AmneziaWG 3.1 на VPS в Docker одной командой. Без мусора и лишних зависимостей",
+   "repo_created": "2026-09-03",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -5319,6 +5319,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "ZJM189/Daily_News",
+   "repo_id": 1356623751,
+   "stars": 92,
+   "forks": 4,
+   "open_issues": 0,
+   "language": "Python",
+   "description": "每日定时获取AI相关的最新资讯",
+   "repo_created": "2026-09-04",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "ThyMuoyhak/MiniShopCambodia-FullStackWeb",
    "repo_id": 1353302417,
    "stars": 91,
@@ -5327,18 +5339,6 @@
    "language": "JavaScript",
    "description": "MiniShopCambodia-FullStackWeb",
    "repo_created": "2026-09-01",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "ZJM189/Daily_News",
-   "repo_id": 1356623751,
-   "stars": 91,
-   "forks": 4,
-   "open_issues": 0,
-   "language": "Python",
-   "description": "每日定时获取AI相关的最新资讯",
-   "repo_created": "2026-09-04",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -6051,18 +6051,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "RH-RunningHub/MiniMax-H3-MultiGPU-Lightning",
-   "repo_id": 1360309577,
-   "stars": 80,
-   "forks": 11,
-   "open_issues": 1,
-   "language": "Python",
-   "description": "MiniMax-H3 multi-GPU inference acceleration: ~12x on 8x RTX 6000D (step distillation + SageAttention2 + Cache-DiT + torch.compile, TP2+Ulysses4 on sglang)",
-   "repo_created": "2026-09-07",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "tonywjs/html-diagram",
    "repo_id": 1365295178,
    "stars": 80,
@@ -6071,6 +6059,18 @@
    "language": "HTML",
    "description": "편집 가능한 HTML 도식을 만드는 Claude Code 스킬. 문서 자체가 에디터.",
    "repo_created": "2026-09-11",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "RH-RunningHub/MiniMax-H3-MultiGPU-Lightning",
+   "repo_id": 1360309577,
+   "stars": 80,
+   "forks": 11,
+   "open_issues": 1,
+   "language": "Python",
+   "description": "MiniMax-H3 multi-GPU inference acceleration: ~12x on 8x RTX 6000D (step distillation + SageAttention2 + Cache-DiT + torch.compile, TP2+Ulysses4 on sglang)",
+   "repo_created": "2026-09-07",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -6159,18 +6159,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "fromgof/TridentVision",
-   "repo_id": 1362678258,
-   "stars": 79,
-   "forks": 29,
-   "open_issues": 0,
-   "language": "Verilog",
-   "description": "Implement yolov26m using a complete FPGA, without any C language code. Requires 160K LUTs and 386 DSP cores (based on Xilinx XC7K325T).",
-   "repo_created": "2026-09-09",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "muyicn/ctyun-dashboard",
    "repo_id": 1356921117,
    "stars": 79,
@@ -6179,6 +6167,18 @@
    "language": "JavaScript",
    "description": "天翼云电脑保活签到任务；移动云电脑保活，阻止休眠；web远程访问",
    "repo_created": "2026-09-04",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "fromgof/TridentVision",
+   "repo_id": 1362678258,
+   "stars": 79,
+   "forks": 29,
+   "open_issues": 0,
+   "language": "Verilog",
+   "description": "Implement yolov26m using a complete FPGA, without any C language code. Requires 160K LUTs and 386 DSP cores (based on Xilinx XC7K325T).",
+   "repo_created": "2026-09-09",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -7167,6 +7167,18 @@
    "is_fork": 0
   },
   {
+   "full_name": "Dr-TSNG/altdb",
+   "repo_id": 1368146952,
+   "stars": 66,
+   "forks": 6,
+   "open_issues": 0,
+   "language": "Rust",
+   "description": "A KernelSU module that provides alternative adb server over local network",
+   "repo_created": "2026-09-13",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
    "full_name": "XiaoJiuAI/lingshu",
    "repo_id": 1353794475,
    "stars": 66,
@@ -7295,18 +7307,6 @@
    "language": "Python",
    "description": "NovoWeave — a conceptual generative protein-design framework (non-functional pseudocode).",
    "repo_created": "2026-09-02",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
-   "full_name": "Dr-TSNG/altdb",
-   "repo_id": 1368146952,
-   "stars": 65,
-   "forks": 6,
-   "open_issues": 0,
-   "language": "Rust",
-   "description": "A KernelSU module that provides alternative adb server over local network",
-   "repo_created": "2026-09-13",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -7575,18 +7575,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "Hunterplastable/solara-executor-free",
-   "repo_id": 1367608398,
-   "stars": 63,
-   "forks": 12,
-   "open_issues": 0,
-   "language": null,
-   "description": "Solara Executor for Roblox — keyless, fast execution, script hub, UNC support | free | no key | 2026",
-   "repo_created": "2026-09-12",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "alanmosilva/sre-observability-course",
    "repo_id": 1358375924,
    "stars": 63,
@@ -7595,6 +7583,18 @@
    "language": "Shell",
    "description": "Curso prático de Site Reliability Engineering e Observability",
    "repo_created": "2026-09-05",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "Hunterplastable/solara-executor-free",
+   "repo_id": 1367608398,
+   "stars": 63,
+   "forks": 12,
+   "open_issues": 0,
+   "language": null,
+   "description": "Solara Executor for Roblox — keyless, fast execution, script hub, UNC support | free | no key | 2026",
+   "repo_created": "2026-09-12",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -7671,18 +7671,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "jealous-sound/azerothcore-wotlk-coa",
-   "repo_id": 1359596777,
-   "stars": 62,
-   "forks": 28,
-   "open_issues": 51,
-   "language": "C++",
-   "description": "Conquest of AzerothCore",
-   "repo_created": "2026-09-07",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "soloiaros/iphone-solo",
    "repo_id": 1363789285,
    "stars": 62,
@@ -7691,6 +7679,18 @@
    "language": "JavaScript",
    "description": "A simple web tool that turns your regular iPhone into iPhone Duo.",
    "repo_created": "2026-09-10",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "jealous-sound/azerothcore-wotlk-coa",
+   "repo_id": 1359596777,
+   "stars": 62,
+   "forks": 28,
+   "open_issues": 51,
+   "language": "C++",
+   "description": "Conquest of AzerothCore",
+   "repo_created": "2026-09-07",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -7975,7 +7975,7 @@
    "repo_id": 1353768049,
    "stars": 60,
    "forks": 0,
-   "open_issues": 80,
+   "open_issues": 81,
    "language": "Rust",
    "description": "uf  —  the unified toolchain for flow & react. the most easy way to build your app with flow type.",
    "repo_created": "2026-09-01",
@@ -8019,18 +8019,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "zijie1024/autryn",
-   "repo_id": 1358712513,
-   "stars": 59,
-   "forks": 0,
-   "open_issues": 0,
-   "language": "TypeScript",
-   "description": "A lightweight, composable Agent Runtime for building extensible AI agents.",
-   "repo_created": "2026-09-06",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "nftechie/flm",
    "repo_id": 1366718976,
    "stars": 59,
@@ -8039,6 +8027,18 @@
    "language": "Python",
    "description": "Train and chat with a frozen language model coupled to the full retained MaleCNS fly connectome.",
    "repo_created": "2026-09-11",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "zijie1024/autryn",
+   "repo_id": 1358712513,
+   "stars": 59,
+   "forks": 0,
+   "open_issues": 0,
+   "language": "TypeScript",
+   "description": "A lightweight, composable Agent Runtime for building extensible AI agents.",
+   "repo_created": "2026-09-06",
    "is_archived": 0,
    "is_fork": 0
   },
@@ -8391,13 +8391,13 @@
    "is_fork": 0
   },
   {
-   "full_name": "Conecharivet/the-finals-helper-overlay",
-   "repo_id": 1366688135,
+   "full_name": "SpherePrince/dbd-match-assistant",
+   "repo_id": 1366690666,
    "stars": 57,
    "forks": 0,
    "open_issues": 0,
    "language": null,
-   "description": "The Finals gameplay assistant and overlay utility 2026 | Free | No key required",
+   "description": "Dead by Daylight Match Assistant 2026 | Free | No key required",
    "repo_created": "2026-09-11",
    "is_archived": 0,
    "is_fork": 0
@@ -8415,13 +8415,13 @@
    "is_fork": 0
   },
   {
-   "full_name": "SpherePrince/dbd-match-assistant",
-   "repo_id": 1366690666,
+   "full_name": "Conecharivet/the-finals-helper-overlay",
+   "repo_id": 1366688135,
    "stars": 57,
    "forks": 0,
    "open_issues": 0,
    "language": null,
-   "description": "Dead by Daylight Match Assistant 2026 | Free | No key required",
+   "description": "The Finals gameplay assistant and overlay utility 2026 | Free | No key required",
    "repo_created": "2026-09-11",
    "is_archived": 0,
    "is_fork": 0
@@ -8463,18 +8463,6 @@
    "is_fork": 0
   },
   {
-   "full_name": "rapidjusticeraid/roblox-mm2-utility-tracker",
-   "repo_id": 1366711195,
-   "stars": 57,
-   "forks": 0,
-   "open_issues": 0,
-   "language": null,
-   "description": "Roblox Murder Mystery 2 helper utility and overlay assistant | 2026 | Free | No key required",
-   "repo_created": "2026-09-11",
-   "is_archived": 0,
-   "is_fork": 0
-  },
-  {
    "full_name": "DisplayChant75/kcd2-gameplay-enhancer-assistant",
    "repo_id": 1366732135,
    "stars": 57,
@@ -8482,6 +8470,18 @@
    "open_issues": 0,
    "language": null,
    "description": "Kingdom Come Deliverance 2 gameplay utility and trainer 2026 | Free | No key required",
+   "repo_created": "2026-09-11",
+   "is_archived": 0,
+   "is_fork": 0
+  },
+  {
+   "full_name": "rapidjusticeraid/roblox-mm2-utility-tracker",
+   "repo_id": 1366711195,
+   "stars": 57,
+   "forks": 0,
+   "open_issues": 0,
+   "language": null,
+   "description": "Roblox Murder Mystery 2 helper utility and overlay assistant | 2026 | Free | No key required",
    "repo_created": "2026-09-11",
    "is_archived": 0,
    "is_fork": 0

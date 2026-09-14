@@ -20,10 +20,10 @@ import html as html_mod
 import json
 import shutil
 import sqlite3
-from datetime import date
+from collections import Counter
 from pathlib import Path
 
-from . import analyze
+from . import analyze, i18n
 from .config import Settings
 
 esc = html_mod.escape
@@ -59,6 +59,12 @@ td.num { font-weight:600; }
 tr.first td { color:#888780; }
 a { color:#534AB7; text-decoration:none; }
 a:hover { text-decoration:underline; }
+/* 项目名要一眼看出可点：常态就带下划线，再挂一个 ↗ 角标 */
+a.repo { text-decoration:underline; text-decoration-thickness:1px;
+  text-decoration-color:rgba(83,74,183,.38); text-underline-offset:2.5px; }
+a.repo:hover { text-decoration-color:currentColor; }
+a.repo .ext { font-size:.82em; margin-left:3px; opacity:.5; }
+td.cat { white-space:nowrap; color:#6b6a66; }
 .up { color:#A32D2D; font-weight:600; }
 .rank { color:#888780; font-variant-numeric:tabular-nums; }
 .banner { background:#FAEEDA; border:1px solid #EF9F27; color:#633806;
@@ -95,6 +101,8 @@ footer { margin-top:46px; padding-top:16px; border-top:1px solid #e3e1da; color:
   th { background:#302f2c; color:#d3d1c7; box-shadow:inset 0 -1px 0 #3a3a37; }
   td { border-top-color:#3a3a37; }
   a { color:#AFA9EC; }
+  a.repo { text-decoration-color:rgba(175,169,236,.42); }
+  td.cat { color:#9b9993; }
   h1, h2 { color:#eeecea; }
   .sub, .note, .muted, footer, .card .k, .card .u, .rank, .toolbar .count,
   details.trends > summary .hint { color:#9b9993; }
@@ -125,9 +133,14 @@ def _card(key: str, value: str, unit: str = "") -> str:
 
 
 def _repo_link(full_name: str) -> str:
+    """仓库链接。
+
+    显式加下划线 + ↗ 角标：项目名本来就是 `<a>`，但不做视觉区分时读者根本
+    认不出可以点（这是被真实反馈过的问题）。
+    """
     return (
-        f'<a href="https://github.com/{esc(full_name)}" target="_blank" '
-        f'rel="noopener">{esc(full_name)}</a>'
+        f'<a class="repo" href="https://github.com/{esc(full_name)}" target="_blank" '
+        f'rel="noopener">{esc(full_name)}<span class="ext" aria-hidden="true">↗</span></a>'
     )
 
 
@@ -195,33 +208,41 @@ def _fmt_delta(delta: int, has_prev: bool) -> str:
     return '<span class="muted">0</span>'
 
 
-def _project_table(rows: list[dict], day: str | None) -> str:
+def _project_table(rows: list[dict], zh: dict[str, dict]) -> str:
     """「项目本身」名单：全量仓库，可搜索 / 筛选 / 排序。
 
     全部行都服务端渲染（不截断），再叠加一层纯 DOM 的搜索与排序 —— 这样
     即使停用 JS 也仍是一张完整可读的名单，而不是一片空白。
 
-    两个刻意的取舍：
-      * 简介只写进可见单元格，**不再另存一份 data-desc**。之前那样做会把
-        页面从 ~400 KB 撑到 500 KB，而搜索完全可以读单元格文本。
-      * 每行一个换行。整张表挤在一行（约 400 KB 单行）会让 git 完全没法做
+    三个刻意的取舍：
+      * 简介以**中文译文**为正文，英文原文不内联，只留跳去 GitHub 的链接。
+        把原文再塞进 title 属性会给每行多加约 85 字符，800 行就是 68 KB ——
+        正是这类「顺手多存一份」把页面从 400 KB 撑到 500 KB 的。
+      * 每行一个换行。整张表挤成一行（约 400 KB 单行）会让 git 完全没法做
         增量压缩，每天都要重存一份完整 blob。
+      * 简介里的换行符会打散「一行一条记录」的结构，先压平。
     """
     if not rows:
         return '<p class="muted">暂无数据。</p>'
     lines = []
     for i, r in enumerate(rows, 1):
-        # 简介里可能带换行，会把「一行一条记录」的结构打散，先压平。
+        entry = zh.get(str(r["repo_id"])) or {}
+        zh_text = (entry.get("zh") or "").strip()
+        # 没翻译过就退回英文原文，至少不会留白。
         desc = " ".join((r.get("description") or "").split())
         short = desc[:80] + ("…" if len(desc) > 80 else "")
-        desc_cell = esc(short) if short else '<span class="muted">—</span>'
+        text = zh_text or short
+        desc_cell = esc(text) if text else '<span class="muted">—</span>'
+        cat = analyze.classify(r)
         lines.append(
             f'<tr data-name="{esc(r["full_name"].lower())}" '
+            f'data-cat="{esc(cat)}" '
             f'data-lang="{esc(r.get("language") or "")}" '
             f'data-stars="{r["stars"]}" data-forks="{r["forks"]}" '
             f'data-delta="{r["delta"]}" data-created="{esc(r.get("repo_created") or "")}">'
             f'<td class="rank">{i}</td>'
             f'<td>{_repo_link(r["full_name"])}</td>'
+            f'<td class="cat">{esc(cat)}</td>'
             f'<td>{esc(r.get("language") or "—")}</td>'
             f'<td class="num">{r["stars"]:,}</td>'
             f'<td class="num">{r["forks"]:,}</td>'
@@ -229,8 +250,8 @@ def _project_table(rows: list[dict], day: str | None) -> str:
             f'<td class="desc">{desc_cell}</td></tr>'
         )
     return (
-        '<table id="projTable"><thead><tr><th>#</th><th>项目</th><th>语言</th>'
-        '<th class="num">星数</th><th class="num">Fork</th>'
+        '<table id="projTable"><thead><tr><th>#</th><th>项目</th><th>类目</th>'
+        '<th>语言</th><th class="num">星数</th><th class="num">Fork</th>'
         '<th class="num">当日新增</th><th>简介</th></tr></thead><tbody>\n'
         + "\n".join(lines)
         + "\n</tbody></table>"
@@ -257,6 +278,14 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     prev = dates[-2] if len(dates) >= 2 else None
     projects = analyze.project_rows(conn, latest, prev) if latest else []
 
+    # 中文简介：来自 data/i18n/zh.json（提交进 git），没有就退回英文原文。
+    zh = i18n.load_cache(settings)
+    translated = sum(
+        1 for r in projects if (zh.get(str(r["repo_id"])) or {}).get("zh")
+    )
+
+    cats = Counter(analyze.classify(r) for r in projects)
+
     langs = conn.execute(
         """
         SELECT r.language AS lang, COUNT(*) AS n
@@ -274,6 +303,7 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
 
     cards = (
         _card("项目名单", f"{len(projects):,}", "个")
+        + _card("中文简介", f"{translated:,}", f"/ {len(projects):,} 条")
         + _card("累计追踪", f"{tracked:,}", "个")
         + _card("覆盖语言", str(len(langs)), "种")
         + _card("快照天数", str(len(dates)), "天")
@@ -321,10 +351,16 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         f'<option value="{esc(r["lang"])}">{esc(r["lang"])}（{r["n"]:,}）</option>'
         for r in langs
     )
+    cat_options = "".join(
+        f'<option value="{esc(name)}">{esc(name)}（{n:,}）</option>'
+        for name, n in cats.most_common()
+    )
     toolbar = (
         '<div class="toolbar">'
         '<input id="projQ" type="search" autocomplete="off" '
-        'placeholder="搜索项目名或简介…" aria-label="搜索项目">'
+        'placeholder="搜索项目名或中文简介…" aria-label="搜索项目">'
+        f'<select id="projCat" aria-label="按类目筛选"><option value="">全部类目</option>'
+        f"{cat_options}</select>"
         f'<select id="projLang" aria-label="按语言筛选"><option value="">全部语言</option>'
         f"{lang_options}</select>"
         '<select id="projSort" aria-label="排序方式">'
@@ -338,7 +374,7 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         f'<span class="count" id="projCount">共 {len(projects):,} 个</span>'
         "</div>"
     )
-    projects_block = _project_table(projects, latest)
+    projects_block = _project_table(projects, zh)
 
     # 历史报告索引
     report_files = sorted(reports_out.glob("*.html"), reverse=True)
@@ -359,8 +395,12 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
 
 <h2>项目名单</h2>
 <p class="note">共 <b>{len(projects):,}</b> 个追踪仓库，数据日期 {esc(str(latest or "—"))}。
-可搜索项目名/简介、按语言筛选、按星数或当日新增排序。<br>
-「当日新增」是相对上一次快照的净增；首日没有对比基线时显示「—」。</p>
+可搜索、按类目或语言筛选、按星数·新增·Fork·创建时间排序；点项目名直接打开 GitHub。<br>
+「类目」由关键词规则判定，确定性可复现；「简介」是模型翻译的<b>机翻</b>中文
+（已译 {translated:,}/{len(projects):,} 条），想看英文原文请点项目名去 GitHub。
+未译到的行仍显示英文原文。<br>
+「当日新增」是相对上一次快照的净增；首日没有对比基线时显示「—」。
+类目与简介都只影响可读性，不参与任何数值计算。</p>
 {toolbar}
 {projects_block}
 
@@ -431,16 +471,19 @@ const PALETTE = ['#7F77DD','#1D9E75','#D85A30','#378ADD','#BA7517','#D4537E','#6
   const tb = tbl.tBodies[0];
   const rows = Array.prototype.slice.call(tb.rows);
   const q = document.getElementById('projQ');
+  const catSel = document.getElementById('projCat');
   const langSel = document.getElementById('projLang');
   const sortSel = document.getElementById('projSort');
   const out = document.getElementById('projCount');
   const low = s => (s || '').toLowerCase();
   const num = (tr, k) => Number(tr.dataset[k]) || 0;
-  // 预先拼好「项目名 + 简介」，避免每次按键都读一遍 DOM 文本。
+  // 预先拼好可搜索文本。用 td.desc 而不是写死的列号 —— 列顺序改过好几次了，
+  // 写死索引是最容易在下次加列时静默失配的写法。
   const hay = new Map();
   for (const tr of rows) {
-    const cell = tr.cells[6];
-    hay.set(tr, (tr.dataset.name + ' ' + (cell ? cell.textContent : '')).toLowerCase());
+    const cell = tr.querySelector('td.desc');
+    hay.set(tr, low(tr.dataset.name + ' ' + tr.dataset.cat + ' '
+                    + (cell ? cell.textContent : '')));
   }
 
   function rank() {
@@ -449,10 +492,12 @@ const PALETTE = ['#7F77DD','#1D9E75','#D85A30','#378ADD','#BA7517','#D4537E','#6
   }
   function view() {
     const needle = q.value.trim().toLowerCase();
+    const cat = catSel.value;
     const lg = langSel.value;
     let shown = 0;
     for (const tr of rows) {
       const hit = (!needle || hay.get(tr).indexOf(needle) !== -1)
+               && (!cat || tr.dataset.cat === cat)
                && (!lg || tr.dataset.lang === lg);
       tr.hidden = !hit;
       if (hit) shown++;
@@ -475,6 +520,7 @@ const PALETTE = ['#7F77DD','#1D9E75','#D85A30','#378ADD','#BA7517','#D4537E','#6
     rank();
   }
   q.addEventListener('input', view);
+  catSel.addEventListener('change', view);
   langSel.addEventListener('change', view);
   sortSel.addEventListener('change', function () { reorder(); view(); });
   view();

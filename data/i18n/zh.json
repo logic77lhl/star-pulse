@@ -1,0 +1,3476 @@
+{
+ "items": {
+  "1136590548": {
+   "by": "llm",
+   "src": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+   "zh": "智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体"
+  },
+  "1137515077": {
+   "by": "llm",
+   "src": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+   "zh": "面向专业 AI 编程智能体的安全、经校验技能注册表，可扩展 Antigravity、Claude Code、Cursor 等"
+  },
+  "1148788086": {
+   "by": "llm",
+   "src": "Skills for Real Engineers. Straight from my .agents directory.",
+   "zh": "面向真正工程师的技能集，直接来自作者的 .agents 目录"
+  },
+  "1155787322": {
+   "by": "llm",
+   "src": "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB read",
+   "zh": "下载 Udemy 与 Hotmart 课程、YouTube 视频、音乐与电子书：支持 1800+ 站点，免费开源桌面应用"
+  },
+  "1172273835": {
+   "by": "llm",
+   "src": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a spec",
+   "zh": "面向 Claude 技能系统的攻防安全技能库，每个技能都是结构化的 SKILL.md 方法论"
+  },
+  "1177402105": {
+   "by": "llm",
+   "src": "Write HTML. Render video. Built for agents.",
+   "zh": "写 HTML、渲染视频，为智能体而生"
+  },
+  "1178737655": {
+   "by": "llm",
+   "src": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+   "zh": "开放多智能体互动课堂：一键获得沉浸式多智能体学习体验"
+  },
+  "1195360525": {
+   "by": "llm",
+   "src": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video produc",
+   "zh": "首个开源智能体视频制作系统：12 条生产流水线、100+ 工具、700+ 技能与制作知识文件"
+  },
+  "1206390571": {
+   "by": "llm",
+   "src": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+   "zh": "开源全本地的 ElevenLabs 替代：声音克隆、设计、视频配音与有声书，支持 646 种语言"
+  },
+  "1211139949": {
+   "by": "llm",
+   "src": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+   "zh": "生成漂亮且可验证的架构、流程、时序与数据流图的 Agent 技能，自包含 HTML 带动效"
+  },
+  "1212769188": {
+   "by": "llm",
+   "src": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+   "zh": "面向 Claude Code、Codex 与 Pi 的 38 种编辑级图表版式，自包含 HTML + SVG，无阴影、不用 Mermaid"
+  },
+  "1223939135": {
+   "by": "llm",
+   "src": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+   "zh": "开源 AI 销售系统：自托管 CRM，原生集成 AI 智能体与 WhatsApp，多租户、支持 MCP"
+  },
+  "1238120057": {
+   "by": "llm",
+   "src": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+   "zh": "让编程智能体不再把答案埋在废话里，对 ADHD 友好的输出风格技能"
+  },
+  "1241960226": {
+   "by": "llm",
+   "src": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-",
+   "zh": "在阿里规模上验证过的混合架构代码评审工具：确定性流水线 + LLM 智能体，行级精确评论"
+  },
+  "1261663145": {
+   "by": "llm",
+   "src": "Turn your coding agents into research agents",
+   "zh": "把你的编程智能体变成科研智能体"
+  },
+  "1266797999": {
+   "by": "llm",
+   "src": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+   "zh": "让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码"
+  },
+  "1277471539": {
+   "by": "llm",
+   "src": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+   "zh": "浏览器里的间谍卫星模拟器，但数据是真的：在写实 3D 地球上做开源空间情报"
+  },
+  "1286080397": {
+   "by": "llm",
+   "src": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+   "zh": "在自有硬件上运行前沿 MoE 模型：纯 C、零依赖、专家从磁盘流式加载"
+  },
+  "1352965805": {
+   "by": "llm",
+   "src": "Every device brings a slice. Together they run the whole model. Peer-to-peer LLM inference across browser tabs: a from-scratch WebGPU engine and a WebRTC runtime that split a 27B model over the device",
+   "zh": "每台设备贡献一片、合起来跑完整模型：跨浏览器标签页的点对点 LLM 推理"
+  },
+  "1353009210": {
+   "by": "llm",
+   "src": "A beautiful, local-first game library built for Omarchy.",
+   "zh": "为 Omarchy 打造的漂亮本地优先游戏库"
+  },
+  "1353026092": {
+   "by": "llm",
+   "src": "Running ONNX/TRT version of the MiniMax-H3 VAE in ComfyUI, which increase speed by up to 1.7x",
+   "zh": "在 ComfyUI 中运行 ONNX / TRT 版 MiniMax-H3 VAE，速度最高提升 1.7 倍"
+  },
+  "1353045656": {
+   "by": "llm",
+   "src": "Experimental support of DLSS 5 in ComfyUI",
+   "zh": "在 ComfyUI 中实验性支持 DLSS 5"
+  },
+  "1353051646": {
+   "by": "llm",
+   "src": "730 live x.ai/bot shares for Grok Bot — every link status-checked, every row attributed. Bilingual EN/中文 catalog with a JSON schema, CI, and a searchable site.",
+   "zh": "730 个在线的 x.ai/bot 分享链接，逐条检查状态并标注来源，中英双语目录"
+  },
+  "1353060457": {
+   "by": "llm",
+   "src": "Android app to manage a barber shop schedule and their customers",
+   "zh": "管理理发店排班与客户预约的 Android 应用"
+  },
+  "1353069894": {
+   "by": "llm",
+   "src": "Democratizing Native Audio-Video Generation at 2K Resolution",
+   "zh": "让 2K 分辨率原生音视频生成走向普及"
+  },
+  "1353072228": {
+   "by": "llm",
+   "src": "OntiCards 是面向企业的 AI 数据中枢（AI Data Hub），围绕业务数据库提供一站式能力：数据源连接、元数据理解、自然语言查询、跨源融合、数据质检、查询审计与数据资产管理等",
+   "zh": "面向企业的 AI 数据中枢：数据源连接、元数据理解、自然语言查询与数据资产管理"
+  },
+  "1353074397": {
+   "by": "llm",
+   "src": "Harness of Harness: Multi-Day Autonomous Software Development with Continual Improvement",
+   "zh": "框架之框架：可持续改进的多日自主软件开发"
+  },
+  "1353102759": {
+   "by": "llm",
+   "src": "Realtime interruptible science tutoring with continuously generated H3 Max video.",
+   "zh": "用持续生成的 H3 Max 视频做可随时打断的实时理科辅导"
+  },
+  "1353115006": {
+   "by": "llm",
+   "src": "InternLumina-U2: A Multi-Codebook Diffusion Large Language Model for Omni-Visual Understanding, Image Generation and Editing",
+   "zh": "多码本扩散大语言模型，面向全视觉理解、图像生成与编辑"
+  },
+  "1353116530": {
+   "by": "llm",
+   "src": "Bilingual floating DeepSeek Harness pet with live context, lifetime token ledger, trends, opt-in completion sound, and editable Prompt Optimizer enhancement.",
+   "zh": "双语浮动的 DeepSeek Harness 桌宠，含实时上下文、token 台账、趋势与提示词优化"
+  },
+  "1353140361": {
+   "by": "llm",
+   "src": "适用于小米蓝牙遥控器2Pro的ESP32桥接器实现 完美解决Window下三键失效问题.",
+   "zh": "为小米蓝牙遥控器 2 Pro 做的 ESP32 桥接器，解决 Windows 下三键失效问题"
+  },
+  "1353173352": {
+   "by": "llm",
+   "src": "make aipass great again",
+   "zh": "让 aipass 再次伟大"
+  },
+  "1353186374": {
+   "by": "llm",
+   "src": "Installe ET cable automatiquement une stack media *arr : cles API echangees, indexeurs synchronises, profils de qualite TRaSH poses. Assistant TUI, page d'acces et d'administration.",
+   "zh": "自动安装完整 *arr 媒体栈：交换 API 密钥、同步索引器与质量配置，附终端助手"
+  },
+  "1353215108": {
+   "by": "llm",
+   "src": "Official Implementation for Mask Forcing: Improving Autoregressive Video Diffusion Distillation via Dual-Noise Masking Rollout",
+   "zh": "「Mask Forcing：用双噪声掩码改进自回归视频扩散蒸馏」官方实现"
+  },
+  "1353278725": {
+   "by": "llm",
+   "src": "Open Reality: phone video to AI-queryable 3D scenes. MCP tools for Claude/Codex/Cursor (npm openreality-mcp), the self-hostable broker, and the VGGT-SLAM library, in one repo. BSD-2-Clause.",
+   "zh": "Open Reality：把手机视频变成 AI 可查询的 3D 场景，含 MCP 工具、自托管代理与 VGGT-SLAM 库"
+  },
+  "1353302417": {
+   "by": "llm",
+   "src": "MiniShopCambodia-FullStackWeb",
+   "zh": "柬埔寨小型电商全栈网站"
+  },
+  "1353337632": {
+   "by": "llm",
+   "src": "An open-source campaign engine for launching and sniping your own tokens on Pons",
+   "zh": "开源活动引擎，用于在 Pons 上发行并狙击自己的代币"
+  },
+  "1353358416": {
+   "by": "llm",
+   "src": "这是一个通用的安卓端的AI Agent软件",
+   "zh": "通用的安卓端 AI Agent 软件"
+  },
+  "1353359273": {
+   "by": "llm",
+   "src": "GojiberryAI Sales OS: a full AI outbound team for Grok Bot, powered by the GojiberryAI MCP.",
+   "zh": "GojiberryAI 销售系统：由 MCP 驱动的完整 AI 外呼团队"
+  },
+  "1353360049": {
+   "by": "llm",
+   "src": "Perfect Dark PC port fork: jump, combat roll, melee combos, third person, 80 simulants, spectator camera, screenshots and video recording. Bring your own ROM.",
+   "zh": "Perfect Dark PC 移植分支：跳跃、翻滚、近战连招、第三人称与更多模拟人数"
+  },
+  "1353363350": {
+   "by": "llm",
+   "src": "可配置的 Codex Skill：每日检索、证据复核、评分、中文总结、微信推送、去重与研究记忆。",
+   "zh": "可配置的 Codex 技能：每日论文检索、证据复核、评分、中文总结与微信推送"
+  },
+  "1353380095": {
+   "by": "llm",
+   "src": "Codex skill for building and delivering student portfolio and personal resume websites",
+   "zh": "用于搭建与交付学生作品集、个人简历网站的 Codex 技能"
+  },
+  "1353389139": {
+   "by": "llm",
+   "src": "TriFlow: Generating Artist-Like 3D Mesh Topology via Nearest-Vertex Vector Fields (ECCV 2026)",
+   "zh": "TriFlow：通过最近顶点向量场生成艺术家风格的三维网格拓扑（ECCV 2026）"
+  },
+  "1353408336": {
+   "by": "llm",
+   "src": "Possibly the greatest coding agent ever built. Blazing-fast terminal UI, multi-model orchestration, swarm coordination, and 40+ tools.",
+   "zh": "极速终端界面的编程智能体：多模型编排、集群协同与 40+ 工具"
+  },
+  "1353423181": {
+   "by": "llm",
+   "src": "给口播视频加动效层的编辑工作台:AI 读你的字幕稿自动编排,做出来的每个元素你都能自己改,导出透明动效层直接进剪映——原片一帧不压。",
+   "zh": "给口播视频加动效层的编辑工作台：AI 读字幕稿自动编排，导出透明层直接进剪映"
+  },
+  "1353431819": {
+   "by": "llm",
+   "src": "Catalogo curato dei server MCP (Model Context Protocol) italiani — dati pubblici, legal-tech, fatturazione, PA e altro.",
+   "zh": "意大利 MCP 服务器精选目录：公共数据、法律科技、发票与公共行政"
+  },
+  "1353451116": {
+   "by": "llm",
+   "src": "Android 本地快递查询应用，支持本地运单存储、ALAPI 物流查询和快递鸟取件码查询。",
+   "zh": "安卓本地快递查询应用，支持本地运单存储与多家物流接口查询"
+  },
+  "1353468885": {
+   "by": "llm",
+   "src": "Background tasks that keep running after your app is backgrounded, for React Native and Expo. Wraps iOS 26 BGContinuedProcessingTask (Live Activity) and Android WorkManager foreground services behind",
+   "zh": "应用退到后台后仍在运行的后台任务，封装 iOS 26 与 Android WorkManager"
+  },
+  "1353473352": {
+   "by": "llm",
+   "src": "CF-Terminal - single-file Cloudflare Pages terminal (VLESS/Trojan + panel + subscription)",
+   "zh": "CF-Terminal：单文件 Cloudflare Pages 终端（VLESS / Trojan + 面板 + 订阅）"
+  },
+  "1353483529": {
+   "by": "llm",
+   "src": "Local-first AI companion PWA with optional Android shell, self-hosted relay, portable memory, and reusable UI packs.",
+   "zh": "本地优先的 AI 伴侣 PWA，可选安卓外壳、自托管中继与可移植记忆"
+  },
+  "1353491688": {
+   "by": "llm",
+   "src": "Climbing to the Search Frontier.",
+   "zh": "攀登搜索前沿"
+  },
+  "1353496141": {
+   "by": "llm",
+   "src": "An iOS tweak for GoodNotes",
+   "zh": "一款 GoodNotes 的 iOS 插件"
+  },
+  "1353498091": {
+   "by": "llm",
+   "src": "BirdWatch is a solar-powered smart bird feeder with an ESP32-CAM. It captures visiting birds and uses AI to identify their species. A web interface lets you view photos, detected species, visitor hist",
+   "zh": "太阳能供电的 ESP32-CAM 智能喂鸟器，用 AI 识别鸟种，网页端查看照片与访客记录"
+  },
+  "1353505702": {
+   "by": "llm",
+   "src": "Tailcat GUI for easy file & service sharing",
+   "zh": "Tailcat 图形界面，让文件与服务共享更简单"
+  },
+  "1353517202": {
+   "by": "llm",
+   "src": "在 Obsidian 中阅读 EPUB、FB2 与 PDF，划线批注、就地问 AI、笔记回到原文 | Read EPUB/FB2/PDF in Obsidian: highlights, inline AI Q&A, and notes that link back to the source.",
+   "zh": "在 Obsidian 中阅读 EPUB、FB2 与 PDF：划线批注、就地问 AI、笔记回链原文"
+  },
+  "1353523749": {
+   "by": "llm",
+   "src": "小饼干英语视频工坊：从英语知识点到 30 秒竖屏教学视频的一站式 AI 创作工具。",
+   "zh": "小饼干英语视频工坊：从英语知识点到 30 秒竖屏教学视频的一站式 AI 创作工具"
+  },
+  "1353548665": {
+   "by": "llm",
+   "src": "Reference blueprint for building shopping and merchant agents with Claude. Examples in retail, commerce, telecom, and entertainment included.",
+   "zh": "用 Claude 构建导购与商家智能体的参考蓝图，含零售、电商、电信与娱乐案例"
+  },
+  "1353555442": {
+   "by": "llm",
+   "src": "AI Agent prototype for tender and bid document workflows, featuring tender parsing, industry Skills, draft generation, role-based review, and traceable AI adoption.",
+   "zh": "面向招投标文档流程的 AI Agent 原型：招标解析、行业技能、草稿生成与角色化评审"
+  },
+  "1353576631": {
+   "by": "llm",
+   "src": "A SaaS collaboration platform for construction project bidding, covering bid document preparation, knowledge base management, compliance review, workflow coordination, and AI-assisted content generati",
+   "zh": "面向建筑工程招投标的 SaaS 协作平台：标书编制、知识库、合规审查与 AI 辅助生成"
+  },
+  "1353585964": {
+   "by": "llm",
+   "src": "Teach your AI coding agent to run Meta ads: API setup, programmatic campaigns, browser control, and conversion tracking that's actually proven to work.",
+   "zh": "教你的 AI 编程智能体投放 Meta 广告：API 配置、程序化投放、浏览器控制与转化追踪"
+  },
+  "1353594378": {
+   "by": "llm",
+   "src": "基于npt-hook的amd平台调试体系重建工具",
+   "zh": "基于 npt-hook 的 AMD 平台调试体系重建工具"
+  },
+  "1353612029": {
+   "by": "llm",
+   "src": "面向 AI 辅助嵌入式固件开发的轻量、风险分级治理 skill",
+   "zh": "面向 AI 辅助嵌入式固件开发的轻量风险分级治理技能"
+  },
+  "1353624605": {
+   "by": "llm",
+   "src": "Turn raw app screenshots into store-ready App Store and Google Play assets. A local Mac app — no account, no upload, no server.",
+   "zh": "把原始应用截图变成可上架的 App Store 与 Google Play 素材，纯本地 Mac 应用"
+  },
+  "1353640621": {
+   "by": "llm",
+   "src": "An experimental C# UI framework with binding Rust GPUI",
+   "zh": "实验性 C# UI 框架，绑定 Rust 的 GPUI"
+  },
+  "1353667784": {
+   "by": "llm",
+   "src": "一个适用于多任务系统+LVGL 8.x 的轻量 MVVM 支持库。",
+   "zh": "适用于多任务系统 + LVGL 8.x 的轻量 MVVM 支持库"
+  },
+  "1353668086": {
+   "by": "llm",
+   "src": "Paper artifacts, figures, aggregate data, and share cards for the DXRG paper: What LLM Trading Agents Actually Do in Production (six months, two fleets, 231,638 recorded turns)",
+   "zh": "DXRG 论文附录：LLM 交易智能体在生产环境中的真实表现（六个月、两个舰队、23 万余轮记录）"
+  },
+  "1353671742": {
+   "by": "llm",
+   "src": "A Hermes Agent skill + SOUL for a bot whose only job is minting other specialist bots",
+   "zh": "一个 Hermes Agent 技能与人格设定：这个机器人的唯一工作是生产其他专家机器人"
+  },
+  "1353688412": {
+   "by": "llm",
+   "src": "Computational Design Toolkit — parametric design scripts (Grasshopper / GhPython for Rhino) developed for real architecture and design projects.",
+   "zh": "计算设计工具包：为真实建筑与设计项目开发的参数化设计脚本（Grasshopper / GhPython）"
+  },
+  "1353701799": {
+   "by": "llm",
+   "src": "Cloudflare Turnstile challenge internals: the live request flow, the challenge bundle, and a capture toolkit.",
+   "zh": "Cloudflare Turnstile 验证的内部机制解析：实时请求流程、挑战包与抓取工具"
+  },
+  "1353716596": {
+   "by": "llm",
+   "src": "Modular routing and advertising blocklists for Quantumult X.",
+   "zh": "Quantumult X 的模块化分流与广告拦截规则"
+  },
+  "1353768049": {
+   "by": "llm",
+   "src": "uf — the unified toolchain for flow & react. the most easy way to build your app with flow type.",
+   "zh": "uf：Flow 与 React 的统一工具链，用 Flow 类型构建应用的最简方式"
+  },
+  "1353782683": {
+   "by": "llm",
+   "src": "Verifiable multi-agent patch evaluation infrastructure",
+   "zh": "可验证的多智能体补丁评估基础设施"
+  },
+  "1353794475": {
+   "by": "llm",
+   "src": "灵枢 2.0、3.0 本地运行的 AI 长篇小说写作工作室。从故事设定、分卷大纲、季章规划到逐章生成与优化，全程在本地完成；数据保存在本机，API Key 由用户自行配置。",
+   "zh": "灵枢：本地运行的 AI 长篇小说写作工作室，从设定、大纲到逐章生成，数据与密钥都在本机"
+  },
+  "1353798170": {
+   "by": "llm",
+   "src": "AI Max+ 395 acceleration: measured heterogeneous GPU PD and asynchronous fused-layer pipeline experiments with RTX 3060.",
+   "zh": "AI Max+ 395 加速实验：异构 GPU 预填充-解码与异步融合层流水线的实测"
+  },
+  "1353799765": {
+   "by": "llm",
+   "src": "Shopify implementations of Anthropic's commerce-agents blueprint: a storefront shopping agent over UCP and Sign in with Shop, and a merchant agent over the Admin API",
+   "zh": "Anthropic 商务智能体蓝图的 Shopify 实现：基于 UCP 的店铺导购智能体与基于 Admin API 的商家智能体"
+  },
+  "1353836786": {
+   "by": "llm",
+   "src": "پنل ساخت کانفیگ تکانموز",
+   "zh": "Technamooz 代理配置生成面板"
+  },
+  "1353845349": {
+   "by": "llm",
+   "src": "Windows player that runs video, photos or GIFs through NVIDIA's DLSS 5 neural renderer, then compares the result with the original frame by frame. Local files or YouTube. Needs an RTX card and driver",
+   "zh": "用 NVIDIA DLSS 5 神经渲染播放视频/图片/GIF，并与原帧逐帧对比"
+  },
+  "1353853430": {
+   "by": "llm",
+   "src": "High-fidelity AI image prompt reverse-engineering skill for Codex",
+   "zh": "面向 Codex 的高保真 AI 绘图提示词反推技能"
+  },
+  "1353856430": {
+   "by": "llm",
+   "src": "LLM-powered AI Data Analysis Agent with tool calling and reusable analytical skills.",
+   "zh": "由大模型驱动的 AI 数据分析智能体，支持工具调用与可复用分析技能"
+  },
+  "1353865057": {
+   "by": "llm",
+   "src": "免费大模型 API 导航 · 只收录能通过 API Key 和 endpoint 调用的永久免费 / 限时免费接口｜A curated list of free LLM APIs — permanently free tiers and limited-time free models, all callable via API key and endpoint. Channel-first, w",
+   "zh": "免费大模型 API 导航：只收录可通过 API Key 与 endpoint 调用的接口"
+  },
+  "1353905112": {
+   "by": "llm",
+   "src": "https://github.com/ifixai-ai/iFixAi",
+   "zh": "iFixAi 项目仓库"
+  },
+  "1353920660": {
+   "by": "llm",
+   "src": "RL-training knowledge-work agents on APEX-Agents data with SkyRL + Harbor",
+   "zh": "用 SkyRL + Harbor 在 APEX-Agents 数据上训练知识工作类强化学习智能体"
+  },
+  "1353927647": {
+   "by": "llm",
+   "src": "Train RL policies for the Pollen Microduck 🦆 on an ordinary Mac, no CUDA GPU, and watch them learn live in the browser.",
+   "zh": "在普通 Mac（无需 CUDA 显卡）上为 Pollen Microduck 训练强化学习策略，并在浏览器里实时观看"
+  },
+  "1353975656": {
+   "by": "llm",
+   "src": "A video game for AI agents. Created by Jarren Rocks",
+   "zh": "给 AI 智能体玩的电子游戏"
+  },
+  "1353991179": {
+   "by": "llm",
+   "src": "Restores trigger rumble for Forza Horizon 4 on Steam with Xbox controllers",
+   "zh": "恢复 Steam 版《极限竞速：地平线 4》在 Xbox 手柄上的扳机震动"
+  },
+  "1354016912": {
+   "by": "llm",
+   "src": "Real time GPS spoofer for iOS",
+   "zh": "iOS 实时 GPS 模拟定位"
+  },
+  "1354022484": {
+   "by": "llm",
+   "src": "A repository that ships without anyone reading the diff: GitHub issues in, merged pull requests out, with the gates that make that defensible.",
+   "zh": "一个没人看 diff 也能发布的仓库：GitHub issue 进、合并的 PR 出，附可辩护的质量门"
+  },
+  "1354059245": {
+   "by": "llm",
+   "src": "Long-term memory runtime for AI agents — plain Markdown as the source of truth, local ranked retrieval, and an independent sleep-time Manage layer. Claude Code and Codex share one store. No API key.",
+   "zh": "AI 智能体的长期记忆运行时：以纯 Markdown 为事实源，本地排序检索与独立的睡眠期管理层"
+  },
+  "1354117265": {
+   "by": "llm",
+   "src": "React design system for agentic interfaces. Every free BoardUI component as source, with a working AI chat app on your own model key as the homepage.",
+   "zh": "面向智能体界面的 React 设计系统，组件全部开源，首页即一个可用的 AI 聊天应用"
+  },
+  "1354127227": {
+   "by": "llm",
+   "src": "养成类游戏英语学习",
+   "zh": "养成类游戏的英语学习"
+  },
+  "1354165808": {
+   "by": "llm",
+   "src": "Ryza AI companion. Bring your own LLM/TTS. 莱莎 AI 陪伴，自填大模型与语音。",
+   "zh": "莱莎 AI 陪伴：自填大模型与语音"
+  },
+  "1354207711": {
+   "by": "llm",
+   "src": "RAG 知识库服务，实现文档导入、自适应递归切片、Redis 向量检索，支持多轮长对话与流式问答。",
+   "zh": "RAG 知识库服务：文档导入、自适应递归切片、向量检索与多轮流式问答"
+  },
+  "1354232863": {
+   "by": "llm",
+   "src": "A native macOS assistant that reads the current screen and browser context when you need it.",
+   "zh": "原生 macOS 助手，需要时读取当前屏幕与浏览器上下文"
+  },
+  "1354232931": {
+   "by": "llm",
+   "src": "DLSS Multi Frame Generation at 3x/4x on RTX 40 series (Ada), with the frame pacing fixed",
+   "zh": "在 RTX 40 系（Ada）上开启 3x/4x 多帧生成，并修正帧节奏"
+  },
+  "1354233951": {
+   "by": "llm",
+   "src": "大模型推理案头手册（开源版）：给定 GPU 算力，一个模型能扛多少 QPS？三层模型 × 三面墙 × 排队论 × 开环压测",
+   "zh": "大模型推理案头手册：给定 GPU 算力，一个模型能扛多少 QPS？三层模型 × 三面墙 × 排队论 × 开环压测"
+  },
+  "1354235626": {
+   "by": "llm",
+   "src": "A Skill for creating clipshot",
+   "zh": "用于制作 clipshot 的技能"
+  },
+  "1354236772": {
+   "by": "llm",
+   "src": "A fast, keyboard-first file manager for Omarchy: Quickshell front end, Rust backend.",
+   "zh": "面向 Omarchy 的快速键盘优先文件管理器：Quickshell 前端 + Rust 后端"
+  },
+  "1354246287": {
+   "by": "llm",
+   "src": "AI-native Chemical Modeling Tool (webMCP)",
+   "zh": "AI 原生的化学建模工具（webMCP）"
+  },
+  "1354253328": {
+   "by": "llm",
+   "src": "Autonomous agent for untrusted GitHub apps: isolated execution, real workflow verification, and evidence-backed hardening with deterministic KEEP/ROLLBACK. 面向不可信 GitHub 应用的自主执行与可信验证 Agent：隔离运行真实工作流，并",
+   "zh": "面向不可信 GitHub 应用的自主执行与可信验证智能体：隔离运行真实工作流并给出确定性结论"
+  },
+  "1354267344": {
+   "by": "llm",
+   "src": "声云录音卡 Recorder 是一套面向开发者和行业客户的智能录音硬件接入方案。 项目以录音卡片硬件为核心，开放 BLE 协议 SDK 及 Android、iOS、鸿蒙、Flutter 接入示例，同时提供 Windows/macOS 桌面端 Demo，支持设备连接、录音控制、实时音频、文件传输、OTA 升级和语音转写等能力，帮助开发者快速将录音硬件接入自己的 App、桌面软件或行业系统。 如需获取",
+   "zh": "声云录音卡：面向开发者的智能录音硬件接入方案，开放 BLE 协议 SDK 与多端接入示例"
+  },
+  "1354280341": {
+   "by": "llm",
+   "src": "純前端文件去識別化工具：PDF/Word/Excel/TXT/Markdown 自動偵測個資、遮罩預覽、人工覆核、CSV 編碼表可還原，資料不出電腦",
+   "zh": "纯前端文件去标识化工具：自动识别个资、遮罩预览与可还原编码表，数据不出本机"
+  },
+  "1354302113": {
+   "by": "llm",
+   "src": "A clean-room Codex skill for generating editable Microsoft Visio .vsdx diagrams through local Windows COM automation.",
+   "zh": "通过 Windows 本地 COM 自动化生成可编辑 Microsoft Visio 图表的 Codex 技能"
+  },
+  "1354304208": {
+   "by": "llm",
+   "src": "ESLint rules for guarding AI slops in code.",
+   "zh": "用于拦截代码里 AI 垃圾内容的 ESLint 规则"
+  },
+  "1354310030": {
+   "by": "llm",
+   "src": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+   "zh": "在浏览器里绘制 Material 3 Expressive 界面草图，并转成 vibe-coding 提示词"
+  },
+  "1354310584": {
+   "by": "llm",
+   "src": "All In One DLSS5 integration for reshade. Supports DX12, DX11, DX9 and Vulkan",
+   "zh": "面向 ReShade 的 DLSS5 一体化集成，支持 DX12 / DX11 / DX9 与 Vulkan"
+  },
+  "1354322512": {
+   "by": "llm",
+   "src": "VideoDeltaNet-H3: Live T2VA / I2VA / FL2VA generation based on Minimax H3.",
+   "zh": "VideoDeltaNet-H3：基于 MiniMax H3 的实时 T2VA / I2VA / FL2VA 生成"
+  },
+  "1354377874": {
+   "by": "llm",
+   "src": "PaperGraph MCP turns math papers into evidence-grounded reading maps for AI agents: extract results, trace proof evidence, plan reading order, and review external dependencies without guessing.",
+   "zh": "把数学论文变成有证据支撑的阅读地图：抽取结论、追踪证明依据、规划阅读顺序"
+  },
+  "1354405777": {
+   "by": "llm",
+   "src": "SmolVLA (SmolVLM2-500M) vision-language-action on real dual AgileX Piper arms — continuous authority blending on a proven ACT safety base folds a real towel. One command runs the full 750-step skil",
+   "zh": "在真实双臂 AgileX Piper 上运行 SmolVLA 视觉-语言-动作模型叠毛巾，一条命令跑完 750 步"
+  },
+  "1354411229": {
+   "by": "llm",
+   "src": "Official Implementation for WorldSculpt: Generating Compositional Worlds from Grounded Videos",
+   "zh": "WorldSculpt 官方实现：从接地视频生成组合式世界"
+  },
+  "1354414949": {
+   "by": "llm",
+   "src": "A general-purpose engine for large-scale, repeated information gathering by a fleet of workers.",
+   "zh": "用一组工作节点做大规模重复信息采集的通用引擎"
+  },
+  "1354415131": {
+   "by": "llm",
+   "src": "Accuracy, latency p95, and cost benchmarking for model-based solutions, with per-field ground-truth scoring.",
+   "zh": "模型方案的准确率、延迟 p95 与成本基准测试，支持逐字段真值打分"
+  },
+  "1354415236": {
+   "by": "llm",
+   "src": "Reconstruct 3D meshes from images with several open-source models and score which did it best.",
+   "zh": "用多个开源模型从图片重建三维网格，并评比哪个效果最好"
+  },
+  "1354415396": {
+   "by": "llm",
+   "src": "A map of modern time-series forecasting architectures, each with a short README and runnable code.",
+   "zh": "现代时间序列预测架构图谱，每篇配简短说明与可运行代码"
+  },
+  "1354416322": {
+   "by": "llm",
+   "src": "NVIDIA DLSS 5 Neural Rendering (NGX feature 18) as ComfyUI nodes. Enhance image batches and video files with the real neural renderer, with optional upscaling.",
+   "zh": "把 NVIDIA DLSS 5 神经渲染做成 ComfyUI 节点，支持图片批次与视频增强"
+  },
+  "1354457999": {
+   "by": "llm",
+   "src": "中文手绘知识讲解视频 Codex Skill：逐笔故事、双语义岛、让怪诞小黑动起来与程序动画",
+   "zh": "中文手绘知识讲解视频 Codex 技能：逐笔故事、双语义岛与程序动画"
+  },
+  "1354497019": {
+   "by": "llm",
+   "src": "Claude Fable 5.1 prompting guide as Claude Code skills (KO/EN/ZH). Output quality goes up on Opus 5 and Sonnet 5 too.",
+   "zh": "Claude Fable 5.1 提示词指南，打包为 Claude Code 技能（韩/英/中）"
+  },
+  "1354503159": {
+   "by": "llm",
+   "src": "针对 AI 自动化渗透 Agent 的新一代反制蜜罐，通过反向代理将API密饵载入真实业务、反向提示词注入等方式反制自动化渗透 Agent，实现多款主流通用Agent的反制上线控制。",
+   "zh": "针对 AI 自动化渗透智能体的新一代反制蜜罐，通过反向代理投放 API 密饵与反向提示词注入"
+  },
+  "1354515658": {
+   "by": "llm",
+   "src": "由夜安团队研发的AI渗透测试平台，涵盖红队打点、SRC、CTF，特别是在红队领域有极为亮眼的存在",
+   "zh": "夜安团队研发的 AI 渗透测试平台，覆盖红队打点、SRC 与 CTF"
+  },
+  "1354517933": {
+   "by": "llm",
+   "src": "Check AI coding-plan quotas (5h / weekly / monthly) on the go — Zhipu GLM, Kimi, MiniMax, ZenMux, OpenCode Go, Volcengine Ark, DeepSeek & custom relays. No backend; keys never leave your device. Andro",
+   "zh": "随时查询 AI 编程套餐额度（5 小时/周/月），支持多家厂商与自定义中转，无后端、密钥不出本机"
+  },
+  "1354518773": {
+   "by": "llm",
+   "src": "A lightweight, self-hosted AI subscription pool for teams.",
+   "zh": "轻量自托管的团队 AI 订阅池"
+  },
+  "1354530252": {
+   "by": "llm",
+   "src": "VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models",
+   "zh": "VLA-Precision：面向视觉-语言-动作模型高效在线强化学习的非对称协同自举"
+  },
+  "1354535060": {
+   "by": "llm",
+   "src": "Multi-thread Web3 wallet farmer untuk getunikey.ai — register → API key → precheck. Pure HTTP, multi-thread, per-worker proxy.",
+   "zh": "面向 getunikey.ai 的多线程 Web3 钱包农场脚本：注册、取 key、预检"
+  },
+  "1354571216": {
+   "by": "llm",
+   "src": "152 hand-drawn icons that never sit still — every stroke draws itself, then keeps boiling like a Saturday-morning cartoon.",
+   "zh": "152 个从不安静的手绘图标：每一笔自己画出来，然后像周六早间卡通那样持续抖动"
+  },
+  "1354582706": {
+   "by": "llm",
+   "src": "NovoWeave — a conceptual generative protein-design framework (non-functional pseudocode).",
+   "zh": "NovoWeave：概念性的生成式蛋白质设计框架（非可运行伪代码）"
+  },
+  "1354590736": {
+   "by": "llm",
+   "src": "grok-build with the leash off — one binary, any OpenAI-compatible endpoint, zero phone-home. No x.ai account.",
+   "zh": "松开的 grok-build：单个二进制、任意 OpenAI 兼容端点、零回传、无需 x.ai 账号"
+  },
+  "1354611198": {
+   "by": "llm",
+   "src": "UNIGIT public brand and ecosystem hub — AI should work for everyone.",
+   "zh": "UNIGIT 公开品牌与生态枢纽：AI 应当为每个人服务"
+  },
+  "1354628751": {
+   "by": "llm",
+   "src": "A Cities: Skylines-class city builder running in the browser, built in Three.js by AI agents. Code ships when it's finished.",
+   "zh": "浏览器里运行的《城市：天际线》级城市建造游戏，由 AI 智能体用 Three.js 开发"
+  },
+  "1354645252": {
+   "by": "llm",
+   "src": "Quickly install signed iOS and Android builds on real devices over the internet without waiting for Testlight or Play Beta.",
+   "zh": "通过互联网快速在真机安装已签名的 iOS 与 Android 构建，不必等 TestFlight 或 Play Beta"
+  },
+  "1354666234": {
+   "by": "llm",
+   "src": "Open Micro Duck for everyone",
+   "zh": "面向所有人的开源微型机器鸭"
+  },
+  "1354702877": {
+   "by": "llm",
+   "src": "AIにまじなPPTXを作らせるClaude Codeスキル — スライド規約＋62型スライド型カタログ（SlideSpec 36型＋自由記述27パーツ）＋生成パイプライン＋機械チェック",
+   "zh": "让 AI 做出像样 PPTX 的 Claude Code 技能：幻灯片规约 + 62 种版式目录 + 生成流水线与机器检查"
+  },
+  "1354705170": {
+   "by": "llm",
+   "src": "🏯 Claude Code / Codex skill — transform Chinese architecture, cultural places & travel photos into art-directed editorial posters with GPT Image. 中国古建筑与在地文化照片 → 艺术指导海报",
+   "zh": "Claude Code / Codex 技能：把中国古建筑与在地文化照片变成艺术指导风格的编辑海报"
+  },
+  "1354730528": {
+   "by": "llm",
+   "src": "Cloudflare WARP代理节点的一些工具。",
+   "zh": "一些 Cloudflare WARP 代理节点工具"
+  },
+  "1354746510": {
+   "by": "llm",
+   "src": "A confirmation-gated Codex and WorkBuddy skill for audio-first image-story video production.",
+   "zh": "需人工确认的 Codex / WorkBuddy 技能，用于音频优先的图像叙事视频制作"
+  },
+  "1354754471": {
+   "by": "llm",
+   "src": "My custom self-hosted Homepage dashboard for GexZ LabZ — widgets, styling and sanitized example configs.",
+   "zh": "自托管的 Homepage 仪表盘，含组件、样式与脱敏示例配置"
+  },
+  "1354795258": {
+   "by": "llm",
+   "src": "WeChat group & official-account AI knowledge digest — agent-friendly (Codex/Claude Code), Windows/macOS/Linux",
+   "zh": "微信群与公众号的 AI 知识摘要，对智能体友好，支持 Windows/macOS/Linux"
+  },
+  "1354798926": {
+   "by": "llm",
+   "src": "A mystical, nature-inspired Omarchy theme blending ethereal magic with moonlit forest ambiance.",
+   "zh": "神秘自然风格的 Omarchy 主题，融合空灵魔法与月夜森林氛围"
+  },
+  "1354807227": {
+   "by": "llm",
+   "src": "NVIDIA MotionBricks ported to GGML/C++; dynamically generates animations from keyframes using a neural network. Can be used in games or with robots",
+   "zh": "把 NVIDIA MotionBricks 移植到 GGML / C++：用神经网络从关键帧动态生成动画，可用于游戏或机器人"
+  },
+  "1354880180": {
+   "by": "llm",
+   "src": "面向 VC/PE 投资人的 AI 调研工作体系：7 步流水线 × 三方案（A 企业 / B 行业技术 / C 混合）+ 9 项执行规范 + 8 套模板 + 工具脚本 + 5 个真实案例与长期记忆库，让「看公司、看行业、看赛道」从凭经验变成按流程",
+   "zh": "面向 VC/PE 投资人的 AI 调研工作体系：7 步流水线、三套方案、9 项规范、8 套模板与真实案例"
+  },
+  "1354887280": {
+   "by": "llm",
+   "src": "SoL-Pi: Scaling Auto-Research Loops for Efficient Agent Harnesses",
+   "zh": "SoL-Pi：扩展自动研究循环，让智能体运行框架更高效"
+  },
+  "1354909737": {
+   "by": "llm",
+   "src": "通过102万字语料提炼的公文写作 skill，把公文写作风格变成可测量、可验收的量化数据",
+   "zh": "从 102 万字语料提炼的公文写作技能，把公文风格变成可测量、可验收的量化数据"
+  },
+  "1354936526": {
+   "by": "llm",
+   "src": "A lightweight desktop IDE for editing and running MATLAB .m scripts and Simulink .slx models, with visual editing, plots, parameter sweeps, and AI assistance.",
+   "zh": "轻量桌面 IDE，用于编辑与运行 MATLAB .m 脚本和 Simulink .slx 模型，含可视化与 AI 辅助"
+  },
+  "1354945198": {
+   "by": "llm",
+   "src": "A simple, lightweight Skill manager built in Rust. One library, just the Skills each project needs.",
+   "zh": "用 Rust 写的简单轻量技能管理器：一个库，只装每个项目需要的技能"
+  },
+  "1354970515": {
+   "by": "llm",
+   "src": "Scriptable Cloudflare Turnstile token CLI via the Peak API - sitekey discovery, solve, and token output for CI and automation.",
+   "zh": "可脚本化的 Cloudflare Turnstile 令牌命令行工具：发现 sitekey、求解并输出，面向 CI 与自动化"
+  },
+  "1354991682": {
+   "by": "llm",
+   "src": "A curated list of open-source AI agent platforms: AI coworkers and teammates, agent builders and frameworks, workflow automation platforms, browser agents, and coding agents, with licenses.",
+   "zh": "开源 AI 智能体平台清单：协作伙伴、开发框架、自动化与浏览器智能体，附许可证"
+  },
+  "1354991988": {
+   "by": "llm",
+   "src": "《乖离性百万亚瑟王》国服社区保存与本地运行项目，提供自托管服务端、协议适配、客户端构建工具",
+   "zh": "《乖离性百万亚瑟王》国服社区保存与本地运行项目，提供自托管服务端与客户端构建工具"
+  },
+  "1354997816": {
+   "by": "llm",
+   "src": "Bypass the Cloudflare challenge (Just a moment / 5s) in Python and get a valid cf_clearance cookie via the Peak API - headless-friendly, proxy-aware.",
+   "zh": "用 Python 绕过 Cloudflare 人机验证并取得有效的 cf_clearance cookie，支持无头与代理"
+  },
+  "1355001703": {
+   "by": "llm",
+   "src": "GPU-native NVIDIA video enhancement, restoration, temporal analysis, and experimental DLSS 5 Neural Rendering nodes for ComfyUI.",
+   "zh": "面向 ComfyUI 的 NVIDIA 视频增强、修复、时序分析与实验性 DLSS 5 神经渲染节点"
+  },
+  "1355013497": {
+   "by": "llm",
+   "src": "Postgres Book, one topic at a time.",
+   "zh": "Postgres 之书，一次讲一个主题"
+  },
+  "1355017800": {
+   "by": "llm",
+   "src": "Resumable Polymarket indexer: CLOB market metadata plus on-chain trades from Polygon, in one DuckDB file you can query with SQL",
+   "zh": "可续跑的 Polymarket 索引器：把 CLOB 市场元数据与链上交易写进可直接用 SQL 查询的 DuckDB 文件"
+  },
+  "1355058394": {
+   "by": "llm",
+   "src": "NVIDIA DLSS 5 neural rendering and DLSS frame generation on Apple Silicon (MLX/Metal, Core ML) and PyTorch; weights extracted from your own DLSS libraries",
+   "zh": "在 Apple Silicon（MLX / Metal、Core ML）与 PyTorch 上跑 DLSS 5 神经渲染与帧生成"
+  },
+  "1355092388": {
+   "by": "llm",
+   "src": "worlds via code, from fable 5.1",
+   "zh": "用代码构建世界，来自 Fable 5.1"
+  },
+  "1355135207": {
+   "by": "llm",
+   "src": "ComfyUI wrapper for VOSR 2.0, a image super resolution model",
+   "zh": "VOSR 2.0 图像超分模型的 ComfyUI 封装"
+  },
+  "1355142225": {
+   "by": "llm",
+   "src": "Learn to fly Omarchy ✈ — a keybind trainer that runs in your real window manager",
+   "zh": "学飞 Omarchy：在你真实的窗口管理器里运行的快捷键训练器"
+  },
+  "1355150344": {
+   "by": "llm",
+   "src": "A live TV channel that teaches whatever you type — LLM-planned lessons rendered just-in-time as 1970s-style cartoons by MiniMax H3 Max Turbo, playing on a CRT in a 3D classroom. Bring your own fal key",
+   "zh": "一个教你输入任何内容的直播频道：课程由大模型规划，以 1970 年代卡通风格即时渲染并播放"
+  },
+  "1355167415": {
+   "by": "llm",
+   "src": "MCP server that connects Claude Code to a live PyMOL session over XML-RPC",
+   "zh": "通过 XML-RPC 把 Claude Code 连接到实时 PyMOL 会话的 MCP 服务器"
+  },
+  "1355185972": {
+   "by": "llm",
+   "src": "DLSS MFG on Ada — unlocks 3x/4x/6x frame generation on RTX 40-series cards and corrects the temporal midpoint. In-memory only.",
+   "zh": "在 Ada 架构上解锁 DLSS 多帧生成：RTX 40 系可开 3x/4x/6x 并校正时间中点（仅内存修改）"
+  },
+  "1355188644": {
+   "by": "llm",
+   "src": "Give an LLM eyes on a video without blowing the context window: ffmpeg frame sampling at a chosen resolution, token estimates per model family, budget fitting, contact sheets.",
+   "zh": "让大模型「看见」视频又不爆上下文：按选定分辨率抽帧、估算 token 并做预算适配"
+  },
+  "1355190514": {
+   "by": "llm",
+   "src": "CVE-2026-65343 PoC — AppleKeyStore OOB read → KASLR defeat (iOS 26.6 / 23G71)",
+   "zh": "CVE-2026-65343 漏洞验证：AppleKeyStore 越界读取攻破 KASLR"
+  },
+  "1355222070": {
+   "by": "llm",
+   "src": "Conditional Lean formalization and numerical certificate for prime gaps at most 186.",
+   "zh": "素数间隔不超过 186 的条件式 Lean 形式化与数值证明"
+  },
+  "1355259034": {
+   "by": "llm",
+   "src": "Fable 5.1 orchestrates. GPT-5.6 Luna and DeepSeek V4 Flash implement.",
+   "zh": "Fable 5.1 负责编排，GPT-5.6 Luna 与 DeepSeek V4 Flash 负责实现"
+  },
+  "1355259177": {
+   "by": "llm",
+   "src": "Cloudflare-native shared support inbox for small teams",
+   "zh": "基于 Cloudflare 的共享客户支持收件箱，面向小团队"
+  },
+  "1355289693": {
+   "by": "llm",
+   "src": "Hello, ‌Automation Script‌!",
+   "zh": "你好，自动化脚本！"
+  },
+  "1355313438": {
+   "by": "llm",
+   "src": "Kill the tool-call tax: harness tool latency back below model TPS. Fast local lanes, persistent pools, session caches. Scratch lab turned real.",
+   "zh": "干掉工具调用税：把工具延迟压回模型 TPS 以下，含快速本地通道、常驻连接池与会话缓存"
+  },
+  "1355324905": {
+   "by": "llm",
+   "src": "Atmos: standalone Quickshell preferences for Omarchy",
+   "zh": "Atmos：Omarchy 的独立 Quickshell 偏好设置"
+  },
+  "1355349898": {
+   "by": "llm",
+   "src": "Built from the ground up for speed. Flectar Mail delivers native performance, instant startup, and as little as 20 MB of RAM.",
+   "zh": "为速度而生：原生性能、秒开、内存占用低至 20 MB 的邮件客户端"
+  },
+  "1355366032": {
+   "by": "llm",
+   "src": "Run DLSS 5 Neural Rendering on your AMD GPU. Magic!",
+   "zh": "在 AMD 显卡上运行 DLSS 5 神经渲染"
+  },
+  "1355378705": {
+   "by": "llm",
+   "src": "Measure what a vulnerability is worth to your business, not how severe it is in the abstract. Business Exposure Index scoring over NVD, EPSS, CISA KEV, OSV and GHSA.",
+   "zh": "衡量漏洞对业务的真实价值而非抽象严重度，基于 NVD、EPSS、CISA KEV 等给出业务暴露指数"
+  },
+  "1355387313": {
+   "by": "llm",
+   "src": "Kernel-mode process terminator using a signed BYOVD driver. Works on all Windows 10/11. No offsets, no PDB. Rust.",
+   "zh": "内核态进程终止工具，借助签名 BYOVD 驱动，支持全部 Windows 10/11"
+  },
+  "1355387785": {
+   "by": "llm",
+   "src": "An email client & provider gateway so you can build your best email experience.",
+   "zh": "邮件客户端与供应商网关，让你构建理想的邮件体验"
+  },
+  "1355405465": {
+   "by": "llm",
+   "src": "Your personal AI video streaming service",
+   "zh": "你的个人 AI 视频流媒体服务"
+  },
+  "1355421445": {
+   "by": "llm",
+   "src": "A nightly newspaper that writes itself: an agent runs the desks, the figures come from code, and it refuses to publish an edition with marks in it.",
+   "zh": "一份自己写自己的夜间报纸：智能体负责各版块，数字来自代码，有错就不出版"
+  },
+  "1355437200": {
+   "by": "llm",
+   "src": "Turn layered PSDs into editable Live2D models — automatic rigging, mesh/deformer generation, physics, animation, and .cmo3/ .moc3 export.",
+   "zh": "把分层 PSD 转成可编辑的 Live2D 模型：自动绑定、网格与形变生成、物理与动画导出"
+  },
+  "1355442112": {
+   "by": "llm",
+   "src": "An assortment of iPod Classic games that have been recompiled to run on modern systems",
+   "zh": "一批重编译后可在现代系统运行的 iPod Classic 游戏"
+  },
+  "1355442495": {
+   "by": "llm",
+   "src": "Crowdstrike Falcon 0day Privilege Escalation Vulnerability",
+   "zh": "CrowdStrike Falcon 零日提权漏洞"
+  },
+  "1355451662": {
+   "by": "llm",
+   "src": "Peta interaktif kecukupan UMK/UMP terhadap biaya hidup di 514 kabupaten/kota Indonesia. Static Next.js, data CC BY 4.0.",
+   "zh": "印尼 514 个县市最低工资与生活成本对比的交互地图，静态 Next.js 构建"
+  },
+  "1355493314": {
+   "by": "llm",
+   "src": "Lightweight Windows desktop wrapper for WhatsApp Web, built with Go and Microsoft Edge WebView2.",
+   "zh": "基于 Go 与 Edge WebView2 的轻量 WhatsApp Web 桌面封装"
+  },
+  "1355503202": {
+   "by": "llm",
+   "src": "Riffloom — AI 内容采集、拆解与创作工作台",
+   "zh": "Riffloom：AI 内容采集、拆解与创作工作台"
+  },
+  "1355519841": {
+   "by": "llm",
+   "src": "Video Delta Net hybrid attention for MiniMax-H3 as a native ComfyUI node.",
+   "zh": "把 Video Delta Net 混合注意力做成 MiniMax-H3 的原生 ComfyUI 节点"
+  },
+  "1355621506": {
+   "by": "llm",
+   "src": "Unlocking Lossless Speedups in LLMs via Discrete Diffusion",
+   "zh": "通过离散扩散为大模型解锁无损加速"
+  },
+  "1355626333": {
+   "by": "llm",
+   "src": "Your private network, wherever you work. Peer-to-peer first, end-to-end encrypted access to your own LANs — no port forwarding, no public URLs.",
+   "zh": "你走到哪都在的私有网络：点对点优先、端到端加密地访问自家局域网，无需公网映射"
+  },
+  "1355679277": {
+   "by": "llm",
+   "src": "The AI-Native SDLC Playbook — Anthropic Claude Academy course as EPUB ebook",
+   "zh": "AI 原生软件开发生命周期手册：Anthropic Claude Academy 课程的 EPUB 电子书"
+  },
+  "1355691167": {
+   "by": "llm",
+   "src": "FlashRec is a CUDA-graph engine for generative recommendation: wide beam search (3–5 SID steps, n=50–512+) over a trie-constrained catalog, in-process FP8 serving, and ranked beams on /v1/chat/complet",
+   "zh": "面向生成式推荐的 CUDA 图引擎：宽束搜索、进程内 FP8 服务与排序输出"
+  },
+  "1355692138": {
+   "by": "llm",
+   "src": "A secret project with 115 Cloud and JavDB.",
+   "zh": "一个与 115 网盘和 JavDB 相关的秘密项目"
+  },
+  "1355709852": {
+   "by": "llm",
+   "src": "在 104 人力銀行的職缺上顯示 HR 實際處理履歷的紀錄,幫你避開已讀不回的幽靈職缺。非官方。",
+   "zh": "在 104 人力银行职缺上显示 HR 实际处理简历的记录，帮你避开已读不回的幽灵职位（非官方）"
+  },
+  "1355730207": {
+   "by": "llm",
+   "src": "RSIH — versionable, shareable agent harness: Pi coding agent + Genome config layer",
+   "zh": "可版本化、可分享的智能体运行框架：Pi 编程智能体 + Genome 配置层"
+  },
+  "1355732302": {
+   "by": "llm",
+   "src": "A single-file Three.js studio concept with an interactive Kyoto lobby, arcade, portfolio CRTs, and editorial case studies.",
+   "zh": "单文件 Three.js 工作室概念：可交互的京都大厅、街机厅与作品展示"
+  },
+  "1355787233": {
+   "by": "llm",
+   "src": "A Tailscale node for each browser profile.",
+   "zh": "为每个浏览器配置文件架一个 Tailscale 节点"
+  },
+  "1355803866": {
+   "by": "llm",
+   "src": "Institutional-grade market data infrastructure: converts noisy, multi-venue exchange feeds into a validated, sub-microsecond canonical stream with cryptographic auditability and zero silent drops.",
+   "zh": "机构级行情数据基础设施：把多交易所噪音流校验为亚微秒级可审计规范流"
+  },
+  "1355833393": {
+   "by": "llm",
+   "src": "Take a photo of real objects, and paste them in Blender",
+   "zh": "拍摄真实物体照片并粘贴进 Blender"
+  },
+  "1355851706": {
+   "by": "llm",
+   "src": "demonically compacting (up to 15%) lossless Vorbis/Opus recompressor",
+   "zh": "无损 Vorbis / Opus 重压缩器，压缩率最高可提升 15%"
+  },
+  "1355950737": {
+   "by": "llm",
+   "src": "Type-safe, dependency-free schema validation for Go 1.24+, with generics, JSON parsing, localized errors, JSON Schema, and OpenAPI support.",
+   "zh": "面向 Go 1.24+ 的类型安全、零依赖模式校验库，支持泛型、JSON Schema 与 OpenAPI"
+  },
+  "1355993451": {
+   "by": "llm",
+   "src": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example",
+   "zh": "重新思考大模型在线策略蒸馏之二：单个训练样本"
+  },
+  "1355994488": {
+   "by": "llm",
+   "src": "Open-source, bring-your-own-key (BYOK) multi-model AI chat client for iOS, Android and the web. One LLM client for OpenAI, Anthropic, Google Gemini, OpenRouter, DeepSeek and ten more providers, plus a",
+   "zh": "开源自带密钥的多模型 AI 聊天客户端（iOS / Android / Web），支持 OpenAI、Anthropic、Gemini 等十余家"
+  },
+  "1356017763": {
+   "by": "llm",
+   "src": "Analyze the followers and following accounts that a private (hidden) Instagram account interacts with.",
+   "zh": "分析私密 Instagram 账号互动的粉丝与关注对象"
+  },
+  "1356052076": {
+   "by": "llm",
+   "src": "Native Pikmin PC Port",
+   "zh": "《皮克敏》原生 PC 移植"
+  },
+  "1356061819": {
+   "by": "llm",
+   "src": "cool p5js brushes",
+   "zh": "好玩的 p5.js 笔刷"
+  },
+  "1356062240": {
+   "by": "llm",
+   "src": "DriveZero: End-to-End Driving Beyond Human Demonstrations",
+   "zh": "DriveZero：超越人类示范的端到端自动驾驶"
+  },
+  "1356070136": {
+   "by": "llm",
+   "src": "A chat system based on ntfy",
+   "zh": "基于 ntfy 的聊天系统"
+  },
+  "1356071067": {
+   "by": "llm",
+   "src": "Графический WEB интерфейс UI в браузере + VPN AmneziaWG 3.1 на VPS в Docker одной командой. Без мусора и лишних зависимостей",
+   "zh": "一条命令在 VPS 上以 Docker 部署 AmneziaWG 3.1 的浏览器图形界面 + VPN"
+  },
+  "1356114154": {
+   "by": "llm",
+   "src": "A Collection of Awesome Obsidian Plugins, Themes, Guides and More!",
+   "zh": "Obsidian 插件、主题、指南等精选合集"
+  },
+  "1356148933": {
+   "by": "llm",
+   "src": "Beautiful dev-server error pages that live update. ✨",
+   "zh": "好看且能实时更新的开发服务器报错页面"
+  },
+  "1356156490": {
+   "by": "llm",
+   "src": "Continuous improvement for AI coding agents: Penelopa analyzes real Codex and Claude Code sessions, finds repeated workflow patterns, and turns them into reusable skills, checks, prompts, and recommen",
+   "zh": "面向 AI 编程智能体的持续改进：分析真实会话、发现重复工作流并沉淀为可复用技能"
+  },
+  "1356159928": {
+   "by": "llm",
+   "src": "Open-source AI brand visibility and competitor reports. Official website: https://niubigeo.ai/ | Paid services: AI testing by real people and GEO optimization. Pricing: https://niubigeo.ai/pricing",
+   "zh": "开源 AI 品牌可见度与竞品报告，并提供真人测试与 GEO 优化服务"
+  },
+  "1356226765": {
+   "by": "llm",
+   "src": "Splits text into lines, words and characters exactly where the browser already broke it.",
+   "zh": "按浏览器实际断行的位置，把文本切成行、词与字符"
+  },
+  "1356252600": {
+   "by": "llm",
+   "src": "MCP server for Shopware 6. Products, orders, customers, stock, documents, a one-call health audit and sales reports for CODEX, Claude Desktop, Cursor and any MCP host. Read-only by default, guarded wr",
+   "zh": "面向 Shopware 6 的 MCP 服务器：商品、订单、客户、库存与销售报表，默认只读"
+  },
+  "1356336145": {
+   "by": "llm",
+   "src": "Agency card feed: agents finish work, Magnus decides with one click",
+   "zh": "智能体卡片流：智能体干完活，Magnus 一键拍板"
+  },
+  "1356375344": {
+   "by": "llm",
+   "src": "Native Rust inference server for open models on NVIDIA GPUs. OpenAI- and Anthropic-compatible APIs, GGUF + safetensors, FP8/NVFP4/MXFP4/Q8/Q4, built-in Studio",
+   "zh": "面向 NVIDIA 显卡的开源模型原生 Rust 推理服务器，兼容 OpenAI 与 Anthropic API"
+  },
+  "1356410791": {
+   "by": "llm",
+   "src": "Linux 2000: a Windows 2000-like desktop for X11 -- window manager, Explorer, applets, XP and Windows 7 themes. Not affiliated with Microsoft.",
+   "zh": "Linux 2000：X11 上的类 Windows 2000 桌面，含窗口管理器、资源管理器与主题"
+  },
+  "1356476152": {
+   "by": "llm",
+   "src": "Native recompilation of Donkey Kong Country 3 (SNES), built the DKC2Recomp way on snesrecomp",
+   "zh": "《大金刚国度 3》(SNES) 的原生重编译移植"
+  },
+  "1356530489": {
+   "by": "llm",
+   "src": "一款把任意图片转换为专业生图提示词的 Chrome / Edge 浏览器插件。支持网页右键识图、本地上传与剪贴板粘贴，生成中文、英文和 JSON 提示词，并提供历史记录与收藏。",
+   "zh": "把任意图片转成专业生图提示词的浏览器插件，支持中英与 JSON 格式、历史与收藏"
+  },
+  "1356535652": {
+   "by": "llm",
+   "src": "A tiny, self-hosted web analytics service.",
+   "zh": "一个极小的自托管网站分析服务"
+  },
+  "1356560259": {
+   "by": "llm",
+   "src": "Closed-Loop Agentic Discovery Engine for Machine Learning Research and Engineering",
+   "zh": "面向机器学习研究的闭环智能体发现引擎"
+  },
+  "1356579487": {
+   "by": "llm",
+   "src": "基于 Cloudflare WARP / MASQUE 的可视化注册、配置生成与多客户端转换工具。 生成、Clash/Mihomo 智能分流、Shadowrocket、sing-box、本地 VLESS 桥接，以及可选的 WARP 出口检测。",
+   "zh": "基于 Cloudflare WARP / MASQUE 的可视化注册与配置生成，支持多客户端转换与智能分流"
+  },
+  "1356623751": {
+   "by": "llm",
+   "src": "每日定时获取AI相关的最新资讯",
+   "zh": "每日定时获取 AI 相关最新资讯"
+  },
+  "1356662909": {
+   "by": "llm",
+   "src": "龙与奇幻城：46张原创小丑牌与命运牌组 | 46 original Jokers and a fate-forged deck for Balatro",
+   "zh": "龙与奇幻城：为《小丑牌》制作的 46 张原创小丑牌与命运牌组"
+  },
+  "1356671035": {
+   "by": "llm",
+   "src": "Root file manager for jailbroken iOS — RootHide and rootless, iOS 15+",
+   "zh": "面向越狱 iOS 的根文件管理器，支持 RootHide 与无根模式（iOS 15+）"
+  },
+  "1356717536": {
+   "by": "llm",
+   "src": "File-logged conversation protocol and on-demand development pipeline",
+   "zh": "以文件记录对话的协议与按需开发流水线"
+  },
+  "1356761900": {
+   "by": "llm",
+   "src": "Strong agent. Short leash",
+   "zh": "强大的智能体，短绳子牵着"
+  },
+  "1356777601": {
+   "by": "llm",
+   "src": "Per-workspace tiling ratios for Hyprland, on Omarchy. Drag the dividers and your windows move — 25/50/25, master and stack, thirds, grid. Named layouts, per-workspace assignment, switchable profiles.",
+   "zh": "Omarchy 上 Hyprland 的按工作区分割比例：拖动分隔线窗口即变，支持命名布局与配置切换"
+  },
+  "1356801039": {
+   "by": "llm",
+   "src": "Wiggle is a sandbox to run code in",
+   "zh": "Wiggle 是一个运行代码的沙箱"
+  },
+  "1356809188": {
+   "by": "llm",
+   "src": "Cursor free trial reset tool — bypass request limits, restore Pro access & unlock unlimited AI. Free & open source.",
+   "zh": "Cursor 免费试用重置工具：绕过请求限制、恢复 Pro 权限"
+  },
+  "1356832501": {
+   "by": "llm",
+   "src": "An open-source system for building persistent worlds with multimodal AI.",
+   "zh": "用多模态 AI 构建持久世界的开源系统"
+  },
+  "1356855861": {
+   "by": "llm",
+   "src": "A control instrument for handshake state machines - lint protocol models, replay transcripts, and fly deterministic mutations until a trace diverges.",
+   "zh": "握手协议状态机的控制仪器：校验协议模型、回放会话记录，并做确定性变异测试直到轨迹分叉"
+  },
+  "1356877088": {
+   "by": "llm",
+   "src": "Autonomous Intelligence for Wind Turbine Operations.",
+   "zh": "风力发电机运维的自主智能"
+  },
+  "1356886213": {
+   "by": "llm",
+   "src": "Unlock DLSS Upscaler, Multi-Frame Generation (MFG) and DLSS Neural Rendering features on any NVIDIA RTX GPU in any DirectX 12 game that supports DLSS2 and DLSS3 natively.",
+   "zh": "在任何支持 DLSS2/DLSS3 的 DX12 游戏里，为任意 NVIDIA RTX 显卡解锁 DLSS 超分、多帧生成与神经渲染"
+  },
+  "1356886740": {
+   "by": "llm",
+   "src": "A non-linear AI agent workbench — session is a tree: branch anytime, and context follows the branch",
+   "zh": "非线性 AI 智能体工作台：会话是一棵树，随时分支，上下文跟着分支走"
+  },
+  "1356893225": {
+   "by": "llm",
+   "src": "Open-source network quality monitoring platform with multi-node Ping, TCPing, HTTP, DNS, IPv6 and Traceroute testing.",
+   "zh": "开源网络质量监控平台，支持多节点 Ping、TCPing、HTTP、DNS、IPv6 与路由追踪"
+  },
+  "1356900025": {
+   "by": "llm",
+   "src": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness.",
+   "zh": "NeoHorse-1：通过带路由框架的智能体式后训练走向递归自我改进"
+  },
+  "1356918624": {
+   "by": "llm",
+   "src": "Apeireth — A Pure Safe Rust AGI Operating System & Cognitive Microkernel. 16 crates: continuous topological memory, causal world model, cognitive scheduler, Ember HUD, triple-onion security & portable",
+   "zh": "纯安全 Rust 实现的 AGI 操作系统与认知微内核，含连续拓扑记忆与因果世界模型"
+  },
+  "1356921117": {
+   "by": "llm",
+   "src": "天翼云电脑保活签到任务；移动云电脑保活，阻止休眠；web远程访问",
+   "zh": "天翼云电脑保活签到任务；移动云电脑保活阻止休眠，并支持 Web 远程访问"
+  },
+  "1356928120": {
+   "by": "llm",
+   "src": "Open, model-agnostic Skill and starter for editable mobile-first personality quizzes",
+   "zh": "开放、模型无关的技能与脚手架，用于制作可编辑的移动优先人格测试"
+  },
+  "1356930616": {
+   "by": "llm",
+   "src": "本地优先的 Windows 微信个人记忆库：筛选、归档并导出可追溯的聊天上下文",
+   "zh": "本地优先的 Windows 微信个人记忆库：筛选、归档并导出可追溯的聊天上下文"
+  },
+  "1356960006": {
+   "by": "llm",
+   "src": "Open-source research workspace: search academic papers, upload PDFs, inline citations with on-PDF highlights, reader-mode Q&A, and get citation export in four formats.",
+   "zh": "开源科研工作台：检索论文、上传 PDF、PDF 内联引用与高亮、阅读模式问答、四种格式导出引用"
+  },
+  "1356970050": {
+   "by": "llm",
+   "src": "robinhood chain meme coin launchpad robinhood chain meme coin launchpad robinhood chain meme coin launchpad robinhood chain meme coin launchpad robinhood stock launchpad robinhood stock launchpad robi",
+   "zh": "Robinhood Chain 上的 meme 币与股票发行平台"
+  },
+  "1356970538": {
+   "by": "llm",
+   "src": "ComfyUI custom nodes for DLSS 5 Neural Video & Image Enhancer with Frame Interpolation",
+   "zh": "DLSS 5 神经视频与图像增强的 ComfyUI 自定义节点，含帧插值"
+  },
+  "1356975389": {
+   "by": "llm",
+   "src": "lol",
+   "zh": "就一个 lol"
+  },
+  "1356977789": {
+   "by": "llm",
+   "src": "一个面向A股的多agent股票辅助分析系统",
+   "zh": "面向 A 股的多智能体股票辅助分析系统"
+  },
+  "1356989040": {
+   "by": "llm",
+   "src": "GUI / Computer-Use / Browser Agent 安全论文清单 —— 按攻防轴组织，每篇附中文简介",
+   "zh": "GUI / 计算机使用 / 浏览器智能体安全论文清单，按攻防轴组织，每篇附中文简介"
+  },
+  "1357015803": {
+   "by": "llm",
+   "src": "How to train your slop cannon: a short guide to using large language models for research in the natural sciences (Loader, Oppenheim, Osborne)",
+   "zh": "如何训练你的「垃圾炮」：用大模型做自然科学研究的简明指南"
+  },
+  "1357036560": {
+   "by": "llm",
+   "src": "Agent2 — An autonomous AI agent for coding, cybersecurity, terminal automation, and intelligent task execution.",
+   "zh": "Agent2：自主 AI 智能体，覆盖编程、网络安全、终端自动化与任务执行"
+  },
+  "1357054830": {
+   "by": "llm",
+   "src": "Qwen3.8-Flash-Next on ONE DGX Spark (TP=1)",
+   "zh": "在单台 DGX Spark 上运行 Qwen3.8-Flash-Next（TP=1）"
+  },
+  "1357073013": {
+   "by": "llm",
+   "src": "白板火柴人拆书短视频工作流：脚本、分镜、配音、BGM、字幕与 HyperFrames 本地渲染",
+   "zh": "白板火柴人拆书短视频工作流：脚本、分镜、配音、BGM、字幕与本地渲染"
+  },
+  "1357118507": {
+   "by": "llm",
+   "src": "Skills for me (and you)",
+   "zh": "给作者（也给你）用的技能集"
+  },
+  "1357169664": {
+   "by": "llm",
+   "src": "YuzukiNeko is a cute pico-sized board with Allwinner F101S3-CXX/F101S4-CXX",
+   "zh": "YuzukiNeko：搭载全志 F101S3-CXX 的迷你 pico 尺寸开发板"
+  },
+  "1357188429": {
+   "by": "llm",
+   "src": "可视化的markdown编辑器，主要用于我自己的博客站",
+   "zh": "可视化 Markdown 编辑器，主要用于自建博客"
+  },
+  "1357195825": {
+   "by": "llm",
+   "src": "Local-first Hermes memory provider on zvec-grep (hybrid BM25+vector RRF over Markdown vault)",
+   "zh": "基于 zvec-grep 的本地优先 Hermes 记忆提供者（Markdown 库上的 BM25 + 向量混合检索）"
+  },
+  "1357201592": {
+   "by": "llm",
+   "src": "Write one page at a time. Get a real book. A strict B5 canvas for AI-authored books: one concept per page, the same CSS on screen and in print, diagrams written as SVG.",
+   "zh": "一次写一页，最终得到一本真正的书：面向 AI 写书的严格 B5 版面系统"
+  },
+  "1357257622": {
+   "by": "llm",
+   "src": "Turn CNB cloud-workspace in-network AI into production OpenAI & Anthropic (Claude Code) APIs. Zero deps, v5.2 self-healing HA, quota CLI.",
+   "zh": "把 CNB 云工作区的内网 AI 变成可用的 OpenAI 与 Anthropic API，零依赖、支持配额查询"
+  },
+  "1357272370": {
+   "by": "llm",
+   "src": "Local-first WeChat intelligence system with a read-only CLI, Codex skills, searchable chat history, daily briefings, follow-ups and opportunity tracking.",
+   "zh": "本地优先的微信情报系统：只读命令行、Codex 技能、可搜索聊天记录与每日简报"
+  },
+  "1357273725": {
+   "by": "llm",
+   "src": "Free DLSS Frame Generation (x2/x3/x4) for Baldur's Gate 3 on Vulkan via NVIDIA Streamline. Compatible with BG3SE, MCM and DLSS 5 (Neural Rendering).",
+   "zh": "通过 NVIDIA Streamline 在 Vulkan 上为《博德之门 3》免费开启帧生成（x2/x3/x4）"
+  },
+  "1357277481": {
+   "by": "llm",
+   "src": "Python AI Agent 学习计划（精简大纲 + 学习详情）",
+   "zh": "Python AI Agent 学习计划（精简大纲 + 学习详情）"
+  },
+  "1357282163": {
+   "by": "llm",
+   "src": "Choose, test and move an iPhone’s reported location.",
+   "zh": "选择、测试并移动 iPhone 上报的位置"
+  },
+  "1357299429": {
+   "by": "llm",
+   "src": "Build a cinematic click-driven video website: LTX footage, image/video prompts, coding-agent build spec, workflow and seam-safe playback guide.",
+   "zh": "搭建电影感点击驱动视频网站：LTX 素材、图/视频提示词与无缝播放指南"
+  },
+  "1357328948": {
+   "by": "llm",
+   "src": "WebGL shader orbs for React, distributed through a shadcn registry",
+   "zh": "面向 React 的 WebGL 着色器光球，通过 shadcn 注册表分发"
+  },
+  "1357339619": {
+   "by": "llm",
+   "src": "High-performance video generation gateway and session coordinator",
+   "zh": "高性能视频生成网关与会话协调器"
+  },
+  "1357350878": {
+   "by": "llm",
+   "src": "Intelligent Parsing Agent for Electrical Tender Documents – A seven-step workflow + document processing ledger, enabling multi-format uploads, automatic equipment parameter extraction, evidence review",
+   "zh": "电气招标文件智能解析助手：七步工作流 + 文档处理台账，支持多格式上传与设备参数抽取"
+  },
+  "1357379644": {
+   "by": "llm",
+   "src": "Interruptible, locale-aware rolling numbers for the web. TypeScript core and React adapter.",
+   "zh": "网页上可打断、支持多语言的滚动数字，含 TypeScript 核心与 React 适配层"
+  },
+  "1357383267": {
+   "by": "llm",
+   "src": "NebulaMat scientific materials research workbench",
+   "zh": "NebulaMat 科学材料研究工作台"
+  },
+  "1357411595": {
+   "by": "llm",
+   "src": "A practical hardware and software setup for a compact RL-powered biped robot.",
+   "zh": "小型强化学习双足机器人的软硬件搭建实战教程"
+  },
+  "1357414008": {
+   "by": "llm",
+   "src": "GitHub Actions 自动生成 Cloudflare WARP (MASQUE) 密钥与 mihomo 配置，产物只存 artifact",
+   "zh": "用 GitHub Actions 自动生成 Cloudflare WARP (MASQUE) 密钥与 mihomo 配置"
+  },
+  "1357482133": {
+   "by": "llm",
+   "src": "suyu v0.04 release",
+   "zh": "suyu v0.0.4 发行版"
+  },
+  "1357504161": {
+   "by": "llm",
+   "src": "Motion design skill for Codex and Claude Code. Adapt source examples into complete films through Higgsfield.",
+   "zh": "面向 Codex 与 Claude Code 的动态设计技能，借助 Higgsfield 把参考样例改编成完整影片"
+  },
+  "1357580136": {
+   "by": "llm",
+   "src": "Smoother game streaming on Mac. Automatic AWDL boost for Moonlight, GeForce NOW, Punktfunk, Parsec & Steam Link. Native SwiftUI + Liquid Glass. MIT.",
+   "zh": "让 Mac 上的游戏串流更顺畅：为 Moonlight、GeForce NOW、Parsec 等自动提升 AWDL"
+  },
+  "1357580964": {
+   "by": "llm",
+   "src": "AI Engineer | ML | DL | Generative AI | LLMs | Python",
+   "zh": "AI 工程师，专注机器学习、深度学习、生成式 AI 与大模型"
+  },
+  "1357583015": {
+   "by": "llm",
+   "src": "GPT-6 Astra orchestration with dynamic Sol, Terra, and Luna subagents",
+   "zh": "GPT-6 Astra 编排，含 Sol、Terra、Luna 动态子智能体"
+  },
+  "1357612923": {
+   "by": "llm",
+   "src": "打开 看看新闻 看五星体育等 SMG 频道时，F1 等版权节目会显示 \"版权受限\"。本项目绕过此限制，并支持节目回放。",
+   "zh": "绕过 SMG 旗下频道（看看新闻、五星体育等）的版权限制，并支持节目回放"
+  },
+  "1357647709": {
+   "by": "llm",
+   "src": "Interactive Model X 3D studio with 334-piece exploration",
+   "zh": "可交互的 Model X 3D 工作室，含 334 个零件探索"
+  },
+  "1357650926": {
+   "by": "llm",
+   "src": "An Omarchy-native NEXRAD radar viewer built with Rust and Quickshell.",
+   "zh": "用 Rust 与 Quickshell 构建的 Omarchy 原生 NEXRAD 雷达查看器"
+  },
+  "1357670785": {
+   "by": "llm",
+   "src": "Boot anything nixpkgs ever shipped, in your browser.",
+   "zh": "在浏览器里启动 nixpkgs 曾经发布过的任何东西"
+  },
+  "1357676444": {
+   "by": "llm",
+   "src": "Frame generation for VR using Optical Flow",
+   "zh": "用光流为 VR 做帧生成"
+  },
+  "1357699236": {
+   "by": "llm",
+   "src": "Open-source 3D anatomy explorer: 2,234 selectable BodyParts3D meshes, system layers, search, and exploded views.",
+   "zh": "开源 3D 人体解剖浏览器：2234 个可选中 BodyParts3D 网格、系统分层与爆炸视图"
+  },
+  "1357729892": {
+   "by": "llm",
+   "src": "A small, complete Python agent harness: tools, compaction, retries, and a single-file TUI. Built to learn and use as a baseline.",
+   "zh": "一个小而完整的 Python 智能体运行框架：工具、上下文压缩、重试与单文件终端界面"
+  },
+  "1357751559": {
+   "by": "llm",
+   "src": "A standalone cost-scaling proxy for NVIDIA DLSS-NR featuring Matched Residual resolve, HDR preservation, and live INI hot-reloading.",
+   "zh": "面向 NVIDIA DLSS-NR 的独立成本缩放代理，含匹配残差解析与 HDR 保留"
+  },
+  "1357756866": {
+   "by": "llm",
+   "src": "A toolkit for streamlined Quantum Espresso workflows—from input preparation to post-processing.",
+   "zh": "Quantum ESPRESSO 工作流工具集：从输入准备到后处理"
+  },
+  "1357791006": {
+   "by": "llm",
+   "src": "mobilecode is a fork of opencode that builds and previews iOS and Android projects",
+   "zh": "opencode 的分支版本，可构建并预览 iOS 与 Android 项目"
+  },
+  "1357795483": {
+   "by": "llm",
+   "src": "Visualize Every Step with AI — bilingual visual explanations, interactive models and synchronized narration.",
+   "zh": "用 AI 可视化每一步：双语图解、可交互模型与同步解说"
+  },
+  "1357795976": {
+   "by": "llm",
+   "src": "A bug bounty tool for bypassing 401/403 access restrictions and testing endpoint accessibility.",
+   "zh": "用于绕过 401/403 访问限制、测试端点可达性的漏洞赏金工具"
+  },
+  "1357847139": {
+   "by": "llm",
+   "src": "⚡ Automated web security reconnaissance & vulnerability assessment tool for bug bounty hunters. Discover attack surfaces, fingerprint technologies, detect common web vulnerabilities, and generate acti",
+   "zh": "面向漏洞赏金猎人的自动化 Web 安全侦察与漏洞评估工具"
+  },
+  "1357849254": {
+   "by": "llm",
+   "src": "A memory governance engine for multi-agent cloud knowledge bases — one knowledge base shared by every agent and every device, with consistency guaranteed. Pure Markdown, nine governance automations, z",
+   "zh": "面向多智能体云知识库的记忆治理引擎：一个知识库被所有智能体与设备共享且保证一致性"
+  },
+  "1357866714": {
+   "by": "llm",
+   "src": "A terminal YouTube Music player inspired by kew.",
+   "zh": "受 kew 启发的终端 YouTube Music 播放器"
+  },
+  "1357885424": {
+   "by": "llm",
+   "src": "An open-source multi-agent platform for GitLab MR code review, governance, and CI self-healing.",
+   "zh": "面向 GitLab MR 的开源多智能体平台，覆盖代码评审、治理与 CI 自愈"
+  },
+  "1357890808": {
+   "by": "llm",
+   "src": "Gentle reminders for unfinished threads from past sessions — built for ADHD brains. Claude Code plugin. (test mode)",
+   "zh": "对过往会话中未完成线索的温和提醒，为 ADHD 大脑而做（Claude Code 插件）"
+  },
+  "1357892406": {
+   "by": "llm",
+   "src": "Asisten crypto berbahasa Indonesia: RAG pengetahuan 267 topik + data pasar realtime (6 bursa, WebSocket, derivatif, on-chain, TVL, DeFi) + tool-calling agent + LLM synthesis",
+   "zh": "印尼语加密助手：267 个主题的 RAG 知识 + 实时行情数据 + 工具调用智能体"
+  },
+  "1357903597": {
+   "by": "llm",
+   "src": "Explore liquid-glass welcome screens with floating stickers and interactive swipe animations.",
+   "zh": "液态玻璃风格的欢迎页，含浮动贴纸与滑动交互动画"
+  },
+  "1357905477": {
+   "by": "llm",
+   "src": "纯 C# PP-OCRv6 推理库：多平台 SIMD 优化、较低内存占用、高正确率。",
+   "zh": "纯 C# 的 PP-OCRv6 推理库：多平台 SIMD 优化、内存占用低、正确率高"
+  },
+  "1357910267": {
+   "by": "llm",
+   "src": "Rich notifications for Omarchy",
+   "zh": "给 Omarchy 提供丰富的通知"
+  },
+  "1357914192": {
+   "by": "llm",
+   "src": "Select text and act on it: an Omarchy popup with PopClip-compatible extensions.",
+   "zh": "选中文本即可操作：Omarchy 弹窗，兼容 PopClip 扩展"
+  },
+  "1357918016": {
+   "by": "llm",
+   "src": "Experimental native PC port of Lost Odyssey using static recompilation. No game assets included.",
+   "zh": "用静态重编译实现的《失落的奥德赛》实验性原生 PC 移植，不含游戏素材"
+  },
+  "1357948479": {
+   "by": "llm",
+   "src": "vphone-cli but you can use your mac as a host and control it over the web",
+   "zh": "vphone-cli 的网页版：以 Mac 作宿主机，通过浏览器远程控制"
+  },
+  "1357960982": {
+   "by": "llm",
+   "src": "A curated collection of fun games built with GPT-6 Astra, with source code, demos, and prompts. | GPT-6 Astra 游戏精选",
+   "zh": "用 GPT-6 Astra 制作的趣味游戏精选，含源码、演示与提示词"
+  },
+  "1357997871": {
+   "by": "llm",
+   "src": "开源免费的本地 3D 陪玩 / 虚拟陪玩：桌面 3D 角色语音聊天、口型表情动作运镜，还能对面抽塔罗。virtual companion",
+   "zh": "开源免费的本地 3D 虚拟陪玩：桌面 3D 角色语音聊天，含口型、表情、动作与运镜"
+  },
+  "1358009970": {
+   "by": "llm",
+   "src": "Programmable World Model: explicit world state, generative rendering.",
+   "zh": "可编程世界模型：显式世界状态 + 生成式渲染"
+  },
+  "1358040175": {
+   "by": "llm",
+   "src": "Open-source skill",
+   "zh": "开源技能（Skill）"
+  },
+  "1358080066": {
+   "by": "llm",
+   "src": "Content Journey - Package Tool",
+   "zh": "内容旅程打包工具"
+  },
+  "1358080813": {
+   "by": "llm",
+   "src": "VoiceTransleter V3",
+   "zh": "语音翻译工具 V3"
+  },
+  "1358103117": {
+   "by": "llm",
+   "src": "Complete DLSS 5 Neural Rendering toolkit for any GPU (NVIDIA RTX 20-50, AMD RDNA 3-4, Intel Arc). One-click setup, Swapper, Feeder mode, emulator support, OptiScaler, and ReShade integration.",
+   "zh": "面向各类显卡的完整 DLSS 5 神经渲染工具箱（NVIDIA RTX 20-50、AMD RDNA 3-4、Intel Arc）"
+  },
+  "1358148620": {
+   "by": "llm",
+   "src": "Xiamen Institute of Technology厦门工学院毕业设计论文latex模板/XIT",
+   "zh": "厦门工学院毕业设计论文 LaTeX 模板"
+  },
+  "1358155447": {
+   "by": "llm",
+   "src": "SCEX-maintained unofficial ExtraBotany port for Minecraft 1.21.1 / NeoForge.",
+   "zh": "SCEX 维护的 ExtraBotany 非官方移植，面向 Minecraft 1.21.1 / NeoForge"
+  },
+  "1358160514": {
+   "by": "llm",
+   "src": "Automated world timezone and DST status tracker with ready-to-consume JSON datasets.",
+   "zh": "自动化全球时区与夏令时状态追踪器，输出开箱即用的 JSON 数据集"
+  },
+  "1358163597": {
+   "by": "llm",
+   "src": "Native iOS and Android apps from Dart",
+   "zh": "用 Dart 编写原生 iOS 与 Android 应用"
+  },
+  "1358166829": {
+   "by": "llm",
+   "src": "Experimental zine and interactive case based on Pamela Travers’ Moscow Excursion (1934).",
+   "zh": "以帕梅拉·特拉弗斯《莫斯科之行》(1934) 为基础的实验性 zine 与交互专题"
+  },
+  "1358168557": {
+   "by": "llm",
+   "src": "Flight booking system built as .NET 10 microservices with Vertical Slice Architecture, DDD, CQRS, Event Sourcing, gRPC, RabbitMQ, Wolverine, PostgreSQL, MongoDB and .NET Aspire.",
+   "zh": "用 .NET 10 微服务构建的机票预订系统，涵盖 DDD、CQRS、事件溯源、gRPC 与多种数据库"
+  },
+  "1358203612": {
+   "by": "llm",
+   "src": "Distributed microservices architecture with OpenTelemetry tracing, Kafka messaging, and auto/manual instrumentation, visualized in Uptrace.",
+   "zh": "微服务架构的 OpenTelemetry 链路追踪与 Kafka 消息示例，在 Uptrace 中可视化"
+  },
+  "1358211634": {
+   "by": "llm",
+   "src": "Qwen3.8-27B on 16-32 GB Nvidia GPUs one-click install for Windows / Linux",
+   "zh": "在 16-32 GB 显存的 NVIDIA 显卡上一键安装 Qwen3.8-27B（Windows / Linux）"
+  },
+  "1358243624": {
+   "by": "llm",
+   "src": "An open source alternative to Niagara Launcher — a minimal, list-based Android home screen.",
+   "zh": "Niagara Launcher 的开源替代：极简列表式安卓桌面"
+  },
+  "1358251198": {
+   "by": "llm",
+   "src": "Cloudflare 优选域名 API，服务于 Cloudflare 免费代理搭建方案，优质域名即为优质节点。",
+   "zh": "Cloudflare 优选域名 API，服务于免费代理搭建方案"
+  },
+  "1358259232": {
+   "by": "llm",
+   "src": "Make Any DOM Reactive",
+   "zh": "让任何 DOM 都具备响应式能力"
+  },
+  "1358275774": {
+   "by": "llm",
+   "src": "将参考图片离线描摹为纯 HTML + CSS 单文件插画的 Agent 插件，支持轮廓提取、局部渐变与输出审计。",
+   "zh": "把参考图离线描摹成纯 HTML + CSS 单文件插画的 Agent 插件，含轮廓提取与输出审计"
+  },
+  "1358286075": {
+   "by": "llm",
+   "src": "Agent-native workflow engine for building and backtesting alphas as DAGs.",
+   "zh": "面向智能体的工作流引擎，用 DAG 构建并回测因子（alpha）"
+  },
+  "1358295353": {
+   "by": "llm",
+   "src": "A macOS app that pins usage limits from Claude Code, Cursor, Codex, and Antigravity to a screen edge.",
+   "zh": "把 Claude Code、Cursor、Codex 与 Antigravity 的用量限制钉在屏幕边缘的 macOS 应用"
+  },
+  "1358300780": {
+   "by": "llm",
+   "src": "A bouncy shiny jelly baby game",
+   "zh": "一个弹跳发亮的软糖宝宝游戏"
+  },
+  "1358337565": {
+   "by": "llm",
+   "src": "Open-source acoustic drone detection. It hears the propellers, not the radio, so it works against fibre-optic FPV aircraft that emit no signal at all.",
+   "zh": "开源声学无人机探测：只听螺旋桨不靠无线电，因此能发现完全不发射信号的光纤 FPV 飞行器"
+  },
+  "1358346534": {
+   "by": "llm",
+   "src": "Use Astra as orchestrator and Luna for subagents in Codex",
+   "zh": "在 Codex 里用 Astra 做编排、用 Luna 做子智能体"
+  },
+  "1358365242": {
+   "by": "llm",
+   "src": "Native Windows port of Pokémon Snap (N64) by static recompilation. You supply your own cartridge dump; no game data is included.",
+   "zh": "通过静态重编译把《Pokémon Snap》原生移植到 Windows，需自备卡带转储"
+  },
+  "1358375924": {
+   "by": "llm",
+   "src": "Curso prático de Site Reliability Engineering e Observability",
+   "zh": "站点可靠性工程与可观测性实战课程"
+  },
+  "1358378778": {
+   "by": "llm",
+   "src": "An AI toolkit that turns agents into teachers rather than code yapping machines",
+   "zh": "让智能体当老师、而不是代码复读机的 AI 工具包"
+  },
+  "1358398261": {
+   "by": "llm",
+   "src": "Apple HealthKit and Android Health Connect for Expo and React Native, built on the Expo Modules API. One JavaScript API on both platforms.",
+   "zh": "基于 Expo Modules API 的 Apple HealthKit 与 Android Health Connect 封装，两端一套 JavaScript API"
+  },
+  "1358458431": {
+   "by": "llm",
+   "src": "在微信的转发菜单里，直接把聊天记录送到 Codex、Claude 或任何 App。WeChat chat-history hand-off for macOS.",
+   "zh": "在微信转发菜单里，把聊天记录直接送给 Codex、Claude 或任意 App（macOS）"
+  },
+  "1358459341": {
+   "by": "llm",
+   "src": "真实 API 定价：订阅月费 ÷ 实际可用 token，含额度、单价与分榜帕累托图。Real API pricing: subscription fee ÷ usable tokens, with allowance, unit-price, and leaderboard Pareto charts.",
+   "zh": "真实 API 定价：订阅月费除以实际可用 token，含额度、单价与分榜帕累托图"
+  },
+  "1358465489": {
+   "by": "llm",
+   "src": "Independent iOS client for Lody — native chat, sessions, and coding-agent collaboration on iPhone",
+   "zh": "Lody 的独立 iOS 客户端：原生聊天、会话与 iPhone 上的编程智能体协作"
+  },
+  "1358492453": {
+   "by": "llm",
+   "src": "Track the lifetime of leaked secrets through git history - detect credential-shaped strings offline and report how long each stayed exposed.",
+   "zh": "追踪泄露密钥在 git 历史中的生命周期，离线识别凭证特征并报告暴露时长"
+  },
+  "1358503697": {
+   "by": "llm",
+   "src": "200+ Curated GPT-6 Astra prompts and 3D examples for games, Blender scenes and interactive worlds. 14 languages, previews and source links. Updated twice daily. Curated by Tripo.",
+   "zh": "200+ 精选 GPT-6 Astra 提示词与 3D 示例，覆盖游戏、Blender 场景与交互世界，支持 14 种语言"
+  },
+  "1358512221": {
+   "by": "llm",
+   "src": "A tiny TypeScript web agent, hill climbed on real browser evals.",
+   "zh": "一个极小的 TypeScript 网页智能体，在真实浏览器评测上做爬山优化"
+  },
+  "1358513550": {
+   "by": "llm",
+   "src": "ComfyUI nodes for Viggle-Animate minimax H3 finetune",
+   "zh": "Viggle-Animate MiniMax H3 微调版的 ComfyUI 节点"
+  },
+  "1358541453": {
+   "by": "llm",
+   "src": "A native macOS activity monitor for CPU, memory, energy, disk, network and GPU, with customizable process lists and light/dark themes.",
+   "zh": "原生 macOS 活动监视器：CPU、内存、能耗、磁盘、网络与 GPU，支持深浅色主题"
+  },
+  "1358561036": {
+   "by": "llm",
+   "src": "Agent skill for browser motion graphics — openers, promos, bumpers, kinetic typography, and five explainer styles that move like video, not slides. Single index.html output. Works with Claude Code, Co",
+   "zh": "浏览器动态图形 Agent 技能：片头、宣传片、转场与动态排版，含多种解说风格"
+  },
+  "1358571386": {
+   "by": "llm",
+   "src": "Git-native persistent memory for AI coding agents. Implements Google OKF v0.2 with sub-300µs in-memory BM25 search, embedded MCP server, and progressive disclosure. Slashes token bloat by 80% with zer",
+   "zh": "面向 AI 编程智能体的 Git 原生持久记忆，实现 Google OKF v0.2，内存检索延迟低于 300 微秒"
+  },
+  "1358588929": {
+   "by": "llm",
+   "src": "手绘风格编号画廊与双语提示词 Skill",
+   "zh": "手绘风格编号画廊与双语提示词技能"
+  },
+  "1358633852": {
+   "by": "llm",
+   "src": "See what is really inside macOS System Data and delete it item by item. A free menu bar app that explains every category and shows each command before it runs.",
+   "zh": "看清 macOS「系统数据」里到底有什么并逐项删除，免费菜单栏应用"
+  },
+  "1358635004": {
+   "by": "llm",
+   "src": "A game mod that uses NVIDIA AI to change lighting, detail and colour, with controls for strength and performance.",
+   "zh": "用 NVIDIA AI 改变光照、细节与色彩的游戏模组，强度与性能可调"
+  },
+  "1358648020": {
+   "by": "llm",
+   "src": "Linux \"Native\" DLSS5 VKLayer",
+   "zh": "Linux 上「原生」运行的 DLSS5 Vulkan 层"
+  },
+  "1358657723": {
+   "by": "llm",
+   "src": "AI-agent operating system for Blender 5.2: skills, verified bpy knowledge base, AGENT_OK/AGENT_FAIL execution contract, production gate for 3D-printable parts, robot-arm demo",
+   "zh": "面向 Blender 5.2 的 AI 智能体操作系统：技能、经验证的 bpy 知识库与执行契约"
+  },
+  "1358693657": {
+   "by": "llm",
+   "src": "Fly-connectome simulation controlling a live Doom arena, with experimental neural plasticity, spectator UI, and scientific validation reports.",
+   "zh": "用果蝇连接组模拟控制真实 Doom 竞技场，含神经可塑性实验与科学验证报告"
+  },
+  "1358712513": {
+   "by": "llm",
+   "src": "A lightweight, composable Agent Runtime for building extensible AI agents.",
+   "zh": "轻量可组合的 Agent 运行时，用于构建可扩展的 AI 智能体"
+  },
+  "1358733444": {
+   "by": "llm",
+   "src": "Think and build like a principal engineer. Leverage Kun's experience, knowledge, tools, workflows, and skills to help you get shit done.",
+   "zh": "像首席工程师那样思考和动手：借用 Kun 的经验、知识与工作流把事情做成"
+  },
+  "1358761059": {
+   "by": "llm",
+   "src": "A guided English speaking practice Skill with gentle correction and a local review workbench",
+   "zh": "带温和纠错的引导式英语口语练习技能，附本地复习工作台"
+  },
+  "1358810178": {
+   "by": "llm",
+   "src": "根据任务难度与宿主能力选择执行者，编排子 Agent 的 codex Agent Skill",
+   "zh": "根据任务难度与宿主能力选择执行者的 Codex Agent Skill，用于编排子智能体"
+  },
+  "1358834831": {
+   "by": "llm",
+   "src": "An interactive 3D universe explorer built with Three.js. Journey from Earth's city lights to planetary orbits, Saturn's rings, and the Milky Way.",
+   "zh": "用 Three.js 构建的可交互 3D 宇宙探索：从地球城市灯光到行星轨道、土星环与银河"
+  },
+  "1358840837": {
+   "by": "llm",
+   "src": "A small Bitcoin-like chain whose canonical ledger is my README. Proof of work is subset-sum, not hashing.",
+   "zh": "一条小型类比特币链，其权威账本就是作者的 README，工作量证明用子集和而非哈希"
+  },
+  "1358848972": {
+   "by": "llm",
+   "src": "Official repository for \"OpenWAM: An Open, Modular Exploration Towards Systematic World–Action Model Pretraining\".",
+   "zh": "「OpenWAM：系统化世界—动作模型预训练的开放模块化探索」官方仓库"
+  },
+  "1358878061": {
+   "by": "llm",
+   "src": "Robotics vision SDK",
+   "zh": "机器人视觉 SDK"
+  },
+  "1358891011": {
+   "by": "llm",
+   "src": "RoPE attention is an exact forward-pass gradient step with softmax intact",
+   "zh": "RoPE 注意力在保留 softmax 的前提下，等价于一次精确的前向梯度步"
+  },
+  "1358910574": {
+   "by": "llm",
+   "src": "A small Python library and CLI for working with Cloudflare Turnstile on your own pages - read the sitekey, build the token, verify the result.",
+   "zh": "在自己页面上使用 Cloudflare Turnstile 的小型 Python 库与命令行工具"
+  },
+  "1358948316": {
+   "by": "llm",
+   "src": "针对GPT 6.0,V4flash的破甲实验项目",
+   "zh": "针对 GPT 6.0 与 V4flash 的越狱实验项目"
+  },
+  "1358978740": {
+   "by": "llm",
+   "src": "FactCircuit: an auditable claim-and-evidence verification loop with immutable provenance, staged checks, bounded retrieval, and reproducible evaluation.",
+   "zh": "FactCircuit：可审计的主张—证据验证闭环，含不可篡改溯源、分级校验与可复现评测"
+  },
+  "1359029880": {
+   "by": "llm",
+   "src": "具备 10 年前端经验（React / Vue / TypeScript / NestJS / NodeJS）、有 Go 与 Java 基础语法的开发者，系统构建 Java 企业级全栈能力。 基线版本：Java 25 LTS + Spring Boot 4.x + Jakarta EE 11。",
+   "zh": "面向有前端经验开发者的 Java 企业级全栈学习路径，基线为 Java 25 LTS + Spring Boot 4.x"
+  },
+  "1359030593": {
+   "by": "llm",
+   "src": "A toolkit for exploring, gathering, crafting, and building in Minecraft with GPT-6 Astra computer use.",
+   "zh": "用 GPT-6 Astra 的计算机使用能力在 Minecraft 中探索、采集、合成与建造的工具包"
+  },
+  "1359035587": {
+   "by": "llm",
+   "src": "S-Space: Exploring Spatial Workspace in Multimodal Models",
+   "zh": "S-Space：探索多模态模型中的空间工作区"
+  },
+  "1359042678": {
+   "by": "llm",
+   "src": "Real-time Breeze-TTS-2 streaming on Apple Silicon — RTF from ~4 down to ~1. mlx-audio 0.5.1's depth decoder recomputes each frame's existing acoustic codes instead of reusing its KV cache. Adds intra-",
+   "zh": "在 Apple Silicon 上做实时 Breeze-TTS-2 流式推理，RTF 从约 4 降到约 1"
+  },
+  "1359074877": {
+   "by": "llm",
+   "src": "Chrome MV3 extension for chatgpt.com: shows 5h/7d quota, and checks the requested model against the model_slug the server's STE telemetry reports as actually executed.",
+   "zh": "面向 chatgpt.com 的 Chrome 扩展：显示 5 小时/7 天额度，并核对实际执行的模型"
+  },
+  "1359081044": {
+   "by": "llm",
+   "src": "海内外热门社交平台的一键发布与管理工具，支持自媒体创作者跨平台发布；自动完成语言翻译、字幕烧录和跨时区发布设置。 | One-click publishing and management for global social platforms, with translation, burned-in subtitles, and timezone-aware scheduling.",
+   "zh": "海内外社交平台一键发布与管理工具，自动翻译、烧录字幕、跨时区发布"
+  },
+  "1359081113": {
+   "by": "llm",
+   "src": "箱体形态识别工具，适用于A股和加密货币",
+   "zh": "箱体形态识别工具，适用于 A 股和加密货币"
+  },
+  "1359081910": {
+   "by": "llm",
+   "src": "Junk-free, 300+ directories, launch sites, newsletters, communities, subreddits and marketplaces to submit your startup, with Domain Rating, traffic and pricing. Synced weekly from submitlist.io.",
+   "zh": "无垃圾的 300+ 项目提交目录：发布站、newsletter、社区与市场，附域名权重与价格"
+  },
+  "1359105319": {
+   "by": "llm",
+   "src": "CVE-2026-67276 RouterOS SSH public-key authentication bypass lab PoC",
+   "zh": "CVE-2026-67276 RouterOS SSH 公钥认证绕过实验验证"
+  },
+  "1359108765": {
+   "by": "llm",
+   "src": "Agent skill and field guide: the security pitfalls that block Omarchy plugins on the marketplace, from 5,000+ maintainer reviews",
+   "zh": "Agent 技能与实战指南：来自 5000+ 次维护者评审的 Omarchy 插件上架安全坑"
+  },
+  "1359111028": {
+   "by": "llm",
+   "src": "SlideWeave｜圖敘簡報 — Audience-aware, multi-style editable presentations for Codex, with AI visuals, draw.io workflows, and research storytelling.",
+   "zh": "SlideWeave：面向 Codex 的受众感知多风格可编辑演示文稿，含 AI 配图与 draw.io 流程"
+  },
+  "1359120685": {
+   "by": "llm",
+   "src": "Professional agent skills for screenwriting, television writing and dramaturgy",
+   "zh": "面向编剧、电视剧写作与戏剧构作的专业 Agent 技能"
+  },
+  "1359123968": {
+   "by": "llm",
+   "src": "A curated list of MCP servers for SEO. Search Console, keywords, backlinks, crawling, SERPs and AI search visibility, verified with install details and auth requirements.",
+   "zh": "面向 SEO 的 MCP 服务器精选：Search Console、关键词、外链、抓取与 AI 搜索可见度"
+  },
+  "1359125057": {
+   "by": "llm",
+   "src": "Reproducible Hyperframes source for a ChatGPT adaptation of Rajmoni’s motion-design reference, with raw assets and verified render.",
+   "zh": "ChatGPT 版动态设计参考的可复现 Hyperframes 源文件，含原始素材与渲染验证"
+  },
+  "1359136297": {
+   "by": "llm",
+   "src": "A curated list of Agent Skills for SEO. Technical audits, keyword research, content briefs, schema, GEO and AI visibility, for Claude Code, Codex, Cursor and OpenClaw.",
+   "zh": "面向 SEO 的 Agent Skills 精选：技术审计、关键词研究、内容简报、结构化数据与 AI 可见度"
+  },
+  "1359140585": {
+   "by": "llm",
+   "src": "A curated list of GEO and AI visibility tools, compared on which AI engines they track, how often they refresh, what they cost, and whether you can get your data out.",
+   "zh": "GEO 与 AI 可见度工具精选：对比追踪哪些 AI 引擎、刷新频率、价格与数据可导出性"
+  },
+  "1359148874": {
+   "by": "llm",
+   "src": "Interactive 3D atlas of oral and maxillofacial anatomy for dental education. 643 BodyParts3D meshes plus 77 schematic nerve, vessel, gland, sinus and joint structures the source dataset omits, fitted",
+   "zh": "面向牙科教育的口腔颌面解剖交互 3D 图谱，643 个网格外加 77 个示意结构"
+  },
+  "1359153546": {
+   "by": "llm",
+   "src": "基于Babylon的GTA-6深圳 mini 青春 Lite版",
+   "zh": "基于 Babylon 的 GTA-6 深圳迷你青春版"
+  },
+  "1359159922": {
+   "by": "llm",
+   "src": "Local Pokemon battle prototype with AI-generated cinematics",
+   "zh": "本地宝可梦对战原型，含 AI 生成的过场动画"
+  },
+  "1359179010": {
+   "by": "llm",
+   "src": "Anyone can predict the future. Almost nobody keeps the receipt. A hash-chained prediction ledger for LLMs — sealed before the answer exists, graded with proper scoring rules.",
+   "zh": "谁都能预测未来，但几乎没人留凭证：面向大模型的哈希链预测台账，答案出现前封存，用正规评分规则打分"
+  },
+  "1359185809": {
+   "by": "llm",
+   "src": "Seedance 2.5 苹果发布会风格产品视频生成技能 — 把任意普通产品包装成高端消费电子产品，生成30秒苹果发布会风格AI视频。作者：靓仔 AI 进化论",
+   "zh": "Seedance 2.5 苹果发布会风格产品视频生成技能：把普通产品包装成 30 秒高端发布会视频"
+  },
+  "1359188118": {
+   "by": "llm",
+   "src": "A reusable research-onboarding skill for Claude, ChatGPT, Codex, and other instruction-following agents.",
+   "zh": "面向 Claude、ChatGPT、Codex 等智能体的可复用「研究领域入门」技能"
+  },
+  "1359208384": {
+   "by": "llm",
+   "src": "Share AI subscriptions across your team, task by task, without signing in to anyone else's account.",
+   "zh": "在团队内按任务共享 AI 订阅，无需登录他人账号"
+  },
+  "1359216200": {
+   "by": "llm",
+   "src": "DLSS 5 Neural Rendering on your whole Windows desktop, in real time. RTX 30/40/50, 12 languages, user presets, recording with audio, one-window mode.",
+   "zh": "在你的整个 Windows 桌面上实时运行 DLSS 5 神经渲染，支持 RTX 30/40/50 与 12 种语言"
+  },
+  "1359221896": {
+   "by": "llm",
+   "src": "让任何 agent 操控 Mac 上没有 API 的原生 app，读后台、写不打扰、每步留取证 · Agent Skill for macOS computer use",
+   "zh": "让任何 Agent 操控 Mac 上没有 API 的原生应用：读后台、写入不打扰、每步留取证"
+  },
+  "1359247858": {
+   "by": "llm",
+   "src": "A small Python library and CLI for working with Cloudflare Turnstile on your own pages - read the sitekey, build the token, verify the result.",
+   "zh": "在自己页面上使用 Cloudflare Turnstile 的小型 Python 库与命令行工具"
+  },
+  "1359263649": {
+   "by": "llm",
+   "src": "Control panel for Telegram proxy nodes (telemt, tproxy-server): keys, decoy sites, monitoring",
+   "zh": "Telegram 代理节点控制面板：密钥、伪装站点与监控"
+  },
+  "1359285504": {
+   "by": "llm",
+   "src": "DKYJ Director / 大开眼界导演台 — Local Blender camera previs with an iPhone Safari viewfinder, editable blocking, reusable scenes and optional MCP agent integration. macOS / Windows.",
+   "zh": "大开眼界导演台：本地 Blender 摄影机预演，支持 iPhone Safari 取景器与 MCP 智能体集成"
+  },
+  "1359308109": {
+   "by": "llm",
+   "src": "GEO第一性原理：面向企业负责人的开源 GEO 分析 Skill。从行业竞争、客户需求与成交逻辑出发，判断是否适合做 GEO、价值在哪里、怎样投入，并提供重点场景、五题实测指引与行动建议。支持 Agent Skills 格式。",
+   "zh": "GEO 第一性原理：面向企业负责人的开源 GEO 分析技能，判断是否值得投入与如何落地"
+  },
+  "1359359114": {
+   "by": "llm",
+   "src": "AI 短剧白模预演与摄影机调度工具",
+   "zh": "AI 短剧白模预演与摄影机调度工具"
+  },
+  "1359360633": {
+   "by": "llm",
+   "src": "NeuroCraft Fly by Evan Sinclair Smith: an interactive fruit-fly connectome model in Minecraft. Public project home and release roadmap.",
+   "zh": "在 Minecraft 里构建的交互式果蝇连接组模型"
+  },
+  "1359371966": {
+   "by": "llm",
+   "src": "Top RDR2 Gameplay Enhancement Suite 2026: ESP & No Recoil",
+   "zh": "2026 顶级《荒野大镖客 2》玩法增强套件：透视与无后坐力"
+  },
+  "1359372462": {
+   "by": "llm",
+   "src": "A curated catalog of Model Context Protocol servers for French data, laws, and services.",
+   "zh": "面向法国数据、法律与服务的 MCP 服务器精选目录"
+  },
+  "1359378119": {
+   "by": "llm",
+   "src": "Local desktop agent for end-to-end mathematical modeling, plotting, LaTeX papers, and submission packages.",
+   "zh": "本地桌面智能体：端到端完成数学建模、绘图、LaTeX 论文与提交包"
+  },
+  "1359384189": {
+   "by": "llm",
+   "src": "A Geiger counter for AI agents — one read-only command that inventories every agent, MCP server, plugin, and AI extension on a machine",
+   "zh": "AI 智能体盖革计数器：一条只读命令清点机器上所有智能体、MCP 服务与插件"
+  },
+  "1359388164": {
+   "by": "llm",
+   "src": "CCK 账号管理器 — 添加自定义账号，批量管理 AI 编程工具账号额度，一键启动客户端",
+   "zh": "CCK 账号管理器：添加自定义账号、批量管理 AI 编程工具额度、一键启动客户端"
+  },
+  "1359406666": {
+   "by": "llm",
+   "src": "使用 Rust 对《红色警戒 2》进行了现代化重写，现已支持高分辨率，窗口化，跨平台等特性，且额外支持《尤里的复仇》、《心灵终结》等 DLC。",
+   "zh": "用 Rust 对《红色警戒 2》做的现代化重写，支持高分辨率、窗口化与跨平台，并兼容《尤里的复仇》等"
+  },
+  "1359415787": {
+   "by": "llm",
+   "src": "Change SNES games with AI while you play them.",
+   "zh": "玩 SNES 游戏时用 AI 实时改变游戏内容"
+  },
+  "1359427327": {
+   "by": "llm",
+   "src": "Codeb PC 桌面客户端（Electron）— 一键配置 20 种主流 AI CLI 工具，统一接入 9 家厂商 19 款模型，密钥管理 / PTY 终端 / 自动更新",
+   "zh": "Codeb 桌面客户端：一键配置 20 种 AI CLI 工具，统一接入 9 家厂商 19 款模型"
+  },
+  "1359427408": {
+   "by": "llm",
+   "src": "Droidloom - weaving Android into Linux. Run Android Apps inside your Wayland session! Supports arm64 and x86_64 platforms, running arm64-only apps on x86_64 without closed source libraries.",
+   "zh": "Droidloom：把 Android 织进 Linux，在 Wayland 会话里运行安卓应用"
+  },
+  "1359439962": {
+   "by": "llm",
+   "src": "Heterogeneous prefill/decode for DeepSeek-V4-Flash: CUDA prefill (DGX Spark, vLLM) -> Metal decode (Mac Studio, oMLX) over plain 10GbE",
+   "zh": "DeepSeek-V4-Flash 的异构预填充/解码：CUDA 预填充 + Metal 解码，走普通万兆以太网"
+  },
+  "1359452187": {
+   "by": "llm",
+   "src": "**CVE-2026-18963** — unauthenticated Keycloak account takeover via the reset-credentials flow.",
+   "zh": "CVE-2026-18963：通过重置凭据流程在未认证情况下接管 Keycloak 账号"
+  },
+  "1359481595": {
+   "by": "llm",
+   "src": "nghiên cứu và phát triển bộ điều khiển bay drone dựa trên esp32",
+   "zh": "基于 ESP32 的无人机飞控研究开发"
+  },
+  "1359521891": {
+   "by": "llm",
+   "src": "Meccha Chameleon Auto Painter - tool with ESP, aim assist, movement controls, Auto Paint, God Mode, FOV changer and gameplay utilities for Windows.",
+   "zh": "变色龙自动绘图工具，含透视、瞄准辅助、自动绘制与上帝模式"
+  },
+  "1359523853": {
+   "by": "llm",
+   "src": "👁️ Review AI generated code and plan changes",
+   "zh": "审查 AI 生成的代码并规划改动"
+  },
+  "1359539192": {
+   "by": "llm",
+   "src": "The biggest open-source home for shaders on the web.",
+   "zh": "网上最大的开源着色器集合地"
+  },
+  "1359539710": {
+   "by": "llm",
+   "src": "A Python in 1024 bytes",
+   "zh": "用 1024 字节实现的 Python"
+  },
+  "1359564380": {
+   "by": "llm",
+   "src": "Evidence-aware multi-engine mathematics runtime for LLMs: exact, symbolic, formal, certified-interval and numeric computation with typed MathIR, trust labels, and full provenance",
+   "zh": "面向大模型的证据感知多引擎数学运行时：精确、符号、形式化、区间与数值计算，带类型化 MathIR 与完整溯源"
+  },
+  "1359580787": {
+   "by": "llm",
+   "src": "Stuxnet, Here reproduced by me, Only researchs for educations purposes. It set work on Windows XP and Windows 7 only.",
+   "zh": "由作者复现的 Stuxnet，仅用于安全教育研究，仅能在 Windows XP 和 7 上运行"
+  },
+  "1359590718": {
+   "by": "llm",
+   "src": "安卓网页逆向分析Model Context Protocol(MCP)工具",
+   "zh": "安卓网页逆向分析的 MCP 工具"
+  },
+  "1359592790": {
+   "by": "llm",
+   "src": "Opensource Discord alternative.",
+   "zh": "开源的 Discord 替代品"
+  },
+  "1359596777": {
+   "by": "llm",
+   "src": "Conquest of AzerothCore",
+   "zh": "AzerothCore 的「艾泽拉斯征服」服务端项目"
+  },
+  "1359600707": {
+   "by": "llm",
+   "src": "Show all JAV cover and ranking in one click.",
+   "zh": "一键查看 JAV 封面与排名"
+  },
+  "1359605388": {
+   "by": "llm",
+   "src": "A CD-shaped music player for Linux, with local playback and Cider integration.",
+   "zh": "面向 Linux 的 CD 造型音乐播放器，支持本地播放与 Cider 集成"
+  },
+  "1359610661": {
+   "by": "llm",
+   "src": "Turn the user's description or uploaded reference into a finished, editable Blender card and an interactive Three.js page. Preserve the requested subject, style, typography and destination. This skill",
+   "zh": "把描述或参考图变成可编辑的 Blender 卡片与交互式 Three.js 页面"
+  },
+  "1359630749": {
+   "by": "llm",
+   "src": "Real refraction liquid glass for the web: SDF lens maps + SVG displacement + backdrop-filter. One file, no WebGL.",
+   "zh": "网页上的真实折射液态玻璃：SDF 透镜贴图 + SVG 位移 + 背景滤镜，单文件、不用 WebGL"
+  },
+  "1359637248": {
+   "by": "llm",
+   "src": "Create GTA-style 3D models and scenes with your AI and Blender, using models and textures from your game. Early alpha.",
+   "zh": "用 AI 与 Blender 配合游戏内的模型贴图，制作 GTA 风格三维模型与场景（早期版本）"
+  },
+  "1359648985": {
+   "by": "llm",
+   "src": "按性价比排序的循证生活指南：长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
+   "zh": "按性价比排序的循证生活指南：健康长寿、急救、理财、法律、婚育、创业等，每条注明成本与证据等级"
+  },
+  "1359667932": {
+   "by": "llm",
+   "src": "XCheck IP Reputation Investigation System",
+   "zh": "XCheck IP 信誉调查系统"
+  },
+  "1359679276": {
+   "by": "llm",
+   "src": "[MobiSys 2026] A large-scale, multimodal dataset and benchmark for Human Action Recognition, Understanding and Reasoning",
+   "zh": "面向人类动作识别、理解与推理的大规模多模态数据集与基准（MobiSys 2026）"
+  },
+  "1359729118": {
+   "by": "llm",
+   "src": "Fileless ELF execution",
+   "zh": "无文件 ELF 执行"
+  },
+  "1359737133": {
+   "by": "llm",
+   "src": "A clone of the Windows 3.1 Program Manager (progman.exe)",
+   "zh": "Windows 3.1 程序管理器（progman.exe）的复刻"
+  },
+  "1359742580": {
+   "by": "llm",
+   "src": "IoT firmware identification and extraction",
+   "zh": "IoT 固件识别与提取"
+  },
+  "1359743689": {
+   "by": "llm",
+   "src": "IoT static scanner for secrets, SBOM, CVEs and more.",
+   "zh": "面向 IoT 的静态扫描器：密钥、SBOM 与 CVE 等"
+  },
+  "1359749320": {
+   "by": "llm",
+   "src": "Playable browser reconstruction of The Simpsons: Hit & Run with converted assets and Blender remaster tools.",
+   "zh": "《辛普森一家：横冲直撞》的浏览器可玩复刻，含资源转换与 Blender 重制工具"
+  },
+  "1359759930": {
+   "by": "llm",
+   "src": "The setup I used for my GPT-6 Astra Portal run: controller, SourcePauseTool patch, setup guide, and sanitized session log.",
+   "zh": "GPT-6 Astra Portal 速通配置：控制器、SourcePauseTool 补丁与脱敏日志"
+  },
+  "1359791990": {
+   "by": "llm",
+   "src": "Standalone Robinhood Chain LP explorer, accounting and research terminal",
+   "zh": "独立的 Robinhood Chain 流动性池浏览器、记账与研究终端"
+  },
+  "1359813254": {
+   "by": "llm",
+   "src": "Open-source end-to-end omni interaction agent for natural full-duplex voice collaboration, continuous audio-visual perception, and asynchronous long-horizon agentic execution.",
+   "zh": "开源端到端全模态交互智能体，支持自然全双工语音协作与持续视听感知"
+  },
+  "1359821088": {
+   "by": "llm",
+   "src": "Build distinctive brand websites with GPT-6 Astra and Higgsfield MCP. Desktop and mobile prompts.",
+   "zh": "用 GPT-6 Astra 与 Higgsfield MCP 打造有辨识度的品牌网站，含桌面与移动端提示词"
+  },
+  "1359835005": {
+   "by": "llm",
+   "src": "OKF (Open Knowledge Format) — curated catalog of tools, plugins, skills, proposals, and docs for agent-friendly knowledge. YAML-driven, agent-searchable, MCP-ready.",
+   "zh": "OKF 开放知识格式：面向智能体的工具、插件、技能与文档目录，YAML 驱动"
+  },
+  "1359849380": {
+   "by": "llm",
+   "src": "CodeCraft-style account farm — OAuth + coupon + API key harvest",
+   "zh": "CodeCraft 风格的账号农场：OAuth、优惠券与 API Key 收集"
+  },
+  "1359889247": {
+   "by": "llm",
+   "src": "Turn a repository into a safe, specific operating contract for AI coding agents.",
+   "zh": "把仓库转成 AI 编程智能体可用的安全、明确的操作契约"
+  },
+  "1359889685": {
+   "by": "llm",
+   "src": "大明职官图：明代官署、人物履历、年号检索与府州县交互图谱",
+   "zh": "大明职官图：明代官署、人物履历、年号检索与府州县交互图谱"
+  },
+  "1359917063": {
+   "by": "llm",
+   "src": "基于 Spring Boot 与 LLM 的校园多模态智能体系统（星辰校园百事通），支持动态层级 RAG、多轮对话记忆与 ReAct 思考链路追踪。",
+   "zh": "基于 Spring Boot 与 LLM 的校园多模态智能体，支持层级 RAG 与多轮对话记忆"
+  },
+  "1359917523": {
+   "by": "llm",
+   "src": "dlss 5 amd project",
+   "zh": "DLSS 5 的 AMD 平台项目"
+  },
+  "1359934054": {
+   "by": "llm",
+   "src": "全息闪卡 Codex Skill：一句话生成可拖转、会流光、带层次景深的 3D 闪卡网页，附可编辑 Blender 工程",
+   "zh": "全息闪卡 Codex 技能：一句话生成可拖转、带流光与层次景深的 3D 闪卡网页"
+  },
+  "1359950131": {
+   "by": "llm",
+   "src": "A K9s-inspired terminal UI for monitoring Argo CD resources in real-time",
+   "zh": "受 K9s 启发的终端界面，用于实时监控 Argo CD 资源"
+  },
+  "1359951632": {
+   "by": "llm",
+   "src": "An ultra-lightweight, blazing-fast, and memory-efficient WhatsApp Desktop client for macOS, Windows, and Linux, built with Go.",
+   "zh": "用 Go 编写的超轻量、极速、省内存的 WhatsApp 桌面客户端（macOS / Windows / Linux）"
+  },
+  "1359963149": {
+   "by": "llm",
+   "src": "青简 Qingjian：用 Rust 写的拼音输入法，候选词旁多一条正在学的语言的译词",
+   "zh": "青简：用 Rust 写的拼音输入法，候选词旁会显示正在学语言的译词"
+  },
+  "1359974649": {
+   "by": "llm",
+   "src": "Inference Engine",
+   "zh": "推理引擎"
+  },
+  "1359995118": {
+   "by": "llm",
+   "src": "Just a VLM Agent Can Play Robots",
+   "zh": "一个视觉语言模型智能体就能玩机器人"
+  },
+  "1360000671": {
+   "by": "llm",
+   "src": "Curated GPT-6 Astra demos: games, Blender & 3D, websites, and video creation. Original posts, creator credits, and live projects.",
+   "zh": "GPT-6 Astra 演示精选：游戏、Blender 与 3D、网站与视频创作，附原始链接与作者署名"
+  },
+  "1360002825": {
+   "by": "llm",
+   "src": "BankMCP™: your AI can now read your bank. Self-hosted, read-only MCP server for your own bank accounts via open banking (Enable Banking). Standard MCP; tested with Claude and Ollama.",
+   "zh": "BankMCP：让你的 AI 能读取你的银行账户，基于开放银行的自托管只读 MCP 服务器"
+  },
+  "1360018775": {
+   "by": "llm",
+   "src": "Declarative music in Swift: patterns, musical events, and live update state.",
+   "zh": "Swift 声明式音乐：乐句模式、音乐事件与实时更新状态"
+  },
+  "1360063226": {
+   "by": "llm",
+   "src": "国家反诈AI API 转 OpenAI 兼容格式反向代理服务 || 仅学习用途",
+   "zh": "把国家反诈 AI 接口转成 OpenAI 兼容格式的反向代理服务（仅供学习）"
+  },
+  "1360073221": {
+   "by": "llm",
+   "src": "Go tool that fires course-registration requests at my.edu.sharif.edu the moment registration opens.",
+   "zh": "选课一开放就立刻发请求抢课的 Go 工具"
+  },
+  "1360075102": {
+   "by": "llm",
+   "src": "Let Astra not only create editable PowerPoint presentations, but also create the style you desire.",
+   "zh": "让 Astra 不仅能生成可编辑的 PowerPoint，还能做出你想要的风格"
+  },
+  "1360089925": {
+   "by": "llm",
+   "src": "All Notes & Code for Forward Deployed Engineer series on CoderArmy",
+   "zh": "CoderArmy「前向部署工程师」系列的全部笔记与代码"
+  },
+  "1360109245": {
+   "by": "llm",
+   "src": "V2rayN，Clash系列，Karing等主流代理软件的完美分流规则源文件，下载直接使用。",
+   "zh": "面向 V2rayN、Clash 系列、Karing 等主流代理软件的完美分流规则源文件，下载即用"
+  },
+  "1360234174": {
+   "by": "llm",
+   "src": "GPT-6 Astra 提示词写作 Skill：基于官方指南生成、优化、压缩与诊断提示词，支持 Codex、Agent 和 Responses API。",
+   "zh": "GPT-6 Astra 提示词写作技能：依据官方指南生成、优化、压缩与诊断提示词"
+  },
+  "1360255506": {
+   "by": "llm",
+   "src": "Trading infrastructure and automation tools for Robinhood Chain, starting with Pons - robinhood copy trading bot, robinhood sniper bot, robinhood bundler.",
+   "zh": "面向 Robinhood Chain 的交易基础设施与自动化工具：跟单、狙击与打包机器人"
+  },
+  "1360279190": {
+   "by": "llm",
+   "src": "黏土风格 3D 双语动物世界 · A playful clay-style animal world built with Three.js and Blender.",
+   "zh": "黏土风格 3D 双语动物世界，用 Three.js 与 Blender 构建"
+  },
+  "1360309577": {
+   "by": "llm",
+   "src": "MiniMax-H3 multi-GPU inference acceleration: ~12x on 8x RTX 6000D (step distillation + SageAttention2 + Cache-DiT + torch.compile, TP2+Ulysses4 on sglang)",
+   "zh": "MiniMax-H3 多卡推理加速：8 张 RTX 6000D 上约 12 倍提升"
+  },
+  "1360317501": {
+   "by": "llm",
+   "src": "Agent skill for impressive 3D visuals using Blender + image gen + subagent critic",
+   "zh": "用 Blender + 图像生成 + 子智能体评审做出惊艳 3D 视觉的 Agent 技能"
+  },
+  "1360319899": {
+   "by": "llm",
+   "src": "Sharing how attention appears in my mind's eye, for students and those interested in understanding transformers",
+   "zh": "分享注意力机制在我脑海中的样子，面向想理解 Transformer 的学生"
+  },
+  "1360363191": {
+   "by": "llm",
+   "src": "阿里云滑块验证码自动求解：YOLO 识别 + 真人形态轨迹生成 + CDP 注入，单次通过率 90.9%",
+   "zh": "阿里云滑块验证码自动求解：YOLO 识别 + 真人形态轨迹生成，单次通过率 90.9%"
+  },
+  "1360367824": {
+   "by": "llm",
+   "src": "An AI second brain that maintains itself. Full guide, starter vault, agent skills and scripts for a self-organizing knowledge base in Claude Code and Obsidian.",
+   "zh": "会自我维护的 AI 第二大脑：在 Claude Code 与 Obsidian 中构建自组织知识库的完整指南与脚本"
+  },
+  "1360409178": {
+   "by": "llm",
+   "src": "Open-source design workspace for AI agents and humans. Cloud editing, 3D, motion, MCP, WebMCP, CLI and BYOK. MIT.",
+   "zh": "面向 AI 智能体与人类的开源设计工作台：云端编辑、3D、动效、MCP 与 BYOK（MIT）"
+  },
+  "1360425988": {
+   "by": "llm",
+   "src": "Persistent work state and minimal context for long-running AI agents.",
+   "zh": "为长时间运行的 AI 智能体提供持久工作状态与最小上下文"
+  },
+  "1360432710": {
+   "by": "llm",
+   "src": "Here is a dlssg for RTX30 Series GPU",
+   "zh": "面向 RTX 30 系显卡的帧生成方案"
+  },
+  "1360434153": {
+   "by": "llm",
+   "src": "微信本地聊天记录查看器 — 会话浏览/全文搜索/多格式导出/可选 LLM 智能总结，全部本地运行，零外部依赖。",
+   "zh": "微信本地聊天记录查看器：会话浏览、全文搜索、多格式导出与可选 AI 总结，全部本地运行"
+  },
+  "1360434521": {
+   "by": "llm",
+   "src": "A Codex skill for layered holographic cards with parallax, contour glow, and an optional API workflow",
+   "zh": "Codex 技能：生成带视差、轮廓光与可选 API 流程的分层全息卡片"
+  },
+  "1360488682": {
+   "by": "llm",
+   "src": "A CLI that reads Claude Code, Codex, and Gemini CLI session logs and works out how much they cost, by model, project, and day.",
+   "zh": "读取 Claude Code、Codex 与 Gemini CLI 会话日志，按模型/项目/天算出花费"
+  },
+  "1360490490": {
+   "by": "llm",
+   "src": "A cargo build wrapper with a live, animated status view",
+   "zh": "带实时动画状态视图的 cargo build 包装器"
+  },
+  "1360490532": {
+   "by": "llm",
+   "src": "the exit desk for robinhood chain · a sniper, a guard, a follow · reads by default, signs when you arm it",
+   "zh": "Robinhood Chain 的退出台：一个狙击手、一个守卫、一个跟单——默认只读，授权后才签名"
+  },
+  "1360492425": {
+   "by": "llm",
+   "src": "Cross-platform Cloudflare Turnstile solver (macOS, Windows, Linux)",
+   "zh": "跨平台 Cloudflare Turnstile 求解器（macOS / Windows / Linux）"
+  },
+  "1360492875": {
+   "by": "llm",
+   "src": "AGI harness: 责任闭环、信誉、学习的外部化（DSH 插件组合）",
+   "zh": "AGI 运行框架：把责任闭环、信誉与学习外部化的 DSH 插件组合"
+  },
+  "1360496175": {
+   "by": "llm",
+   "src": "Liquid Glass UI for the Spotify iOS app, no jailbreak",
+   "zh": "为 Spotify iOS 应用做的液态玻璃界面，无需越狱"
+  },
+  "1360512546": {
+   "by": "llm",
+   "src": "A clinical decision-evidence benchmark: pull the one fact an answer rests on, and see whether the assistant's action moves with the evidence. Built on HealthBench.",
+   "zh": "临床决策证据基准：找出答案所依赖的那一个事实，检验助手行为是否随证据变动"
+  },
+  "1360516909": {
+   "by": "llm",
+   "src": "A silly claude-code plugin that enables you to chat while waiting claude to finish with strangers who is also waiting for their claude. Never alone while waiting ever again!",
+   "zh": "一个搞怪的 Claude Code 插件：等 Claude 干活时，和其他同样在等待的陌生人聊天"
+  },
+  "1360539092": {
+   "by": "llm",
+   "src": "Rhine Lab archive interface built with TypeScript and Three.js",
+   "zh": "用 TypeScript 与 Three.js 构建的莱茵实验室档案界面"
+  },
+  "1360574202": {
+   "by": "llm",
+   "src": "TypeScript execution journal for retryable tools: SQLite durability, lease fencing, explicit uncertainty, and reproducible crash tests.",
+   "zh": "可重试工具的 TypeScript 执行日志：SQLite 持久化、租约隔离与可复现的崩溃测试"
+  },
+  "1360579580": {
+   "by": "llm",
+   "src": "A skill to help cybersecurity folks update and tweak their resume",
+   "zh": "帮网络安全从业者更新和调整简历的技能"
+  },
+  "1360602296": {
+   "by": "llm",
+   "src": "The official codebase of Unified Motion Retargeting",
+   "zh": "「统一动作重定向」官方代码库"
+  },
+  "1360613379": {
+   "by": "llm",
+   "src": "A multi-provider, multi-agent orchestrator that organizes agents into a visual authority hierarchy.",
+   "zh": "多供应商多智能体编排器，把智能体组织成可视化的权限层级"
+  },
+  "1360618221": {
+   "by": "llm",
+   "src": "Your repo gets better while you sleep. Nightly agent jobs and PR review for any repo.",
+   "zh": "你睡觉时仓库自己变好：夜间智能体任务与任意仓库的 PR 评审"
+  },
+  "1360643571": {
+   "by": "llm",
+   "src": "Official Code Release for Fire3D",
+   "zh": "Fire3D 官方代码发布"
+  },
+  "1360644638": {
+   "by": "llm",
+   "src": "Windows Defender 0day Vulnerability",
+   "zh": "Windows Defender 零日漏洞"
+  },
+  "1360652076": {
+   "by": "llm",
+   "src": "Experimental native PC recompilation runtime for Ocarina of Time 3D. Windows x64, NRI/Vulkan, single-screen UI and ROM-only setup.",
+   "zh": "面向《时之笛 3D》的实验性原生 PC 重编译运行时，仅需 ROM 即可运行"
+  },
+  "1360725349": {
+   "by": "llm",
+   "src": "Eleven free Claude skills that run a LinkedIn account: posts off 21 hook formulas, comments, replies, profile score, weekly plan, and a humanizer that strips the AI fingerprint and scores the draft be",
+   "zh": "十一个免费的 Claude 技能驱动 LinkedIn 账号：发帖、评论、回复、主页评分与去 AI 味"
+  },
+  "1360727073": {
+   "by": "llm",
+   "src": "A contextual Quickshell desktop shell for Hyprland — system controls, launcher, notifications, media, theming, wallpapers, and more.",
+   "zh": "面向 Hyprland 的上下文感知 Quickshell 桌面外壳：系统控制、启动器、通知、媒体与壁纸"
+  },
+  "1360729146": {
+   "by": "llm",
+   "src": "A native Material 3 music player for Linux. YouTube Music, local audio, synchronized lyrics, and Noctalia theming.",
+   "zh": "面向 Linux 的原生 Material 3 音乐播放器：YouTube Music、本地音频与同步歌词"
+  },
+  "1360767622": {
+   "by": "llm",
+   "src": "Turn a whiteboard-style image into a hand-drawn reveal video. The render engine behind Kinoslide.",
+   "zh": "把白板风格图片变成手绘揭示视频（Kinoslide 的渲染引擎）"
+  },
+  "1360778208": {
+   "by": "llm",
+   "src": "A collection of remote MCP servers.",
+   "zh": "远程 MCP 服务器合集"
+  },
+  "1360813538": {
+   "by": "llm",
+   "src": "Windows 笔记导出与迁移工具：七平台适配、四格式导出、离线阅读，明确验证范围与失败状态。",
+   "zh": "Windows 笔记导出与迁移工具：七平台适配、四格式导出与离线阅读"
+  },
+  "1360858142": {
+   "by": "llm",
+   "src": "ESPN draft and lineup tools for Codex and other MCP clients, with browser sign-in, approval modes, per-team limits, and server monitoring.",
+   "zh": "面向 Codex 等 MCP 客户端的 ESPN 选秀与阵容工具，含浏览器登录与审批模式"
+  },
+  "1360860817": {
+   "by": "llm",
+   "src": "A drop-in CLAUDE.md style section that changes how Claude writes prose.",
+   "zh": "可直接放入 CLAUDE.md 的写作风格段落，改变 Claude 的行文方式"
+  },
+  "1360867098": {
+   "by": "llm",
+   "src": "Schema-first structured extraction from LLMs.",
+   "zh": "面向大模型的 Schema 优先结构化抽取"
+  },
+  "1360896604": {
+   "by": "llm",
+   "src": "Cross-platform remote desktop for macOS and Windows with hardware acceleration, multi-monitor support, clipboard transfer for text, images, files and folders, and MCP integration for AI agents to conn",
+   "zh": "跨平台远程桌面（macOS / Windows）：硬件加速、多显示器、剪贴板互传与 MCP 集成"
+  },
+  "1360898986": {
+   "by": "llm",
+   "src": "A lightweight library for xPU kernel JIT compilation",
+   "zh": "用于 xPU 内核 JIT 编译的轻量库"
+  },
+  "1360916274": {
+   "by": "llm",
+   "src": "Oh My Zsh plugin for Herdr: slow commands in the sidebar, done notifications, shell helpers, and one key to reload Oh My Zsh in every idle pane",
+   "zh": "Herdr 的 Oh My Zsh 插件：侧边栏显示慢命令、完成通知与一键重载"
+  },
+  "1360942455": {
+   "by": "llm",
+   "src": "Express yourself in meetings (with memes, of course).",
+   "zh": "用表情包在会议中表达自己"
+  },
+  "1360946079": {
+   "by": "llm",
+   "src": "Bounded project-memory skills for Codex CLI and Claude Code.",
+   "zh": "面向 Codex CLI 与 Claude Code 的有界项目记忆技能包"
+  },
+  "1360946696": {
+   "by": "llm",
+   "src": "Automatically transforms mixed song recordings into playable five-piece school band arrangements through audio separation, music transcription, arrangement, and difficulty adjustment. Outputs include",
+   "zh": "把混合歌曲录音自动转成可演奏的五人校园乐队编曲：音轨分离、扒谱、编配与难度调整"
+  },
+  "1360961053": {
+   "by": "llm",
+   "src": "Build motion-first, high-touch creative websites on vanilla Three.js / Canvas 2D / WebGL / CSS. A Claude Agent Skill with real physics and automated verification.",
+   "zh": "用原生 Three.js / Canvas 2D / WebGL / CSS 构建动效优先的高触感创意网站，含真实物理与自动验证"
+  },
+  "1361018099": {
+   "by": "llm",
+   "src": "Original algorithmic contest problems and lecture notes — NOIP to NOI & ACM-ICPC level",
+   "zh": "原创算法竞赛题目与讲义，覆盖 NOIP 到 NOI 与 ACM-ICPC 水平"
+  },
+  "1361023994": {
+   "by": "llm",
+   "src": "A creator-first AI skill for topic generation, script review, filming guidance, and view forecasting.",
+   "zh": "面向创作者的内容技能：选题生成、脚本评审、拍摄指引与播放量预测"
+  },
+  "1361024786": {
+   "by": "llm",
+   "src": "An agent skill for Blender character creation and repair, with nine-view references, face and hair workflows, and visual validation.",
+   "zh": "用于 Blender 角色创建与修复的 Agent 技能，含九视图参考与可视化验证"
+  },
+  "1361054366": {
+   "by": "llm",
+   "src": "Repo-wide maintainability sweep: copy, clarity, wrap, width, split, rename, tidy",
+   "zh": "全仓库可维护性清扫：重复代码、清晰度、换行、行宽、拆分、重命名、整理"
+  },
+  "1361079582": {
+   "by": "llm",
+   "src": "Turn PDFs, books and papers into interactive learning webpages｜将复杂材料转化为可追溯、可测验、可做笔记的学习网页",
+   "zh": "把 PDF、书籍与论文转化为可追溯、可测验、可做笔记的学习网页"
+  },
+  "1361133727": {
+   "by": "llm",
+   "src": "An eval app which runs locally and uses local models or any OpenAI-compatible API",
+   "zh": "本地运行的评测应用，可用本地模型或任意 OpenAI 兼容 API"
+  },
+  "1361138844": {
+   "by": "llm",
+   "src": "Give your LLM agents the power of JetBrains Rider IDE! Supports C# 15 Syntax!",
+   "zh": "为你的大模型智能体补上 JetBrains Rider IDE 的能力，支持 C# 15 语法"
+  },
+  "1361140226": {
+   "by": "llm",
+   "src": "Trưa Nay Ăn Gì — run locally with pnpm. Automatic cookie storage; no login, backend or cloud services required.",
+   "zh": "「今天午饭吃什么」——用 pnpm 本地运行，自动保存 cookie，无需登录、后端或云服务"
+  },
+  "1361149221": {
+   "by": "llm",
+   "src": "📱 Now in Android KMP is a full Kotlin Multiplatform port of Google's Now in Android sample.",
+   "zh": "Google Now in Android 示例的完整 Kotlin Multiplatform 移植"
+  },
+  "1361151412": {
+   "by": "llm",
+   "src": "Publishable Open-Source Android Material 3 Expressive Component & Motion Library by Er. Mohd Amaan",
+   "zh": "可发布的开源 Android Material 3 Expressive 组件与动效库"
+  },
+  "1361195954": {
+   "by": "llm",
+   "src": "Native macOS workspace with one local knowledge graph across Claude Code, Codex, OpenCode, and Cursor.",
+   "zh": "原生 macOS 工作台，在多个编程智能体之间共享一张本地知识图谱"
+  },
+  "1361223302": {
+   "by": "llm",
+   "src": "Agent skill for taking a hardware idea to a manufacturable PCB: concept, schematic, sourcing, layout, routing, verification, and a purchase staged to the pre-payment page. Drives EasyEDA Pro over MCP",
+   "zh": "把硬件想法推进到可量产 PCB 的 Agent 技能：概念、原理图、选料、布线、验证与下单"
+  },
+  "1361227283": {
+   "by": "llm",
+   "src": "PhotosBackup iOS app",
+   "zh": "PhotosBackup 相册备份 iOS 应用"
+  },
+  "1361228049": {
+   "by": "llm",
+   "src": "AI prompt that gets your money back — subscriptions, digital purchases, bookings. Polite letter first, legal escalation second. 30+ jurisdictions.",
+   "zh": "帮你把钱要回来的 AI 提示词：订阅、数字购买与预订，先礼后兵，覆盖 30+ 司法辖区"
+  },
+  "1361242474": {
+   "by": "llm",
+   "src": "Open Source Inertial Navigation Library",
+   "zh": "开源惯性导航库"
+  },
+  "1361249443": {
+   "by": "llm",
+   "src": "Highly customizable TUI music player designed to be fast and lightweight",
+   "zh": "高度可定制的终端音乐播放器，主打快速与轻量"
+  },
+  "1361260630": {
+   "by": "llm",
+   "src": "Lean certificates accompanying Navier-Stokes and Euler results",
+   "zh": "伴随纳维-斯托克斯与欧拉方程结果的 Lean 形式化证明"
+  },
+  "1361315456": {
+   "by": "llm",
+   "src": "雷鸟 iO / RayNeo iO 非官方 SDK 与 iOS 客户端：非商业学习研究，语音 AI、录音、自定义通知、Codex 与 Web 显示预览。BES2800 轻量眼镜，Android 待开发。",
+   "zh": "雷鸟 iO / RayNeo iO 非官方 SDK 与 iOS 客户端，仅供非商业学习研究"
+  },
+  "1361393778": {
+   "by": "llm",
+   "src": "Pi Coding Agent 中文学习蓝皮书：从安装与第一个可验收任务开始，逐步掌握 Session、Context、Skill、Extension、Subagent 与长期 Agent 工作流。",
+   "zh": "Pi Coding Agent 中文学习蓝皮书：从安装与第一个可验收任务到长期智能体工作流"
+  },
+  "1361418693": {
+   "by": "llm",
+   "src": "Mini decentralised auth. Gives an existing auth system a key nobody holds, with governance over who can decrypt.",
+   "zh": "极简去中心化认证：给现有认证系统加一把无人持有的密钥，并对解密权限做治理"
+  },
+  "1361444420": {
+   "by": "llm",
+   "src": "面向基本面因子研究的智能体-A hypothesis-driven AI agent for fundamental factor research, with evidence-gated validation and research memory.",
+   "zh": "面向基本面因子研究的智能体，采用证据门控验证与研究记忆"
+  },
+  "1361496912": {
+   "by": "llm",
+   "src": "A procedural SwiftUI sky with drifting clouds, seasonal light, stars, and meteors. Includes an interactive iOS and macOS demo.",
+   "zh": "程序化 SwiftUI 天空：飘动的云、季节光照、星空与流星，附交互式演示"
+  },
+  "1361497109": {
+   "by": "llm",
+   "src": "Public catalog of self-hosted applications with reviewed Docker Compose recipes",
+   "zh": "自托管应用公开目录，含经审核的 Docker Compose 配方"
+  },
+  "1361525882": {
+   "by": "llm",
+   "src": "Free open-source project designed for turning youtube-viedos into viral short videos. Highlight detection, subtitles, translation, voiceover, all in one for your content.",
+   "zh": "把 YouTube 长视频切成爆款短视频：高光检测、字幕、翻译、配音一站完成"
+  },
+  "1361553449": {
+   "by": "llm",
+   "src": "Apple 直营店取货库存监控，支持多门店、多型号、提示音、Bark 推送及自动打开购物袋。支持 macOS、Windows 和 Linux。",
+   "zh": "Apple 直营店取货库存监控：多门店、多型号、提示音与 Bark 推送，支持三大桌面系统"
+  },
+  "1361565387": {
+   "by": "llm",
+   "src": "text-humanizer is an open-source project designed to convert text generated by AI to its \"humanized\" version. Bypasses the most of AI detectors such as Turnitin or GPTZero",
+   "zh": "把 AI 生成的文本改写成「人味」版本，可绕过多数 AI 检测器"
+  },
+  "1361583010": {
+   "by": "llm",
+   "src": "A beautiful, modern, and neutral Linux icon theme that makes all icons feel at home together.",
+   "zh": "好看、现代、中性的 Linux 图标主题，让所有图标和谐共处"
+  },
+  "1361602876": {
+   "by": "llm",
+   "src": "Funded, time-boxed contribution sprints for the Stellar ecosystem. Maintainers post scoped issues with a point value, contributors apply with a plan, and accepted work splits the wave pool in USDC. Fr",
+   "zh": "Stellar 生态的限期资助冲刺：维护者发布带分值的任务，贡献者提交方案，被采纳的工作瓜分 USDC 奖池"
+  },
+  "1361617284": {
+   "by": "llm",
+   "src": "Offline desktop client for GLM-5.3-Flash — run private, local chat sessions without a server connection.",
+   "zh": "GLM-5.3-Flash 离线桌面客户端，无需联网即可本地私密对话"
+  },
+  "1361658245": {
+   "by": "llm",
+   "src": "Spotkit — a Claude Code skill that turns a feature description into minimal, abstract SVG product illustrations that all belong to one design system.",
+   "zh": "Claude Code 技能：把功能描述变成同一设计系统下的极简抽象 SVG 产品插画"
+  },
+  "1361686547": {
+   "by": "llm",
+   "src": "Replacing the Windows 11 logon screen with a live-rendered Spine scene: the concept and the adapter. No game assets, no Spine runtime -- it does not build.",
+   "zh": "用实时渲染的 Spine 场景替换 Windows 11 登录界面（仅概念与适配层，无法构建）"
+  },
+  "1361693766": {
+   "by": "llm",
+   "src": "Topic in, narrated explainer video out. A Claude Code / Codex skill that turns any topic into a black-canvas motion-graphics explainer video with TTS voiceover, subtitles and a chapter progress bar. C",
+   "zh": "输入一个主题、输出带解说的科普视频：黑底动效短片，含配音、字幕与章节进度条"
+  },
+  "1361701013": {
+   "by": "llm",
+   "src": "Work with Cloudflare Turnstile in Python: find the sitekey, get a valid cf-turnstile-response token in seconds. Dependency-free library + CLI, built for CI and automation.",
+   "zh": "用 Python 处理 Cloudflare Turnstile：找到 sitekey、秒取有效令牌，零依赖库 + 命令行"
+  },
+  "1361730077": {
+   "by": "llm",
+   "src": "An interactive tear-off boarding pass built with React, Motion, and DialKit.",
+   "zh": "用 React、Motion 与 DialKit 做的可撕式登机牌交互界面"
+  },
+  "1361798895": {
+   "by": "llm",
+   "src": "Jadense in Zotero — AI research assistant for Zotero",
+   "zh": "Zotero 里的 AI 科研助手"
+  },
+  "1361844771": {
+   "by": "llm",
+   "src": "Fun real-world computer vision demos!",
+   "zh": "有趣的真实场景计算机视觉演示"
+  },
+  "1361933078": {
+   "by": "llm",
+   "src": "Reads what a Robinhood Chain launch calls itself, and reports what those strings are shared with. No score. No verdict.",
+   "zh": "读取 Robinhood Chain 上项目的自我介绍，并报告这些字符串还与谁共享——不给评分、不下结论"
+  },
+  "1361983219": {
+   "by": "llm",
+   "src": "MacTap — knock your MacBook to run shortcuts",
+   "zh": "敲一下 MacBook 就能触发快捷指令"
+  },
+  "1362026714": {
+   "by": "llm",
+   "src": "Turn any SVG into a physically-lit 3D gold medallion for SwiftUI",
+   "zh": "把任意 SVG 变成受物理光照的 3D 金牌效果，用于 SwiftUI"
+  },
+  "1362047997": {
+   "by": "llm",
+   "src": "Control your Mac with hand gestures using its speakers and microphone. Experimental, camera-free scrolling, swiping, and zooming.",
+   "zh": "用 Mac 的扬声器与麦克风做手势控制：无需摄像头的滚动、滑动与缩放实验"
+  },
+  "1362204453": {
+   "by": "llm",
+   "src": "瞬息洞察 IP 纯净底色与风险评级。仅需一键探寻，物理坐标、机房源流与代理轨迹尽收眼底。",
+   "zh": "瞬息洞察 IP 纯净底色与风险评级：一键查看物理坐标、机房源流与代理轨迹"
+  },
+  "1362239367": {
+   "by": "llm",
+   "src": "CVE-2026-49881, using insecure context creation in Android 17's Telecom service to execute arbitrary code as UID 1000 system_server from an unprivileged app",
+   "zh": "CVE-2026-49881：利用 Android 17 Telecom 服务的不安全上下文创建，从普通应用以系统身份执行任意代码"
+  },
+  "1362275185": {
+   "by": "llm",
+   "src": "OmniStudio 是一个本地大模型一体化桌面工作台，集模型市集下载、llama.cpp/vLLM/SGLang 三引擎推理管理，以及对话、语音合成、ASR语音识别、图片生成、视频生成、OCR 等多种大模型应用于一体，全程本地优先。",
+   "zh": "本地大模型一体化桌面工作台：模型下载、三引擎推理管理，以及对话、语音、图像、视频与 OCR 应用"
+  },
+  "1362320570": {
+   "by": "llm",
+   "src": "An AI filmmaking skill by Leos, bringing together six directing roles for scene planning, performance, staging, cinematography, video prompts, and continuity review. 面向 AI 影视创作的六部门导演组，协同完成场次设计、表演调度、摄影",
+   "zh": "AI 影视创作技能：六部门导演组协同完成场次设计、表演调度、摄影与连续性审阅"
+  },
+  "1362323138": {
+   "by": "llm",
+   "src": "https://github.com/amagine-ai/Amagine3D",
+   "zh": "指向 Amagine3D 项目的地址"
+  },
+  "1362369513": {
+   "by": "llm",
+   "src": "DeepSeek Harness (dsh) 自托管多用户云平台：提供隔离工作空间、持久化存储、访问控制与资源配额。Self-hosted multi-user cloud platform for DeepSeek Harness, with isolated workspaces, persistent storage, access control, and resource quotas.",
+   "zh": "DeepSeek Harness 自托管多用户云平台：隔离工作区、持久存储、访问控制与资源配额"
+  },
+  "1362404493": {
+   "by": "llm",
+   "src": "海明Dev： App 商业化 Skill｜onboarding、付费墙、内购选项、竞品调研",
+   "zh": "海明 Dev：App 商业化技能，覆盖引导页、付费墙、内购选项与竞品调研"
+  },
+  "1362456326": {
+   "by": "llm",
+   "src": "Mask Gate — PII masking shield: detect and mask passports, INN, SNILS, cards and other sensitive data before sending to ChatGPT, Claude, Gemini. block / redact / flag, reversible vault, self-hosted, 1",
+   "zh": "隐私脱敏盾：在发给 ChatGPT、Claude、Gemini 之前检出并遮蔽护照、税号、银行卡等敏感数据"
+  },
+  "1362463247": {
+   "by": "llm",
+   "src": "Swap DLSS 5 DLLs + Feeder mode for non-DLSS games. One-click DLSS 5 Neural Rendering for any GPU (NVIDIA RTX 20-50, AMD RDNA 3-4, Intel Arc). Synthetic DLAA injection via ReShade.",
+   "zh": "替换 DLSS 5 动态库并为非 DLSS 游戏提供 Feeder 模式，任意显卡一键开启神经渲染"
+  },
+  "1362505132": {
+   "by": "llm",
+   "src": "番茄工作台 Pomodoro Workbench - 零第三方依赖桌面效率工具：番茄专注/待办清单/习惯打卡/数据统计（纯 Python 标准库）",
+   "zh": "番茄工作台：零第三方依赖的桌面效率工具，含专注、待办、习惯打卡与统计"
+  },
+  "1362509712": {
+   "by": "llm",
+   "src": "信息安全提醒：请勿上传企业禁止对外公开的文件；可在本地或企业内网部署大模型后使用。中文公文排版 Skill：按 GB/T 9704-2012 生成可编辑 DOCX。配套 CEB：https://github.com/mizzlelover/CEB",
+   "zh": "中文公文排版技能：按 GB/T 9704-2012 生成可编辑 DOCX，可本地或内网部署"
+  },
+  "1362581437": {
+   "by": "llm",
+   "src": "AI desktop overlay and dashboard that captures gameplay sessions and generates \"Previously On...\" summaries using LLMs.",
+   "zh": "捕获游戏过程并用大模型生成「前情提要」的 AI 桌面叠加层与看板"
+  },
+  "1362658862": {
+   "by": "llm",
+   "src": "数据面具 Data Maskit — 专为大模型打造的本地隐私脱敏网关（请求自动打码，回复流式还原；支持 Cursor / Claude Code / Codex / Pi 等任意可配 Base URL 工具）",
+   "zh": "数据面具：面向大模型的本地隐私脱敏网关，请求自动打码、回复流式还原"
+  },
+  "1362678258": {
+   "by": "llm",
+   "src": "Implement yolov26m using a complete FPGA, without any C language code. Requires 160K LUTs and 386 DSP cores (based on Xilinx XC7K325T).",
+   "zh": "完全用 FPGA 实现 yolov26m，不含任何 C 语言代码，约需 16 万 LUT 与 386 个 DSP"
+  },
+  "1362684183": {
+   "by": "llm",
+   "src": "Agent Skill for complex work: research before asking, ask before planning, plan before building, verify before delivering, independent review before calling it done. Plain text, no runtime.",
+   "zh": "复杂任务用的 Agent Skill：先调研再提问、先规划再动手、先验证再交付"
+  },
+  "1362686421": {
+   "by": "llm",
+   "src": "Browser teleoperation data for embodied AI — elizaOS-ready episodes, trajectory_db converter, onchain provenance. The fuel station for agent robot stacks.",
+   "zh": "面向具身智能的浏览器遥操作数据，提供 elizaOS 就绪剧集与轨迹转换工具"
+  },
+  "1362709863": {
+   "by": "llm",
+   "src": "Twenty LuaLaTeX and MetaPost (fiziko) examples of the old scientific-paper aesthetic: engraved plates, star charts, computed log tables, knots, telescopes",
+   "zh": "二十个 LuaLaTeX 与 MetaPost 示例，复现旧科学论文的美学：铜版插图、星图、对数表"
+  },
+  "1362714737": {
+   "by": "llm",
+   "src": "self-hosted transactional & marketing email layer on top of aws ses",
+   "zh": "基于 AWS SES 的自托管事务与营销邮件层"
+  },
+  "1362805626": {
+   "by": "llm",
+   "src": "DeepSelect: TopK kernels for DeepSeek Sparse Attention (DSA) and Samplers",
+   "zh": "DeepSelect：面向 DeepSeek 稀疏注意力与采样器的 TopK 内核"
+  },
+  "1362818542": {
+   "by": "llm",
+   "src": "Heat Kernel Textures: the Geodesic Gaussians That Do Not Splat",
+   "zh": "热核纹理：不做 splatting 的测地高斯"
+  },
+  "1362887116": {
+   "by": "llm",
+   "src": "A loop pedal for your webcam: hold a key to record, release to loop, press to go live. Outputs a virtual camera.",
+   "zh": "给摄像头加个循环踏板：按住键录制、松开循环、按下直播，输出为虚拟摄像头"
+  },
+  "1362921299": {
+   "by": "llm",
+   "src": "A dead-simple DLSS 5 utility. No messing around with various mods：DLSS eXtended Loader",
+   "zh": "极简 DLSS 5 工具：DLSS eXtended Loader，不必再折腾各种模组"
+  },
+  "1362930040": {
+   "by": "llm",
+   "src": "🔥 企业级 OpenAI / ChatGPT Plus、Pro (5x/20x)、Team 官方合规代采平台。支持企业银行公对公转账、开具 6% 增值税专用发票、签署加盖公章 SLA 兜底协议。商务微信：yqtp01",
+   "zh": "企业级 OpenAI / ChatGPT 官方合规代采平台，支持对公转账、专票与 SLA 协议"
+  },
+  "1363080361": {
+   "by": "llm",
+   "src": "Independent enhanced distribution of Blender Lab MCP: standalone bpy, runtime API documentation, and benchmark tooling",
+   "zh": "Blender Lab MCP 的独立增强发行版：独立 bpy、运行时 API 文档与基准工具"
+  },
+  "1363155073": {
+   "by": "llm",
+   "src": "A connectome-based fruit fly physically learning to operate a steering wheel in CARLA",
+   "zh": "基于连接组的果蝇在 CARLA 模拟器中物理学习操作方向盘"
+  },
+  "1363172629": {
+   "by": "llm",
+   "src": "Curated DNS blocklist for LG webOS TV telemetry, ads and phone-home traffic (safe + strict tiers)",
+   "zh": "针对 LG webOS 电视遥测与广告回传的精选 DNS 黑名单（安全 / 严格两档）"
+  },
+  "1363199101": {
+   "by": "llm",
+   "src": "Tiny, Performant & 100% Native client for Discord made in Rust",
+   "zh": "用 Rust 编写的轻量、高性能、100% 原生 Discord 客户端"
+  },
+  "1363264328": {
+   "by": "llm",
+   "src": "Build and deploy iOS SwiftUI apps from Omarchy Linux on Apple Silicon, no Xcode required",
+   "zh": "在 Apple Silicon 上的 Omarchy Linux 中构建并部署 iOS SwiftUI 应用，不需要 Xcode"
+  },
+  "1363388578": {
+   "by": "llm",
+   "src": "⚡ Zero-reload dynamic AI model switcher & local proxy for VSCode Copilot Chat via 9Router",
+   "zh": "面向 VSCode Copilot Chat 的零重载动态模型切换器与本地代理"
+  },
+  "1363399964": {
+   "by": "llm",
+   "src": "Agent skill for creative 3D visualization: turn an idea into a Three.js/Blender scene worth exploring. Claude Code + Codex plugin, 223 recipes, 440 knowledge records, 22 proved kits, 37 runnable studi",
+   "zh": "创意 3D 可视化 Agent 技能：把想法变成值得探索的 Three.js / Blender 场景"
+  },
+  "1363412300": {
+   "by": "llm",
+   "src": "Awesome paper list for reasoning generalization in LLMs.",
+   "zh": "大模型推理泛化方向的论文清单"
+  },
+  "1363417187": {
+   "by": "llm",
+   "src": "PRINTFILM：AI 科普视频与漫剧创作平台",
+   "zh": "PRINTFILM：AI 科普视频与漫剧创作平台"
+  },
+  "1363423951": {
+   "by": "llm",
+   "src": "A Python library for running thousands of MuJoCo simulations in parallel on CPU",
+   "zh": "在 CPU 上并行运行上千个 MuJoCo 仿真的 Python 库"
+  },
+  "1363431253": {
+   "by": "llm",
+   "src": "Turn reference videos into editable motion graphics with Codex + ChatGPT. Compare, customize, and export MP4s or HyperFrames projects. Local Windows app + online studio.",
+   "zh": "用 Codex + ChatGPT 把参考视频变成可编辑的动态图形，可导出 MP4 或 HyperFrames 工程"
+  },
+  "1363438862": {
+   "by": "llm",
+   "src": "A full retained fly-connectome simulation with experimental memory and guarded Coinbase AgentKit trading actions.",
+   "zh": "完整的保留式果蝇连接组模拟，含实验性记忆与受保护的 Coinbase 交易动作"
+  },
+  "1363443069": {
+   "by": "llm",
+   "src": "Untuk cek model apakah maskingan atau bukan",
+   "zh": "用于检测模型是否被套壳（masking）的工具"
+  },
+  "1363509420": {
+   "by": "llm",
+   "src": "Official implementation of WorldinWorld",
+   "zh": "WorldinWorld 官方实现"
+  },
+  "1363523631": {
+   "by": "llm",
+   "src": "MIYANG diagnosis-guided restoration for digital ripple artifacts in iteratively edited AI images",
+   "zh": "针对反复编辑过的 AI 图像中数字波纹伪影，做诊断引导式修复"
+  },
+  "1363687375": {
+   "by": "llm",
+   "src": "汇集国内独立工作室合同样本，参考 AIGA 国际设计服务协议，并对照中国现行法律本土化梳理的设计服务标准协议书。",
+   "zh": "汇集国内独立工作室合同样本、参考 AIGA 协议并对照中国法律本土化的设计服务标准协议书"
+  },
+  "1363702538": {
+   "by": "llm",
+   "src": "DeepSeek-V4.1-Flash (552B MoE, MXFP4 experts, 1M ctx) on four NVIDIA DGX Sparks with vLLM TP4: Engram-on-disk patch, sm121 kernel build, launchers, measured numbers",
+   "zh": "在四台 NVIDIA DGX Spark 上用 vLLM TP4 运行 DeepSeek-V4.1-Flash（552B MoE，1M 上下文）"
+  },
+  "1363703224": {
+   "by": "llm",
+   "src": "Interactive iPhone Duo fold animation with projected screen UI, progressive blur, and custom image uploads. Built with Three.js.",
+   "zh": "可交互的 iPhone Duo 折叠动画，含投射屏幕 UI 与渐进模糊"
+  },
+  "1363707962": {
+   "by": "llm",
+   "src": "브라우저에서 직접 편집·저장하는 단독 HTML 문서. Claude Code·Codex용 Agent Skill과 HTML 변환 도구.",
+   "zh": "可在浏览器中直接编辑与保存的单文件 HTML 文档，附 Agent Skill 与转换工具"
+  },
+  "1363745503": {
+   "by": "llm",
+   "src": "让 AI 用你的数据生成科研图表：108 个配方，鲜艳与稳重两种风格，多套配色，交付图片与源码。仅限个人非商业使用。",
+   "zh": "让 AI 用你的数据生成科研图表：108 个配方、两种风格与多套配色，交付图片与源码"
+  },
+  "1363789285": {
+   "by": "llm",
+   "src": "A simple web tool that turns your regular iPhone into iPhone Duo.",
+   "zh": "把普通 iPhone 变成 iPhone Duo 的简单网页工具"
+  },
+  "1363827742": {
+   "by": "llm",
+   "src": "Local-first AI agent trace workbench. Inspect Claude Code, Codex and OTLP logs, compare runs, and export privacy-conscious reports. No backend or API keys.",
+   "zh": "本地优先的 AI 智能体调用链工作台，可检查 Claude Code / Codex / OTLP 日志并对比"
+  },
+  "1363844653": {
+   "by": "llm",
+   "src": "IDM激活与状态维护工具",
+   "zh": "IDM 激活与状态维护工具"
+  },
+  "1363914703": {
+   "by": "llm",
+   "src": "Projects generated with GPT-6 Astra: web apps, games, creative tools, and developer utilities.",
+   "zh": "用 GPT-6 Astra 生成的项目合集：网页应用、游戏、创意工具与开发实用程序"
+  },
+  "1363933723": {
+   "by": "llm",
+   "src": "Survey on Multimodal Embodied Agents: From Computer-Use to Robot-Use",
+   "zh": "多模态具身智能体综述：从计算机使用到机器人使用"
+  },
+  "1363950908": {
+   "by": "llm",
+   "src": "A Burp Suite extension that exposes the full Montoya API as a local REST API, with Swagger UI",
+   "zh": "把 Burp Suite 完整的 Montoya API 暴露为本地 REST 接口的扩展，附 Swagger UI"
+  },
+  "1363950922": {
+   "by": "llm",
+   "src": "the development environment for pros",
+   "zh": "面向专业开发者的开发环境"
+  },
+  "1363976953": {
+   "by": "llm",
+   "src": "A clone of Iphone Duo's fold progressive blur animation on macbook using lid tilt sensor. Fully native written in swift! Demo:",
+   "zh": "在 MacBook 上用开合传感器复刻 iPhone Duo 的折叠渐进模糊动画，纯 Swift 原生实现"
+  },
+  "1364012461": {
+   "by": "llm",
+   "src": "GPT Image 2.5 prompts, verbatim and credited: 150 community prompts across 9 use cases, each with the author who wrote it and their post. Free to run.",
+   "zh": "GPT Image 2.5 提示词原文与署名：9 类场景共 150 条社区提示词，可免费运行"
+  },
+  "1364100151": {
+   "by": "llm",
+   "src": "A native PC port of Super Mario Strikers, ported from decompiled code.",
+   "zh": "从反编译代码移植的《超级马力欧足球》原生 PC 版"
+  },
+  "1364122367": {
+   "by": "llm",
+   "src": "Interactive TUI viewer for Nix dependency graphs",
+   "zh": "交互式终端 Nix 依赖图查看器"
+  },
+  "1364266923": {
+   "by": "llm",
+   "src": "An iPhone battery, charging and thermal instrument built on private iOS APIs — real charger watts, what actually reaches the cell, all 30 temperature sensors, and the USB-PD handshake.",
+   "zh": "基于 iOS 私有 API 的 iPhone 电池、充电与温度仪表：真实充电功率、30 个温度传感器与 USB-PD 握手"
+  },
+  "1364330119": {
+   "by": "llm",
+   "src": "project guide for building a tennis CV tracker",
+   "zh": "构建网球计算机视觉追踪器的项目指南"
+  },
+  "1364330196": {
+   "by": "llm",
+   "src": "Your desktop bends as you close your MacBook. Free and open source.",
+   "zh": "合上 MacBook 时桌面跟着弯折，免费开源"
+  },
+  "1364391800": {
+   "by": "llm",
+   "src": "Cross-platform syscall-powered implant & C2 — direct syscalls (Win), raw syscalls (Linux), HTTPS/DNS/ICMP channels. No winapi layer.",
+   "zh": "跨平台系统调用植入与 C2：Windows 直接系统调用、Linux 原始系统调用，走 HTTPS/DNS/ICMP 通道"
+  },
+  "1364392442": {
+   "by": "llm",
+   "src": "Camera control UI 3d Minimax",
+   "zh": "三维相机控制界面（Minimax H3）"
+  },
+  "1364474631": {
+   "by": "llm",
+   "src": "Your MacBook has the folding animation at home. A lid-angle-driven progressive blur for macOS.",
+   "zh": "MacBook 也能有折叠动画：由屏幕开合角度驱动的渐进模糊"
+  },
+  "1364557221": {
+   "by": "llm",
+   "src": "Your MacBook desktop follows your lid.",
+   "zh": "让 MacBook 桌面跟随屏幕开合"
+  },
+  "1364585356": {
+   "by": "llm",
+   "src": "An emulated iPhone 11 running iOS 14, as an app on a real iPhone. Unofficial, built on Inferno.",
+   "zh": "在真 iPhone 上以 App 形式运行的模拟 iPhone 11（iOS 14），基于 Inferno"
+  },
+  "1364606406": {
+   "by": "llm",
+   "src": "Trend Rebalance Map [Herman]",
+   "zh": "趋势再平衡图（Herman）"
+  },
+  "1364648857": {
+   "by": "llm",
+   "src": "A real fruit fly connectome, 165,122 neurons, launching tokens on Robinhood Chain",
+   "zh": "真实果蝇连接组（165,122 个神经元）在 Robinhood Chain 上发行代币"
+  },
+  "1364681794": {
+   "by": "llm",
+   "src": "A native Swift + Metal Mac app that makes your desktop follow your MacBook lid.",
+   "zh": "原生 Swift + Metal 的 Mac 应用，让桌面跟随 MacBook 屏幕开合"
+  },
+  "1364686893": {
+   "by": "llm",
+   "src": "Project Titania is a complete large language model system, from transformer to transistor, simple enough for one person to understand.",
+   "zh": "Titania 项目：从 Transformer 到晶体管的完整大模型系统，简单到一个人能读懂"
+  },
+  "1364746777": {
+   "by": "llm",
+   "src": "DeepSeek-V4.1-Flash on a single DGX Spark (GB10): resident hot experts + NVMe streaming, DSpark, OpenAI API. Work in progress.",
+   "zh": "在单台 DGX Spark 上运行 DeepSeek-V4.1-Flash：常驻热专家 + NVMe 流式加载"
+  },
+  "1364748789": {
+   "by": "llm",
+   "src": "Use your CodeBuddy subscription as local OpenAI APIs.",
+   "zh": "把你的 CodeBuddy 订阅当作本地 OpenAI API 使用"
+  },
+  "1364767317": {
+   "by": "llm",
+   "src": "Wish you could bring the iPhone Duo effect to your MacBook?",
+   "zh": "想把 iPhone Duo 的效果带到 MacBook 上吗"
+  },
+  "1364906072": {
+   "by": "llm",
+   "src": "macOS menu bar app that turns MacBook lid movement into a screen animation, driven by the lid angle sensor at display rate.",
+   "zh": "macOS 菜单栏应用，用屏幕开合角度传感器以显示刷新率驱动屏幕动画"
+  },
+  "1364928174": {
+   "by": "llm",
+   "src": "The ultimate Jellyfin Web look refresh, with a hero section, updated elements, and whole new style.",
+   "zh": "Jellyfin 网页端的终极外观翻新：首屏大图、更新组件与全新风格"
+  },
+  "1364985464": {
+   "by": "llm",
+   "src": "Configure and run existing coding-agent CLIs from one desktop app.",
+   "zh": "在一个桌面应用里配置并运行各类编程智能体命令行工具"
+  },
+  "1365044767": {
+   "by": "llm",
+   "src": "An experimental Android launcher for foldables, with a right-side dock, native widgets, and overlapping unfolded Home pages.",
+   "zh": "面向折叠屏的实验性安卓启动器，含右侧停靠栏与重叠展开主页"
+  },
+  "1365121905": {
+   "by": "llm",
+   "src": "INVETITI",
+   "zh": "INVETITI（占位文本）"
+  },
+  "1365184661": {
+   "by": "llm",
+   "src": "RTX Frame Generation Manager by小南瓜 · Windows binary releases and documentation",
+   "zh": "RTX 帧生成管理器，含 Windows 二进制发行版与文档"
+  },
+  "1365200938": {
+   "by": "llm",
+   "src": "南鸢·人像角色设定师：把人物气质转成脸部结构、妆容与完整中文提示词",
+   "zh": "南鸢·人像角色设定师：把人物气质转成脸部结构、妆容与完整中文提示词"
+  },
+  "1365210775": {
+   "by": "llm",
+   "src": "一款面向安卓开发的多功能玩机工具箱",
+   "zh": "一款面向安卓开发的多功能玩机工具箱"
+  },
+  "1365227404": {
+   "by": "llm",
+   "src": "A clean and minimal Android status indicator for cellular, Wi-Fi and battery status.",
+   "zh": "简洁的 Android 蜂窝、Wi-Fi 与电量状态指示器"
+  },
+  "1365295178": {
+   "by": "llm",
+   "src": "편집 가능한 HTML 도식을 만드는 Claude Code 스킬. 문서 자체가 에디터.",
+   "zh": "制作可编辑 HTML 图表的 Claude Code 技能：文档本身就是编辑器"
+  },
+  "1365299085": {
+   "by": "llm",
+   "src": "Personal Summer 2027 AIE, SDE and MLE internship workspace with reviewed application assistance",
+   "zh": "2027 暑期 AIE、SDE 与 MLE 实习的求职工作区，提供经审阅的申请辅助"
+  },
+  "1365311929": {
+   "by": "llm",
+   "src": "A macOS utility that uses the MacBook lid angle as an interactive dual-screen control.",
+   "zh": "把 MacBook 屏幕开合角度当作交互控制器的 macOS 工具"
+  },
+  "1365350772": {
+   "by": "llm",
+   "src": "Learning notes and tooling skills for AI video - AI 视频相关的学习与工具 skill",
+   "zh": "AI 视频相关的学习笔记与工具技能"
+  },
+  "1365569181": {
+   "by": "llm",
+   "src": "DeepSeek-V4.1-Flash on 3-4x NVIDIA DGX Sparks",
+   "zh": "在 3-4 台 NVIDIA DGX Spark 上运行 DeepSeek-V4.1-Flash"
+  },
+  "1365632242": {
+   "by": "llm",
+   "src": "A small neural model for parsing date & time",
+   "zh": "用于解析日期时间的小型神经网络模型"
+  },
+  "1365693499": {
+   "by": "llm",
+   "src": "视频创意改编 Agent Skill：参考视频 → 剧本 → 分镜 → 分段生成提示词。By qisi.",
+   "zh": "视频创意改编 Agent 技能：参考视频 → 剧本 → 分镜 → 分段生成提示词"
+  },
+  "1365784082": {
+   "by": "llm",
+   "src": "把 DeepSeek Harness 装进一个独立窗口：双击即用、免终端、免浏览器，支持插件改造，载荷可裁到 210 MB（便携包 74.8 MB），内置运行环境探测与 DSH 就地更新。",
+   "zh": "把 DeepSeek Harness 装进独立窗口：双击即用、免终端，载荷可裁到 210 MB"
+  },
+  "1365813599": {
+   "by": "llm",
+   "src": "📔 📚 A curated list of Project Made with Kicad.",
+   "zh": "用 KiCad 制作的项目精选清单"
+  },
+  "1365815877": {
+   "by": "llm",
+   "src": "Typed prompt-and-judge SDK, CLI, and evidence viewer for agent evaluations",
+   "zh": "带类型的提示与评判 SDK、命令行与证据查看器，用于智能体评测"
+  },
+  "1365867810": {
+   "by": "llm",
+   "src": "CVE-2026-41089 Netlogon RCE PoC — security research, vulnerability validation & defensive testing.",
+   "zh": "CVE-2026-41089 Netlogon 远程代码执行验证，用于安全研究与防御性测试"
+  },
+  "1365914009": {
+   "by": "llm",
+   "src": "Step file of RCWS v5 and mechanical design handbook",
+   "zh": "RCWS v5 的 Step 文件与机械设计手册"
+  },
+  "1366032081": {
+   "by": "llm",
+   "src": "Meme雷达开源版：本地只读、多链 Meme 候选扫描与人工复核工具",
+   "zh": "Meme 雷达开源版：本地只读的多链 Meme 候选扫描与人工复核工具"
+  },
+  "1366100077": {
+   "by": "llm",
+   "src": "A full retained fly-connectome simulation with experimental memory and guarded Coinbase AgentKit trading actions.",
+   "zh": "完整的保留式果蝇连接组模拟，含实验性记忆与受保护的 Coinbase 交易动作"
+  },
+  "1366396276": {
+   "by": "llm",
+   "src": "Explore the original Transformer and DeepSeek V4.1 Flash in interactive 3D.",
+   "zh": "在可交互 3D 中探索原始 Transformer 与 DeepSeek V4.1 Flash"
+  },
+  "1366426802": {
+   "by": "llm",
+   "src": "STAMPEDE — read-only explorer of observed wallet rotations on Robinhood Chain. Official CA: 0xfe627506ca7c9ab80d8551c4e72bb4dca1b8ed64",
+   "zh": "Robinhood Chain 上钱包轮动行为的只读浏览器"
+  },
+  "1366546611": {
+   "by": "llm",
+   "src": "Free open-source extractor for AI coding assistant chat histories. Supports Claude Code, Cursor, Windsurf, Aider, Cline/Roo Code, and more.",
+   "zh": "免费开源的 AI 编程助手聊天记录提取器，支持 Claude Code、Cursor、Windsurf、Aider 等"
+  },
+  "1366640598": {
+   "by": "llm",
+   "src": "CVE-2026-42978 Windows Push Notifications (WpnService) Use-After-Free & Race Condition PoC research, diagnostic scanner, and security audit module for AI Security Tool.",
+   "zh": "CVE-2026-42978 Windows 推送通知服务释放后使用与竞态漏洞的验证研究"
+  },
+  "1366656805": {
+   "by": "llm",
+   "src": "Warzone 2.0 Overlay Assistant & Utility 2026 | Free | No key required",
+   "zh": "战区 2.0 叠加助手与工具（2026，免费免密钥）"
+  },
+  "1366657413": {
+   "by": "llm",
+   "src": "Advanced Roblox script utility and macro assistant for 2026 | Free | No key required",
+   "zh": "面向 2026 的高级 Roblox 脚本工具与宏助手（免费免密钥）"
+  },
+  "1366658782": {
+   "by": "llm",
+   "src": "Rainbow Six Siege premium helper utility and overlay 2026 | Free | No key required",
+   "zh": "彩虹六号围攻高级辅助与叠加工具（2026，免费免密钥）"
+  },
+  "1366659224": {
+   "by": "llm",
+   "src": "DayZ Radar & ESP Overlay Utility 2026 | Free | No key required. Enhance your survival gameplay with real-time tracking and positioning.",
+   "zh": "DayZ 雷达与透视叠加工具（2026，免费免密钥），提供实时追踪定位"
+  },
+  "1366668024": {
+   "by": "llm",
+   "src": "Run original DeepSeek V4.1 Flash FP4/FP8 weights on a 16 GB M1 Mac mini with bounded SSD streaming in MLX. Recipe, benchmarks, and demo.",
+   "zh": "在 16 GB M1 Mac mini 上用 MLX 运行原始 DeepSeek V4.1 Flash 权重，含方案、基准与演示"
+  },
+  "1366670912": {
+   "by": "llm",
+   "src": "Warzone 2.0 utility overlay and performance tracker assistant 2026 | Free | No key required",
+   "zh": "战区 2.0 工具叠加与性能追踪助手（2026，免费免密钥）"
+  },
+  "1366675763": {
+   "by": "llm",
+   "src": "Warzone 2.0 overlay assistant and tactical helper utility 2026 | Free | No key required",
+   "zh": "战区 2.0 叠加助手与战术工具（2026，免费免密钥）"
+  },
+  "1366677024": {
+   "by": "llm",
+   "src": "Valorant game utility and external visual overlay 2026 | Free | No key required",
+   "zh": "Valorant 游戏工具与外部视觉叠加层（2026，免费免密钥）"
+  },
+  "1366680298": {
+   "by": "llm",
+   "src": "Roblox scripting assistant and utility engine 2026 | Free | No key required",
+   "zh": "Roblox 脚本助手与工具引擎（2026，免费免密钥）"
+  },
+  "1366684517": {
+   "by": "llm",
+   "src": "Rainbow Six Siege tactical overlay and assistant utility 2026 | Free | No key required",
+   "zh": "彩虹六号围攻战术叠加与助手工具（2026，免费免密钥）"
+  },
+  "1366688135": {
+   "by": "llm",
+   "src": "The Finals gameplay assistant and overlay utility 2026 | Free | No key required",
+   "zh": "The Finals 玩法助手与叠加工具（2026，免费免密钥）"
+  },
+  "1366689082": {
+   "by": "llm",
+   "src": "Overwatch 2 performance enhancer and visual assistant | 2026 | Free | No key required",
+   "zh": "守望先锋 2 性能增强与视觉辅助工具（2026，免费免密钥）"
+  },
+  "1366689605": {
+   "by": "llm",
+   "src": "Hunt: Showdown game helper and overlay assistant 2026 | Free | No key required",
+   "zh": "猎杀对决游戏助手与叠加工具（2026，免费免密钥）"
+  },
+  "1366690119": {
+   "by": "llm",
+   "src": "Battlefield 2042 utility overlay and game assistant 2026 | Free | No key required",
+   "zh": "战地 2042 叠加与游戏助手工具（2026，免费免密钥）"
+  },
+  "1366690666": {
+   "by": "llm",
+   "src": "Dead by Daylight Match Assistant 2026 | Free | No key required",
+   "zh": "黎明杀机对局助手（2026，免费免密钥）"
+  },
+  "1366691405": {
+   "by": "llm",
+   "src": "Roblox Rivals gameplay utility and enhancer assistant 2026 | Free | No key required",
+   "zh": "Roblox Rivals 玩法辅助与增强工具（2026，免费免密钥）"
+  },
+  "1366695516": {
+   "by": "llm",
+   "src": "Premium CS2 movement utility and HUD overlay | 2026 | Free | No key required",
+   "zh": "CS2 身法辅助与 HUD 叠加层（2026，免费免密钥）"
+  },
+  "1366699453": {
+   "by": "llm",
+   "src": "A comprehensive single-player utility and trainer assistant for Red Dead Redemption 2 (2026). Customize your offline gameplay experience easily.",
+   "zh": "荒野大镖客 2 单机综合辅助与修改器（2026），自由定制离线玩法"
+  },
+  "1366699898": {
+   "by": "llm",
+   "src": "XDefiant utility and overlay assistant 2026 | Free | No key required",
+   "zh": "XDefiant 辅助与叠加工具（2026，免费免密钥）"
+  },
+  "1366701187": {
+   "by": "llm",
+   "src": "Advanced tactical assistant and survival overlay for The Day Before. Features customizable ESP, interactive radar, and performance optimization. Free 2026.",
+   "zh": "《The Day Before》高级战术助手与生存叠加：可定制透视、交互雷达与性能优化（2026 免费）"
+  },
+  "1366701622": {
+   "by": "llm",
+   "src": "Roblox Anime Adventures automation assistant and gameplay enhancer. Optimize your tower placement, macro routes, and farming efficiency. Free 2026.",
+   "zh": "Roblox Anime Adventures 自动化助手与玩法增强，优化塔位、宏路线与刷本效率（2026 免费）"
+  },
+  "1366711195": {
+   "by": "llm",
+   "src": "Roblox Murder Mystery 2 helper utility and overlay assistant | 2026 | Free | No key required",
+   "zh": "Roblox Murder Mystery 2 辅助工具与叠加助手（2026，免费免密钥）"
+  },
+  "1366711695": {
+   "by": "llm",
+   "src": "SCUM Survival Assistant & Overlay Utility 2026 | Free | No key required",
+   "zh": "SCUM 生存辅助与叠加工具（2026，免费免密钥）"
+  },
+  "1366714270": {
+   "by": "llm",
+   "src": "Roblox Da Hood gameplay assistant and overlay tool 2026 | Free | No key required",
+   "zh": "Roblox Da Hood 玩法助手与叠加工具（2026，免费免密钥）"
+  },
+  "1366714704": {
+   "by": "llm",
+   "src": "Surviv.io battle assistant and overlay utility 2026 | Free | No key required",
+   "zh": "Surviv.io 战斗助手与叠加工具（2026，免费免密钥）"
+  },
+  "1366715575": {
+   "by": "llm",
+   "src": "The Cycle Frontier game utility and overlay assistant 2026 | Free | No key required",
+   "zh": "The Cycle Frontier 游戏辅助与叠加工具（2026，免费免密钥）"
+  },
+  "1366718465": {
+   "by": "llm",
+   "src": "Advanced tactical overlay and assistant utility for Super People. 2026 | Free | No key required",
+   "zh": "《Super People》高级战术叠加与助手工具（2026，免费免密钥）"
+  },
+  "1366718976": {
+   "by": "llm",
+   "src": "Train and chat with a frozen language model coupled to the full retained MaleCNS fly connectome.",
+   "zh": "训练并与耦合了完整雄性果蝇连接组的冻结语言模型对话"
+  },
+  "1366719198": {
+   "by": "llm",
+   "src": "CRSED F.O.A.D. gameplay assistant and overlay utility 2026 | Free | No key required",
+   "zh": "CRSED F.O.A.D. 玩法助手与叠加工具（2026，免费免密钥）"
+  },
+  "1366719859": {
+   "by": "llm",
+   "src": "Off The Grid utility and overlay assistant 2026 | Free | No key required",
+   "zh": "Off The Grid 辅助与叠加工具（2026，免费免密钥）"
+  },
+  "1366720983": {
+   "by": "llm",
+   "src": "Undawn Survival Overlay and Tactical Assistant 2026 | Free | No key required",
+   "zh": "黎明觉醒生存叠加与战术助手（2026，免费免密钥）"
+  },
+  "1366721531": {
+   "by": "llm",
+   "src": "Survivalcraft overlay utility and game assistant for 2026 | Free | No key required",
+   "zh": "Survivalcraft 叠加工具与游戏助手（2026，免费免密钥）"
+  },
+  "1366722397": {
+   "by": "llm",
+   "src": "Fallout 76 Companion Utility & Overlay 2026 | Free | No key required",
+   "zh": "Fallout 76 伴侣工具与叠加层（2026，免费免密钥）"
+  },
+  "1366723133": {
+   "by": "llm",
+   "src": "Naraka Bladepoint visual helper and performance overlay assistant | 2026 | Free | No key required",
+   "zh": "《永劫无间》视觉助手与性能叠加（2026，免费免密钥）"
+  },
+  "1366724878": {
+   "by": "llm",
+   "src": "Roblox Phantom Forces utility and visual enhancer for 2026 | Free | No key required",
+   "zh": "Roblox Phantom Forces 辅助与视觉增强工具（2026，免费免密钥）"
+  },
+  "1366730908": {
+   "by": "llm",
+   "src": "Premium Contractors VR gameplay utility and overlay assistant 2026 | Free | No key required",
+   "zh": "Contractors VR 高级玩法辅助与叠加工具（2026，免费免密钥）"
+  },
+  "1366732135": {
+   "by": "llm",
+   "src": "Kingdom Come Deliverance 2 gameplay utility and trainer 2026 | Free | No key required",
+   "zh": "天国拯救 2 玩法辅助与修改器（2026，免费免密钥）"
+  },
+  "1366773072": {
+   "by": "llm",
+   "src": "Medusa Dlls 5 Manager is an application that provides the ability to enable DLSS 5 in various games.",
+   "zh": "帮助在各类游戏中启用 DLSS 5 的应用"
+  },
+  "1366774539": {
+   "by": "llm",
+   "src": "Google Photo tweak",
+   "zh": "Google Photo 插件"
+  },
+  "1366785599": {
+   "by": "llm",
+   "src": "Agent skill for writing native Turkish and removing translationese from AI and localized copy.",
+   "zh": "用于撰写地道土耳其语、去除 AI 与本地化文案翻译腔的 Agent 技能"
+  },
+  "1366791826": {
+   "by": "llm",
+   "src": "A cooperative multiplayer town life game built with Three.js and Cloudflare Durable Objects.",
+   "zh": "基于 Three.js 与 Cloudflare Durable Objects 的多人合作小镇生活游戏"
+  },
+  "1366826898": {
+   "by": "llm",
+   "src": "A native macOS menu bar app that turns your MacBook’s lid movement into a live desktop folding illusion, powered by ScreenCaptureKit and Metal.",
+   "zh": "原生 macOS 菜单栏应用，把 MacBook 开合变成实时桌面折叠幻觉"
+  },
+  "1366893424": {
+   "by": "llm",
+   "src": "Android App Launcher for iOS",
+   "zh": "让 iOS 运行 Android 应用启动器"
+  },
+  "1366969284": {
+   "by": "llm",
+   "src": "把腾讯WorkBuddy账号变成 OpenAI 兼容 API 的多账号网关，同时自动完成任务中心全部任务，附 Web 管理面板（账号池可视化 / 积分任务 / 配置热更新）。基于 Sliverkiss/workbuddy2api 的增强分支",
+   "zh": "把腾讯 WorkBuddy 账号变成 OpenAI 兼容 API 的多账号网关，附 Web 管理面板"
+  },
+  "1366971725": {
+   "by": "llm",
+   "src": "白泽 —— 中国古代神话中通晓万物的瑞兽，如今化身为 Vibe Coding 助手。 一个开源的 AI Coding Agent CLI，支持多后端（DeepSeek / OpenAI 兼容 / Ollama 本地），具备工具调用、技能加载、子代理委派、上下文压缩、安全沙箱等完整能力。在终端即可与 AI 结对编程。",
+   "zh": "白泽：开源 AI 编程智能体命令行工具，支持多后端、工具调用、技能加载与安全沙箱"
+  },
+  "1367024689": {
+   "by": "llm",
+   "src": "Abomination81 Copybot — self-hosted Polymarket copy-trading execution engine.",
+   "zh": "自托管的 Polymarket 跟单交易执行引擎"
+  },
+  "1367044972": {
+   "by": "llm",
+   "src": "Stop letting AI code blind. Map the architecture before every change with Birdview.",
+   "zh": "别再让 AI 盲写代码：每次改动前先用 Birdview 画出架构图"
+  },
+  "1367091450": {
+   "by": "llm",
+   "src": "A curated list of fruit fly connectome projects: MaleCNS, FlyWire, brain simulations, embodied models, games, and research tools.",
+   "zh": "果蝇连接组项目精选：MaleCNS、FlyWire、脑模拟、具身模型与游戏"
+  },
+  "1367109038": {
+   "by": "llm",
+   "src": "iPhone Duo-style system-wide fold illusion for regular Android phones — whole-screen reprojection driven by real device motion, powered by OpenGL ES + Shizuku, no foldable hardware, no root.",
+   "zh": "让普通安卓手机拥有 iPhone Duo 式折叠错觉：由真实设备运动驱动的整屏重投影，无需折叠屏与 root"
+  },
+  "1367145309": {
+   "by": "llm",
+   "src": "An embodied neural experiment connecting a simulated ant to a synthetic neural controller",
+   "zh": "把模拟蚂蚁接入合成神经控制器的具身神经实验"
+  },
+  "1367158545": {
+   "by": "llm",
+   "src": "A simple, yet effective persistent key-value store accessible via HTTP.",
+   "zh": "简单但好用的 HTTP 持久化键值存储"
+  },
+  "1367251447": {
+   "by": "llm",
+   "src": "The language app you eventually delete. A native iPhone companion for learning through conversation.",
+   "zh": "你最终会删掉的语言学习应用，原生 iPhone 对话式学习伴侣"
+  },
+  "1367258415": {
+   "by": "llm",
+   "src": "Feature trainer/cheat for WARDOGS — 41 modules across 5 categories. God mode, infinite ammo, cash tools, vehicle control, building utilities. Hotkeys F1–F12. Built with Dear ImGui · DirectX 11 · C++23",
+   "zh": "WARDOGS 功能修改器：5 大类 41 个模块，F1–F12 热键（Dear ImGui + DirectX 11 + C++23）"
+  },
+  "1367271141": {
+   "by": "llm",
+   "src": "GPT-6 Astra for embodied AI and robotics.",
+   "zh": "GPT-6 Astra 在具身智能与机器人方向的应用"
+  },
+  "1367294837": {
+   "by": "llm",
+   "src": "Status Trio — a native macOS menubar app that combines Wi-Fi, battery, and volume into one compact, configurable menu bar icon, inspired by the iPhone Duo combined status bar.",
+   "zh": "macOS 菜单栏应用，把 Wi-Fi、电池与音量合并成一个紧凑可配置的图标"
+  },
+  "1367375031": {
+   "by": "llm",
+   "src": "Worlds Upon The Wind: a peaceful roguelite deckbuilder about resettling a shattered world.",
+   "zh": "《Worlds Upon The Wind》：关于重建破碎世界的和平风 Roguelite 卡牌构筑游戏"
+  },
+  "1367379272": {
+   "by": "llm",
+   "src": "让 HUAWEI MateBook E Go 2022 性能版（GK-W76）在 Ubuntu 上获得完整的、全面适配，从能用到能日用的体验。并深度适配Linux，增强在Linux主系统下原生运行Windows应用和Android应用的流转能力。",
+   "zh": "让 HUAWEI MateBook E Go 2022 性能版在 Ubuntu 上从「能用」变成「能日用」，并增强原生运行 Windows 与 Android 应用的能力"
+  },
+  "1367446577": {
+   "by": "llm",
+   "src": "CJ DeFi 做市与套利实战手册 · 顶级高手 CJ（@gch_enbsbxbs）502篇推文体系化精解与全量开源数据集",
+   "zh": "CJ DeFi 做市与套利实战手册：502 篇推文体系化精解与全量开源数据集"
+  },
+  "1367606050": {
+   "by": "llm",
+   "src": "Official Project Page for Recurrent Looped Transformer (RLT)",
+   "zh": "循环递归 Transformer（RLT）官方项目主页"
+  },
+  "1367608398": {
+   "by": "llm",
+   "src": "Solara Executor for Roblox — keyless, fast execution, script hub, UNC support | free | no key | 2026",
+   "zh": "Roblox Solara 执行器：免密钥、执行快、自带脚本库、支持 UNC（2026）"
+  },
+  "1367954971": {
+   "by": "llm",
+   "src": "A production-oriented multi-agent AI Agent system for software engineering. | 面向软件研发任务的多智能体 AI Agent 工程系统",
+   "zh": "面向软件研发任务的生产级多智能体 AI 工程系统"
+  },
+  "1368114409": {
+   "by": "llm",
+   "src": "QQ network protocol.",
+   "zh": "QQ 网络协议"
+  },
+  "1368146952": {
+   "by": "llm",
+   "src": "A KernelSU module that provides alternative adb server over local network",
+   "zh": "KernelSU 模块：通过局域网提供替代的 adb 服务"
+  },
+  "1368225432": {
+   "by": "llm",
+   "src": "DeepSeek v4.1 Flash EXL3 2.9 bpw for 2x DGX Sparks",
+   "zh": "用 EXL3 2.9 bpw 量化在 2 台 DGX Spark 上运行 DeepSeek v4.1 Flash"
+  },
+  "1368407470": {
+   "by": "llm",
+   "src": "Run CUDA-targeted Windows applications on AMD GPUs with ZLUDA + ROCm/HIP.",
+   "zh": "借助 ZLUDA 与 ROCm/HIP，在 AMD 显卡上运行专为 CUDA 编写的 Windows 应用"
+  },
+  "1368718943": {
+   "by": "llm",
+   "src": "Serum 2.1.5 Free is a powerful synth for music production, sound design, and creative audio projects. Explore Serum 2 presets, tutorials, features, installation guides, and useful resources for produc",
+   "zh": "Serum 2.1.5 免费版：音乐制作与声音设计的合成器，含预设、教程与安装指南"
+  },
+  "1369090118": {
+   "by": "llm",
+   "src": "Nexora v2.5 | Multi game utility with FPS Boost, performance optimization and customization for Fortnite, Roblox, Valorant, Rust and CS2",
+   "zh": "多游戏优化工具：帧率提升、性能优化与自定义，支持 Fortnite、Roblox、Valorant 等"
+  },
+  "1369254248": {
+   "by": "llm",
+   "src": "If you think AI sucks, star the repo.",
+   "zh": "觉得 AI 很烂就给这个仓库点星"
+  },
+  "14614344": {
+   "by": "llm",
+   "src": "A good looking terminal emulator which mimics the old cathode display...",
+   "zh": "一款好看的终端模拟器，模拟老式阴极射线管显示器的观感"
+  },
+  "155220641": {
+   "by": "llm",
+   "src": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+   "zh": "Hugging Face Transformers：文本、视觉、音频与多模态的顶尖模型定义框架，兼顾推理与训练"
+  },
+  "189829392": {
+   "by": "llm",
+   "src": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+   "zh": "Ever Gauzy：开源业务管理平台（ERP / CRM / HRM / ATS / 项目管理）"
+  },
+  "283211901": {
+   "by": "llm",
+   "src": "Browse media content with your own rules on Android TV",
+   "zh": "按你自己的规则在 Android TV 上浏览媒体内容"
+  },
+  "645238879": {
+   "by": "llm",
+   "src": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
+   "zh": "实用的抖音下载工具，支持单条与主页批量下载、进度显示、重试与去重"
+  },
+  "888092115": {
+   "by": "llm",
+   "src": "Python tool for converting files and office documents to Markdown.",
+   "zh": "把文件与办公文档转换为 Markdown 的 Python 工具"
+  },
+  "913030762": {
+   "by": "llm",
+   "src": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+   "zh": "能够执行复杂渗透测试任务的全自主 AI 智能体系统"
+  },
+  "920995232": {
+   "by": "llm",
+   "src": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+   "zh": "YuE2：具备符号规划、零样本翻唱与智能体式音乐编辑的前沿音乐生成"
+  },
+  "924706399": {
+   "by": "llm",
+   "src": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+   "zh": "专为数学建模设计的智能体与技能，自动完成建模并生成可直接提交的论文"
+  },
+  "976921297": {
+   "by": "llm",
+   "src": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok B",
+   "zh": "从 Anthropic、OpenAI、Google、xAI 等产品中提取的系统提示词集合"
+  }
+ },
+ "note": "GitHub 仓库简介的中文翻译缓存。键是 repo_id（仓库改名不会失效）。由 python -m star_pulse translate 生成，请提交进 git 以便 CI 复用。",
+ "version": 1
+}

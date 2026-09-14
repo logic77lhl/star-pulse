@@ -310,7 +310,8 @@ def project_rows(
         dict(r)
         for r in conn.execute(
             """
-            SELECT r.full_name, r.language, r.description, r.repo_created,
+            SELECT r.repo_id, r.full_name, r.language, r.description, r.repo_created,
+                   r.topics,
                    s.stars, s.forks,
                    s.stars - COALESCE(s0.stars, s.stars) AS delta,
                    CASE WHEN s0.repo_id IS NULL THEN 0 ELSE 1 END AS has_prev

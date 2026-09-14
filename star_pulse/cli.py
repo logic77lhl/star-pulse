@@ -4,6 +4,7 @@
     python -m star_pulse run-daily              每日采集（发现 + 快照）
     python -m star_pulse snapshot a/b c/d       给指定仓库拍快照（验证用）
     python -m star_pulse report --period last-week   生成周报
+    python -m star_pulse translate              给仓库简介生成中文译文（需配置 LLM）
     python -m star_pulse rebuild                从 JSON 快照重建 SQLite
     python -m star_pulse stats                  查看快照覆盖情况
 """
@@ -16,7 +17,7 @@ import logging
 import sys
 from pathlib import Path
 
-from . import analyze, db, github_api, llm, pipeline, render
+from . import analyze, db, github_api, i18n, llm, pipeline, render
 from . import site as site_builder
 from .config import load_settings
 from .net import BudgetExceeded, Http
@@ -206,6 +207,47 @@ def cmd_site(settings, args) -> int:
     return 0
 
 
+def cmd_translate(settings, args) -> int:
+    """给仓库简介生成中文译文，写入 data/i18n/zh.json。
+
+    只翻译缓存里还没有的条目，所以反复跑不会重复花钱，也能分批续跑。
+    产物**必须提交进 git** —— CI 每次都是全新环境，缓存不在仓库里，
+    每天重建看板时就等于白翻一次。
+    """
+    conn = prepare(settings)
+    rows = conn.execute(
+        """
+        SELECT repo_id, full_name, description, language, topics
+        FROM repo
+        WHERE description IS NOT NULL AND description <> ''
+        ORDER BY full_name
+        """
+    ).fetchall()
+    items = [dict(r) for r in rows]
+    if args.limit:
+        items = items[: args.limit]
+    for it in items:
+        it["category"] = analyze.classify(it)
+
+    before = len(i18n.load_cache(settings))
+    stats = i18n.translate_missing(settings, items, batch_size=args.batch)
+    after = len(i18n.load_cache(settings))
+
+    print(json.dumps(stats, ensure_ascii=False, indent=2))
+    print(f"\n缓存文件：{i18n.cache_path(settings)}")
+    print(f"缓存条目：{before} → {after}（库内共 {db.repo_count(conn)} 个仓库）")
+
+    if "error" in stats:
+        print(f"\n{stats['error']}", file=sys.stderr)
+        return 2
+    if stats["failed_batches"]:
+        print("\n⚠️ 有批次失败。已成功的部分都写进缓存了，再跑一次只会补缺失的部分。",
+              file=sys.stderr)
+    if stats["translated"]:
+        print("\n提交 data/i18n/zh.json：CI 靠它复用译文，缓存不进仓库就每次都白翻。")
+    return 0
+
+
 def cmd_rebuild(settings, args) -> int:
     if settings.db_path.exists():
         settings.db_path.unlink()
@@ -252,6 +294,10 @@ def main(argv: list[str] | None = None) -> int:
     )
     p_rep.add_argument("--no-llm", action="store_true", help="强制跳过 LLM 解读")
 
+    p_tr = sub.add_parser("translate", help="给仓库简介生成中文译文（需配置 LLM）")
+    p_tr.add_argument("--limit", type=int, default=0, help="只处理前 N 个仓库（试跑用）")
+    p_tr.add_argument("--batch", type=int, default=60, help="每次请求翻译多少条（默认 60）")
+
     args = parser.parse_args(argv)
     setup_logging(args.verbose)
 
@@ -261,6 +307,7 @@ def main(argv: list[str] | None = None) -> int:
         "run-daily": cmd_run_daily,
         "snapshot": cmd_snapshot,
         "report": cmd_report,
+        "translate": cmd_translate,
         "rebuild": cmd_rebuild,
         "stats": cmd_stats,
         "site": cmd_site,

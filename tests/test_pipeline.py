@@ -14,9 +14,11 @@ whatstrending.ai 日快照），所以可以直接拿来当断言依据。
 
 from __future__ import annotations
 
+import os
 import sys
 import tempfile
 from datetime import date, timedelta
+from html import escape
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -228,6 +230,62 @@ def test_site_build(tmp: Path) -> None:
     print(f"  [PASS] 看板生成正确（{len(summary)} 天，当日冠军 {summary[1]['top_name']}）")
 
 
+def test_site_chinese(tmp: Path) -> None:
+    """中文层：类目列、中文简介、英文回退、链接的可点标识。"""
+    from star_pulse import i18n
+    from star_pulse import site as site_builder
+
+    settings, conn = _seed(tmp / "zh")
+    rows = conn.execute(
+        "SELECT repo_id, full_name, description FROM repo ORDER BY repo_id LIMIT 2"
+    ).fetchall()
+    rid, english = rows[0]["repo_id"], rows[0]["description"]
+    # 第二行故意不放进缓存 —— 用来验证「没译到的行回退英文」这条路径
+    other_english = rows[1]["description"]
+    assert english and other_english, "测试数据里应当有英文简介"
+
+    # 缓存读写往返
+    i18n.save_cache(settings, {str(rid): {"zh": "这是一条测试译文", "by": "llm"}})
+    assert i18n.load_cache(settings)[str(rid)]["zh"] == "这是一条测试译文"
+
+    docs = Path(site_builder.build_site(settings, conn)["docs"])
+    html = (docs / "index.html").read_text(encoding="utf-8")
+
+    assert "这是一条测试译文" in html, "缓存里的中文译文没被渲染出来"
+    # 没译到的行必须回退英文，而不是留白（简介会被截断到 80 字并压平空白）
+    fallback = escape(" ".join(other_english.split())[:40])
+    assert f">{fallback}" in html, "未翻译的行应回退显示英文原文"
+    assert "<th>类目</th>" in html, "缺少类目列"
+    assert 'id="projCat"' in html, "缺少类目筛选"
+    assert 'class="repo"' in html and "↗" in html, "项目名缺少可点的视觉标识"
+    assert "<td class=\"cat\">" in html and 'data-cat="' in html, "类目单元格或筛选属性缺失"
+    assert "机翻" in html, "页面上应说明简介是机翻（不能冒充人工质量）"
+    print("  [PASS] 中文层：类目列 + 中文简介 + 英文回退 + 链接标识")
+
+
+def test_translate_without_llm(tmp: Path) -> None:
+    """没配 LLM 时，翻译必须优雅跳过：不抛异常，也不留下空缓存文件。"""
+    from star_pulse import i18n
+
+    # 环境变量优先级高于一切，先摘掉再构造 settings，避免 CI 上配了 key 就真的发请求
+    saved = {k: os.environ.pop(k, None)
+             for k in ("LLM_BASE_URL", "LLM_API_KEY", "LLM_MODEL")}
+    try:
+        settings, _conn = _seed(tmp / "nollm")
+        assert not settings.llm_enabled
+        stats = i18n.translate_missing(settings, [
+            {"repo_id": 1, "full_name": "a/b", "description": "hello"},
+        ])
+        assert stats["translated"] == 0, "没配 LLM 却报告翻译成功"
+        assert "error" in stats, "应明确报告原因，而不是静默返回零"
+        assert not i18n.cache_path(settings).exists(), "失败时不应写出空缓存文件"
+    finally:
+        for key, value in saved.items():
+            if value is not None:
+                os.environ[key] = value
+    print("  [PASS] 未配置 LLM 时翻译优雅跳过（不抛异常、不写空缓存）")
+
+
 def main() -> int:
     print("star-pulse 回归测试")
     print("=" * 58)
@@ -239,6 +297,8 @@ def main() -> int:
         test_idempotent_snapshot(tmp)
         test_json_roundtrip(tmp)
         test_site_build(tmp)
+        test_site_chinese(tmp)
+        test_translate_without_llm(tmp)
     print("=" * 58)
     print("全部通过")
     return 0

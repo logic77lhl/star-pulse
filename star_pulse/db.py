@@ -192,6 +192,33 @@ def candidate_repos(conn: sqlite3.Connection, limit: int) -> list[sqlite3.Row]:
     ).fetchall()
 
 
+def pool_refresh_repos(conn: sqlite3.Connection, limit: int) -> list[sqlite3.Row]:
+    """池内续期候选：**已追踪最久**的仓库优先（按快照数降序）。
+
+    与 `candidate_repos` 的唯一区别就是排序。为什么要另开一个函数：
+
+    搜索渠道只覆盖「最近 N 天创建」的仓库。一个项目滑出这个窗口后，
+    就再没有任何渠道能发现它 —— 当天拿不到快照，星数增量随之永久中断。
+    所以续期必须按「历史最长」优先，而不是按「最近发现」优先：
+    后者排在前面的恰恰是刚发现的仓库，它们在搜索窗口内，本来就会被找到，
+    占着保底名额却不解决任何问题（这一版是踩过才改的）。
+    """
+    return conn.execute(
+        """
+        SELECT r.repo_id, r.full_name,
+               (SELECT COUNT(*) FROM snapshot s WHERE s.repo_id = r.repo_id) AS snaps,
+               COALESCE((SELECT s.stars FROM snapshot s
+                         WHERE s.repo_id = r.repo_id
+                         ORDER BY s.snap_date DESC LIMIT 1), 0) AS last_stars
+        FROM repo r
+        WHERE r.is_fork = 0 AND r.is_archived = 0
+        ORDER BY snaps DESC, last_stars DESC
+        LIMIT ?
+        """,
+        (limit,),
+    ).fetchall()
+
+
 def snapshot_dates(conn: sqlite3.Connection, limit: int = 30) -> list[str]:
     rows = conn.execute(
         "SELECT DISTINCT snap_date FROM snapshot ORDER BY snap_date DESC LIMIT ?", (limit,)

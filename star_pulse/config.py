@@ -44,6 +44,10 @@ class Settings:
 
     # 候选池
     max_candidates: int = 800
+    # 候选池里给「池内续期」预留的保底名额。搜索渠道只覆盖最近 N 天创建的仓库，
+    # 老项目滑出窗口后就再也发现不到，必须靠这个名额续上，否则时间序列断档。
+    # 设为 0 则退回「搜索优先」，老项目会静默掉出候选池。
+    pool_refresh_reserve: int = 200
     search_lookback_days: int = 14
     search_min_stars: int = 50
     languages: list[str] = field(default_factory=lambda: ["All"])
@@ -144,6 +148,7 @@ def load_settings(root: Path | None = None) -> Settings:
         logs_dir=root / "logs",
         token=os.environ.get("GITHUB_TOKEN") or None,
         max_candidates=int(cand.get("max_candidates", 800)),
+        pool_refresh_reserve=int(cand.get("pool_refresh_reserve", 200)),
         search_lookback_days=int(cand.get("search_lookback_days", 14)),
         search_min_stars=int(cand.get("search_min_stars", 50)),
         languages=list(cand.get("languages", ["All"])),

@@ -260,7 +260,11 @@ def test_site_chinese(tmp: Path) -> None:
     assert 'class="repo"' in html and "↗" in html, "项目名缺少可点的视觉标识"
     assert "<td class=\"cat\">" in html and 'data-cat="' in html, "类目单元格或筛选属性缺失"
     assert "机翻" in html, "页面上应说明简介是机翻（不能冒充人工质量）"
-    print("  [PASS] 中文层：类目列 + 中文简介 + 英文回退 + 链接标识")
+    # 默认只展示前 100 条：行仍全在 DOM 里（搜索要覆盖全量），只由 JS 控制显示
+    assert 'id="projLimit"' in html, "缺少「每屏条数」控件"
+    assert '<option value="100" selected>' in html, "默认显示条数应为 100 条"
+    assert html.count("<tr ") >= 10, "行不能被服务端裁掉 —— 裁掉会让搜索搜不到"
+    print("  [PASS] 中文层：类目列 + 中文简介 + 英文回退 + 链接标识 + 默认条数")
 
 
 def test_translate_without_llm(tmp: Path) -> None:
@@ -286,6 +290,120 @@ def test_translate_without_llm(tmp: Path) -> None:
     print("  [PASS] 未配置 LLM 时翻译优雅跳过（不抛异常、不写空缓存）")
 
 
+def _repo_json(rid: int, full_name: str, stars: int, created: str = "2026-01-01") -> dict:
+    """构造一个 /repos/{name} 与 search API 都通用的仓库 JSON。"""
+    owner, _, name = full_name.partition("/")
+    return {
+        "id": rid, "full_name": full_name, "name": name,
+        "owner": {"login": owner}, "description": f"repo {name}",
+        "language": "Python", "topics": [], "homepage": None,
+        "license": {"spdx_id": "MIT"}, "created_at": f"{created}T00:00:00Z",
+        "archived": False, "fork": False,
+        "stargazers_count": stars, "forks_count": stars // 10,
+        "open_issues_count": 0, "pushed_at": None,
+    }
+
+
+class _FakeResp:
+    def __init__(self, payload: dict, status: int = 200) -> None:
+        self.status = status
+        self.body = ""
+        self._payload = payload
+
+    def json(self):
+        return self._payload
+
+
+class _FakeHttp:
+    """只实现采集用到的读接口，不碰网络。
+
+    搜索故意**无视 max_items**、把全部结果一次性返回 —— 这是为了验证 pipeline
+    自带的上限保护：即便 search_recent_repos 的截断哪天被改坏，候选池也不会越过
+    max_candidates。没有那层保护，这个假实现会立刻把池子撑爆。
+    Trending 复用同一个 get_json，这里一律 404，fetch_trending 有兜底会返回空列表。
+    """
+
+    def __init__(self, repos: dict[str, dict], search_items: list[dict]) -> None:
+        self.repos = repos
+        self.search_items = search_items
+
+    def get_json(self, url, params=None, headers=None, allow_404=False, retries=None):
+        if "/search/repositories" in url:
+            return _FakeResp({
+                "items": list(self.search_items),
+                "total_count": len(self.search_items),
+            })
+        name = url.split("/repos/", 1)[-1].split("?")[0]
+        hit = self.repos.get(name)
+        return _FakeResp({}, 404) if hit is None else _FakeResp(hit)
+
+    def stats(self) -> str:
+        return ""
+
+
+def _seed_tracked(conn, specs: list[tuple[int, str, int]]) -> None:
+    """把「已经追踪了若干天」的仓库写进库。specs: (repo_id, full_name, 快照天数)。"""
+    from star_pulse import github_api
+
+    for rid, name, age in specs:
+        norm = github_api.normalize_repo(_repo_json(rid, name, 100))
+        for d in range(age):
+            day = (date(2026, 8, 1) + timedelta(days=d)).isoformat()
+            db.upsert_repos(conn, [norm], day)
+            db.upsert_snapshots(conn, [{
+                "repo_id": rid, "snap_date": day, "stars": 100 + d,
+                "forks": 9, "open_issues": 0, "pushed_at": None,
+                "source": "test", "collected_at": f"{day}T00:00:00Z",
+            }])
+
+
+def test_candidate_budget(tmp: Path) -> None:
+    """候选池预算：保底名额必须留给「已追踪最久」的仓库，总量绝不越过上限。"""
+    from dataclasses import replace
+
+    from star_pulse import pipeline
+
+    # 「老」仓库：5 个已追踪 5 天 + 15 个只追了 1 天，星数刻意相同。
+    # 唯一区别是快照数 —— 续期若按「已追踪最久」优先，选中的必然是前 5 个。
+    specs = [(7000 + i, f"vet/repo{i}", 5) for i in range(5)]
+    specs += [(7100 + i, f"rook/repo{i}", 1) for i in range(15)]
+    registry = {name: _repo_json(rid, name, 100) for rid, name, _age in specs}
+    registry["seed/one"] = _repo_json(6000, "seed/one", 900)
+    registry["seed/two"] = _repo_json(6001, "seed/two", 800)
+    fresh = [_repo_json(8000 + i, f"new/repo{i}", 500 - i) for i in range(50)]
+
+    def run(sub: str, reserve: int):
+        settings = replace(
+            load_settings(tmp / sub),
+            max_candidates=12, pool_refresh_reserve=reserve,
+            search_lookback_days=14, languages=["All"],
+            seed_repos=["seed/one", "seed/two"],
+        )
+        conn = db.connect(settings.db_path)
+        db.init_schema(conn)
+        _seed_tracked(conn, specs)
+        return conn, pipeline.run_daily(settings, conn, _FakeHttp(registry, fresh))
+
+    conn, stats = run("budget", 5)
+    # 12 = 2 种子 + 0 Trending + 5 续期 + 5 搜索
+    assert stats["candidates_total"] == 12, f"候选池越界或没填满：{stats['candidates_total']}"
+    by = stats["by_channel"]
+    assert by["watchlist"] == 2, by
+    assert by["pool_refresh"] == 5, f"保底名额没被用满：{by}"
+    assert by["search"] == 5, f"搜索应正好用掉剩余名额：{by}"
+
+    got = {r["repo_id"] for r in conn.execute(
+        "SELECT repo_id FROM discovery WHERE channel = 'pool'")}
+    assert got == {7000, 7001, 7002, 7003, 7004}, f"续期挑错了仓库（应挑追踪最久的）：{got}"
+
+    # reserve = 0 应退回旧行为：续期一个都不进，搜索吃满全部剩余名额
+    _conn0, stats0 = run("budget-zero", 0)
+    assert stats0["by_channel"]["pool_refresh"] == 0, stats0["by_channel"]
+    assert stats0["by_channel"]["search"] == 10, stats0["by_channel"]
+    assert stats0["candidates_total"] == 12, stats0["candidates_total"]
+    print("  [PASS] 候选池预算：续期保底生效且挑最久的，总量不越界（reserve=0 退回旧行为）")
+
+
 def main() -> int:
     print("star-pulse 回归测试")
     print("=" * 58)
@@ -299,6 +417,7 @@ def main() -> int:
         test_site_build(tmp)
         test_site_chinese(tmp)
         test_translate_without_llm(tmp)
+        test_candidate_budget(tmp)
     print("=" * 58)
     print("全部通过")
     return 0

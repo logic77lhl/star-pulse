@@ -8,6 +8,10 @@
   搜索        2–10 次（取决于候选池与门槛）
   候选池快照  <= max_candidates 次
   合计        约等于候选池大小
+
+四个渠道，顺序即优先级：种子 > Trending > 池内续期 > 搜索新项目。
+把「续期」排在「搜索」之前是有意的 —— 搜索只覆盖最近 N 天创建的仓库，
+若让它先吃满名额，老项目就会静默掉出候选池、时间序列断档（详见下方注释）。
 """
 
 from __future__ import annotations
@@ -24,20 +28,28 @@ from .net import Http
 log = logging.getLogger("star_pulse.pipeline")
 
 
-def _all_names(conn: sqlite3.Connection, limit: int) -> list[str]:
-    """已有候选池里的仓库名，按「最近发现 + 星数」排序。"""
-    return [row["full_name"] for row in db.candidate_repos(conn, limit)]
+def _pool_names(conn: sqlite3.Connection, limit: int) -> list[str]:
+    """已有候选池里的仓库名，按「已追踪最久」排序（见 db.pool_refresh_repos）。"""
+    return [row["full_name"] for row in db.pool_refresh_repos(conn, limit)]
 
 
 def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
     """一轮完整采集：发现 + 快照。每日跑一次。
 
-    渠道顺序刻意如此：watchlist > Trending > 搜索 > 历史池刷新。
-    因为请求预算有限，谁先来谁占名额，所以把「用户明确关心的」放在最前面。
+    渠道顺序刻意如此：种子(watchlist) > Trending > 池内续期 > 搜索新项目。
+    因为请求预算有限，谁先来谁占名额，所以优先级就是「谁更不可替代」：
+
+    - 种子是用户显式关注的，必须保证进池；
+    - Trending 是当期热点，且只有这一个渠道能提供；
+    - 池内续期排第三：搜索只覆盖最近 N 天创建的仓库，老项目一旦滑出窗口就
+      再也没有渠道能发现它。若让搜索先吃满名额，时间序列会静默断档；
+    - 搜索垫底，用剩下的名额发现新项目。
     """
     today = settings.today()
     now_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
     cap = max(1, settings.max_candidates)
+    # 给池内续期预留的保底名额。0 = 不预留（搜索可吃满整个池，即旧行为）
+    reserve = max(0, min(settings.pool_refresh_reserve, cap))
 
     repo_rows: list[dict] = []
     snap_rows: list[dict] = []
@@ -94,8 +106,28 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
                 accept(repo, "github_api", "gh_trending", hit.get("rank"))
                 counts["trending"] += 1
 
-        # ── 渠道 C：Search API 找近期创建的新项目（自带星数，零额外请求）──
-        # 只用「剩余预算」，不挤占 A/B —— 否则新项目会把老项目和 watchlist 全挤出去。
+        # ── 渠道 C：池内续期（**必须排在搜索之前**）────────────────
+        # 搜索渠道只覆盖「最近 N 天创建」的仓库。一个项目滑出这个窗口后就再也
+        # 没有渠道能发现它 —— 当天拿不到快照，星数增量永久中断。所以先按「已追踪
+        # 最久」把保底名额续上，剩下的名额才交给搜索去填新项目。
+        # 保底名额见 pool_refresh_reserve；设为 0 即退回「搜索优先」的旧行为。
+        pool_ceiling = min(cap, len(seen_ids) + reserve)
+        for name in _pool_names(conn, cap):
+            if len(seen_ids) >= pool_ceiling:
+                break
+            existing = conn.execute(
+                "SELECT repo_id FROM repo WHERE lower(full_name) = ?", (name.lower(),)
+            ).fetchone()
+            if existing and existing["repo_id"] in seen_ids:
+                continue  # 本轮已经通过前面渠道采过了
+            repo = github_api.get_repo(http, name)
+            if repo:
+                accept(repo, "github_api", "pool", None)
+                counts["pool_refresh"] += 1
+
+        # ── 渠道 D：Search API 找近期创建的新项目（自带星数，零额外请求）──
+        # 填满剩余名额。内层循环必须有硬上限检查：少了它，一旦 GitHub 返回的结果集
+        # 大于剩余预算，候选池会越过 max_candidates，多发的请求可能撑爆限流配额。
         langs = settings.languages or ["All"]
         for idx, lang in enumerate(langs):
             left = cap - len(seen_ids)
@@ -113,23 +145,10 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
                 ),
                 start=1,
             ):
+                if len(seen_ids) >= cap:
+                    break
                 accept(repo, "search_api", "gh_search", rank)
                 counts["search"] += 1
-
-        # ── 渠道 D：刷新上一期的历史候选池，保证老项目的时间序列不断档 ──
-        for name in _all_names(conn, cap):
-            if len(seen_ids) >= cap:
-                log.info("已达候选池上限 %d，停止扩充", cap)
-                break
-            existing = conn.execute(
-                "SELECT repo_id FROM repo WHERE lower(full_name) = ?", (name.lower(),)
-            ).fetchone()
-            if existing and existing["repo_id"] in seen_ids:
-                continue  # 本轮已经通过前面渠道采过了
-            repo = github_api.get_repo(http, name)
-            if repo:
-                accept(repo, "github_api", "pool", None)
-                counts["pool_refresh"] += 1
 
     except Exception as exc:  # noqa: BLE001
         # 关键：任何意外都不能丢掉已经采到的数据。

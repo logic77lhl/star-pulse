@@ -371,6 +371,12 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         '<option value="created:desc">创建时间 最新</option>'
         '<option value="name:asc">名称 A→Z</option>'
         "</select>"
+        '<select id="projLimit" aria-label="显示条数">'
+        '<option value="50">每屏 50 条</option>'
+        '<option value="100" selected>每屏 100 条</option>'
+        '<option value="300">每屏 300 条</option>'
+        '<option value="all">全部</option>'
+        "</select>"
         f'<span class="count" id="projCount">共 {len(projects):,} 个</span>'
         "</div>"
     )
@@ -400,7 +406,9 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
 （已译 {translated:,}/{len(projects):,} 条），想看英文原文请点项目名去 GitHub。
 未译到的行仍显示英文原文。<br>
 「当日新增」是相对上一次快照的净增；首日没有对比基线时显示「—」。
-类目与简介都只影响可读性，不参与任何数值计算。</p>
+类目与简介都只影响可读性，不参与任何数值计算。<br>
+为避免一屏铺太多，名单默认只展示前 <b>100</b> 条 —— 全部 {len(projects):,} 个都在页面里，
+搜索、筛选、排序覆盖的是全量，改「每屏条数」即可查看其余。</p>
 {toolbar}
 {projects_block}
 
@@ -474,6 +482,7 @@ const PALETTE = ['#7F77DD','#1D9E75','#D85A30','#378ADD','#BA7517','#D4537E','#6
   const catSel = document.getElementById('projCat');
   const langSel = document.getElementById('projLang');
   const sortSel = document.getElementById('projSort');
+  const limitSel = document.getElementById('projLimit');
   const out = document.getElementById('projCount');
   const low = s => (s || '').toLowerCase();
   const num = (tr, k) => Number(tr.dataset[k]) || 0;
@@ -494,16 +503,25 @@ const PALETTE = ['#7F77DD','#1D9E75','#D85A30','#378ADD','#BA7517','#D4537E','#6
     const needle = q.value.trim().toLowerCase();
     const cat = catSel.value;
     const lg = langSel.value;
-    let shown = 0;
+    // 只展示前 N 条。行仍然全部留在 DOM 里 —— 搜索/筛选/排序必须覆盖全量，
+    // 这里的限制只影响「显示」，不影响「可搜到」。
+    const lim = !limitSel || limitSel.value === 'all' ? Infinity : Number(limitSel.value);
+    let matched = 0, shown = 0;
     for (const tr of rows) {
       const hit = (!needle || hay.get(tr).indexOf(needle) !== -1)
                && (!cat || tr.dataset.cat === cat)
                && (!lg || tr.dataset.lang === lg);
-      tr.hidden = !hit;
-      if (hit) shown++;
+      if (hit) matched++;
+      const vis = hit && shown < lim;
+      if (vis) shown++;
+      tr.hidden = !vis;
     }
     out.textContent = '显示 ' + shown.toLocaleString('en-US')
-                    + ' / ' + rows.length.toLocaleString('en-US') + ' 个';
+                    + ' / ' + rows.length.toLocaleString('en-US') + ' 个'
+                    + (matched > shown
+                       ? '（另有 ' + (matched - shown).toLocaleString('en-US')
+                         + ' 个符合条件，调大显示条数或搜索即可看到）'
+                       : '');
     rank();
   }
   function reorder() {
@@ -523,6 +541,7 @@ const PALETTE = ['#7F77DD','#1D9E75','#D85A30','#378ADD','#BA7517','#D4537E','#6
   catSel.addEventListener('change', view);
   langSel.addEventListener('change', view);
   sortSel.addEventListener('change', function () { reorder(); view(); });
+  if (limitSel) limitSel.addEventListener('change', view);
   view();
 })();
 

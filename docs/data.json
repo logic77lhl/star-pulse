@@ -1,13 +1,14 @@
 {
- "generated_at": "2026-09-16T06:49:14+08:00",
+ "generated_at": "2026-09-17T06:49:35+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
   "2026-09-15",
-  "2026-09-16"
+  "2026-09-16",
+  "2026-09-17"
  ],
- "tracked_repos": 950,
- "latest_date": "2026-09-16",
+ "tracked_repos": 1052,
+ "latest_date": "2026-09-17",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -41,20 +42,43 @@
    "top_delta": 2824,
    "new_repos": 100,
    "prev": "2026-09-15"
+  },
+  {
+   "date": "2026-09-17",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 26717,
+   "gainers": 534,
+   "top_name": "alibaba/open-code-review",
+   "top_delta": 3270,
+   "new_repos": 105,
+   "prev": "2026-09-16"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 4595,
-   "stars": 28399,
+   "delta": 7865,
+   "stars": 31669,
    "language": "Go"
   },
   {
    "full_name": "JustVugg/colibri",
-   "delta": 3450,
-   "stars": 33746,
+   "delta": 4685,
+   "stars": 34981,
    "language": "C"
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "delta": 3613,
+   "stars": 64773,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "delta": 3437,
+   "stars": 35781,
+   "language": "JavaScript"
   },
   {
    "full_name": "debpalash/VoiceStudio",
@@ -63,168 +87,156 @@
    "language": "Python"
   },
   {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 2421,
-   "stars": 34765,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "tt-a1i/archify",
-   "delta": 2328,
-   "stars": 63488,
-   "language": "JavaScript"
-  },
-  {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 1769,
-   "stars": 139336,
+   "delta": 2736,
+   "stars": 140303,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "delta": 2325,
+   "stars": 260206,
    "language": "JavaScript"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 1614,
-   "stars": 46220,
+   "delta": 2267,
+   "stars": 46873,
    "language": "Python"
   },
   {
-   "full_name": "affaan-m/ECC",
-   "delta": 1392,
-   "stars": 259273,
-   "language": "JavaScript"
+   "full_name": "alphaXiv/OpenResearch",
+   "delta": 2131,
+   "stars": 4361,
+   "language": "Rust"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 1356,
-   "stars": 262827,
+   "delta": 2107,
+   "stars": 263578,
    "language": "Shell"
   },
   {
    "full_name": "ever-co/ever-gauzy",
-   "delta": 1230,
-   "stars": 6588,
+   "delta": 1916,
+   "stars": 7274,
    "language": "TypeScript"
   },
   {
-   "full_name": "alphaXiv/OpenResearch",
-   "delta": 1061,
-   "stars": 3291,
-   "language": "Rust"
-  },
-  {
-   "full_name": "tonhowtf/omniget",
-   "delta": 925,
-   "stars": 12853,
-   "language": "Rust"
-  },
-  {
-   "full_name": "Mantitup-Org/vista",
-   "delta": 852,
-   "stars": 1758,
-   "language": "TypeScript"
-  },
-  {
-   "full_name": "cathrynlavery/diagram-design",
-   "delta": 823,
-   "stars": 40191,
+   "full_name": "eternity4719/HowToLiveBetter",
+   "delta": 1877,
+   "stars": 2092,
    "language": "HTML"
   },
   {
-   "full_name": "Chuloo/mural",
-   "delta": 708,
-   "stars": 1021,
-   "language": "Kotlin"
+   "full_name": "ai-sucks-butt/ai-sucks-butt",
+   "delta": 1675,
+   "stars": 1736,
+   "language": "Python"
+  },
+  {
+   "full_name": "SnailSploit/Claude-Red",
+   "delta": 1472,
+   "stars": 5749,
+   "language": "Python"
+  },
+  {
+   "full_name": "multimodal-art-projection/YuE",
+   "delta": 1450,
+   "stars": 9347,
+   "language": "Python"
   }
  ],
  "daily_top": [
   {
    "full_name": "alibaba/open-code-review",
    "language": "Go",
-   "delta": 2824,
-   "stars": 28399
-  },
-  {
-   "full_name": "debpalash/VoiceStudio",
-   "language": "Python",
-   "delta": 1790,
-   "stars": 30860
-  },
-  {
-   "full_name": "JustVugg/colibri",
-   "language": "C",
-   "delta": 1774,
-   "stars": 33746
+   "delta": 3270,
+   "stars": 31669
   },
   {
    "full_name": "tt-a1i/archify",
    "language": "JavaScript",
-   "delta": 1320,
-   "stars": 63488
+   "delta": 1285,
+   "stars": 64773
   },
   {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "language": "JavaScript",
-   "delta": 1267,
-   "stars": 34765
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 968,
-   "stars": 139336
-  },
-  {
-   "full_name": "shadcn-ui/lint",
-   "language": "TypeScript",
-   "delta": 947,
-   "stars": 1709
-  },
-  {
-   "full_name": "affaan-m/ECC",
-   "language": "JavaScript",
-   "delta": 905,
-   "stars": 259273
-  },
-  {
-   "full_name": "ayghri/i-have-adhd",
-   "language": "Python",
-   "delta": 829,
-   "stars": 46220
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 788,
-   "stars": 262827
+   "full_name": "JustVugg/colibri",
+   "language": "C",
+   "delta": 1235,
+   "stars": 34981
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 693,
-   "stars": 908
+   "delta": 1184,
+   "stars": 2092
+  },
+  {
+   "full_name": "ai-sucks-butt/ai-sucks-butt",
+   "language": "Python",
+   "delta": 1174,
+   "stars": 1736
+  },
+  {
+   "full_name": "NationalSecurityAgency/ghidra",
+   "language": "Java",
+   "delta": 1076,
+   "stars": 77732
+  },
+  {
+   "full_name": "alphaXiv/OpenResearch",
+   "language": "Rust",
+   "delta": 1070,
+   "stars": 4361
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "language": "JavaScript",
+   "delta": 1016,
+   "stars": 35781
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 967,
+   "stars": 140303
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 933,
+   "stars": 260206
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 751,
+   "stars": 263578
   },
   {
    "full_name": "ever-co/ever-gauzy",
    "language": "TypeScript",
+   "delta": 686,
+   "stars": 7274
+  },
+  {
+   "full_name": "addyosmani/agent-skills",
+   "language": "JavaScript",
+   "delta": 667,
+   "stars": 95406
+  },
+  {
+   "full_name": "ayghri/i-have-adhd",
+   "language": "Python",
    "delta": 653,
-   "stars": 6588
+   "stars": 46873
   },
   {
-   "full_name": "ai-sucks-butt/ai-sucks-butt",
-   "language": null,
-   "delta": 501,
-   "stars": 562
-  },
-  {
-   "full_name": "Mantitup-Org/vista",
-   "language": "TypeScript",
-   "delta": 443,
-   "stars": 1758
-  },
-  {
-   "full_name": "cathrynlavery/diagram-design",
-   "language": "HTML",
-   "delta": 430,
-   "stars": 40191
+   "full_name": "microsoft/markitdown",
+   "language": "Python",
+   "delta": 423,
+   "stars": 184800
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

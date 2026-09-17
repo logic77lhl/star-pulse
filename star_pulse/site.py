@@ -1,17 +1,20 @@
 """静态站点生成（GitHub Pages）。
 
 产出 docs/ 目录，作为「每天的情况」看板：
-  docs/index.html          看板：项目名单（主角）+ 折叠的趋势与榜单 + 报告索引
+  docs/index.html          看板：概览卡片 + 折叠的项目名单 + 折叠的趋势与榜单 + 报告索引
   docs/reports/*.html      历史周报归档
   docs/data.json           汇总层结构化数据，供二次消费
   docs/.nojekyll           阻止 Jekyll 处理（Pages 从分支部署时需要）
 
-版面取向：**项目名单排在最前**，趋势图和榜单收进 `<details>` 默认折叠。
-理由是这个看板的主用途是「看有哪些项目、各自什么情况」，趋势只是佐证。
+版面取向：概览卡片 + 两个**默认折叠**的 `<details>`（项目名单 / 趋势与榜单）。
+项目名单是主角，但仍然默认收起 —— 一次铺开 800 行没人看得下去，先给一块可点的
+「项目名单（共 N 个）」，需要时再展开。折叠块共用 `details.fold` 这套样式，
+类名不绑定具体板块，避免下次改版只改了一边。
 
-项目名单是**服务端全量渲染**的（不截断），再叠一层纯 DOM 的搜索/筛选/排序；
-所以停用 JS 也仍是一份完整可读的名单。图表则相反 —— 折叠区里的 canvas
-在展开前量不到尺寸，必须等 `toggle` 事件里再创建，否则会按 0×0 画出空白。
+项目名单是**服务端全量渲染**的（不截断），再叠一层纯 DOM 的搜索/筛选/排序 +
+「每屏条数」显示限制；所以停用 JS 也仍是一份完整可读的名单。图表则相反 ——
+折叠区里的 canvas 在展开前量不到尺寸，必须等 `toggle` 事件里再创建，否则会按
+0×0 画出空白。
 """
 
 from __future__ import annotations
@@ -83,21 +86,25 @@ td.desc { color:#6b6a66; font-size:13px; max-width:430px; }
 .toolbar input { flex:1 1 230px; min-width:170px; }
 .toolbar select { flex:0 0 auto; }
 .toolbar .count { color:#888780; font-size:13px; margin-left:auto; white-space:nowrap; }
-details.trends { margin:34px 0 0; }
-details.trends > summary { cursor:pointer; list-style:none; user-select:none;
+/* 折叠块通用样式。类名用 .fold 而不是绑定具体板块 —— 项目名单和趋势都要用，
+   复制一份样式是最容易在下次改版时漏改一边的写法。 */
+details.fold { margin:34px 0 0; }
+details.projects { margin:26px 0 0; }
+details.fold > summary { cursor:pointer; list-style:none; user-select:none;
   background:#fff; border:1px solid #e3e1da; border-radius:10px; padding:14px 18px;
   font-size:16px; font-weight:600; display:flex; align-items:center; gap:9px; }
-details.trends > summary::-webkit-details-marker { display:none; }
-details.trends > summary::before { content:"▸"; color:#888780; font-weight:400;
+details.fold > summary::-webkit-details-marker { display:none; }
+details.fold > summary::before { content:"▸"; color:#888780; font-weight:400;
   display:inline-block; transition:transform .15s ease; }
-details.trends[open] > summary::before { transform:rotate(90deg); }
-details.trends > summary:hover { border-color:#c9c6bc; }
-details.trends > summary .hint { font-weight:400; font-size:13px; color:#888780; }
-details.trends .tbody h2 { margin-top:34px; }
+details.fold[open] > summary::before { transform:rotate(90deg); }
+details.fold > summary:hover { border-color:#c9c6bc; }
+details.fold > summary .hint { font-weight:400; font-size:13px; color:#888780; }
+details.fold .tbody h2 { margin-top:34px; }
+details.fold .tbody > .note:first-child { margin-top:18px; }
 footer { margin-top:46px; padding-top:16px; border-top:1px solid #e3e1da; color:#888780; font-size:13px; }
 @media (prefers-color-scheme: dark) {
   body { background:#1b1b19; color:#e8e6e1; }
-  .card, table, .chart, ul.reports, details.trends > summary { background:#262624; border-color:#3a3a37; }
+  .card, table, .chart, ul.reports, details.fold > summary { background:#262624; border-color:#3a3a37; }
   th { background:#302f2c; color:#d3d1c7; box-shadow:inset 0 -1px 0 #3a3a37; }
   td { border-top-color:#3a3a37; }
   a { color:#AFA9EC; }
@@ -105,14 +112,14 @@ footer { margin-top:46px; padding-top:16px; border-top:1px solid #e3e1da; color:
   td.cat { color:#9b9993; }
   h1, h2 { color:#eeecea; }
   .sub, .note, .muted, footer, .card .k, .card .u, .rank, .toolbar .count,
-  details.trends > summary .hint { color:#9b9993; }
+  details.fold > summary .hint { color:#9b9993; }
   .banner { background:#412402; border-color:#854F0B; color:#FAC775; }
   .up { color:#F09595; }
   .down { color:#5DCAA5; }
   td.desc { color:#a8a69f; }
   .toolbar input, .toolbar select { background:#262624; border-color:#3a3a37; color:#e8e6e1; }
-  details.trends > summary:hover { border-color:#4d4d49; }
-  details.trends > summary::before { color:#9b9993; }
+  details.fold > summary:hover { border-color:#4d4d49; }
+  details.fold > summary::before { color:#9b9993; }
 }
 @media (max-width:640px){ body{padding:22px 12px 40px} h1{font-size:22px} }
 """
@@ -393,26 +400,32 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     )
 
     body = f"""<h1>star-pulse · GitHub 星耀榜</h1>
-<p class="sub">每日快照 · 项目名单在前，趋势在后</p>
+<p class="sub">每日快照 · 名单与趋势默认收起，点开即看</p>
 <p class="note">数据截至 <b>{esc(str(latest or "—"))}</b>　·　时区 UTC+{settings.tz_offset_hours}　·　
 每日 04:00 自动采集</p>
 <div class="cards">{cards}</div>
 {banner}
 
-<h2>项目名单</h2>
+<details class="projects fold">
+<summary>项目名单<span class="hint">共 {len(projects):,} 个 · 默认收起 · 点击展开名单与筛选</span></summary>
+<div class="tbody">
+
 <p class="note">共 <b>{len(projects):,}</b> 个追踪仓库，数据日期 {esc(str(latest or "—"))}。
 可搜索、按类目或语言筛选、按星数·新增·Fork·创建时间排序；点项目名直接打开 GitHub。<br>
 「类目」由关键词规则判定，确定性可复现；「简介」是模型翻译的<b>机翻</b>中文
 （已译 {translated:,}/{len(projects):,} 条），想看英文原文请点项目名去 GitHub。
 未译到的行仍显示英文原文。<br>
-「当日新增」是相对上一次快照的净增；首日没有对比基线时显示「—」。
+「当日新增」是相对上一次快照的净增；没有对比基线时显示「—」。
 类目与简介都只影响可读性，不参与任何数值计算。<br>
-为避免一屏铺太多，名单默认只展示前 <b>100</b> 条 —— 全部 {len(projects):,} 个都在页面里，
+展开后默认只显示前 <b>100</b> 条 —— 全部 {len(projects):,} 个都在页面里，
 搜索、筛选、排序覆盖的是全量，改「每屏条数」即可查看其余。</p>
 {toolbar}
 {projects_block}
 
-<details class="trends">
+</div>
+</details>
+
+<details class="trends fold">
 <summary>趋势与榜单<span class="hint">默认收起 · 点击展开每日走势与涨幅榜</span></summary>
 <div class="tbody">
 

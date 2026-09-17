@@ -202,12 +202,16 @@ def test_site_build(tmp: Path) -> None:
     assert (docs / "data.json").is_file(), "缺少 data.json"
     assert (docs / ".nojekyll").is_file(), "缺少 .nojekyll（分支部署 Pages 需要）"
 
-    # 版面：项目名单排在最前，趋势与榜单默认收起
-    assert html.index("项目名单") < html.index('<details class="trends">'), (
-        "项目名单必须排在趋势与榜单之前"
+    # 版面：两个板块都是折叠块，且**都默认收起**
+    assert '<details class="projects fold">' in html, "项目名单应当是折叠块"
+    assert '<details class="trends fold">' in html, "趋势区应当是折叠块"
+    for cls in ("projects", "trends"):
+        assert f'<details class="{cls} fold" open' not in html, f"{cls} 必须默认收起"
+    assert (html.index('<details class="projects fold">') < html.index('id="projTable"')
+            < html.index('<details class="trends fold">')), (
+        "项目名单表格要落在「项目名单」折叠块内，且早于趋势块"
     )
-    assert '<details class="trends"' in html, "趋势区应当是折叠块"
-    assert "<details class=\"trends\" open" not in html, "趋势区必须默认收起"
+    assert ">项目名单<" in html, "折叠块标题应是「项目名单」"
     for tid in ('id="projTable"', 'id="projQ"', 'id="projLang"', 'id="projSort"'):
         assert tid in html, f"项目名单缺少工具栏元素：{tid}"
 

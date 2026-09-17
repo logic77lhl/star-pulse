@@ -1,14 +1,15 @@
 {
- "generated_at": "2026-09-17T09:33:34+08:00",
+ "generated_at": "2026-09-18T06:47:44+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
   "2026-09-15",
   "2026-09-16",
-  "2026-09-17"
+  "2026-09-17",
+  "2026-09-18"
  ],
- "tracked_repos": 1052,
- "latest_date": "2026-09-17",
+ "tracked_repos": 1093,
+ "latest_date": "2026-09-18",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -53,31 +54,48 @@
    "top_delta": 3270,
    "new_repos": 105,
    "prev": "2026-09-16"
+  },
+  {
+   "date": "2026-09-18",
+   "repos": 618,
+   "is_first": false,
+   "total_gain": 29192,
+   "gainers": 474,
+   "top_name": "cloudflare/security-audit-skill",
+   "top_delta": 3442,
+   "new_repos": 41,
+   "prev": "2026-09-17"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 7865,
-   "stars": 31669,
+   "delta": 10804,
+   "stars": 34608,
    "language": "Go"
   },
   {
    "full_name": "JustVugg/colibri",
-   "delta": 4685,
-   "stars": 34981,
+   "delta": 5422,
+   "stars": 35718,
    "language": "C"
   },
   {
-   "full_name": "tt-a1i/archify",
-   "delta": 3613,
-   "stars": 64773,
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "delta": 4692,
+   "stars": 37036,
    "language": "JavaScript"
   },
   {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 3437,
-   "stars": 35781,
+   "full_name": "tt-a1i/archify",
+   "delta": 4628,
+   "stars": 65788,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "delta": 3714,
+   "stars": 141281,
    "language": "JavaScript"
   },
   {
@@ -87,52 +105,40 @@
    "language": "Python"
   },
   {
-   "full_name": "DietrichGebert/ponytail",
-   "delta": 2736,
-   "stars": 140303,
+   "full_name": "affaan-m/ECC",
+   "delta": 3221,
+   "stars": 261102,
    "language": "JavaScript"
   },
   {
-   "full_name": "affaan-m/ECC",
-   "delta": 2325,
-   "stars": 260206,
-   "language": "JavaScript"
+   "full_name": "eternity4719/HowToLiveBetter",
+   "delta": 3027,
+   "stars": 3242,
+   "language": "HTML"
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "delta": 2957,
+   "stars": 264428,
+   "language": "Shell"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 2267,
-   "stars": 46873,
+   "delta": 2828,
+   "stars": 47434,
    "language": "Python"
   },
   {
    "full_name": "alphaXiv/OpenResearch",
-   "delta": 2131,
-   "stars": 4361,
+   "delta": 2683,
+   "stars": 4913,
    "language": "Rust"
   },
   {
-   "full_name": "mattpocock/skills",
-   "delta": 2107,
-   "stars": 263578,
-   "language": "Shell"
-  },
-  {
    "full_name": "ever-co/ever-gauzy",
-   "delta": 1916,
-   "stars": 7274,
+   "delta": 2150,
+   "stars": 7508,
    "language": "TypeScript"
-  },
-  {
-   "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 1877,
-   "stars": 2092,
-   "language": "HTML"
-  },
-  {
-   "full_name": "ai-sucks-butt/ai-sucks-butt",
-   "delta": 1675,
-   "stars": 1736,
-   "language": "Python"
   },
   {
    "full_name": "SnailSploit/Claude-Red",
@@ -145,98 +151,104 @@
    "delta": 1450,
    "stars": 9347,
    "language": "Python"
+  },
+  {
+   "full_name": "cathrynlavery/diagram-design",
+   "delta": 1412,
+   "stars": 40780,
+   "language": "HTML"
   }
  ],
  "daily_top": [
   {
+   "full_name": "cloudflare/security-audit-skill",
+   "language": "JavaScript",
+   "delta": 3442,
+   "stars": 10472
+  },
+  {
    "full_name": "alibaba/open-code-review",
    "language": "Go",
-   "delta": 3270,
-   "stars": 31669
-  },
-  {
-   "full_name": "tt-a1i/archify",
-   "language": "JavaScript",
-   "delta": 1285,
-   "stars": 64773
-  },
-  {
-   "full_name": "JustVugg/colibri",
-   "language": "C",
-   "delta": 1235,
-   "stars": 34981
-  },
-  {
-   "full_name": "eternity4719/HowToLiveBetter",
-   "language": "HTML",
-   "delta": 1184,
-   "stars": 2092
-  },
-  {
-   "full_name": "ai-sucks-butt/ai-sucks-butt",
-   "language": "Python",
-   "delta": 1174,
-   "stars": 1736
-  },
-  {
-   "full_name": "NationalSecurityAgency/ghidra",
-   "language": "Java",
-   "delta": 1076,
-   "stars": 77732
-  },
-  {
-   "full_name": "alphaXiv/OpenResearch",
-   "language": "Rust",
-   "delta": 1070,
-   "stars": 4361
+   "delta": 2939,
+   "stars": 34608
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
    "language": "JavaScript",
-   "delta": 1016,
-   "stars": 35781
+   "delta": 1255,
+   "stars": 37036
+  },
+  {
+   "full_name": "eternity4719/HowToLiveBetter",
+   "language": "HTML",
+   "delta": 1150,
+   "stars": 3242
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "language": "JavaScript",
+   "delta": 1015,
+   "stars": 65788
   },
   {
    "full_name": "DietrichGebert/ponytail",
    "language": "JavaScript",
-   "delta": 967,
-   "stars": 140303
+   "delta": 978,
+   "stars": 141281
+  },
+  {
+   "full_name": "Tencent/WeKnora",
+   "language": "Go",
+   "delta": 927,
+   "stars": 26151
   },
   {
    "full_name": "affaan-m/ECC",
    "language": "JavaScript",
-   "delta": 933,
-   "stars": 260206
+   "delta": 896,
+   "stars": 261102
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 751,
-   "stars": 263578
+   "delta": 850,
+   "stars": 264428
   },
   {
-   "full_name": "ever-co/ever-gauzy",
-   "language": "TypeScript",
-   "delta": 686,
-   "stars": 7274
+   "full_name": "JustVugg/colibri",
+   "language": "C",
+   "delta": 737,
+   "stars": 35718
   },
   {
-   "full_name": "addyosmani/agent-skills",
-   "language": "JavaScript",
-   "delta": 667,
-   "stars": 95406
+   "full_name": "NationalSecurityAgency/ghidra",
+   "language": "Java",
+   "delta": 705,
+   "stars": 78437
+  },
+  {
+   "full_name": "abue-ammar/tinycast",
+   "language": "Swift",
+   "delta": 571,
+   "stars": 6120
   },
   {
    "full_name": "ayghri/i-have-adhd",
    "language": "Python",
-   "delta": 653,
-   "stars": 46873
+   "delta": 561,
+   "stars": 47434
   },
   {
-   "full_name": "microsoft/markitdown",
-   "language": "Python",
-   "delta": 423,
-   "stars": 184800
+   "full_name": "alphaXiv/OpenResearch",
+   "language": "Rust",
+   "delta": 552,
+   "stars": 4913
+  },
+  {
+   "full_name": "jamiepine/voicebox",
+   "language": "TypeScript",
+   "delta": 479,
+   "stars": 54815
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

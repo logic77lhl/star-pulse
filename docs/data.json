@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T15:46:58+08:00",
+ "generated_at": "2026-09-22T07:09:40+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -9,10 +9,11 @@
   "2026-09-18",
   "2026-09-19",
   "2026-09-20",
-  "2026-09-21"
+  "2026-09-21",
+  "2026-09-22"
  ],
- "tracked_repos": 1309,
- "latest_date": "2026-09-21",
+ "tracked_repos": 1382,
+ "latest_date": "2026-09-22",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -101,61 +102,72 @@
    "top_delta": 3493,
    "new_repos": 77,
    "prev": "2026-09-20"
+  },
+  {
+   "date": "2026-09-22",
+   "repos": 716,
+   "is_first": false,
+   "total_gain": 46745,
+   "gainers": 526,
+   "top_name": "NandhaKishorM/laya",
+   "top_delta": 6145,
+   "new_repos": 81,
+   "prev": "2026-09-21"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 14540,
-   "stars": 38344,
+   "delta": 15358,
+   "stars": 39162,
    "language": "Go"
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 8232,
-   "stars": 8447,
+   "delta": 10879,
+   "stars": 11094,
    "language": "HTML"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 7196,
-   "stars": 39540,
+   "delta": 8195,
+   "stars": 40539,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 7051,
-   "stars": 68211,
+   "delta": 7927,
+   "stars": 69087,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "delta": 6846,
+   "stars": 264727,
    "language": "JavaScript"
   },
   {
    "full_name": "JustVugg/colibri",
-   "delta": 6286,
-   "stars": 36582,
+   "delta": 6557,
+   "stars": 36853,
    "language": "C"
   },
   {
-   "full_name": "affaan-m/ECC",
-   "delta": 5784,
-   "stars": 263665,
-   "language": "JavaScript"
-  },
-  {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 5456,
-   "stars": 143023,
+   "delta": 6146,
+   "stars": 143713,
    "language": "JavaScript"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 4960,
-   "stars": 266431,
+   "delta": 5662,
+   "stars": 267133,
    "language": "Shell"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 4593,
-   "stars": 49199,
+   "delta": 5205,
+   "stars": 49811,
    "language": "Python"
   },
   {
@@ -171,120 +183,120 @@
    "language": "Rust"
   },
   {
-   "full_name": "ever-co/ever-gauzy",
-   "delta": 2450,
-   "stars": 7808,
-   "language": "TypeScript"
-  },
-  {
    "full_name": "microsoft/markitdown",
-   "delta": 2226,
-   "stars": 185926,
+   "delta": 2479,
+   "stars": 186179,
    "language": "Python"
   },
   {
+   "full_name": "ever-co/ever-gauzy",
+   "delta": 2469,
+   "stars": 7827,
+   "language": "TypeScript"
+  },
+  {
    "full_name": "heygen-com/hyperframes",
-   "delta": 2224,
-   "stars": 51940,
+   "delta": 2447,
+   "stars": 52163,
    "language": "TypeScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 2188,
-   "stars": 41556,
+   "delta": 2427,
+   "stars": 41795,
    "language": "HTML"
   }
  ],
  "daily_top": [
   {
-   "full_name": "browser-use/jev-ultrafast",
-   "language": "Python",
-   "delta": 3493,
-   "stars": 11677
-  },
-  {
    "full_name": "NandhaKishorM/laya",
    "language": "Python",
-   "delta": 2635,
-   "stars": 3812
+   "delta": 6145,
+   "stars": 9957
+  },
+  {
+   "full_name": "browser-use/jev-ultrafast",
+   "language": "Python",
+   "delta": 3884,
+   "stars": 15561
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 2529,
-   "stars": 8447
+   "delta": 2647,
+   "stars": 11094
   },
   {
-   "full_name": "cloudflare/security-audit-skill",
-   "language": "JavaScript",
-   "delta": 1772,
-   "stars": 17936
+   "full_name": "mizorewww/laya-mlx",
+   "language": "Python",
+   "delta": 2183,
+   "stars": 3716
   },
   {
-   "full_name": "robbietilton/Compositor",
-   "language": "Swift",
-   "delta": 1302,
-   "stars": 3608
-  },
-  {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "language": "JavaScript",
-   "delta": 966,
-   "stars": 39540
-  },
-  {
-   "full_name": "tamaratran/fast-jev-compaction",
+   "full_name": "Albert-Weasker/niubigeo",
    "language": "TypeScript",
-   "delta": 934,
-   "stars": 5093
+   "delta": 2139,
+   "stars": 4670
   },
   {
-   "full_name": "alibaba/open-code-review",
-   "language": "Go",
-   "delta": 845,
-   "stars": 38344
-  },
-  {
-   "full_name": "tt-a1i/archify",
-   "language": "JavaScript",
-   "delta": 797,
-   "stars": 68211
-  },
-  {
-   "full_name": "trycua/cua",
-   "language": "HTML",
-   "delta": 773,
-   "stars": 25104
+   "full_name": "jaredpalmer/kev",
+   "language": "Python",
+   "delta": 1404,
+   "stars": 2379
   },
   {
    "full_name": "affaan-m/ECC",
    "language": "JavaScript",
-   "delta": 762,
-   "stars": 263665
+   "delta": 1062,
+   "stars": 264727
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "language": "JavaScript",
+   "delta": 999,
+   "stars": 40539
   },
   {
    "full_name": "Open-Dev-Society/OpenStock",
    "language": "TypeScript",
-   "delta": 747,
-   "stars": 16732
+   "delta": 940,
+   "stars": 17672
   },
   {
-   "full_name": "bespokelabsai/nimble",
-   "language": "Python",
-   "delta": 690,
-   "stars": 1057
-  },
-  {
-   "full_name": "addyosmani/agent-skills",
+   "full_name": "tt-a1i/archify",
    "language": "JavaScript",
-   "delta": 662,
-   "stars": 97637
+   "delta": 876,
+   "stars": 69087
   },
   {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 642,
-   "stars": 266431
+   "full_name": "tamaratran/fast-jev-compaction",
+   "language": "TypeScript",
+   "delta": 849,
+   "stars": 5942
+  },
+  {
+   "full_name": "alibaba/open-code-review",
+   "language": "Go",
+   "delta": 818,
+   "stars": 39162
+  },
+  {
+   "full_name": "Mak5er/AirCard",
+   "language": "Swift",
+   "delta": 792,
+   "stars": 1341
+  },
+  {
+   "full_name": "TheoLeeCJ/SemIf",
+   "language": "Python",
+   "delta": 774,
+   "stars": 3192
+  },
+  {
+   "full_name": "robbietilton/Compositor",
+   "language": "Swift",
+   "delta": 756,
+   "stars": 4364
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-23T06:52:39+08:00",
+ "generated_at": "2026-09-24T06:54:03+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -11,10 +11,11 @@
   "2026-09-20",
   "2026-09-21",
   "2026-09-22",
-  "2026-09-23"
+  "2026-09-23",
+  "2026-09-24"
  ],
- "tracked_repos": 1466,
- "latest_date": "2026-09-23",
+ "tracked_repos": 1536,
+ "latest_date": "2026-09-24",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -125,61 +126,72 @@
    "top_delta": 6395,
    "new_repos": 84,
    "prev": "2026-09-22"
+  },
+  {
+   "date": "2026-09-24",
+   "repos": 753,
+   "is_first": false,
+   "total_gain": 36565,
+   "gainers": 564,
+   "top_name": "NandhaKishorM/laya",
+   "top_delta": 3969,
+   "new_repos": 75,
+   "prev": "2026-09-23"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 15907,
-   "stars": 39711,
+   "delta": 16377,
+   "stars": 40181,
    "language": "Go"
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 12083,
-   "stars": 12298,
+   "delta": 12784,
+   "stars": 12999,
    "language": "HTML"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 8936,
-   "stars": 41280,
+   "delta": 9529,
+   "stars": 41873,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 8710,
-   "stars": 69870,
+   "delta": 9407,
+   "stars": 70567,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 7513,
-   "stars": 265394,
+   "delta": 8282,
+   "stars": 266163,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "delta": 7429,
+   "stars": 144996,
    "language": "JavaScript"
   },
   {
    "full_name": "JustVugg/colibri",
-   "delta": 6834,
-   "stars": 37130,
+   "delta": 7048,
+   "stars": 37344,
    "language": "C"
   },
   {
-   "full_name": "DietrichGebert/ponytail",
-   "delta": 6819,
-   "stars": 144386,
-   "language": "JavaScript"
-  },
-  {
    "full_name": "mattpocock/skills",
-   "delta": 6339,
-   "stars": 267810,
+   "delta": 6988,
+   "stars": 268459,
    "language": "Shell"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 5697,
-   "stars": 50303,
+   "delta": 6068,
+   "stars": 50674,
    "language": "Python"
   },
   {
@@ -189,10 +201,22 @@
    "language": "Python"
   },
   {
+   "full_name": "heygen-com/hyperframes",
+   "delta": 2945,
+   "stars": 52661,
+   "language": "TypeScript"
+  },
+  {
    "full_name": "microsoft/markitdown",
-   "delta": 2750,
-   "stars": 186450,
+   "delta": 2940,
+   "stars": 186640,
    "language": "Python"
+  },
+  {
+   "full_name": "cathrynlavery/diagram-design",
+   "delta": 2815,
+   "stars": 42183,
+   "language": "HTML"
   },
   {
    "full_name": "alphaXiv/OpenResearch",
@@ -201,21 +225,9 @@
    "language": "Rust"
   },
   {
-   "full_name": "heygen-com/hyperframes",
-   "delta": 2674,
-   "stars": 52390,
-   "language": "TypeScript"
-  },
-  {
-   "full_name": "cathrynlavery/diagram-design",
-   "delta": 2642,
-   "stars": 42010,
-   "language": "HTML"
-  },
-  {
    "full_name": "ever-co/ever-gauzy",
-   "delta": 2483,
-   "stars": 7841,
+   "delta": 2497,
+   "stars": 7855,
    "language": "TypeScript"
   }
  ],
@@ -223,92 +235,92 @@
   {
    "full_name": "NandhaKishorM/laya",
    "language": "Python",
-   "delta": 6395,
-   "stars": 16352
-  },
-  {
-   "full_name": "jev-chat/jev-chat-jarvis",
-   "language": "Kotlin",
-   "delta": 2800,
-   "stars": 3679
-  },
-  {
-   "full_name": "browser-use/jev-ultrafast",
-   "language": "Python",
-   "delta": 2450,
-   "stars": 18011
+   "delta": 3969,
+   "stars": 20321
   },
   {
    "full_name": "jaredpalmer/kev",
    "language": "Python",
-   "delta": 1762,
-   "stars": 4141
+   "delta": 1800,
+   "stars": 5941
   },
   {
-   "full_name": "mizorewww/laya-mlx",
+   "full_name": "jev-chat/jev-chat-jarvis",
+   "language": "Kotlin",
+   "delta": 1527,
+   "stars": 5206
+  },
+  {
+   "full_name": "google/ax",
+   "language": "Go",
+   "delta": 1475,
+   "stars": 8985
+  },
+  {
+   "full_name": "browser-use/jev-ultrafast",
    "language": "Python",
-   "delta": 1693,
-   "stars": 5409
+   "delta": 1018,
+   "stars": 19029
   },
   {
-   "full_name": "Mak5er/AirCard",
-   "language": "Swift",
-   "delta": 1416,
-   "stars": 2757
-  },
-  {
-   "full_name": "eternity4719/HowToLiveBetter",
-   "language": "HTML",
-   "delta": 1204,
-   "stars": 12298
-  },
-  {
-   "full_name": "tt-a1i/archify",
-   "language": "JavaScript",
-   "delta": 783,
-   "stars": 69870
-  },
-  {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "language": "JavaScript",
-   "delta": 741,
-   "stars": 41280
-  },
-  {
-   "full_name": "zai-org/ZCode",
+   "full_name": "CopilotKit/openmuse",
    "language": "TypeScript",
-   "delta": 730,
-   "stars": 6275
+   "delta": 975,
+   "stars": 1756
   },
   {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 677,
-   "stars": 267810
+   "full_name": "dream-num/univer",
+   "language": "TypeScript",
+   "delta": 944,
+   "stars": 16287
   },
   {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 673,
-   "stars": 144386
+   "full_name": "unreallabsai/unreal-agent",
+   "language": "Go",
+   "delta": 877,
+   "stars": 1699
   },
   {
    "full_name": "affaan-m/ECC",
    "language": "JavaScript",
-   "delta": 667,
-   "stars": 265394
+   "delta": 769,
+   "stars": 266163
   },
   {
-   "full_name": "TheoLeeCJ/SemIf",
+   "full_name": "eternity4719/HowToLiveBetter",
+   "language": "HTML",
+   "delta": 701,
+   "stars": 12999
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "language": "JavaScript",
+   "delta": 697,
+   "stars": 70567
+  },
+  {
+   "full_name": "Mak5er/AirCard",
+   "language": "Swift",
+   "delta": 673,
+   "stars": 3430
+  },
+  {
+   "full_name": "browser-use/video-use",
    "language": "Python",
-   "delta": 631,
-   "stars": 3823
+   "delta": 664,
+   "stars": 26469
   },
   {
-   "full_name": "alibaba/open-code-review",
-   "language": "Go",
-   "delta": 549,
-   "stars": 39711
+   "full_name": "hydra-db/open-glean",
+   "language": "TypeScript",
+   "delta": 662,
+   "stars": 1504
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 649,
+   "stars": 268459
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

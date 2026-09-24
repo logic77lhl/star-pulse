@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24T06:54:03+08:00",
+ "generated_at": "2026-09-25T07:09:48+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -12,10 +12,11 @@
   "2026-09-21",
   "2026-09-22",
   "2026-09-23",
-  "2026-09-24"
+  "2026-09-24",
+  "2026-09-25"
  ],
- "tracked_repos": 1536,
- "latest_date": "2026-09-24",
+ "tracked_repos": 1606,
+ "latest_date": "2026-09-25",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -109,8 +110,8 @@
    "date": "2026-09-22",
    "repos": 716,
    "is_first": false,
-   "total_gain": 46745,
-   "gainers": 526,
+   "total_gain": 46661,
+   "gainers": 525,
    "top_name": "NandhaKishorM/laya",
    "top_delta": 6145,
    "new_repos": 81,
@@ -120,8 +121,8 @@
    "date": "2026-09-23",
    "repos": 740,
    "is_first": false,
-   "total_gain": 39312,
-   "gainers": 540,
+   "total_gain": 39260,
+   "gainers": 539,
    "top_name": "NandhaKishorM/laya",
    "top_delta": 6395,
    "new_repos": 84,
@@ -131,92 +132,31 @@
    "date": "2026-09-24",
    "repos": 753,
    "is_first": false,
-   "total_gain": 36565,
-   "gainers": 564,
+   "total_gain": 36536,
+   "gainers": 563,
    "top_name": "NandhaKishorM/laya",
    "top_delta": 3969,
    "new_repos": 75,
    "prev": "2026-09-23"
+  },
+  {
+   "date": "2026-09-25",
+   "repos": 778,
+   "is_first": false,
+   "total_gain": 30961,
+   "gainers": 579,
+   "top_name": "NandhaKishorM/laya",
+   "top_delta": 2644,
+   "new_repos": 72,
+   "prev": "2026-09-24"
   }
  ],
  "cumulative_top": [
-  {
-   "full_name": "alibaba/open-code-review",
-   "delta": 16377,
-   "stars": 40181,
-   "language": "Go"
-  },
-  {
-   "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 12784,
-   "stars": 12999,
-   "language": "HTML"
-  },
-  {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 9529,
-   "stars": 41873,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "tt-a1i/archify",
-   "delta": 9407,
-   "stars": 70567,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "affaan-m/ECC",
-   "delta": 8282,
-   "stars": 266163,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "delta": 7429,
-   "stars": 144996,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "JustVugg/colibri",
-   "delta": 7048,
-   "stars": 37344,
-   "language": "C"
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "delta": 6988,
-   "stars": 268459,
-   "language": "Shell"
-  },
-  {
-   "full_name": "ayghri/i-have-adhd",
-   "delta": 6068,
-   "stars": 50674,
-   "language": "Python"
-  },
   {
    "full_name": "debpalash/VoiceStudio",
    "delta": 3432,
    "stars": 30860,
    "language": "Python"
-  },
-  {
-   "full_name": "heygen-com/hyperframes",
-   "delta": 2945,
-   "stars": 52661,
-   "language": "TypeScript"
-  },
-  {
-   "full_name": "microsoft/markitdown",
-   "delta": 2940,
-   "stars": 186640,
-   "language": "Python"
-  },
-  {
-   "full_name": "cathrynlavery/diagram-design",
-   "delta": 2815,
-   "stars": 42183,
-   "language": "HTML"
   },
   {
    "full_name": "alphaXiv/OpenResearch",
@@ -225,102 +165,174 @@
    "language": "Rust"
   },
   {
-   "full_name": "ever-co/ever-gauzy",
-   "delta": 2497,
-   "stars": 7855,
+   "full_name": "SnailSploit/Claude-Red",
+   "delta": 1472,
+   "stars": 5749,
+   "language": "Python"
+  },
+  {
+   "full_name": "multimodal-art-projection/YuE",
+   "delta": 1450,
+   "stars": 9347,
+   "language": "Python"
+  },
+  {
+   "full_name": "tonhowtf/omniget",
+   "delta": 925,
+   "stars": 12853,
+   "language": "Rust"
+  },
+  {
+   "full_name": "asgeirtj/system_prompts_leaks",
+   "delta": 487,
+   "stars": 66729,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "melgarafael/DeskcommCRM",
+   "delta": 468,
+   "stars": 2793,
    "language": "TypeScript"
+  },
+  {
+   "full_name": "lnkiai/m3e-canvas",
+   "delta": 357,
+   "stars": 6935,
+   "language": "TypeScript"
+  },
+  {
+   "full_name": "huggingface/transformers",
+   "delta": 292,
+   "stars": 165951,
+   "language": "Python"
+  },
+  {
+   "full_name": "NVlabs/SoL-Pi",
+   "delta": 269,
+   "stars": 2033,
+   "language": "TypeScript"
+  },
+  {
+   "full_name": "tech-leads-club/agent-skills",
+   "delta": 252,
+   "stars": 6036,
+   "language": "TypeScript"
+  },
+  {
+   "full_name": "crwdla/tokentab",
+   "delta": 228,
+   "stars": 1145,
+   "language": "Python"
+  },
+  {
+   "full_name": "yappologistic/Sung",
+   "delta": 160,
+   "stars": 226,
+   "language": "C++"
+  },
+  {
+   "full_name": "SonicloudTech/sonicloud_opensdk",
+   "delta": 138,
+   "stars": 1403,
+   "language": "HTML"
+  },
+  {
+   "full_name": "adtexterry-lgtm/unigit-ecosystem",
+   "delta": 128,
+   "stars": 1135,
+   "language": "JavaScript"
   }
  ],
  "daily_top": [
   {
    "full_name": "NandhaKishorM/laya",
    "language": "Python",
-   "delta": 3969,
-   "stars": 20321
-  },
-  {
-   "full_name": "jaredpalmer/kev",
-   "language": "Python",
-   "delta": 1800,
-   "stars": 5941
-  },
-  {
-   "full_name": "jev-chat/jev-chat-jarvis",
-   "language": "Kotlin",
-   "delta": 1527,
-   "stars": 5206
+   "delta": 2644,
+   "stars": 22965
   },
   {
    "full_name": "google/ax",
    "language": "Go",
-   "delta": 1475,
-   "stars": 8985
-  },
-  {
-   "full_name": "browser-use/jev-ultrafast",
-   "language": "Python",
-   "delta": 1018,
-   "stars": 19029
-  },
-  {
-   "full_name": "CopilotKit/openmuse",
-   "language": "TypeScript",
-   "delta": 975,
-   "stars": 1756
+   "delta": 1364,
+   "stars": 10349
   },
   {
    "full_name": "dream-num/univer",
    "language": "TypeScript",
-   "delta": 944,
-   "stars": 16287
-  },
-  {
-   "full_name": "unreallabsai/unreal-agent",
-   "language": "Go",
-   "delta": 877,
-   "stars": 1699
-  },
-  {
-   "full_name": "affaan-m/ECC",
-   "language": "JavaScript",
-   "delta": 769,
-   "stars": 266163
+   "delta": 1256,
+   "stars": 17543
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 701,
-   "stars": 12999
+   "delta": 1135,
+   "stars": 14134
   },
   {
-   "full_name": "tt-a1i/archify",
-   "language": "JavaScript",
-   "delta": 697,
-   "stars": 70567
+   "full_name": "jev-chat/jev-chat-jarvis",
+   "language": "Kotlin",
+   "delta": 838,
+   "stars": 6044
   },
   {
-   "full_name": "Mak5er/AirCard",
-   "language": "Swift",
-   "delta": 673,
-   "stars": 3430
-  },
-  {
-   "full_name": "browser-use/video-use",
+   "full_name": "jaredpalmer/kev",
    "language": "Python",
-   "delta": 664,
-   "stars": 26469
+   "delta": 799,
+   "stars": 6740
   },
   {
-   "full_name": "hydra-db/open-glean",
-   "language": "TypeScript",
-   "delta": 662,
-   "stars": 1504
+   "full_name": "browser-use/jev-ultrafast",
+   "language": "Python",
+   "delta": 773,
+   "stars": 19802
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 700,
+   "stars": 266863
+  },
+  {
+   "full_name": "driceroland/Search",
+   "language": "Swift",
+   "delta": 679,
+   "stars": 1237
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 649,
-   "stars": 268459
+   "delta": 658,
+   "stars": 269117
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "language": "JavaScript",
+   "delta": 647,
+   "stars": 71214
+  },
+  {
+   "full_name": "alibaba/open-code-review",
+   "language": "Go",
+   "delta": 584,
+   "stars": 40765
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "language": "JavaScript",
+   "delta": 572,
+   "stars": 42445
+  },
+  {
+   "full_name": "obra/superpowers",
+   "language": "Shell",
+   "delta": 557,
+   "stars": 291213
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 530,
+   "stars": 145526
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

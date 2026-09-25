@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-25T07:09:48+08:00",
+ "generated_at": "2026-09-26T07:14:10+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -13,10 +13,11 @@
   "2026-09-22",
   "2026-09-23",
   "2026-09-24",
-  "2026-09-25"
+  "2026-09-25",
+  "2026-09-26"
  ],
- "tracked_repos": 1606,
- "latest_date": "2026-09-25",
+ "tracked_repos": 1681,
+ "latest_date": "2026-09-26",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -149,6 +150,17 @@
    "top_delta": 2644,
    "new_repos": 72,
    "prev": "2026-09-24"
+  },
+  {
+   "date": "2026-09-26",
+   "repos": 787,
+   "is_first": false,
+   "total_gain": 27359,
+   "gainers": 569,
+   "top_name": "eternity4719/HowToLiveBetter",
+   "top_delta": 2044,
+   "new_repos": 80,
+   "prev": "2026-09-25"
   }
  ],
  "cumulative_top": [
@@ -245,94 +257,94 @@
  ],
  "daily_top": [
   {
+   "full_name": "eternity4719/HowToLiveBetter",
+   "language": "HTML",
+   "delta": 2044,
+   "stars": 16178
+  },
+  {
+   "full_name": "vectorize-io/hindsight",
+   "language": "Python",
+   "delta": 2021,
+   "stars": 29753
+  },
+  {
    "full_name": "NandhaKishorM/laya",
    "language": "Python",
-   "delta": 2644,
-   "stars": 22965
+   "delta": 1644,
+   "stars": 24609
   },
   {
    "full_name": "google/ax",
    "language": "Go",
-   "delta": 1364,
-   "stars": 10349
+   "delta": 1108,
+   "stars": 11457
+  },
+  {
+   "full_name": "rohitg00/ai-engineering-from-scratch",
+   "language": "Python",
+   "delta": 946,
+   "stars": 57444
   },
   {
    "full_name": "dream-num/univer",
    "language": "TypeScript",
-   "delta": 1256,
-   "stars": 17543
-  },
-  {
-   "full_name": "eternity4719/HowToLiveBetter",
-   "language": "HTML",
-   "delta": 1135,
-   "stars": 14134
-  },
-  {
-   "full_name": "jev-chat/jev-chat-jarvis",
-   "language": "Kotlin",
-   "delta": 838,
-   "stars": 6044
-  },
-  {
-   "full_name": "jaredpalmer/kev",
-   "language": "Python",
-   "delta": 799,
-   "stars": 6740
-  },
-  {
-   "full_name": "browser-use/jev-ultrafast",
-   "language": "Python",
-   "delta": 773,
-   "stars": 19802
-  },
-  {
-   "full_name": "affaan-m/ECC",
-   "language": "JavaScript",
-   "delta": 700,
-   "stars": 266863
-  },
-  {
-   "full_name": "driceroland/Search",
-   "language": "Swift",
-   "delta": 679,
-   "stars": 1237
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 658,
-   "stars": 269117
-  },
-  {
-   "full_name": "tt-a1i/archify",
-   "language": "JavaScript",
-   "delta": 647,
-   "stars": 71214
-  },
-  {
-   "full_name": "alibaba/open-code-review",
-   "language": "Go",
-   "delta": 584,
-   "stars": 40765
+   "delta": 853,
+   "stars": 18396
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
    "language": "JavaScript",
-   "delta": 572,
-   "stars": 42445
+   "delta": 607,
+   "stars": 43052
   },
   {
-   "full_name": "obra/superpowers",
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 600,
+   "stars": 267463
+  },
+  {
+   "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 557,
-   "stars": 291213
+   "delta": 583,
+   "stars": 269700
+  },
+  {
+   "full_name": "alibaba/open-code-review",
+   "language": "Go",
+   "delta": 552,
+   "stars": 41317
+  },
+  {
+   "full_name": "driceroland/Search",
+   "language": "Swift",
+   "delta": 548,
+   "stars": 1785
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "language": "JavaScript",
+   "delta": 487,
+   "stars": 71701
+  },
+  {
+   "full_name": "jev-chat/jev-chat-jarvis",
+   "language": "Kotlin",
+   "delta": 460,
+   "stars": 6504
   },
   {
    "full_name": "DietrichGebert/ponytail",
    "language": "JavaScript",
-   "delta": 530,
-   "stars": 145526
+   "delta": 456,
+   "stars": 145982
+  },
+  {
+   "full_name": "Contrastive-LM/CLM",
+   "language": "Python",
+   "delta": 456,
+   "stars": 1250
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

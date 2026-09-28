@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T06:56:48+08:00",
+ "generated_at": "2026-09-28T16:26:38+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -373,6 +373,7 @@
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",
  "reports": [
+  "2026-W39_2026-09-21_2026-09-27.html",
   "2026-W38_2026-09-14_2026-09-20.html",
   "2026-W38_2026-09-14_2026-09-14.html"
  ]

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T16:26:38+08:00",
+ "generated_at": "2026-09-29T08:19:46+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -16,10 +16,11 @@
   "2026-09-25",
   "2026-09-26",
   "2026-09-27",
-  "2026-09-28"
+  "2026-09-28",
+  "2026-09-29"
  ],
- "tracked_repos": 1799,
- "latest_date": "2026-09-28",
+ "tracked_repos": 1883,
+ "latest_date": "2026-09-29",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -185,6 +186,17 @@
    "top_delta": 5099,
    "new_repos": 55,
    "prev": "2026-09-27"
+  },
+  {
+   "date": "2026-09-29",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 42552,
+   "gainers": 586,
+   "top_name": "debpalash/VoiceStudio",
+   "top_delta": 4048,
+   "new_repos": 92,
+   "prev": "2026-09-28"
   }
  ],
  "cumulative_top": [
@@ -281,94 +293,94 @@
  ],
  "daily_top": [
   {
-   "full_name": "vectorize-io/hindsight",
+   "full_name": "debpalash/VoiceStudio",
    "language": "Python",
-   "delta": 5099,
-   "stars": 37176
-  },
-  {
-   "full_name": "paperclipai/paperclip",
-   "language": "TypeScript",
-   "delta": 2559,
-   "stars": 89708
+   "delta": 4048,
+   "stars": 44010
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 2383,
-   "stars": 20571
+   "delta": 3957,
+   "stars": 24528
+  },
+  {
+   "full_name": "vectorize-io/hindsight",
+   "language": "Python",
+   "delta": 3772,
+   "stars": 40948
+  },
+  {
+   "full_name": "paperclipai/paperclip",
+   "language": "TypeScript",
+   "delta": 3049,
+   "stars": 92757
   },
   {
    "full_name": "cdyforever/how-to-live-better",
    "language": "HTML",
-   "delta": 1142,
-   "stars": 2258
-  },
-  {
-   "full_name": "mexicat/pdoom-video",
-   "language": "TypeScript",
-   "delta": 976,
-   "stars": 1069
+   "delta": 1608,
+   "stars": 3866
   },
   {
    "full_name": "dream-num/univer",
    "language": "TypeScript",
-   "delta": 952,
-   "stars": 20126
-  },
-  {
-   "full_name": "rohitg00/ai-engineering-from-scratch",
-   "language": "Python",
-   "delta": 895,
-   "stars": 59217
+   "delta": 1113,
+   "stars": 21239
   },
   {
    "full_name": "NandhaKishorM/laya",
    "language": "Python",
-   "delta": 888,
-   "stars": 26679
-  },
-  {
-   "full_name": "newliver666/apk-reverse",
-   "language": "Python",
-   "delta": 674,
-   "stars": 2699
-  },
-  {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "language": "JavaScript",
-   "delta": 519,
-   "stars": 44039
+   "delta": 1017,
+   "stars": 27696
   },
   {
    "full_name": "tt-a1i/archify",
    "language": "JavaScript",
-   "delta": 498,
-   "stars": 72749
+   "delta": 782,
+   "stars": 73531
   },
   {
-   "full_name": "affaan-m/ECC",
-   "language": "JavaScript",
-   "delta": 450,
-   "stars": 268377
+   "full_name": "mvschwarz/openrig",
+   "language": "TypeScript",
+   "delta": 781,
+   "stars": 1705
+  },
+  {
+   "full_name": "dzhng/jevgrep",
+   "language": "TypeScript",
+   "delta": 704,
+   "stars": 1422
+  },
+  {
+   "full_name": "mexicat/pdoom-video",
+   "language": "TypeScript",
+   "delta": 703,
+   "stars": 1772
   },
   {
    "full_name": "DietrichGebert/ponytail",
    "language": "JavaScript",
-   "delta": 433,
-   "stars": 146895
+   "delta": 652,
+   "stars": 147547
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 431,
-   "stars": 270676
+   "delta": 645,
+   "stars": 271321
   },
   {
-   "full_name": "feitangyuan/onetake",
-   "language": "Python",
-   "delta": 359,
-   "stars": 533
+   "full_name": "Niko1221/Strata",
+   "language": "C++",
+   "delta": 608,
+   "stars": 1070
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 605,
+   "stars": 268982
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29T08:19:46+08:00",
+ "generated_at": "2026-09-30T07:37:02+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -17,10 +17,11 @@
   "2026-09-26",
   "2026-09-27",
   "2026-09-28",
-  "2026-09-29"
+  "2026-09-29",
+  "2026-09-30"
  ],
- "tracked_repos": 1883,
- "latest_date": "2026-09-29",
+ "tracked_repos": 1936,
+ "latest_date": "2026-09-30",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -197,6 +198,17 @@
    "top_delta": 4048,
    "new_repos": 92,
    "prev": "2026-09-28"
+  },
+  {
+   "date": "2026-09-30",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 37925,
+   "gainers": 622,
+   "top_name": "debpalash/VoiceStudio",
+   "top_delta": 3988,
+   "new_repos": 56,
+   "prev": "2026-09-29"
   }
  ],
  "cumulative_top": [
@@ -295,92 +307,92 @@
   {
    "full_name": "debpalash/VoiceStudio",
    "language": "Python",
-   "delta": 4048,
-   "stars": 44010
+   "delta": 3988,
+   "stars": 47998
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 3957,
-   "stars": 24528
+   "delta": 3516,
+   "stars": 28044
   },
   {
    "full_name": "vectorize-io/hindsight",
    "language": "Python",
-   "delta": 3772,
-   "stars": 40948
+   "delta": 1853,
+   "stars": 42801
   },
   {
    "full_name": "paperclipai/paperclip",
    "language": "TypeScript",
-   "delta": 3049,
-   "stars": 92757
+   "delta": 1660,
+   "stars": 94417
+  },
+  {
+   "full_name": "yetone/magpie",
+   "language": "Go",
+   "delta": 1043,
+   "stars": 2631
   },
   {
    "full_name": "cdyforever/how-to-live-better",
    "language": "HTML",
-   "delta": 1608,
-   "stars": 3866
-  },
-  {
-   "full_name": "dream-num/univer",
-   "language": "TypeScript",
-   "delta": 1113,
-   "stars": 21239
+   "delta": 1019,
+   "stars": 4885
   },
   {
    "full_name": "NandhaKishorM/laya",
    "language": "Python",
-   "delta": 1017,
-   "stars": 27696
+   "delta": 899,
+   "stars": 28595
   },
   {
-   "full_name": "tt-a1i/archify",
-   "language": "JavaScript",
-   "delta": 782,
-   "stars": 73531
-  },
-  {
-   "full_name": "mvschwarz/openrig",
-   "language": "TypeScript",
-   "delta": 781,
-   "stars": 1705
-  },
-  {
-   "full_name": "dzhng/jevgrep",
-   "language": "TypeScript",
-   "delta": 704,
-   "stars": 1422
-  },
-  {
-   "full_name": "mexicat/pdoom-video",
-   "language": "TypeScript",
-   "delta": 703,
-   "stars": 1772
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 652,
-   "stars": 147547
+   "full_name": "firelex/jeff",
+   "language": "Python",
+   "delta": 763,
+   "stars": 1003
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 645,
-   "stars": 271321
+   "delta": 744,
+   "stars": 272065
   },
   {
-   "full_name": "Niko1221/Strata",
-   "language": "C++",
-   "delta": 608,
-   "stars": 1070
+   "full_name": "tt-a1i/archify",
+   "language": "JavaScript",
+   "delta": 708,
+   "stars": 74239
+  },
+  {
+   "full_name": "mvschwarz/openrig",
+   "language": "TypeScript",
+   "delta": 705,
+   "stars": 2410
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 653,
+   "stars": 148200
   },
   {
    "full_name": "affaan-m/ECC",
    "language": "JavaScript",
-   "delta": 605,
-   "stars": 268982
+   "delta": 646,
+   "stars": 269628
+  },
+  {
+   "full_name": "Niko1221/Strata",
+   "language": "C++",
+   "delta": 631,
+   "stars": 1701
+  },
+  {
+   "full_name": "shihabal3amri/DiPlay",
+   "language": "Kotlin",
+   "delta": 602,
+   "stars": 928
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

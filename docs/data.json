@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05T18:06:59+08:00",
+ "generated_at": "2026-10-05T18:14:54+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -25,7 +25,7 @@
   "2026-10-04",
   "2026-10-05"
  ],
- "tracked_repos": 2426,
+ "tracked_repos": 2425,
  "latest_date": "2026-10-05",
  "daily_summary": [
   {
@@ -261,13 +261,13 @@
   },
   {
    "date": "2026-10-05",
-   "repos": 853,
+   "repos": 800,
    "is_first": false,
-   "total_gain": 50745,
-   "gainers": 549,
+   "total_gain": 49819,
+   "gainers": 512,
    "top_name": "eternity4719/HowToLiveBetter",
    "top_delta": 4889,
-   "new_repos": 181,
+   "new_repos": 180,
    "prev": "2026-10-04"
   }
  ],
@@ -457,6 +457,7 @@
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",
  "reports": [
+  "2026-W40_2026-09-28_2026-10-04.html",
   "2026-W39_2026-09-21_2026-09-27.html",
   "2026-W38_2026-09-14_2026-09-20.html",
   "2026-W38_2026-09-14_2026-09-14.html"

@@ -98,6 +98,20 @@ def upsert_repos(conn: sqlite3.Connection, repos: list[dict], first_seen: str) -
       is_archived  = excluded.is_archived,
       is_fork      = excluded.is_fork
     """
+    # 批次内去重，避免 UNIQUE(full_name) 冲突：
+    # 1) 先按 repo_id 保留最后一条（文件按日期排序，后面的更新）；
+    # 2) 再按 full_name 保留最后一条。仓库改名或删除重建时，同一 full_name
+    #    会先后挂在不同 repo_id 上；若把旧快照里的旧名字重新灌回已经
+    #    拥有新仓库的库（CI 里 site 在 run-daily 之后二次回灌），会与
+    #    新仓库的行撞车。去重后"最新数据赢"，幂等且不回退。
+    by_id: dict = {}
+    for r in repos:
+        by_id[r["repo_id"]] = r
+    by_name: dict = {}
+    for r in by_id.values():
+        by_name[r["full_name"]] = r
+    repos = list(by_name.values())
+
     payload = []
     for r in repos:
         row = dict(r)

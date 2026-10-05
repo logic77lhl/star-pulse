@@ -35,26 +35,26 @@
 
 | 排名 | 项目 | 当前星数 | 创建日期 | 语言 | 分类 |
 |---:|---|---:|---|---|---|
-| 1 | [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT) | 5,888 | 2026-09-28 | TypeScript | 其他 |
-| 2 | [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | 3,487 | 2026-09-30 | Python | Agent Skill |
-| 3 | [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots) | 3,377 | 2026-09-29 | TypeScript | 其他 |
+| 1 | [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT) | 5,904 | 2026-09-28 | TypeScript | 其他 |
+| 2 | [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | 3,522 | 2026-09-30 | Python | Agent Skill |
+| 3 | [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots) | 3,401 | 2026-09-29 | TypeScript | 其他 |
 | 4 | [feder-cr/dots](https://github.com/feder-cr/dots) | 2,610 | 2026-09-29 | Python | Agent Skill |
-| 5 | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) | 1,458 | 2026-09-30 | Python | Agent Skill |
-| 6 | [wy51ai/floorplan-3d](https://github.com/wy51ai/floorplan-3d) | 1,411 | 2026-09-29 | HTML | 可视化 |
-| 7 | [firelex/jeff](https://github.com/firelex/jeff) | 1,379 | 2026-09-28 | Python | 模型与训练 |
-| 8 | [facebookincubator/muse-gadget-sdk](https://github.com/facebookincubator/muse-gadget-sdk) | 1,310 | 2026-10-02 | C | 开发工具 |
-| 9 | [storytold/photocraft](https://github.com/storytold/photocraft) | 1,305 | 2026-09-30 | Rust | 其他 |
-| 10 | [edenfunf/reelmimic](https://github.com/edenfunf/reelmimic) | 1,283 | 2026-09-28 | JavaScript | Agent Skill |
-| 11 | [QingYunA/answer-me-with-html](https://github.com/QingYunA/answer-me-with-html) | 1,253 | 2026-10-02 | JavaScript | Agent Skill |
-| 12 | [nykooi1/vibe-wise](https://github.com/nykooi1/vibe-wise) | 1,186 | 2026-09-29 | Python | Agent Skill |
-| 13 | [kargulstudio/sales-crm](https://github.com/kargulstudio/sales-crm) | 1,165 | 2026-10-04 | TypeScript | 其他 |
-| 14 | [CAPCOM-TD-OSS/REDox](https://github.com/CAPCOM-TD-OSS/REDox) | 1,048 | 2026-09-30 | C# | 其他 |
-| 15 | [omlahore/RemoveMacAI](https://github.com/omlahore/RemoveMacAI) | 935 | 2026-09-29 | Swift | 其他 |
-| 16 | [chasmlol/SkyCraft](https://github.com/chasmlol/SkyCraft) | 918 | 2026-09-30 | C++ | Agent Skill |
-| 17 | [Edwardxlai/easyread](https://github.com/Edwardxlai/easyread) | 794 | 2026-09-30 | Python | 科研教育 |
-| 18 | [openai/mcp-extensions](https://github.com/openai/mcp-extensions) | 761 | 2026-09-29 | TypeScript | Agent Skill |
-| 19 | [sganggs/Stronghold-Protocol](https://github.com/sganggs/Stronghold-Protocol) | 637 | 2026-10-02 | JavaScript | 其他 |
-| 20 | [ESPARGOS/esp-sdr](https://github.com/ESPARGOS/esp-sdr) | 599 | 2026-09-28 | C | 其他 |
+| 5 | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) | 1,467 | 2026-09-30 | Python | Agent Skill |
+| 6 | [wy51ai/floorplan-3d](https://github.com/wy51ai/floorplan-3d) | 1,412 | 2026-09-29 | HTML | 可视化 |
+| 7 | [storytold/photocraft](https://github.com/storytold/photocraft) | 1,394 | 2026-09-30 | Rust | 其他 |
+| 8 | [firelex/jeff](https://github.com/firelex/jeff) | 1,379 | 2026-09-28 | Python | 模型与训练 |
+| 9 | [facebookincubator/muse-gadget-sdk](https://github.com/facebookincubator/muse-gadget-sdk) | 1,320 | 2026-10-02 | C | 开发工具 |
+| 10 | [edenfunf/reelmimic](https://github.com/edenfunf/reelmimic) | 1,294 | 2026-09-28 | JavaScript | Agent Skill |
+| 11 | [QingYunA/answer-me-with-html](https://github.com/QingYunA/answer-me-with-html) | 1,288 | 2026-10-02 | JavaScript | Agent Skill |
+| 12 | [nykooi1/vibe-wise](https://github.com/nykooi1/vibe-wise) | 1,217 | 2026-09-29 | Python | Agent Skill |
+| 13 | [kargulstudio/sales-crm](https://github.com/kargulstudio/sales-crm) | 1,208 | 2026-10-04 | TypeScript | 其他 |
+| 14 | [CAPCOM-TD-OSS/REDox](https://github.com/CAPCOM-TD-OSS/REDox) | 1,051 | 2026-09-30 | C# | 其他 |
+| 15 | [omlahore/RemoveMacAI](https://github.com/omlahore/RemoveMacAI) | 1,021 | 2026-09-29 | Swift | 其他 |
+| 16 | [chasmlol/SkyCraft](https://github.com/chasmlol/SkyCraft) | 926 | 2026-09-30 | C++ | Agent Skill |
+| 17 | [Edwardxlai/easyread](https://github.com/Edwardxlai/easyread) | 796 | 2026-09-30 | Python | 科研教育 |
+| 18 | [openai/mcp-extensions](https://github.com/openai/mcp-extensions) | 764 | 2026-09-29 | TypeScript | Agent Skill |
+| 19 | [sganggs/Stronghold-Protocol](https://github.com/sganggs/Stronghold-Protocol) | 657 | 2026-10-02 | JavaScript | 其他 |
+| 20 | [ESPARGOS/esp-sdr](https://github.com/ESPARGOS/esp-sdr) | 604 | 2026-09-28 | C | 其他 |
 
 ## 分类透视
 

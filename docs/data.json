@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05T19:36:23+08:00",
+ "generated_at": "2026-10-05T19:36:55+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -25,7 +25,7 @@
   "2026-10-04",
   "2026-10-05"
  ],
- "tracked_repos": 2497,
+ "tracked_repos": 2383,
  "latest_date": "2026-10-05",
  "daily_summary": [
   {
@@ -261,13 +261,13 @@
   },
   {
    "date": "2026-10-05",
-   "repos": 920,
+   "repos": 800,
    "is_first": false,
-   "total_gain": 52035,
-   "gainers": 529,
+   "total_gain": 48891,
+   "gainers": 525,
    "top_name": "eternity4719/HowToLiveBetter",
    "top_delta": 5068,
-   "new_repos": 255,
+   "new_repos": 140,
    "prev": "2026-10-04"
   }
  ],
@@ -389,12 +389,6 @@
    "stars": 91382
   },
   {
-   "full_name": "pbakaus/impeccable",
-   "language": "JavaScript",
-   "delta": 1443,
-   "stars": 76685
-  },
-  {
    "full_name": "shihabal3amri/DiPlay",
    "language": "Kotlin",
    "delta": 1388,
@@ -443,16 +437,22 @@
    "stars": 3522
   },
   {
-   "full_name": "OpenCut-app/OpenCut",
-   "language": "TypeScript",
-   "delta": 886,
-   "stars": 92471
-  },
-  {
    "full_name": "omlahore/RemoveMacAI",
    "language": "Swift",
    "delta": 883,
    "stars": 1021
+  },
+  {
+   "full_name": "thedotmack/claude-mem",
+   "language": "TypeScript",
+   "delta": 810,
+   "stars": 96354
+  },
+  {
+   "full_name": "pingdotgg/t3code",
+   "language": "TypeScript",
+   "delta": 723,
+   "stars": 25377
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

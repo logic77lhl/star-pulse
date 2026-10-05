@@ -73,7 +73,11 @@ jobs:
         run: |
           git config user.name  "star-pulse-bot"
           git config user.email "star-pulse-bot@users.noreply.github.com"
-          git add data/snapshots data/history docs
+          # 容错 add：data/history 只有在真的裁剪过之后才会存在，
+          # 直接写进 pathspec 会让 git 以 "pathspec did not match" 整步失败。
+          for p in data/snapshots data/history docs; do
+            if [ -e "$p" ]; then git add -A -- "$p"; fi
+          done
           if git diff --staged --quiet; then
             echo "没有新数据，跳过提交"
             exit 0

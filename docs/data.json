@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05T18:14:54+08:00",
+ "generated_at": "2026-10-05T19:36:23+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -25,12 +25,12 @@
   "2026-10-04",
   "2026-10-05"
  ],
- "tracked_repos": 2425,
+ "tracked_repos": 2497,
  "latest_date": "2026-10-05",
  "daily_summary": [
   {
    "date": "2026-09-14",
-   "repos": 800,
+   "repos": 799,
    "is_first": true,
    "total_gain": 0,
    "gainers": 0,
@@ -41,7 +41,7 @@
   },
   {
    "date": "2026-09-15",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
    "total_gain": 22353,
    "gainers": 532,
@@ -52,7 +52,7 @@
   },
   {
    "date": "2026-09-16",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
    "total_gain": 27293,
    "gainers": 514,
@@ -63,7 +63,7 @@
   },
   {
    "date": "2026-09-17",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
    "total_gain": 26717,
    "gainers": 534,
@@ -74,7 +74,7 @@
   },
   {
    "date": "2026-09-18",
-   "repos": 618,
+   "repos": 617,
    "is_first": false,
    "total_gain": 29192,
    "gainers": 474,
@@ -107,18 +107,18 @@
   },
   {
    "date": "2026-09-21",
-   "repos": 683,
+   "repos": 682,
    "is_first": false,
    "total_gain": 37337,
    "gainers": 516,
    "top_name": "browser-use/jev-ultrafast",
    "top_delta": 3493,
-   "new_repos": 77,
+   "new_repos": 76,
    "prev": "2026-09-20"
   },
   {
    "date": "2026-09-22",
-   "repos": 716,
+   "repos": 715,
    "is_first": false,
    "total_gain": 46661,
    "gainers": 525,
@@ -129,7 +129,7 @@
   },
   {
    "date": "2026-09-23",
-   "repos": 740,
+   "repos": 739,
    "is_first": false,
    "total_gain": 39260,
    "gainers": 539,
@@ -140,7 +140,7 @@
   },
   {
    "date": "2026-09-24",
-   "repos": 753,
+   "repos": 752,
    "is_first": false,
    "total_gain": 36536,
    "gainers": 563,
@@ -151,7 +151,7 @@
   },
   {
    "date": "2026-09-25",
-   "repos": 778,
+   "repos": 777,
    "is_first": false,
    "total_gain": 30961,
    "gainers": 579,
@@ -162,7 +162,7 @@
   },
   {
    "date": "2026-09-26",
-   "repos": 787,
+   "repos": 786,
    "is_first": false,
    "total_gain": 27359,
    "gainers": 569,
@@ -173,18 +173,18 @@
   },
   {
    "date": "2026-09-27",
-   "repos": 798,
+   "repos": 796,
    "is_first": false,
    "total_gain": 28311,
    "gainers": 617,
    "top_name": "paperclipai/paperclip",
    "top_delta": 2332,
-   "new_repos": 64,
+   "new_repos": 63,
    "prev": "2026-09-26"
   },
   {
    "date": "2026-09-28",
-   "repos": 800,
+   "repos": 798,
    "is_first": false,
    "total_gain": 33073,
    "gainers": 615,
@@ -195,7 +195,7 @@
   },
   {
    "date": "2026-09-29",
-   "repos": 800,
+   "repos": 798,
    "is_first": false,
    "total_gain": 42536,
    "gainers": 585,
@@ -206,7 +206,7 @@
   },
   {
    "date": "2026-09-30",
-   "repos": 800,
+   "repos": 798,
    "is_first": false,
    "total_gain": 37902,
    "gainers": 621,
@@ -217,7 +217,7 @@
   },
   {
    "date": "2026-10-01",
-   "repos": 800,
+   "repos": 798,
    "is_first": false,
    "total_gain": 38925,
    "gainers": 556,
@@ -228,7 +228,7 @@
   },
   {
    "date": "2026-10-02",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
    "total_gain": 28420,
    "gainers": 526,
@@ -239,7 +239,7 @@
   },
   {
    "date": "2026-10-03",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
    "total_gain": 26645,
    "gainers": 550,
@@ -250,7 +250,7 @@
   },
   {
    "date": "2026-10-04",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
    "total_gain": 27732,
    "gainers": 548,
@@ -261,13 +261,13 @@
   },
   {
    "date": "2026-10-05",
-   "repos": 800,
+   "repos": 920,
    "is_first": false,
-   "total_gain": 49819,
-   "gainers": 512,
+   "total_gain": 52035,
+   "gainers": 529,
    "top_name": "eternity4719/HowToLiveBetter",
-   "top_delta": 4889,
-   "new_repos": 180,
+   "top_delta": 5068,
+   "new_repos": 255,
    "prev": "2026-10-04"
   }
  ],
@@ -367,26 +367,26 @@
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 4889,
-   "stars": 42094
+   "delta": 5068,
+   "stars": 42273
   },
   {
    "full_name": "Niko1221/Strata",
    "language": "C++",
-   "delta": 3849,
-   "stars": 12270
+   "delta": 4049,
+   "stars": 12470
   },
   {
    "full_name": "DietrichGebert/ponytail",
    "language": "JavaScript",
-   "delta": 2122,
-   "stars": 155429
+   "delta": 2190,
+   "stars": 155497
   },
   {
    "full_name": "Panniantong/Agent-Reach",
    "language": "Python",
-   "delta": 1584,
-   "stars": 91327
+   "delta": 1639,
+   "stars": 91382
   },
   {
    "full_name": "pbakaus/impeccable",
@@ -397,44 +397,50 @@
   {
    "full_name": "shihabal3amri/DiPlay",
    "language": "Kotlin",
-   "delta": 1332,
-   "stars": 4308
+   "delta": 1388,
+   "stars": 4364
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 1197,
-   "stars": 276525
-  },
-  {
-   "full_name": "affaan-m/ECC",
-   "language": "JavaScript",
-   "delta": 1033,
-   "stars": 273232
+   "delta": 1269,
+   "stars": 276597
   },
   {
    "full_name": "tt-a1i/archify",
    "language": "JavaScript",
-   "delta": 1022,
-   "stars": 77759
+   "delta": 1076,
+   "stars": 77813
   },
   {
-   "full_name": "QingYunA/answer-me-with-html",
+   "full_name": "affaan-m/ECC",
    "language": "JavaScript",
-   "delta": 956,
-   "stars": 1253
+   "delta": 1068,
+   "stars": 273267
   },
   {
    "full_name": "storytold/photocraft",
    "language": "Rust",
-   "delta": 954,
-   "stars": 1305
+   "delta": 1043,
+   "stars": 1394
+  },
+  {
+   "full_name": "QingYunA/answer-me-with-html",
+   "language": "JavaScript",
+   "delta": 991,
+   "stars": 1288
   },
   {
    "full_name": "CopilotKit/OpenDots",
    "language": "TypeScript",
-   "delta": 936,
-   "stars": 3377
+   "delta": 960,
+   "stars": 3401
+  },
+  {
+   "full_name": "rehan-remade/universal-modder",
+   "language": "Python",
+   "delta": 914,
+   "stars": 3522
   },
   {
    "full_name": "OpenCut-app/OpenCut",
@@ -443,16 +449,10 @@
    "stars": 92471
   },
   {
-   "full_name": "rehan-remade/universal-modder",
-   "language": "Python",
-   "delta": 879,
-   "stars": 3487
-  },
-  {
    "full_name": "omlahore/RemoveMacAI",
    "language": "Swift",
-   "delta": 797,
-   "stars": 935
+   "delta": 883,
+   "stars": 1021
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

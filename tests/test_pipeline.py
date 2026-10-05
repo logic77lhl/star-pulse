@@ -14,7 +14,9 @@ whatstrending.ai 日快照），所以可以直接拿来当断言依据。
 
 from __future__ import annotations
 
+import json
 import os
+import sqlite3
 import sys
 import tempfile
 from datetime import date, timedelta
@@ -176,8 +178,10 @@ def test_json_roundtrip(tmp: Path) -> None:
     settings, conn = _seed(tmp / "round")
     fresh = db.connect(tmp / "round" / "data" / "rebuilt.db")
     db.init_schema(fresh)
-    repos, snaps = db.import_snapshot_jsons(fresh, settings.snapshots_dir)
+    res = db.import_snapshot_jsons(fresh, settings.snapshots_dir)
+    snaps = res.snaps
     assert snaps == len(PUBLISHED_W37) * 2, f"回灌条数异常：{snaps}"
+    assert res.skipped == 0 and res.bad_files == 0, f"正常文件不该被跳过：{res}"
     md, _h, meta = render.build_report(settings, fresh, START, END)
     assert [i["full_name"] for i in meta["top"]] == [
         f for f, *_ in sorted(PUBLISHED_W37, key=lambda x: -x[2])
@@ -408,6 +412,207 @@ def test_candidate_budget(tmp: Path) -> None:
     print("  [PASS] 候选池预算：续期保底生效且挑最久的，总量不越界（reserve=0 退回旧行为）")
 
 
+def _repo_row(rid: int, full_name: str) -> dict:
+    owner, _, name = full_name.partition("/")
+    return {
+        "repo_id": rid, "full_name": full_name, "owner": owner, "name": name,
+        "description": None, "language": None, "topics": None, "homepage": None,
+        "license": None, "repo_created": None, "is_archived": 0, "is_fork": 0,
+    }
+
+
+def _snap_row(rid: int, day: str, stars: int) -> dict:
+    return {
+        "repo_id": rid, "snap_date": day, "stars": stars, "forks": 0,
+        "open_issues": 0, "pushed_at": None, "source": "test",
+        "collected_at": f"{day}T00:00:00Z",
+    }
+
+
+def test_rename_recreate_no_crash(tmp: Path) -> None:
+    """仓库删除重建：同一个 full_name 挂到新的 repo_id，写入绝不能崩。
+
+    这是真实事故的根因 —— repo_id 不在库里、但 full_name 已被库中另一行占用时，
+    INSERT 违反 UNIQUE(full_name)，而 ON CONFLICT(repo_id) 无法处理它。
+    """
+    settings = load_settings(tmp / "rename")
+    conn = db.connect(settings.db_path)
+    db.init_schema(conn)
+
+    db.upsert_repos(conn, [_repo_row(100, "a/b")], "2026-01-01")
+    db.upsert_snapshots(conn, [_snap_row(100, "2026-01-01", 10)])
+
+    # 删除重建：新 repo_id 复用同名 —— 旧版这里会抛 IntegrityError
+    db.upsert_repos(conn, [_repo_row(200, "a/b")], "2026-01-02")
+
+    rows = conn.execute(
+        "SELECT repo_id, full_name FROM repo ORDER BY repo_id"
+    ).fetchall()
+    assert [(r["repo_id"], r["full_name"]) for r in rows] == [(100, "a/b"), (200, "a/b")], (
+        f"两个 repo_id 应作为两行共存，实际 {[dict(r) for r in rows]}"
+    )
+    kept = conn.execute(
+        "SELECT stars FROM snapshot WHERE repo_id = 100 AND snap_date = '2026-01-01'"
+    ).fetchone()
+    assert kept and kept["stars"] == 10, "旧仓库的快照历史不能丢"
+    print("  [PASS] 删除重建（同名不同 repo_id）不再崩溃，两行共存且历史保留")
+
+
+def test_no_orphan_snapshots(tmp: Path) -> None:
+    """删除重建后，旧 repo_id 的快照不能变成孤儿（否则 JOIN 类查询静默丢历史）。"""
+    snaps_dir = tmp / "orphan" / "data" / "snapshots"
+    snaps_dir.mkdir(parents=True)
+    (snaps_dir / "2026-01-01.json").write_text(json.dumps({
+        "date": "2026-01-01",
+        "repos": [{"full_name": "a/b", "repo_id": 100, "stars": 10, "forks": 0,
+                   "open_issues": 0, "is_archived": 0, "is_fork": 0}],
+    }, ensure_ascii=False), encoding="utf-8")
+    (snaps_dir / "2026-01-02.json").write_text(json.dumps({
+        "date": "2026-01-02",
+        "repos": [{"full_name": "a/b", "repo_id": 200, "stars": 20, "forks": 0,
+                   "open_issues": 0, "is_archived": 0, "is_fork": 0}],
+    }, ensure_ascii=False), encoding="utf-8")
+
+    conn = db.connect(tmp / "orphan" / "o.db")
+    db.init_schema(conn)
+    db.import_snapshot_jsons(conn, snaps_dir)
+
+    assert db.orphan_snapshot_count(conn) == 0, "不应产生孤儿快照"
+    ids = {r["repo_id"] for r in conn.execute("SELECT repo_id FROM repo")}
+    assert ids == {100, 200}, f"两个 repo_id 都应保留，实际 {ids}"
+    days = {r["snap_date"] for r in conn.execute("SELECT snap_date FROM snapshot")}
+    assert days == {"2026-01-01", "2026-01-02"}, f"两天的快照都应在，实际 {days}"
+    print("  [PASS] 删除重建后无孤儿快照，两段历史都还在")
+
+
+def test_summary_counts_match_join_views(tmp: Path) -> None:
+    """「每天入库数」必须与「项目名单」同口径，否则页面上的数字自相矛盾。"""
+    settings, conn = _seed(tmp / "counts")
+    summary = analyze.daily_summary(conn)
+    assert summary, "应当有汇总数据"
+    for item in summary:
+        projects = analyze.project_rows(conn, item["date"])
+        assert item["repos"] == len(projects), (
+            f"{item['date']} 汇总口径 {item['repos']} != 名单口径 {len(projects)}"
+        )
+    print(f"  [PASS] 逐日入库数与项目名单口径一致（{len(summary)} 天）")
+
+
+def test_import_tolerates_malformed_rows(tmp: Path) -> None:
+    """畸形快照文件/行必须被跳过并计数，不能让整个回灌（乃至所有命令）失败。"""
+    snaps_dir = tmp / "malformed" / "data" / "snapshots"
+    snaps_dir.mkdir(parents=True)
+
+    (snaps_dir / "2026-01-01.json").write_text(json.dumps({
+        "date": "2026-01-01",
+        "repos": [{"full_name": "bad/stars", "repo_id": 1, "stars": "not-an-int"}],
+    }, ensure_ascii=False), encoding="utf-8")
+    (snaps_dir / "2026-01-02.json").write_text(json.dumps({
+        "date": "2026-01-02",
+        "repos": [{"full_name": "huge/id", "repo_id": 2 ** 63, "stars": 5}],
+    }, ensure_ascii=False), encoding="utf-8")
+    (snaps_dir / "2026-01-03.json").write_text(json.dumps({
+        "date": "2026-01-03",
+        "repos": [{"repo_id": 3, "stars": 5}],
+    }, ensure_ascii=False), encoding="utf-8")
+    (snaps_dir / "2026-01-04.json").write_text(json.dumps({
+        "date": "2026-01-04", "repos": "not-a-list",
+    }, ensure_ascii=False), encoding="utf-8")
+    (snaps_dir / "2026-01-05.json").write_text('{"date": "2026-01-05", "repos": [',
+                                               encoding="utf-8")
+    (snaps_dir / "2026-01-06.json").write_text(json.dumps({
+        "date": "2026-01-06",
+        "repos": [{"full_name": "good/repo", "repo_id": 9, "stars": 42}],
+    }, ensure_ascii=False), encoding="utf-8")
+
+    conn = db.connect(tmp / "malformed" / "m.db")
+    db.init_schema(conn)
+    res = db.import_snapshot_jsons(conn, snaps_dir)
+
+    assert res.bad_files == 2, f"应有 2 个坏文件（非数组 / 截断 JSON），实际 {res.bad_files}"
+    assert res.skipped == 3, f"应跳过 3 行（坏 stars / 越界 id / 缺 full_name），实际 {res.skipped}"
+    assert res.snaps == 1, f"只有完好行的快照应被写入，实际 {res.snaps}"
+    assert res.repos == 2, (
+        f"坏 stars 的 repo 行应保留（只丢快照），加上完好行共 2 个，实际 {res.repos}"
+    )
+    good = conn.execute(
+        "SELECT stars FROM snapshot WHERE repo_id = 9 AND snap_date = '2026-01-06'"
+    ).fetchone()
+    assert good and good["stars"] == 42, "完好行必须被正确写入"
+    print("  [PASS] 畸形快照逐行容错：坏行跳过并计数，完好行照常写入")
+
+
+_LEGACY_REPO_DDL = """
+CREATE TABLE repo (
+  repo_id      INTEGER PRIMARY KEY,
+  full_name    TEXT    NOT NULL UNIQUE,
+  owner        TEXT    NOT NULL,
+  name         TEXT    NOT NULL,
+  description  TEXT,
+  language     TEXT,
+  topics       TEXT,
+  homepage     TEXT,
+  license      TEXT,
+  repo_created TEXT,
+  first_seen   TEXT    NOT NULL,
+  is_archived  INTEGER DEFAULT 0,
+  is_fork      INTEGER DEFAULT 0
+);
+CREATE INDEX idx_repo_created ON repo(repo_created);
+"""
+
+
+def test_schema_migration_from_legacy(tmp: Path) -> None:
+    """v1 库（full_name 带 UNIQUE）必须被就地升级到 v2，且不丢数据。"""
+    conn = db.connect(tmp / "legacy" / "old.db")
+    conn.executescript(_LEGACY_REPO_DDL)
+    conn.execute(
+        "INSERT INTO repo (repo_id, full_name, owner, name, first_seen) "
+        "VALUES (1, 'a/b', 'a', 'b', '2026-01-01')"
+    )
+    conn.commit()
+    assert db._repo_is_legacy(conn), "构造的库应当被识别为旧结构"
+
+    db.init_schema(conn)
+
+    version = conn.execute("PRAGMA user_version").fetchone()[0]
+    assert version == db.SCHEMA_VERSION, f"user_version 应为 {db.SCHEMA_VERSION}，实际 {version}"
+    uniques = [r for r in conn.execute("PRAGMA index_list(repo)").fetchall() if r[2]]
+    assert not uniques, f"迁移后不应再有唯一索引：{uniques}"
+    kept = conn.execute("SELECT repo_id, full_name FROM repo").fetchall()
+    assert [(r["repo_id"], r["full_name"]) for r in kept] == [(1, "a/b")], "迁移不能丢行"
+    idx = conn.execute(
+        "SELECT 1 FROM sqlite_master WHERE type = 'index' AND name = 'idx_repo_created'"
+    ).fetchone()
+    assert idx, "idx_repo_created 应当被重建到新表上"
+
+    # 迁移后同名新 repo_id 必须能写入
+    db.upsert_repos(conn, [_repo_row(2, "a/b")], "2026-01-02")
+    assert conn.execute("SELECT COUNT(*) c FROM repo").fetchone()["c"] == 2
+    print("  [PASS] v1→v2 就地迁移：约束移除、数据保留、随后可写入同名新仓库")
+
+
+def test_daily_batch_is_atomic(tmp: Path) -> None:
+    """一天的采集必须整批成功或整批失败，不能留下半批状态。"""
+    conn = db.connect(tmp / "atomic" / "a.db")
+    db.init_schema(conn)
+
+    bad_snap = {"repo_id": 1, "snap_date": "2026-01-01", "stars": 1}  # 缺多个必填字段
+    raised = False
+    try:
+        db.save_daily_batch(
+            conn, [_repo_row(1, "a/b")], [bad_snap], [(1, "2026-01-01", "seed", None)],
+            "2026-01-01",
+        )
+    except Exception:  # noqa: BLE001
+        raised = True
+    assert raised, "缺字段的快照应当让整批失败"
+    for table in ("repo", "snapshot", "discovery"):
+        n = conn.execute(f"SELECT COUNT(*) c FROM {table}").fetchone()["c"]
+        assert n == 0, f"事务回滚后 {table} 不应有残留行，实际 {n}"
+    print("  [PASS] 单日采集事务原子：中途失败后三张表都无残留")
+
+
 def main() -> int:
     print("star-pulse 回归测试")
     print("=" * 58)
@@ -422,6 +627,12 @@ def main() -> int:
         test_site_chinese(tmp)
         test_translate_without_llm(tmp)
         test_candidate_budget(tmp)
+        test_rename_recreate_no_crash(tmp)
+        test_no_orphan_snapshots(tmp)
+        test_summary_counts_match_join_views(tmp)
+        test_import_tolerates_malformed_rows(tmp)
+        test_schema_migration_from_legacy(tmp)
+        test_daily_batch_is_atomic(tmp)
     print("=" * 58)
     print("全部通过")
     return 0

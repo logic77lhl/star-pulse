@@ -23,14 +23,18 @@ import sqlite3
 
 from . import db, github_api, trending
 from .config import Settings
-from .net import Http
+from .net import BudgetExceeded, Http
 
 log = logging.getLogger("star_pulse.pipeline")
 
 
-def _pool_names(conn: sqlite3.Connection, limit: int) -> list[str]:
-    """已有候选池里的仓库名，按「已追踪最久」排序（见 db.pool_refresh_repos）。"""
-    return [row["full_name"] for row in db.pool_refresh_repos(conn, limit)]
+def _pool_refs(conn: sqlite3.Connection, limit: int) -> list[tuple[int, str]]:
+    """已有候选池里的 (repo_id, full_name)，按「已追踪最久」排序（见 db.pool_refresh_repos）。
+
+    判重必须用 repo_id 而不是名字：删除重建后同名会对应两个 repo_id，
+    按名字判重会把新仓库误判成「本轮已采过」而跳过。
+    """
+    return [(row["repo_id"], row["full_name"]) for row in db.pool_refresh_repos(conn, limit)]
 
 
 def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
@@ -83,6 +87,7 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
     # 计数放进 dict，这样即使中途异常也能带着已有成绩落到持久化步骤
     counts = {"watchlist": 0, "trending": 0, "search": 0, "pool_refresh": 0}
     errors: list[str] = []
+    budget_exceeded = False
 
     try:
         # ── 渠道 A：种子池（watchlist）──────────────────────────
@@ -112,13 +117,10 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
         # 最久」把保底名额续上，剩下的名额才交给搜索去填新项目。
         # 保底名额见 pool_refresh_reserve；设为 0 即退回「搜索优先」的旧行为。
         pool_ceiling = min(cap, len(seen_ids) + reserve)
-        for name in _pool_names(conn, cap):
+        for rid, name in _pool_refs(conn, cap):
             if len(seen_ids) >= pool_ceiling:
                 break
-            existing = conn.execute(
-                "SELECT repo_id FROM repo WHERE lower(full_name) = ?", (name.lower(),)
-            ).fetchone()
-            if existing and existing["repo_id"] in seen_ids:
+            if rid in seen_ids:
                 continue  # 本轮已经通过前面渠道采过了
             repo = github_api.get_repo(http, name)
             if repo:
@@ -150,6 +152,13 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
                 accept(repo, "search_api", "gh_search", rank)
                 counts["search"] += 1
 
+    except BudgetExceeded as exc:
+        # 配额/等待预算耗尽。这里**不**上抛：既定设计是「部分数据照常落库并提交」，
+        # 上抛会把已经采到的仓库一起丢掉。改成在 stats 上打标，由 CLI 用退出码 3
+        # 告警 —— 之前它被下面的宽 except 吞掉，cli 里的 except BudgetExceeded 是死代码。
+        budget_exceeded = True
+        errors.append(f"BudgetExceeded: {exc}")
+        log.error("配额/等待预算耗尽，将保存已获取的 %d 个仓库：%s", len(repo_rows), exc)
     except Exception as exc:  # noqa: BLE001
         # 关键：任何意外都不能丢掉已经采到的数据。
         # 之前这里没有兜底，一次响应体截断就让整轮 800 个仓库全部作废。
@@ -157,22 +166,29 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
         errors.append(msg)
         log.exception("采集中途出错，将保存已获取的 %d 个仓库", len(repo_rows))
 
-    # ── 落库（无论上方是否出错都执行）──
-    db.upsert_repos(conn, repo_rows, today)
-    n_snap = db.upsert_snapshots(conn, snap_rows)
-    for rid, items in channels.items():
-        for channel, rank in items:
-            db.add_discovery(conn, today, channel, [(int(rid), rank)])
-
+    # ── 落库 ──
+    # JSON 先落盘、DB 后写：JSON 是 git 里的事实来源，写失败则 DB 不动（本轮整体不落库）；
+    # DB 写失败时 JSON 已在，下次回灌会自动补齐。方向永远指向「不丢数据」。
     json_path = db.export_snapshot_json(settings.snapshots_dir, today, repo_rows)
+
+    discovery_rows = [
+        (int(rid), today, channel, rank)
+        for rid, items in channels.items()
+        for channel, rank in items
+    ]
+    # 单个事务：repo / snapshot / discovery 要么全写进去，要么一条都不写
+    n_repos, n_snap, _n_disc = db.save_daily_batch(
+        conn, repo_rows, snap_rows, discovery_rows, today
+    )
 
     stats = {
         "date": today,
-        "repos_upserted": len(repo_rows),
+        "repos_upserted": n_repos,
         "snapshots_written": n_snap,
         "candidates_total": len(seen_ids),
         "by_channel": counts,
         "errors": errors,
+        "budget_exceeded": budget_exceeded,
         "json": str(json_path),
         "http": http.stats(),
     }
@@ -210,8 +226,7 @@ def snapshot_only(settings: Settings, conn: sqlite3.Connection, http: Http, name
             }
         )
 
-    db.upsert_repos(conn, repo_rows, today)
-    n = db.upsert_snapshots(conn, snap_rows)
     if repo_rows:
         db.export_snapshot_json(settings.snapshots_dir, today, repo_rows)
+    _n_repos, n, _n_disc = db.save_daily_batch(conn, repo_rows, snap_rows, [], today)
     return {"date": today, "snapshots_written": n, "http": http.stats()}

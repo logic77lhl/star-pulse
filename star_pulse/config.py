@@ -66,6 +66,10 @@ class Settings:
     timeout_seconds: int = 30
     retries: int = 3
 
+    # 保留策略：data/snapshots 只保留最近这么多**个**快照文件（= 最近 N 个交易日）。
+    # 裁剪前会把每天的汇总记账到 data/history/daily_totals.jsonl，覆盖统计不丢。
+    snapshot_keep_days: int = 400
+
     # LLM（可选）
     llm_base_url: str = ""
     llm_api_key: str = ""
@@ -84,6 +88,11 @@ class Settings:
     def today(self) -> str:
         """当前日期（按配置时区归属），YYYY-MM-DD。"""
         return self.now_local().date().isoformat()
+
+    @property
+    def daily_totals_path(self) -> Path:
+        """快照裁剪后的汇总账本（append-only，裁剪不丢覆盖统计）。"""
+        return self.root / "data" / "history" / "daily_totals.jsonl"
 
     @property
     def llm_enabled(self) -> bool:
@@ -139,6 +148,7 @@ def load_settings(root: Path | None = None) -> Settings:
     cand = cfg.get("candidate", {})
     rep = cfg.get("report", {})
     net = cfg.get("network", {})
+    ret = cfg.get("retention", {})
 
     s = Settings(
         root=root,
@@ -162,6 +172,7 @@ def load_settings(root: Path | None = None) -> Settings:
         max_wait_seconds=int(net.get("max_wait_seconds", 1800)),
         timeout_seconds=int(net.get("timeout_seconds", 30)),
         retries=int(net.get("retries", 3)),
+        snapshot_keep_days=int(ret.get("snapshot_keep_days", 400)),
         llm_base_url=os.environ.get("LLM_BASE_URL", "").rstrip("/"),
         llm_api_key=os.environ.get("LLM_API_KEY", ""),
         llm_model=os.environ.get("LLM_MODEL", ""),

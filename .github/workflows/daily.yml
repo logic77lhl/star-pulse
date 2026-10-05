@@ -11,9 +11,11 @@ on:
 permissions:
   contents: write
 
-# 防止两次运行叠加（补跑时尤其容易撞上）
+# 防止两次运行叠加（补跑时尤其容易撞上）。
+# 与 weekly.yml 用**同一个 group**：两个工作流都会提交到 main，
+# 各自用不同的 group 等于没有互斥，会互相把对方的 push 顶成 non-fast-forward。
 concurrency:
-  group: star-pulse-daily
+  group: star-pulse-repo
   cancel-in-progress: false
 
 jobs:
@@ -21,7 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      # fetch-depth: 0 —— 后面提交前要 `git pull --rebase`，浅克隆上会失败
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -36,19 +41,52 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m star_pulse run-daily
 
-      - name: 重建站点
+      # 发布门：以「今天是否真的产出了快照 JSON」为准。
+      # 为什么不用 if: success() —— run_daily 是刻意「部分失败也落库并返回 0」的，
+      # 用 success() 会在配额耗尽时把已经采到的数据连同站点一起丢掉。
+      # 这个判定严格强于 always() 与 success()：既不发布陈旧站点，也不丢已采数据。
+      - name: 校验今日是否产出快照
+        id: fresh
         if: always()
+        run: |
+          # 必须用 UTC+8：快照文件名按 settings.today()（默认 UTC+8）生成，
+          # 而 cron 是 20:00 UTC，用 date -u 会查到次日文件名。
+          TODAY=$(TZ=Asia/Shanghai date +%F)
+          if [ -f "data/snapshots/$TODAY.json" ]; then
+            echo "produced=true" >> "$GITHUB_OUTPUT"
+            echo "今日快照已产出：$TODAY.json"
+          else
+            echo "produced=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::本轮未产出 $TODAY.json，跳过站点重建与提交"
+          fi
+
+      - name: 裁剪旧快照
+        if: always() && steps.fresh.outputs.produced == 'true'
+        run: python -m star_pulse prune
+
+      - name: 重建站点
+        if: always() && steps.fresh.outputs.produced == 'true'
         run: python -m star_pulse site
 
       - name: 提交数据与站点
-        if: always()
+        if: always() && steps.fresh.outputs.produced == 'true'
         run: |
           git config user.name  "star-pulse-bot"
           git config user.email "star-pulse-bot@users.noreply.github.com"
-          git add data/snapshots docs
+          git add data/snapshots data/history docs
           if git diff --staged --quiet; then
             echo "没有新数据，跳过提交"
-          else
-            git commit -m "chore(data): 快照 $(date -u +%F) [skip ci]"
-            git push
+            exit 0
           fi
+          git commit -m "chore(data): 快照 $(TZ=Asia/Shanghai date +%F) [skip ci]"
+          # 手动补跑可能与定时任务重叠，push 前先 rebase，失败再重试几次
+          for i in 1 2 3; do
+            if git pull --rebase --autostash --quiet origin main && git push --quiet; then
+              echo "提交成功（第 $i 次尝试）"
+              exit 0
+            fi
+            echo "push 失败，5s 后重试（$i/3）"
+            sleep 5
+          done
+          echo "::error::push 连续失败，请检查分支保护或并发提交"
+          exit 1

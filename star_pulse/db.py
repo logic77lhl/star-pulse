@@ -5,20 +5,34 @@
   真正提交进仓库的是 data/snapshots/YYYY-MM-DD.json —— 纯文本、可读、可 diff。
   跑在 CI 里的每一次都是全新环境，所以启动时会自动把 JSON 回灌进 SQLite。
   换句话说：JSON 是事实来源，SQLite 只是一个可以随时重建的查询缓存。
+
+关于 `repo.full_name` 为什么**不**加 UNIQUE（schema v2）：
+  repo_id 才是仓库的唯一身份。full_name 只是「当前显示名」，它会因为改名而变化，
+  也会因为「删除后重建」被另一个 repo_id 复用 —— 此时库里会合法地同时存在两行同名。
+  早期版本给 full_name 加了 UNIQUE，导致删除重建后写入必然违反约束：
+  `ON CONFLICT(repo_id)` 在语义上无法处理 full_name 冲突，插入直接抛 IntegrityError。
 """
 
 from __future__ import annotations
 
 import json
+import logging
+import os
 import sqlite3
 from pathlib import Path
+from typing import NamedTuple
+
+log = logging.getLogger(__name__)
+
+SCHEMA_VERSION = 2
+INT64_MAX = 2 ** 63 - 1
 
 SCHEMA = """
 PRAGMA journal_mode = WAL;
 
 CREATE TABLE IF NOT EXISTS repo (
   repo_id      INTEGER PRIMARY KEY,
-  full_name    TEXT    NOT NULL UNIQUE,
+  full_name    TEXT    NOT NULL,
   owner        TEXT    NOT NULL,
   name         TEXT    NOT NULL,
   description  TEXT,
@@ -32,6 +46,7 @@ CREATE TABLE IF NOT EXISTS repo (
   is_fork      INTEGER DEFAULT 0
 );
 CREATE INDEX IF NOT EXISTS idx_repo_created ON repo(repo_created);
+CREATE INDEX IF NOT EXISTS idx_repo_name    ON repo(full_name);
 
 CREATE TABLE IF NOT EXISTS snapshot (
   repo_id      INTEGER NOT NULL,
@@ -65,6 +80,42 @@ CREATE TABLE IF NOT EXISTS report (
 );
 """
 
+# v1 -> v2：把 repo.full_name 上的列级 UNIQUE 去掉。
+# SQLite 无法 ALTER 掉列级 UNIQUE（它由不可 drop 的隐式索引 sqlite_autoindex_repo_1 实现），
+# 所以只能原地重建表。INSERT ... SELECT 全量保留历史行，不丢数据。
+_MIGRATE_REPO_V2 = (
+    "ALTER TABLE repo RENAME TO repo_legacy_v1",
+    # 索引跟着表改名走，先把名字腾出来，否则新表的 CREATE INDEX IF NOT EXISTS 会被跳过
+    "DROP INDEX IF EXISTS idx_repo_created",
+    """
+    CREATE TABLE repo (
+      repo_id      INTEGER PRIMARY KEY,
+      full_name    TEXT    NOT NULL,
+      owner        TEXT    NOT NULL,
+      name         TEXT    NOT NULL,
+      description  TEXT,
+      language     TEXT,
+      topics       TEXT,
+      homepage     TEXT,
+      license      TEXT,
+      repo_created TEXT,
+      first_seen   TEXT    NOT NULL,
+      is_archived  INTEGER DEFAULT 0,
+      is_fork      INTEGER DEFAULT 0
+    )
+    """,
+    """
+    INSERT INTO repo (repo_id, full_name, owner, name, description, language,
+                      topics, homepage, license, repo_created, first_seen,
+                      is_archived, is_fork)
+    SELECT repo_id, full_name, owner, name, description, language,
+           topics, homepage, license, repo_created, first_seen,
+           COALESCE(is_archived, 0), COALESCE(is_fork, 0)
+    FROM repo_legacy_v1
+    """,
+    "DROP TABLE repo_legacy_v1",
+)
+
 
 def connect(db_path: Path) -> sqlite3.Connection:
     db_path.parent.mkdir(parents=True, exist_ok=True)
@@ -73,79 +124,134 @@ def connect(db_path: Path) -> sqlite3.Connection:
     return conn
 
 
+def _repo_is_legacy(conn: sqlite3.Connection) -> bool:
+    """判断 repo 表是否是 v1（full_name 带列级 UNIQUE）。"""
+    row = conn.execute(
+        "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'repo'"
+    ).fetchone()
+    if row is None:
+        return False  # 全新库，没有旧表
+    for idx in conn.execute("PRAGMA index_list(repo)").fetchall():
+        # 列级 UNIQUE 的隐式索引：unique=1 且 origin='u'
+        if idx[2] and idx[3] == "u":
+            return True
+    ddl_row = conn.execute("SELECT sql FROM sqlite_master WHERE name = 'repo'").fetchone()
+    ddl = (ddl_row[0] if ddl_row else "") or ""
+    return "unique" in ddl.lower()
+
+
 def init_schema(conn: sqlite3.Connection) -> None:
+    conn.execute("PRAGMA journal_mode = WAL")
+    version = conn.execute("PRAGMA user_version").fetchone()[0]
+    if version < SCHEMA_VERSION and _repo_is_legacy(conn):
+        log.warning("检测到 v1 版 repo 表（full_name 带 UNIQUE），正在原地重建以移除该约束…")
+        try:
+            # 注意：不能用 executescript —— 它会先隐式 COMMIT，DDL 将无法回滚
+            with conn:
+                for stmt in _MIGRATE_REPO_V2:
+                    conn.execute(stmt)
+        except sqlite3.Error:
+            log.exception(
+                "repo 表原地重建失败，数据库仍是旧结构。可运行 "
+                "`python -m star_pulse rebuild` 从 data/snapshots/*.json 重建（安全，SQLite 只是派生缓存）"
+            )
+            raise
+        log.info("repo 表已升级到 v%d，历史行已全部保留", SCHEMA_VERSION)
     conn.executescript(SCHEMA)
+    conn.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
     conn.commit()
 
 
+def _atomic_write_text(target: Path, text: str) -> None:
+    """同目录临时文件 + os.replace，避免中断时留下截断文件。"""
+    target.parent.mkdir(parents=True, exist_ok=True)
+    tmp = target.with_name(target.name + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, target)
+
+
 # ── 写入 ────────────────────────────────────────────────────────
-def upsert_repos(conn: sqlite3.Connection, repos: list[dict], first_seen: str) -> int:
-    sql = """
-    INSERT INTO repo (repo_id, full_name, owner, name, description, language,
-                      topics, homepage, license, repo_created, first_seen,
-                      is_archived, is_fork)
-    VALUES (:repo_id, :full_name, :owner, :name, :description, :language,
-            :topics, :homepage, :license, :repo_created, :first_seen,
-            :is_archived, :is_fork)
-    ON CONFLICT(repo_id) DO UPDATE SET
-      full_name    = excluded.full_name,
-      description  = COALESCE(excluded.description, repo.description),
-      language     = COALESCE(excluded.language, repo.language),
-      topics       = COALESCE(excluded.topics, repo.topics),
-      homepage     = COALESCE(excluded.homepage, repo.homepage),
-      license      = COALESCE(excluded.license, repo.license),
-      repo_created = COALESCE(excluded.repo_created, repo.repo_created),
-      is_archived  = excluded.is_archived,
-      is_fork      = excluded.is_fork
-    """
-    # 批次内去重，避免 UNIQUE(full_name) 冲突：
-    # 1) 先按 repo_id 保留最后一条（文件按日期排序，后面的更新）；
-    # 2) 再按 full_name 保留最后一条。仓库改名或删除重建时，同一 full_name
-    #    会先后挂在不同 repo_id 上；若把旧快照里的旧名字重新灌回已经
-    #    拥有新仓库的库（CI 里 site 在 run-daily 之后二次回灌），会与
-    #    新仓库的行撞车。去重后"最新数据赢"，幂等且不回退。
+_REPO_UPSERT_SQL = """
+INSERT INTO repo (repo_id, full_name, owner, name, description, language,
+                  topics, homepage, license, repo_created, first_seen,
+                  is_archived, is_fork)
+VALUES (:repo_id, :full_name, :owner, :name, :description, :language,
+        :topics, :homepage, :license, :repo_created, :first_seen,
+        :is_archived, :is_fork)
+ON CONFLICT(repo_id) DO UPDATE SET
+  full_name    = excluded.full_name,
+  description  = COALESCE(excluded.description, repo.description),
+  language     = COALESCE(excluded.language, repo.language),
+  topics       = COALESCE(excluded.topics, repo.topics),
+  homepage     = COALESCE(excluded.homepage, repo.homepage),
+  license      = COALESCE(excluded.license, repo.license),
+  repo_created = COALESCE(excluded.repo_created, repo.repo_created),
+  is_archived  = excluded.is_archived,
+  is_fork      = excluded.is_fork
+"""
+
+_SNAP_UPSERT_SQL = """
+INSERT INTO snapshot (repo_id, snap_date, stars, forks, open_issues,
+                      pushed_at, source, collected_at)
+VALUES (:repo_id, :snap_date, :stars, :forks, :open_issues,
+        :pushed_at, :source, :collected_at)
+ON CONFLICT(repo_id, snap_date) DO UPDATE SET
+  stars       = excluded.stars,
+  forks       = excluded.forks,
+  open_issues = excluded.open_issues,
+  pushed_at   = excluded.pushed_at,
+  source      = excluded.source,
+  collected_at= excluded.collected_at
+"""
+
+_DISCOVERY_UPSERT_SQL = """
+INSERT INTO discovery (repo_id, found_date, channel, raw_rank)
+VALUES (?, ?, ?, ?)
+ON CONFLICT(repo_id, found_date, channel) DO UPDATE SET raw_rank = excluded.raw_rank
+"""
+
+
+def _prepare_repo_payload(repos: list[dict], first_seen: str) -> list[dict]:
+    """按 repo_id 做批次内 last-wins 去重（同名不同 id 一律保留，它们是不同仓库）。"""
     by_id: dict = {}
     for r in repos:
         by_id[r["repo_id"]] = r
-    by_name: dict = {}
-    for r in by_id.values():
-        by_name[r["full_name"]] = r
-    repos = list(by_name.values())
 
     payload = []
-    for r in repos:
+    for r in by_id.values():
         row = dict(r)
         row["first_seen"] = first_seen
         row.setdefault("topics", None)
         if isinstance(row.get("topics"), (list, tuple)):
             row["topics"] = json.dumps(list(row["topics"]), ensure_ascii=False)
         payload.append(row)
+    return payload
+
+
+def upsert_repos(conn: sqlite3.Connection, repos: list[dict], first_seen: str) -> int:
+    payload = _prepare_repo_payload(repos, first_seen)
     if not payload:
         return 0
-    conn.executemany(sql, payload)
-    conn.commit()
+    with conn:
+        conn.executemany(_REPO_UPSERT_SQL, payload)
     return len(payload)
 
 
 def upsert_snapshots(conn: sqlite3.Connection, rows: list[dict]) -> int:
     """按 (repo_id, snap_date) 幂等写入。同一天重复跑只会覆盖，不会写重。"""
-    sql = """
-    INSERT INTO snapshot (repo_id, snap_date, stars, forks, open_issues,
-                          pushed_at, source, collected_at)
-    VALUES (:repo_id, :snap_date, :stars, :forks, :open_issues,
-            :pushed_at, :source, :collected_at)
-    ON CONFLICT(repo_id, snap_date) DO UPDATE SET
-      stars       = excluded.stars,
-      forks       = excluded.forks,
-      open_issues = excluded.open_issues,
-      pushed_at   = excluded.pushed_at,
-      source      = excluded.source,
-      collected_at= excluded.collected_at
-    """
     if not rows:
         return 0
-    conn.executemany(sql, rows)
-    conn.commit()
+    with conn:
+        conn.executemany(_SNAP_UPSERT_SQL, rows)
+    return len(rows)
+
+
+def add_discoveries(conn: sqlite3.Connection, rows: list[tuple[int, str, str, int | None]]) -> int:
+    """批量记录发现来源。rows: (repo_id, found_date, channel, raw_rank)。"""
+    if not rows:
+        return 0
+    with conn:
+        conn.executemany(_DISCOVERY_UPSERT_SQL, rows)
     return len(rows)
 
 
@@ -153,33 +259,46 @@ def add_discovery(
     conn: sqlite3.Connection, found_date: str, channel: str, entries: list[tuple[int, int | None]]
 ) -> int:
     """记录「这个仓库是从哪个渠道、哪一天被发现的」，用于溯源。"""
-    sql = """
-    INSERT INTO discovery (repo_id, found_date, channel, raw_rank)
-    VALUES (?, ?, ?, ?)
-    ON CONFLICT(repo_id, found_date, channel) DO UPDATE SET raw_rank = excluded.raw_rank
+    return add_discoveries(conn, [(rid, found_date, channel, rank) for rid, rank in entries])
+
+
+def save_daily_batch(
+    conn: sqlite3.Connection,
+    repo_rows: list[dict],
+    snap_rows: list[dict],
+    discovery_rows: list[tuple[int, str, str, int | None]],
+    first_seen: str,
+) -> tuple[int, int, int]:
+    """一天的采集结果在**单个事务**里落库：要么全有，要么全无。
+
+    之前三次 upsert 各自提交，后两步失败会留下「repo 已写入、快照缺失」的半批状态。
     """
-    if not entries:
-        return 0
-    conn.executemany(sql, [(rid, found_date, channel, rank) for rid, rank in entries])
-    conn.commit()
-    return len(entries)
+    repo_payload = _prepare_repo_payload(repo_rows, first_seen)
+    with conn:
+        if repo_payload:
+            conn.executemany(_REPO_UPSERT_SQL, repo_payload)
+        if snap_rows:
+            conn.executemany(_SNAP_UPSERT_SQL, snap_rows)
+        if discovery_rows:
+            conn.executemany(_DISCOVERY_UPSERT_SQL, discovery_rows)
+    return (len(repo_payload), len(snap_rows or []), len(discovery_rows or []))
 
 
 def save_report(
     conn: sqlite3.Connection, start: str, end: str, kind: str, markdown: str, meta: dict, created_at: str
 ) -> None:
-    conn.execute(
-        """
-        INSERT INTO report (period_start, period_end, kind, markdown, meta, created_at)
-        VALUES (?, ?, ?, ?, ?, ?)
-        ON CONFLICT(period_start, period_end, kind) DO UPDATE SET
-          markdown = excluded.markdown,
-          meta     = excluded.meta,
-          created_at = excluded.created_at
-        """,
-        (start, end, kind, markdown, json.dumps(meta, ensure_ascii=False), created_at),
-    )
-    conn.commit()
+    with conn:
+        conn.execute(
+            """
+            INSERT INTO report (period_start, period_end, kind, markdown, meta, created_at)
+            VALUES (?, ?, ?, ?, ?, ?)
+            ON CONFLICT(period_start, period_end, kind) DO UPDATE SET
+              markdown = excluded.markdown,
+              meta     = excluded.meta,
+              created_at = excluded.created_at
+            """,
+            (start, end, kind, markdown, json.dumps(meta, ensure_ascii=False), created_at),
+        )
 
 
 # ── 读取 ────────────────────────────────────────────────────────
@@ -249,6 +368,18 @@ def repo_count(conn: sqlite3.Connection) -> int:
     return conn.execute("SELECT COUNT(*) AS c FROM repo").fetchone()["c"]
 
 
+def orphan_snapshot_count(conn: sqlite3.Connection) -> int:
+    """没有对应 repo 行的快照数。
+
+    正常应为 0。非 0 说明写入路径出了问题（历史遗留的孤儿）。只做告警，不自动删除
+    —— 孤儿快照也是历史，删掉就永久丢数据。
+    """
+    return conn.execute(
+        "SELECT COUNT(*) AS c FROM snapshot s "
+        "WHERE NOT EXISTS (SELECT 1 FROM repo r WHERE r.repo_id = s.repo_id)"
+    ).fetchone()["c"]
+
+
 # ── JSON 快照（git 里的事实来源）────────────────────────────────
 def _pick(row: dict, *keys, default=None):
     """仓库对象在「采集路径」上用 _stars/_forks 这类带下划线的键，
@@ -261,7 +392,6 @@ def _pick(row: dict, *keys, default=None):
 
 def export_snapshot_json(snapshots_dir: Path, snap_date: str, rows: list[dict]) -> Path:
     """把当天快照写成文本文件，方便 git 追踪与人工查阅。"""
-    snapshots_dir.mkdir(parents=True, exist_ok=True)
     target = snapshots_dir / f"{snap_date}.json"
     payload = {
         "date": snap_date,
@@ -284,27 +414,86 @@ def export_snapshot_json(snapshots_dir: Path, snap_date: str, rows: list[dict]) 
             )
         ],
     }
-    target.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    _atomic_write_text(target, json.dumps(payload, ensure_ascii=False, indent=1))
     return target
 
 
-def import_snapshot_jsons(conn: sqlite3.Connection, snapshots_dir: Path) -> tuple[int, int]:
-    """把 data/snapshots/*.json 回灌进 SQLite。CI 每次都是空环境，靠这个补历史。"""
+class ImportResult(NamedTuple):
+    repos: int
+    snaps: int
+    skipped: int
+    bad_files: int
+    reasons: dict
+
+
+def _safe_int(value, lo: int, hi: int) -> int | None:
+    """把任意 JSON 值转成落在 [lo, hi] 的 int；不可用返回 None。绝不抛异常。
+
+    回灌的是「别人写下来的文件」，一个坏值不应该让所有命令都挂掉。
+    """
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        n = int(value)
+    except (TypeError, ValueError, OverflowError):
+        return None
+    return n if lo <= n <= hi else None
+
+
+def import_snapshot_jsons(conn: sqlite3.Connection, snapshots_dir: Path) -> ImportResult:
+    """把 data/snapshots/*.json 回灌进 SQLite。CI 每次都是空环境，靠这个补历史。
+
+    逐文件、逐行容错：坏文件/坏行跳过并计数，绝不因为一个畸形字段让所有命令失败。
+    """
     if not snapshots_dir.is_dir():
-        return (0, 0)
+        return ImportResult(0, 0, 0, 0, {})
+
     repo_rows: list[dict] = []
     snap_rows: list[dict] = []
+    skipped = 0
+    bad_files = 0
+    reasons: dict = {}
+    first_date: str | None = None
+
+    def bump(reason: str) -> None:
+        reasons[reason] = reasons.get(reason, 0) + 1
+
     for path in sorted(snapshots_dir.glob("*.json")):
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
+            bad_files += 1
+            log.warning("跳过无法解析的快照文件：%s", path.name)
+            continue
+        if not isinstance(data, dict):
+            bad_files += 1
+            log.warning("跳过顶层非对象的快照文件：%s", path.name)
+            continue
+        entries = data.get("repos")
+        if not isinstance(entries, list):
+            bad_files += 1
+            log.warning("跳过 repos 非数组的快照文件：%s", path.name)
             continue
         snap_date = data.get("date") or path.stem
-        for r in data.get("repos", []):
-            full_name = r.get("full_name")
-            repo_id = r.get("repo_id")
-            if not full_name or not repo_id:
+        if first_date is None and isinstance(snap_date, str):
+            first_date = snap_date
+
+        for r in entries:
+            if not isinstance(r, dict):
+                skipped += 1
+                bump("行非对象")
                 continue
+            full_name = r.get("full_name")
+            if not isinstance(full_name, str) or not full_name.strip():
+                skipped += 1
+                bump("full_name 缺失")
+                continue
+            repo_id = _safe_int(r.get("repo_id"), 1, INT64_MAX)
+            if repo_id is None:
+                skipped += 1
+                bump("repo_id 非法")
+                continue
+
             owner, _, name = full_name.partition("/")
             repo_rows.append(
                 {
@@ -318,24 +507,40 @@ def import_snapshot_jsons(conn: sqlite3.Connection, snapshots_dir: Path) -> tupl
                     "homepage": None,
                     "license": None,
                     "repo_created": r.get("repo_created"),
-                    "is_archived": int(r.get("is_archived") or 0),
-                    "is_fork": int(r.get("is_fork") or 0),
+                    "is_archived": _safe_int(r.get("is_archived"), 0, 1) or 0,
+                    "is_fork": _safe_int(r.get("is_fork"), 0, 1) or 0,
                 }
             )
+
+            # 非法 stars 只丢这一条快照、保留 repo 行：把坏值兜成 0 会伪造一次暴跌增量
+            # 去污染榜单；丢一天快照只是少一个点，增量查询会自动退到相邻可用日期。
+            stars = _safe_int(r.get("stars"), 0, INT64_MAX)
+            if stars is None:
+                skipped += 1
+                bump("stars 非法")
+                continue
             snap_rows.append(
                 {
                     "repo_id": repo_id,
                     "snap_date": snap_date,
-                    "stars": int(r.get("stars") or 0),
-                    "forks": r.get("forks"),
-                    "open_issues": r.get("open_issues"),
+                    "stars": stars,
+                    "forks": _safe_int(r.get("forks"), 0, INT64_MAX),
+                    "open_issues": _safe_int(r.get("open_issues"), 0, INT64_MAX),
                     "pushed_at": None,
                     "source": "json_import",
                     "collected_at": f"{snap_date}T00:00:00Z",
                 }
             )
+
+    n_repos = 0
     if repo_rows:
-        upsert_repos(conn, repo_rows, snap_rows[0]["snap_date"])
+        n_repos = upsert_repos(conn, repo_rows, first_date or "")
     if snap_rows:
         upsert_snapshots(conn, snap_rows)
-    return (len(repo_rows), len(snap_rows))
+    if skipped or bad_files:
+        log.warning(
+            "回灌跳过 %d 行 / %d 个文件：%s",
+            skipped, bad_files,
+            "、".join(f"{k}×{v}" for k, v in sorted(reasons.items())) or "—",
+        )
+    return ImportResult(n_repos, len(snap_rows), skipped, bad_files, reasons)

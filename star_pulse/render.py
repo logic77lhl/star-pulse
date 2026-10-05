@@ -31,9 +31,16 @@ def week_label(start: str, end: str) -> str:
         return f"{start}_{end}"
 
 
-def _repo_meta(conn: sqlite3.Connection) -> dict[str, dict]:
-    rows = conn.execute("SELECT full_name, language, description, topics FROM repo").fetchall()
-    return {r["full_name"]: dict(r) for r in rows}
+def _repo_meta(conn: sqlite3.Connection) -> dict[int, dict]:
+    """按 repo_id 索引的仓库元数据。
+
+    不能用 full_name 作键：仓库删除重建后同名会对应两个 repo_id，
+    按名字查表会把两个不同仓库的元数据折叠成一条。
+    """
+    rows = conn.execute(
+        "SELECT repo_id, full_name, language, description, topics FROM repo"
+    ).fetchall()
+    return {r["repo_id"]: dict(r) for r in rows}
 
 
 def build_report(
@@ -44,7 +51,7 @@ def build_report(
     narration: dict | None = None,
 ) -> tuple[str, str, dict]:
     """组装报告，返回 (markdown, html, meta)。"""
-    coverage = analyze.data_coverage(conn)
+    coverage = analyze.data_coverage(conn, settings)
     ranked_all, dropped = analyze.weekly_gain(conn, start, end, settings.max_span_days)
     meta_map = _repo_meta(conn)
 
@@ -52,13 +59,13 @@ def build_report(
     for item in top:
         history = analyze.daily_history(conn, item["repo_id"], start, end)
         item["flags"] = analyze.star_farm_flags(item, history)
-        info = meta_map.get(item["full_name"], {})
+        info = meta_map.get(item["repo_id"], {})
         item["category"] = analyze.classify({**info, "full_name": item["full_name"]})
         item["summary"] = (narration or {}).get(item["full_name"]) or (item.get("description") or "")
 
     new_repos = analyze.new_repos_in_period(conn, start, end, limit=settings.top_n)
     for item in new_repos:
-        info = meta_map.get(item["full_name"], {})
+        info = meta_map.get(item["repo_id"], {})
         item["category"] = analyze.classify({**info, "full_name": item["full_name"]})
 
     breakdown = analyze.category_breakdown(top, meta_map)

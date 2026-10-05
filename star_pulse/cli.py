@@ -6,6 +6,7 @@
     python -m star_pulse report --period last-week   生成周报
     python -m star_pulse translate              给仓库简介生成中文译文（需配置 LLM）
     python -m star_pulse rebuild                从 JSON 快照重建 SQLite
+    python -m star_pulse prune --dry-run        裁剪旧快照（保留最近 N 个）
     python -m star_pulse stats                  查看快照覆盖情况
 """
 
@@ -17,7 +18,7 @@ import logging
 import sys
 from pathlib import Path
 
-from . import analyze, db, github_api, i18n, llm, pipeline, render
+from . import analyze, db, github_api, i18n, llm, pipeline, render, retention
 from . import site as site_builder
 from .config import load_settings
 from .net import BudgetExceeded, Http
@@ -39,9 +40,14 @@ def prepare(settings):
     conn = db.connect(settings.db_path)
     db.init_schema(conn)
     if settings.snapshots_dir.is_dir():
-        repos, snaps = db.import_snapshot_jsons(conn, settings.snapshots_dir)
-        if snaps:
-            log.info("从 JSON 快照回灌 %d 条记录（%d 个仓库）", snaps, repos)
+        res = db.import_snapshot_jsons(conn, settings.snapshots_dir)
+        if res.snaps:
+            log.info("从 JSON 快照回灌 %d 条记录（%d 个仓库）", res.snaps, res.repos)
+        orphans = db.orphan_snapshot_count(conn)
+        if orphans:
+            log.warning(
+                "发现 %d 条没有对应 repo 的孤儿快照（历史遗留，不会自动删除，仅告警）", orphans
+            )
     return conn
 
 
@@ -72,10 +78,12 @@ def cmd_doctor(settings, args) -> int:
 
     conn = db.connect(settings.db_path)
     db.init_schema(conn)
-    cov = analyze.data_coverage(conn)
+    cov = analyze.data_coverage(conn, settings)
     print(f"本地数据     : {db.repo_count(conn)} 个仓库，{cov['distinct_days']} 天快照"
           f"（{cov['first_day'] or '—'} ~ {cov['last_day'] or '—'}）")
     print(f"增量榜可用   : {'是' if cov['warm'] else '否 —— 预热中，还需约 %d 天' % max(0, 8 - cov['distinct_days'])}")
+    orphans = db.orphan_snapshot_count(conn)
+    print(f"数据完整性   : {'正常' if not orphans else '⚠️ %d 条孤儿快照（无对应 repo）' % orphans}")
     print()
 
     http = make_http(settings)
@@ -116,6 +124,15 @@ def cmd_run_daily(settings, args) -> int:
         return 3
 
     print(json.dumps(stats, ensure_ascii=False, indent=2))
+    if stats.get("budget_exceeded"):
+        # 数据已经落库（pipeline 刻意保留了「部分成功也落库」的行为），
+        # 但配额/等待预算耗尽必须让调用方看见 —— 退出码 3 用于区分「真的没跑成」。
+        print()
+        print("⚠️ 本轮配额或等待预算耗尽，已保存获取到的部分数据。", file=sys.stderr)
+        for e in stats.get("errors", []):
+            print(f"   {e}", file=sys.stderr)
+        print("   站点重建与提交仍会照常进行（已采数据不会丢）。", file=sys.stderr)
+        return 3
     if stats.get("errors"):
         # 数据已经落库了，所以这里返回 0（让后续的站点重建与提交照常进行），
         # 但要把问题喊出来 —— 静默的部分失败比彻底失败更危险。
@@ -150,17 +167,17 @@ def cmd_report(settings, args) -> int:
     else:
         start, end = analyze.parse_period(spec)
 
-    coverage = analyze.data_coverage(conn)
+    coverage = analyze.data_coverage(conn, settings)
     log.info("生成报告：%s ~ %s（本地数据覆盖 %d 天）", start, end, coverage["distinct_days"])
 
     narration: dict[str, str] = {}
     if settings.llm_enabled and not args.no_llm:
         ranked, _ = analyze.weekly_gain(conn, start, end, settings.max_span_days)
         preview = ranked[: settings.top_n]
-        meta_map = {r["full_name"]: dict(r) for r in conn.execute(
-            "SELECT full_name, description, language, topics FROM repo").fetchall()}
+        meta_map = {r["repo_id"]: dict(r) for r in conn.execute(
+            "SELECT repo_id, full_name, description, language, topics FROM repo").fetchall()}
         for it in preview:
-            info = meta_map.get(it["full_name"], {})
+            info = meta_map.get(it["repo_id"], {})
             it["category"] = analyze.classify({**info, "full_name": it["full_name"]})
             it["description"] = info.get("description")
             it["language"] = it.get("language") or info.get("language")
@@ -253,17 +270,32 @@ def cmd_rebuild(settings, args) -> int:
         settings.db_path.unlink()
         print(f"已删除旧的 {settings.db_path.name}")
     conn = prepare(settings)
-    cov = analyze.data_coverage(conn)
+    cov = analyze.data_coverage(conn, settings)
     print(f"重建完成：{db.repo_count(conn)} 个仓库，{cov['distinct_days']} 天快照")
+    return 0
+
+
+def cmd_prune(settings, args) -> int:
+    """裁剪旧快照：只保留最近 N 个（= N 个交易日），裁剪前先把汇总记账。
+
+    data/snapshots 每天约 290 KB，一年约 105 MB。裁剪后覆盖统计仍正确，
+    因为账本（data/history/daily_totals.jsonl）会补上被删日期的信息。
+    """
+    conn = prepare(settings)
+    keep = args.keep_days or settings.snapshot_keep_days
+    stats = retention.prune(settings, conn, keep, dry_run=args.dry_run)
+    print(json.dumps(stats, ensure_ascii=False, indent=2))
     return 0
 
 
 def cmd_stats(settings, args) -> int:
     conn = prepare(settings)
-    cov = analyze.data_coverage(conn)
+    cov = analyze.data_coverage(conn, settings)
     print(json.dumps(cov, ensure_ascii=False, indent=2))
     dates = db.snapshot_dates(conn, 14)
     print("最近快照日期：", ", ".join(reversed(dates)) or "无")
+    orphans = db.orphan_snapshot_count(conn)
+    print(f"孤儿快照：{orphans} 条")
     return 0
 
 
@@ -283,6 +315,11 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("rebuild", help="从 JSON 快照重建 SQLite")
     sub.add_parser("stats", help="查看快照覆盖情况")
     sub.add_parser("site", help="生成 docs/ 静态站点（GitHub Pages）")
+
+    p_prune = sub.add_parser("prune", help="裁剪旧快照（保留最近 N 个，先记账再删）")
+    p_prune.add_argument("--keep-days", type=int, default=0,
+                         help=f"保留多少个快照文件（默认取配置 snapshot_keep_days）")
+    p_prune.add_argument("--dry-run", action="store_true", help="只报告会删什么，不实际删除")
 
     p_snap = sub.add_parser("snapshot", help="给指定仓库拍快照")
     p_snap.add_argument("--repos", nargs="+", required=True, help="owner/repo，可空格或逗号分隔")
@@ -311,6 +348,7 @@ def main(argv: list[str] | None = None) -> int:
         "rebuild": cmd_rebuild,
         "stats": cmd_stats,
         "site": cmd_site,
+        "prune": cmd_prune,
     }
     return handlers[args.command](settings, args)
 

@@ -9,8 +9,10 @@ on:
 permissions:
   contents: write
 
+# 与 daily.yml 用**同一个 group**：两者都会提交到 main，各自用不同的 group
+# 等于没有互斥，会互相把对方的 push 顶成 non-fast-forward（已踩过）。
 concurrency:
-  group: star-pulse-weekly
+  group: star-pulse-repo
   cancel-in-progress: false
 
 jobs:
@@ -18,7 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      # fetch-depth: 0 —— 提交前要 git pull --rebase，浅克隆上会失败
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -59,11 +64,21 @@ jobs:
         run: |
           git config user.name  "star-pulse-bot"
           git config user.email "star-pulse-bot@users.noreply.github.com"
-          git add reports data/snapshots docs
+          git add reports data/snapshots data/history docs
           if git diff --staged --quiet; then
             echo "没有变更，跳过提交"
-          else
-            week=$(date -u +%G-W%V)
-            git commit -m "chore(report): ${week} 星耀榜 [skip ci]"
-            git push
+            exit 0
           fi
+          week=$(TZ=Asia/Shanghai date +%G-W%V)
+          git commit -m "chore(report): ${week} 星耀榜 [skip ci]"
+          # 与 daily 可能同时跑（手动补跑时最容易撞），push 前先 rebase
+          for i in 1 2 3; do
+            if git pull --rebase --autostash --quiet origin main && git push --quiet; then
+              echo "提交成功（第 $i 次尝试）"
+              exit 0
+            fi
+            echo "push 失败，5s 后重试（$i/3）"
+            sleep 5
+          done
+          echo "::error::push 连续失败，请检查分支保护或并发提交"
+          exit 1

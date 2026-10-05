@@ -11,6 +11,7 @@ import re
 import sqlite3
 from datetime import date, datetime, timedelta
 
+from . import retention
 from .config import Settings
 
 # ── 周期工具 ────────────────────────────────────────────────────
@@ -99,20 +100,26 @@ def daily_history(conn: sqlite3.Connection, repo_id: int, start: str, end: str) 
     return [(r["snap_date"], r["stars"]) for r in rows]
 
 
-def data_coverage(conn: sqlite3.Connection) -> dict:
-    """快照覆盖情况，用于在报告里如实说明「本期数据有多可靠」。"""
+def data_coverage(conn: sqlite3.Connection, settings: Settings | None = None) -> dict:
+    """快照覆盖情况，用于在报告里如实说明「本期数据有多可靠」。
+
+    传 settings 时会把「已裁剪日期的汇总账本」（data/history/daily_totals.jsonl）
+    一并算进来 —— 否则裁剪后「覆盖 N 天」会突然变小。
+    """
     row = conn.execute(
-        """SELECT COUNT(DISTINCT snap_date) AS days,
-                  MIN(snap_date) AS first_day,
-                  MAX(snap_date) AS last_day,
-                  COUNT(*) AS rows_total
-           FROM snapshot"""
+        """SELECT (SELECT COUNT(*) FROM snapshot s JOIN repo r ON r.repo_id = s.repo_id)
+                    AS rows_total"""
     ).fetchone()
-    days = row["days"] or 0
+
+    dates = {r["snap_date"] for r in conn.execute("SELECT DISTINCT snap_date FROM snapshot")}
+    if settings is not None:
+        dates |= set(retention.read_totals(settings))
+    days = len(dates)
+
     return {
         "distinct_days": days,
-        "first_day": row["first_day"],
-        "last_day": row["last_day"],
+        "first_day": min(dates) if dates else None,
+        "last_day": max(dates) if dates else None,
         "rows_total": row["rows_total"] or 0,
         "warm": days >= 8,  # 满 8 天后，才有可靠的 7 天窗口
     }
@@ -257,10 +264,11 @@ def classify(repo: dict) -> str:
     return best_label
 
 
-def category_breakdown(rows: list[dict], repo_meta: dict[str, dict]) -> list[tuple[str, int]]:
+def category_breakdown(rows: list[dict], repo_meta: dict[int, dict]) -> list[tuple[str, int]]:
+    """repo_meta 按 repo_id 索引（不能用 full_name：同名可对应多个 repo_id）。"""
     counts: dict[str, int] = {}
     for row in rows:
-        meta = repo_meta.get(row["full_name"], {})
+        meta = repo_meta.get(row.get("repo_id"), {})
         label = classify({**meta, "full_name": row["full_name"]})
         counts[label] = counts.get(label, 0) + 1
     return sorted(counts.items(), key=lambda kv: -kv[1])
@@ -366,7 +374,10 @@ def daily_summary(conn: sqlite3.Connection) -> list[dict]:
     for i, day in enumerate(dates):
         prev = dates[i - 1] if i > 0 else None
         count = conn.execute(
-            "SELECT COUNT(*) c FROM snapshot WHERE snap_date = ?", (day,)
+            """SELECT COUNT(*) c FROM snapshot s
+               JOIN repo r ON r.repo_id = s.repo_id
+               WHERE s.snap_date = ? AND r.is_fork = 0 AND r.is_archived = 0""",
+            (day,),
         ).fetchone()["c"]
 
         item = {
@@ -402,7 +413,9 @@ def daily_summary(conn: sqlite3.Connection) -> list[dict]:
             item["new_repos"] = conn.execute(
                 """
                 SELECT COUNT(*) c FROM snapshot s1
+                JOIN repo r ON r.repo_id = s1.repo_id
                 WHERE s1.snap_date = :day
+                  AND r.is_fork = 0 AND r.is_archived = 0
                   AND NOT EXISTS (SELECT 1 FROM snapshot s0
                                   WHERE s0.repo_id = s1.repo_id AND s0.snap_date = :prev)
                 """,
@@ -425,7 +438,7 @@ def growth_series(
     first, last = dates[0], dates[-1]
     movers = conn.execute(
         """
-        SELECT r.full_name, r.language,
+        SELECT r.repo_id, r.full_name, r.language,
                s1.stars - s0.stars AS gain
         FROM snapshot s1
         JOIN snapshot s0 ON s0.repo_id = s1.repo_id AND s0.snap_date = :first
@@ -440,20 +453,22 @@ def growth_series(
 
     series = []
     for row in movers:
+        # 必须按 repo_id 取走势，不能用 full_name：仓库删除重建后同名会对应两个
+        # repo_id，按名字取会把两个不同仓库的曲线并成一条（数值错误）。
         points = conn.execute(
             """
             SELECT s.snap_date, s.stars FROM snapshot s
-            JOIN repo r ON r.repo_id = s.repo_id
-            WHERE r.full_name = :name AND s.snap_date BETWEEN :first AND :last
+            WHERE s.repo_id = :rid AND s.snap_date BETWEEN :first AND :last
             ORDER BY s.snap_date
             """,
-            {"name": row["full_name"], "first": first, "last": last},
+            {"rid": row["repo_id"], "first": first, "last": last},
         ).fetchall()
         if len(points) < 2:
             continue
         base = points[0]["stars"]
         series.append(
             {
+                "repo_id": row["repo_id"],
                 "full_name": row["full_name"],
                 "language": row["language"],
                 "total_gain": row["gain"],

@@ -243,6 +243,7 @@ def _project_table(rows: list[dict], zh: dict[str, dict]) -> str:
         cat = analyze.classify(r)
         lines.append(
             f'<tr data-name="{esc(r["full_name"].lower())}" '
+            f'data-rid="{r["repo_id"]}" '
             f'data-cat="{esc(cat)}" '
             f'data-lang="{esc(r.get("language") or "")}" '
             f'data-stars="{r["stars"]}" data-forks="{r["forks"]}" '
@@ -277,8 +278,12 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     latest = dates[-1] if dates else None
     first = dates[0] if dates else None
 
+    # 口径必须与「项目名单」一致（JOIN repo + 过滤 fork/archived），
+    # 否则同名不同 repo_id 或孤儿快照会让这张卡片与名单对不上。
     tracked = conn.execute(
-        "SELECT COUNT(DISTINCT repo_id) c FROM snapshot"
+        """SELECT COUNT(DISTINCT s.repo_id) c FROM snapshot s
+           JOIN repo r ON r.repo_id = s.repo_id
+           WHERE r.is_fork = 0 AND r.is_archived = 0"""
     ).fetchone()["c"]
 
     # 「项目本身」名单 —— 看板的主角。相对前一日给增量，首日没有基线则显示「—」。

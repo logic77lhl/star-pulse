@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-01T07:39:14+08:00",
+ "generated_at": "2026-10-05T18:06:59+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -19,10 +19,14 @@
   "2026-09-28",
   "2026-09-29",
   "2026-09-30",
-  "2026-10-01"
+  "2026-10-01",
+  "2026-10-02",
+  "2026-10-03",
+  "2026-10-04",
+  "2026-10-05"
  ],
- "tracked_repos": 1996,
- "latest_date": "2026-10-01",
+ "tracked_repos": 2426,
+ "latest_date": "2026-10-05",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -221,6 +225,50 @@
    "top_delta": 3948,
    "new_repos": 76,
    "prev": "2026-09-30"
+  },
+  {
+   "date": "2026-10-02",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 28420,
+   "gainers": 526,
+   "top_name": "Niko1221/Strata",
+   "top_delta": 1674,
+   "new_repos": 121,
+   "prev": "2026-10-01"
+  },
+  {
+   "date": "2026-10-03",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 26645,
+   "gainers": 550,
+   "top_name": "eternity4719/HowToLiveBetter",
+   "top_delta": 1911,
+   "new_repos": 83,
+   "prev": "2026-10-02"
+  },
+  {
+   "date": "2026-10-04",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 27732,
+   "gainers": 548,
+   "top_name": "Niko1221/Strata",
+   "top_delta": 2145,
+   "new_repos": 83,
+   "prev": "2026-10-03"
+  },
+  {
+   "date": "2026-10-05",
+   "repos": 853,
+   "is_first": false,
+   "total_gain": 50745,
+   "gainers": 549,
+   "top_name": "eternity4719/HowToLiveBetter",
+   "top_delta": 4889,
+   "new_repos": 181,
+   "prev": "2026-10-04"
   }
  ],
  "cumulative_top": [
@@ -319,92 +367,92 @@
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 3948,
-   "stars": 31992
-  },
-  {
-   "full_name": "debpalash/VoiceStudio",
-   "language": "Python",
-   "delta": 2384,
-   "stars": 50382
-  },
-  {
-   "full_name": "NVIDIA/OpenShell",
-   "language": "Rust",
-   "delta": 2028,
-   "stars": 12574
+   "delta": 4889,
+   "stars": 42094
   },
   {
    "full_name": "Niko1221/Strata",
    "language": "C++",
-   "delta": 1311,
-   "stars": 3012
-  },
-  {
-   "full_name": "t8y2/dbx",
-   "language": "Rust",
-   "delta": 1201,
-   "stars": 23153
-  },
-  {
-   "full_name": "yetone/magpie",
-   "language": "Go",
-   "delta": 1126,
-   "stars": 3757
-  },
-  {
-   "full_name": "Majorclujerk/Server-Raider",
-   "language": null,
-   "delta": 1108,
-   "stars": 1218
-  },
-  {
-   "full_name": "Louis-CFM/coucou",
-   "language": "Swift",
-   "delta": 1052,
-   "stars": 1181
-  },
-  {
-   "full_name": "KKKKhazix/AIHOT",
-   "language": "TypeScript",
-   "delta": 1002,
-   "stars": 4069
-  },
-  {
-   "full_name": "tt-a1i/archify",
-   "language": "JavaScript",
-   "delta": 982,
-   "stars": 75221
+   "delta": 3849,
+   "stars": 12270
   },
   {
    "full_name": "DietrichGebert/ponytail",
    "language": "JavaScript",
-   "delta": 948,
-   "stars": 149148
+   "delta": 2122,
+   "stars": 155429
+  },
+  {
+   "full_name": "Panniantong/Agent-Reach",
+   "language": "Python",
+   "delta": 1584,
+   "stars": 91327
+  },
+  {
+   "full_name": "pbakaus/impeccable",
+   "language": "JavaScript",
+   "delta": 1443,
+   "stars": 76685
+  },
+  {
+   "full_name": "shihabal3amri/DiPlay",
+   "language": "Kotlin",
+   "delta": 1332,
+   "stars": 4308
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 914,
-   "stars": 272979
+   "delta": 1197,
+   "stars": 276525
   },
   {
-   "full_name": "cdyforever/how-to-live-better",
-   "language": "HTML",
-   "delta": 907,
-   "stars": 5792
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 1033,
+   "stars": 273232
   },
   {
-   "full_name": "VectifyAI/PageIndex",
+   "full_name": "tt-a1i/archify",
+   "language": "JavaScript",
+   "delta": 1022,
+   "stars": 77759
+  },
+  {
+   "full_name": "QingYunA/answer-me-with-html",
+   "language": "JavaScript",
+   "delta": 956,
+   "stars": 1253
+  },
+  {
+   "full_name": "storytold/photocraft",
+   "language": "Rust",
+   "delta": 954,
+   "stars": 1305
+  },
+  {
+   "full_name": "CopilotKit/OpenDots",
+   "language": "TypeScript",
+   "delta": 936,
+   "stars": 3377
+  },
+  {
+   "full_name": "OpenCut-app/OpenCut",
+   "language": "TypeScript",
+   "delta": 886,
+   "stars": 92471
+  },
+  {
+   "full_name": "rehan-remade/universal-modder",
    "language": "Python",
+   "delta": 879,
+   "stars": 3487
+  },
+  {
+   "full_name": "omlahore/RemoveMacAI",
+   "language": "Swift",
    "delta": 797,
-   "stars": 38106
-  },
-  {
-   "full_name": "NandhaKishorM/laya",
-   "language": "Python",
-   "delta": 675,
-   "stars": 29270
+   "stars": 935
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

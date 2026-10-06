@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05T19:36:55+08:00",
+ "generated_at": "2026-10-06T09:16:18+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -23,10 +23,11 @@
   "2026-10-02",
   "2026-10-03",
   "2026-10-04",
-  "2026-10-05"
+  "2026-10-05",
+  "2026-10-06"
  ],
- "tracked_repos": 2383,
- "latest_date": "2026-10-05",
+ "tracked_repos": 2507,
+ "latest_date": "2026-10-06",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -269,6 +270,17 @@
    "top_delta": 5068,
    "new_repos": 140,
    "prev": "2026-10-04"
+  },
+  {
+   "date": "2026-10-06",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 23926,
+   "gainers": 522,
+   "top_name": "Niko1221/Strata",
+   "top_delta": 1475,
+   "new_repos": 124,
+   "prev": "2026-10-05"
   }
  ],
  "cumulative_top": [
@@ -365,94 +377,94 @@
  ],
  "daily_top": [
   {
-   "full_name": "eternity4719/HowToLiveBetter",
-   "language": "HTML",
-   "delta": 5068,
-   "stars": 42273
-  },
-  {
    "full_name": "Niko1221/Strata",
    "language": "C++",
-   "delta": 4049,
-   "stars": 12470
+   "delta": 1475,
+   "stars": 13945
   },
   {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 2190,
-   "stars": 155497
-  },
-  {
-   "full_name": "Panniantong/Agent-Reach",
-   "language": "Python",
-   "delta": 1639,
-   "stars": 91382
-  },
-  {
-   "full_name": "shihabal3amri/DiPlay",
-   "language": "Kotlin",
-   "delta": 1388,
-   "stars": 4364
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 1269,
-   "stars": 276597
-  },
-  {
-   "full_name": "tt-a1i/archify",
-   "language": "JavaScript",
-   "delta": 1076,
-   "stars": 77813
-  },
-  {
-   "full_name": "affaan-m/ECC",
-   "language": "JavaScript",
-   "delta": 1068,
-   "stars": 273267
-  },
-  {
-   "full_name": "storytold/photocraft",
-   "language": "Rust",
-   "delta": 1043,
-   "stars": 1394
-  },
-  {
-   "full_name": "QingYunA/answer-me-with-html",
-   "language": "JavaScript",
-   "delta": 991,
-   "stars": 1288
-  },
-  {
-   "full_name": "CopilotKit/OpenDots",
-   "language": "TypeScript",
-   "delta": 960,
-   "stars": 3401
-  },
-  {
-   "full_name": "rehan-remade/universal-modder",
-   "language": "Python",
-   "delta": 914,
-   "stars": 3522
+   "full_name": "eternity4719/HowToLiveBetter",
+   "language": "HTML",
+   "delta": 1241,
+   "stars": 43514
   },
   {
    "full_name": "omlahore/RemoveMacAI",
    "language": "Swift",
-   "delta": 883,
-   "stars": 1021
+   "delta": 1049,
+   "stars": 2070
   },
   {
-   "full_name": "thedotmack/claude-mem",
+   "full_name": "tester-army/e2e",
    "language": "TypeScript",
-   "delta": 810,
-   "stars": 96354
+   "delta": 1047,
+   "stars": 4821
   },
   {
-   "full_name": "pingdotgg/t3code",
-   "language": "TypeScript",
-   "delta": 723,
-   "stars": 25377
+   "full_name": "DuarteSantos8/openGym",
+   "language": "JavaScript",
+   "delta": 817,
+   "stars": 4230
+  },
+  {
+   "full_name": "storytold/photocraft",
+   "language": "Rust",
+   "delta": 712,
+   "stars": 2106
+  },
+  {
+   "full_name": "boykopovar/AnyPS5",
+   "language": "C++",
+   "delta": 588,
+   "stars": 4968
+  },
+  {
+   "full_name": "nykooi1/vibe-wise",
+   "language": "Python",
+   "delta": 571,
+   "stars": 1788
+  },
+  {
+   "full_name": "calesthio/OpenMontage",
+   "language": "Python",
+   "delta": 515,
+   "stars": 64045
+  },
+  {
+   "full_name": "Panniantong/Agent-Reach",
+   "language": "Python",
+   "delta": 512,
+   "stars": 91894
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 509,
+   "stars": 277106
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 500,
+   "stars": 155997
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 396,
+   "stars": 273663
+  },
+  {
+   "full_name": "BlueHeisenberg/SCSKiller",
+   "language": "C#",
+   "delta": 382,
+   "stars": 902
+  },
+  {
+   "full_name": "caddyserver/caddy",
+   "language": "Go",
+   "delta": 345,
+   "stars": 77128
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

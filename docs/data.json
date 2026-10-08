@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07T07:44:12+08:00",
+ "generated_at": "2026-10-08T08:08:06+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -25,10 +25,11 @@
   "2026-10-04",
   "2026-10-05",
   "2026-10-06",
-  "2026-10-07"
+  "2026-10-07",
+  "2026-10-08"
  ],
- "tracked_repos": 2575,
- "latest_date": "2026-10-07",
+ "tracked_repos": 2718,
+ "latest_date": "2026-10-08",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -293,6 +294,17 @@
    "top_delta": 4283,
    "new_repos": 114,
    "prev": "2026-10-06"
+  },
+  {
+   "date": "2026-10-08",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 66235,
+   "gainers": 513,
+   "top_name": "storytold/photocraft",
+   "top_delta": 10563,
+   "new_repos": 150,
+   "prev": "2026-10-07"
   }
  ],
  "cumulative_top": [
@@ -391,92 +403,92 @@
   {
    "full_name": "storytold/photocraft",
    "language": "Rust",
-   "delta": 4283,
-   "stars": 6389
+   "delta": 10563,
+   "stars": 16952
   },
   {
-   "full_name": "eternity4719/HowToLiveBetter",
-   "language": "HTML",
-   "delta": 3075,
-   "stars": 46589
+   "full_name": "openai/math",
+   "language": "Lean",
+   "delta": 8289,
+   "stars": 9397
   },
   {
-   "full_name": "Niko1221/Strata",
-   "language": "C++",
-   "delta": 1743,
-   "stars": 15688
+   "full_name": "morluto/rea",
+   "language": "TypeScript",
+   "delta": 5693,
+   "stars": 14940
   },
   {
    "full_name": "boykopovar/AnyPS5",
    "language": "C++",
-   "delta": 1480,
-   "stars": 6448
+   "delta": 4053,
+   "stars": 10501
   },
   {
-   "full_name": "tester-army/e2e",
-   "language": "TypeScript",
-   "delta": 1441,
-   "stars": 6262
-  },
-  {
-   "full_name": "DuarteSantos8/openGym",
-   "language": "JavaScript",
-   "delta": 1419,
-   "stars": 5649
-  },
-  {
-   "full_name": "omlahore/RemoveMacAI",
-   "language": "Swift",
-   "delta": 1019,
-   "stars": 3089
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 987,
-   "stars": 278093
-  },
-  {
-   "full_name": "storytold/filmcraft",
-   "language": "Rust",
-   "delta": 951,
-   "stars": 1581
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 819,
-   "stars": 156816
-  },
-  {
-   "full_name": "nykooi1/vibe-wise",
-   "language": "Python",
-   "delta": 774,
-   "stars": 2562
-  },
-  {
-   "full_name": "Droid-Deck/DroidDeck",
-   "language": "C",
-   "delta": 769,
-   "stars": 2721
-  },
-  {
-   "full_name": "rehan-remade/universal-modder",
-   "language": "Python",
-   "delta": 727,
-   "stars": 4579
+   "full_name": "eternity4719/HowToLiveBetter",
+   "language": "HTML",
+   "delta": 3657,
+   "stars": 50246
   },
   {
    "full_name": "storytold/lightcraft",
    "language": "Rust",
-   "delta": 713,
-   "stars": 1199
+   "delta": 1813,
+   "stars": 3012
   },
   {
-   "full_name": "storytold/printcraft",
+   "full_name": "storytold/filmcraft",
    "language": "Rust",
-   "delta": 630,
-   "stars": 1087
+   "delta": 1692,
+   "stars": 3273
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 1469,
+   "stars": 279562
+  },
+  {
+   "full_name": "shader-effects-inc/shaders",
+   "language": "TypeScript",
+   "delta": 1254,
+   "stars": 2461
+  },
+  {
+   "full_name": "storytold/pdfcraft",
+   "language": "Rust",
+   "delta": 1239,
+   "stars": 2326
+  },
+  {
+   "full_name": "DuarteSantos8/openGym",
+   "language": "JavaScript",
+   "delta": 1221,
+   "stars": 6870
+  },
+  {
+   "full_name": "storytold/vectorcraft",
+   "language": "Rust",
+   "delta": 1198,
+   "stars": 2212
+  },
+  {
+   "full_name": "tester-army/e2e",
+   "language": "TypeScript",
+   "delta": 1155,
+   "stars": 7417
+  },
+  {
+   "full_name": "KingKongRobotics/jumper",
+   "language": "Python",
+   "delta": 1079,
+   "stars": 1444
+  },
+  {
+   "full_name": "alchaincyf/huashu-art-motion",
+   "language": "JavaScript",
+   "delta": 984,
+   "stars": 1607
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

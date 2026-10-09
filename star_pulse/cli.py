@@ -239,19 +239,34 @@ def cmd_translate(settings, args) -> int:
     每天重建看板时就等于白翻一次。
     """
     conn = prepare(settings)
-    rows = conn.execute(
-        """
-        SELECT repo_id, full_name, description, language, topics
-        FROM repo
-        WHERE description IS NOT NULL AND description <> ''
-        ORDER BY full_name
-        """
-    ).fetchall()
-    items = [dict(r) for r in rows]
+    # 只翻「当前看板上真的会显示」的仓库，并按**星数从高到低**。
+    #
+    # 之前是 `FROM repo ... ORDER BY full_name`：库里累积了 2807 个仓库，而看板
+    # 每天只显示其中 800 个（滚动窗口）。按字母序 + 限量翻，翻的全是字母靠前、
+    # 很可能已经掉出候选池的仓库 —— 用户在看板上看不到任何变化，覆盖率也长期
+    # 停在两成。现在优先翻名单里的，且先从最显眼的高星项目开始。
+    dates = analyze.all_snapshot_dates(conn)
+    latest = dates[-1] if dates else None
+    if not latest:
+        print(json.dumps({"error": "还没有任何快照，先跑 run-daily"}, ensure_ascii=False))
+        return 2
+    items = [
+        {
+            "repo_id": r["repo_id"],
+            "full_name": r["full_name"],
+            "description": r["description"],
+            "language": r["language"],
+            "topics": r["topics"],
+            "stars": r["stars"],
+        }
+        for r in analyze.project_rows(conn, latest, None)
+        if (r.get("description") or "").strip()
+    ]
     if args.limit:
         items = items[: args.limit]
     for it in items:
         it["category"] = analyze.classify(it)
+    log.info("待补中文简介：名单 %d 个仓库（数据日期 %s）", len(items), latest)
 
     before = len(i18n.load_cache(settings))
     stats = i18n.translate_missing(settings, items, batch_size=args.batch)

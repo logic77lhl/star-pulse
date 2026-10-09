@@ -1,5 +1,10 @@
 {
  "items": {
+  "1048065319": {
+   "by": "mymemory",
+   "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
+   "zh": "每个座席跨会话的持久上下文–捕获座席在会话期间执行的所有操作，使用AI对其进行压缩，并将相关上下文注入到未来的会话中。与CLA配合使用"
+  },
   "1136590548": {
    "by": "llm",
    "src": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
@@ -9,6 +14,11 @@
    "by": "llm",
    "src": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
    "zh": "面向专业 AI 编程智能体的安全、经校验技能注册表，可扩展 Antigravity、Claude Code、Cursor 等"
+  },
+  "1140828898": {
+   "by": "mymemory",
+   "src": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+   "zh": "主要供知识工作者在Claude Cowork中使用的插件的开源存储库"
   },
   "1148788086": {
    "by": "llm",
@@ -44,6 +54,11 @@
    "by": "llm",
    "src": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
    "zh": "开源全本地的 ElevenLabs 替代：声音克隆、设计、视频配音与有声书，支持 646 种语言"
+  },
+  "1209966933": {
+   "by": "mymemory",
+   "src": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+   "zh": "使用代理对任何内容进行反向工程，从应用行为到本机二进制文件。"
   },
   "1211139949": {
    "by": "llm",
@@ -89,6 +104,11 @@
    "by": "llm",
    "src": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
    "zh": "在自有硬件上运行前沿 MoE 模型：纯 C、零依赖、专家从磁盘流式加载"
+  },
+  "1322250666": {
+   "by": "mymemory",
+   "src": "Tool for automatic PS5 executables porting to Linux and Windows",
+   "zh": "用于自动将PS5可执行文件移植到Linux和Windows的工具"
   },
   "1352965805": {
    "by": "llm",
@@ -2500,6 +2520,11 @@
    "src": "Mini decentralised auth. Gives an existing auth system a key nobody holds, with governance over who can decrypt.",
    "zh": "极简去中心化认证：给现有认证系统加一把无人持有的密钥，并对解密权限做治理"
   },
+  "1361439328": {
+   "by": "mymemory",
+   "src": "Run 35B MoE models in ~2.5 GB of RAM. Weights stream from SSD; a trained router predicts loads a step ahead. Mac, iPhone, Android, Windows supported",
+   "zh": "在大约2.5 GB的RAM中运行35B MoE模型。权重从SSD流式传输；经过训练的路由器预测加载提前一步。支持Mac、iPhone、Android和Windo"
+  },
   "1361444420": {
    "by": "llm",
    "src": "面向基本面因子研究的智能体-A hypothesis-driven AI agent for fundamental factor research, with evidence-gated validation and research memory.",
@@ -3420,6 +3445,126 @@
    "src": "If you think AI sucks, star the repo.",
    "zh": "觉得 AI 很烂就给这个仓库点星"
   },
+  "1374005005": {
+   "by": "mymemory",
+   "src": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbati",
+   "zh": "用JEV决策替换压缩摘要的Claude Code插件：每个工具调用和结果都在一个快速请求中得分，陈旧的请求被丢弃或截断，所有内容保持不变"
+  },
+  "1375382253": {
+   "by": "mymemory",
+   "src": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per reque",
+   "zh": "非自回归系统1决策引擎。在100多种语言的单个转发通道中对任何文本进行键入选择、评分和是/否决定，路由器可根据请求选择正确的检查点"
+  },
+  "1388482474": {
+   "by": "mymemory",
+   "src": "Find code by asking what it does. A CLI for coding agents that uses Jev to discover relevant files and source context.",
+   "zh": "通过询问代码的作用来查找代码。用于编码代理的CLI ，使用JEV发现相关文件和源上下文。"
+  },
+  "1388594776": {
+   "by": "mymemory",
+   "src": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. A Claude Agent Skill for product launch films and featur",
+   "zh": "从不剪切到下一张幻灯片的运动胶片：每一个节拍都从前一个节拍中生长出来，一个连续的相机，由预言机测量的连续性。用于产品发布电影和功能的Claude Agent技能"
+  },
+  "1388867993": {
+   "by": "mymemory",
+   "src": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
+   "zh": "为Claude、Gemini CLI、Codex和其他AI代理提供全面的徽标设计技能：原则、流程、SVG工艺、测试工具和1,400多个徽标参考库。"
+  },
+  "1390273274": {
+   "by": "mymemory",
+   "src": "A growing collection of viral videos made with Claude Opus 5.5 and the prompts behind them. Watch each original next to a live remake on Skillry. Updated regularly.",
+   "zh": "用Claude Opus 5.5及其背后的提示制作的越来越多的病毒视频。观看Skillry现场重制版旁边的每个原创内容。定期更新。"
+  },
+  "1391438314": {
+   "by": "mymemory",
+   "src": "A tiny friend in your Mac's notch and on your iPhone that keeps an eye on your AI coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. Approve from the notch or your Lock Scree",
+   "zh": "Mac和iPhone上的小朋友，密切关注您的AI编码代理： Claude Code、Codex、Cursor、Gemini CLI、Antigravity等。从"
+  },
+  "1391948723": {
+   "by": "mymemory",
+   "src": "🦀 Jumper — an crab robot.",
+   "zh": "🦀 Jumper —螃蟹机器人。"
+  },
+  "1393689296": {
+   "by": "mymemory",
+   "src": "Show it a video you love. Get a new video in the same style. An AI crew (Claude Code or Codex) plans, builds and reviews it with you.",
+   "zh": "向其展示您喜爱的视频。获取相同风格的新视频。人工智能团队（ Claude Code或Codex ）与您一起计划、构建和审查它。"
+  },
+  "1394045721": {
+   "by": "mymemory",
+   "src": "A Claude Code plugin that helps you learn how to build while AI writes the code.",
+   "zh": "Claude Code插件，可帮助您学习如何在人工智能编写代码时进行构建。"
+  },
+  "1394989252": {
+   "by": "mymemory",
+   "src": "Debloat macOS: turn off Apple Intelligence, analytics, ads and pop-ups. A native app and CLI, and every change can be undone.",
+   "zh": "Debloat macOS ：关闭Apple Intelligence、分析、广告和弹出窗口。原生应用程序和CLI ，每个更改都可以撤消。"
+  },
+  "1395994653": {
+   "by": "mymemory",
+   "src": "WebGPU components for React, Vue, Svelte, Solid, JS & Framer",
+   "zh": "React、Vue、Svelte、Solid、JS和Framer的WebGPU组件"
+  },
+  "1396117711": {
+   "by": "mymemory",
+   "src": "Your always-on AI coworkers that move between text, calls, and Slack.",
+   "zh": "始终在线的人工智能同事可以在短信、通话和Slack之间切换。"
+  },
+  "1396688303": {
+   "by": "mymemory",
+   "src": "Playwright MCP server undetected by anti-bots and captchas: AI agent browses the web on anti-detect stealth Firefox, Python, undetected browser automation, scraping, computer use.",
+   "zh": "剧作家MCP服务器未被反机器人和验证码检测到： AI代理在反检测隐形Firefox、Python、未被检测到的浏览器自动化、抓取、计算机使用上浏览网页。"
+  },
+  "1397016507": {
+   "by": "mymemory",
+   "src": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+   "zh": "在任何比赛中指向克劳德。技能、工具和FAL MCP让Claude Code可以修改您拥有的几乎所有PC游戏：侦察、逆向工程、FAL生成的艺术/3D/音频、游戏内"
+  },
+  "1397771878": {
+   "by": "mymemory",
+   "src": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese",
+   "zh": "将AI生成的日语提炼成自然日语的AI生成の日本語を自然な日本語へ推敲する代理技能/代理技能"
+  },
+  "1398080271": {
+   "by": "mymemory",
+   "src": "An open-source, clean-room reimplementation of Adobe Photoshop in pure Rust",
+   "zh": "纯Rust中Adobe Photoshop的开源洁净室重新实现"
+  },
+  "1398086162": {
+   "by": "mymemory",
+   "src": "An open-source, clean-room reimplementation of Adobe Acrobat built in pure Rust",
+   "zh": "纯Rust内置的Adobe Acrobat的开源洁净室重新实现"
+  },
+  "1398091865": {
+   "by": "mymemory",
+   "src": "An open-source, clean-room reimplementation of Adobe Premiere Pro built in pure Rust.",
+   "zh": "纯Rust内置的Adobe Premiere Pro的开源洁净室重新实现。"
+  },
+  "1398097510": {
+   "by": "mymemory",
+   "src": "An open-source, clean-room reimplementation of Adobe Illustrator, built in pure Rust.",
+   "zh": "纯Rust内置的Adobe Illustrator的开源洁净室重新实现。"
+  },
+  "1398185212": {
+   "by": "mymemory",
+   "src": "An open-source, clean-room reimplementation of Adobe Lightroom in pure Rust.",
+   "zh": "纯Rust中Adobe Lightroom的开源洁净室重新实现。"
+  },
+  "1401476500": {
+   "by": "mymemory",
+   "src": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
+   "zh": "用HTML回答我，这是一种客服代表技能，可以用您实际可以阅读的单页HTML来回答难题。让AI Agent 用一页 HTML 回答复杂问题。"
+  },
+  "1402193143": {
+   "by": "mymemory",
+   "src": "Open source SDK to build Muse gadgets",
+   "zh": "用于构建Muse小工具的开源SDK"
+  },
+  "1406706284": {
+   "by": "mymemory",
+   "src": "艺术动画skill：35种艺术风格、9种解说语法，用代码让画动起来。",
+   "zh": "艺术动画技能： 35种艺术风格、 9种解说语法 ，用代码让画动起来。"
+  },
   "14614344": {
    "by": "llm",
    "src": "A good looking terminal emulator which mimics the old cathode display...",
@@ -3440,15 +3585,30 @@
    "src": "Browse media content with your own rules on Android TV",
    "zh": "按你自己的规则在 Android TV 上浏览媒体内容"
   },
+  "476507964": {
+   "by": "mymemory",
+   "src": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+   "zh": "ArtCraft是艺术家、设计师和电影制作人的特意制作引擎"
+  },
   "645238879": {
    "by": "llm",
    "src": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
    "zh": "实用的抖音下载工具，支持单条与主页批量下载、进度显示、重试与去重"
   },
+  "741625310": {
+   "by": "mymemory",
+   "src": "A native, user-mode, multi-process, graphical debugger.",
+   "zh": "本机、用户模式、多进程、图形调试器。"
+  },
   "888092115": {
    "by": "llm",
    "src": "Python tool for converting files and office documents to Markdown.",
    "zh": "把文件与办公文档转换为 Markdown 的 Python 工具"
+  },
+  "907604175": {
+   "by": "mymemory",
+   "src": "Notes of the book System Desgin Interview - An Insider's Guide",
+   "zh": "《System Desgin Interview - An Insider's Guide》一书的笔记"
   },
   "913030762": {
    "by": "llm",

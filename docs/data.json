@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T08:08:06+08:00",
+ "generated_at": "2026-10-09T08:15:51+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -26,10 +26,11 @@
   "2026-10-05",
   "2026-10-06",
   "2026-10-07",
-  "2026-10-08"
+  "2026-10-08",
+  "2026-10-09"
  ],
- "tracked_repos": 2718,
- "latest_date": "2026-10-08",
+ "tracked_repos": 2804,
+ "latest_date": "2026-10-09",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -305,6 +306,17 @@
    "top_delta": 10563,
    "new_repos": 150,
    "prev": "2026-10-07"
+  },
+  {
+   "date": "2026-10-09",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 76125,
+   "gainers": 585,
+   "top_name": "morluto/rea",
+   "top_delta": 11059,
+   "new_repos": 88,
+   "prev": "2026-10-08"
   }
  ],
  "cumulative_top": [
@@ -401,94 +413,94 @@
  ],
  "daily_top": [
   {
-   "full_name": "storytold/photocraft",
-   "language": "Rust",
-   "delta": 10563,
-   "stars": 16952
-  },
-  {
-   "full_name": "openai/math",
-   "language": "Lean",
-   "delta": 8289,
-   "stars": 9397
-  },
-  {
    "full_name": "morluto/rea",
    "language": "TypeScript",
-   "delta": 5693,
-   "stars": 14940
+   "delta": 11059,
+   "stars": 25999
+  },
+  {
+   "full_name": "storytold/photocraft",
+   "language": "Rust",
+   "delta": 9816,
+   "stars": 26768
   },
   {
    "full_name": "boykopovar/AnyPS5",
    "language": "C++",
-   "delta": 4053,
-   "stars": 10501
+   "delta": 5148,
+   "stars": 15649
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 3657,
-   "stars": 50246
+   "delta": 4236,
+   "stars": 54482
+  },
+  {
+   "full_name": "openai/math",
+   "language": "Lean",
+   "delta": 2672,
+   "stars": 12069
   },
   {
    "full_name": "storytold/lightcraft",
    "language": "Rust",
-   "delta": 1813,
-   "stars": 3012
-  },
-  {
-   "full_name": "storytold/filmcraft",
-   "language": "Rust",
-   "delta": 1692,
-   "stars": 3273
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 1469,
-   "stars": 279562
-  },
-  {
-   "full_name": "shader-effects-inc/shaders",
-   "language": "TypeScript",
-   "delta": 1254,
-   "stars": 2461
+   "delta": 2511,
+   "stars": 5523
   },
   {
    "full_name": "storytold/pdfcraft",
    "language": "Rust",
-   "delta": 1239,
-   "stars": 2326
+   "delta": 2144,
+   "stars": 4470
   },
   {
-   "full_name": "DuarteSantos8/openGym",
-   "language": "JavaScript",
-   "delta": 1221,
-   "stars": 6870
+   "full_name": "storytold/filmcraft",
+   "language": "Rust",
+   "delta": 2008,
+   "stars": 5281
   },
   {
    "full_name": "storytold/vectorcraft",
    "language": "Rust",
-   "delta": 1198,
-   "stars": 2212
+   "delta": 1577,
+   "stars": 3789
   },
   {
-   "full_name": "tester-army/e2e",
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 1487,
+   "stars": 281049
+  },
+  {
+   "full_name": "cathrynlavery/diagram-design",
+   "language": "HTML",
+   "delta": 1363,
+   "stars": 46306
+  },
+  {
+   "full_name": "storytold/effectcraft",
+   "language": "Rust",
+   "delta": 1115,
+   "stars": 2766
+  },
+  {
+   "full_name": "shader-effects-inc/shaders",
    "language": "TypeScript",
-   "delta": 1155,
-   "stars": 7417
+   "delta": 957,
+   "stars": 3418
   },
   {
-   "full_name": "KingKongRobotics/jumper",
-   "language": "Python",
-   "delta": 1079,
-   "stars": 1444
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 933,
+   "stars": 158511
   },
   {
    "full_name": "alchaincyf/huashu-art-motion",
    "language": "JavaScript",
-   "delta": 984,
-   "stars": 1607
+   "delta": 821,
+   "stars": 2428
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

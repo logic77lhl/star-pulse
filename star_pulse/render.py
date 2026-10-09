@@ -5,17 +5,22 @@
   - 哪些仓库因为跨度超限被剔除（避免 14 天增量混进 7 天榜）
   - 哪些仓库被标记为疑似刷星
 这是把「自动化榜单」和「可信榜单」区分开的地方。
+
+HTML 侧与看板共用 `theme`（设计令牌 + 样式表 + HTML 原语）。此前这里另写了一套
+CSS，同一个产品的两类页面字体、间距、表格样式、暗色模式全不一致，改一处漏一处。
+图表同样改成服务端渲染 —— 周报里曾经也从 cdnjs 加载 Chart.js。
 """
 
 from __future__ import annotations
 
-import html as html_mod
-import json
+import re
 import sqlite3
 from datetime import date
 
-from . import analyze, db
+from . import analyze, charts, theme
 from .config import Settings
+
+esc = theme.esc
 
 
 def week_label(start: str, end: str) -> str:
@@ -108,6 +113,16 @@ def build_report(
     return md, html, meta
 
 
+def _truncate(text: str, limit: int = 70) -> str:
+    """压平空白并截断。**先截断、后转义**。
+
+    顺序反了会把 HTML 实体切断：`Tom &amp; Jerry` 截到 70 字可能留下 `&am`，
+    浏览器会把它渲染成乱码。所以这里只处理纯文本，转义交给渲染方。
+    """
+    text = " ".join((text or "").split())
+    return text[:limit] + ("…" if len(text) > limit else "")
+
+
 # ── Markdown ────────────────────────────────────────────────────
 def _fmt_flags(flags: list[str]) -> str:
     return f" ⚠️ {'、'.join(flags)}" if flags else ""
@@ -140,9 +155,7 @@ def _markdown(settings: Settings, label: str, start: str, end: str, meta: dict) 
         L.append("| 排名 | 项目 | 本周新增 | 总星 | 语言 | 分类 | 一句话 |")
         L.append("|---:|---|---:|---:|---|---|---|")
         for i, item in enumerate(top, 1):
-            desc = (item.get("summary") or "").replace("\n", " ").replace("|", "／")
-            if len(desc) > 70:
-                desc = desc[:70] + "…"
+            desc = _truncate(item.get("summary") or "").replace("|", "／")
             L.append(
                 f"| {i} | [{item['full_name']}](https://github.com/{item['full_name']})"
                 f"{_fmt_flags(item.get('flags') or [])} "
@@ -178,23 +191,10 @@ def _markdown(settings: Settings, label: str, start: str, end: str, meta: dict) 
 
     L.append("## 数据质量")
     L.append("")
-    L.append(f"- 快照覆盖：**{cov['distinct_days']} 天**"
-             f"（{cov['first_day'] or '—'} ~ {cov['last_day'] or '—'}），累计 {cov['rows_total']:,} 条记录")
-    L.append(f"- 增量时间跨度上限：{meta['max_span_days']} 天，超出即剔除")
-    if meta["dropped_count"]:
-        L.append(f"- **因跨度超限被剔除 {meta['dropped_count']} 个仓库**（快照断档导致，非同口径比较）：")
-        for item in meta["dropped"][:5]:
-            L.append(f"  - {item['full_name']}：跨度 {item['span_days']} 天，"
-                     f"+{item['delta']:,}（{item['base_date']} → {item['head_date']}）")
-    else:
-        L.append("- 无仓库因跨度超限被剔除")
-    flagged = [i for i in top if i.get("flags")]
-    if flagged:
-        L.append(f"- 疑似刷星标记 {len(flagged)} 个（仅标注，未剔除）：")
-        for item in flagged:
-            L.append(f"  - {item['full_name']}：{'、'.join(item['flags'])}")
-    else:
-        L.append("- 未发现疑似刷星迹象")
+    for fact, details in _quality_facts(meta):
+        L.append(f"- {fact}")
+        for d in details:
+            L.append(f"  - {d}")
     L.append("")
     L.append("---")
     L.append("")
@@ -204,175 +204,155 @@ def _markdown(settings: Settings, label: str, start: str, end: str, meta: dict) 
     return "\n".join(L)
 
 
+# ── 数据质量：两条渲染路径的唯一事实来源 ────────────────────────
+def _quality_facts(meta: dict) -> list[tuple[str, list[str]]]:
+    """返回 [(结论, [明细...])]，Markdown 与 HTML 都从这里渲染。
+
+    此前两条路径各写一遍，已经漂移：Markdown 列出了被剔除仓库的名字与跨度，
+    HTML 只给了一个数量 —— 同一份报告在两种格式下能查到的信息不一样。
+    强调用 `**...**` 标记，HTML 侧再转成 <b>。
+    """
+    cov = meta["coverage"]
+    top = meta["top"]
+    flagged = [i for i in top if i.get("flags")]
+
+    facts: list[tuple[str, list[str]]] = [
+        (
+            f"快照覆盖 **{cov['distinct_days']} 天**"
+            f"（{cov['first_day'] or '—'} ~ {cov['last_day'] or '—'}），"
+            f"累计 {cov['rows_total']:,} 条记录",
+            [],
+        ),
+        (f"增量时间跨度上限 **{meta['max_span_days']} 天**，超出即剔除", []),
+    ]
+
+    if meta["dropped_count"]:
+        facts.append((
+            f"因跨度超限被剔除 **{meta['dropped_count']}** 个仓库"
+            f"（快照断档导致，非同口径比较）",
+            [
+                f"{d['full_name']}：跨度 {d['span_days']} 天，+{d['delta']:,}"
+                f"（{d['base_date']} → {d['head_date']}）"
+                for d in meta["dropped"][:5]
+            ],
+        ))
+    else:
+        facts.append(("无仓库因跨度超限被剔除", []))
+
+    if flagged:
+        facts.append((
+            f"疑似刷星标记 **{len(flagged)}** 个（仅标注，未剔除）",
+            [f"{i['full_name']}：{'、'.join(i['flags'])}" for i in flagged],
+        ))
+    else:
+        facts.append(("未发现疑似刷星迹象", []))
+
+    return facts
+
+
 # ── HTML ────────────────────────────────────────────────────────
+def _emph(text: str) -> str:
+    """先转义，再把 `**x**` 变成 <b>x</b>。`*` 不在转义范围内，顺序安全。"""
+    return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc(text))
+
+
 def _html(settings: Settings, label: str, start: str, end: str, meta: dict) -> str:
     cov = meta["coverage"]
     top = meta["top"]
-    esc = html_mod.escape
-
-    def table(headers: list[str], rows: list[list[str]], numeric: set[int]) -> str:
-        out = ['<table><thead><tr>']
-        for i, h in enumerate(headers):
-            out.append(f'<th style="text-align:right">{esc(h)}</th>' if i in numeric else f'<th>{esc(h)}</th>')
-        out.append("</tr></thead><tbody>")
-        for row in rows:
-            out.append("<tr>")
-            for i, cell in enumerate(row):
-                cls = ' class="num"' if i in numeric else ""
-                out.append(f"<td{cls}>{cell}</td>")
-            out.append("</tr>")
-        out.append("</tbody></table>")
-        return "".join(out)
 
     if top:
-        top_rows = []
+        rows = []
         for i, item in enumerate(top, 1):
             flags = item.get("flags") or []
-            badge = f' <span class="warn">⚠ {"、".join(esc(f) for f in flags)}</span>' if flags else ""
-            desc = esc((item.get("summary") or "").replace("\n", " "))
-            if len(desc) > 70:
-                desc = desc[:70] + "…"
-            url = f"https://github.com/{item['full_name']}"
-            top_rows.append([
-                str(i),
-                f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(item["full_name"])}</a>{badge}',
-                f'+{item["delta"]:,}',
-                f'{item["stars_after"]:,}',
+            badge = (
+                f' <span class="tag plain">⚠ {"、".join(esc(f) for f in flags)}</span>'
+                if flags else ""
+            )
+            rows.append([
+                (str(i), "rank"),
+                theme.repo_link(item["full_name"]) + badge,
+                (f'<span class="up">+{item["delta"]:,}</span>', "num"),
+                (f'{item["stars_after"]:,}', "num"),
                 esc(item.get("language") or "—"),
-                esc(item.get("category") or "其他"),
-                desc,
+                f'<span class="tag plain">{esc(item.get("category") or "其他")}</span>',
+                f'<span class="muted">{esc(_truncate(item.get("summary") or ""))}</span>',
             ])
-        top_table = table(
-            ["排名", "项目", "本周新增", "总星", "语言", "分类", "一句话"],
-            top_rows,
-            {0, 2, 3},
+        top_table = theme.table(
+            ["#", "项目", ("本周新增", "num"), ("总星", "num"), "语言", "分类", "一句话"],
+            rows, cls="data compact",
         )
     else:
         top_table = f'<p class="muted">{esc(meta["warmup_note"])}</p>'
 
-    chart_labels = [i["full_name"] for i in top[:12]]
-    chart_values = [i["delta"] for i in top[:12]]
-
     new_rows = [
         [
-            str(i),
-            f'<a href="https://github.com/{esc(r["full_name"])}" target="_blank" rel="noopener">{esc(r["full_name"])}</a>',
-            f'{r["stars"]:,}',
+            (str(i), "rank"),
+            theme.repo_link(r["full_name"]),
+            (f'{r["stars"]:,}', "num"),
             esc(r.get("repo_created") or "—"),
             esc(r.get("language") or "—"),
-            esc(r.get("category") or "其他"),
+            f'<span class="tag plain">{esc(r.get("category") or "其他")}</span>',
         ]
         for i, r in enumerate(meta["new_repos"], 1)
     ]
-    new_table = table(["排名", "项目", "当前星数", "创建日期", "语言", "分类"], new_rows, {0, 2}) if new_rows else '<p class="muted">本期无新项目记录。</p>'
+    new_table = (
+        theme.table(["#", "项目", ("当前星数", "num"), "创建日期", "语言", "分类"],
+                    new_rows, cls="data compact")
+        if new_rows else '<p class="muted">本期无新项目记录。</p>'
+    )
 
+    breakdown_total = sum(c for _, c in meta["breakdown"]) or 1
     cat_rows = [
-        [esc(name), str(count), f"{count / (sum(c for _, c in meta['breakdown']) or 1):.0%}"]
+        [esc(name), (str(count), "num"), (f"{count / breakdown_total:.0%}", "num")]
         for name, count in meta["breakdown"]
     ]
-    cat_table = table(["分类", "数量", "占比"], cat_rows, {1, 2}) if cat_rows else '<p class="muted">—</p>'
+    cat_table = (
+        theme.table(["分类", ("数量", "num"), ("占比", "num")], cat_rows, cls="data compact")
+        if cat_rows else '<p class="muted">—</p>'
+    )
 
-    flagged = [i for i in top if i.get("flags")]
-    quality_items = [
-        f"快照覆盖 <b>{cov['distinct_days']} 天</b>（{esc(str(cov['first_day'] or '—'))} ~ {esc(str(cov['last_day'] or '—'))}），累计 {cov['rows_total']:,} 条记录",
-        f"增量时间跨度上限 <b>{meta['max_span_days']} 天</b>，超出即剔除",
-        f"因跨度超限被剔除 <b>{meta['dropped_count']}</b> 个仓库" if meta["dropped_count"] else "无仓库因跨度超限被剔除",
-        f"疑似刷星标记 <b>{len(flagged)}</b> 个（仅标注，未剔除）" if flagged else "未发现疑似刷星迹象",
-    ]
-    quality_html = "".join(f"<li>{x}</li>" for x in quality_items)
+    # 数据质量：与 Markdown 同源，不再各自维护一份
+    quality_items = []
+    for fact, details in _quality_facts(meta):
+        sub = (
+            "<ul>" + "".join(f"<li>{esc(d)}</li>" for d in details) + "</ul>"
+            if details else ""
+        )
+        quality_items.append(f"<li>{_emph(fact)}{sub}</li>")
+    quality_html = "".join(quality_items)
 
     banner = ""
     if not meta["warm"]:
         banner = f'<div class="banner"><b>本期无增量榜</b>　{esc(meta["warmup_note"])}</div>'
 
-    payload = json.dumps({"labels": chart_labels, "values": chart_values}, ensure_ascii=False)
     chart_block = ""
     if top:
-        chart_block = f"""
-<h2>增长分布</h2>
-<div class="chartwrap"><canvas id="gainChart" role="img" aria-label="Top 12 项目本周新增 Star 横向条形图"></canvas></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script>
-const D = {payload};
-new Chart(document.getElementById('gainChart'), {{
-  type: 'bar',
-  data: {{ labels: D.labels, datasets: [{{ label: '本周新增 Star', data: D.values,
-    backgroundColor: '#7F77DD', borderRadius: 3, barThickness: 16 }}] }},
-  options: {{ indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-    plugins: {{ legend: {{ display: false }},
-      tooltip: {{ callbacks: {{ label: c => '+' + c.parsed.x.toLocaleString('en-US') }} }} }},
-    scales: {{
-      x: {{ beginAtZero: true, grid: {{ color: 'rgba(128,128,128,.18)' }},
-            ticks: {{ callback: v => (v/1000) + 'k' }} }},
-      y: {{ grid: {{ display: false }}, ticks: {{ autoSkip: false }} }}
-    }} }}
-}});
-</script>"""
+        chart_block = (
+            "<h2>增长分布</h2>"
+            '<p class="note">Top 12 的本周新增 Star。横向条形，不需要任何脚本。</p>'
+            + charts.hbar_chart([i["full_name"] for i in top[:12]],
+                                [i["delta"] for i in top[:12]])
+        )
 
-    return f"""<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GitHub 星耀榜 · {esc(label)}</title>
-<style>
-:root {{ color-scheme: light dark; }}
-* {{ box-sizing: border-box; }}
-body {{ margin: 0; padding: 40px 20px; font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
-  background: #f7f7f5; color: #22211f; line-height: 1.65; }}
-.wrap {{ max-width: 1040px; margin: 0 auto; }}
-h1 {{ font-size: 26px; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01em; }}
-h2 {{ font-size: 17px; font-weight: 600; margin: 40px 0 14px; }}
-.sub {{ color: #6b6a66; font-size: 14px; margin: 0 0 4px; }}
-.banner {{ background: #FAEEDA; border: 1px solid #EF9F27; color: #633806;
-  padding: 14px 18px; border-radius: 10px; margin: 24px 0; font-size: 14px; }}
-table {{ width: 100%; border-collapse: collapse; font-size: 14px; background: #fff;
-  border-radius: 10px; overflow: hidden; border: 1px solid #e3e1da; }}
-th {{ text-align: left; padding: 11px 14px; background: #f1efe8; font-weight: 600;
-  font-size: 13px; color: #444441; white-space: nowrap; }}
-td {{ padding: 11px 14px; border-top: 1px solid #eeece6; vertical-align: top; }}
-td.num {{ text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }}
-a {{ color: #534AB7; text-decoration: none; }}
-a:hover {{ text-decoration: underline; }}
-.warn {{ color: #A32D2D; font-size: 12px; }}
-.muted {{ color: #888780; font-size: 14px; }}
-.chartwrap {{ position: relative; height: 420px; background: #fff; border: 1px solid #e3e1da;
-  border-radius: 10px; padding: 16px; }}
-ul.quality {{ background: #fff; border: 1px solid #e3e1da; border-radius: 10px;
-  padding: 16px 16px 16px 36px; font-size: 14px; }}
-ul.quality li {{ margin: 4px 0; }}
-footer {{ margin-top: 40px; padding-top: 18px; border-top: 1px solid #e3e1da;
-  color: #888780; font-size: 13px; }}
-@media (prefers-color-scheme: dark) {{
-  body {{ background: #1b1b19; color: #e8e6e1; }}
-  table, ul.quality, .chartwrap {{ background: #262624; border-color: #3a3a37; }}
-  th {{ background: #302f2c; color: #d3d1c7; }}
-  td {{ border-top-color: #3a3a37; }}
-  a {{ color: #AFA9EC; }}
-  h1, h2 {{ color: #eeecea; }}
-  .sub, .muted, footer {{ color: #9b9993; }}
-  .banner {{ background: #412402; border-color: #854F0B; color: #FAC775; }}
-}}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <h1>GitHub 星耀榜 · {esc(label)}</h1>
-  <p class="sub">统计周期 {esc(start)} ~ {esc(end)}（UTC+{settings.tz_offset_hours}）　·　数据截至 {esc(str(cov['last_day'] or '—'))}　·　快照覆盖 {cov['distinct_days']} 天</p>
-  {banner}
-  <h2>本周新增 Star Top {len(top)}</h2>
-  {top_table}
-  {chart_block}
-  <h2>新项目榜（周期内创建）</h2>
-  <p class="sub">口径不同：衡量新项目起跑速度，不是存量增长。</p>
-  {new_table}
-  <h2>分类透视</h2>
-  {cat_table}
-  <h2>数据质量</h2>
-  <ul class="quality">{quality_html}</ul>
-  <footer>本报告由 star-pulse 自动生成。所有数值来自每日快照相减，未经任何模型改写；
-  分类与文字描述仅用于可读性，不影响排名。</footer>
-</div>
-</body>
-</html>
-"""
+    body = (
+        f'<header class="topbar"><h1>GitHub 星耀榜 · {esc(label)}</h1>'
+        f'<p class="note" style="margin:0 0 8px">统计周期 {esc(start)} ~ {esc(end)}'
+        f'（UTC+{settings.tz_offset_hours}）　·　数据截至 {esc(str(cov["last_day"] or "—"))}'
+        f'　·　快照覆盖 {cov["distinct_days"]} 天</p>'
+        f'<div class="meta"><span><a href="../index.html">← 返回看板</a></span></div></header>'
+        f"{banner}"
+        f'<section class="panel"><div class="panel-head"><h2>本周新增 Star Top {len(top)}</h2></div>'
+        f"{top_table}</section>"
+        + (f'<section class="panel">{chart_block}</section>' if chart_block else "")
+        + '<section class="panel"><div class="panel-head"><h2>新项目榜（周期内创建）</h2></div>'
+          '<p class="note">口径不同：衡量新项目起跑速度，不是存量增长。</p>'
+          f"{new_table}</section>"
+          '<section class="panel"><div class="panel-head"><h2>分类透视</h2></div>'
+          f"{cat_table}</section>"
+          '<section class="panel"><div class="panel-head"><h2>数据质量</h2></div>'
+          f'<ul class="quality">{quality_html}</ul></section>'
+          "<footer>本报告由 star-pulse 自动生成。所有数值来自每日快照相减，未经任何模型改写；"
+          "分类与文字描述仅用于可读性，不影响排名。</footer>"
+    )
+
+    return theme.page(f"GitHub 星耀榜 · {label}", body)

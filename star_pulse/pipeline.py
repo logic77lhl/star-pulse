@@ -169,7 +169,12 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
     # ── 落库 ──
     # JSON 先落盘、DB 后写：JSON 是 git 里的事实来源，写失败则 DB 不动（本轮整体不落库）；
     # DB 写失败时 JSON 已在，下次回灌会自动补齐。方向永远指向「不丢数据」。
+    # 写入是合并语义（见 db.export_snapshot_json）：本轮只采到一部分时不会抹掉
+    # 当天已经落盘的其余仓库。一个都没采到则返回 None —— 不制造空快照，
+    # 否则发布门会把「整轮失败」误判成「今日已产出」。
     json_path = db.export_snapshot_json(settings.snapshots_dir, today, repo_rows)
+    if json_path is None:
+        log.error("本轮未采到任何仓库，不写快照文件（当天已有的快照保持不变）")
 
     discovery_rows = [
         (int(rid), today, channel, rank)
@@ -189,7 +194,7 @@ def run_daily(settings: Settings, conn: sqlite3.Connection, http: Http) -> dict:
         "by_channel": counts,
         "errors": errors,
         "budget_exceeded": budget_exceeded,
-        "json": str(json_path),
+        "json": str(json_path) if json_path else None,
         "http": http.stats(),
     }
     log.info(
@@ -226,7 +231,15 @@ def snapshot_only(settings: Settings, conn: sqlite3.Connection, http: Http, name
             }
         )
 
-    if repo_rows:
-        db.export_snapshot_json(settings.snapshots_dir, today, repo_rows)
+    # 合并写：补跑某几个仓库时，当天其余仓库的快照必须原样保留
+    # （旧实现是整文件覆盖，`snapshot --repos a/b` 会把当天 800 个仓库抹成 1 个）。
+    json_path = db.export_snapshot_json(settings.snapshots_dir, today, repo_rows)
+    if json_path is None:
+        log.warning("没有取到任何仓库，未改动当天的快照文件")
     _n_repos, n, _n_disc = db.save_daily_batch(conn, repo_rows, snap_rows, [], today)
-    return {"date": today, "snapshots_written": n, "http": http.stats()}
+    return {
+        "date": today,
+        "snapshots_written": n,
+        "json": str(json_path) if json_path else None,
+        "http": http.stats(),
+    }

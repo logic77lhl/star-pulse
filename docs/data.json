@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T08:15:51+08:00",
+ "generated_at": "2026-10-09T14:31:42+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -321,96 +321,67 @@
  ],
  "cumulative_top": [
   {
-   "full_name": "alphaXiv/OpenResearch",
-   "delta": 2683,
-   "stars": 4913,
-   "language": "Rust"
-  },
-  {
-   "full_name": "SnailSploit/Claude-Red",
-   "delta": 1472,
-   "stars": 5749,
-   "language": "Python"
-  },
-  {
-   "full_name": "multimodal-art-projection/YuE",
-   "delta": 1450,
-   "stars": 9347,
-   "language": "Python"
-  },
-  {
-   "full_name": "tonhowtf/omniget",
-   "delta": 925,
-   "stars": 12853,
-   "language": "Rust"
-  },
-  {
-   "full_name": "asgeirtj/system_prompts_leaks",
-   "delta": 487,
-   "stars": 66729,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "melgarafael/DeskcommCRM",
-   "delta": 468,
-   "stars": 2793,
-   "language": "TypeScript"
-  },
-  {
-   "full_name": "lnkiai/m3e-canvas",
-   "delta": 357,
-   "stars": 6935,
-   "language": "TypeScript"
-  },
-  {
-   "full_name": "huggingface/transformers",
-   "delta": 292,
-   "stars": 165951,
-   "language": "Python"
-  },
-  {
-   "full_name": "NVlabs/SoL-Pi",
-   "delta": 269,
-   "stars": 2033,
-   "language": "TypeScript"
-  },
-  {
-   "full_name": "tech-leads-club/agent-skills",
-   "delta": 252,
-   "stars": 6036,
-   "language": "TypeScript"
-  },
-  {
-   "full_name": "crwdla/tokentab",
-   "delta": 228,
-   "stars": 1145,
-   "language": "Python"
-  },
-  {
-   "full_name": "yappologistic/Sung",
-   "delta": 160,
-   "stars": 226,
-   "language": "C++"
-  },
-  {
-   "full_name": "SonicloudTech/sonicloud_opensdk",
-   "delta": 138,
-   "stars": 1403,
+   "full_name": "eternity4719/HowToLiveBetter",
+   "delta": 54267,
+   "stars": 54482,
    "language": "HTML"
   },
   {
-   "full_name": "adtexterry-lgtm/unigit-ecosystem",
-   "delta": 128,
-   "stars": 1135,
+   "full_name": "DietrichGebert/ponytail",
+   "delta": 20944,
+   "stars": 158511,
    "language": "JavaScript"
   },
   {
-   "full_name": "jealous-sound/azerothcore-wotlk-coa",
-   "delta": 112,
-   "stars": 174,
-   "language": "C++"
+   "full_name": "alibaba/open-code-review",
+   "delta": 20785,
+   "stars": 44589,
+   "language": "Go"
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "delta": 19578,
+   "stars": 281049,
+   "language": "Shell"
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "delta": 18833,
+   "stars": 79993,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "delta": 17504,
+   "stars": 275385,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "delta": 16836,
+   "stars": 49180,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "ayghri/i-have-adhd",
+   "delta": 11182,
+   "stars": 55788,
+   "language": "Python"
+  },
+  {
+   "full_name": "JustVugg/colibri",
+   "delta": 10275,
+   "stars": 40571,
+   "language": "C"
+  },
+  {
+   "full_name": "heygen-com/hyperframes",
+   "delta": 9470,
+   "stars": 59186,
+   "language": "TypeScript"
   }
  ],
+ "cumulative_comparable": 207,
  "daily_top": [
   {
    "full_name": "morluto/rea",
@@ -471,36 +442,6 @@
    "language": "Shell",
    "delta": 1487,
    "stars": 281049
-  },
-  {
-   "full_name": "cathrynlavery/diagram-design",
-   "language": "HTML",
-   "delta": 1363,
-   "stars": 46306
-  },
-  {
-   "full_name": "storytold/effectcraft",
-   "language": "Rust",
-   "delta": 1115,
-   "stars": 2766
-  },
-  {
-   "full_name": "shader-effects-inc/shaders",
-   "language": "TypeScript",
-   "delta": 957,
-   "stars": 3418
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 933,
-   "stars": 158511
-  },
-  {
-   "full_name": "alchaincyf/huashu-art-motion",
-   "language": "JavaScript",
-   "delta": 821,
-   "stars": 2428
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

@@ -1,0 +1,29 @@
+# ruff 配置。
+#
+# 项目本身零第三方依赖（运行时只用标准库），ruff 只是**开发期**工具：
+# 它不参与采集与生成，装了才跑，不装也不影响任何功能。
+# 本地用法：ruff check .    /    ruff format .
+line-length = 100
+target-version = "py311"
+extend-exclude = ["docs", "reports", "data", "examples"]
+
+[lint]
+select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "W",    # pycodestyle warnings
+    "I",    # isort
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff 自身规则
+]
+ignore = [
+    "E501",  # 行长交给 formatter；中文注释按字符算宽会误报
+    "SIM108",  # 三元表达式不一定比 if/else 更清楚
+]
+
+[lint.per-file-ignores]
+# 测试里允许长函数与断言里的魔法值
+"tests/*" = ["B011", "SIM117"]

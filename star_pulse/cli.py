@@ -4,7 +4,7 @@
     python -m star_pulse run-daily              每日采集（发现 + 快照）
     python -m star_pulse snapshot a/b c/d       给指定仓库拍快照（验证用）
     python -m star_pulse report --period last-week   生成周报
-    python -m star_pulse translate              给仓库简介生成中文译文（需配置 LLM）
+    python -m star_pulse translate              给仓库简介生成中文译文（LLM 或免费机翻）
     python -m star_pulse rebuild                从 JSON 快照重建 SQLite
     python -m star_pulse prune --dry-run        裁剪旧快照（保留最近 N 个）
     python -m star_pulse stats                  查看快照覆盖情况
@@ -71,6 +71,13 @@ def cmd_doctor(settings, args) -> int:
     print(f"报告目录     : {settings.reports_dir}")
     print(f"GITHUB_TOKEN : {'已配置（5000 次/小时）' if settings.token else '未配置（仅 60 次/小时）'}")
     print(f"LLM 解读     : {'已启用 ' + settings.llm_model if settings.llm_enabled else '未启用（不影响主体功能）'}")
+    _backend = settings.translator
+    _backend_note = {
+        "llm": "LLM（质量最好）",
+        "mymemory": "MyMemory 免费机翻（无需密钥）",
+        "none": "无可用后端，页面显示英文原文",
+    }.get(_backend, _backend)
+    print(f"翻译后端     : {_backend_note}")
     print(f"候选池上限   : {settings.max_candidates}")
     print(f"种子仓库     : {len(settings.seed_repos)} 个")
     print(f"时区         : UTC+{settings.tz_offset_hours}，今天 = {settings.today()}")
@@ -331,7 +338,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     p_rep.add_argument("--no-llm", action="store_true", help="强制跳过 LLM 解读")
 
-    p_tr = sub.add_parser("translate", help="给仓库简介生成中文译文（需配置 LLM）")
+    p_tr = sub.add_parser("translate", help="给仓库简介生成中文译文（LLM 或免费机翻）")
     p_tr.add_argument("--limit", type=int, default=0, help="只处理前 N 个仓库（试跑用）")
     p_tr.add_argument("--batch", type=int, default=60, help="每次请求翻译多少条（默认 60）")
 

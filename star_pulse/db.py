@@ -390,29 +390,84 @@ def _pick(row: dict, *keys, default=None):
     return default
 
 
-def export_snapshot_json(snapshots_dir: Path, snap_date: str, rows: list[dict]) -> Path:
-    """把当天快照写成文本文件，方便 git 追踪与人工查阅。"""
+def _snapshot_record(r: dict) -> dict | None:
+    """把仓库行归一成快照 JSON 里的一条记录。
+
+    「采集路径」用 _stars/_forks 这类带下划线的键，「回灌路径」用 stars/forks，
+    这里统一取。缺 repo_id/full_name 的行无法定位，返回 None 由调用方跳过。
+    """
+    rid = _safe_int(r.get("repo_id"), 1, INT64_MAX)
+    full_name = r.get("full_name")
+    if rid is None or not isinstance(full_name, str) or not full_name.strip():
+        return None
+    return {
+        "full_name": full_name,
+        "repo_id": rid,
+        "stars": int(_pick(r, "stars", "_stars", default=0) or 0),
+        "forks": _pick(r, "forks", "_forks"),
+        "open_issues": _pick(r, "open_issues", "_open_issues"),
+        "language": r.get("language"),
+        "description": (r.get("description") or "")[:200],
+        "repo_created": r.get("repo_created"),
+        "is_archived": int(r.get("is_archived") or 0),
+        "is_fork": int(r.get("is_fork") or 0),
+    }
+
+
+def read_snapshot_repos(path: Path) -> dict[int, dict]:
+    """读取已有快照，返回 {repo_id: 记录}。坏文件/坏行一律跳过，绝不抛异常。
+
+    用于「合并写」时取回当天已落盘的仓库。读不出来就当作空文件 —— 宁可少合并
+    一轮，也不能因为一个坏文件让整次采集失败。
+    """
+    if not path.is_file():
+        return {}  # 当天首次写入，属正常路径，不该报错
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        log.warning("已有快照无法解析，将按新建处理：%s", path.name)
+        return {}
+    if not isinstance(data, dict) or not isinstance(data.get("repos"), list):
+        log.warning("已有快照结构异常，将按新建处理：%s", path.name)
+        return {}
+    out: dict[int, dict] = {}
+    for r in data["repos"]:
+        if not isinstance(r, dict):
+            continue
+        rid = _safe_int(r.get("repo_id"), 1, INT64_MAX)
+        if rid is None or not isinstance(r.get("full_name"), str):
+            continue
+        out[rid] = r
+    return out
+
+
+def export_snapshot_json(
+    snapshots_dir: Path, snap_date: str, rows: list[dict], *, merge: bool = True
+) -> Path | None:
+    """把当天快照写成文本文件，方便 git 追踪与人工查阅。无内容可写时返回 None。
+
+    **合并写，不是覆盖写。** 同一天可能被写入多次：正常采集、失败后补跑、
+    `snapshot --repos` 验证、`run-daily --limit 30` 试跑。整文件覆盖会让后一次
+    把先前的仓库整批抹掉 —— 而 JSON 是唯一事实来源且会 commit，下一轮 CI 回灌
+    时那批仓库当天就永久缺一格。合并按 repo_id（仓库身份），本次数据优先。
+
+    **本轮没有新数据就完全不碰文件**，并返回 None。这样有两重好处：
+    一是不会因为一次空跑把当天早先的成功快照重写一遍（徒增 git 变更）；
+    二是绝不凭空造出语法合法的空快照 —— 发布门只看文件是否存在，空文件会被
+    误判成「今日已产出」，进而用空数据覆盖掉当天已有的好数据。
+    """
+    fresh = [rec for rec in (_snapshot_record(r) for r in rows) if rec is not None]
+    if not fresh:
+        return None
+
     target = snapshots_dir / f"{snap_date}.json"
+    merged: dict[int, dict] = read_snapshot_repos(target) if merge else {}
+    for rec in fresh:
+        merged[rec["repo_id"]] = rec
     payload = {
         "date": snap_date,
-        "count": len(rows),
-        "repos": [
-            {
-                "full_name": r["full_name"],
-                "repo_id": r["repo_id"],
-                "stars": int(_pick(r, "stars", "_stars", default=0) or 0),
-                "forks": _pick(r, "forks", "_forks"),
-                "open_issues": _pick(r, "open_issues", "_open_issues"),
-                "language": r.get("language"),
-                "description": (r.get("description") or "")[:200],
-                "repo_created": r.get("repo_created"),
-                "is_archived": int(r.get("is_archived") or 0),
-                "is_fork": int(r.get("is_fork") or 0),
-            }
-            for r in sorted(
-                rows, key=lambda x: -int(_pick(x, "stars", "_stars", default=0) or 0)
-            )
-        ],
+        "count": len(merged),
+        "repos": sorted(merged.values(), key=lambda x: -int(x.get("stars") or 0)),
     }
     _atomic_write_text(target, json.dumps(payload, ensure_ascii=False, indent=1))
     return target

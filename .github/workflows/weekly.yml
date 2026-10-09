@@ -18,7 +18,9 @@ concurrency:
 jobs:
   report:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # 留足余量：回归测试 + 周报（含可选的 LLM 调用）+ 站点重建。
+    # 同样要大于 settings.toml 的 network.max_wait_seconds。
+    timeout-minutes: 30
     steps:
       # fetch-depth: 0 —— 提交前要 git pull --rebase，浅克隆上会失败
       - uses: actions/checkout@v4
@@ -51,6 +53,25 @@ jobs:
             echo "最新一期：$latest"
           fi
 
+      # 补中文简介。此前 translate 从未进过任何 workflow，所以看板上的中文简介
+      # 永远停在第一次手工跑出来的那个数字，再也不会增长。
+      #
+      # 后端由 config/settings.toml 的 [i18n] 决定：auto = 配了 LLM_* 就用 LLM，
+      # 否则自动退回 MyMemory 免费机翻（不需要任何密钥）。
+      #
+      # continue-on-error：翻译只是锦上添花，缺了就是显示英文原文。
+      # 绝不能因为它超时或额度用尽，让整期周报和站点都产不出来。
+      # --limit 400：MyMemory 逐条请求且免费额度按字符算（填邮箱后 5 万字符/天），
+      # 400 条 × 约 80 字符 ≈ 3.2 万字符，在额度内；一轮补不完下一轮接着补。
+      - name: 补中文简介（失败不阻断）
+        continue-on-error: true
+        env:
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          I18N_EMAIL: ${{ secrets.I18N_EMAIL }}
+        run: python -m star_pulse translate --limit 400
+
       - name: 重建站点（含归档本期周报）
         run: python -m star_pulse site
 
@@ -65,7 +86,7 @@ jobs:
           git config user.name  "star-pulse-bot"
           git config user.email "star-pulse-bot@users.noreply.github.com"
           # 容错 add：data/history 只有在真的裁剪过之后才会存在
-          for p in reports data/snapshots data/history docs; do
+          for p in reports data/snapshots data/history data/i18n docs; do
             if [ -e "$p" ]; then git add -A -- "$p"; fi
           done
           if git diff --staged --quiet; then

@@ -21,7 +21,9 @@ from __future__ import annotations
 
 import json
 import logging
+import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 from .config import Settings
@@ -83,7 +85,7 @@ def save_cache(settings: Settings, items: dict[str, dict]) -> str:
     return str(path)
 
 
-def _call(settings: Settings, payload: list[dict]) -> dict[str, str]:
+def _call_llm(settings: Settings, payload: list[dict]) -> dict[str, str]:
     body = {
         "model": settings.llm_model,
         "temperature": 0.2,
@@ -113,19 +115,52 @@ def _call(settings: Settings, payload: list[dict]) -> dict[str, str]:
     return {str(k): str(v).strip() for k, v in parsed.items()}
 
 
+# ── 免费后端：MyMemory ──────────────────────────────────────────
+# 不需要任何密钥。匿名 5000 字符/天；请求里带一个邮箱即提到 50000 字符/天。
+# 官方限额说明：https://mymemory.translated.net/doc/usagelimits.php
+_MYMEMORY_ENDPOINT = "https://api.mymemory.translated.net/get"
+
+
+def _mymemory_one(settings: Settings, text: str) -> str | None:
+    """翻一条。返回 None 表示「对方没有给出可用译文」。"""
+    params = {"q": text, "langpair": "en|zh-CN", "mt": "1"}
+    if settings.i18n_email:
+        params["de"] = settings.i18n_email
+    req = urllib.request.Request(
+        _MYMEMORY_ENDPOINT + "?" + urllib.parse.urlencode(params),
+        headers={"User-Agent": settings.user_agent},
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        data = json.loads(resp.read().decode("utf-8", errors="replace"))
+    if int(data.get("responseStatus") or 0) != 200:
+        raise ValueError(str(data.get("responseDetails") or "MyMemory 返回非 200"))
+    out = ((data.get("responseData") or {}).get("translatedText") or "").strip()
+    # 没命中译文时对方会把原文回显回来 —— 绝不能把英文原文当成中文译文缓存下来，
+    # 否则页面上会出现「中文列里是英文」这种看起来正常、实际错位的数据。
+    if not out or out.lower() == text.strip().lower():
+        return None
+    return out
+
+
 def translate_missing(
     settings: Settings, items: list[dict], batch_size: int = 60
 ) -> dict[str, int]:
     """把还没翻译过的仓库简介翻成中文并写回缓存。
 
     items 每项需含 repo_id / full_name / description（其余可选，用于辅助理解）。
+    后端由 settings.translator 决定（见 config.Settings.translator）。
     返回统计字典；**任何失败都不抛异常**。
     """
     stats = {"candidates": 0, "translated": 0, "skipped_cached": 0,
              "skipped_empty": 0, "failed_batches": 0}
 
-    if not settings.llm_enabled:
-        stats["error"] = "未配置 LLM（见 .env.example 的 LLM_BASE_URL / LLM_API_KEY / LLM_MODEL）"
+    backend = settings.translator
+    stats["backend"] = backend
+    if backend == "none":
+        stats["error"] = (
+            "没有可用的翻译后端：i18n.backend=llm 但未配置 LLM_*，"
+            "或 backend 被设成了 none（见 config/settings.toml 的 [i18n]）"
+        )
         return stats
 
     cache = load_cache(settings)
@@ -149,6 +184,18 @@ def translate_missing(
                  stats["candidates"], stats["skipped_cached"], stats["skipped_empty"])
         return stats
 
+    if backend == "mymemory":
+        _translate_via_mymemory(settings, todo, cache, stats)
+    else:
+        _translate_via_llm(settings, todo, cache, stats, batch_size)
+
+    save_cache(settings, cache)
+    return stats
+
+
+def _translate_via_llm(
+    settings: Settings, todo: list[dict], cache: dict, stats: dict, batch_size: int
+) -> None:
     for start in range(0, len(todo), batch_size):
         batch = todo[start : start + batch_size]
         payload = [
@@ -162,7 +209,7 @@ def translate_missing(
             for it in batch
         ]
         try:
-            result = _call(settings, payload)
+            result = _call_llm(settings, payload)
         except (urllib.error.URLError, KeyError, IndexError, ValueError,
                 json.JSONDecodeError, TimeoutError) as exc:
             # 单批失败不终止整轮 —— 已成功的批次照样写回缓存。
@@ -187,5 +234,34 @@ def translate_missing(
                         start // batch_size + 1, len(batch), got)
         log.info("已翻译 %d/%d", min(start + batch_size, len(todo)), len(todo))
 
-    save_cache(settings, cache)
-    return stats
+
+def _translate_via_mymemory(
+    settings: Settings, todo: list[dict], cache: dict, stats: dict
+) -> None:
+    """逐条调用免费机翻。没有密钥，靠间隔 + 连续失败熔断来控制额度。"""
+    for i, it in enumerate(todo, 1):
+        desc = (it.get("description") or "").strip()[:400]
+        try:
+            zh = _mymemory_one(settings, desc)
+        except (urllib.error.URLError, ValueError, TimeoutError,
+                json.JSONDecodeError) as exc:
+            stats["failed_batches"] += 1
+            log.warning("MyMemory 第 %d 条失败：%s", i, exc)
+            # 连续失败多半是被限流/当天额度用尽。继续硬撞只会把额度耗在重试上，
+            # 已翻译的部分会照常写回缓存，下一轮接着来。
+            if stats["failed_batches"] >= 5:
+                log.warning("连续失败 %d 次，提前结束本轮（已成功的已写回缓存）",
+                            stats["failed_batches"])
+                return
+            continue
+        if zh:
+            cache[str(it["repo_id"])] = {
+                "zh": zh[:80],
+                "by": "mymemory",
+                "src": desc[:200],
+            }
+            stats["translated"] += 1
+        if settings.i18n_request_gap:
+            time.sleep(settings.i18n_request_gap)
+        if i % 20 == 0:
+            log.info("MyMemory 进度 %d/%d", i, len(todo))

@@ -33,9 +33,29 @@ max_span_days = 10
 [network]
 # 两次请求之间的最小间隔（秒）。GitHub 有二级限流，串行 + 间隔最安全
 request_gap_seconds = 0.15
-# 遇到限流时最长等待（秒）。超过则中止本次运行，避免 CI 卡死
-max_wait_seconds = 1800
+# 每小时请求配额上限。Actions 内置的 GITHUB_TOKEN 是 1000/小时，
+# 个人 PAT 是 5000/小时。写错会让开跑前的预检形同虚设。
+rate_limit_per_hour = 1000
+# 遇到限流时最长等待（秒）。超过则中止本次运行，避免 CI 卡死。
+# 必须显著小于 workflow 的 timeout-minutes，否则 Actions 会先杀掉进程，
+# 「配额耗尽也要保住已采数据」的兜底就永远执行不到。
+# daily.yml 现为 45 分钟，这里留 15 分钟等待预算。
+max_wait_seconds = 900
 # 单个请求超时
 timeout_seconds = 30
 # 失败重试次数
 retries = 3
+
+[i18n]
+# 简介中文化的后端。
+#   auto       配了 LLM_* 就用 LLM，否则自动退回 mymemory（推荐）
+#   llm        OpenAI 兼容接口，质量最好，需要 .env 里的 LLM_* 三项
+#   mymemory   免费机翻，**不需要任何密钥**，见下方 email
+#   none       不翻译，页面显示英文原文
+backend = "auto"
+# MyMemory 免费额度：匿名 5000 字符/天，填一个邮箱即提到 50000 字符/天。
+# 只用于向对方说明调用方身份（对方出问题时会邮件联系），不会收到推广邮件。
+# 按 800 条 × 80 字符估算，一次性补齐历史欠账约需 2 天，之后每周新增仅几千字符。
+email = ""
+# mymemory 是逐条请求，留间隔避免被限流
+request_gap_seconds = 1.0

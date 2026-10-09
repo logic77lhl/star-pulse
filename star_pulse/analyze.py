@@ -90,6 +90,57 @@ def weekly_gain(conn: sqlite3.Connection, start: str, end: str, max_span_days: i
     return ranked, dropped
 
 
+# 严格区间增长榜：只比较**两端都有快照**的仓库，所有人窗口完全一致。
+_RANGE_GAIN_SQL = """
+SELECT r.repo_id, r.full_name, r.language,
+       s1.stars - s0.stars AS delta,
+       s1.stars AS stars_after
+FROM snapshot s1
+JOIN snapshot s0 ON s0.repo_id = s1.repo_id AND s0.snap_date = :start
+JOIN repo r      ON r.repo_id  = s1.repo_id
+WHERE s1.snap_date = :end
+  AND r.is_fork = 0
+  AND r.is_archived = 0
+  AND s1.stars > s0.stars
+ORDER BY delta DESC
+"""
+
+_RANGE_COMPARABLE_SQL = """
+SELECT COUNT(*) AS c
+FROM snapshot s1
+JOIN snapshot s0 ON s0.repo_id = s1.repo_id AND s0.snap_date = :start
+JOIN repo r      ON r.repo_id  = s1.repo_id
+WHERE s1.snap_date = :end
+  AND r.is_fork = 0
+  AND r.is_archived = 0
+"""
+
+
+def range_gain(
+    conn: sqlite3.Connection, start: str, end: str, limit: int | None = None
+) -> tuple[list[dict], int]:
+    """严格区间增长榜，返回 (榜单, 两端都有快照的仓库总数)。
+
+    与 `weekly_gain` 的分工必须分清楚，否则会得到一个语义颠倒的榜单：
+
+    * `weekly_gain` 为**周报**设计。它为每个仓库各自取「≤start 的最近一天」和
+      「≤end 的最近一天」，再用 `max_span_days` 把跨度不一致的仓库剔除 —— 这在
+      7 天窗口里是对的，因为绝大多数仓库两端都齐，少数断档的才需要剔除。
+    * 直接把它套在**全历史累计榜**上就完全错了：跨度过滤会恰好命中所有「从第一天
+      追踪到现在」的仓库（它们的跨度就是整个窗口，必然 > max_span_days），于是
+      **真正涨得最多的全被剔除**，榜上只剩下「被追踪几天就掉出候选池」的仓库，
+      而页面标注的却是整个窗口 —— 榜单看起来有数据，实际语义是反的。
+
+    这里不做跨度过滤，而是要求两端都有快照：窗口对所有人一致，天然可比；
+    代价是中途才进池的仓库不参与，这个代价是明确的、可解释的。
+    """
+    params = {"start": start, "end": end}
+    sql = _RANGE_GAIN_SQL + (f"LIMIT {int(limit)}" if limit else "")
+    ranked = [dict(r) for r in conn.execute(sql, params).fetchall()]
+    comparable = conn.execute(_RANGE_COMPARABLE_SQL, params).fetchone()["c"] or 0
+    return ranked, comparable
+
+
 def daily_history(conn: sqlite3.Connection, repo_id: int, start: str, end: str) -> list[tuple[str, int]]:
     rows = conn.execute(
         """SELECT snap_date, stars FROM snapshot

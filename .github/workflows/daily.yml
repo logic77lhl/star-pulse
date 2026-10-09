@@ -21,7 +21,11 @@ concurrency:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 必须显著大于 settings.toml 的 network.max_wait_seconds。
+    # 两者相等时（曾是 30min == 1800s），长时间限流会让 Actions 先杀掉进程，
+    # pipeline 里「配额耗尽也要保住已采数据」的兜底和 CLI 的退出码 3 根本执行不到。
+    # 现在 max_wait_seconds=900，这里留 45 分钟，够 800 次请求 + 等待 + 收尾。
+    timeout-minutes: 45
     steps:
       # fetch-depth: 0 —— 后面提交前要 `git pull --rebase`，浅克隆上会失败
       - uses: actions/checkout@v4
@@ -32,6 +36,11 @@ jobs:
         with:
           python-version: "3.13"
 
+      # 先跑回归测试。此前只有 weekly.yml 跑测试，daily 没有 —— 一个坏掉的采集
+      # 改动最长可以静默跑一整周才被发现，而那一周的快照是脏的。
+      - name: 回归测试
+        run: python tests/test_pipeline.py
+
       # 本项目零第三方依赖，因此不需要 pip install —— 这是刻意的设计，
       # 既省 CI 时间，也免掉供应链风险。
       - name: 采集快照
@@ -41,10 +50,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m star_pulse run-daily
 
-      # 发布门：以「今天是否真的产出了快照 JSON」为准。
+      # 发布门：以「今天是否真的产出了**非空**快照」为准。
       # 为什么不用 if: success() —— run_daily 是刻意「部分失败也落库并返回 0」的，
       # 用 success() 会在配额耗尽时把已经采到的数据连同站点一起丢掉。
-      # 这个判定严格强于 always() 与 success()：既不发布陈旧站点，也不丢已采数据。
+      # 为什么还要查 count —— 只看文件是否存在时，一个空快照（count=0）会被误判成
+      # 「今日已产出」，进而用空数据覆盖当天早先的成功快照。写入侧已保证不产生空
+      # 文件，这里再校验一次 count，属于纵深防御。
       - name: 校验今日是否产出快照
         id: fresh
         if: always()
@@ -52,12 +63,21 @@ jobs:
           # 必须用 UTC+8：快照文件名按 settings.today()（默认 UTC+8）生成，
           # 而 cron 是 20:00 UTC，用 date -u 会查到次日文件名。
           TODAY=$(TZ=Asia/Shanghai date +%F)
-          if [ -f "data/snapshots/$TODAY.json" ]; then
+          SNAP="data/snapshots/$TODAY.json"
+          COUNT=$(python -c 'import json,pathlib,sys
+p = pathlib.Path(sys.argv[1])
+try:
+    d = json.loads(p.read_text(encoding="utf-8"))
+except Exception:
+    print(0)
+else:
+    print(len(d.get("repos") or []) if isinstance(d, dict) else 0)' "$SNAP" 2>/dev/null || echo 0)
+          if [ "${COUNT:-0}" -gt 0 ] 2>/dev/null; then
             echo "produced=true" >> "$GITHUB_OUTPUT"
-            echo "今日快照已产出：$TODAY.json"
+            echo "今日快照已产出：$TODAY.json（$COUNT 个仓库）"
           else
             echo "produced=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::本轮未产出 $TODAY.json，跳过站点重建与提交"
+            echo "::warning::本轮未产出 $TODAY.json 或快照为空，跳过站点重建与提交"
           fi
 
       - name: 裁剪旧快照

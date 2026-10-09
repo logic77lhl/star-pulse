@@ -20,6 +20,11 @@ venv/
 .pytest_cache/
 .ruff_cache/
 
+# 周报的 HTML 只保留发布副本（docs/reports/）。
+# 此前 reports/*.html 与 docs/reports/*.html 是**逐字节相同**的两份，
+# 每周白存一份，纯冗余。reports/ 只留 .md（可读）与 .json（结构化）。
+reports/*.html
+
 # 编辑器 / 系统
 .vscode/
 .idea/

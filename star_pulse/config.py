@@ -62,9 +62,16 @@ class Settings:
 
     # 网络
     request_gap_seconds: float = 0.15
-    max_wait_seconds: int = 1800
+    # 遇到限流时最长等待。必须显著小于 workflow 的 timeout-minutes，
+    # 否则 Actions 会先杀掉进程，「保住已采数据」的兜底永远执行不到。
+    max_wait_seconds: int = 900
     timeout_seconds: int = 30
     retries: int = 3
+
+    # 每小时请求配额上限。**不能硬编码 5000**：Actions 内置的 GITHUB_TOKEN
+    # 只有 1000/小时，个人 PAT 才是 5000/小时。写死 5000 会让 CI 里的预检
+    # 永远不告警，doctor 打印出来的也是错的。
+    rate_limit_per_hour: int = 1000
 
     # 保留策略：data/snapshots 只保留最近这么多**个**快照文件（= 最近 N 个交易日）。
     # 裁剪前会把每天的汇总记账到 data/history/daily_totals.jsonl，覆盖统计不丢。
@@ -74,6 +81,16 @@ class Settings:
     llm_base_url: str = ""
     llm_api_key: str = ""
     llm_model: str = ""
+
+    # 翻译后端（可选）。auto = 配了 LLM 就用 LLM，否则用免费机翻。
+    #   llm        OpenAI 兼容接口，质量最好，需要 LLM_* 三项
+    #   mymemory   免费机翻，**无需任何密钥**；匿名 5000 字符/天，
+    #              填一个邮箱（i18n_email）即可提到 50000 字符/天
+    #   none       不翻译，页面显示英文原文
+    i18n_backend: str = "auto"
+    i18n_email: str = ""
+    # mymemory 是逐条请求，留间隔避免被限流
+    i18n_request_gap: float = 1.0
 
     user_agent: str = "star-pulse/1.0 (+https://github.com/)"
 
@@ -98,11 +115,17 @@ class Settings:
     def llm_enabled(self) -> bool:
         return bool(self.llm_api_key and self.llm_base_url and self.llm_model)
 
-    # ── 匿名模式保护 ────────────────────────────────────────────
     @property
-    def rate_limit_per_hour(self) -> int:
-        return 5000 if self.token else 60
+    def translator(self) -> str:
+        """实际生效的翻译后端：把 auto 解析成具体实现，没有可用后端则返回 none。"""
+        backend = (self.i18n_backend or "auto").strip().lower()
+        if backend == "auto":
+            return "llm" if self.llm_enabled else "mymemory"
+        if backend == "llm":
+            return "llm" if self.llm_enabled else "none"
+        return backend if backend in ("mymemory", "none") else "none"
 
+    # ── 匿名模式保护 ────────────────────────────────────────────
     def budget_check(self, needed_requests: int) -> str | None:
         """开跑前预估请求量，超预算就返回警告文本（而不是跑到一半被 403 打断）。"""
         if needed_requests <= self.rate_limit_per_hour:
@@ -149,6 +172,13 @@ def load_settings(root: Path | None = None) -> Settings:
     rep = cfg.get("report", {})
     net = cfg.get("network", {})
     ret = cfg.get("retention", {})
+    i18n = cfg.get("i18n", {})
+
+    token = os.environ.get("GITHUB_TOKEN") or None
+    # 匿名模式只有 60 次/小时，和认证后的额度差两个数量级，必须分开算
+    rate_limit = (
+        int(net.get("rate_limit_per_hour", 1000)) if token else 60
+    )
 
     s = Settings(
         root=root,
@@ -156,7 +186,7 @@ def load_settings(root: Path | None = None) -> Settings:
         snapshots_dir=root / "data" / "snapshots",
         reports_dir=root / "reports",
         logs_dir=root / "logs",
-        token=os.environ.get("GITHUB_TOKEN") or None,
+        token=token,
         max_candidates=int(cand.get("max_candidates", 800)),
         pool_refresh_reserve=int(cand.get("pool_refresh_reserve", 200)),
         search_lookback_days=int(cand.get("search_lookback_days", 14)),
@@ -169,12 +199,16 @@ def load_settings(root: Path | None = None) -> Settings:
         tz_offset_hours=int(rep.get("tz_offset_hours", 8)),
         max_span_days=int(rep.get("max_span_days", 10)),
         request_gap_seconds=float(net.get("request_gap_seconds", 0.15)),
-        max_wait_seconds=int(net.get("max_wait_seconds", 1800)),
+        max_wait_seconds=int(net.get("max_wait_seconds", 900)),
         timeout_seconds=int(net.get("timeout_seconds", 30)),
         retries=int(net.get("retries", 3)),
+        rate_limit_per_hour=rate_limit,
         snapshot_keep_days=int(ret.get("snapshot_keep_days", 400)),
         llm_base_url=os.environ.get("LLM_BASE_URL", "").rstrip("/"),
         llm_api_key=os.environ.get("LLM_API_KEY", ""),
         llm_model=os.environ.get("LLM_MODEL", ""),
+        i18n_backend=os.environ.get("I18N_BACKEND") or str(i18n.get("backend", "auto")),
+        i18n_email=os.environ.get("I18N_EMAIL") or str(i18n.get("email", "")),
+        i18n_request_gap=float(i18n.get("request_gap_seconds", 1.0)),
     )
     return s

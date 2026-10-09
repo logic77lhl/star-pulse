@@ -16,9 +16,11 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sqlite3
 import sys
 import tempfile
+from dataclasses import replace
 from datetime import date, timedelta
 from html import escape
 from pathlib import Path
@@ -131,7 +133,9 @@ def test_ranking_matches_published(tmp: Path) -> None:
     assert meta["warm"] is True, "两个快照夹住周期，应当产出增量榜"
     assert "2026-W37" == meta["week"], f"周期标签错误：{meta['week']}"
     assert "+15,924" in md, "Markdown 未输出预期增量"
-    assert "gainChart" in html, "HTML 未包含图表"
+    # 图表是服务端渲染的 CSS 条形榜：没有 canvas，也不得引入任何外部脚本
+    assert 'class="hbars"' in html, "HTML 未包含增长分布图"
+    assert "<canvas" not in html and "cdnjs" not in html, "周报不该再用 canvas / CDN"
 
     # 分类规则
     for item, (*_head, expected_cat) in zip(
@@ -146,13 +150,20 @@ def test_ranking_matches_published(tmp: Path) -> None:
 def test_span_drop(tmp: Path) -> None:
     settings, conn = _seed(tmp / "span", extra_old_snapshot=True)
     # 周期起点 08-30 之前只有 08-25 这一个基线，跨度 19 天 > 上限 10 天
-    md, _html, meta = render.build_report(settings, conn, "2026-08-30", END)
+    md, html, meta = render.build_report(settings, conn, "2026-08-30", END)
     assert meta["warm"] is False, "跨度全部超限时不应产出增量榜"
     assert meta["dropped_count"] == len(PUBLISHED_W37), (
         f"应剔除 {len(PUBLISHED_W37)} 个，实际 {meta['dropped_count']}"
     )
     assert all(d["span_days"] == 19 for d in meta["dropped"]), "跨度天数计算有误"
     assert "因跨度超限被剔除" in md, "报告未说明剔除原因"
+    # 两条渲染路径的数据质量小节必须同源：被剔除仓库的名字与跨度在两边都要有。
+    # 此前 Markdown 列了名单、HTML 只给一个数量，同一份报告换个格式能查到的信息不一样。
+    dropped_name = meta["dropped"][0]["full_name"]
+    assert dropped_name in md and dropped_name in html, (
+        "被剔除仓库的名单应同时出现在 Markdown 与 HTML"
+    )
+    assert "跨度 19 天" in md and "跨度 19 天" in html, "跨度明细应两边都有"
     print(f"  [PASS] 跨度 19 天的 {meta['dropped_count']} 个仓库被正确剔除并说明原因")
 
 
@@ -190,44 +201,46 @@ def test_json_roundtrip(tmp: Path) -> None:
 
 
 def test_site_build(tmp: Path) -> None:
-    """站点看板：核心板块必须齐全，且不能残留未替换的占位符。"""
+    """站点看板：板块齐全、首屏直接给到价值、图表不依赖任何外部资源。"""
     from star_pulse import site as site_builder
 
     settings, conn = _seed(tmp / "site")
     stats = site_builder.build_site(settings, conn)
     docs = Path(stats["docs"])
-    html = (docs / "index.html").read_text(encoding="utf-8")
+    index = (docs / "index.html").read_text(encoding="utf-8")
+    projects = (docs / "projects.html").read_text(encoding="utf-8")
 
-    for section in ("每天的情况", "当日涨幅榜", "累计增长榜", "每日新增走势", "领涨仓库走势"):
-        assert section in html, f"看板缺少板块：{section}"
-    assert html.count("<canvas") == 2, "应有 2 个图表"
-    assert "const D = {" in html, "图表数据未内联（那样本地打开就看不到图）"
-    assert "__" not in html, "存在未替换的占位符"
+    for section in ("当日涨幅榜", "累计增长榜", "每日新增走势", "领涨仓库走势", "每天的情况", "历史周报"):
+        assert section in index, f"看板缺少板块：{section}"
+
+    # 首屏必须直接给到价值：指标条与两个榜单都在，不能全藏在折叠块后面
+    for kpi_label in ("今日新增星数", "追踪项目", "累计追踪"):
+        assert kpi_label in index, f"缺少指标卡：{kpi_label}"
+    assert 'class="kpis"' in index, "缺少指标条"
+    assert "<details" not in index, "看板不该再靠折叠块藏内容（首屏必须直接可见）"
+
+    # 图表改成服务端渲染的 SVG / CSS：没有 canvas，也没有任何外部脚本
+    assert "<canvas" not in index, "图表不该再用 canvas"
+    assert "<script" not in index, "看板必须是零 JS 的静态页"
+    assert "<svg" in index, "折线图应为服务端渲染的 SVG"
+
+    # 硬性不变量：整站不得引用任何外部资源（含 CDN）。
+    # 这正是本项目「零第三方依赖」的立身之本，此前 Chart.js 走 cdnjs 是唯一破例。
+    for name, html in (("index.html", index), ("projects.html", projects)):
+        externals = re.findall(r'(?:src|href)="(https?://[^"]+)"', html)
+        bad = [u for u in externals if not u.startswith("https://github.com/")]
+        assert not bad, f"{name} 引用了外部资源：{bad[:3]}"
+
+    assert "__" not in index, "存在未替换的占位符"
     assert (docs / "data.json").is_file(), "缺少 data.json"
     assert (docs / ".nojekyll").is_file(), "缺少 .nojekyll（分支部署 Pages 需要）"
+    assert stats["projects"].endswith("projects.html"), "返回值应包含项目名单页"
 
-    # 版面：两个板块都是折叠块，且**都默认收起**
-    assert '<details class="projects fold">' in html, "项目名单应当是折叠块"
-    assert '<details class="trends fold">' in html, "趋势区应当是折叠块"
-    for cls in ("projects", "trends"):
-        assert f'<details class="{cls} fold" open' not in html, f"{cls} 必须默认收起"
-    assert (html.index('<details class="projects fold">') < html.index('id="projTable"')
-            < html.index('<details class="trends fold">')), (
-        "项目名单表格要落在「项目名单」折叠块内，且早于趋势块"
-    )
-    assert ">项目名单<" in html, "折叠块标题应是「项目名单」"
-    for tid in ('id="projTable"', 'id="projQ"', 'id="projLang"', 'id="projSort"'):
-        assert tid in html, f"项目名单缺少工具栏元素：{tid}"
+    # 项目名单已拆到独立页：看板只留链接，不内联 800 行
+    assert 'href="projects.html"' in index, "看板应链到项目名单页"
+    assert 'id="projTable"' not in index, "项目名单不该再内联在首屏"
 
-    # 每条记录独占一行 —— 整张表挤成一行会让 git 完全没法做增量压缩
-    assert html.count("<tr data-name=") == sum(
-        1 for ln in html.splitlines() if ln.startswith("<tr data-name=")
-    ), "项目名单必须一行一条记录"
-    assert "<tr data-name=" in html
-    # 简介只放一份：重复存 data 属性会把页面从 ~400 KB 撑到 500 KB
-    assert "data-desc=" not in html, "简介不应重复存一份 data 属性"
-
-    # 每日汇总必须能逐日算出来，且首日标记为基线
+    # 累计增长榜必须用「两端都有快照」的对齐窗口，而不是被跨度过滤误杀的榜单
     summary = analyze.daily_summary(conn)
     assert len(summary) == 2, f"应有 2 天，实际 {len(summary)}"
     assert summary[0]["is_first"] is True and summary[0]["total_gain"] == 0
@@ -235,11 +248,18 @@ def test_site_build(tmp: Path) -> None:
         "第二天的全网新增合计应等于本周新增之和"
     )
     assert summary[1]["top_name"] == "ayghri/i-have-adhd", "当日冠军应为 i-have-adhd"
-    print(f"  [PASS] 看板生成正确（{len(summary)} 天，当日冠军 {summary[1]['top_name']}）")
+
+    ranked, comparable = analyze.range_gain(conn, START, END)
+    assert comparable == len(PUBLISHED_W37), f"两端都在场的仓库应为全部，实际 {comparable}"
+    best = max(PUBLISHED_W37, key=lambda x: x[2])[0]
+    assert ranked[0]["full_name"] == best, f"累计榜榜首应为 {best}，实际 {ranked[0]['full_name']}"
+    assert ranked[0]["full_name"] in index, "累计榜榜首应出现在页面上"
+    print(f"  [PASS] 看板生成正确（{len(summary)} 天，当日冠军 {summary[1]['top_name']}，"
+          f"累计榜首 {ranked[0]['full_name']}，零外部资源）")
 
 
 def test_site_chinese(tmp: Path) -> None:
-    """中文层：类目列、中文简介、英文回退、链接的可点标识。"""
+    """中文层：类目列、中文简介、英文回退、链接的可点标识（都在项目名单页）。"""
     from star_pulse import i18n
     from star_pulse import site as site_builder
 
@@ -257,7 +277,7 @@ def test_site_chinese(tmp: Path) -> None:
     assert i18n.load_cache(settings)[str(rid)]["zh"] == "这是一条测试译文"
 
     docs = Path(site_builder.build_site(settings, conn)["docs"])
-    html = (docs / "index.html").read_text(encoding="utf-8")
+    html = (docs / "projects.html").read_text(encoding="utf-8")
 
     assert "这是一条测试译文" in html, "缓存里的中文译文没被渲染出来"
     # 没译到的行必须回退英文，而不是留白（简介会被截断到 80 字并压平空白）
@@ -266,36 +286,119 @@ def test_site_chinese(tmp: Path) -> None:
     assert "<th>类目</th>" in html, "缺少类目列"
     assert 'id="projCat"' in html, "缺少类目筛选"
     assert 'class="repo"' in html and "↗" in html, "项目名缺少可点的视觉标识"
-    assert "<td class=\"cat\">" in html and 'data-cat="' in html, "类目单元格或筛选属性缺失"
+    assert 'data-cat="' in html and 'class="tag plain"' in html, "类目单元格或筛选属性缺失"
     assert "机翻" in html, "页面上应说明简介是机翻（不能冒充人工质量）"
     # 默认只展示前 100 条：行仍全在 DOM 里（搜索要覆盖全量），只由 JS 控制显示
     assert 'id="projLimit"' in html, "缺少「每屏条数」控件"
     assert '<option value="100" selected>' in html, "默认显示条数应为 100 条"
-    assert html.count("<tr ") >= 10, "行不能被服务端裁掉 —— 裁掉会让搜索搜不到"
+    assert html.count("<tr data-name=") >= len(PUBLISHED_W37), "行不能被服务端裁掉"
+
+    # 每条记录独占一行 —— 整张表挤成一行会让 git 完全没法做增量压缩
+    assert html.count("<tr data-name=") == sum(
+        1 for ln in html.splitlines() if ln.startswith("<tr data-name=")
+    ), "项目名单必须一行一条记录"
+    # 简介只放一份：重复存 data 属性会把页面从 ~400 KB 撑到 500 KB
+    assert "data-desc=" not in html, "简介不应重复存一份 data 属性"
+    # data-rid 曾经占 16.4 KB 而 JS 从未引用过，已删除；不要再被加回来
+    assert "data-rid=" not in html, "data-rid 是死重（JS 不引用），不该输出"
     print("  [PASS] 中文层：类目列 + 中文简介 + 英文回退 + 链接标识 + 默认条数")
 
 
+class _FakeUrlopenResp:
+    """假的 urlopen 返回值，用来在没有网络的情况下测 MyMemory 后端。
+
+    与下面给 Http 用的 _FakeResp 形状不同：那个暴露 .json()，这个要支持 with。
+    """
+
+    def __init__(self, payload: dict):
+        self._payload = payload
+
+    def read(self) -> bytes:
+        return json.dumps(self._payload).encode("utf-8")
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
 def test_translate_without_llm(tmp: Path) -> None:
-    """没配 LLM 时，翻译必须优雅跳过：不抛异常，也不留下空缓存文件。"""
+    """后端不可用时，翻译必须优雅跳过：不抛异常，也不留下空缓存文件。"""
     from star_pulse import i18n
 
     # 环境变量优先级高于一切，先摘掉再构造 settings，避免 CI 上配了 key 就真的发请求
     saved = {k: os.environ.pop(k, None)
-             for k in ("LLM_BASE_URL", "LLM_API_KEY", "LLM_MODEL")}
+             for k in ("LLM_BASE_URL", "LLM_API_KEY", "LLM_MODEL", "I18N_BACKEND")}
     try:
         settings, _conn = _seed(tmp / "nollm")
         assert not settings.llm_enabled
+        # 显式关掉后端。注意：默认的 auto 在没配 LLM 时会自动退回免费机翻，
+        # 所以「没配 LLM」已经不再等于「不翻译」了 —— 这里要测的是「没有可用后端」。
+        settings = replace(settings, i18n_backend="none")
+        assert settings.translator == "none"
         stats = i18n.translate_missing(settings, [
             {"repo_id": 1, "full_name": "a/b", "description": "hello"},
         ])
-        assert stats["translated"] == 0, "没配 LLM 却报告翻译成功"
+        assert stats["translated"] == 0, "没有可用后端却报告翻译成功"
         assert "error" in stats, "应明确报告原因，而不是静默返回零"
         assert not i18n.cache_path(settings).exists(), "失败时不应写出空缓存文件"
     finally:
         for key, value in saved.items():
             if value is not None:
                 os.environ[key] = value
-    print("  [PASS] 未配置 LLM 时翻译优雅跳过（不抛异常、不写空缓存）")
+    print("  [PASS] 无可用翻译后端时优雅跳过（不抛异常、不写空缓存）")
+
+
+def test_mymemory_backend(tmp: Path) -> None:
+    """免费机翻后端：零密钥可用，且**绝不把回显的英文原文当成译文缓存**。
+
+    后半条是真实风险：MyMemory 在没有命中译文时会把原文原样回显，
+    如果照单全收，页面上「中文简介」列里就会出现英文 —— 看起来正常、实际错位。
+    """
+    from star_pulse import i18n
+
+    saved = {k: os.environ.pop(k, None)
+             for k in ("LLM_BASE_URL", "LLM_API_KEY", "LLM_MODEL", "I18N_BACKEND")}
+    orig_open = i18n.urllib.request.urlopen
+    try:
+        settings, _conn = _seed(tmp / "mm")
+        # auto + 没配 LLM 应自动落到免费后端
+        assert settings.translator == "mymemory", f"实际 {settings.translator}"
+        settings = replace(settings, i18n_request_gap=0.0)
+
+        # 1) 回显原文 -> 必须判为「没拿到译文」
+        i18n.urllib.request.urlopen = lambda req, timeout=30: _FakeUrlopenResp(
+            {"responseStatus": 200, "responseData": {"translatedText": "Hello world"}}
+        )
+        assert i18n._mymemory_one(settings, "Hello world") is None, "回显原文不得当成译文"
+
+        # 2) 正常译文 -> 写入缓存，并标注来源是机翻
+        i18n.urllib.request.urlopen = lambda req, timeout=30: _FakeUrlopenResp(
+            {"responseStatus": 200, "responseData": {"translatedText": "你好，世界"}}
+        )
+        stats = i18n.translate_missing(settings, [
+            {"repo_id": 42, "full_name": "a/b", "description": "Hello world"},
+        ])
+        assert stats["backend"] == "mymemory" and stats["translated"] == 1, f"统计异常：{stats}"
+        entry = i18n.load_cache(settings)["42"]
+        assert entry["zh"] == "你好，世界" and entry["by"] == "mymemory", f"缓存异常：{entry}"
+
+        # 3) 服务端报错 -> 计入失败，不写缓存、不抛异常
+        i18n.urllib.request.urlopen = lambda req, timeout=30: _FakeUrlopenResp(
+            {"responseStatus": 429, "responseDetails": "quota exceeded"}
+        )
+        stats2 = i18n.translate_missing(settings, [
+            {"repo_id": 43, "full_name": "c/d", "description": "Another repo"},
+        ])
+        assert stats2["translated"] == 0 and stats2["failed_batches"] >= 1, f"应记录失败：{stats2}"
+        assert "43" not in i18n.load_cache(settings), "失败不应写入缓存"
+    finally:
+        i18n.urllib.request.urlopen = orig_open
+        for key, value in saved.items():
+            if value is not None:
+                os.environ[key] = value
+    print("  [PASS] 免费机翻后端：零密钥可用，回显原文不被误当译文，失败不写缓存")
 
 
 def _repo_json(rid: int, full_name: str, stars: int, created: str = "2026-01-01") -> dict:
@@ -613,6 +716,78 @@ def test_daily_batch_is_atomic(tmp: Path) -> None:
     print("  [PASS] 单日采集事务原子：中途失败后三张表都无残留")
 
 
+def test_snapshot_json_merges(tmp: Path) -> None:
+    """快照 JSON 必须**合并写**：补跑一部分仓库不能抹掉当天其余仓库。
+
+    真实风险：JSON 是唯一事实来源且会 commit，而 `run-daily --limit 30`、
+    `snapshot --repos`、失败补跑都会再次写同一天的文件。整文件覆盖会让当天
+    800 个仓库缩成几十条，下一轮 CI 回灌即永久丢数据。
+    """
+    snaps = tmp / "merge" / "data" / "snapshots"
+    snaps.mkdir(parents=True)
+
+    def row(rid: int, name: str, stars: int) -> dict:
+        return {"repo_id": rid, "full_name": name, "stars": stars, "forks": 1,
+                "open_issues": 0, "language": "Python", "description": "x",
+                "repo_created": "2026-01-01", "is_archived": 0, "is_fork": 0}
+
+    db.export_snapshot_json(snaps, "2026-01-01", [row(1, "a/one", 10), row(2, "a/two", 20)])
+    db.export_snapshot_json(snaps, "2026-01-01", [row(1, "a/one", 99)])  # 只补跑 1 个
+
+    data = json.loads((snaps / "2026-01-01.json").read_text(encoding="utf-8"))
+    by_id = {r["repo_id"]: r for r in data["repos"]}
+    assert data["count"] == 2 and set(by_id) == {1, 2}, f"补跑抹掉了仓库：{data}"
+    assert by_id[1]["stars"] == 99, "本次数据应覆盖旧值"
+    assert by_id[2]["stars"] == 20, "未参与的仓库应原样保留"
+
+    # 空结果：不落盘、不碰已有文件，也绝不凭空造出空快照
+    assert db.export_snapshot_json(snaps, "2026-01-01", []) is None
+    assert json.loads((snaps / "2026-01-01.json").read_text(encoding="utf-8"))["count"] == 2
+    assert db.export_snapshot_json(snaps, "2026-01-02", []) is None
+    assert not (snaps / "2026-01-02.json").exists(), (
+        "空结果不得生成文件：发布门只看文件是否存在，空文件会被误判成「今日已产出」"
+    )
+    print("  [PASS] 快照 JSON 合并写：补跑不抹数据、空结果不落盘")
+
+
+def test_range_gain_aligned_window(tmp: Path) -> None:
+    """累计榜必须用「两端都有快照」的对齐窗口，不能用 weekly_gain 的跨度过滤。
+
+    真实事故：站点曾用 weekly_gain(全历史, max_span_days=10) 算累计榜。跨度过滤
+    恰好命中了所有「从第一天追踪到现在」的仓库（它们的跨度就等于整个窗口），
+    于是真正涨得最多的全被剔除，榜首反而成了只被追踪几天就掉出池子的仓库 ——
+    而页面标注的却是整个窗口。
+    """
+    settings = load_settings(tmp / "range")
+    conn = db.connect(settings.db_path)
+    db.init_schema(conn)
+
+    days = ["2026-01-01", "2026-01-02", "2026-01-03"]
+    # 全程在场，涨得最多
+    for day, stars in zip(days, (100, 150, 500)):
+        db.upsert_repos(conn, [_repo_row(1, "old/faithful")], day)
+        db.upsert_snapshots(conn, [_snap_row(1, day, stars)])
+    # 中途掉出候选池，只被追踪 2 天
+    for day, stars in zip(days[:2], (100, 160)):
+        db.upsert_repos(conn, [_repo_row(2, "stale/dropped")], day)
+        db.upsert_snapshots(conn, [_snap_row(2, day, stars)])
+    # 最后一天才进池，没有基线
+    db.upsert_repos(conn, [_repo_row(3, "late/joiner")], days[-1])
+    db.upsert_snapshots(conn, [_snap_row(3, days[-1], 900)])
+
+    ranked, comparable = analyze.range_gain(conn, days[0], days[-1])
+    names = [r["full_name"] for r in ranked]
+    assert names == ["old/faithful"], f"累计榜应只含两端都在场的仓库，实际 {names}"
+    assert ranked[0]["delta"] == 400, f"增量应为 500-100 = 400，实际 {ranked[0]['delta']}"
+    assert comparable == 1, f"可比仓库应只有 1 个，实际 {comparable}"
+
+    # 反证：旧写法（weekly_gain + 小跨度上限）会把冠军剔除、把掉队者捧上榜首
+    old, dropped = analyze.weekly_gain(conn, days[0], days[-1], max_span_days=1)
+    assert "old/faithful" in {r["full_name"] for r in dropped}, "旧写法应把冠军剔除"
+    assert "stale/dropped" in {r["full_name"] for r in old}, "旧写法应把掉队者留在榜上"
+    print("  [PASS] 累计榜用对齐窗口：冠军不再被跨度过滤误杀，中途进池的不参与")
+
+
 def main() -> int:
     print("star-pulse 回归测试")
     print("=" * 58)
@@ -626,6 +801,7 @@ def main() -> int:
         test_site_build(tmp)
         test_site_chinese(tmp)
         test_translate_without_llm(tmp)
+        test_mymemory_backend(tmp)
         test_candidate_budget(tmp)
         test_rename_recreate_no_crash(tmp)
         test_no_orphan_snapshots(tmp)
@@ -633,6 +809,8 @@ def main() -> int:
         test_import_tolerates_malformed_rows(tmp)
         test_schema_migration_from_legacy(tmp)
         test_daily_batch_is_atomic(tmp)
+        test_snapshot_json_merges(tmp)
+        test_range_gain_aligned_window(tmp)
     print("=" * 58)
     print("全部通过")
     return 0

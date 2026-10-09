@@ -5,17 +5,17 @@
  ],
  "week": "2026-W38",
  "coverage": {
-  "distinct_days": 1,
+  "distinct_days": 26,
   "first_day": "2026-09-14",
-  "last_day": "2026-09-14",
-  "rows_total": 800,
-  "warm": false
+  "last_day": "2026-10-09",
+  "rows_total": 19982,
+  "warm": true
  },
  "dropped": [],
  "dropped_count": 0,
  "breakdown": [],
  "max_span_days": 10,
  "warm": false,
- "warmup_note": "「本周新增 Star」需要至少两个时间点的快照相减，当前只有 1 天数据，因此本期暂不输出增量榜。这是设计使然，不是故障：GitHub 没有提供星数增量的官方接口，任何声称能直接查到周增量、又拿不出历史快照的方案，数据都不可信。",
+ "warmup_note": "本周期内没有可比较的增量：可能所有候选仓库星数均未增长，或它们的时间跨度超出了上限而被剔除。详见下方「数据质量」。",
  "top": []
 }

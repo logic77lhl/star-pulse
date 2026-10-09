@@ -5,10 +5,10 @@
  ],
  "week": "2026-W39",
  "coverage": {
-  "distinct_days": 15,
+  "distinct_days": 26,
   "first_day": "2026-09-14",
-  "last_day": "2026-09-28",
-  "rows_total": 11182,
+  "last_day": "2026-10-09",
+  "rows_total": 19982,
   "warm": true
  },
  "dropped": [],
@@ -71,7 +71,7 @@
    "span_days": 6,
    "flags": [],
    "category": "其他",
-   "summary": "按性价比排序的循证生活指南：长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。"
+   "summary": "按性价比排序的循证生活指南：健康长寿、急救、理财、法律、婚育、创业等，每条注明成本与证据等级"
   },
   {
    "repo_id": 1373655162,
@@ -139,7 +139,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+   "summary": "智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体"
   },
   {
    "repo_id": 1211139949,
@@ -156,7 +156,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export."
+   "summary": "生成漂亮且可验证的架构、流程、时序与数据流图的 Agent 技能，自包含 HTML 带动效"
   },
   {
    "repo_id": 1277471539,
@@ -173,7 +173,7 @@
    "span_days": 6,
    "flags": [],
    "category": "可视化",
-   "summary": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe."
+   "summary": "浏览器里的间谍卫星模拟器，但数据是真的：在写实 3D 地球上做开源空间情报"
   },
   {
    "repo_id": 1148788086,
@@ -190,7 +190,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Skills for Real Engineers. Straight from my .agents directory."
+   "summary": "面向真正工程师的技能集，直接来自作者的 .agents 目录"
   },
   {
    "repo_id": 1373687654,
@@ -224,7 +224,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
+   "summary": "让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码"
   },
   {
    "repo_id": 1241960226,
@@ -241,7 +241,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,"
+   "summary": "在阿里规模上验证过的混合架构代码评审工具：确定性流水线 + LLM 智能体，行级精确评论"
   },
   {
    "repo_id": 1356159928,
@@ -260,7 +260,7 @@
     "单日跳变"
    ],
    "category": "其他",
-   "summary": "Open-source AI brand visibility and competitor reports. Official website: https://niubigeo.ai/ | Paid services: AI testing by real people and GEO optimization. Pricing: https://niubigeo.ai/pricing"
+   "summary": "开源 AI 品牌可见度与竞品报告，并提供真人测试与 GEO 优化服务"
   },
   {
    "repo_id": 1238120057,
@@ -277,7 +277,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "A skill to stop your coding agent from burying the answer. ADHD-friendly output."
+   "summary": "让编程智能体不再把答案埋在废话里，对 ADHD 友好的输出风格技能"
   },
   {
    "repo_id": 1373614120,

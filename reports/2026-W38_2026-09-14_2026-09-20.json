@@ -5,10 +5,10 @@
  ],
  "week": "2026-W38",
  "coverage": {
-  "distinct_days": 8,
+  "distinct_days": 26,
   "first_day": "2026-09-14",
-  "last_day": "2026-09-21",
-  "rows_total": 5810,
+  "last_day": "2026-10-09",
+  "rows_total": 19982,
   "warm": true
  },
  "dropped": [],
@@ -58,7 +58,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,"
+   "summary": "在阿里规模上验证过的混合架构代码评审工具：确定性流水线 + LLM 智能体，行级精确评论"
   },
   {
    "repo_id": 1211139949,
@@ -75,7 +75,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export."
+   "summary": "生成漂亮且可验证的架构、流程、时序与数据流图的 Agent 技能，自包含 HTML 带动效"
   },
   {
    "repo_id": 1277471539,
@@ -92,7 +92,7 @@
    "span_days": 6,
    "flags": [],
    "category": "可视化",
-   "summary": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe."
+   "summary": "浏览器里的间谍卫星模拟器，但数据是真的：在写实 3D 地球上做开源空间情报"
   },
   {
    "repo_id": 1286080397,
@@ -109,7 +109,7 @@
    "span_days": 6,
    "flags": [],
    "category": "模型与训练",
-   "summary": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦"
+   "summary": "在自有硬件上运行前沿 MoE 模型：纯 C、零依赖、专家从磁盘流式加载"
   },
   {
    "repo_id": 1359648985,
@@ -126,7 +126,7 @@
    "span_days": 6,
    "flags": [],
    "category": "其他",
-   "summary": "按性价比排序的循证生活指南：长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。"
+   "summary": "按性价比排序的循证生活指南：健康长寿、急救、理财、法律、婚育、创业等，每条注明成本与证据等级"
   },
   {
    "repo_id": 1136590548,
@@ -143,7 +143,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+   "summary": "智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体"
   },
   {
    "repo_id": 1266797999,
@@ -160,7 +160,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
+   "summary": "让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码"
   },
   {
    "repo_id": 1148788086,
@@ -177,7 +177,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Skills for Real Engineers. Straight from my .agents directory."
+   "summary": "面向真正工程师的技能集，直接来自作者的 .agents 目录"
   },
   {
    "repo_id": 1238120057,
@@ -194,7 +194,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "A skill to stop your coding agent from burying the answer. ADHD-friendly output."
+   "summary": "让编程智能体不再把答案埋在废话里，对 ADHD 友好的输出风格技能"
   },
   {
    "repo_id": 1206390571,
@@ -211,7 +211,7 @@
    "span_days": 2,
    "flags": [],
    "category": "媒体生成",
-   "summary": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages."
+   "summary": "开源全本地的 ElevenLabs 替代：声音克隆、设计、视频配音与有声书，支持 646 种语言"
   },
   {
    "repo_id": 1261663145,
@@ -228,7 +228,7 @@
    "span_days": 4,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Turn your coding agents into research agents"
+   "summary": "把你的编程智能体变成科研智能体"
   },
   {
    "repo_id": 189829392,
@@ -245,7 +245,7 @@
    "span_days": 6,
    "flags": [],
    "category": "其他",
-   "summary": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co"
+   "summary": "Ever Gauzy：开源业务管理平台（ERP / CRM / HRM / ATS / 项目管理）"
   },
   {
    "repo_id": 1212769188,
@@ -262,7 +262,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Editorial diagram design for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop."
+   "summary": "面向 Claude Code、Codex 与 Pi 的 38 种编辑级图表版式，自包含 HTML + SVG，无阴影、不用 Mermaid"
   },
   {
    "repo_id": 888092115,
@@ -279,7 +279,7 @@
    "span_days": 6,
    "flags": [],
    "category": "开发工具",
-   "summary": "Python tool for converting files and office documents to Markdown."
+   "summary": "把文件与办公文档转换为 Markdown 的 Python 工具"
   },
   {
    "repo_id": 1177402105,
@@ -296,7 +296,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Write HTML. Render video. Built for agents."
+   "summary": "写 HTML、渲染视频，为智能体而生"
   },
   {
    "repo_id": 1172273835,
@@ -313,7 +313,7 @@
    "span_days": 3,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a spec"
+   "summary": "面向 Claude 技能系统的攻防安全技能库，每个技能都是结构化的 SKILL.md 方法论"
   },
   {
    "repo_id": 920995232,
@@ -330,7 +330,7 @@
    "span_days": 3,
    "flags": [],
    "category": "媒体生成",
-   "summary": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing."
+   "summary": "YuE2：具备符号规划、零样本翻唱与智能体式音乐编辑的前沿音乐生成"
   },
   {
    "repo_id": 1178737655,
@@ -347,7 +347,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click"
+   "summary": "开放多智能体互动课堂：一键获得沉浸式多智能体学习体验"
   },
   {
    "repo_id": 1359963149,
@@ -364,7 +364,7 @@
    "span_days": 6,
    "flags": [],
    "category": "其他",
-   "summary": "青简 Qingjian：用 Rust 写的拼音输入法，候选词旁多一条正在学的语言的译词"
+   "summary": "青简：用 Rust 写的拼音输入法，候选词旁会显示正在学语言的译词"
   },
   {
    "repo_id": 1356772546,

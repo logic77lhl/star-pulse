@@ -5,62 +5,284 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GitHub 星耀榜 · 2026-W38</title>
 <style>
-:root { color-scheme: light dark; }
-* { box-sizing: border-box; }
-body { margin: 0; padding: 40px 20px; font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
-  background: #f7f7f5; color: #22211f; line-height: 1.65; }
-.wrap { max-width: 1040px; margin: 0 auto; }
-h1 { font-size: 26px; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01em; }
-h2 { font-size: 17px; font-weight: 600; margin: 40px 0 14px; }
-.sub { color: #6b6a66; font-size: 14px; margin: 0 0 4px; }
-.banner { background: #FAEEDA; border: 1px solid #EF9F27; color: #633806;
-  padding: 14px 18px; border-radius: 10px; margin: 24px 0; font-size: 14px; }
-table { width: 100%; border-collapse: collapse; font-size: 14px; background: #fff;
-  border-radius: 10px; overflow: hidden; border: 1px solid #e3e1da; }
-th { text-align: left; padding: 11px 14px; background: #f1efe8; font-weight: 600;
-  font-size: 13px; color: #444441; white-space: nowrap; }
-td { padding: 11px 14px; border-top: 1px solid #eeece6; vertical-align: top; }
-td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
-a { color: #534AB7; text-decoration: none; }
-a:hover { text-decoration: underline; }
-.warn { color: #A32D2D; font-size: 12px; }
-.muted { color: #888780; font-size: 14px; }
-.chartwrap { position: relative; height: 420px; background: #fff; border: 1px solid #e3e1da;
-  border-radius: 10px; padding: 16px; }
-ul.quality { background: #fff; border: 1px solid #e3e1da; border-radius: 10px;
-  padding: 16px 16px 16px 36px; font-size: 14px; }
-ul.quality li { margin: 4px 0; }
-footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid #e3e1da;
-  color: #888780; font-size: 13px; }
+:root {
+  color-scheme: light dark;
+
+  --bg:          #faf9f6;
+  --surface:     #ffffff;
+  --surface-2:   #f4f2ec;
+  --border:      #e7e3da;
+  --border-2:    #d6d1c4;
+  --text:        #1b1a17;
+  --text-2:      #55524a;
+  --text-3:      #8b877c;
+  --accent:      #534ab7;
+  --accent-2:    #7f77dd;
+  --accent-soft: rgba(83, 74, 183, .09);
+  --up:          #c2410c;
+  --up-soft:     rgba(194, 65, 12, .10);
+  --down:        #15803d;
+  --warn-bg:     #fdf4e4;
+  --warn-border: #eecb96;
+  --warn-text:   #7a4a0b;
+  --grid:        rgba(120, 116, 106, .22);
+  --shadow:      0 1px 2px rgba(28, 26, 22, .04), 0 4px 14px rgba(28, 26, 22, .05);
+
+  --r:      12px;
+  --r-sm:   8px;
+  --r-pill: 999px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 72px;
+  font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.62;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1140px; margin: 0 auto; }
+
+/* ── 页头 ─────────────────────────────────────────── */
+.topbar { padding: 40px 0 26px; }
+h1 { font-size: 29px; line-height: 1.2; font-weight: 650; letter-spacing: -.022em; margin: 0 0 10px; }
+h1 .brand { color: var(--text-3); font-weight: 450; }
+h2 { font-size: 16px; font-weight: 620; letter-spacing: -.008em; margin: 0 0 4px; }
+h3 { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--text-3); font-size: 13px; }
+.meta b { color: var(--text-2); font-weight: 600; font-variant-numeric: tabular-nums; }
+.note { color: var(--text-3); font-size: 13px; margin: 6px 0 14px; max-width: 78ch; }
+.note b { color: var(--text-2); font-weight: 600; }
+
+/* ── 指标卡 ───────────────────────────────────────── */
+.kpis {
+  display: grid; gap: 12px; margin: 4px 0 8px;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+}
+.kpi {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 15px 17px 13px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 2px; min-width: 0;
+}
+.kpi .k { font-size: 12.5px; color: var(--text-3); font-weight: 500; }
+.kpi .v {
+  font-size: 26px; font-weight: 660; letter-spacing: -.028em; line-height: 1.15;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.kpi .v .u { font-size: 13px; font-weight: 500; color: var(--text-3); margin-left: 3px; letter-spacing: 0; }
+.kpi .d { font-size: 12.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.kpi .spark { margin-top: 6px; height: 30px; }
+
+/* ── 面板 ─────────────────────────────────────────── */
+.panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 18px 20px 20px; margin-top: 16px; box-shadow: var(--shadow);
+}
+.panel > h2 { margin-bottom: 3px; }
+.panel > .note:last-child { margin-bottom: 0; }
+.panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.panel-head .more { font-size: 13px; white-space: nowrap; }
+
+/* ── 表格 ─────────────────────────────────────────── */
+/* 宽表格必须有自己的横向滚动容器。少了它，表格会把**整页**撑宽 ——
+   窄屏上标题、说明、页脚全部被裁掉且无法滚动（实测页面 scrollWidth 402→617）。 */
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.data { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+table.data th {
+  text-align: left; padding: 9px 12px; font-size: 12px; font-weight: 600;
+  color: var(--text-3); text-transform: none; letter-spacing: .01em;
+  border-bottom: 1px solid var(--border-2); white-space: nowrap;
+  position: sticky; top: 0; background: var(--surface); z-index: 2;
+}
+table.data td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.data tbody tr:last-child td { border-bottom: 0; }
+table.data tbody tr:hover td { background: var(--surface-2); }
+table.data .num, table.data th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.data td.num { font-weight: 600; }
+table.data.compact td, table.data.compact th { padding: 7px 10px; }
+table.data .rank { color: var(--text-3); font-variant-numeric: tabular-nums; width: 1%; }
+table.data tbody tr:nth-child(-n+3) .rank { color: var(--text); font-weight: 650; }
+/* 简介列：限宽 + 弱化，避免长文本把行高撑得参差不齐 */
+table.data td.desc { color: var(--text-2); font-size: 13px; min-width: 240px; max-width: 460px; }
+
+/* 表格里代表数值强度的内联条：让 +11,059 和 +29 一眼可分 */
+.bar { display: block; height: 4px; border-radius: 2px; background: var(--up-soft); margin-top: 4px; min-width: 2px; }
+.bar > i { display: block; height: 100%; border-radius: 2px; background: var(--up); }
+
+/* ── 语义色 ───────────────────────────────────────── */
+.up { color: var(--up); font-weight: 620; font-variant-numeric: tabular-nums; }
+.down { color: var(--down); font-weight: 620; font-variant-numeric: tabular-nums; }
+.zero { color: var(--text-3); font-variant-numeric: tabular-nums; }
+.muted { color: var(--text-3); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2.5px; }
+a.repo { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent); text-underline-offset: 2.5px; }
+a.repo:hover { text-decoration-color: currentColor; }
+a.repo .ext { font-size: .8em; margin-left: 3px; opacity: .45; }
+
+.tag {
+  display: inline-block; padding: 1px 8px; border-radius: var(--r-pill);
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 12px; font-weight: 550; white-space: nowrap;
+}
+.tag.plain { background: var(--surface-2); color: var(--text-2); }
+
+/* ── 提示条 ───────────────────────────────────────── */
+.banner {
+  background: var(--warn-bg); border: 1px solid var(--warn-border); color: var(--warn-text);
+  padding: 12px 16px; border-radius: var(--r); margin: 16px 0 0; font-size: 13.5px;
+}
+.banner b { font-weight: 650; }
+
+/* ── 图表 ─────────────────────────────────────────── */
+/* overflow-x 是必须的：折线图带 min-width，没有这层滚动容器时它会把**整个页面**
+   撑到 560px 宽，窄屏上标题、说明、表格全部被裁掉且无法滚动。 */
+.chart { margin-top: 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.chart svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 12px; font-size: 12.5px; color: var(--text-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+
+/* 横向条形榜（周报的「增长分布」）：纯 CSS，标签真实文本，窄屏自动换行 */
+.hbars { display: grid; gap: 6px; margin-top: 14px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 22%) 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+.hbar .lbl { color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar .track { background: var(--surface-2); border-radius: 3px; height: 16px; overflow: hidden; }
+.hbar .track > i { display: block; height: 100%; background: var(--accent-2); border-radius: 3px; }
+.hbar .val { color: var(--up); font-weight: 620; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 640px) {
+  .hbar { grid-template-columns: 1fr auto; grid-template-areas: "lbl val" "track track"; gap: 3px 8px; }
+  .hbar .lbl { grid-area: lbl; }
+  .hbar .val { grid-area: val; }
+  .hbar .track { grid-area: track; }
+}
+
+/* CSS 柱状图：完全响应式，标签是真实文本，窄屏也不会被缩放成蚂蚁字。
+   数值提示走原生 title —— 自绘 tooltip 是 nowrap 的绝对定位盒子，首尾柱子
+   的提示框会横向溢出把整页撑宽（实测 +49px），不值得。 */
+.bars { display: flex; align-items: flex-end; gap: 3px; height: 190px; margin-top: 16px; }
+.bars .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+.bars .col > i { display: block; background: var(--accent-2); border-radius: 3px 3px 0 0; min-height: 2px; transition: background .12s; }
+.bars .col:hover > i { background: var(--accent); }
+.bars-x { display: flex; gap: 3px; margin-top: 6px; }
+.bars-x span {
+  flex: 1 1 0; min-width: 0; text-align: center; font-size: 11px; color: var(--text-3);
+  overflow: hidden; white-space: nowrap;
+}
+/* 窄屏下隔一个显示一个日期，避免糊成一团 */
+@media (max-width: 720px) { .bars-x span:nth-child(even) { visibility: hidden; } }
+
+/* ── 周报列表 ─────────────────────────────────────── */
+.reports { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin: 0; padding: 0; list-style: none; }
+.reports a {
+  display: flex; flex-direction: column; gap: 2px; padding: 11px 14px;
+  border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface-2);
+  color: var(--text); text-decoration: none; transition: border-color .12s, background .12s;
+}
+.reports a:hover { border-color: var(--border-2); background: var(--surface); text-decoration: none; }
+.reports .wk { font-weight: 620; font-size: 14px; }
+.reports .rg { font-size: 12.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+
+/* ── 工具栏 ───────────────────────────────────────── */
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 14px; }
+.toolbar input, .toolbar select {
+  font: inherit; font-size: 13.5px; padding: 7px 11px;
+  border: 1px solid var(--border-2); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--text);
+}
+.toolbar input:focus, .toolbar select:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.toolbar input { flex: 1 1 240px; min-width: 160px; }
+.toolbar .count { color: var(--text-3); font-size: 12.5px; margin-left: auto; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* ── 折叠块 ───────────────────────────────────────── */
+details.fold { margin-top: 16px; }
+details.fold > summary {
+  cursor: pointer; list-style: none; user-select: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 14px 18px; font-size: 14.5px; font-weight: 600;
+  display: flex; align-items: center; gap: 9px; box-shadow: var(--shadow);
+}
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::before {
+  content: "▸"; color: var(--text-3); font-weight: 400;
+  display: inline-block; transition: transform .15s ease;
+}
+details.fold[open] > summary::before { transform: rotate(90deg); }
+details.fold > summary:hover { border-color: var(--border-2); }
+details.fold > summary .hint { font-weight: 400; font-size: 12.5px; color: var(--text-3); }
+
+/* ── 周报的「数据质量」清单 ───────────────────────── */
+ul.quality { margin: 4px 0 0; padding-left: 22px; font-size: 13.5px; color: var(--text-2); }
+ul.quality > li { margin: 6px 0; }
+ul.quality ul { margin: 4px 0 0; padding-left: 20px; color: var(--text-3); font-size: 13px; }
+ul.quality ul li { margin: 2px 0; }
+
+footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 12.5px; }
+footer a { color: var(--text-2); }
+
+/* ── 窄屏 ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { padding: 0 14px 56px; }
+  .topbar { padding: 26px 0 20px; }
+  h1 { font-size: 23px; }
+  .kpi .v { font-size: 22px; }
+  .panel { padding: 15px 15px 17px; }
+  .bars { height: 150px; }
+  .note { max-width: none; }
+}
 @media (prefers-color-scheme: dark) {
-  body { background: #1b1b19; color: #e8e6e1; }
-  table, ul.quality, .chartwrap { background: #262624; border-color: #3a3a37; }
-  th { background: #302f2c; color: #d3d1c7; }
-  td { border-top-color: #3a3a37; }
-  a { color: #AFA9EC; }
-  h1, h2 { color: #eeecea; }
-  .sub, .muted, footer { color: #9b9993; }
-  .banner { background: #412402; border-color: #854F0B; color: #FAC775; }
+:root {
+  --bg:          #131312;
+  --surface:     #1d1d1b;
+  --surface-2:   #26261f;
+  --border:      #33332e;
+  --border-2:    #45453e;
+  --text:        #eceae4;
+  --text-2:      #b3b0a6;
+  --text-3:      #8a877d;
+  --accent:      #aea7ee;
+  --accent-2:    #8f87e0;
+  --accent-soft: rgba(174, 167, 238, .12);
+  --up:          #f2955f;
+  --up-soft:     rgba(242, 149, 95, .14);
+  --down:        #6fd39a;
+  --warn-bg:     #3a2a0c;
+  --warn-border: #7d5a1c;
+  --warn-text:   #f3cd8c;
+  --grid:        rgba(170, 166, 156, .22);
+  --shadow:      0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>GitHub 星耀榜 · 2026-W38</h1>
-  <p class="sub">统计周期 2026-09-14 ~ 2026-09-14（UTC+8）　·　数据截至 2026-09-14　·　快照覆盖 1 天</p>
-  <div class="banner"><b>本期无增量榜</b>　「本周新增 Star」需要至少两个时间点的快照相减，当前只有 1 天数据，因此本期暂不输出增量榜。这是设计使然，不是故障：GitHub 没有提供星数增量的官方接口，任何声称能直接查到周增量、又拿不出历史快照的方案，数据都不可信。</div>
-  <h2>本周新增 Star Top 0</h2>
-  <p class="muted">「本周新增 Star」需要至少两个时间点的快照相减，当前只有 1 天数据，因此本期暂不输出增量榜。这是设计使然，不是故障：GitHub 没有提供星数增量的官方接口，任何声称能直接查到周增量、又拿不出历史快照的方案，数据都不可信。</p>
-  
-  <h2>新项目榜（周期内创建）</h2>
-  <p class="sub">口径不同：衡量新项目起跑速度，不是存量增长。</p>
-  <table><thead><tr><th style="text-align:right">排名</th><th>项目</th><th style="text-align:right">当前星数</th><th>创建日期</th><th>语言</th><th>分类</th></tr></thead><tbody><tr><td class="num">1</td><td><a href="https://github.com/mapmoverexcite/Nexora" target="_blank" rel="noopener">mapmoverexcite/Nexora</a></td><td class="num">61</td><td>2026-09-14</td><td>—</td><td>开发工具</td></tr><tr><td class="num">2</td><td><a href="https://github.com/ai-sucks-butt/ai-sucks-butt" target="_blank" rel="noopener">ai-sucks-butt/ai-sucks-butt</a></td><td class="num">61</td><td>2026-09-14</td><td>—</td><td>其他</td></tr></tbody></table>
-  <h2>分类透视</h2>
-  <p class="muted">—</p>
-  <h2>数据质量</h2>
-  <ul class="quality"><li>快照覆盖 <b>1 天</b>（2026-09-14 ~ 2026-09-14），累计 800 条记录</li><li>增量时间跨度上限 <b>10 天</b>，超出即剔除</li><li>无仓库因跨度超限被剔除</li><li>未发现疑似刷星迹象</li></ul>
-  <footer>本报告由 star-pulse 自动生成。所有数值来自每日快照相减，未经任何模型改写；
-  分类与文字描述仅用于可读性，不影响排名。</footer>
+<header class="topbar"><h1>GitHub 星耀榜 · 2026-W38</h1><p class="note" style="margin:0 0 8px">统计周期 2026-09-14 ~ 2026-09-14（UTC+8）　·　数据截至 2026-10-09　·　快照覆盖 26 天</p><div class="meta"><span><a href="../index.html">← 返回看板</a></span></div></header><div class="banner"><b>本期无增量榜</b>　本周期内没有可比较的增量：可能所有候选仓库星数均未增长，或它们的时间跨度超出了上限而被剔除。详见下方「数据质量」。</div><section class="panel"><div class="panel-head"><h2>本周新增 Star Top 0</h2></div><p class="muted">本周期内没有可比较的增量：可能所有候选仓库星数均未增长，或它们的时间跨度超出了上限而被剔除。详见下方「数据质量」。</p></section><section class="panel"><div class="panel-head"><h2>新项目榜（周期内创建）</h2></div><p class="note">口径不同：衡量新项目起跑速度，不是存量增长。</p><div class="scroll-x"><table class="data compact"><thead><tr><th>#</th><th>项目</th><th class="num">当前星数</th><th>创建日期</th><th>语言</th><th>分类</th></tr></thead><tbody>
+<tr><td class="rank">1</td><td><a class="repo" href="https://github.com/QwenLM/Qwen-Image-2.1" target="_blank" rel="noopener">QwenLM/Qwen-Image-2.1<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,563</td><td>2026-09-14</td><td>Python</td><td><span class="tag plain">模型与训练</span></td></tr>
+<tr><td class="rank">2</td><td><a class="repo" href="https://github.com/nilbuild/page-mascot" target="_blank" rel="noopener">nilbuild/page-mascot<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,060</td><td>2026-09-14</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">3</td><td><a class="repo" href="https://github.com/jackwener/wx-cli-again" target="_blank" rel="noopener">jackwener/wx-cli-again<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">749</td><td>2026-09-14</td><td>Rust</td><td><span class="tag plain">开发工具</span></td></tr>
+<tr><td class="rank">4</td><td><a class="repo" href="https://github.com/kvmem/kvmem-llama.cpp" target="_blank" rel="noopener">kvmem/kvmem-llama.cpp<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">676</td><td>2026-09-14</td><td>C++</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">5</td><td><a class="repo" href="https://github.com/ERRRC/kaogongzhentizhengliu" target="_blank" rel="noopener">ERRRC/kaogongzhentizhengliu<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">628</td><td>2026-09-14</td><td>—</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">6</td><td><a class="repo" href="https://github.com/letorig/video-generator-client" target="_blank" rel="noopener">letorig/video-generator-client<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">551</td><td>2026-09-14</td><td>Python</td><td><span class="tag plain">媒体生成</span></td></tr>
+<tr><td class="rank">7</td><td><a class="repo" href="https://github.com/TencentARC/WorldCrafter" target="_blank" rel="noopener">TencentARC/WorldCrafter<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">391</td><td>2026-09-14</td><td>Python</td><td><span class="tag plain">模型与训练</span></td></tr>
+<tr><td class="rank">8</td><td><a class="repo" href="https://github.com/999sian/melee-pc" target="_blank" rel="noopener">999sian/melee-pc<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">385</td><td>2026-09-14</td><td>C</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">9</td><td><a class="repo" href="https://github.com/Tencent/WeVisDoc" target="_blank" rel="noopener">Tencent/WeVisDoc<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">358</td><td>2026-09-14</td><td>Python</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">10</td><td><a class="repo" href="https://github.com/Qiuner/QCode" target="_blank" rel="noopener">Qiuner/QCode<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">347</td><td>2026-09-14</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">11</td><td><a class="repo" href="https://github.com/opencoredev/bg0" target="_blank" rel="noopener">opencoredev/bg0<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">346</td><td>2026-09-14</td><td>TypeScript</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">12</td><td><a class="repo" href="https://github.com/0xjohnnydev/airlift" target="_blank" rel="noopener">0xjohnnydev/airlift<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">319</td><td>2026-09-14</td><td>Objective-C</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">13</td><td><a class="repo" href="https://github.com/niedachu/MateriaSim" target="_blank" rel="noopener">niedachu/MateriaSim<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">293</td><td>2026-09-14</td><td>Python</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">14</td><td><a class="repo" href="https://github.com/jakubkrehel/loading" target="_blank" rel="noopener">jakubkrehel/loading<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">262</td><td>2026-09-14</td><td>TypeScript</td><td><span class="tag plain">开发工具</span></td></tr>
+<tr><td class="rank">15</td><td><a class="repo" href="https://github.com/Gen-Verse/ScienceBuddy" target="_blank" rel="noopener">Gen-Verse/ScienceBuddy<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">259</td><td>2026-09-14</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">16</td><td><a class="repo" href="https://github.com/KillaBoi/BrokenPipe" target="_blank" rel="noopener">KillaBoi/BrokenPipe<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">223</td><td>2026-09-14</td><td>PowerShell</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">17</td><td><a class="repo" href="https://github.com/Frankweb33/flybrain-robot-bridge" target="_blank" rel="noopener">Frankweb33/flybrain-robot-bridge<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">222</td><td>2026-09-14</td><td>Python</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">18</td><td><a class="repo" href="https://github.com/mpociot/claude-siri-ai" target="_blank" rel="noopener">mpociot/claude-siri-ai<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">222</td><td>2026-09-14</td><td>Swift</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">19</td><td><a class="repo" href="https://github.com/waligoraamodio288-rgb/hongguo-desktop-releases" target="_blank" rel="noopener">waligoraamodio288-rgb/hongguo-desktop-releases<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">216</td><td>2026-09-14</td><td>—</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">20</td><td><a class="repo" href="https://github.com/suversal/WrapPin" target="_blank" rel="noopener">suversal/WrapPin<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">215</td><td>2026-09-14</td><td>Swift</td><td><span class="tag plain">其他</span></td></tr>
+</tbody></table></div></section><section class="panel"><div class="panel-head"><h2>分类透视</h2></div><p class="muted">—</p></section><section class="panel"><div class="panel-head"><h2>数据质量</h2></div><ul class="quality"><li>快照覆盖 <b>26 天</b>（2026-09-14 ~ 2026-10-09），累计 19,982 条记录</li><li>增量时间跨度上限 <b>10 天</b>，超出即剔除</li><li>无仓库因跨度超限被剔除</li><li>未发现疑似刷星迹象</li></ul></section><footer>本报告由 star-pulse 自动生成。所有数值来自每日快照相减，未经任何模型改写；分类与文字描述仅用于可读性，不影响排名。</footer>
 </div>
 </body>
 </html>

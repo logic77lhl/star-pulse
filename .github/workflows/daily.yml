@@ -63,15 +63,10 @@ jobs:
           # 必须用 UTC+8：快照文件名按 settings.today()（默认 UTC+8）生成，
           # 而 cron 是 20:00 UTC，用 date -u 会查到次日文件名。
           TODAY=$(TZ=Asia/Shanghai date +%F)
-          SNAP="data/snapshots/$TODAY.json"
-          COUNT=$(python -c 'import json,pathlib,sys
-p = pathlib.Path(sys.argv[1])
-try:
-    d = json.loads(p.read_text(encoding="utf-8"))
-except Exception:
-    print(0)
-else:
-    print(len(d.get("repos") or []) if isinstance(d, dict) else 0)' "$SNAP" 2>/dev/null || echo 0)
+          # 数快照里的仓库数。刻意用子命令而不是内联多行 Python ——
+          # `run: |` 块标量要求所有内容行缩进 ≥ 首行，内联多行脚本一旦有行顶格，
+          # 整个 workflow 文件就会变成非法（真实踩过，daily 直接失效 0 秒失败）。
+          COUNT=$(python -m star_pulse snapshot-count --date "$TODAY" 2>/dev/null || echo 0)
           if [ "${COUNT:-0}" -gt 0 ] 2>/dev/null; then
             echo "produced=true" >> "$GITHUB_OUTPUT"
             echo "今日快照已产出：$TODAY.json（$COUNT 个仓库）"
@@ -84,6 +79,28 @@ else:
         if: always() && steps.fresh.outputs.produced == 'true'
         run: python -m star_pulse prune
 
+      # 补中文简介。放在「重建站点」之前，这样当天新进池的项目当天就有中文。
+      #
+      # 为什么是每日而不是每周：候选池是滚动窗口，每天约 90 个新仓库进池，
+      # 而翻译缓存以 repo_id 为键、只增不减 —— 每周跑一次永远追不上新进池的速度
+      # （实测覆盖率长期停在 22%）。每日跑一次才是稳态需求：约 90 条/天。
+      #
+      # --limit 200：MyMemory 免费额度按字符算（填邮箱 5 万字符/天，约 600 条），
+      # 200 条 × 约 80 字符 ≈ 1.6 万字符，留足余量；当前欠账约 620 条，
+      # 三四天即可补齐，之后每天只需补当天的增量。
+      #
+      # continue-on-error：翻译只是锦上添花，缺了就是显示英文原文。
+      # 绝不能因为它超时或额度用尽，让当天的快照和站点都产不出来。
+      - name: 补中文简介（失败不阻断）
+        if: always() && steps.fresh.outputs.produced == 'true'
+        continue-on-error: true
+        env:
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          I18N_EMAIL: ${{ secrets.I18N_EMAIL }}
+        run: python -m star_pulse translate --limit 200
+
       - name: 重建站点
         if: always() && steps.fresh.outputs.produced == 'true'
         run: python -m star_pulse site
@@ -95,7 +112,7 @@ else:
           git config user.email "star-pulse-bot@users.noreply.github.com"
           # 容错 add：data/history 只有在真的裁剪过之后才会存在，
           # 直接写进 pathspec 会让 git 以 "pathspec did not match" 整步失败。
-          for p in data/snapshots data/history docs; do
+          for p in data/snapshots data/history data/i18n docs; do
             if [ -e "$p" ]; then git add -A -- "$p"; fi
           done
           if git diff --staged --quiet; then

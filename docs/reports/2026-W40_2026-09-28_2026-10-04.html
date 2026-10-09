@@ -5,81 +5,311 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GitHub 星耀榜 · 2026-W40</title>
 <style>
-:root { color-scheme: light dark; }
-* { box-sizing: border-box; }
-body { margin: 0; padding: 40px 20px; font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
-  background: #f7f7f5; color: #22211f; line-height: 1.65; }
-.wrap { max-width: 1040px; margin: 0 auto; }
-h1 { font-size: 26px; font-weight: 600; margin: 0 0 8px; letter-spacing: -.01em; }
-h2 { font-size: 17px; font-weight: 600; margin: 40px 0 14px; }
-.sub { color: #6b6a66; font-size: 14px; margin: 0 0 4px; }
-.banner { background: #FAEEDA; border: 1px solid #EF9F27; color: #633806;
-  padding: 14px 18px; border-radius: 10px; margin: 24px 0; font-size: 14px; }
-table { width: 100%; border-collapse: collapse; font-size: 14px; background: #fff;
-  border-radius: 10px; overflow: hidden; border: 1px solid #e3e1da; }
-th { text-align: left; padding: 11px 14px; background: #f1efe8; font-weight: 600;
-  font-size: 13px; color: #444441; white-space: nowrap; }
-td { padding: 11px 14px; border-top: 1px solid #eeece6; vertical-align: top; }
-td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
-a { color: #534AB7; text-decoration: none; }
-a:hover { text-decoration: underline; }
-.warn { color: #A32D2D; font-size: 12px; }
-.muted { color: #888780; font-size: 14px; }
-.chartwrap { position: relative; height: 420px; background: #fff; border: 1px solid #e3e1da;
-  border-radius: 10px; padding: 16px; }
-ul.quality { background: #fff; border: 1px solid #e3e1da; border-radius: 10px;
-  padding: 16px 16px 16px 36px; font-size: 14px; }
-ul.quality li { margin: 4px 0; }
-footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid #e3e1da;
-  color: #888780; font-size: 13px; }
+:root {
+  color-scheme: light dark;
+
+  --bg:          #faf9f6;
+  --surface:     #ffffff;
+  --surface-2:   #f4f2ec;
+  --border:      #e7e3da;
+  --border-2:    #d6d1c4;
+  --text:        #1b1a17;
+  --text-2:      #55524a;
+  --text-3:      #8b877c;
+  --accent:      #534ab7;
+  --accent-2:    #7f77dd;
+  --accent-soft: rgba(83, 74, 183, .09);
+  --up:          #c2410c;
+  --up-soft:     rgba(194, 65, 12, .10);
+  --down:        #15803d;
+  --warn-bg:     #fdf4e4;
+  --warn-border: #eecb96;
+  --warn-text:   #7a4a0b;
+  --grid:        rgba(120, 116, 106, .22);
+  --shadow:      0 1px 2px rgba(28, 26, 22, .04), 0 4px 14px rgba(28, 26, 22, .05);
+
+  --r:      12px;
+  --r-sm:   8px;
+  --r-pill: 999px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 72px;
+  font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.62;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1140px; margin: 0 auto; }
+
+/* ── 页头 ─────────────────────────────────────────── */
+.topbar { padding: 40px 0 26px; }
+h1 { font-size: 29px; line-height: 1.2; font-weight: 650; letter-spacing: -.022em; margin: 0 0 10px; }
+h1 .brand { color: var(--text-3); font-weight: 450; }
+h2 { font-size: 16px; font-weight: 620; letter-spacing: -.008em; margin: 0 0 4px; }
+h3 { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--text-3); font-size: 13px; }
+.meta b { color: var(--text-2); font-weight: 600; font-variant-numeric: tabular-nums; }
+.note { color: var(--text-3); font-size: 13px; margin: 6px 0 14px; max-width: 78ch; }
+.note b { color: var(--text-2); font-weight: 600; }
+
+/* ── 指标卡 ───────────────────────────────────────── */
+.kpis {
+  display: grid; gap: 12px; margin: 4px 0 8px;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+}
+.kpi {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 15px 17px 13px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 2px; min-width: 0;
+}
+.kpi .k { font-size: 12.5px; color: var(--text-3); font-weight: 500; }
+.kpi .v {
+  font-size: 26px; font-weight: 660; letter-spacing: -.028em; line-height: 1.15;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.kpi .v .u { font-size: 13px; font-weight: 500; color: var(--text-3); margin-left: 3px; letter-spacing: 0; }
+.kpi .d { font-size: 12.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.kpi .spark { margin-top: 6px; height: 30px; }
+
+/* ── 面板 ─────────────────────────────────────────── */
+.panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 18px 20px 20px; margin-top: 16px; box-shadow: var(--shadow);
+}
+.panel > h2 { margin-bottom: 3px; }
+.panel > .note:last-child { margin-bottom: 0; }
+.panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.panel-head .more { font-size: 13px; white-space: nowrap; }
+
+/* ── 表格 ─────────────────────────────────────────── */
+/* 宽表格必须有自己的横向滚动容器。少了它，表格会把**整页**撑宽 ——
+   窄屏上标题、说明、页脚全部被裁掉且无法滚动（实测页面 scrollWidth 402→617）。 */
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.data { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+table.data th {
+  text-align: left; padding: 9px 12px; font-size: 12px; font-weight: 600;
+  color: var(--text-3); text-transform: none; letter-spacing: .01em;
+  border-bottom: 1px solid var(--border-2); white-space: nowrap;
+  position: sticky; top: 0; background: var(--surface); z-index: 2;
+}
+table.data td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.data tbody tr:last-child td { border-bottom: 0; }
+table.data tbody tr:hover td { background: var(--surface-2); }
+table.data .num, table.data th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.data td.num { font-weight: 600; }
+table.data.compact td, table.data.compact th { padding: 7px 10px; }
+table.data .rank { color: var(--text-3); font-variant-numeric: tabular-nums; width: 1%; }
+table.data tbody tr:nth-child(-n+3) .rank { color: var(--text); font-weight: 650; }
+/* 简介列：限宽 + 弱化，避免长文本把行高撑得参差不齐 */
+table.data td.desc { color: var(--text-2); font-size: 13px; min-width: 240px; max-width: 460px; }
+
+/* 表格里代表数值强度的内联条：让 +11,059 和 +29 一眼可分 */
+.bar { display: block; height: 4px; border-radius: 2px; background: var(--up-soft); margin-top: 4px; min-width: 2px; }
+.bar > i { display: block; height: 100%; border-radius: 2px; background: var(--up); }
+
+/* ── 语义色 ───────────────────────────────────────── */
+.up { color: var(--up); font-weight: 620; font-variant-numeric: tabular-nums; }
+.down { color: var(--down); font-weight: 620; font-variant-numeric: tabular-nums; }
+.zero { color: var(--text-3); font-variant-numeric: tabular-nums; }
+.muted { color: var(--text-3); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2.5px; }
+a.repo { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent); text-underline-offset: 2.5px; }
+a.repo:hover { text-decoration-color: currentColor; }
+a.repo .ext { font-size: .8em; margin-left: 3px; opacity: .45; }
+
+.tag {
+  display: inline-block; padding: 1px 8px; border-radius: var(--r-pill);
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 12px; font-weight: 550; white-space: nowrap;
+}
+.tag.plain { background: var(--surface-2); color: var(--text-2); }
+
+/* ── 提示条 ───────────────────────────────────────── */
+.banner {
+  background: var(--warn-bg); border: 1px solid var(--warn-border); color: var(--warn-text);
+  padding: 12px 16px; border-radius: var(--r); margin: 16px 0 0; font-size: 13.5px;
+}
+.banner b { font-weight: 650; }
+
+/* ── 图表 ─────────────────────────────────────────── */
+/* overflow-x 是必须的：折线图带 min-width，没有这层滚动容器时它会把**整个页面**
+   撑到 560px 宽，窄屏上标题、说明、表格全部被裁掉且无法滚动。 */
+.chart { margin-top: 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.chart svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 12px; font-size: 12.5px; color: var(--text-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+
+/* 横向条形榜（周报的「增长分布」）：纯 CSS，标签真实文本，窄屏自动换行 */
+.hbars { display: grid; gap: 6px; margin-top: 14px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 22%) 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+.hbar .lbl { color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar .track { background: var(--surface-2); border-radius: 3px; height: 16px; overflow: hidden; }
+.hbar .track > i { display: block; height: 100%; background: var(--accent-2); border-radius: 3px; }
+.hbar .val { color: var(--up); font-weight: 620; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 640px) {
+  .hbar { grid-template-columns: 1fr auto; grid-template-areas: "lbl val" "track track"; gap: 3px 8px; }
+  .hbar .lbl { grid-area: lbl; }
+  .hbar .val { grid-area: val; }
+  .hbar .track { grid-area: track; }
+}
+
+/* CSS 柱状图：完全响应式，标签是真实文本，窄屏也不会被缩放成蚂蚁字。
+   数值提示走原生 title —— 自绘 tooltip 是 nowrap 的绝对定位盒子，首尾柱子
+   的提示框会横向溢出把整页撑宽（实测 +49px），不值得。 */
+.bars { display: flex; align-items: flex-end; gap: 3px; height: 190px; margin-top: 16px; }
+.bars .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+.bars .col > i { display: block; background: var(--accent-2); border-radius: 3px 3px 0 0; min-height: 2px; transition: background .12s; }
+.bars .col:hover > i { background: var(--accent); }
+.bars-x { display: flex; gap: 3px; margin-top: 6px; }
+.bars-x span {
+  flex: 1 1 0; min-width: 0; text-align: center; font-size: 11px; color: var(--text-3);
+  overflow: hidden; white-space: nowrap;
+}
+/* 窄屏下隔一个显示一个日期，避免糊成一团 */
+@media (max-width: 720px) { .bars-x span:nth-child(even) { visibility: hidden; } }
+
+/* ── 周报列表 ─────────────────────────────────────── */
+.reports { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin: 0; padding: 0; list-style: none; }
+.reports a {
+  display: flex; flex-direction: column; gap: 2px; padding: 11px 14px;
+  border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface-2);
+  color: var(--text); text-decoration: none; transition: border-color .12s, background .12s;
+}
+.reports a:hover { border-color: var(--border-2); background: var(--surface); text-decoration: none; }
+.reports .wk { font-weight: 620; font-size: 14px; }
+.reports .rg { font-size: 12.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+
+/* ── 工具栏 ───────────────────────────────────────── */
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 14px; }
+.toolbar input, .toolbar select {
+  font: inherit; font-size: 13.5px; padding: 7px 11px;
+  border: 1px solid var(--border-2); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--text);
+}
+.toolbar input:focus, .toolbar select:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.toolbar input { flex: 1 1 240px; min-width: 160px; }
+.toolbar .count { color: var(--text-3); font-size: 12.5px; margin-left: auto; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* ── 折叠块 ───────────────────────────────────────── */
+details.fold { margin-top: 16px; }
+details.fold > summary {
+  cursor: pointer; list-style: none; user-select: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 14px 18px; font-size: 14.5px; font-weight: 600;
+  display: flex; align-items: center; gap: 9px; box-shadow: var(--shadow);
+}
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::before {
+  content: "▸"; color: var(--text-3); font-weight: 400;
+  display: inline-block; transition: transform .15s ease;
+}
+details.fold[open] > summary::before { transform: rotate(90deg); }
+details.fold > summary:hover { border-color: var(--border-2); }
+details.fold > summary .hint { font-weight: 400; font-size: 12.5px; color: var(--text-3); }
+
+/* ── 周报的「数据质量」清单 ───────────────────────── */
+ul.quality { margin: 4px 0 0; padding-left: 22px; font-size: 13.5px; color: var(--text-2); }
+ul.quality > li { margin: 6px 0; }
+ul.quality ul { margin: 4px 0 0; padding-left: 20px; color: var(--text-3); font-size: 13px; }
+ul.quality ul li { margin: 2px 0; }
+
+footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 12.5px; }
+footer a { color: var(--text-2); }
+
+/* ── 窄屏 ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { padding: 0 14px 56px; }
+  .topbar { padding: 26px 0 20px; }
+  h1 { font-size: 23px; }
+  .kpi .v { font-size: 22px; }
+  .panel { padding: 15px 15px 17px; }
+  .bars { height: 150px; }
+  .note { max-width: none; }
+}
 @media (prefers-color-scheme: dark) {
-  body { background: #1b1b19; color: #e8e6e1; }
-  table, ul.quality, .chartwrap { background: #262624; border-color: #3a3a37; }
-  th { background: #302f2c; color: #d3d1c7; }
-  td { border-top-color: #3a3a37; }
-  a { color: #AFA9EC; }
-  h1, h2 { color: #eeecea; }
-  .sub, .muted, footer { color: #9b9993; }
-  .banner { background: #412402; border-color: #854F0B; color: #FAC775; }
+:root {
+  --bg:          #131312;
+  --surface:     #1d1d1b;
+  --surface-2:   #26261f;
+  --border:      #33332e;
+  --border-2:    #45453e;
+  --text:        #eceae4;
+  --text-2:      #b3b0a6;
+  --text-3:      #8a877d;
+  --accent:      #aea7ee;
+  --accent-2:    #8f87e0;
+  --accent-soft: rgba(174, 167, 238, .12);
+  --up:          #f2955f;
+  --up-soft:     rgba(242, 149, 95, .14);
+  --down:        #6fd39a;
+  --warn-bg:     #3a2a0c;
+  --warn-border: #7d5a1c;
+  --warn-text:   #f3cd8c;
+  --grid:        rgba(170, 166, 156, .22);
+  --shadow:      0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>GitHub 星耀榜 · 2026-W40</h1>
-  <p class="sub">统计周期 2026-09-28 ~ 2026-10-04（UTC+8）　·　数据截至 2026-10-05　·　快照覆盖 22 天</p>
-  
-  <h2>本周新增 Star Top 20</h2>
-  <table><thead><tr><th style="text-align:right">排名</th><th>项目</th><th style="text-align:right">本周新增</th><th style="text-align:right">总星</th><th>语言</th><th>分类</th><th>一句话</th></tr></thead><tbody><tr><td class="num">1</td><td><a href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener">eternity4719/HowToLiveBetter</a></td><td class="num">+16,634</td><td class="num">37,205</td><td>HTML</td><td>其他</td><td>高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本…</td></tr><tr><td class="num">2</td><td><a href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener">debpalash/VoiceStudio</a></td><td class="num">+10,420</td><td class="num">50,382</td><td>Python</td><td>媒体生成</td><td>VoiceStudio is the open-source, fully-local ElevenLabs alternative — v…</td></tr><tr><td class="num">3</td><td><a href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener">Niko1221/Strata</a></td><td class="num">+7,959</td><td class="num">8,421</td><td>C++</td><td>模型与训练</td><td>Qwen3.8-Flash-Next on any consumer hardware: one-click install for Win…</td></tr><tr><td class="num">4</td><td><a href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener">DietrichGebert/ponytail</a></td><td class="num">+6,412</td><td class="num">153,307</td><td>JavaScript</td><td>Agent Skill</td><td>Makes your AI agent think like the laziest senior dev in the room. The…</td></tr><tr><td class="num">5</td><td><a href="https://github.com/vectorize-io/hindsight" target="_blank" rel="noopener">vectorize-io/hindsight</a></td><td class="num">+5,625</td><td class="num">42,801</td><td>Python</td><td>Agent Skill</td><td>Hindsight: Agent Memory That Learns</td></tr><tr><td class="num">6</td><td><a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">paperclipai/paperclip</a></td><td class="num">+4,709</td><td class="num">94,417</td><td>TypeScript</td><td>Agent Skill</td><td>The open-source app everyone uses to manage agents at work</td></tr><tr><td class="num">7</td><td><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a></td><td class="num">+4,652</td><td class="num">275,328</td><td>Shell</td><td>Agent Skill</td><td>Skills for Real Engineers. Straight from my .agents directory.</td></tr><tr><td class="num">8</td><td><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">pbakaus/impeccable</a></td><td class="num">+4,071</td><td class="num">75,242</td><td>JavaScript</td><td>Agent Skill</td><td>The design language that makes your AI harness better at design.</td></tr><tr><td class="num">9</td><td><a href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener">tt-a1i/archify</a></td><td class="num">+3,988</td><td class="num">76,737</td><td>JavaScript</td><td>Agent Skill</td><td>Turn any idea, plan, or codebase into a beautiful interactive diagram.…</td></tr><tr><td class="num">10</td><td><a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">affaan-m/ECC</a></td><td class="num">+3,822</td><td class="num">272,199</td><td>JavaScript</td><td>Agent Skill</td><td>The agent harness performance optimization system. Skills, instincts, …</td></tr><tr><td class="num">11</td><td><a href="https://github.com/cdyforever/how-to-live-better" target="_blank" rel="noopener">cdyforever/how-to-live-better</a></td><td class="num">+3,806</td><td class="num">6,064</td><td>HTML</td><td>其他</td><td>《高性价比人生指南》全书 528 条的在线单页阅读版：手机可读、可搜索、零依赖、支持离线</td></tr><tr><td class="num">12</td><td><a href="https://github.com/NandhaKishorM/laya" target="_blank" rel="noopener">NandhaKishorM/laya</a></td><td class="num">+3,794</td><td class="num">30,473</td><td>Python</td><td>其他</td><td>Non-autoregressive System 1 decision engine. Typed choice, score and y…</td></tr><tr><td class="num">13</td><td><a href="https://github.com/mvschwarz/openrig" target="_blank" rel="noopener">mvschwarz/openrig</a></td><td class="num">+3,366</td><td class="num">4,290</td><td>TypeScript</td><td>Agent Skill</td><td>Build your own network of agents from Claude Code, Codex and Pi: persi…</td></tr><tr><td class="num">14</td><td><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers</a></td><td class="num">+3,252</td><td class="num">294,894</td><td>Shell</td><td>Agent Skill</td><td>An agentic skills framework &amp; software development methodology tha…</td></tr><tr><td class="num">15</td><td><a href="https://github.com/yetone/magpie" target="_blank" rel="noopener">yetone/magpie</a></td><td class="num">+3,218</td><td class="num">4,453</td><td>Go</td><td>Agent Skill</td><td>Every agent&#x27;s model. One place. Codex on DeepSeek, Claude Code on…</td></tr><tr><td class="num">16</td><td><a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank" rel="noopener">bilawalsidhu/gods-eye-view</a></td><td class="num">+2,980</td><td class="num">47,019</td><td>JavaScript</td><td>可视化</td><td>A spy satellite simulator in your browser, except the data is real. Li…</td></tr><tr><td class="num">17</td><td><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">heygen-com/hyperframes</a></td><td class="num">+2,662</td><td class="num">56,297</td><td>TypeScript</td><td>Agent Skill</td><td>Write HTML. Render video. Built for agents.</td></tr><tr><td class="num">18</td><td><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">rohitg00/ai-engineering-from-scratch</a></td><td class="num">+2,096</td><td class="num">61,313</td><td>Python</td><td>其他</td><td>Learn it. Build it. Ship it for others.</td></tr><tr><td class="num">19</td><td><a href="https://github.com/dream-num/univer" target="_blank" rel="noopener">dream-num/univer</a></td><td class="num">+1,711</td><td class="num">21,837</td><td>TypeScript</td><td>Agent Skill</td><td>The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas,…</td></tr><tr><td class="num">20</td><td><a href="https://github.com/qingjian-team/qingjian" target="_blank" rel="noopener">qingjian-team/qingjian</a></td><td class="num">+1,711</td><td class="num">3,791</td><td>Rust</td><td>其他</td><td>青简 Qingjian：用 Rust 写的拼音输入法，候选词旁多一条正在学的语言的译词</td></tr></tbody></table>
-  
-<h2>增长分布</h2>
-<div class="chartwrap"><canvas id="gainChart" role="img" aria-label="Top 12 项目本周新增 Star 横向条形图"></canvas></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script>
-const D = {"labels": ["eternity4719/HowToLiveBetter", "debpalash/VoiceStudio", "Niko1221/Strata", "DietrichGebert/ponytail", "vectorize-io/hindsight", "paperclipai/paperclip", "mattpocock/skills", "pbakaus/impeccable", "tt-a1i/archify", "affaan-m/ECC", "cdyforever/how-to-live-better", "NandhaKishorM/laya"], "values": [16634, 10420, 7959, 6412, 5625, 4709, 4652, 4071, 3988, 3822, 3806, 3794]};
-new Chart(document.getElementById('gainChart'), {
-  type: 'bar',
-  data: { labels: D.labels, datasets: [{ label: '本周新增 Star', data: D.values,
-    backgroundColor: '#7F77DD', borderRadius: 3, barThickness: 16 }] },
-  options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false },
-      tooltip: { callbacks: { label: c => '+' + c.parsed.x.toLocaleString('en-US') } } },
-    scales: {
-      x: { beginAtZero: true, grid: { color: 'rgba(128,128,128,.18)' },
-            ticks: { callback: v => (v/1000) + 'k' } },
-      y: { grid: { display: false }, ticks: { autoSkip: false } }
-    } }
-});
-</script>
-  <h2>新项目榜（周期内创建）</h2>
-  <p class="sub">口径不同：衡量新项目起跑速度，不是存量增长。</p>
-  <table><thead><tr><th style="text-align:right">排名</th><th>项目</th><th style="text-align:right">当前星数</th><th>创建日期</th><th>语言</th><th>分类</th></tr></thead><tbody><tr><td class="num">1</td><td><a href="https://github.com/KKKKhazix/AIHOT" target="_blank" rel="noopener">KKKKhazix/AIHOT</a></td><td class="num">5,904</td><td>2026-09-28</td><td>TypeScript</td><td>其他</td></tr><tr><td class="num">2</td><td><a href="https://github.com/rehan-remade/universal-modder" target="_blank" rel="noopener">rehan-remade/universal-modder</a></td><td class="num">3,522</td><td>2026-09-30</td><td>Python</td><td>Agent Skill</td></tr><tr><td class="num">3</td><td><a href="https://github.com/CopilotKit/OpenDots" target="_blank" rel="noopener">CopilotKit/OpenDots</a></td><td class="num">3,401</td><td>2026-09-29</td><td>TypeScript</td><td>其他</td></tr><tr><td class="num">4</td><td><a href="https://github.com/feder-cr/dots" target="_blank" rel="noopener">feder-cr/dots</a></td><td class="num">2,610</td><td>2026-09-29</td><td>Python</td><td>Agent Skill</td></tr><tr><td class="num">5</td><td><a href="https://github.com/nanaism/yomiyasu" target="_blank" rel="noopener">nanaism/yomiyasu</a></td><td class="num">1,467</td><td>2026-09-30</td><td>Python</td><td>Agent Skill</td></tr><tr><td class="num">6</td><td><a href="https://github.com/wy51ai/floorplan-3d" target="_blank" rel="noopener">wy51ai/floorplan-3d</a></td><td class="num">1,412</td><td>2026-09-29</td><td>HTML</td><td>可视化</td></tr><tr><td class="num">7</td><td><a href="https://github.com/storytold/photocraft" target="_blank" rel="noopener">storytold/photocraft</a></td><td class="num">1,394</td><td>2026-09-30</td><td>Rust</td><td>其他</td></tr><tr><td class="num">8</td><td><a href="https://github.com/firelex/jeff" target="_blank" rel="noopener">firelex/jeff</a></td><td class="num">1,379</td><td>2026-09-28</td><td>Python</td><td>模型与训练</td></tr><tr><td class="num">9</td><td><a href="https://github.com/facebookincubator/muse-gadget-sdk" target="_blank" rel="noopener">facebookincubator/muse-gadget-sdk</a></td><td class="num">1,320</td><td>2026-10-02</td><td>C</td><td>开发工具</td></tr><tr><td class="num">10</td><td><a href="https://github.com/edenfunf/reelmimic" target="_blank" rel="noopener">edenfunf/reelmimic</a></td><td class="num">1,294</td><td>2026-09-28</td><td>JavaScript</td><td>Agent Skill</td></tr><tr><td class="num">11</td><td><a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">QingYunA/answer-me-with-html</a></td><td class="num">1,288</td><td>2026-10-02</td><td>JavaScript</td><td>Agent Skill</td></tr><tr><td class="num">12</td><td><a href="https://github.com/nykooi1/vibe-wise" target="_blank" rel="noopener">nykooi1/vibe-wise</a></td><td class="num">1,217</td><td>2026-09-29</td><td>Python</td><td>Agent Skill</td></tr><tr><td class="num">13</td><td><a href="https://github.com/kargulstudio/sales-crm" target="_blank" rel="noopener">kargulstudio/sales-crm</a></td><td class="num">1,208</td><td>2026-10-04</td><td>TypeScript</td><td>其他</td></tr><tr><td class="num">14</td><td><a href="https://github.com/CAPCOM-TD-OSS/REDox" target="_blank" rel="noopener">CAPCOM-TD-OSS/REDox</a></td><td class="num">1,051</td><td>2026-09-30</td><td>C#</td><td>其他</td></tr><tr><td class="num">15</td><td><a href="https://github.com/omlahore/RemoveMacAI" target="_blank" rel="noopener">omlahore/RemoveMacAI</a></td><td class="num">1,021</td><td>2026-09-29</td><td>Swift</td><td>其他</td></tr><tr><td class="num">16</td><td><a href="https://github.com/chasmlol/SkyCraft" target="_blank" rel="noopener">chasmlol/SkyCraft</a></td><td class="num">926</td><td>2026-09-30</td><td>C++</td><td>Agent Skill</td></tr><tr><td class="num">17</td><td><a href="https://github.com/Edwardxlai/easyread" target="_blank" rel="noopener">Edwardxlai/easyread</a></td><td class="num">796</td><td>2026-09-30</td><td>Python</td><td>科研教育</td></tr><tr><td class="num">18</td><td><a href="https://github.com/openai/mcp-extensions" target="_blank" rel="noopener">openai/mcp-extensions</a></td><td class="num">764</td><td>2026-09-29</td><td>TypeScript</td><td>Agent Skill</td></tr><tr><td class="num">19</td><td><a href="https://github.com/sganggs/Stronghold-Protocol" target="_blank" rel="noopener">sganggs/Stronghold-Protocol</a></td><td class="num">657</td><td>2026-10-02</td><td>JavaScript</td><td>其他</td></tr><tr><td class="num">20</td><td><a href="https://github.com/ESPARGOS/esp-sdr" target="_blank" rel="noopener">ESPARGOS/esp-sdr</a></td><td class="num">604</td><td>2026-09-28</td><td>C</td><td>其他</td></tr></tbody></table>
-  <h2>分类透视</h2>
-  <table><thead><tr><th>分类</th><th style="text-align:right">数量</th><th style="text-align:right">占比</th></tr></thead><tbody><tr><td>Agent Skill</td><td class="num">12</td><td class="num">60%</td></tr><tr><td>其他</td><td class="num">5</td><td class="num">25%</td></tr><tr><td>媒体生成</td><td class="num">1</td><td class="num">5%</td></tr><tr><td>模型与训练</td><td class="num">1</td><td class="num">5%</td></tr><tr><td>可视化</td><td class="num">1</td><td class="num">5%</td></tr></tbody></table>
-  <h2>数据质量</h2>
-  <ul class="quality"><li>快照覆盖 <b>22 天</b>（2026-09-14 ~ 2026-10-05），累计 16,782 条记录</li><li>增量时间跨度上限 <b>10 天</b>，超出即剔除</li><li>因跨度超限被剔除 <b>4</b> 个仓库</li><li>未发现疑似刷星迹象</li></ul>
-  <footer>本报告由 star-pulse 自动生成。所有数值来自每日快照相减，未经任何模型改写；
-  分类与文字描述仅用于可读性，不影响排名。</footer>
+<header class="topbar"><h1>GitHub 星耀榜 · 2026-W40</h1><p class="note" style="margin:0 0 8px">统计周期 2026-09-28 ~ 2026-10-04（UTC+8）　·　数据截至 2026-10-09　·　快照覆盖 26 天</p><div class="meta"><span><a href="../index.html">← 返回看板</a></span></div></header><section class="panel"><div class="panel-head"><h2>本周新增 Star Top 20</h2></div><div class="scroll-x"><table class="data compact"><thead><tr><th>#</th><th>项目</th><th class="num">本周新增</th><th class="num">总星</th><th>语言</th><th>分类</th><th>一句话</th></tr></thead><tbody>
+<tr><td class="rank">1</td><td><a class="repo" href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener">eternity4719/HowToLiveBetter<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+16,634</span></td><td class="num">37,205</td><td>HTML</td><td><span class="tag plain">其他</span></td><td><span class="muted">按性价比排序的循证生活指南：健康长寿、急救、理财、法律、婚育、创业等，每条注明成本与证据等级</span></td></tr>
+<tr><td class="rank">2</td><td><a class="repo" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener">debpalash/VoiceStudio<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+10,420</span></td><td class="num">50,382</td><td>Python</td><td><span class="tag plain">媒体生成</span></td><td><span class="muted">开源全本地的 ElevenLabs 替代：声音克隆、设计、视频配音与有声书，支持 646 种语言</span></td></tr>
+<tr><td class="rank">3</td><td><a class="repo" href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener">Niko1221/Strata<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+7,959</span></td><td class="num">8,421</td><td>C++</td><td><span class="tag plain">模型与训练</span></td><td><span class="muted">Qwen3.8-Flash-Next on any consumer hardware: one-click install for Win…</span></td></tr>
+<tr><td class="rank">4</td><td><a class="repo" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener">DietrichGebert/ponytail<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+6,412</span></td><td class="num">153,307</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码</span></td></tr>
+<tr><td class="rank">5</td><td><a class="repo" href="https://github.com/vectorize-io/hindsight" target="_blank" rel="noopener">vectorize-io/hindsight<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+5,625</span></td><td class="num">42,801</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">Hindsight: Agent Memory That Learns</span></td></tr>
+<tr><td class="rank">6</td><td><a class="repo" href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">paperclipai/paperclip<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+4,709</span></td><td class="num">94,417</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">The open-source app everyone uses to manage agents at work</span></td></tr>
+<tr><td class="rank">7</td><td><a class="repo" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+4,652</span></td><td class="num">275,328</td><td>Shell</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">面向真正工程师的技能集，直接来自作者的 .agents 目录</span></td></tr>
+<tr><td class="rank">8</td><td><a class="repo" href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">pbakaus/impeccable<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+4,071</span></td><td class="num">75,242</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">The design language that makes your AI harness better at design.</span></td></tr>
+<tr><td class="rank">9</td><td><a class="repo" href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener">tt-a1i/archify<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,988</span></td><td class="num">76,737</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">生成漂亮且可验证的架构、流程、时序与数据流图的 Agent 技能，自包含 HTML 带动效</span></td></tr>
+<tr><td class="rank">10</td><td><a class="repo" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">affaan-m/ECC<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,822</span></td><td class="num">272,199</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体</span></td></tr>
+<tr><td class="rank">11</td><td><a class="repo" href="https://github.com/cdyforever/how-to-live-better" target="_blank" rel="noopener">cdyforever/how-to-live-better<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,806</span></td><td class="num">6,064</td><td>HTML</td><td><span class="tag plain">其他</span></td><td><span class="muted">《高性价比人生指南》全书 528 条的在线单页阅读版：手机可读、可搜索、零依赖、支持离线</span></td></tr>
+<tr><td class="rank">12</td><td><a class="repo" href="https://github.com/NandhaKishorM/laya" target="_blank" rel="noopener">NandhaKishorM/laya<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,794</span></td><td class="num">30,473</td><td>Python</td><td><span class="tag plain">其他</span></td><td><span class="muted">Non-autoregressive System 1 decision engine. Typed choice, score and y…</span></td></tr>
+<tr><td class="rank">13</td><td><a class="repo" href="https://github.com/mvschwarz/openrig" target="_blank" rel="noopener">mvschwarz/openrig<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,366</span></td><td class="num">4,290</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">Build your own network of agents from Claude Code, Codex and Pi: persi…</span></td></tr>
+<tr><td class="rank">14</td><td><a class="repo" href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,252</span></td><td class="num">294,894</td><td>Shell</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">An agentic skills framework &amp; software development methodology that wo…</span></td></tr>
+<tr><td class="rank">15</td><td><a class="repo" href="https://github.com/yetone/magpie" target="_blank" rel="noopener">yetone/magpie<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,218</span></td><td class="num">4,453</td><td>Go</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">Every agent&#x27;s model. One place. Codex on DeepSeek, Claude Code on Kimi…</span></td></tr>
+<tr><td class="rank">16</td><td><a class="repo" href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank" rel="noopener">bilawalsidhu/gods-eye-view<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+2,980</span></td><td class="num">47,019</td><td>JavaScript</td><td><span class="tag plain">可视化</span></td><td><span class="muted">浏览器里的间谍卫星模拟器，但数据是真的：在写实 3D 地球上做开源空间情报</span></td></tr>
+<tr><td class="rank">17</td><td><a class="repo" href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">heygen-com/hyperframes<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+2,662</span></td><td class="num">56,297</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">写 HTML、渲染视频，为智能体而生</span></td></tr>
+<tr><td class="rank">18</td><td><a class="repo" href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener">rohitg00/ai-engineering-from-scratch<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+2,096</span></td><td class="num">61,313</td><td>Python</td><td><span class="tag plain">其他</span></td><td><span class="muted">Learn it. Build it. Ship it for others.</span></td></tr>
+<tr><td class="rank">19</td><td><a class="repo" href="https://github.com/dream-num/univer" target="_blank" rel="noopener">dream-num/univer<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+1,711</span></td><td class="num">21,837</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas,…</span></td></tr>
+<tr><td class="rank">20</td><td><a class="repo" href="https://github.com/qingjian-team/qingjian" target="_blank" rel="noopener">qingjian-team/qingjian<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+1,711</span></td><td class="num">3,791</td><td>Rust</td><td><span class="tag plain">其他</span></td><td><span class="muted">青简：用 Rust 写的拼音输入法，候选词旁会显示正在学语言的译词</span></td></tr>
+</tbody></table></div></section><section class="panel"><h2>增长分布</h2><p class="note">Top 12 的本周新增 Star。横向条形，不需要任何脚本。</p><div class="hbars"><div class="hbar" title="eternity4719/HowToLiveBetter　+16,634 stars"><span class="lbl">eternity4719/HowToLiveBetter</span><span class="track"><i style="width:100.00%"></i></span><span class="val">+16,634</span></div><div class="hbar" title="debpalash/VoiceStudio　+10,420 stars"><span class="lbl">debpalash/VoiceStudio</span><span class="track"><i style="width:62.64%"></i></span><span class="val">+10,420</span></div><div class="hbar" title="Niko1221/Strata　+7,959 stars"><span class="lbl">Niko1221/Strata</span><span class="track"><i style="width:47.85%"></i></span><span class="val">+7,959</span></div><div class="hbar" title="DietrichGebert/ponytail　+6,412 stars"><span class="lbl">DietrichGebert/ponytail</span><span class="track"><i style="width:38.55%"></i></span><span class="val">+6,412</span></div><div class="hbar" title="vectorize-io/hindsight　+5,625 stars"><span class="lbl">vectorize-io/hindsight</span><span class="track"><i style="width:33.82%"></i></span><span class="val">+5,625</span></div><div class="hbar" title="paperclipai/paperclip　+4,709 stars"><span class="lbl">paperclipai/paperclip</span><span class="track"><i style="width:28.31%"></i></span><span class="val">+4,709</span></div><div class="hbar" title="mattpocock/skills　+4,652 stars"><span class="lbl">mattpocock/skills</span><span class="track"><i style="width:27.97%"></i></span><span class="val">+4,652</span></div><div class="hbar" title="pbakaus/impeccable　+4,071 stars"><span class="lbl">pbakaus/impeccable</span><span class="track"><i style="width:24.47%"></i></span><span class="val">+4,071</span></div><div class="hbar" title="tt-a1i/archify　+3,988 stars"><span class="lbl">tt-a1i/archify</span><span class="track"><i style="width:23.97%"></i></span><span class="val">+3,988</span></div><div class="hbar" title="affaan-m/ECC　+3,822 stars"><span class="lbl">affaan-m/ECC</span><span class="track"><i style="width:22.98%"></i></span><span class="val">+3,822</span></div><div class="hbar" title="cdyforever/how-to-live-better　+3,806 stars"><span class="lbl">cdyforever/how-to-live-better</span><span class="track"><i style="width:22.88%"></i></span><span class="val">+3,806</span></div><div class="hbar" title="NandhaKishorM/laya　+3,794 stars"><span class="lbl">NandhaKishorM/laya</span><span class="track"><i style="width:22.81%"></i></span><span class="val">+3,794</span></div></div></section><section class="panel"><div class="panel-head"><h2>新项目榜（周期内创建）</h2></div><p class="note">口径不同：衡量新项目起跑速度，不是存量增长。</p><div class="scroll-x"><table class="data compact"><thead><tr><th>#</th><th>项目</th><th class="num">当前星数</th><th>创建日期</th><th>语言</th><th>分类</th></tr></thead><tbody>
+<tr><td class="rank">1</td><td><a class="repo" href="https://github.com/storytold/photocraft" target="_blank" rel="noopener">storytold/photocraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">26,768</td><td>2026-09-30</td><td>Rust</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">2</td><td><a class="repo" href="https://github.com/KKKKhazix/AIHOT" target="_blank" rel="noopener">KKKKhazix/AIHOT<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">6,717</td><td>2026-09-28</td><td>TypeScript</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">3</td><td><a class="repo" href="https://github.com/rehan-remade/universal-modder" target="_blank" rel="noopener">rehan-remade/universal-modder<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">5,639</td><td>2026-09-30</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">4</td><td><a class="repo" href="https://github.com/storytold/lightcraft" target="_blank" rel="noopener">storytold/lightcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">5,523</td><td>2026-09-30</td><td>Rust</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">5</td><td><a class="repo" href="https://github.com/storytold/filmcraft" target="_blank" rel="noopener">storytold/filmcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">5,281</td><td>2026-09-30</td><td>Rust</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">6</td><td><a class="repo" href="https://github.com/CopilotKit/OpenDots" target="_blank" rel="noopener">CopilotKit/OpenDots<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">4,491</td><td>2026-09-29</td><td>TypeScript</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">7</td><td><a class="repo" href="https://github.com/storytold/pdfcraft" target="_blank" rel="noopener">storytold/pdfcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">4,470</td><td>2026-09-30</td><td>Rust</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">8</td><td><a class="repo" href="https://github.com/omlahore/RemoveMacAI" target="_blank" rel="noopener">omlahore/RemoveMacAI<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">3,789</td><td>2026-09-29</td><td>Swift</td><td><span class="tag plain">开发工具</span></td></tr>
+<tr><td class="rank">9</td><td><a class="repo" href="https://github.com/storytold/vectorcraft" target="_blank" rel="noopener">storytold/vectorcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">3,789</td><td>2026-09-30</td><td>Rust</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">10</td><td><a class="repo" href="https://github.com/shader-effects-inc/shaders" target="_blank" rel="noopener">shader-effects-inc/shaders<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">3,418</td><td>2026-09-29</td><td>TypeScript</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">11</td><td><a class="repo" href="https://github.com/nykooi1/vibe-wise" target="_blank" rel="noopener">nykooi1/vibe-wise<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">3,188</td><td>2026-09-29</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">12</td><td><a class="repo" href="https://github.com/storytold/effectcraft" target="_blank" rel="noopener">storytold/effectcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">2,766</td><td>2026-10-01</td><td>Rust</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">13</td><td><a class="repo" href="https://github.com/feder-cr/invisible_playwright_mcp" target="_blank" rel="noopener">feder-cr/invisible_playwright_mcp<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">2,678</td><td>2026-09-29</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">14</td><td><a class="repo" href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">QingYunA/answer-me-with-html<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">2,319</td><td>2026-10-02</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">15</td><td><a class="repo" href="https://github.com/KingKongRobotics/jumper" target="_blank" rel="noopener">KingKongRobotics/jumper<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">2,064</td><td>2026-09-28</td><td>Python</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">16</td><td><a class="repo" href="https://github.com/deadinside28/bloodborne_pc" target="_blank" rel="noopener">deadinside28/bloodborne_pc<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,950</td><td>2026-10-01</td><td>C++</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">17</td><td><a class="repo" href="https://github.com/wy51ai/floorplan-3d" target="_blank" rel="noopener">wy51ai/floorplan-3d<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,846</td><td>2026-09-29</td><td>HTML</td><td><span class="tag plain">可视化</span></td></tr>
+<tr><td class="rank">18</td><td><a class="repo" href="https://github.com/facebookincubator/muse-gadget-sdk" target="_blank" rel="noopener">facebookincubator/muse-gadget-sdk<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,790</td><td>2026-10-02</td><td>C</td><td><span class="tag plain">开发工具</span></td></tr>
+<tr><td class="rank">19</td><td><a class="repo" href="https://github.com/nanaism/yomiyasu" target="_blank" rel="noopener">nanaism/yomiyasu<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,764</td><td>2026-09-30</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">20</td><td><a class="repo" href="https://github.com/edenfunf/reelmimic" target="_blank" rel="noopener">edenfunf/reelmimic<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,753</td><td>2026-09-28</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td></tr>
+</tbody></table></div></section><section class="panel"><div class="panel-head"><h2>分类透视</h2></div><div class="scroll-x"><table class="data compact"><thead><tr><th>分类</th><th class="num">数量</th><th class="num">占比</th></tr></thead><tbody>
+<tr><td>Agent Skill</td><td class="num">12</td><td class="num">60%</td></tr>
+<tr><td>其他</td><td class="num">5</td><td class="num">25%</td></tr>
+<tr><td>媒体生成</td><td class="num">1</td><td class="num">5%</td></tr>
+<tr><td>模型与训练</td><td class="num">1</td><td class="num">5%</td></tr>
+<tr><td>可视化</td><td class="num">1</td><td class="num">5%</td></tr>
+</tbody></table></div></section><section class="panel"><div class="panel-head"><h2>数据质量</h2></div><ul class="quality"><li>快照覆盖 <b>26 天</b>（2026-09-14 ~ 2026-10-09），累计 19,982 条记录</li><li>增量时间跨度上限 <b>10 天</b>，超出即剔除</li><li>因跨度超限被剔除 <b>4</b> 个仓库（快照断档导致，非同口径比较）<ul><li>Panniantong/Agent-Reach：跨度 19 天，+8,547（2026-09-15 → 2026-10-04）</li><li>earendil-works/pi：跨度 18 天，+6,467（2026-09-16 → 2026-10-04）</li><li>addyosmani/agent-skills：跨度 13 天，+3,179（2026-09-21 → 2026-10-04）</li><li>anthropics/claude-code：跨度 13 天，+2,126（2026-09-21 → 2026-10-04）</li></ul></li><li>未发现疑似刷星迹象</li></ul></section><footer>本报告由 star-pulse 自动生成。所有数值来自每日快照相减，未经任何模型改写；分类与文字描述仅用于可读性，不影响排名。</footer>
 </div>
 </body>
 </html>

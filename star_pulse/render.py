@@ -17,7 +17,7 @@ import re
 import sqlite3
 from datetime import date
 
-from . import analyze, charts, theme
+from . import analyze, charts, i18n, theme
 from .config import Settings
 
 esc = theme.esc
@@ -61,12 +61,21 @@ def build_report(
     meta_map = _repo_meta(conn)
 
     top = ranked_all[: settings.top_n]
+    # 中文简介缓存。此前周报**完全没有**读它 —— 「一句话」列走的是 LLM 解读或
+    # 英文原文，于是看板上明明已经是中文的项目，到了周报里又变回英文。
+    # 缓存与看板同源（data/i18n/zh.json，以 repo_id 为键），这里补上回退链：
+    #   LLM 本期解读 > 翻译缓存 > 英文原文
+    zh = i18n.load_cache(settings)
     for item in top:
         history = analyze.daily_history(conn, item["repo_id"], start, end)
         item["flags"] = analyze.star_farm_flags(item, history)
         info = meta_map.get(item["repo_id"], {})
         item["category"] = analyze.classify({**info, "full_name": item["full_name"]})
-        item["summary"] = (narration or {}).get(item["full_name"]) or (item.get("description") or "")
+        item["summary"] = (
+            (narration or {}).get(item["full_name"])
+            or (zh.get(str(item["repo_id"])) or {}).get("zh")
+            or (item.get("description") or "")
+        )
 
     new_repos = analyze.new_repos_in_period(conn, start, end, limit=settings.top_n)
     for item in new_repos:

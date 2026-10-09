@@ -5,10 +5,10 @@
  ],
  "week": "2026-W40",
  "coverage": {
-  "distinct_days": 22,
+  "distinct_days": 26,
   "first_day": "2026-09-14",
-  "last_day": "2026-10-05",
-  "rows_total": 16782,
+  "last_day": "2026-10-09",
+  "rows_total": 19982,
   "warm": true
  },
  "dropped": [
@@ -115,7 +115,7 @@
    "span_days": 6,
    "flags": [],
    "category": "其他",
-   "summary": "高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。"
+   "summary": "按性价比排序的循证生活指南：健康长寿、急救、理财、法律、婚育、创业等，每条注明成本与证据等级"
   },
   {
    "repo_id": 1206390571,
@@ -132,7 +132,7 @@
    "span_days": 3,
    "flags": [],
    "category": "媒体生成",
-   "summary": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages."
+   "summary": "开源全本地的 ElevenLabs 替代：声音克隆、设计、视频配音与有声书，支持 646 种语言"
   },
   {
    "repo_id": 1385946301,
@@ -166,7 +166,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."
+   "summary": "让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码"
   },
   {
    "repo_id": 1086419061,
@@ -217,7 +217,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Skills for Real Engineers. Straight from my .agents directory."
+   "summary": "面向真正工程师的技能集，直接来自作者的 .agents 目录"
   },
   {
    "repo_id": 1097346685,
@@ -251,7 +251,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more."
+   "summary": "生成漂亮且可验证的架构、流程、时序与数据流图的 Agent 技能，自包含 HTML 带动效"
   },
   {
    "repo_id": 1136590548,
@@ -268,7 +268,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+   "summary": "智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体"
   },
   {
    "repo_id": 1375997079,
@@ -370,7 +370,7 @@
    "span_days": 6,
    "flags": [],
    "category": "可视化",
-   "summary": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe."
+   "summary": "浏览器里的间谍卫星模拟器，但数据是真的：在写实 3D 地球上做开源空间情报"
   },
   {
    "repo_id": 1177402105,
@@ -387,7 +387,7 @@
    "span_days": 6,
    "flags": [],
    "category": "Agent Skill",
-   "summary": "Write HTML. Render video. Built for agents."
+   "summary": "写 HTML、渲染视频，为智能体而生"
   },
   {
    "repo_id": 1185590488,
@@ -438,7 +438,7 @@
    "span_days": 6,
    "flags": [],
    "category": "其他",
-   "summary": "青简 Qingjian：用 Rust 写的拼音输入法，候选词旁多一条正在学的语言的译词"
+   "summary": "青简：用 Rust 写的拼音输入法，候选词旁会显示正在学语言的译词"
   }
  ]
 }

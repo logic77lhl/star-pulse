@@ -788,6 +788,111 @@ def test_range_gain_aligned_window(tmp: Path) -> None:
     print("  [PASS] 累计榜用对齐窗口：冠军不再被跨度过滤误杀，中途进池的不参与")
 
 
+_WF_TOP_LEVEL = ("name:", "on:", "permissions:", "concurrency:", "jobs:",
+                 "env:", "run-name:", "defaults:")
+
+
+def _check_workflow_yaml(name: str, text: str) -> None:
+    """对一份 workflow 文本做结构性检查，不合规就抛 AssertionError。
+
+    启发式，不是完整 YAML 解析（项目零依赖、CI 不装 PyYAML）：
+      1. 不允许制表符（YAML 禁止 tab 缩进）；
+      2. 第 0 列只允许出现已知的顶层键；
+      3. `run: |` 块标量结束后紧跟的那一行必须像样的 YAML（列表项或键）。
+    """
+    lines = text.splitlines()
+    for i, raw in enumerate(lines, 1):
+        assert "\t" not in raw, f"{name}:{i} 出现制表符，YAML 不允许 tab 缩进"
+        if not raw.strip() or raw.lstrip().startswith("#"):
+            continue
+        indent = len(raw) - len(raw.lstrip())
+        if indent == 0:
+            assert raw.startswith(_WF_TOP_LEVEL), (
+                f"{name}:{i} 第 0 列出现了非顶层键的内容：{raw[:70]!r}\n"
+                f"    这通常意味着上面某个 `run: |` 块被顶格的行截断了"
+            )
+        if not raw.strip().startswith("run:"):
+            continue
+        value = raw.strip()[len("run:"):].strip()
+        if value not in ("|", ">", "|-", ">-", "|+", ">+"):
+            continue
+        for j in range(i, len(lines)):  # lines[i] 即 run: 的下一行
+            body = lines[j]
+            if not body.strip() or body.lstrip().startswith("#"):
+                continue
+            if len(body) - len(body.lstrip()) > indent:
+                continue  # 仍在块标量内
+            # 缩进回退到 ≤ 键那一行，说明块到此结束 —— 这本身合法（后面接兄弟键、
+            # 下一个列表项或注释）。但这一行必须是像样的 YAML，否则就是被截断后的残行。
+            stripped = body.strip()
+            assert stripped.startswith("-") or ":" in stripped, (
+                f"{name}:{j + 1} 像是 `run: {value}` 块被截断后的残行：{stripped[:70]!r}"
+            )
+            break
+
+
+def test_workflow_yaml_is_structurally_sane() -> None:
+    """workflow 的 YAML 结构必须合法 —— 坏掉的 workflow 会**静默停掉整条流水线**。
+
+    真实事故：在 `run: |` 块标量里内联了一段多行 Python，其中几行顶格书写，
+    块标量被提前截断，剩下的行按顶层 YAML 解析直接报错。GitHub 判定
+    "workflow file issue"，整个 daily.yml 以 0 秒失败 —— 当天的采集就此消失，
+    日志里连一行都没有，非常难发现。
+    """
+    wf_dir = Path(__file__).resolve().parent.parent / ".github" / "workflows"
+    assert wf_dir.is_dir(), f"找不到 workflow 目录：{wf_dir}"
+    files = sorted(wf_dir.glob("*.yml"))
+    assert files, "没有任何 workflow 文件"
+    for path in files:
+        _check_workflow_yaml(path.name, path.read_text(encoding="utf-8"))
+
+    # 守卫自身必须真的能抓到那次事故的写法，否则它只是个安慰剂
+    bad = (
+        "name: x\njobs:\n  a:\n    steps:\n      - name: g\n"
+        "        run: |\n          COUNT=$(python -c 'import json,sys\n"
+        "p = json.load(open(sys.argv[1]))\ntry:\n    pass'\n"
+    )
+    try:
+        _check_workflow_yaml("bad.yml", bad)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError("守卫没能识别出被顶格内容截断的 run 块标量")
+    print(f"  [PASS] workflow YAML 结构合法（{len(files)} 个文件，且守卫可复现该事故）")
+
+
+def test_report_uses_translation_cache(tmp: Path) -> None:
+    """周报的「一句话」必须能用上翻译缓存。
+
+    此前周报只认 LLM 本期解读或**英文原文**，从不读 data/i18n/zh.json ——
+    于是看板上明明已经是中文的项目，到了周报里又变回英文（实测 20 条里只有 3 条
+    中文，而那 3 条恰好是 LLM 解读覆盖到的）。回退链应当是：
+    LLM 本期解读 > 翻译缓存 > 英文原文。
+    """
+    from star_pulse import i18n
+
+    settings, conn = _seed(tmp / "repzh")
+    ranked, _dropped = analyze.weekly_gain(conn, START, END, settings.max_span_days)
+    top_rid = ranked[0]["repo_id"]
+    i18n.save_cache(settings, {str(top_rid): {"zh": "周报专用测试译文", "by": "mymemory"}})
+
+    md, html, meta = render.build_report(settings, conn, START, END)
+    assert meta["top"][0]["repo_id"] == top_rid, "榜单第一名与预期不符"
+    assert meta["top"][0]["summary"] == "周报专用测试译文", (
+        f"周报未回退到翻译缓存，实际拿到：{str(meta['top'][0]['summary'])[:50]!r}"
+    )
+    assert "周报专用测试译文" in md, "Markdown 周报未使用译文"
+    assert "周报专用测试译文" in html, "HTML 周报未使用译文"
+
+    # LLM 本期解读的优先级仍然最高
+    _md2, _html2, meta2 = render.build_report(
+        settings, conn, START, END,
+        narration={meta["top"][0]["full_name"]: "本期 LLM 解读"},
+    )
+    assert meta2["top"][0]["summary"] == "本期 LLM 解读", "LLM 解读应优先于翻译缓存"
+    print("  [PASS] 周报「一句话」回退链正确（LLM 解读 > 翻译缓存 > 英文原文）")
+
+
 def main() -> int:
     print("star-pulse 回归测试")
     print("=" * 58)
@@ -811,6 +916,8 @@ def main() -> int:
         test_daily_batch_is_atomic(tmp)
         test_snapshot_json_merges(tmp)
         test_range_gain_aligned_window(tmp)
+        test_workflow_yaml_is_structurally_sane()
+        test_report_uses_translation_cache(tmp)
     print("=" * 58)
     print("全部通过")
     return 0

@@ -307,6 +307,24 @@ def cmd_stats(settings, args) -> int:
 
 
 # ── 参数解析 ────────────────────────────────────────────────────
+def cmd_snapshot_count(settings, args) -> int:
+    """打印某天快照里的仓库数。给 CI 的发布门用。
+
+    刻意**不**走 prepare()：发布门只需要读一个 JSON 文件，为了数一个数去回灌
+    二十多天快照是没必要的开销。文件不存在或损坏都打印 0 且**不报错** ——
+    门禁要回答的是「今天有没有数据」，不是「为什么没有」。所以始终返回 0，
+    调用方直接比较打印出来的数字即可。
+
+    它存在的理由：这段判断原先是在 workflow 里内联的一段多行 Python，
+    而 YAML 的 `run: |` 块标量要求所有内容行缩进 ≥ 首行 —— 内联多行脚本
+    极易把块截断，让整个 workflow 文件变成非法（真实踩过，daily 因此直接失效）。
+    """
+    day = args.date or settings.today()
+    count = len(db.read_snapshot_repos(settings.snapshots_dir / f"{day}.json"))
+    print(count)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="star_pulse",
@@ -330,6 +348,9 @@ def main(argv: list[str] | None = None) -> int:
 
     p_snap = sub.add_parser("snapshot", help="给指定仓库拍快照")
     p_snap.add_argument("--repos", nargs="+", required=True, help="owner/repo，可空格或逗号分隔")
+
+    p_cnt = sub.add_parser("snapshot-count", help="打印某天快照的仓库数（CI 发布门用）")
+    p_cnt.add_argument("--date", default="", help="YYYY-MM-DD，默认今天（按配置时区）")
 
     p_rep = sub.add_parser("report", help="生成周报")
     p_rep.add_argument(
@@ -356,6 +377,7 @@ def main(argv: list[str] | None = None) -> int:
         "stats": cmd_stats,
         "site": cmd_site,
         "prune": cmd_prune,
+        "snapshot-count": cmd_snapshot_count,
     }
     return handlers[args.command](settings, args)
 

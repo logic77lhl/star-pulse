@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T15:03:56+08:00",
+ "generated_at": "2026-10-10T08:01:41+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -27,10 +27,11 @@
   "2026-10-06",
   "2026-10-07",
   "2026-10-08",
-  "2026-10-09"
+  "2026-10-09",
+  "2026-10-10"
  ],
- "tracked_repos": 2804,
- "latest_date": "2026-10-09",
+ "tracked_repos": 2900,
+ "latest_date": "2026-10-10",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -317,67 +318,78 @@
    "top_delta": 11059,
    "new_repos": 88,
    "prev": "2026-10-08"
+  },
+  {
+   "date": "2026-10-10",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 85717,
+   "gainers": 554,
+   "top_name": "morluto/rea",
+   "top_delta": 19324,
+   "new_repos": 98,
+   "prev": "2026-10-09"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 54267,
-   "stars": 54482,
+   "delta": 56745,
+   "stars": 56960,
    "language": "HTML"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 20944,
-   "stars": 158511,
+   "delta": 22051,
+   "stars": 159618,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 20785,
-   "stars": 44589,
+   "delta": 21377,
+   "stars": 45181,
    "language": "Go"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 19578,
-   "stars": 281049,
+   "delta": 21175,
+   "stars": 282646,
    "language": "Shell"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 18833,
-   "stars": 79993,
+   "delta": 20011,
+   "stars": 81171,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 17504,
-   "stars": 275385,
+   "delta": 18079,
+   "stars": 275960,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 16836,
-   "stars": 49180,
+   "delta": 17293,
+   "stars": 49637,
    "language": "JavaScript"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 11182,
-   "stars": 55788,
+   "delta": 11513,
+   "stars": 56119,
    "language": "Python"
   },
   {
    "full_name": "JustVugg/colibri",
-   "delta": 10275,
-   "stars": 40571,
+   "delta": 10511,
+   "stars": 40807,
    "language": "C"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 9470,
-   "stars": 59186,
+   "delta": 10062,
+   "stars": 59778,
    "language": "TypeScript"
   }
  ],
@@ -386,62 +398,62 @@
   {
    "full_name": "morluto/rea",
    "language": "TypeScript",
-   "delta": 11059,
-   "stars": 25999
+   "delta": 19324,
+   "stars": 45323
   },
   {
    "full_name": "storytold/photocraft",
    "language": "Rust",
-   "delta": 9816,
-   "stars": 26768
+   "delta": 8346,
+   "stars": 35114
   },
   {
    "full_name": "boykopovar/AnyPS5",
    "language": "C++",
-   "delta": 5148,
-   "stars": 15649
+   "delta": 6562,
+   "stars": 22211
+  },
+  {
+   "full_name": "storytold/artcraft",
+   "language": "Rust",
+   "delta": 3530,
+   "stars": 11399
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
    "language": "HTML",
-   "delta": 4236,
-   "stars": 54482
-  },
-  {
-   "full_name": "openai/math",
-   "language": "Lean",
-   "delta": 2672,
-   "stars": 12069
+   "delta": 2478,
+   "stars": 56960
   },
   {
    "full_name": "storytold/lightcraft",
    "language": "Rust",
-   "delta": 2511,
-   "stars": 5523
+   "delta": 2159,
+   "stars": 7682
   },
   {
    "full_name": "storytold/pdfcraft",
    "language": "Rust",
-   "delta": 2144,
-   "stars": 4470
+   "delta": 1896,
+   "stars": 6366
   },
   {
    "full_name": "storytold/filmcraft",
    "language": "Rust",
-   "delta": 2008,
-   "stars": 5281
-  },
-  {
-   "full_name": "storytold/vectorcraft",
-   "language": "Rust",
-   "delta": 1577,
-   "stars": 3789
+   "delta": 1793,
+   "stars": 7074
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 1487,
-   "stars": 281049
+   "delta": 1597,
+   "stars": 282646
+  },
+  {
+   "full_name": "cathrynlavery/diagram-design",
+   "language": "HTML",
+   "delta": 1530,
+   "stars": 47836
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

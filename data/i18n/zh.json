@@ -5,6 +5,11 @@
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
    "zh": "每个座席跨会话的持久上下文–捕获座席在会话期间执行的所有操作，使用AI对其进行压缩，并将相关上下文注入到未来的会话中。与CLA配合使用"
   },
+  "1113573066": {
+   "by": "mymemory",
+   "src": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support",
+   "zh": "人工智能将文档或主题转换为真实的原生PowerPoint演示文稿，包括原生形状、转场和动画、数据支持的图表和表格、演讲者笔记中的音频旁白和支持"
+  },
   "1136590548": {
    "by": "llm",
    "src": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
@@ -20,6 +25,11 @@
    "src": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
    "zh": "主要供知识工作者在Claude Cowork中使用的插件的开源存储库"
   },
+  "1142983825": {
+   "by": "mymemory",
+   "src": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+   "zh": "一个用于改进Claude Code行为的CLAUDE.md文件，源自Andrej Karpathy对LLM编码陷阱的观察。"
+  },
   "1148788086": {
    "by": "llm",
    "src": "Skills for Real Engineers. Straight from my .agents directory.",
@@ -34,6 +44,11 @@
    "by": "mymemory",
    "src": "Production-grade engineering skills for AI coding agents.",
    "zh": "AI编码代理的生产级工程技能。"
+  },
+  "1164477708": {
+   "by": "mymemory",
+   "src": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+   "zh": "人工智能编码代理的上下文窗口优化。沙盒工具输出（减少98 ％ ） ，保持会话内存，并通过MCP +钩子在17个平台上强制路由。"
   },
   "1172273835": {
    "by": "llm",
@@ -3825,6 +3840,11 @@
    "src": "Photo-based reconstruction of classic Commodore 64 keycap lettering, with desktop fonts, webfont, editable outlines, and a specimen.",
    "zh": "基于照片重建的经典Commodore 64键帽字母，具有桌面字体、web字体、可编辑的轮廓和样本。"
   },
+  "1405965779": {
+   "by": "mymemory",
+   "src": "A motion design studio on your own machine: Claude makes the video step by step, you approve every stage. Bring your own Claude Code or API key.",
+   "zh": "在您自己的机器上制作动作设计工作室： Claude一步一步制作视频，您批准每个阶段。自带Claude Code或API密钥。"
+  },
   "1406706284": {
    "by": "mymemory",
    "src": "艺术动画skill：35种艺术风格、9种解说语法，用代码让画动起来。",
@@ -3905,6 +3925,21 @@
    "src": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目",
    "zh": "AI 自主渗透测试系统 | 百度“agent +”攻防挑战赛冠军项目"
   },
+  "1409860044": {
+   "by": "mymemory",
+   "src": "airdrop for non-apple devices",
+   "zh": "非苹果设备空投"
+  },
+  "1410002762": {
+   "by": "mymemory",
+   "src": "Let your AI agents paint big arrows, boxes and text on your Mac screen. One CLI, click-through, gone by itself. Skill for Claude Code and Codex. MIT.",
+   "zh": "让您的人工智能代理在Mac屏幕上绘制大箭头、框和文本。一个CLI ，点击式，自行消失。Claude Code和Codex的技能。麻省理工学院。"
+  },
+  "1410177931": {
+   "by": "mymemory",
+   "src": "ARTEX 源码备份：基于 Autumn-27/ARTEX v0.3.15，保留原始提交历史与 AGPL-3.0 许可证。",
+   "zh": "ARTEX 源码备份：基于 Autumn-27/ARTEX v0.3.15 ，保留原始提交历史与 AGPL-3.0 许可证。"
+  },
   "1410661601": {
    "by": "mymemory",
    "src": "基于 Cloudflare Workers 的 Telegram Web/MTProto WebSocket 代理中继，支持 bridge 鉴权、bootstrap/session 令牌、多 lane WS 复用、AES-CTR 加密、自定义帧、流控与严格 CSP。",
@@ -3919,6 +3954,16 @@
    "by": "mymemory",
    "src": "Whole-disk file search for macOS: fuzzy names, typo tolerance, indexed content grep. ~1 ms over 8M files.",
    "zh": "MacOS全磁盘文件搜索：模糊名称、拼写容差、索引内容grep。超过800万个文件，约1毫秒。"
+  },
+  "1410787228": {
+   "by": "mymemory",
+   "src": "Getting ADB, root, backups and custom apps onto locked-down Android photo frames (Skylight Calendar, BIUFRAME)",
+   "zh": "将ADB、root、备份和自定义应用程序置于锁定的Android相框（ Skylight Calendar、BIUFRAME ）上"
+  },
+  "1411491009": {
+   "by": "mymemory",
+   "src": "A native macOS file browser with fast fuzzy filename search, powered by fsearch.",
+   "zh": "具有快速模糊文件名搜索功能的原生macOS文件浏览器，由fsearch提供支持。"
   },
   "1411916169": {
    "by": "mymemory",
@@ -3945,6 +3990,11 @@
    "src": "Kms Pico Free optimizes your professional desktop environment by providing a tailored utility configuration that enhances workflow efficiency.' This...",
    "zh": "KMS Pico Free通过提供量身定制的实用程序配置来提高工作流程效率，从而优化您的专业桌面环境。'这..."
   },
+  "1412360690": {
+   "by": "mymemory",
+   "src": "tiktok web signature reverse engineer generates valid tiktok signatures for API requets",
+   "zh": "tiktok网络签名逆向工程为API请求生成有效的tiktok签名"
+  },
   "14614344": {
    "by": "llm",
    "src": "A good looking terminal emulator which mimics the old cathode display...",
@@ -3965,6 +4015,16 @@
    "src": "Browse media content with your own rules on Android TV",
    "zh": "按你自己的规则在 Android TV 上浏览媒体内容"
   },
+  "31792824": {
+   "by": "mymemory",
+   "src": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+   "zh": "Flutter可以轻松快速地为移动设备及其他设备构建漂亮的应用程序"
+  },
+  "45717250": {
+   "by": "mymemory",
+   "src": "An Open Source Machine Learning Framework for Everyone",
+   "zh": "面向所有人的开源机器学习框架"
+  },
   "476507964": {
    "by": "mymemory",
    "src": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
@@ -3974,6 +4034,11 @@
    "by": "llm",
    "src": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
    "zh": "实用的抖音下载工具，支持单条与主页批量下载、进度显示、重试与去重"
+  },
+  "65600975": {
+   "by": "mymemory",
+   "src": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+   "zh": "具有强GPU加速的Python中的张量和动态神经网络"
   },
   "671269505": {
    "by": "mymemory",

@@ -3750,10 +3750,20 @@
    "src": "每天的 AI 安全精选和论文清单（md / bib / json），附 Agent 接入说明 · AI Safety HOT",
    "zh": "每天的 AI 安全精选和论文清单（ md/bib/json ） ，附 Agent 接入说明 · AI Safety HOT"
   },
+  "1400018213": {
+   "by": "mymemory",
+   "src": "DesignCraft: An open-source page and layout design editor written by scratch in pure Rust",
+   "zh": "DesignCraft ：用纯Rust编写的开源页面和布局设计编辑器"
+  },
   "1400080206": {
    "by": "mymemory",
    "src": "Six isometric line figures that answer the pointer. For React and for anything with a DOM.",
    "zh": "回答指针的六个等轴线图形。对于React和任何带有DOM的东西。"
+  },
+  "1400136506": {
+   "by": "mymemory",
+   "src": "EffectCraft: An open-source motion graphics and compositing tool written by scratch in pure Rust",
+   "zh": "EffectCraft ：用纯Rust编写的开源动态图形和合成工具"
   },
   "1400714777": {
    "by": "mymemory",
@@ -3790,10 +3800,25 @@
    "src": "X Premium gift CLI and redemption site",
    "zh": "X PREMIUM GIFT CLI和兑换站点"
   },
+  "1401821001": {
+   "by": "mymemory",
+   "src": "The AI chat app that sweats the details. Every top model, real memory, living documents, and your own tools.",
+   "zh": "AI聊天应用程序，让细节无处不在。每个顶级模特、真实记忆、动态文档和自己的工具。"
+  },
+  "1402121018": {
+   "by": "mymemory",
+   "src": "Desktop app for game dev with AI. macOS and Linux, Windows soon.",
+   "zh": "即将推出适用于游戏开发人员的桌面应用程序，支持AI、macOS和Linux、Windows。"
+  },
   "1402193143": {
    "by": "mymemory",
    "src": "Open source SDK to build Muse gadgets",
    "zh": "用于构建Muse小工具的开源SDK"
+  },
+  "1402433235": {
+   "by": "mymemory",
+   "src": "A modern PS5 download manager with resumable downloads and phone controls",
+   "zh": "具有可恢复下载和手机控件的现代PS5下载管理器"
   },
   "1402525166": {
    "by": "mymemory",
@@ -3845,6 +3870,11 @@
    "src": "A motion design studio on your own machine: Claude makes the video step by step, you approve every stage. Bring your own Claude Code or API key.",
    "zh": "在您自己的机器上制作动作设计工作室： Claude一步一步制作视频，您批准每个阶段。自带Claude Code或API密钥。"
   },
+  "1406372374": {
+   "by": "mymemory",
+   "src": "The animation engine for agents: blazingly fast math and 3D videos with Manim's Python API, on a Rust GPU core.",
+   "zh": "代理的动画引擎：在Rust GPU核心上使用Manim的Python API提供极快的数学和3D视频。"
+  },
   "1406706284": {
    "by": "mymemory",
    "src": "艺术动画skill：35种艺术风格、9种解说语法，用代码让画动起来。",
@@ -3859,6 +3889,11 @@
    "by": "mymemory",
    "src": "Open-source personal finance app with an AI financial advisor: track your net worth, investments, ETFs, cash and debts on your own computer.",
    "zh": "拥有人工智能财务顾问的开源个人理财应用程序：在您自己的计算机上跟踪您的净资产、投资、ETF、现金和债务。"
+  },
+  "1408011967": {
+   "by": "mymemory",
+   "src": "Open-source AI video replacement workflow by TEIN. Combine depth maps, SAM segmentation, face meshes, and audio processing to replace characters and objects with Seedance. Includes a local web UI to p",
+   "zh": "TEIN的开源AI视频替换工作流程。结合深度贴图、SAM分割、人脸网格和音频处理，使用Seedance替换角色和对象。包括本地Web用户界面，以"
   },
   "1408099862": {
    "by": "mymemory",
@@ -3920,10 +3955,25 @@
    "src": "Native PC port of P.T. (runs from your own PS4 game files)",
    "zh": "P.T.的本地PC端口（从您自己的PS4游戏文件运行）"
   },
+  "1409013846": {
+   "by": "mymemory",
+   "src": "A team of long-lived bots for DeepSeek Harness, with main bots, bot-to-bot messages and group chats.",
+   "zh": "DeepSeek Harness的长期机器人团队，提供主机器人、机器人到机器人消息和群聊。"
+  },
+  "1409246014": {
+   "by": "mymemory",
+   "src": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
+   "zh": "SolidCraft ：用纯Rust构建的开源参数化3D CAD应用程序。通过MCP实现桌面、网络和自动化。"
+  },
   "1409787646": {
    "by": "mymemory",
    "src": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目",
    "zh": "AI 自主渗透测试系统 | 百度“agent +”攻防挑战赛冠军项目"
+  },
+  "1409806011": {
+   "by": "mymemory",
+   "src": "A free office suite that runs in your browser, in the style of Office 2003. Nothing to install, no account, no server: documents are opened, edited and saved on your own computer.",
+   "zh": "以Office 2003风格在浏览器中运行的免费办公套件。无需安装，无需帐户，无需服务器：在您自己的计算机上打开、编辑和保存文档。"
   },
   "1409860044": {
    "by": "mymemory",
@@ -3934,6 +3984,11 @@
    "by": "mymemory",
    "src": "Let your AI agents paint big arrows, boxes and text on your Mac screen. One CLI, click-through, gone by itself. Skill for Claude Code and Codex. MIT.",
    "zh": "让您的人工智能代理在Mac屏幕上绘制大箭头、框和文本。一个CLI ，点击式，自行消失。Claude Code和Codex的技能。麻省理工学院。"
+  },
+  "1410124849": {
+   "by": "mymemory",
+   "src": "A Claude Code skill that turns a technical idea into a detailed, interactive isometric figure of a real machine. It makes SVG with optional WebGL shaders and 3D, for docs, articles and landing pages.",
+   "zh": "一种Claude Code技能，可将技术创意转化为真实机器的详细交互式等距图形。它使用可选的WebGL着色器和3D制作SVG ，用于文档、文章和着陆页。"
   },
   "1410177931": {
    "by": "mymemory",
@@ -3959,6 +4014,11 @@
    "by": "mymemory",
    "src": "Getting ADB, root, backups and custom apps onto locked-down Android photo frames (Skylight Calendar, BIUFRAME)",
    "zh": "将ADB、root、备份和自定义应用程序置于锁定的Android相框（ Skylight Calendar、BIUFRAME ）上"
+  },
+  "1410929004": {
+   "by": "mymemory",
+   "src": "Search your Mac by what's in your files: photos, PDFs, recordings, videos and code. On-device, built on Google DeepMind's EmbeddingGemma 2.",
+   "zh": "按文件中的内容搜索Mac ：照片、PDF、录制、视频和代码。基于Google DeepMind的EmbeddingGemma 2构建的设备上。"
   },
   "1411491009": {
    "by": "mymemory",
@@ -3990,10 +4050,30 @@
    "src": "Kms Pico Free optimizes your professional desktop environment by providing a tailored utility configuration that enhances workflow efficiency.' This...",
    "zh": "KMS Pico Free通过提供量身定制的实用程序配置来提高工作流程效率，从而优化您的专业桌面环境。'这..."
   },
+  "1411936012": {
+   "by": "mymemory",
+   "src": "Total Commander is an advanced utility that optimizes workflow by providing a seamless interface to manage and navigate through multiple repositories...",
+   "zh": "Total Commander是一款高级实用程序，通过提供无缝界面来管理和导航多个存储库，从而优化工作流程..."
+  },
   "1412360690": {
    "by": "mymemory",
    "src": "tiktok web signature reverse engineer generates valid tiktok signatures for API requets",
    "zh": "tiktok网络签名逆向工程为API请求生成有效的tiktok签名"
+  },
+  "1412548284": {
+   "by": "mymemory",
+   "src": "The Craft App Launcher",
+   "zh": "Craft应用启动器"
+  },
+  "1413021530": {
+   "by": "mymemory",
+   "src": "Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, deployed with one command: npx create-talorys@latest. Free-tier friendly, single-user, no tel",
+   "zh": "您自己的Cloudflare帐户中的个人AI代理。聊天、内存、任务、笔记和定时提醒，只需一个命令即可部署： npx create-talorys @ lates"
+  },
+  "1413187188": {
+   "by": "mymemory",
+   "src": "Self-hosted newsletters on Amazon SES. About $0.10 per 1,000 emails.",
+   "zh": "Amazon SES上的自托管通讯。每1000封电子邮件约$ 0.10。"
   },
   "14614344": {
    "by": "llm",
@@ -4004,6 +4084,11 @@
    "by": "llm",
    "src": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
    "zh": "Hugging Face Transformers：文本、视觉、音频与多模态的顶尖模型定义框架，兼顾推理与训练"
+  },
+  "18408635": {
+   "by": "mymemory",
+   "src": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+   "zh": "用于指令和登月舱的原始阿波罗11号制导计算机（ AGC ）源代码。"
   },
   "189829392": {
    "by": "llm",
@@ -4034,6 +4119,11 @@
    "by": "llm",
    "src": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
    "zh": "实用的抖音下载工具，支持单条与主页批量下载、进度显示、重试与去重"
+  },
+  "652712035": {
+   "by": "mymemory",
+   "src": "AirLLM 70B inference with single 4GB GPU",
+   "zh": "使用单个4GB GPU的AirLLM 70B推理"
   },
   "65600975": {
    "by": "mymemory",

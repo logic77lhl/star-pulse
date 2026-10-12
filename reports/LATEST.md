@@ -1,6 +1,6 @@
-# GitHub 星耀榜 · 2026-W40
+# GitHub 星耀榜 · 2026-W41
 
-统计周期：**2026-09-28 ~ 2026-10-04**（UTC+8）　｜　数据截至：2026-10-09　｜　快照覆盖：26 天
+统计周期：**2026-10-05 ~ 2026-10-11**（UTC+8）　｜　数据截至：2026-10-12　｜　快照覆盖：29 天
 
 ---
 
@@ -8,26 +8,26 @@
 
 | 排名 | 项目 | 本周新增 | 总星 | 语言 | 分类 | 一句话 |
 |---:|---|---:|---:|---|---|---|
-| 1 | [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) | +16,634 | 37,205 | HTML | 其他 | 按性价比排序的循证生活指南：健康长寿、急救、理财、法律、婚育、创业等，每条注明成本与证据等级 |
-| 2 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | +10,420 | 50,382 | Python | 媒体生成 | 开源全本地的 ElevenLabs 替代：声音克隆、设计、视频配音与有声书，支持 646 种语言 |
-| 3 | [Niko1221/Strata](https://github.com/Niko1221/Strata) | +7,959 | 8,421 | C++ | 模型与训练 | Qwen3.8-Flash-Next on any consumer hardware: one-click install for Win… |
-| 4 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | +6,412 | 153,307 | JavaScript | Agent Skill | 让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码 |
-| 5 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | +5,625 | 42,801 | Python | Agent Skill | Hindsight: Agent Memory That Learns |
-| 6 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | +4,709 | 94,417 | TypeScript | Agent Skill | The open-source app everyone uses to manage agents at work |
-| 7 | [mattpocock/skills](https://github.com/mattpocock/skills) | +4,652 | 275,328 | Shell | Agent Skill | 面向真正工程师的技能集，直接来自作者的 .agents 目录 |
-| 8 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | +4,071 | 75,242 | JavaScript | Agent Skill | The design language that makes your AI harness better at design. |
-| 9 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | +3,988 | 76,737 | JavaScript | Agent Skill | 生成漂亮且可验证的架构、流程、时序与数据流图的 Agent 技能，自包含 HTML 带动效 |
-| 10 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | +3,822 | 272,199 | JavaScript | Agent Skill | 智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体 |
-| 11 | [cdyforever/how-to-live-better](https://github.com/cdyforever/how-to-live-better) | +3,806 | 6,064 | HTML | 其他 | 《高性价比人生指南》全书 528 条的在线单页阅读版：手机可读、可搜索、零依赖、支持离线 |
-| 12 | [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | +3,794 | 30,473 | Python | 其他 | Non-autoregressive System 1 decision engine. Typed choice, score and y… |
-| 13 | [mvschwarz/openrig](https://github.com/mvschwarz/openrig) | +3,366 | 4,290 | TypeScript | Agent Skill | Build your own network of agents from Claude Code, Codex and Pi: persi… |
-| 14 | [obra/superpowers](https://github.com/obra/superpowers) | +3,252 | 294,894 | Shell | Agent Skill | An agentic skills framework & software development methodology that wo… |
-| 15 | [yetone/magpie](https://github.com/yetone/magpie) | +3,218 | 4,453 | Go | Agent Skill | Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi… |
-| 16 | [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) | +2,980 | 47,019 | JavaScript | 可视化 | 浏览器里的间谍卫星模拟器，但数据是真的：在写实 3D 地球上做开源空间情报 |
-| 17 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | +2,662 | 56,297 | TypeScript | Agent Skill | 写 HTML、渲染视频，为智能体而生 |
-| 18 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | +2,096 | 61,313 | Python | 其他 | Learn it. Build it. Ship it for others. |
-| 19 | [dream-num/univer](https://github.com/dream-num/univer) | +1,711 | 21,837 | TypeScript | Agent Skill | The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas,… |
-| 20 | [qingjian-team/qingjian](https://github.com/qingjian-team/qingjian) | +1,711 | 3,791 | Rust | 其他 | 青简：用 Rust 写的拼音输入法，候选词旁会显示正在学语言的译词 |
+| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | +40,495 | 41,889 | Rust | 开发工具 | 纯Rust中Adobe Photoshop的开源洁净室重新实现 |
+| 2 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | +22,289 | 26,669 | C++ | 开发工具 | 用于自动将PS5可执行文件移植到Linux和Windows的工具 |
+| 3 | [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) | +16,495 | 58,768 | HTML | 其他 | 按性价比排序的循证生活指南：健康长寿、急救、理财、法律、婚育、创业等，每条注明成本与证据等级 |
+| 4 | [storytold/lightcraft](https://github.com/storytold/lightcraft) | +8,613 | 8,971 | Rust | 开发工具 | 纯Rust中Adobe Lightroom的开源洁净室重新实现。 |
+| 5 | [storytold/filmcraft](https://github.com/storytold/filmcraft) | +8,183 | 8,609 | Rust | 媒体生成 | 纯Rust内置的Adobe Premiere Pro的开源洁净室重新实现。 |
+| 6 | [mattpocock/skills](https://github.com/mattpocock/skills) | +7,810 | 284,407 | Shell | Agent Skill | 面向真正工程师的技能集，直接来自作者的 .agents 目录 |
+| 7 | [storytold/pdfcraft](https://github.com/storytold/pdfcraft) | +7,589 | 7,918 | Rust | 开发工具 | 纯Rust内置的Adobe Acrobat的开源洁净室重新实现 |
+| 8 | [storytold/vectorcraft](https://github.com/storytold/vectorcraft) | +5,771 | 6,126 | Rust | 开发工具 | 纯Rust内置的Adobe Illustrator的开源洁净室重新实现。 |
+| 9 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | +5,517 | 48,896 | HTML | Agent Skill | 面向 Claude Code、Codex 与 Pi 的 38 种编辑级图表版式，自包含 HTML + SVG，无阴影、不用 Mermaid |
+| 10 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | +4,935 | 160,432 | JavaScript | Agent Skill | 让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码 |
+| 11 | [storytold/effectcraft](https://github.com/storytold/effectcraft) | +4,261 | 4,533 | Rust | 开发工具 | EffectCraft ：用纯Rust编写的开源动态图形和合成工具 |
+| 12 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | +3,838 | 81,651 | JavaScript | Agent Skill | 生成漂亮且可验证的架构、流程、时序与数据流图的 Agent 技能，自包含 HTML 带动效 |
+| 13 | [tester-army/e2e](https://github.com/tester-army/e2e) | +3,643 | 7,417 | TypeScript | 开发工具 | Next generation e2e testing framework for web and mobile apps. |
+| 14 | [DuarteSantos8/openGym](https://github.com/DuarteSantos8/openGym) | +3,457 | 6,870 | JavaScript | 本地优先 | Self-hosted gym & body-weight tracker — plan routines, log workouts (s… |
+| 15 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | +3,341 | 60,341 | TypeScript | Agent Skill | 写 HTML、渲染视频，为智能体而生 |
+| 16 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | +3,228 | 276,495 | JavaScript | Agent Skill | 智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体 |
+| 17 | [Niko1221/Strata](https://github.com/Niko1221/Strata) | +3,218 | 15,688 | C++ | 模型与训练 | Qwen3.8-Flash-Next on any consumer hardware: one-click install for Win… |
+| 18 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | +3,154 | 103,970 | JavaScript | Agent Skill | AI编码代理的生产级工程技能。 |
+| 19 | [omlahore/RemoveMacAI](https://github.com/omlahore/RemoveMacAI) | +3,050 | 4,071 | Swift | 开发工具 | Debloat macOS ：关闭Apple Intelligence、分析、广告和弹出窗口。原生应用程序和CLI ，每个更改都可以撤消。 |
+| 20 | [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | +2,843 | 6,365 | Python | Agent Skill | 在任何比赛中指向克劳德。技能、工具和FAL MCP让Claude Code可以修改您拥有的几乎所有PC游戏：侦察、逆向工程、FAL生成的艺术… |
 
 ## 新项目榜（周期内创建，按当前总星排序）
 
@@ -35,46 +35,48 @@
 
 | 排名 | 项目 | 当前星数 | 创建日期 | 语言 | 分类 |
 |---:|---|---:|---|---|---|
-| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | 26,768 | 2026-09-30 | Rust | 其他 |
-| 2 | [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT) | 6,717 | 2026-09-28 | TypeScript | 其他 |
-| 3 | [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | 5,639 | 2026-09-30 | Python | Agent Skill |
-| 4 | [storytold/lightcraft](https://github.com/storytold/lightcraft) | 5,523 | 2026-09-30 | Rust | 其他 |
-| 5 | [storytold/filmcraft](https://github.com/storytold/filmcraft) | 5,281 | 2026-09-30 | Rust | 其他 |
-| 6 | [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots) | 4,491 | 2026-09-29 | TypeScript | 其他 |
-| 7 | [storytold/pdfcraft](https://github.com/storytold/pdfcraft) | 4,470 | 2026-09-30 | Rust | 其他 |
-| 8 | [omlahore/RemoveMacAI](https://github.com/omlahore/RemoveMacAI) | 3,789 | 2026-09-29 | Swift | 开发工具 |
-| 9 | [storytold/vectorcraft](https://github.com/storytold/vectorcraft) | 3,789 | 2026-09-30 | Rust | 其他 |
-| 10 | [shader-effects-inc/shaders](https://github.com/shader-effects-inc/shaders) | 3,418 | 2026-09-29 | TypeScript | 其他 |
-| 11 | [nykooi1/vibe-wise](https://github.com/nykooi1/vibe-wise) | 3,188 | 2026-09-29 | Python | Agent Skill |
-| 12 | [storytold/effectcraft](https://github.com/storytold/effectcraft) | 2,766 | 2026-10-01 | Rust | 其他 |
-| 13 | [feder-cr/invisible_playwright_mcp](https://github.com/feder-cr/invisible_playwright_mcp) | 2,678 | 2026-09-29 | Python | Agent Skill |
-| 14 | [QingYunA/answer-me-with-html](https://github.com/QingYunA/answer-me-with-html) | 2,319 | 2026-10-02 | JavaScript | Agent Skill |
-| 15 | [KingKongRobotics/jumper](https://github.com/KingKongRobotics/jumper) | 2,064 | 2026-09-28 | Python | 其他 |
-| 16 | [deadinside28/bloodborne_pc](https://github.com/deadinside28/bloodborne_pc) | 1,950 | 2026-10-01 | C++ | 其他 |
-| 17 | [wy51ai/floorplan-3d](https://github.com/wy51ai/floorplan-3d) | 1,846 | 2026-09-29 | HTML | 可视化 |
-| 18 | [facebookincubator/muse-gadget-sdk](https://github.com/facebookincubator/muse-gadget-sdk) | 1,790 | 2026-10-02 | C | 开发工具 |
-| 19 | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) | 1,764 | 2026-09-30 | Python | Agent Skill |
-| 20 | [edenfunf/reelmimic](https://github.com/edenfunf/reelmimic) | 1,753 | 2026-09-28 | JavaScript | Agent Skill |
+| 1 | [openai/math](https://github.com/openai/math) | 14,063 | 2026-10-06 | Lean | 科研教育 |
+| 2 | [storytold/wordcraft](https://github.com/storytold/wordcraft) | 5,805 | 2026-10-07 | Rust | 其他 |
+| 3 | [alchaincyf/huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) | 3,380 | 2026-10-06 | JavaScript | Agent Skill |
+| 4 | [wheresryan22/anatomy](https://github.com/wheresryan22/anatomy) | 3,195 | 2026-10-08 | JavaScript | Agent Skill |
+| 5 | [mhtsec/ARTEX](https://github.com/mhtsec/ARTEX) | 3,138 | 2026-10-08 | Go | Agent Skill |
+| 6 | [zhongerxin/iPhone-use](https://github.com/zhongerxin/iPhone-use) | 3,028 | 2026-10-06 | Python | Agent Skill |
+| 7 | [storytold/gridcraft](https://github.com/storytold/gridcraft) | 2,886 | 2026-10-07 | Rust | 其他 |
+| 8 | [storytold/cadcraft](https://github.com/storytold/cadcraft) | 2,629 | 2026-10-07 | Rust | 其他 |
+| 9 | [nullmoth/nvidia-macos-driver](https://github.com/nullmoth/nvidia-macos-driver) | 2,528 | 2026-10-07 | Rust | 其他 |
+| 10 | [LosaLosSantos/aurelio-finance](https://github.com/LosaLosSantos/aurelio-finance) | 2,213 | 2026-10-06 | Python | 其他 |
+| 11 | [t4t5/omdrop-owl](https://github.com/t4t5/omdrop-owl) | 2,082 | 2026-10-08 | Shell | 其他 |
+| 12 | [storytold/deckcraft](https://github.com/storytold/deckcraft) | 2,010 | 2026-10-07 | Rust | 其他 |
+| 13 | [noahdunnagan/fsearch](https://github.com/noahdunnagan/fsearch) | 1,854 | 2026-10-08 | Rust | 其他 |
+| 14 | [alejandrobujan/tendedero](https://github.com/alejandrobujan/tendedero) | 1,807 | 2026-10-07 | Swift | 其他 |
+| 15 | [storytold/soundcraft](https://github.com/storytold/soundcraft) | 1,791 | 2026-10-07 | Rust | 开发工具 |
+| 16 | [LoreanXavier/pt-pc](https://github.com/LoreanXavier/pt-pc) | 1,440 | 2026-10-07 | C++ | 其他 |
+| 17 | [shadany7824/playgta5](https://github.com/shadany7824/playgta5) | 1,381 | 2026-10-07 | JavaScript | 其他 |
+| 18 | [HelixDB/helix-foundry](https://github.com/HelixDB/helix-foundry) | 1,200 | 2026-10-07 | TypeScript | 本地优先 |
+| 19 | [storytold/craft-launcher](https://github.com/storytold/craft-launcher) | 1,179 | 2026-10-09 | Rust | 其他 |
+| 20 | [pingdotgg/ts-rust](https://github.com/pingdotgg/ts-rust) | 1,053 | 2026-10-07 | Rust | 开发工具 |
 
 ## 分类透视
 
 | 分类 | 数量 | 占比 |
 |---|---:|---:|
-| Agent Skill | 12 | 60% |
-| 其他 | 5 | 25% |
+| 开发工具 | 8 | 40% |
+| Agent Skill | 8 | 40% |
+| 其他 | 1 | 5% |
 | 媒体生成 | 1 | 5% |
+| 本地优先 | 1 | 5% |
 | 模型与训练 | 1 | 5% |
-| 可视化 | 1 | 5% |
 
 ## 数据质量
 
-- 快照覆盖 **26 天**（2026-09-14 ~ 2026-10-09），累计 19,982 条记录
+- 快照覆盖 **29 天**（2026-09-14 ~ 2026-10-12），累计 22,382 条记录
 - 增量时间跨度上限 **10 天**，超出即剔除
-- 因跨度超限被剔除 **4** 个仓库（快照断档导致，非同口径比较）
-  - Panniantong/Agent-Reach：跨度 19 天，+8,547（2026-09-15 → 2026-10-04）
-  - earendil-works/pi：跨度 18 天，+6,467（2026-09-16 → 2026-10-04）
-  - addyosmani/agent-skills：跨度 13 天，+3,179（2026-09-21 → 2026-10-04）
-  - anthropics/claude-code：跨度 13 天，+2,126（2026-09-21 → 2026-10-04）
+- 因跨度超限被剔除 **5** 个仓库（快照断档导致，非同口径比较）
+  - cloudflare/security-audit-skill：跨度 17 天，+8,100（2026-09-21 → 2026-10-08）
+  - anthropics/knowledge-work-plugins：跨度 21 天，+3,692（2026-09-20 → 2026-10-11）
+  - trycua/cua：跨度 16 天，+3,066（2026-09-22 → 2026-10-08）
+  - huggingface/transformers：跨度 26 天，+1,283（2026-09-15 → 2026-10-11）
+  - tensorflow/tensorflow：跨度 14 天，+284（2026-09-27 → 2026-10-11）
 - 未发现疑似刷星迹象
 
 ---

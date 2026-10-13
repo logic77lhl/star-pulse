@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-13T10:00:37+08:00",
+ "generated_at": "2026-10-14T07:44:17+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -31,10 +31,11 @@
   "2026-10-10",
   "2026-10-11",
   "2026-10-12",
-  "2026-10-13"
+  "2026-10-13",
+  "2026-10-14"
  ],
- "tracked_repos": 3162,
- "latest_date": "2026-10-13",
+ "tracked_repos": 3239,
+ "latest_date": "2026-10-14",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -365,131 +366,142 @@
    "top_delta": 57786,
    "new_repos": 154,
    "prev": "2026-10-12"
+  },
+  {
+   "date": "2026-10-14",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 93239,
+   "gainers": 585,
+   "top_name": "morluto/rea",
+   "top_delta": 45453,
+   "new_repos": 81,
+   "prev": "2026-10-13"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 60926,
-   "stars": 61141,
+   "delta": 61804,
+   "stars": 62019,
    "language": "HTML"
   },
   {
+   "full_name": "debpalash/VoiceStudio",
+   "delta": 35741,
+   "stars": 63169,
+   "language": "Python"
+  },
+  {
    "full_name": "mattpocock/skills",
-   "delta": 26570,
-   "stars": 288041,
+   "delta": 28147,
+   "stars": 289618,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 24349,
-   "stars": 161916,
+   "delta": 25171,
+   "stars": 162738,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 22771,
-   "stars": 46575,
+   "delta": 23093,
+   "stars": 46897,
    "language": "Go"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 21419,
-   "stars": 53763,
+   "delta": 22979,
+   "stars": 55323,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 21417,
-   "stars": 82577,
+   "delta": 21864,
+   "stars": 83024,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 20053,
-   "stars": 277934,
+   "delta": 20701,
+   "stars": 278582,
    "language": "JavaScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 13336,
-   "stars": 52704,
+   "delta": 14684,
+   "stars": 54052,
    "language": "HTML"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 12142,
-   "stars": 61858,
+   "delta": 13034,
+   "stars": 62750,
    "language": "TypeScript"
-  },
-  {
-   "full_name": "ayghri/i-have-adhd",
-   "delta": 12106,
-   "stars": 56712,
-   "language": "Python"
   }
  ],
- "cumulative_comparable": 206,
+ "cumulative_comparable": 207,
  "daily_top": [
   {
    "full_name": "morluto/rea",
    "language": "TypeScript",
-   "delta": 57786,
-   "stars": 160588
+   "delta": 45453,
+   "stars": 206041
   },
   {
    "full_name": "storytold/photocraft",
    "language": "Rust",
-   "delta": 6254,
-   "stars": 53702
+   "delta": 4081,
+   "stars": 57783
   },
   {
    "full_name": "storytold/artcraft",
    "language": "Rust",
-   "delta": 4455,
-   "stars": 22222
+   "delta": 3348,
+   "stars": 25570
   },
   {
    "full_name": "storytold/wordcraft",
    "language": "Rust",
-   "delta": 3442,
-   "stars": 9247
+   "delta": 1801,
+   "stars": 11048
   },
   {
    "full_name": "wheresryan22/anatomy",
    "language": "JavaScript",
-   "delta": 3153,
-   "stars": 6348
-  },
-  {
-   "full_name": "cathrynlavery/diagram-design",
-   "language": "HTML",
-   "delta": 2426,
-   "stars": 52704
-  },
-  {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "language": "JavaScript",
-   "delta": 2152,
-   "stars": 53763
+   "delta": 1791,
+   "stars": 8139
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 1880,
-   "stars": 288041
+   "delta": 1577,
+   "stars": 289618
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "language": "JavaScript",
+   "delta": 1560,
+   "stars": 55323
+  },
+  {
+   "full_name": "cathrynlavery/diagram-design",
+   "language": "HTML",
+   "delta": 1348,
+   "stars": 54052
   },
   {
    "full_name": "storytold/pdfcraft",
    "language": "Rust",
-   "delta": 1841,
-   "stars": 11426
+   "delta": 1295,
+   "stars": 12721
   },
   {
    "full_name": "storytold/filmcraft",
    "language": "Rust",
-   "delta": 1494,
-   "stars": 11554
+   "delta": 961,
+   "stars": 12515
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

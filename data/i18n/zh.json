@@ -10,6 +10,11 @@
    "src": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support",
    "zh": "人工智能将文档或主题转换为真实的原生PowerPoint演示文稿，包括原生形状、转场和动画、数据支持的图表和表格、演讲者笔记中的音频旁白和支持"
   },
+  "1134543109": {
+   "by": "mymemory",
+   "src": "The open agent skills tool - npx skills",
+   "zh": "开放式客服代表技能工具- npx技能"
+  },
   "1136590548": {
    "by": "llm",
    "src": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
@@ -3825,6 +3830,11 @@
    "src": "The AI chat app that sweats the details. Every top model, real memory, living documents, and your own tools.",
    "zh": "AI聊天应用程序，让细节无处不在。每个顶级模特、真实记忆、动态文档和自己的工具。"
   },
+  "1401942165": {
+   "by": "mymemory",
+   "src": "ScopeWeaver: English and Korean localization of ARTEX, with preserved AGPL-3.0 attribution.",
+   "zh": "ScopeWeaver ： ARTEX的英语和韩语本地化，保留AGPL-3.0属性。"
+  },
   "1402121018": {
    "by": "mymemory",
    "src": "Desktop app for game dev with AI. macOS and Linux, Windows soon.",
@@ -3890,6 +3900,11 @@
    "src": "Deep memory for agents over large datasets. Leviathan is a single static binary that turns your records (JSONL, JSON, CSV/TSV, SQLite, or anything a database CLI can export) into a ranked full-text in",
    "zh": "为大型数据集的座席提供深度内存。Leviathan是一个单一的静态二进制文件，可将您的记录（ JSONL、JSON、CSV/TSV、SQLite或数据库CLI可"
   },
+  "1405556861": {
+   "by": "mymemory",
+   "src": "Drop-in FSR 3.1 upscaler for Direct3D 12 that runs DLSS's network (Model E) on AMD GPUs",
+   "zh": "适用于Direct3D 12的下拉式FSR 3.1升级程序，可在AMD GPU上运行DLSS的网络（ E型）"
+  },
   "1405604903": {
    "by": "mymemory",
    "src": "Photo-based reconstruction of classic Commodore 64 keycap lettering, with desktop fonts, webfont, editable outlines, and a specimen.",
@@ -3929,6 +3944,11 @@
    "by": "mymemory",
    "src": "Open-source AI video replacement workflow by TEIN. Combine depth maps, SAM segmentation, face meshes, and audio processing to replace characters and objects with Seedance. Includes a local web UI to p",
    "zh": "TEIN的开源AI视频替换工作流程。结合深度贴图、SAM分割、人脸网格和音频处理，使用Seedance替换角色和对象。包括本地Web用户界面，以"
+  },
+  "1408082051": {
+   "by": "mymemory",
+   "src": "Eleven free Claude skills that test a business before you launch it: a board trained on Hormozi, Thiel and Jobs, a marketing director, a CFO, and a consumer panel of 100 buyer agents. Free, MIT.",
+   "zh": "在您开展业务之前，有11项免费的Claude技能可对业务进行测试：一个经过Hormozi、Thiel和Jobs培训的董事会、一名营销总监、一名首席财务官和一个由"
   },
   "1408099862": {
    "by": "mymemory",
@@ -4025,6 +4045,11 @@
    "src": "airdrop for non-apple devices",
    "zh": "非苹果设备空投"
   },
+  "1409890709": {
+   "by": "mymemory",
+   "src": "PS2 games in the browser: static recompilation to WebAssembly with a native runtime",
+   "zh": "浏览器中的PS2游戏：使用本机运行时静态重新编译为WebAssembly"
+  },
   "1409893258": {
    "by": "mymemory",
    "src": "A toolkit for low-level operations in DSH, designed to reduce token usage and task execution time / DSH 底层操作工具插件，旨在减少 Token 消耗与任务耗时",
@@ -4080,10 +4105,20 @@
    "src": "Search your Mac by what's in your files: photos, PDFs, recordings, videos and code. On-device, built on Google DeepMind's EmbeddingGemma 2.",
    "zh": "按文件中的内容搜索Mac ：照片、PDF、录制、视频和代码。基于Google DeepMind的EmbeddingGemma 2构建的设备上。"
   },
+  "1411033473": {
+   "by": "mymemory",
+   "src": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+   "zh": "RSI-Anything ：使用世界模型解锁递归自我改进"
+  },
   "1411491009": {
    "by": "mymemory",
    "src": "A native macOS file browser with fast fuzzy filename search, powered by fsearch.",
    "zh": "具有快速模糊文件名搜索功能的原生macOS文件浏览器，由fsearch提供支持。"
+  },
+  "1411867277": {
+   "by": "mymemory",
+   "src": "Custom Claude Code Mods that I need",
+   "zh": "我需要的自定义Claude Code Mod"
   },
   "1411916169": {
    "by": "mymemory",
@@ -4114,6 +4149,11 @@
    "by": "mymemory",
    "src": "Total Commander is an advanced utility that optimizes workflow by providing a seamless interface to manage and navigate through multiple repositories...",
    "zh": "Total Commander是一款高级实用程序，通过提供无缝界面来管理和导航多个存储库，从而优化工作流程..."
+  },
+  "1412045987": {
+   "by": "mymemory",
+   "src": "Rated, auto-refreshed list of decompiled, recompiled & reverse-engineered games: decomps, static recomps, source ports, engine remakes, browser ports.",
+   "zh": "反编译、重新编译和反向工程游戏的额定、自动刷新列表：分解、静态重新计算、源端口、引擎重制、浏览器端口。"
   },
   "1412360690": {
    "by": "mymemory",
@@ -4149,6 +4189,16 @@
    "by": "mymemory",
    "src": "Self-hosted newsletters on Amazon SES. About $0.10 per 1,000 emails.",
    "zh": "Amazon SES上的自托管通讯。每1000封电子邮件约$ 0.10。"
+  },
+  "1413549354": {
+   "by": "mymemory",
+   "src": "A fast, free and open-source GIS in pure Rust.",
+   "zh": "纯Rust中的快速、免费和开源的GIS。"
+  },
+  "1413838499": {
+   "by": "mymemory",
+   "src": "Introduction to Semiconductor Manufacturing",
+   "zh": "半导体制造概论"
   },
   "1414685342": {
    "by": "mymemory",
@@ -4189,6 +4239,11 @@
    "by": "mymemory",
    "src": "Total Commander optimizes desktop software utility configurations with its robust and efficient command-line interface, enabling users to seamlessly...",
    "zh": "Total Commander凭借其强大高效的命令行界面优化桌面软件实用程序配置，使用户能够无缝..."
+  },
+  "1416386910": {
+   "by": "mymemory",
+   "src": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
+   "zh": "Qwen-Image 2.1 NSFW/姿势出图技能：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Co"
   },
   "14614344": {
    "by": "llm",
@@ -4269,6 +4324,11 @@
    "by": "llm",
    "src": "Python tool for converting files and office documents to Markdown.",
    "zh": "把文件与办公文档转换为 Markdown 的 Python 工具"
+  },
+  "889784913": {
+   "by": "mymemory",
+   "src": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
+   "zh": "跨平台Xcode替换。在Linux、Windows、macOS上使用SwiftPM构建和部署iOS应用。"
   },
   "907604175": {
    "by": "mymemory",

@@ -30,6 +30,11 @@
    "src": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
    "zh": "一个用于改进Claude Code行为的CLAUDE.md文件，源自Andrej Karpathy对LLM编码陷阱的观察。"
   },
+  "1144520675": {
+   "by": "mymemory",
+   "src": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (mul",
+   "zh": "从您的终端、应用程序、IDE或手机免费使用Claude Code、Codex、VSCode、Pi和OpenCode （以及其他6种线束） （ 13亿+免费令牌）"
+  },
   "1148788086": {
    "by": "llm",
    "src": "Skills for Real Engineers. Straight from my .agents directory.",
@@ -3695,6 +3700,11 @@
    "src": "High-performance, token-based structured data engine for .NET. A core component of REX, the technology behind CAPCOM's next-generation game engine.",
    "zh": "适用于.NET的高性能、基于令牌的结构化数据引擎。REX的核心组件， CAPCOM下一代游戏引擎背后的技术。"
   },
+  "1397599794": {
+   "by": "mymemory",
+   "src": "一句话，做成有封面、有动画的 Live 图。Turn a sentence into a Live Photo with a designed cover and animation.",
+   "zh": "一句话做成有封面、有动画的 Live图。将句子转换为带有设计封面和动画的Live Photo。"
+  },
   "1397771878": {
    "by": "mymemory",
    "src": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese",
@@ -3750,6 +3760,11 @@
    "src": "每天的 AI 安全精选和论文清单（md / bib / json），附 Agent 接入说明 · AI Safety HOT",
    "zh": "每天的 AI 安全精选和论文清单（ md/bib/json ） ，附 Agent 接入说明 · AI Safety HOT"
   },
+  "1399935626": {
+   "by": "mymemory",
+   "src": "Zelda Wind Waker HD Recomp",
+   "zh": "塞尔达Wind Waker HD Recomp"
+  },
   "1400018213": {
    "by": "mymemory",
    "src": "DesignCraft: An open-source page and layout design editor written by scratch in pure Rust",
@@ -3790,6 +3805,11 @@
    "src": "15 motion design styles, each made by Claude Opus 5.5 writing code from one prompt: watch the films, copy the prompts, read the full source.",
    "zh": "15种运动设计风格，每种风格都由Claude Opus 5.5从一个提示中编写代码：观看电影、复制提示、阅读完整源代码。"
   },
+  "1401469171": {
+   "by": "mymemory",
+   "src": "AI API 中转站评测排行与切换工具：实测可用率、延迟与价格 · Open-source AI API relay benchmark, rankings & switcher for Claude Code / Codex",
+   "zh": "AI API 中转站评测排行与切换工具：实测可用率、延迟与价格 · Claude Code/Codex的开源AI API中继基准、排名和切换器"
+  },
   "1401476500": {
    "by": "mymemory",
    "src": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
@@ -3815,6 +3835,11 @@
    "src": "Open source SDK to build Muse gadgets",
    "zh": "用于构建Muse小工具的开源SDK"
   },
+  "1402295557": {
+   "by": "mymemory",
+   "src": "League of Legends ping wheel for your Windows desktop. Hold Alt, drag, and ping anywhere, with the original animations and sounds.",
+   "zh": "适用于Windows桌面的英雄联盟ping轮。按住Alt键，拖动并ping原始动画和声音。"
+  },
   "1402433235": {
    "by": "mymemory",
    "src": "A modern PS5 download manager with resumable downloads and phone controls",
@@ -3839,6 +3864,11 @@
    "by": "mymemory",
    "src": "Config-driven animated architecture diagrams: turn one JSON file into a terminal-style, always-running diagram or a light-theme infographic that moves. Outputs H.264 mp4 or a live web page; also a Cla",
    "zh": "配置驱动的动画架构图：将一个JSON文件转换为终端风格、始终运行的图表或移动的光主题信息图。输出H.264 mp4或实时网页；还有一个Cla"
+  },
+  "1403731980": {
+   "by": "mymemory",
+   "src": "Procedural animation in any style for Claude Code: short single-file canvas videos with story, look and storyboard check-ins. 7 built-in styles or one matched from your references, your own music (bea",
+   "zh": "Claude Code的任何风格的程序化动画：具有故事、外观和情节提要签入的简短单文件画布视频。7种内置样式或与您的参考文献、您自己的音乐（ BEA"
   },
   "1403847264": {
    "by": "mymemory",
@@ -3889,6 +3919,11 @@
    "by": "mymemory",
    "src": "Open-source personal finance app with an AI financial advisor: track your net worth, investments, ETFs, cash and debts on your own computer.",
    "zh": "拥有人工智能财务顾问的开源个人理财应用程序：在您自己的计算机上跟踪您的净资产、投资、ETF、现金和债务。"
+  },
+  "1407997858": {
+   "by": "mymemory",
+   "src": "Project Maya - GLM-5.3-Flash (321B MoE) on your own NVIDIA GPU(s): engine, server, dashboard, quant tools. Built on Strata.",
+   "zh": "Project Maya - GLM-5.3-Flash (321B MoE)在您自己的NVIDIA显卡上：引擎、服务器、仪表板、定量工具。建在地层之上。"
   },
   "1408011967": {
    "by": "mymemory",
@@ -3955,6 +3990,16 @@
    "src": "Native PC port of P.T. (runs from your own PS4 game files)",
    "zh": "P.T.的本地PC端口（从您自己的PS4游戏文件运行）"
   },
+  "1408698842": {
+   "by": "mymemory",
+   "src": "Gr8r Studio: a calm, structured project management workspace. Vite + plain ES modules.",
+   "zh": "Gr8r工作室：一个平静、结构化的项目管理工作空间。VITE +纯ES模块。"
+  },
+  "1408915941": {
+   "by": "mymemory",
+   "src": "Definitive Bloodborne PC Experience",
+   "zh": "终极血源性PC体验"
+  },
   "1409013846": {
    "by": "mymemory",
    "src": "A team of long-lived bots for DeepSeek Harness, with main bots, bot-to-bot messages and group chats.",
@@ -3980,6 +4025,11 @@
    "src": "airdrop for non-apple devices",
    "zh": "非苹果设备空投"
   },
+  "1409893258": {
+   "by": "mymemory",
+   "src": "A toolkit for low-level operations in DSH, designed to reduce token usage and task execution time / DSH 底层操作工具插件，旨在减少 Token 消耗与任务耗时",
+   "zh": "DSH中低级操作的工具包，旨在减少令牌使用和任务执行时间/DSH 底层操作工具插件，旨在减少令牌 消耗与任务耗时"
+  },
   "1410002762": {
    "by": "mymemory",
    "src": "Let your AI agents paint big arrows, boxes and text on your Mac screen. One CLI, click-through, gone by itself. Skill for Claude Code and Codex. MIT.",
@@ -4000,6 +4050,11 @@
    "src": "基于 Cloudflare Workers 的 Telegram Web/MTProto WebSocket 代理中继，支持 bridge 鉴权、bootstrap/session 令牌、多 lane WS 复用、AES-CTR 加密、自定义帧、流控与严格 CSP。",
    "zh": "基于 Cloudflare Workers 的 Telegram Web/MTProto WebSocket 代理中继，网支持桥鉴权、引导/会话令牌、多通道WS"
   },
+  "1410721941": {
+   "by": "mymemory",
+   "src": "USD BRep is a standalone C++ and Python library for NURBS-based boundary representation (BRep) solid modeling",
+   "zh": "USD BRep是一个独立的C + +和Python库，用于基于NURBS的边界表示（ BRep ）实体建模"
+  },
   "1410743393": {
    "by": "mymemory",
    "src": "Claude generates a daily new tab page based on your browser history.",
@@ -4014,6 +4069,11 @@
    "by": "mymemory",
    "src": "Getting ADB, root, backups and custom apps onto locked-down Android photo frames (Skylight Calendar, BIUFRAME)",
    "zh": "将ADB、root、备份和自定义应用程序置于锁定的Android相框（ Skylight Calendar、BIUFRAME ）上"
+  },
+  "1410926671": {
+   "by": "mymemory",
+   "src": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目 Autumn-27/ARTEX",
+   "zh": "AI 自主渗透测试系统 | 百度“agent +”攻防挑战赛冠军项目 Autumn-27/ARTEX"
   },
   "1410929004": {
    "by": "mymemory",
@@ -4065,15 +4125,70 @@
    "src": "The Craft App Launcher",
    "zh": "Craft应用启动器"
   },
+  "1412573009": {
+   "by": "mymemory",
+   "src": "Open source canva alternative",
+   "zh": "开源Canva替代方案"
+  },
+  "1412969368": {
+   "by": "mymemory",
+   "src": "A native Mach-O port for iOS/macOS of GTA V, with multiplayer",
+   "zh": "适用于GTA V的iOS/macOS的原生Mach-O端口，带多人游戏"
+  },
   "1413021530": {
    "by": "mymemory",
    "src": "Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, deployed with one command: npx create-talorys@latest. Free-tier friendly, single-user, no tel",
    "zh": "您自己的Cloudflare帐户中的个人AI代理。聊天、内存、任务、笔记和定时提醒，只需一个命令即可部署： npx create-talorys @ lates"
   },
+  "1413164360": {
+   "by": "mymemory",
+   "src": "helllllllllloooo font! Turns out it's called Macintosh Skeleton",
+   "zh": "helllllllllloooo字体！原来它被称为Macintosh Skeleton"
+  },
   "1413187188": {
    "by": "mymemory",
    "src": "Self-hosted newsletters on Amazon SES. About $0.10 per 1,000 emails.",
    "zh": "Amazon SES上的自托管通讯。每1000封电子邮件约$ 0.10。"
+  },
+  "1414685342": {
+   "by": "mymemory",
+   "src": "Let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No Mac, no developer account, no jailbreak.",
+   "zh": "让人工智能模型使用带有$ 7 ESP32的真实iPhone ： AirPlay眼睛， USB HID指针，任何与OpenAI兼容的视觉模型。没有Mac ，没有开"
+  },
+  "1415214046": {
+   "by": "mymemory",
+   "src": "Daily radar for new AI terms: names of new models, products and repos, caught on X, Hugging Face, GitHub and sitemaps before keyword tools list them.",
+   "zh": "新AI术语的每日雷达：新型号、产品和存储库的名称，在关键字工具列出它们之前在X、Hugging Face、GitHub和站点地图上捕获。"
+  },
+  "1415313946": {
+   "by": "mymemory",
+   "src": "Open-source iOS compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone and iPad — full touch controls, 60 fps, new endgame",
+   "zh": "暗黑破坏神II的开源iOS兼容层：随着术士统治扩展而复活。在iPhone和iPad上本地运行您自己的Switch副本—全触摸控件， 60 fps ，新的结局"
+  },
+  "1415904147": {
+   "by": "mymemory",
+   "src": "Revolutionize your remote work with AnyDesk's state-of-the-art desktop software utility configuration that maximizes productivity and enhances...",
+   "zh": "AnyDesk最先进的桌面软件实用程序配置可最大限度地提高生产力并增强..."
+  },
+  "1415905785": {
+   "by": "mymemory",
+   "src": "Revit optimizes architectural design workflows with a comprehensive BIM solution that streamlines collaboration and documentation processes on a secure...",
+   "zh": "Revit通过全面的BIM解决方案优化建筑设计工作流程，在安全的..."
+  },
+  "1415905833": {
+   "by": "mymemory",
+   "src": "Better Discord meticulously configures your professional desktop software utilities with a meticulous and highly tailored approach.",
+   "zh": "Better Discord采用细致和高度量身定制的方法，精心配置您的专业桌面软件实用程序。"
+  },
+  "1415913550": {
+   "by": "mymemory",
+   "src": "Kms Pico Free optimizes desktop utility configurations by providing a streamlined interface to manage and configure software applications.",
+   "zh": "KMS Pico Free通过提供简化的界面来管理和配置软件应用程序，从而优化桌面实用程序配置。"
+  },
+  "1415919214": {
+   "by": "mymemory",
+   "src": "Total Commander optimizes desktop software utility configurations with its robust and efficient command-line interface, enabling users to seamlessly...",
+   "zh": "Total Commander凭借其强大高效的命令行界面优化桌面软件实用程序配置，使用户能够无缝..."
   },
   "14614344": {
    "by": "llm",
@@ -4135,10 +4250,20 @@
    "src": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropi",
    "zh": "最快、最轻的人工智能网关。使用Python SDK的Rust核心。调用100多个OpenAI （或本机）格式的LLM API ，包括成本跟踪、护栏、负载平衡和日"
   },
+  "701547123": {
+   "by": "mymemory",
+   "src": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+   "zh": "用户友好的AI界面（支持Ollama、OpenAI API等）"
+  },
   "741625310": {
    "by": "mymemory",
    "src": "A native, user-mode, multi-process, graphical debugger.",
    "zh": "本机、用户模式、多进程、图形调试器。"
+  },
+  "838253246": {
+   "by": "mymemory",
+   "src": "Official inference framework for 1-bit LLMs",
+   "zh": "1位LLM的官方推理框架"
   },
   "888092115": {
    "by": "llm",

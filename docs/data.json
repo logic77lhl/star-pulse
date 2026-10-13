@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T16:51:19+08:00",
+ "generated_at": "2026-10-13T10:00:37+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -30,10 +30,11 @@
   "2026-10-09",
   "2026-10-10",
   "2026-10-11",
-  "2026-10-12"
+  "2026-10-12",
+  "2026-10-13"
  ],
- "tracked_repos": 3024,
- "latest_date": "2026-10-12",
+ "tracked_repos": 3162,
+ "latest_date": "2026-10-13",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -353,68 +354,79 @@
    "top_delta": 31382,
    "new_repos": 75,
    "prev": "2026-10-11"
+  },
+  {
+   "date": "2026-10-13",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 120528,
+   "gainers": 505,
+   "top_name": "morluto/rea",
+   "top_delta": 57786,
+   "new_repos": 154,
+   "prev": "2026-10-12"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 59630,
-   "stars": 59845,
+   "delta": 60926,
+   "stars": 61141,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 24690,
-   "stars": 286161,
+   "delta": 26570,
+   "stars": 288041,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 23533,
-   "stars": 161100,
+   "delta": 24349,
+   "stars": 161916,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 22369,
-   "stars": 46173,
+   "delta": 22771,
+   "stars": 46575,
    "language": "Go"
   },
   {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "delta": 21419,
+   "stars": 53763,
+   "language": "JavaScript"
+  },
+  {
    "full_name": "tt-a1i/archify",
-   "delta": 20881,
-   "stars": 82041,
+   "delta": 21417,
+   "stars": 82577,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 19320,
-   "stars": 277201,
+   "delta": 20053,
+   "stars": 277934,
    "language": "JavaScript"
   },
   {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 19267,
-   "stars": 51611,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "ayghri/i-have-adhd",
-   "delta": 11871,
-   "stars": 56477,
-   "language": "Python"
+   "full_name": "cathrynlavery/diagram-design",
+   "delta": 13336,
+   "stars": 52704,
+   "language": "HTML"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 11234,
-   "stars": 60950,
+   "delta": 12142,
+   "stars": 61858,
    "language": "TypeScript"
   },
   {
-   "full_name": "JustVugg/colibri",
-   "delta": 10950,
-   "stars": 41246,
-   "language": "C"
+   "full_name": "ayghri/i-have-adhd",
+   "delta": 12106,
+   "stars": 56712,
+   "language": "Python"
   }
  ],
  "cumulative_comparable": 206,
@@ -422,62 +434,62 @@
   {
    "full_name": "morluto/rea",
    "language": "TypeScript",
-   "delta": 31382,
-   "stars": 102802
+   "delta": 57786,
+   "stars": 160588
   },
   {
    "full_name": "storytold/photocraft",
    "language": "Rust",
-   "delta": 5559,
-   "stars": 47448
+   "delta": 6254,
+   "stars": 53702
   },
   {
    "full_name": "storytold/artcraft",
    "language": "Rust",
-   "delta": 3389,
-   "stars": 17767
-  },
-  {
-   "full_name": "boykopovar/AnyPS5",
-   "language": "C++",
-   "delta": 3321,
-   "stars": 29990
-  },
-  {
-   "full_name": "wheresryan22/anatomy",
-   "language": "JavaScript",
-   "delta": 2949,
-   "stars": 3195
+   "delta": 4455,
+   "stars": 22222
   },
   {
    "full_name": "storytold/wordcraft",
    "language": "Rust",
-   "delta": 2676,
-   "stars": 5805
+   "delta": 3442,
+   "stars": 9247
   },
   {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 1754,
-   "stars": 286161
-  },
-  {
-   "full_name": "storytold/pdfcraft",
-   "language": "Rust",
-   "delta": 1667,
-   "stars": 9585
-  },
-  {
-   "full_name": "storytold/filmcraft",
-   "language": "Rust",
-   "delta": 1451,
-   "stars": 10060
+   "full_name": "wheresryan22/anatomy",
+   "language": "JavaScript",
+   "delta": 3153,
+   "stars": 6348
   },
   {
    "full_name": "cathrynlavery/diagram-design",
    "language": "HTML",
-   "delta": 1382,
-   "stars": 50278
+   "delta": 2426,
+   "stars": 52704
+  },
+  {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "language": "JavaScript",
+   "delta": 2152,
+   "stars": 53763
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 1880,
+   "stars": 288041
+  },
+  {
+   "full_name": "storytold/pdfcraft",
+   "language": "Rust",
+   "delta": 1841,
+   "stars": 11426
+  },
+  {
+   "full_name": "storytold/filmcraft",
+   "language": "Rust",
+   "delta": 1494,
+   "stars": 11554
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

@@ -5,6 +5,11 @@
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
    "zh": "每个座席跨会话的持久上下文–捕获座席在会话期间执行的所有操作，使用AI对其进行压缩，并将相关上下文注入到未来的会话中。与CLA配合使用"
   },
+  "1079456184": {
+   "by": "mymemory",
+   "src": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biolog",
+   "zh": "将任何AI特工变成AI科学家。全球25万多名科学家使用的排名第一的科学代理技能库。177项即用型验证技能加上100多个涵盖生物学的科学数据库"
+  },
   "1113573066": {
    "by": "mymemory",
    "src": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support",
@@ -109,6 +114,11 @@
    "by": "llm",
    "src": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
    "zh": "面向 Claude Code、Codex 与 Pi 的 38 种编辑级图表版式，自包含 HTML + SVG，无阴影、不用 Mermaid"
+  },
+  "1222527844": {
+   "by": "mymemory",
+   "src": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have th",
+   "zh": "人工智能代理的独立审计。由人类或智能体本身运行，以回答AI智能体经济中最关键的问题。客服代表是否在做应该做的事情？使用iFixAi ，您可以"
   },
   "1223939135": {
    "by": "llm",
@@ -3795,6 +3805,11 @@
    "src": "Evolving Multimodal Inference Programs: LLM-guided evolutionary search for accurate and efficient vision-language inference.",
    "zh": "不断发展的多模态推理程序： LLM引导的进化搜索，以实现准确高效的视觉语言推理。"
   },
+  "1401123204": {
+   "by": "mymemory",
+   "src": "CodeAgent is an open-source coding agent that lives in your terminal. It understands your repository, plans multi-step changes, writes and edits files, runs commands and tests, and iterates until the",
+   "zh": "CodeAgent是一种开源编码代理，位于您的终端中。它了解您的存储库，计划多步更改，写入和编辑文件，运行命令和测试，并迭代，直到"
+  },
   "1401219750": {
    "by": "mymemory",
    "src": "Open source AI code review for Claude Code and Codex, before you push. Scanners (SAST, secrets, dependencies, lint) on the lines you changed, then a separate reviewer process that checks every scanner",
@@ -3914,6 +3929,11 @@
    "by": "mymemory",
    "src": "A motion design studio on your own machine: Claude makes the video step by step, you approve every stage. Bring your own Claude Code or API key.",
    "zh": "在您自己的机器上制作动作设计工作室： Claude一步一步制作视频，您批准每个阶段。自带Claude Code或API密钥。"
+  },
+  "1406229181": {
+   "by": "mymemory",
+   "src": "A free open-source project designed to turn youtube-videos into viral short videos. Highlight detection, subtitles, translation, voiceover, all in one for your content: no pre-clip credits or any wate",
+   "zh": "一个免费的开源项目，旨在将YouTube视频转化为病毒式短视频。高亮显示检测、字幕、翻译、画外音，所有功能一应俱全：没有剪辑前字幕或任何WATE"
   },
   "1406372374": {
    "by": "mymemory",
@@ -4155,6 +4175,11 @@
    "src": "Rated, auto-refreshed list of decompiled, recompiled & reverse-engineered games: decomps, static recomps, source ports, engine remakes, browser ports.",
    "zh": "反编译、重新编译和反向工程游戏的额定、自动刷新列表：分解、静态重新计算、源端口、引擎重制、浏览器端口。"
   },
+  "1412112308": {
+   "by": "mymemory",
+   "src": "FigCraft: interface design and prototyping; an open-source, clean-room reimplementation of collaborative design workflows in pure Rust",
+   "zh": "FigCraft ：界面设计和原型设计；纯Rust中协作设计工作流程的开源、无尘室重新实现"
+  },
   "1412360690": {
    "by": "mymemory",
    "src": "tiktok web signature reverse engineer generates valid tiktok signatures for API requets",
@@ -4195,6 +4220,11 @@
    "src": "A fast, free and open-source GIS in pure Rust.",
    "zh": "纯Rust中的快速、免费和开源的GIS。"
   },
+  "1413644064": {
+   "by": "mymemory",
+   "src": "Seven AI advisors (Bezos, Paul Graham, Hormozi, Gary Vee, Dan Martell, Gino Wickman, Buffett) debate your business decision in Claude Code, live around a table.",
+   "zh": "七位人工智能顾问（贝索斯、保罗·格雷厄姆、霍尔莫齐、加里·维、丹·马爹利、吉诺·威克曼、巴菲特）围坐在一张桌子旁，讨论你在《克劳德准则》中的商业决策。"
+  },
   "1413838499": {
    "by": "mymemory",
    "src": "Introduction to Semiconductor Manufacturing",
@@ -4214,6 +4244,11 @@
    "by": "mymemory",
    "src": "Open-source iOS compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone and iPad — full touch controls, 60 fps, new endgame",
    "zh": "暗黑破坏神II的开源iOS兼容层：随着术士统治扩展而复活。在iPhone和iPad上本地运行您自己的Switch副本—全触摸控件， 60 fps ，新的结局"
+  },
+  "1415358670": {
+   "by": "mymemory",
+   "src": "A design system for AI applications. Material, physical, tactile, technical.",
+   "zh": "人工智能应用的设计系统。材料、物理、触觉、技术。"
   },
   "1415904147": {
    "by": "mymemory",
@@ -4245,6 +4280,21 @@
    "src": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
    "zh": "Qwen-Image 2.1 NSFW/姿势出图技能：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Co"
   },
+  "1416766144": {
+   "by": "mymemory",
+   "src": "Scout: the open-source browser agent, by Outcrawl. Mirrored automatically from Outcrawl's own repository.",
+   "zh": "Scout ： Outcrawl的开源浏览器代理。从Outcrawl自己的存储库自动镜像。"
+  },
+  "1417411861": {
+   "by": "mymemory",
+   "src": "Self-hosted GPTibo storefront, admin and Go backend — sanitized MIT source",
+   "zh": "自托管的GPTibo店面、管理员和Go后端—经过消毒的MIT源代码"
+  },
+  "1417456983": {
+   "by": "mymemory",
+   "src": "We're rebuilding and open-sourcing the world’s software from scratch.",
+   "zh": "我们正在从头开始重建和开源全球软件。"
+  },
   "14614344": {
    "by": "llm",
    "src": "A good looking terminal emulator which mimics the old cathode display...",
@@ -4254,6 +4304,11 @@
    "by": "llm",
    "src": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
    "zh": "Hugging Face Transformers：文本、视觉、音频与多模态的顶尖模型定义框架，兼顾推理与训练"
+  },
+  "173228436": {
+   "by": "mymemory",
+   "src": "Ghidra is a software reverse engineering (SRE) framework",
+   "zh": "Ghidra是一个软件逆向工程（ SRE ）框架"
   },
   "18408635": {
    "by": "mymemory",
@@ -4285,6 +4340,16 @@
    "src": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
    "zh": "ArtCraft是艺术家、设计师和电影制作人的特意制作引擎"
   },
+  "606244443": {
+   "by": "mymemory",
+   "src": "WinUI app for building smaller, customized Windows 11 images.",
+   "zh": "WinUI应用程序，用于构建更小的自定义Windows 11映像。"
+  },
+  "612230": {
+   "by": "mymemory",
+   "src": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+   "zh": "节点版本管理器-兼容POSIX的bash脚本，用于管理多个活动的node.js版本。"
+  },
   "645238879": {
    "by": "llm",
    "src": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
@@ -4309,6 +4374,11 @@
    "by": "mymemory",
    "src": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
    "zh": "用户友好的AI界面（支持Ollama、OpenAI API等）"
+  },
+  "724712": {
+   "by": "mymemory",
+   "src": "Empowering everyone to build reliable and efficient software.",
+   "zh": "让每个人都能构建可靠、高效的软件。"
   },
   "741625310": {
    "by": "mymemory",

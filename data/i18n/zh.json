@@ -5,10 +5,20 @@
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
    "zh": "每个座席跨会话的持久上下文–捕获座席在会话期间执行的所有操作，使用AI对其进行压缩，并将相关上下文注入到未来的会话中。与CLA配合使用"
   },
+  "1073224795": {
+   "by": "mymemory",
+   "src": "An agentic skills framework & software development methodology that works.",
+   "zh": "有效的代理技能框架和软件开发方法。"
+  },
   "1079456184": {
    "by": "mymemory",
    "src": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biolog",
    "zh": "将任何AI特工变成AI科学家。全球25万多名科学家使用的排名第一的科学代理技能库。177项即用型验证技能加上100多个涵盖生物学的科学数据库"
+  },
+  "1100776768": {
+   "by": "mymemory",
+   "src": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+   "zh": "由Anthropic管理的高质量Claude Code插件的官方目录。"
   },
   "1113573066": {
    "by": "mymemory",
@@ -90,6 +100,11 @@
    "src": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video produc",
    "zh": "首个开源智能体视频制作系统：12 条生产流水线、100+ 工具、700+ 技能与制作知识文件"
   },
+  "1201173969": {
+   "by": "mymemory",
+   "src": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+   "zh": "🪨 为什么在很少令牌做恶作剧时使用许多令牌。病毒技能+编码代理的代理，通过像穴居人一样说话来削减65%的代币。"
+  },
   "1206390571": {
    "by": "llm",
    "src": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
@@ -125,6 +140,11 @@
    "src": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
    "zh": "开源 AI 销售系统：自托管 CRM，原生集成 AI 智能体与 WhatsApp，多租户、支持 MCP"
   },
+  "1230933500": {
+   "by": "mymemory",
+   "src": "TokenSpeed is a speed-of-light LLM inference engine.",
+   "zh": "TokenSpeed是一款光速LLM推理引擎。"
+  },
   "1238120057": {
    "by": "llm",
    "src": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
@@ -149,6 +169,11 @@
    "by": "llm",
    "src": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
    "zh": "浏览器里的间谍卫星模拟器，但数据是真的：在写实 3D 地球上做开源空间情报"
+  },
+  "1284653133": {
+   "by": "mymemory",
+   "src": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search",
+   "zh": "XERJ是人工智能搜索数据的新方式。其自动索引功能可激活代理了解您的数据，而无需浪费grep和sed的代币。一个命令可对代码、文档、日志和PDF进行索引以进行搜"
   },
   "1286080397": {
    "by": "llm",
@@ -1064,6 +1089,11 @@
    "by": "llm",
    "src": "Графический WEB интерфейс UI в браузере + VPN AmneziaWG 3.1 на VPS в Docker одной командой. Без мусора и лишних зависимостей",
    "zh": "一条命令在 VPS 上以 Docker 部署 AmneziaWG 3.1 的浏览器图形界面 + VPN"
+  },
+  "1356077516": {
+   "by": "mymemory",
+   "src": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No clou",
+   "zh": "编码代理的本地视频编辑器： 42个FFmpeg工具，具有机器可读的合同和MCP服务器，适用于Claude Code、Cursor和Codex。剪切、字幕、重构、"
   },
   "1356114154": {
    "by": "llm",
@@ -3950,6 +3980,11 @@
    "src": "让 Codex 通过 USB 操作真实 iPhone：引导安装、App 自动化、实时屏幕与截图回退。",
    "zh": "让 Codex 通过 USB 操作真实 iPhone ：引导安装、 App 自动化、实时屏幕与截图回退。"
   },
+  "1407754231": {
+   "by": "mymemory",
+   "src": "Looksmaxxing for motion graphics. An agent skill that turns AI slop videos into films that look made by a motion designer.",
+   "zh": "动态图形的Looksmaxxing。一种代理技能，可将AI SLOP视频转换为动作设计师制作的电影。"
+  },
   "1407873347": {
    "by": "mymemory",
    "src": "Open-source personal finance app with an AI financial advisor: track your net worth, investments, ETFs, cash and debts on your own computer.",
@@ -3974,6 +4009,11 @@
    "by": "mymemory",
    "src": "Screenshots, hung out to dry. A tiny native macOS app that hangs every screenshot on a line at the top of your screen.",
    "zh": "屏幕截图，挂在外面晾干。一款小巧的原生macOS应用程序，可将每个屏幕截图悬挂在屏幕顶部的一行上。"
+  },
+  "1408151439": {
+   "by": "mymemory",
+   "src": "QQ宠物单机复刻版(AI)",
+   "zh": "QQ 宠物单机复刻版(AI)"
   },
   "1408277479": {
    "by": "mymemory",
@@ -4125,6 +4165,11 @@
    "src": "Search your Mac by what's in your files: photos, PDFs, recordings, videos and code. On-device, built on Google DeepMind's EmbeddingGemma 2.",
    "zh": "按文件中的内容搜索Mac ：照片、PDF、录制、视频和代码。基于Google DeepMind的EmbeddingGemma 2构建的设备上。"
   },
+  "1411026273": {
+   "by": "mymemory",
+   "src": "Static recompilation of Link's Awakening (Switch) to native macOS, Windows and Linux",
+   "zh": "将Link的唤醒（切换）静态重新编译为本机macOS、Windows和Linux"
+  },
   "1411033473": {
    "by": "mymemory",
    "src": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
@@ -4169,6 +4214,11 @@
    "by": "mymemory",
    "src": "Total Commander is an advanced utility that optimizes workflow by providing a seamless interface to manage and navigate through multiple repositories...",
    "zh": "Total Commander是一款高级实用程序，通过提供无缝界面来管理和导航多个存储库，从而优化工作流程..."
+  },
+  "1412022658": {
+   "by": "mymemory",
+   "src": "Curated reverse-engineering tools and learning resources for binaries, apps, firmware, formats, and protocols.",
+   "zh": "精心策划的二进制文件、应用程序、固件、格式和协议的反向工程工具和学习资源。"
   },
   "1412045987": {
    "by": "mymemory",
@@ -4250,6 +4300,11 @@
    "src": "A design system for AI applications. Material, physical, tactile, technical.",
    "zh": "人工智能应用的设计系统。材料、物理、触觉、技术。"
   },
+  "1415622546": {
+   "by": "mymemory",
+   "src": "Native Windows port of Shadow of the Colossus (PS4, CUSA08809) - bring your own game dump. Port nativo para PC.",
+   "zh": "Shadow of the Colossus （ PS4 ， CUSA08809 ）的原生Windows端口-带上您自己的游戏转储。Port nativo pa"
+  },
   "1415904147": {
    "by": "mymemory",
    "src": "Revolutionize your remote work with AnyDesk's state-of-the-art desktop software utility configuration that maximizes productivity and enhances...",
@@ -4275,6 +4330,11 @@
    "src": "Total Commander optimizes desktop software utility configurations with its robust and efficient command-line interface, enabling users to seamlessly...",
    "zh": "Total Commander凭借其强大高效的命令行界面优化桌面软件实用程序配置，使用户能够无缝..."
   },
+  "1416050798": {
+   "by": "mymemory",
+   "src": "Overdrive releases for jailbroken PS5",
+   "zh": "越狱PS5的Overdrive版本"
+  },
   "1416386910": {
    "by": "mymemory",
    "src": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
@@ -4294,6 +4354,31 @@
    "by": "mymemory",
    "src": "We're rebuilding and open-sourcing the world’s software from scratch.",
    "zh": "我们正在从头开始重建和开源全球软件。"
+  },
+  "1419078245": {
+   "by": "mymemory",
+   "src": "基于 REA 深度拆解并高保真还原 Claude 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000+ 行逆向分析手册。",
+   "zh": "基于 REA 深度拆解并高保真还原 CLAUDE 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000 + 行逆向"
+  },
+  "1419746236": {
+   "by": "mymemory",
+   "src": "A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, with the low-level libraries around them. The foundation under Kitten Space Agency",
+   "zh": "用于制作游戏或您自己的游戏引擎的免费开源C #框架。直接访问原生API和Vulkan ，周围有低级库。小猫航天局（ Kitten Space Agency ）旗"
+  },
+  "1419982962": {
+   "by": "mymemory",
+   "src": "Uncharted: The Nathan Drake Collection running natively on Windows - by SuperMedo",
+   "zh": "未知： Nathan Drake系列在Windows上本地运行-由SuperMedo提供"
+  },
+  "1420063501": {
+   "by": "mymemory",
+   "src": "Turn your regular JavaScript code into a neural net.",
+   "zh": "将常规JavaScript代码转换为神经网络。"
+  },
+  "1420751050": {
+   "by": "mymemory",
+   "src": "Open-source version of Scion: version control built for coding agents.",
+   "zh": "Scion的开源版本：为编码代理构建的版本控制。"
   },
   "14614344": {
    "by": "llm",
@@ -4424,6 +4509,11 @@
    "by": "llm",
    "src": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok B",
    "zh": "从 Anthropic、OpenAI、Google、xAI 等产品中提取的系统提示词集合"
+  },
+  "995029641": {
+   "by": "mymemory",
+   "src": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federa",
+   "zh": "🌊 原始代理线束。部署智能多玩家群体，协调自主工作流程，构建对话式人工智能系统。具有自适应记忆、自我学习智能、federa"
   }
  },
  "note": "GitHub 仓库简介的中文翻译缓存。键是 repo_id（仓库改名不会失效）。由 python -m star_pulse translate 生成，请提交进 git 以便 CI 复用。",

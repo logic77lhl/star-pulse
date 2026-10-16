@@ -40,6 +40,11 @@
    "src": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
    "zh": "面向专业 AI 编程智能体的安全、经校验技能注册表，可扩展 Antigravity、Claude Code、Cursor 等"
   },
+  "1140229822": {
+   "by": "mymemory",
+   "src": "Cursor plugin specification and official plugins",
+   "zh": "光标插件规范和官方插件"
+  },
   "1140828898": {
    "by": "mymemory",
    "src": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
@@ -94,6 +99,11 @@
    "by": "llm",
    "src": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
    "zh": "开放多智能体互动课堂：一键获得沉浸式多智能体学习体验"
+  },
+  "1185389803": {
+   "by": "mymemory",
+   "src": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+   "zh": "在您的机器上运行的作业搜索。基于Claude Code构建的人工智能求职框架：评估帖子、定制简历、撰写求职信、准备面试。分叉并拥有它。"
   },
   "1195360525": {
    "by": "llm",
@@ -3935,6 +3945,11 @@
    "src": "Real-time browser demo for Talk Like You",
    "zh": "Talk Like You的实时浏览器演示"
   },
+  "1404547122": {
+   "by": "mymemory",
+   "src": "A live groovebox firmware for the M-VAVE FM-1",
+   "zh": "M-VAVE FM-1的实时Groovebox固件"
+  },
   "1404874984": {
    "by": "mymemory",
    "src": "Spec for Agent Memory Repo",
@@ -3975,6 +3990,11 @@
    "src": "艺术动画skill：35种艺术风格、9种解说语法，用代码让画动起来。",
    "zh": "艺术动画技能： 35种艺术风格、 9种解说语法 ，用代码让画动起来。"
   },
+  "1407046885": {
+   "by": "mymemory",
+   "src": "BB",
+   "zh": "含早"
+  },
   "1407504032": {
    "by": "mymemory",
    "src": "让 Codex 通过 USB 操作真实 iPhone：引导安装、App 自动化、实时屏幕与截图回退。",
@@ -3989,6 +4009,11 @@
    "by": "mymemory",
    "src": "Open-source personal finance app with an AI financial advisor: track your net worth, investments, ETFs, cash and debts on your own computer.",
    "zh": "拥有人工智能财务顾问的开源个人理财应用程序：在您自己的计算机上跟踪您的净资产、投资、ETF、现金和债务。"
+  },
+  "1407893845": {
+   "by": "mymemory",
+   "src": "An agent-native operating system, with Hermes Agent as the interface. Independent project, not affiliated with Nous Research.",
+   "zh": "以Hermes Agent为接口的Agent本地操作系统。独立项目，不隶属于Nous Research。"
   },
   "1407997858": {
    "by": "mymemory",
@@ -4049,6 +4074,11 @@
    "by": "mymemory",
    "src": "Metal driver for NVIDIA GeForce RTX cards on macOS 15 Sequoia (Intel / OpenCore). Free, source included.",
    "zh": "MacOS 15 Sequoia （英特尔/OpenCore ）上的NVIDIA GeForce RTX卡的金属驱动程序。免费，包括来源。"
+  },
+  "1408465539": {
+   "by": "mymemory",
+   "src": "Install macOS on your PC from Windows",
+   "zh": "从Windows在PC上安装macOS"
   },
   "1408486424": {
    "by": "mymemory",
@@ -4164,6 +4194,11 @@
    "by": "mymemory",
    "src": "Search your Mac by what's in your files: photos, PDFs, recordings, videos and code. On-device, built on Google DeepMind's EmbeddingGemma 2.",
    "zh": "按文件中的内容搜索Mac ：照片、PDF、录制、视频和代码。基于Google DeepMind的EmbeddingGemma 2构建的设备上。"
+  },
+  "1411021823": {
+   "by": "mymemory",
+   "src": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+   "zh": "使用代理对任何内容进行反向工程，从应用行为到本机二进制文件。"
   },
   "1411026273": {
    "by": "mymemory",
@@ -4300,6 +4335,11 @@
    "src": "A design system for AI applications. Material, physical, tactile, technical.",
    "zh": "人工智能应用的设计系统。材料、物理、触觉、技术。"
   },
+  "1415556604": {
+   "by": "mymemory",
+   "src": "从主题或文章制作完整手绘讲解视频：按部位描线、逐字书写、VoiceStudio 配音、五项内置制作依赖。",
+   "zh": "从主题或文章制作完整手绘讲解视频：按部位描线、逐字书写、 VoiceStudio 配音、五项内置制作依赖。"
+  },
   "1415622546": {
    "by": "mymemory",
    "src": "Native Windows port of Shadow of the Colossus (PS4, CUSA08809) - bring your own game dump. Port nativo para PC.",
@@ -4345,6 +4385,11 @@
    "src": "Scout: the open-source browser agent, by Outcrawl. Mirrored automatically from Outcrawl's own repository.",
    "zh": "Scout ： Outcrawl的开源浏览器代理。从Outcrawl自己的存储库自动镜像。"
   },
+  "1417155242": {
+   "by": "mymemory",
+   "src": "Agent-first reverse engineering for macOS, Windows and Linux: any ACP agent reads, renames and patches binaries, Android apps and GPU kernels next to you.",
+   "zh": "适用于macOS、Windows和Linux的代理优先逆向工程：任何ACP代理都可以读取、重命名和修补您旁边的二进制文件、Android应用和GPU内核。"
+  },
   "1417411861": {
    "by": "mymemory",
    "src": "Self-hosted GPTibo storefront, admin and Go backend — sanitized MIT source",
@@ -4354,6 +4399,11 @@
    "by": "mymemory",
    "src": "We're rebuilding and open-sourcing the world’s software from scratch.",
    "zh": "我们正在从头开始重建和开源全球软件。"
+  },
+  "1418878693": {
+   "by": "mymemory",
+   "src": "Your home as a live 3D model in the Mac menu bar and on iPhone — lights and ACs via Smart Life, Home Assistant, Philips Hue and Apple Home.",
+   "zh": "在Mac菜单栏和iPhone上将您的家作为实时3D模型—通过Smart Life、Home Assistant、Philips Hue和Apple Home提供"
   },
   "1419078245": {
    "by": "mymemory",
@@ -4424,6 +4474,11 @@
    "by": "mymemory",
    "src": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
    "zh": "ArtCraft是艺术家、设计师和电影制作人的特意制作引擎"
+  },
+  "523325759": {
+   "by": "mymemory",
+   "src": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+   "zh": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘/阿里云盘/中国移动云盘/天翼云盘/迅雷云盘/夸克网盘"
   },
   "606244443": {
    "by": "mymemory",

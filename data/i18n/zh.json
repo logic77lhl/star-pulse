@@ -100,6 +100,11 @@
    "src": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
    "zh": "开放多智能体互动课堂：一键获得沉浸式多智能体学习体验"
   },
+  "1183888342": {
+   "by": "mymemory",
+   "src": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+   "zh": "ORCA是与代理团队合作的地方（例如Grok Bot、Claude Code ）。使用您自己的订阅运行任何编码代理。可在桌面、移动和远程运行时使用。"
+  },
   "1185389803": {
    "by": "mymemory",
    "src": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
@@ -164,6 +169,11 @@
    "by": "llm",
    "src": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-",
    "zh": "在阿里规模上验证过的混合架构代码评审工具：确定性流水线 + LLM 智能体，行级精确评论"
+  },
+  "1246148135": {
+   "by": "mymemory",
+   "src": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+   "zh": "针对座席编码CLI的长期记忆解决方案，以及促进不同座席供应商之间切换的解决方案"
   },
   "1261663145": {
    "by": "llm",
@@ -3945,6 +3955,16 @@
    "src": "Real-time browser demo for Talk Like You",
    "zh": "Talk Like You的实时浏览器演示"
   },
+  "1404197626": {
+   "by": "mymemory",
+   "src": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes.",
+   "zh": "开源AI视频代理：将任何编码代理转换为视频代理，并使用编辑器更改其制作的任何内容。"
+  },
+  "1404241593": {
+   "by": "mymemory",
+   "src": "Valve's official ARM64 SteamOS in a lightweight VM on Apple Silicon: libkrun + Venus + MoltenVK, controllers, CoreAudio sound",
+   "zh": "Valve在Apple Silicon上的轻量级虚拟机中的官方ARM64 SteamOS ： libkrun + Venus + MoltenVK ，控制器， "
+  },
   "1404547122": {
    "by": "mymemory",
    "src": "A live groovebox firmware for the M-VAVE FM-1",
@@ -3984,6 +4004,11 @@
    "by": "mymemory",
    "src": "The animation engine for agents: blazingly fast math and 3D videos with Manim's Python API, on a Rust GPU core.",
    "zh": "代理的动画引擎：在Rust GPU核心上使用Manim的Python API提供极快的数学和3D视频。"
+  },
+  "1406482535": {
+   "by": "mymemory",
+   "src": "Renders Mermaid diagrams faster than you'd run from a volcano! 🌋",
+   "zh": "渲染美人鱼图的速度比从火山中跑出来的速度更快！ 🌋"
   },
   "1406706284": {
    "by": "mymemory",
@@ -4370,6 +4395,11 @@
    "src": "Total Commander optimizes desktop software utility configurations with its robust and efficient command-line interface, enabling users to seamlessly...",
    "zh": "Total Commander凭借其强大高效的命令行界面优化桌面软件实用程序配置，使用户能够无缝..."
   },
+  "1416044960": {
+   "by": "mymemory",
+   "src": "Use all your network adapters at once on Windows/Linux/Mac: per-connection load balancing over Wi-Fi, Ethernet and phone/USB tethers (TUN + Wintun)",
+   "zh": "在Windows/Linux/Mac上同时使用所有网络适配器：通过Wi-Fi、以太网和电话/USB连接（ TUN + Wintun ）实现每连接负载平衡"
+  },
   "1416050798": {
    "by": "mymemory",
    "src": "Overdrive releases for jailbroken PS5",
@@ -4385,6 +4415,11 @@
    "src": "Scout: the open-source browser agent, by Outcrawl. Mirrored automatically from Outcrawl's own repository.",
    "zh": "Scout ： Outcrawl的开源浏览器代理。从Outcrawl自己的存储库自动镜像。"
   },
+  "1416887041": {
+   "by": "mymemory",
+   "src": "Fast CPU OCR: line detection, CTC recognition, reading order, markdown",
+   "zh": "快速CPU OCR ：线路检测、CTC识别、读取顺序、降价"
+  },
   "1417155242": {
    "by": "mymemory",
    "src": "Agent-first reverse engineering for macOS, Windows and Linux: any ACP agent reads, renames and patches binaries, Android apps and GPU kernels next to you.",
@@ -4399,6 +4434,11 @@
    "by": "mymemory",
    "src": "We're rebuilding and open-sourcing the world’s software from scratch.",
    "zh": "我们正在从头开始重建和开源全球软件。"
+  },
+  "1418155445": {
+   "by": "mymemory",
+   "src": "Overdrive, a PS5 homebrew game store with 1,800+ games.",
+   "zh": "Overdrive是一家拥有1800多款游戏的PS5自制游戏商店。"
   },
   "1418878693": {
    "by": "mymemory",
@@ -4425,10 +4465,25 @@
    "src": "Turn your regular JavaScript code into a neural net.",
    "zh": "将常规JavaScript代码转换为神经网络。"
   },
+  "1420305104": {
+   "by": "mymemory",
+   "src": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
+   "zh": "编码代理的耳朵：让人工智能听到、审查和发出声音。仅限CPU ，开源。"
+  },
   "1420751050": {
    "by": "mymemory",
    "src": "Open-source version of Scion: version control built for coding agents.",
    "zh": "Scion的开源版本：为编码代理构建的版本控制。"
+  },
+  "1421389432": {
+   "by": "mymemory",
+   "src": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with OpenAI, ChatGPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon and plugin, copilot for 3D, bpy",
+   "zh": "适用于Blender的AI助手和MCP服务器：可视化聊天、场景工具、多代理工作流程。适用于OpenAI、ChatGPT、Claude、Gemini、Ollama"
+  },
+  "1422399929": {
+   "by": "mymemory",
+   "src": "There is no official XScreenSaver GitHub repository.",
+   "zh": "没有官方的XScreenSaver GitHub存储库。"
   },
   "14614344": {
    "by": "llm",
@@ -4559,6 +4614,16 @@
    "by": "llm",
    "src": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
    "zh": "专为数学建模设计的智能体与技能，自动完成建模并生成可直接提交的论文"
+  },
+  "937253475": {
+   "by": "mymemory",
+   "src": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows",
+   "zh": "Claude Code是一个代理编码工具，它位于您的终端中，了解您的代码库，并通过执行日常任务、解释复杂代码和处理git工作流程来帮助您更快地编码"
+  },
+  "975734319": {
+   "by": "mymemory",
+   "src": "The open source coding agent.",
+   "zh": "开源编码代理。"
   },
   "976921297": {
    "by": "llm",

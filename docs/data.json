@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T06:12:33+08:00",
+ "generated_at": "2026-10-19T06:24:12+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -36,10 +36,11 @@
   "2026-10-15",
   "2026-10-16",
   "2026-10-17",
-  "2026-10-18"
+  "2026-10-18",
+  "2026-10-19"
  ],
- "tracked_repos": 3491,
- "latest_date": "2026-10-18",
+ "tracked_repos": 3571,
+ "latest_date": "2026-10-19",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -425,131 +426,142 @@
    "top_delta": 2145,
    "new_repos": 60,
    "prev": "2026-10-17"
+  },
+  {
+   "date": "2026-10-19",
+   "repos": 798,
+   "is_first": false,
+   "total_gain": 42472,
+   "gainers": 566,
+   "top_name": "google-research/harness2",
+   "top_delta": 4628,
+   "new_repos": 81,
+   "prev": "2026-10-18"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 64955,
-   "stars": 65170,
+   "delta": 65548,
+   "stars": 65763,
    "language": "HTML"
   },
   {
    "full_name": "debpalash/VoiceStudio",
-   "delta": 45730,
-   "stars": 73158,
+   "delta": 47730,
+   "stars": 75158,
    "language": "Python"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 33558,
-   "stars": 295029,
+   "delta": 34652,
+   "stars": 296123,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 28603,
-   "stars": 166170,
+   "delta": 29425,
+   "stars": 166992,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 25272,
-   "stars": 57616,
+   "delta": 25587,
+   "stars": 57931,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 24524,
-   "stars": 282405,
+   "delta": 25356,
+   "stars": 283237,
+   "language": "JavaScript"
+  },
+  {
+   "full_name": "tt-a1i/archify",
+   "delta": 24227,
+   "stars": 85387,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 23742,
-   "stars": 47546,
+   "delta": 23781,
+   "stars": 47585,
    "language": "Go"
   },
   {
-   "full_name": "tt-a1i/archify",
-   "delta": 23677,
-   "stars": 84837,
-   "language": "JavaScript"
-  },
-  {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 17590,
-   "stars": 56958,
+   "delta": 18275,
+   "stars": 57643,
    "language": "HTML"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 16220,
-   "stars": 65936,
+   "delta": 16963,
+   "stars": 66679,
    "language": "TypeScript"
   }
  ],
  "cumulative_comparable": 208,
  "daily_top": [
   {
-   "full_name": "debpalash/VoiceStudio",
+   "full_name": "google-research/harness2",
    "language": "Python",
-   "delta": 2145,
-   "stars": 73158
+   "delta": 4628,
+   "stars": 5841
   },
   {
    "full_name": "MadsLorentzen/ai-job-search",
    "language": "Python",
-   "delta": 1827,
-   "stars": 50248
+   "delta": 2649,
+   "stars": 52897
   },
   {
-   "full_name": "anthropics/claude-plugins-official",
+   "full_name": "debpalash/VoiceStudio",
    "language": "Python",
-   "delta": 1177,
-   "stars": 41650
-  },
-  {
-   "full_name": "wheresryan22/anatomy",
-   "language": "JavaScript",
-   "delta": 1150,
-   "stars": 15050
+   "delta": 2000,
+   "stars": 75158
   },
   {
    "full_name": "tangency-labs/solidcraft",
    "language": "Rust",
-   "delta": 1114,
-   "stars": 4196
+   "delta": 1363,
+   "stars": 5559
+  },
+  {
+   "full_name": "anomalyco/opencode",
+   "language": "TypeScript",
+   "delta": 1317,
+   "stars": 216490
+  },
+  {
+   "full_name": "stablyai/orca",
+   "language": "TypeScript",
+   "delta": 1214,
+   "stars": 96532
+  },
+  {
+   "full_name": "obsidianmd/pele",
+   "language": "TypeScript",
+   "delta": 1161,
+   "stars": 1753
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 996,
-   "stars": 295029
+   "delta": 1094,
+   "stars": 296123
   },
   {
-   "full_name": "affaan-m/ECC",
-   "language": "JavaScript",
-   "delta": 975,
-   "stars": 282405
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 968,
-   "stars": 166170
-  },
-  {
-   "full_name": "xerj-org/xerj",
-   "language": "Rust",
-   "delta": 864,
-   "stars": 7739
-  },
-  {
-   "full_name": "K-Dense-AI/scientific-agent-skills",
+   "full_name": "anthropics/claude-plugins-official",
    "language": "Python",
-   "delta": 747,
-   "stars": 52195
+   "delta": 977,
+   "stars": 42627
+  },
+  {
+   "full_name": "wheresryan22/anatomy",
+   "language": "JavaScript",
+   "delta": 900,
+   "stars": 15950
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

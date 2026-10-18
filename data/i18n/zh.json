@@ -35,6 +35,11 @@
    "src": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
    "zh": "智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体"
   },
+  "1137066830": {
+   "by": "mymemory",
+   "src": "Video restoration tool",
+   "zh": "视频还原工具"
+  },
   "1137515077": {
    "by": "llm",
    "src": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
@@ -4235,6 +4240,11 @@
    "src": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
    "zh": "RSI-Anything ：使用世界模型解锁递归自我改进"
   },
+  "1411225475": {
+   "by": "mymemory",
+   "src": "麦当劳省钱点餐助手（麦门精算师）｜麦当劳优惠券组合优化 Skill：拉取麦当劳菜单与全部可用优惠券，算出最省的点餐组合，巨无霸套餐 ¥47 → ¥21.9（省 53%）。McDonalds MCP（麦当劳 MCP）coupon optimizer · McDonalds China MCP Server · Agent Skill for WorkBuddy · 麦当劳程序员创意开发大赛参赛作品",
+   "zh": "中文麦当劳省钱点餐助手（简体麦门精算师） ｜麦当劳优惠券组合优化技能：拉取麦当劳菜单与全部可用优惠券算出最省的点餐组合巨无霸套餐 ￥ 47 → ¥ 21.9 （"
+  },
   "1411491009": {
    "by": "mymemory",
    "src": "A native macOS file browser with fast fuzzy filename search, powered by fsearch.",
@@ -4340,6 +4350,11 @@
    "src": "Introduction to Semiconductor Manufacturing",
    "zh": "半导体制造概论"
   },
+  "1414493071": {
+   "by": "mymemory",
+   "src": "Trace-native CI/CD for AI agents: grade production traces, cluster failures, freeze them into replayable regression tests, and block PRs that regress. Self-hostable.",
+   "zh": "跟踪AI代理的本地CI/CD ：对生产跟踪、集群故障进行分级，将其冻结为可重播的回归测试，并阻止回归的PR。自托管。"
+  },
   "1414685342": {
    "by": "mymemory",
    "src": "Let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No Mac, no developer account, no jailbreak.",
@@ -4354,6 +4369,11 @@
    "by": "mymemory",
    "src": "Open-source iOS compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone and iPad — full touch controls, 60 fps, new endgame",
    "zh": "暗黑破坏神II的开源iOS兼容层：随着术士统治扩展而复活。在iPhone和iPad上本地运行您自己的Switch副本—全触摸控件， 60 fps ，新的结局"
+  },
+  "1415354043": {
+   "by": "mymemory",
+   "src": "Sprix AI at 屿智同行 × 保研岛 — an open-source benchmark for AI agents in Baoyan advising and application planning.",
+   "zh": "Sprix AI at 屿智同行 × 保研岛 —宝岩人工智能代理的开源基准，提供咨询和应用规划。"
   },
   "1415358670": {
    "by": "mymemory",
@@ -4435,6 +4455,11 @@
    "src": "We're rebuilding and open-sourcing the world’s software from scratch.",
    "zh": "我们正在从头开始重建和开源全球软件。"
   },
+  "1418054191": {
+   "by": "mymemory",
+   "src": "Native PC port (Linux/Windows) of inFAMOUS Second Son (PS4, CUSA00223) — in development, playable; runs your own game dump; no game or firmware files included. Motion sensor emulation. | Port nativo p",
+   "zh": "InFAMOUS Second Son （ PS4 ， CUSA00223 ）的原生PC端口（ Linux/Windows ） —正在开发中，可玩；运行自己的游"
+  },
   "1418155445": {
    "by": "mymemory",
    "src": "Overdrive, a PS5 homebrew game store with 1,800+ games.",
@@ -4480,10 +4505,30 @@
    "src": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with OpenAI, ChatGPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon and plugin, copilot for 3D, bpy",
    "zh": "适用于Blender的AI助手和MCP服务器：可视化聊天、场景工具、多代理工作流程。适用于OpenAI、ChatGPT、Claude、Gemini、Ollama"
   },
+  "1421497958": {
+   "by": "mymemory",
+   "src": "Official repository for MOSS-Image, a 5B-parameter base DiT model with high-quality text rendering, layout generation, and efficient fine-tuning.",
+   "zh": "MOSS-Image的官方存储库，这是一个基于5B参数的DiT模型，具有高质量的文本渲染、布局生成和高效的微调。"
+  },
   "1422399929": {
    "by": "mymemory",
    "src": "There is no official XScreenSaver GitHub repository.",
    "zh": "没有官方的XScreenSaver GitHub存储库。"
+  },
+  "1422783076": {
+   "by": "mymemory",
+   "src": "Real-time WebGPU ocean renderer written from scratch, no engine. FFT waves, whitecaps, sun glitter, physically based sunset sky with clouds, free camera. Built with Claude Code (Opus 5.5). Opens from",
+   "zh": "从头开始编写的实时WebGPU海洋渲染器，无引擎。FFT波浪、白帽、闪闪发光的阳光、有云的物理基础的日落天空、免费摄像头。使用Claude Code （ Opu"
+  },
+  "1422883896": {
+   "by": "mymemory",
+   "src": "One 8 KB skill that replaces REA (Reverse Engineer Anything): plain CLI tools, no MCP. Benchmarked: 38% faster, 35% cheaper.",
+   "zh": "一项取代REA （ Reverse Engineer Anything ）的8 KB技能：简单的CLI工具，无MCP。基准：快38% ，便宜35%。"
+  },
+  "1423101235": {
+   "by": "mymemory",
+   "src": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
+   "zh": "您的电视，减去广告。在ADB上播放任何Android电视，并为其提供一个干净的、受tvOS启发的启动器。与Claude Code一起在一个下午打造。"
   },
   "14614344": {
    "by": "llm",
@@ -4535,6 +4580,11 @@
    "src": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
    "zh": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘/阿里云盘/中国移动云盘/天翼云盘/迅雷云盘/夸克网盘"
   },
+  "589831718": {
+   "by": "mymemory",
+   "src": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+   "zh": "最强大、模块化的扩散模型GUI、API和后端，具有图形/节点界面。世界上最快的本地推理引擎。"
+  },
   "606244443": {
    "by": "mymemory",
    "src": "WinUI app for building smaller, customized Windows 11 images.",
@@ -4554,6 +4604,11 @@
    "by": "mymemory",
    "src": "AirLLM 70B inference with single 4GB GPU",
    "zh": "使用单个4GB GPU的AirLLM 70B推理"
+  },
+  "655099582": {
+   "by": "mymemory",
+   "src": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+   "zh": "通过路线图和Colab笔记本进入大型语言模型（ LLM ）的课程。"
   },
   "65600975": {
    "by": "mymemory",

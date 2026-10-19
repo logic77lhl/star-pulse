@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub 星耀榜 · 2026-W42</title>
+<style>
+:root {
+  color-scheme: light dark;
+
+  --bg:          #faf9f6;
+  --surface:     #ffffff;
+  --surface-2:   #f4f2ec;
+  --border:      #e7e3da;
+  --border-2:    #d6d1c4;
+  --text:        #1b1a17;
+  --text-2:      #55524a;
+  --text-3:      #8b877c;
+  --accent:      #534ab7;
+  --accent-2:    #7f77dd;
+  --accent-soft: rgba(83, 74, 183, .09);
+  --up:          #c2410c;
+  --up-soft:     rgba(194, 65, 12, .10);
+  --down:        #15803d;
+  --warn-bg:     #fdf4e4;
+  --warn-border: #eecb96;
+  --warn-text:   #7a4a0b;
+  --grid:        rgba(120, 116, 106, .22);
+  --shadow:      0 1px 2px rgba(28, 26, 22, .04), 0 4px 14px rgba(28, 26, 22, .05);
+
+  --r:      12px;
+  --r-sm:   8px;
+  --r-pill: 999px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 72px;
+  font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.62;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1140px; margin: 0 auto; }
+
+/* ── 页头 ─────────────────────────────────────────── */
+.topbar { padding: 40px 0 26px; }
+h1 { font-size: 29px; line-height: 1.2; font-weight: 650; letter-spacing: -.022em; margin: 0 0 10px; }
+h1 .brand { color: var(--text-3); font-weight: 450; }
+h2 { font-size: 16px; font-weight: 620; letter-spacing: -.008em; margin: 0 0 4px; }
+h3 { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--text-3); font-size: 13px; }
+.meta b { color: var(--text-2); font-weight: 600; font-variant-numeric: tabular-nums; }
+.note { color: var(--text-3); font-size: 13px; margin: 6px 0 14px; max-width: 78ch; }
+.note b { color: var(--text-2); font-weight: 600; }
+
+/* ── 指标卡 ───────────────────────────────────────── */
+.kpis {
+  display: grid; gap: 12px; margin: 4px 0 8px;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+}
+.kpi {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 15px 17px 13px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 2px; min-width: 0;
+}
+.kpi .k { font-size: 12.5px; color: var(--text-3); font-weight: 500; }
+.kpi .v {
+  font-size: 26px; font-weight: 660; letter-spacing: -.028em; line-height: 1.15;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.kpi .v .u { font-size: 13px; font-weight: 500; color: var(--text-3); margin-left: 3px; letter-spacing: 0; }
+.kpi .d { font-size: 12.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.kpi .spark { margin-top: 6px; height: 30px; }
+
+/* ── 面板 ─────────────────────────────────────────── */
+.panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 18px 20px 20px; margin-top: 16px; box-shadow: var(--shadow);
+}
+.panel > h2 { margin-bottom: 3px; }
+.panel > .note:last-child { margin-bottom: 0; }
+.panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.panel-head .more { font-size: 13px; white-space: nowrap; }
+
+/* ── 表格 ─────────────────────────────────────────── */
+/* 宽表格必须有自己的横向滚动容器。少了它，表格会把**整页**撑宽 ——
+   窄屏上标题、说明、页脚全部被裁掉且无法滚动（实测页面 scrollWidth 402→617）。 */
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.data { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+table.data th {
+  text-align: left; padding: 9px 12px; font-size: 12px; font-weight: 600;
+  color: var(--text-3); text-transform: none; letter-spacing: .01em;
+  border-bottom: 1px solid var(--border-2); white-space: nowrap;
+  position: sticky; top: 0; background: var(--surface); z-index: 2;
+}
+table.data td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.data tbody tr:last-child td { border-bottom: 0; }
+table.data tbody tr:hover td { background: var(--surface-2); }
+table.data .num, table.data th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.data td.num { font-weight: 600; }
+table.data.compact td, table.data.compact th { padding: 7px 10px; }
+table.data .rank { color: var(--text-3); font-variant-numeric: tabular-nums; width: 1%; }
+table.data tbody tr:nth-child(-n+3) .rank { color: var(--text); font-weight: 650; }
+/* 简介列：限宽 + 弱化，避免长文本把行高撑得参差不齐 */
+table.data td.desc { color: var(--text-2); font-size: 13px; min-width: 240px; max-width: 460px; }
+
+/* 表格里代表数值强度的内联条：让 +11,059 和 +29 一眼可分 */
+.bar { display: block; height: 4px; border-radius: 2px; background: var(--up-soft); margin-top: 4px; min-width: 2px; }
+.bar > i { display: block; height: 100%; border-radius: 2px; background: var(--up); }
+
+/* ── 语义色 ───────────────────────────────────────── */
+.up { color: var(--up); font-weight: 620; font-variant-numeric: tabular-nums; }
+.down { color: var(--down); font-weight: 620; font-variant-numeric: tabular-nums; }
+.zero { color: var(--text-3); font-variant-numeric: tabular-nums; }
+.muted { color: var(--text-3); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2.5px; }
+a.repo { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent); text-underline-offset: 2.5px; }
+a.repo:hover { text-decoration-color: currentColor; }
+a.repo .ext { font-size: .8em; margin-left: 3px; opacity: .45; }
+
+.tag {
+  display: inline-block; padding: 1px 8px; border-radius: var(--r-pill);
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 12px; font-weight: 550; white-space: nowrap;
+}
+.tag.plain { background: var(--surface-2); color: var(--text-2); }
+
+/* ── 提示条 ───────────────────────────────────────── */
+.banner {
+  background: var(--warn-bg); border: 1px solid var(--warn-border); color: var(--warn-text);
+  padding: 12px 16px; border-radius: var(--r); margin: 16px 0 0; font-size: 13.5px;
+}
+.banner b { font-weight: 650; }
+
+/* ── 图表 ─────────────────────────────────────────── */
+/* overflow-x 是必须的：折线图带 min-width，没有这层滚动容器时它会把**整个页面**
+   撑到 560px 宽，窄屏上标题、说明、表格全部被裁掉且无法滚动。 */
+.chart { margin-top: 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.chart svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 12px; font-size: 12.5px; color: var(--text-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+
+/* 横向条形榜（周报的「增长分布」）：纯 CSS，标签真实文本，窄屏自动换行 */
+.hbars { display: grid; gap: 6px; margin-top: 14px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 22%) 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+.hbar .lbl { color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar .track { background: var(--surface-2); border-radius: 3px; height: 16px; overflow: hidden; }
+.hbar .track > i { display: block; height: 100%; background: var(--accent-2); border-radius: 3px; }
+.hbar .val { color: var(--up); font-weight: 620; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 640px) {
+  .hbar { grid-template-columns: 1fr auto; grid-template-areas: "lbl val" "track track"; gap: 3px 8px; }
+  .hbar .lbl { grid-area: lbl; }
+  .hbar .val { grid-area: val; }
+  .hbar .track { grid-area: track; }
+}
+
+/* CSS 柱状图：完全响应式，标签是真实文本，窄屏也不会被缩放成蚂蚁字。
+   数值提示走原生 title —— 自绘 tooltip 是 nowrap 的绝对定位盒子，首尾柱子
+   的提示框会横向溢出把整页撑宽（实测 +49px），不值得。 */
+.bars { display: flex; align-items: flex-end; gap: 3px; height: 190px; margin-top: 16px; }
+.bars .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+.bars .col > i { display: block; background: var(--accent-2); border-radius: 3px 3px 0 0; min-height: 2px; transition: background .12s; }
+.bars .col:hover > i { background: var(--accent); }
+.bars-x { display: flex; gap: 3px; margin-top: 6px; }
+.bars-x span {
+  flex: 1 1 0; min-width: 0; text-align: center; font-size: 11px; color: var(--text-3);
+  overflow: hidden; white-space: nowrap;
+}
+/* 窄屏下隔一个显示一个日期，避免糊成一团 */
+@media (max-width: 720px) { .bars-x span:nth-child(even) { visibility: hidden; } }
+
+/* ── 周报列表 ─────────────────────────────────────── */
+.reports { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin: 0; padding: 0; list-style: none; }
+.reports a {
+  display: flex; flex-direction: column; gap: 2px; padding: 11px 14px;
+  border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface-2);
+  color: var(--text); text-decoration: none; transition: border-color .12s, background .12s;
+}
+.reports a:hover { border-color: var(--border-2); background: var(--surface); text-decoration: none; }
+.reports .wk { font-weight: 620; font-size: 14px; }
+.reports .rg { font-size: 12.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+
+/* ── 工具栏 ───────────────────────────────────────── */
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 14px; }
+.toolbar input, .toolbar select {
+  font: inherit; font-size: 13.5px; padding: 7px 11px;
+  border: 1px solid var(--border-2); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--text);
+}
+.toolbar input:focus, .toolbar select:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.toolbar input { flex: 1 1 240px; min-width: 160px; }
+.toolbar .count { color: var(--text-3); font-size: 12.5px; margin-left: auto; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* ── 折叠块 ───────────────────────────────────────── */
+details.fold { margin-top: 16px; }
+details.fold > summary {
+  cursor: pointer; list-style: none; user-select: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 14px 18px; font-size: 14.5px; font-weight: 600;
+  display: flex; align-items: center; gap: 9px; box-shadow: var(--shadow);
+}
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::before {
+  content: "▸"; color: var(--text-3); font-weight: 400;
+  display: inline-block; transition: transform .15s ease;
+}
+details.fold[open] > summary::before { transform: rotate(90deg); }
+details.fold > summary:hover { border-color: var(--border-2); }
+details.fold > summary .hint { font-weight: 400; font-size: 12.5px; color: var(--text-3); }
+
+/* ── 周报的「数据质量」清单 ───────────────────────── */
+ul.quality { margin: 4px 0 0; padding-left: 22px; font-size: 13.5px; color: var(--text-2); }
+ul.quality > li { margin: 6px 0; }
+ul.quality ul { margin: 4px 0 0; padding-left: 20px; color: var(--text-3); font-size: 13px; }
+ul.quality ul li { margin: 2px 0; }
+
+footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 12.5px; }
+footer a { color: var(--text-2); }
+
+/* ── 窄屏 ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { padding: 0 14px 56px; }
+  .topbar { padding: 26px 0 20px; }
+  h1 { font-size: 23px; }
+  .kpi .v { font-size: 22px; }
+  .panel { padding: 15px 15px 17px; }
+  .bars { height: 150px; }
+  .note { max-width: none; }
+}
+@media (prefers-color-scheme: dark) {
+:root {
+  --bg:          #131312;
+  --surface:     #1d1d1b;
+  --surface-2:   #26261f;
+  --border:      #33332e;
+  --border-2:    #45453e;
+  --text:        #eceae4;
+  --text-2:      #b3b0a6;
+  --text-3:      #8a877d;
+  --accent:      #aea7ee;
+  --accent-2:    #8f87e0;
+  --accent-soft: rgba(174, 167, 238, .12);
+  --up:          #f2955f;
+  --up-soft:     rgba(242, 149, 95, .14);
+  --down:        #6fd39a;
+  --warn-bg:     #3a2a0c;
+  --warn-border: #7d5a1c;
+  --warn-text:   #f3cd8c;
+  --grid:        rgba(170, 166, 156, .22);
+  --shadow:      0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="topbar"><h1>GitHub 星耀榜 · 2026-W42</h1><p class="note" style="margin:0 0 8px">统计周期 2026-10-12 ~ 2026-10-18（UTC+8）　·　数据截至 2026-10-19　·　快照覆盖 36 天</p><div class="meta"><span><a href="../index.html">← 返回看板</a></span></div></header><section class="panel"><div class="panel-head"><h2>本周新增 Star Top 20</h2></div><div class="scroll-x"><table class="data compact"><thead><tr><th>#</th><th>项目</th><th class="num">本周新增</th><th class="num">总星</th><th>语言</th><th>分类</th><th>一句话</th></tr></thead><tbody>
+<tr><td class="rank">1</td><td><a class="repo" href="https://github.com/morluto/rea" target="_blank" rel="noopener">morluto/rea<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+166,008</span></td><td class="num">268,810</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">使用代理对任何内容进行反向工程，从应用行为到本机二进制文件。</span></td></tr>
+<tr><td class="rank">2</td><td><a class="repo" href="https://github.com/wheresryan22/anatomy" target="_blank" rel="noopener">wheresryan22/anatomy<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+11,855</span></td><td class="num">15,050</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">一种Claude Code技能，可将技术创意转化为真实机器的详细交互式等距图形。它使用可选的WebGL着色器和3D制作SVG ，用于文档、文…</span></td></tr>
+<tr><td class="rank">3</td><td><a class="repo" href="https://github.com/storytold/photocraft" target="_blank" rel="noopener">storytold/photocraft<span class="ext" aria-hidden="true">↗</span></a> <span class="tag plain">⚠ 新库暴星</span></td><td class="num"><span class="up">+10,335</span></td><td class="num">57,783</td><td>Rust</td><td><span class="tag plain">开发工具</span></td><td><span class="muted">纯Rust中Adobe Photoshop的开源洁净室重新实现</span></td></tr>
+<tr><td class="rank">4</td><td><a class="repo" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+8,868</span></td><td class="num">295,029</td><td>Shell</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">面向真正工程师的技能集，直接来自作者的 .agents 目录</span></td></tr>
+<tr><td class="rank">5</td><td><a class="repo" href="https://github.com/storytold/wordcraft" target="_blank" rel="noopener">storytold/wordcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+8,228</span></td><td class="num">14,033</td><td>Rust</td><td><span class="tag plain">其他</span></td><td><span class="muted">在纯Rust中重新实现Microsoft Word的开源洁净室</span></td></tr>
+<tr><td class="rank">6</td><td><a class="repo" href="https://github.com/storytold/artcraft" target="_blank" rel="noopener">storytold/artcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+7,803</span></td><td class="num">25,570</td><td>Rust</td><td><span class="tag plain">其他</span></td><td><span class="muted">ArtCraft是艺术家、设计师和电影制作人的特意制作引擎</span></td></tr>
+<tr><td class="rank">7</td><td><a class="repo" href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener">cathrynlavery/diagram-design<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+6,680</span></td><td class="num">56,958</td><td>HTML</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">面向 Claude Code、Codex 与 Pi 的 38 种编辑级图表版式，自包含 HTML + SVG，无阴影、不用 Mermaid</span></td></tr>
+<tr><td class="rank">8</td><td><a class="repo" href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank" rel="noopener">bilawalsidhu/gods-eye-view<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+6,005</span></td><td class="num">57,616</td><td>JavaScript</td><td><span class="tag plain">可视化</span></td><td><span class="muted">浏览器里的间谍卫星模拟器，但数据是真的：在写实 3D 地球上做开源空间情报</span></td></tr>
+<tr><td class="rank">9</td><td><a class="repo" href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener">eternity4719/HowToLiveBetter<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+5,325</span></td><td class="num">65,170</td><td>HTML</td><td><span class="tag plain">其他</span></td><td><span class="muted">按性价比排序的循证生活指南：健康长寿、急救、理财、法律、婚育、创业等，每条注明成本与证据等级</span></td></tr>
+<tr><td class="rank">10</td><td><a class="repo" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">affaan-m/ECC<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+5,204</span></td><td class="num">282,405</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体</span></td></tr>
+<tr><td class="rank">11</td><td><a class="repo" href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener">DietrichGebert/ponytail<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+5,070</span></td><td class="num">166,170</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码</span></td></tr>
+<tr><td class="rank">12</td><td><a class="repo" href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">heygen-com/hyperframes<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+4,986</span></td><td class="num">65,936</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">写 HTML、渲染视频，为智能体而生</span></td></tr>
+<tr><td class="rank">13</td><td><a class="repo" href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener">mksglu/context-mode<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,911</span></td><td class="num">30,205</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">人工智能编码代理的上下文窗口优化。沙盒工具输出（减少98 ％ ） ，保持会话内存，并通过MCP +钩子在17个平台上强制路由。</span></td></tr>
+<tr><td class="rank">14</td><td><a class="repo" href="https://github.com/tangency-labs/solidcraft" target="_blank" rel="noopener">tangency-labs/solidcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,636</span></td><td class="num">4,196</td><td>Rust</td><td><span class="tag plain">MCP</span></td><td><span class="muted">SolidCraft ：用纯Rust构建的开源参数化3D CAD应用程序。通过MCP实现桌面、网络和自动化。</span></td></tr>
+<tr><td class="rank">15</td><td><a class="repo" href="https://github.com/ARahim3/DigUp" target="_blank" rel="noopener">ARahim3/DigUp<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,599</span></td><td class="num">4,555</td><td>Swift</td><td><span class="tag plain">本地优先</span></td><td><span class="muted">按文件中的内容搜索Mac ：照片、PDF、录制、视频和代码。基于Google DeepMind的EmbeddingGemma 2构建的设备上…</span></td></tr>
+<tr><td class="rank">16</td><td><a class="repo" href="https://github.com/storytold/pdfcraft" target="_blank" rel="noopener">storytold/pdfcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+3,136</span></td><td class="num">12,721</td><td>Rust</td><td><span class="tag plain">开发工具</span></td><td><span class="muted">纯Rust内置的Adobe Acrobat的开源洁净室重新实现</span></td></tr>
+<tr><td class="rank">17</td><td><a class="repo" href="https://github.com/storytold/cadcraft" target="_blank" rel="noopener">storytold/cadcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+2,944</span></td><td class="num">5,573</td><td>Rust</td><td><span class="tag plain">其他</span></td><td><span class="muted">CADCraft ：计算机辅助设计和绘图—纯Rust的开源、无尘室AutoCAD风格应用程序</span></td></tr>
+<tr><td class="rank">18</td><td><a class="repo" href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener">tt-a1i/archify<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+2,796</span></td><td class="num">84,837</td><td>JavaScript</td><td><span class="tag plain">Agent Skill</span></td><td><span class="muted">生成漂亮且可验证的架构、流程、时序与数据流图的 Agent 技能，自包含 HTML 带动效</span></td></tr>
+<tr><td class="rank">19</td><td><a class="repo" href="https://github.com/storytold/gridcraft" target="_blank" rel="noopener">storytold/gridcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+2,707</span></td><td class="num">5,593</td><td>Rust</td><td><span class="tag plain">其他</span></td><td><span class="muted">GridCraft ：纯Rust的开源洁净室电子表格（ Microsoft Excel风格）。由ArtCraft提供。</span></td></tr>
+<tr><td class="rank">20</td><td><a class="repo" href="https://github.com/storytold/filmcraft" target="_blank" rel="noopener">storytold/filmcraft<span class="ext" aria-hidden="true">↗</span></a></td><td class="num"><span class="up">+2,455</span></td><td class="num">12,515</td><td>Rust</td><td><span class="tag plain">媒体生成</span></td><td><span class="muted">纯Rust内置的Adobe Premiere Pro的开源洁净室重新实现。</span></td></tr>
+</tbody></table></div></section><section class="panel"><h2>增长分布</h2><p class="note">Top 12 的本周新增 Star。横向条形，不需要任何脚本。</p><div class="hbars"><div class="hbar" title="morluto/rea　+166,008 stars"><span class="lbl">morluto/rea</span><span class="track"><i style="width:100.00%"></i></span><span class="val">+166,008</span></div><div class="hbar" title="wheresryan22/anatomy　+11,855 stars"><span class="lbl">wheresryan22/anatomy</span><span class="track"><i style="width:7.14%"></i></span><span class="val">+11,855</span></div><div class="hbar" title="storytold/photocraft　+10,335 stars"><span class="lbl">storytold/photocraft</span><span class="track"><i style="width:6.23%"></i></span><span class="val">+10,335</span></div><div class="hbar" title="mattpocock/skills　+8,868 stars"><span class="lbl">mattpocock/skills</span><span class="track"><i style="width:5.34%"></i></span><span class="val">+8,868</span></div><div class="hbar" title="storytold/wordcraft　+8,228 stars"><span class="lbl">storytold/wordcraft</span><span class="track"><i style="width:4.96%"></i></span><span class="val">+8,228</span></div><div class="hbar" title="storytold/artcraft　+7,803 stars"><span class="lbl">storytold/artcraft</span><span class="track"><i style="width:4.70%"></i></span><span class="val">+7,803</span></div><div class="hbar" title="cathrynlavery/diagram-design　+6,680 stars"><span class="lbl">cathrynlavery/diagram-design</span><span class="track"><i style="width:4.02%"></i></span><span class="val">+6,680</span></div><div class="hbar" title="bilawalsidhu/gods-eye-view　+6,005 stars"><span class="lbl">bilawalsidhu/gods-eye-view</span><span class="track"><i style="width:3.62%"></i></span><span class="val">+6,005</span></div><div class="hbar" title="eternity4719/HowToLiveBetter　+5,325 stars"><span class="lbl">eternity4719/HowToLiveBetter</span><span class="track"><i style="width:3.21%"></i></span><span class="val">+5,325</span></div><div class="hbar" title="affaan-m/ECC　+5,204 stars"><span class="lbl">affaan-m/ECC</span><span class="track"><i style="width:3.13%"></i></span><span class="val">+5,204</span></div><div class="hbar" title="DietrichGebert/ponytail　+5,070 stars"><span class="lbl">DietrichGebert/ponytail</span><span class="track"><i style="width:3.05%"></i></span><span class="val">+5,070</span></div><div class="hbar" title="heygen-com/hyperframes　+4,986 stars"><span class="lbl">heygen-com/hyperframes</span><span class="track"><i style="width:3.00%"></i></span><span class="val">+4,986</span></div></div></section><section class="panel"><div class="panel-head"><h2>新项目榜（周期内创建）</h2></div><p class="note">口径不同：衡量新项目起跑速度，不是存量增长。</p><div class="scroll-x"><table class="data compact"><thead><tr><th>#</th><th>项目</th><th class="num">当前星数</th><th>创建日期</th><th>语言</th><th>分类</th></tr></thead><tbody>
+<tr><td class="rank">1</td><td><a class="repo" href="https://github.com/jhaizhou-ops/d2r-mobile" target="_blank" rel="noopener">jhaizhou-ops/d2r-mobile<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">3,825</td><td>2026-10-12</td><td>C</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">2</td><td><a class="repo" href="https://github.com/Arekejoker/qwen21-nsfw-pose-skill" target="_blank" rel="noopener">Arekejoker/qwen21-nsfw-pose-skill<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">2,729</td><td>2026-10-13</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">3</td><td><a class="repo" href="https://github.com/HeyPuter/everything" target="_blank" rel="noopener">HeyPuter/everything<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">2,204</td><td>2026-10-13</td><td>JavaScript</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">4</td><td><a class="repo" href="https://github.com/deeplethe/solid-glass" target="_blank" rel="noopener">deeplethe/solid-glass<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">2,015</td><td>2026-10-12</td><td>TypeScript</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">5</td><td><a class="repo" href="https://github.com/feder-cr/git-ai" target="_blank" rel="noopener">feder-cr/git-ai<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,978</td><td>2026-10-15</td><td>Go</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">6</td><td><a class="repo" href="https://github.com/ahwootech/BRUTAL" target="_blank" rel="noopener">ahwootech/BRUTAL<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,893</td><td>2026-10-14</td><td>C#</td><td><span class="tag plain">开发工具</span></td></tr>
+<tr><td class="rank">7</td><td><a class="repo" href="https://github.com/Gathin23/tv-vibehack" target="_blank" rel="noopener">Gathin23/tv-vibehack<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,767</td><td>2026-10-17</td><td>Java</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">8</td><td><a class="repo" href="https://github.com/chenglou/handwired" target="_blank" rel="noopener">chenglou/handwired<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,725</td><td>2026-10-15</td><td>TypeScript</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">9</td><td><a class="repo" href="https://github.com/Supermedo/uncharted_pc" target="_blank" rel="noopener">Supermedo/uncharted_pc<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,435</td><td>2026-10-15</td><td>C++</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">10</td><td><a class="repo" href="https://github.com/Caho1/open-claude-ui" target="_blank" rel="noopener">Caho1/open-claude-ui<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,206</td><td>2026-10-14</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">11</td><td><a class="repo" href="https://github.com/zhuyansen/new-term-radar" target="_blank" rel="noopener">zhuyansen/new-term-radar<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,108</td><td>2026-10-12</td><td>Python</td><td><span class="tag plain">模型与训练</span></td></tr>
+<tr><td class="rank">12</td><td><a class="repo" href="https://github.com/rohit267/net-merge" target="_blank" rel="noopener">rohit267/net-merge<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,100</td><td>2026-10-12</td><td>Go</td><td><span class="tag plain">数据与基础设施</span></td></tr>
+<tr><td class="rank">13</td><td><a class="repo" href="https://github.com/AjncSystem/ShadowOfTheColossus-PC" target="_blank" rel="noopener">AjncSystem/ShadowOfTheColossus-PC<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">1,067</td><td>2026-10-12</td><td>C++</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">14</td><td><a class="repo" href="https://github.com/outcrawlai/scout" target="_blank" rel="noopener">outcrawlai/scout<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">945</td><td>2026-10-13</td><td>TypeScript</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">15</td><td><a class="repo" href="https://github.com/xscreensaver-official/xscreensaver" target="_blank" rel="noopener">xscreensaver-official/xscreensaver<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">853</td><td>2026-10-16</td><td>—</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">16</td><td><a class="repo" href="https://github.com/CoolkHz/gptibo" target="_blank" rel="noopener">CoolkHz/gptibo<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">827</td><td>2026-10-13</td><td>TypeScript</td><td><span class="tag plain">本地优先</span></td></tr>
+<tr><td class="rank">17</td><td><a class="repo" href="https://github.com/LiCinCan/blender-ai-mcp-addon" target="_blank" rel="noopener">LiCinCan/blender-ai-mcp-addon<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">784</td><td>2026-10-15</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">18</td><td><a class="repo" href="https://github.com/MyLuxy/overdrive" target="_blank" rel="noopener">MyLuxy/overdrive<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">774</td><td>2026-10-14</td><td>C++</td><td><span class="tag plain">其他</span></td></tr>
+<tr><td class="rank">19</td><td><a class="repo" href="https://github.com/Leonxlnx/earshot" target="_blank" rel="noopener">Leonxlnx/earshot<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">766</td><td>2026-10-15</td><td>Python</td><td><span class="tag plain">Agent Skill</span></td></tr>
+<tr><td class="rank">20</td><td><a class="repo" href="https://github.com/Tencent-Hunyuan/Hy-Memory" target="_blank" rel="noopener">Tencent-Hunyuan/Hy-Memory<span class="ext" aria-hidden="true">↗</span></a></td><td class="num">765</td><td>2026-10-15</td><td>Python</td><td><span class="tag plain">其他</span></td></tr>
+</tbody></table></div></section><section class="panel"><div class="panel-head"><h2>分类透视</h2></div><div class="scroll-x"><table class="data compact"><thead><tr><th>分类</th><th class="num">数量</th><th class="num">占比</th></tr></thead><tbody>
+<tr><td>Agent Skill</td><td class="num">9</td><td class="num">45%</td></tr>
+<tr><td>其他</td><td class="num">5</td><td class="num">25%</td></tr>
+<tr><td>开发工具</td><td class="num">2</td><td class="num">10%</td></tr>
+<tr><td>可视化</td><td class="num">1</td><td class="num">5%</td></tr>
+<tr><td>MCP</td><td class="num">1</td><td class="num">5%</td></tr>
+<tr><td>本地优先</td><td class="num">1</td><td class="num">5%</td></tr>
+<tr><td>媒体生成</td><td class="num">1</td><td class="num">5%</td></tr>
+</tbody></table></div></section><section class="panel"><div class="panel-head"><h2>数据质量</h2></div><ul class="quality"><li>快照覆盖 <b>36 天</b>（2026-09-14 ~ 2026-10-19），累计 27,982 条记录</li><li>增量时间跨度上限 <b>10 天</b>，超出即剔除</li><li>因跨度超限被剔除 <b>10</b> 个仓库（快照断档导致，非同口径比较）<ul><li>debpalash/VoiceStudio：跨度 17 天，+22,776（2026-10-01 → 2026-10-18）</li><li>NationalSecurityAgency/ghidra：跨度 28 天，+10,251（2026-09-18 → 2026-10-16）</li><li>obra/superpowers：跨度 13 天，+5,752（2026-10-04 → 2026-10-17）</li><li>vxcontrol/pentagi：跨度 31 天，+5,254（2026-09-14 → 2026-10-15）</li><li>anthropics/claude-plugins-official：跨度 22 天，+4,747（2026-09-26 → 2026-10-18）</li></ul></li><li>疑似刷星标记 <b>1</b> 个（仅标注，未剔除）<ul><li>storytold/photocraft：新库暴星</li></ul></li></ul></section><footer>本报告由 star-pulse 自动生成。所有数值来自每日快照相减，未经任何模型改写；分类与文字描述仅用于可读性，不影响排名。</footer>
+</div>
+</body>
+</html>

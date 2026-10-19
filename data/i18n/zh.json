@@ -1,5 +1,10 @@
 {
  "items": {
+  "1011567289": {
+   "by": "mymemory",
+   "src": "Kronos: A Foundation Model for the Language of Financial Markets",
+   "zh": "Kronos ：金融市场语言的基础模型"
+  },
   "1048065319": {
    "by": "mymemory",
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
@@ -24,6 +29,11 @@
    "by": "mymemory",
    "src": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support",
    "zh": "人工智能将文档或主题转换为真实的原生PowerPoint演示文稿，包括原生形状、转场和动画、数据支持的图表和表格、演讲者笔记中的音频旁白和支持"
+  },
+  "1129940957": {
+   "by": "mymemory",
+   "src": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+   "zh": "在工具输出、日志、文件和RAG块到达LLM之前对其进行压缩。编码代理的令牌减少20% ， JSON的令牌减少60-95% ，答案相同。库、代理、MCP服务器。"
   },
   "1134543109": {
    "by": "mymemory",
@@ -4155,6 +4165,11 @@
    "src": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目",
    "zh": "AI 自主渗透测试系统 | 百度“agent +”攻防挑战赛冠军项目"
   },
+  "1409792187": {
+   "by": "mymemory",
+   "src": "An open-source take on ChatGPT's Intelligent UI: answers stream as interactive UI (maps, photos, charts, drawings and working tools). Built with OpenUI.",
+   "zh": "开源ChatGPT的智能用户界面：答案流作为交互式用户界面（地图、照片、图表、绘图和工作工具）。使用OpenUI构建。"
+  },
   "1409806011": {
    "by": "mymemory",
    "src": "A free office suite that runs in your browser, in the style of Office 2003. Nothing to install, no account, no server: documents are opened, edited and saved on your own computer.",
@@ -4350,6 +4365,11 @@
    "src": "Introduction to Semiconductor Manufacturing",
    "zh": "半导体制造概论"
   },
+  "1414114267": {
+   "by": "mymemory",
+   "src": "麦麦预算餐：基于麦当劳 MCP 的真实核价、预算比较与餐品替换 Skill",
+   "zh": "麦麦预算餐案例名称：基于麦当劳 MCP 的真实核价、预算比较与餐品替换技能"
+  },
   "1414493071": {
    "by": "mymemory",
    "src": "Trace-native CI/CD for AI agents: grade production traces, cluster failures, freeze them into replayable regression tests, and block PRs that regress. Self-hostable.",
@@ -4359,6 +4379,16 @@
    "by": "mymemory",
    "src": "Let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No Mac, no developer account, no jailbreak.",
    "zh": "让人工智能模型使用带有$ 7 ESP32的真实iPhone ： AirPlay眼睛， USB HID指针，任何与OpenAI兼容的视觉模型。没有Mac ，没有开"
+  },
+  "1414718338": {
+   "by": "mymemory",
+   "src": "Lantern Engine: run your own copy of Bloodborne on Windows. A launcher and engine where the game's code runs natively; bring your own game dump.",
+   "zh": "Lantern Engine ：在Windows上运行您自己的Bloodborne副本。游戏代码本机运行的启动器和引擎；带上您自己的游戏转储。"
+  },
+  "1414876018": {
+   "by": "mymemory",
+   "src": "An agent skill that builds award-caliber websites from one line",
+   "zh": "从一行构建获奖级网站的客服代表技能"
   },
   "1415214046": {
    "by": "mymemory",
@@ -4430,6 +4460,11 @@
    "src": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
    "zh": "Qwen-Image 2.1 NSFW/姿势出图技能：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Co"
   },
+  "1416502082": {
+   "by": "mymemory",
+   "src": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+   "zh": "切换在iPhone、iPad和Mac上本机运行的游戏： NSP文件夹变为未签名的IPA （ NSO重写器、Horizon HLE主机、NVN→ Metal ）"
+  },
   "1416766144": {
    "by": "mymemory",
    "src": "Scout: the open-source browser agent, by Outcrawl. Mirrored automatically from Outcrawl's own repository.",
@@ -4454,6 +4489,11 @@
    "by": "mymemory",
    "src": "We're rebuilding and open-sourcing the world’s software from scratch.",
    "zh": "我们正在从头开始重建和开源全球软件。"
+  },
+  "1417843932": {
+   "by": "mymemory",
+   "src": "Bring back the fun. Open-source SVM blockchain development focused on art, NFTs, memes and their communities. Experimental testnet live.",
+   "zh": "带回乐趣。开源SVM区块链开发专注于艺术、NFT、模因及其社区。Experimental testnet live."
   },
   "1418054191": {
    "by": "mymemory",
@@ -4510,6 +4550,11 @@
    "src": "Official repository for MOSS-Image, a 5B-parameter base DiT model with high-quality text rendering, layout generation, and efficient fine-tuning.",
    "zh": "MOSS-Image的官方存储库，这是一个基于5B参数的DiT模型，具有高质量的文本渲染、布局生成和高效的微调。"
   },
+  "1422053844": {
+   "by": "mymemory",
+   "src": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what",
+   "zh": "合作任何事情：将您的AI智能体指向任何单人游戏，并与朋友一起玩（在线和/或分屏！ ）。MCP服务器和剧本，让您能够逆向工程、修复、测试、发货和分享"
+  },
   "1422399929": {
    "by": "mymemory",
    "src": "There is no official XScreenSaver GitHub repository.",
@@ -4529,6 +4574,16 @@
    "by": "mymemory",
    "src": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
    "zh": "您的电视，减去广告。在ADB上播放任何Android电视，并为其提供一个干净的、受tvOS启发的启动器。与Claude Code一起在一个下午打造。"
+  },
+  "1424183124": {
+   "by": "mymemory",
+   "src": "中小学数学知识图谱 + 前置诊断：课标对齐、人教版一–九年级、531 知识点、2271 题、自适应诊断",
+   "zh": "中小学数学知识图谱 + 前置诊断：课标对齐、人教版一 –九年级、 531 知识点、2271 题、自适应诊断"
+  },
+  "1424340323": {
+   "by": "mymemory",
+   "src": "让你的agent一键直出商业级产品宣传片：会作曲，能指着画面改。Commercial-grade launch films by your coding agent — point at the frame to change it.",
+   "zh": "让你的代理能指着画面改。商一键直出商业级产品宣传片：会作曲 ，由您的编码代理商进行商业级发布电影—指向框架以进行更改。"
   },
   "14614344": {
    "by": "llm",

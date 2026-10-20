@@ -15,6 +15,11 @@
    "src": "An agentic skills framework & software development methodology that works.",
    "zh": "有效的代理技能框架和软件开发方法。"
   },
+  "1075372545": {
+   "by": "mymemory",
+   "src": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, a",
+   "zh": "一个完整的人工智能机构，触手可及--从前端向导到Reddit社区忍者，从奇思妙想的注入者到现实检查者。每位客服代表都是具有个性、流程、"
+  },
   "1079456184": {
    "by": "mymemory",
    "src": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biolog",
@@ -130,6 +135,11 @@
    "src": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video produc",
    "zh": "首个开源智能体视频制作系统：12 条生产流水线、100+ 工具、700+ 技能与制作知识文件"
   },
+  "1200597263": {
+   "by": "mymemory",
+   "src": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, e",
+   "zh": "将任何代码库及其文档、SQL架构、配置和PDF转换为可查询的知识图。Claude Code、Cursor、Codex和Gemini CLI的A/graphify"
+  },
   "1201173969": {
    "by": "mymemory",
    "src": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
@@ -199,6 +209,11 @@
    "by": "llm",
    "src": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
    "zh": "让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码"
+  },
+  "1273427276": {
+   "by": "mymemory",
+   "src": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+   "zh": "用于多阶段安全审核的编码代理技能，具有经过独立验证的机器可读结果"
   },
   "1277471539": {
    "by": "llm",
@@ -4150,6 +4165,11 @@
    "src": "Definitive Bloodborne PC Experience",
    "zh": "终极血源性PC体验"
   },
+  "1408948048": {
+   "by": "mymemory",
+   "src": "A CLI tool for translation algorithms based text humanization in order to bypass such AI-detectors as GPTZero, Turnitin and etc.",
+   "zh": "一种用于基于文本人性化的翻译算法的CLI工具，以绕过GPTZero、Turnitin等人工智能检测器。"
+  },
   "1409013846": {
    "by": "mymemory",
    "src": "A team of long-lived bots for DeepSeek Harness, with main bots, bot-to-bot messages and group chats.",
@@ -4330,6 +4350,11 @@
    "src": "Open source canva alternative",
    "zh": "开源Canva替代方案"
   },
+  "1412939352": {
+   "by": "mymemory",
+   "src": "A Civilization-style strategy game about governing Israel from 15 May 1948. Real ministers, real map, every fact sourced. Unity + deterministic C# sim.",
+   "zh": "关于1948年5月15日统治以色列的文明风格战略游戏。真正的牧师，真实的地图，每一个事实的来源。Unity +确定性C #模拟"
+  },
   "1412969368": {
    "by": "mymemory",
    "src": "A native Mach-O port for iOS/macOS of GTA V, with multiplayer",
@@ -4350,6 +4375,16 @@
    "src": "Self-hosted newsletters on Amazon SES. About $0.10 per 1,000 emails.",
    "zh": "Amazon SES上的自托管通讯。每1000封电子邮件约$ 0.10。"
   },
+  "1413190537": {
+   "by": "mymemory",
+   "src": "麦麦省钱助手 —— 基于麦当劳 MCP 的点餐成本优化 Skill。算出当前门店最省钱的点餐方案，并主动提示凑单陷阱。",
+   "zh": "麦麦省钱助手 —— 基于麦当劳 MCP的点餐成本优化技能。算出当前门店最省钱的点餐方案，并主动提示凑单陷阱。"
+  },
+  "1413456258": {
+   "by": "mymemory",
+   "src": "🍔 麦门认证机 — 上传任意图片，AI 鉴定麦门身份：认证梗图卡 + 真实营养数据套餐推荐 + 一键领券。2026 麦当劳程序员创意开发大赛参赛作品",
+   "zh": "🍔 麦门认证机 — 上传任意图片， AI 鉴定麦门身份：认证梗图卡 + 真实营养数据套餐推荐 + 一键领券。2026 麦当劳程序员创意开发大赛参赛作品"
+  },
   "1413549354": {
    "by": "mymemory",
    "src": "A fast, free and open-source GIS in pure Rust.",
@@ -4369,6 +4404,11 @@
    "by": "mymemory",
    "src": "麦麦预算餐：基于麦当劳 MCP 的真实核价、预算比较与餐品替换 Skill",
    "zh": "麦麦预算餐案例名称：基于麦当劳 MCP 的真实核价、预算比较与餐品替换技能"
+  },
+  "1414288226": {
+   "by": "mymemory",
+   "src": "Open-source Xbox-inspired desktop launcher for Xodus on Linux",
+   "zh": "适用于Linux上的Xodus的开源Xbox风格桌面启动器"
   },
   "1414493071": {
    "by": "mymemory",
@@ -4409,6 +4449,11 @@
    "by": "mymemory",
    "src": "A design system for AI applications. Material, physical, tactile, technical.",
    "zh": "人工智能应用的设计系统。材料、物理、触觉、技术。"
+  },
+  "1415404215": {
+   "by": "mymemory",
+   "src": "flybrainlabs authority nodes, complete simulation replay, archives, and service APIs.",
+   "zh": "flybrainlabs权限节点、完整的模拟重播、存档和服务API。"
   },
   "1415556604": {
    "by": "mymemory",
@@ -4515,6 +4560,11 @@
    "src": "基于 REA 深度拆解并高保真还原 Claude 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000+ 行逆向分析手册。",
    "zh": "基于 REA 深度拆解并高保真还原 CLAUDE 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000 + 行逆向"
   },
+  "1419719507": {
+   "by": "mymemory",
+   "src": "iOS 16 userland + XNU on Redmi Note 10 Pro (sweet, SM7150)",
+   "zh": "iOS 16 userland + XNU红米Note 10 Pro （ SWEET ， SM7150 ）"
+  },
   "1419746236": {
    "by": "mymemory",
    "src": "A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, with the low-level libraries around them. The foundation under Kitten Space Agency",
@@ -4535,10 +4585,20 @@
    "src": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
    "zh": "编码代理的耳朵：让人工智能听到、审查和发出声音。仅限CPU ，开源。"
   },
+  "1420531062": {
+   "by": "mymemory",
+   "src": "Repository for Timestral, the time-series foundation model by Mistral AI",
+   "zh": "Mistral AI的时间序列基础模型Timestral的存储库"
+  },
   "1420751050": {
    "by": "mymemory",
    "src": "Open-source version of Scion: version control built for coding agents.",
    "zh": "Scion的开源版本：为编码代理构建的版本控制。"
+  },
+  "1421172752": {
+   "by": "mymemory",
+   "src": "麦当劳 MCP 聚会/团餐组织助手 — 基于 Model Context Protocol 的派对预订与团餐规划 CLI/Skill",
+   "zh": "麦当劳 MCP聚会/团餐组织助手—基于模型上下文协议的派对预订与团餐规划CLI/技能"
   },
   "1421389432": {
    "by": "mymemory",
@@ -4550,10 +4610,20 @@
    "src": "Official repository for MOSS-Image, a 5B-parameter base DiT model with high-quality text rendering, layout generation, and efficient fine-tuning.",
    "zh": "MOSS-Image的官方存储库，这是一个基于5B参数的DiT模型，具有高质量的文本渲染、布局生成和高效的微调。"
   },
+  "1421825221": {
+   "by": "mymemory",
+   "src": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
+   "zh": "DeepInfer ： DeepSeek模型的高性能、大规模推理框架"
+  },
   "1422053844": {
    "by": "mymemory",
    "src": "Co-op Anything: point your AI agent at any single-player game and play it with friends (online and/or splitscreen!). MCP server and playbook to let you reverse engineer, fix, test, ship and share what",
    "zh": "合作任何事情：将您的AI智能体指向任何单人游戏，并与朋友一起玩（在线和/或分屏！ ）。MCP服务器和剧本，让您能够逆向工程、修复、测试、发货和分享"
+  },
+  "1422344223": {
+   "by": "mymemory",
+   "src": "Reason Network: your team's coding agents, talking to each other. The engine behind `reason network`.",
+   "zh": "原因网络：您团队的编码代理，彼此交谈。“理性网络”背后的引擎。"
   },
   "1422399929": {
    "by": "mymemory",
@@ -4575,6 +4645,11 @@
    "src": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
    "zh": "您的电视，减去广告。在ADB上播放任何Android电视，并为其提供一个干净的、受tvOS启发的启动器。与Claude Code一起在一个下午打造。"
   },
+  "1424070461": {
+   "by": "mymemory",
+   "src": "Make an old Android TV fast again with Claude Code or Codex: a tiny ad-free home screen plus the prompt to clean it up",
+   "zh": "使用Claude Code或Codex让旧的Android电视再次快速运行：一个无广告的小主屏幕，再加上清理提示"
+  },
   "1424183124": {
    "by": "mymemory",
    "src": "中小学数学知识图谱 + 前置诊断：课标对齐、人教版一–九年级、531 知识点、2271 题、自适应诊断",
@@ -4584,6 +4659,16 @@
    "by": "mymemory",
    "src": "让你的agent一键直出商业级产品宣传片：会作曲，能指着画面改。Commercial-grade launch films by your coding agent — point at the frame to change it.",
    "zh": "让你的代理能指着画面改。商一键直出商业级产品宣传片：会作曲 ，由您的编码代理商进行商业级发布电影—指向框架以进行更改。"
+  },
+  "1426080579": {
+   "by": "mymemory",
+   "src": "A fast, ad-free home screen for Google TV. Open source, built with Claude Code. One button to undo.",
+   "zh": "Google TV的快速无广告主屏幕。开源，使用Claude Code构建。只需一个按钮即可撤消。"
+  },
+  "1426240325": {
+   "by": "mymemory",
+   "src": "Prompts for you to use REA (Reverse Engineer Anything), get the most out of it, and clone or break down any program",
+   "zh": "提示您使用REA （ Reverse Engineer Anything ） ，充分利用它，并克隆或分解任何程序"
   },
   "14614344": {
    "by": "llm",
@@ -4639,6 +4724,11 @@
    "by": "mymemory",
    "src": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
    "zh": "最强大、模块化的扩散模型GUI、API和后端，具有图形/节点界面。世界上最快的本地推理引擎。"
+  },
+  "599547518": {
+   "by": "mymemory",
+   "src": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+   "zh": "LLM的高吞吐量和内存效率推断和服务引擎"
   },
   "606244443": {
    "by": "mymemory",

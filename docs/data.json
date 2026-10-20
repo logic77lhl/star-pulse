@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20T07:33:32+08:00",
+ "generated_at": "2026-10-21T07:08:28+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -38,10 +38,11 @@
   "2026-10-17",
   "2026-10-18",
   "2026-10-19",
-  "2026-10-20"
+  "2026-10-20",
+  "2026-10-21"
  ],
- "tracked_repos": 3642,
- "latest_date": "2026-10-20",
+ "tracked_repos": 3709,
+ "latest_date": "2026-10-21",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -449,131 +450,142 @@
    "top_delta": 5821,
    "new_repos": 73,
    "prev": "2026-10-19"
+  },
+  {
+   "date": "2026-10-21",
+   "repos": 798,
+   "is_first": false,
+   "total_gain": 49597,
+   "gainers": 569,
+   "top_name": "Gathin23/cleanyourtv",
+   "top_delta": 6397,
+   "new_repos": 71,
+   "prev": "2026-10-20"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 66152,
-   "stars": 66367,
+   "delta": 66844,
+   "stars": 67059,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 35984,
-   "stars": 297455,
+   "delta": 37138,
+   "stars": 298609,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 30513,
-   "stars": 168080,
+   "delta": 31993,
+   "stars": 169560,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 26230,
-   "stars": 284111,
+   "delta": 26994,
+   "stars": 284875,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 25926,
-   "stars": 58270,
+   "delta": 26174,
+   "stars": 58518,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 24681,
-   "stars": 85841,
+   "delta": 25248,
+   "stars": 86408,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 23854,
-   "stars": 47658,
+   "delta": 23922,
+   "stars": 47726,
    "language": "Go"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 19012,
-   "stars": 58380,
+   "delta": 19597,
+   "stars": 58965,
    "language": "HTML"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 17924,
-   "stars": 67640,
+   "delta": 18739,
+   "stars": 68455,
    "language": "TypeScript"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 13241,
-   "stars": 57847,
+   "delta": 13405,
+   "stars": 58011,
    "language": "Python"
   }
  ],
- "cumulative_comparable": 207,
+ "cumulative_comparable": 206,
  "daily_top": [
   {
-   "full_name": "google-research/harness2",
-   "language": "Python",
-   "delta": 5821,
-   "stars": 11662
+   "full_name": "Gathin23/cleanyourtv",
+   "language": "Java",
+   "delta": 6397,
+   "stars": 11502
   },
   {
    "full_name": "MadsLorentzen/ai-job-search",
    "language": "Python",
-   "delta": 4211,
-   "stars": 57108
-  },
-  {
-   "full_name": "Gathin23/cleanyourtv",
-   "language": "Java",
-   "delta": 3338,
-   "stars": 5105
-  },
-  {
-   "full_name": "stablyai/orca",
-   "language": "TypeScript",
-   "delta": 1682,
-   "stars": 98214
-  },
-  {
-   "full_name": "tangency-labs/solidcraft",
-   "language": "Rust",
-   "delta": 1682,
-   "stars": 7241
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 1332,
-   "stars": 297455
-  },
-  {
-   "full_name": "anomalyco/opencode",
-   "language": "TypeScript",
-   "delta": 1269,
-   "stars": 217759
-  },
-  {
-   "full_name": "Comfy-Org/ComfyUI",
-   "language": "Python",
-   "delta": 1114,
-   "stars": 139677
+   "delta": 3311,
+   "stars": 60419
   },
   {
    "full_name": "DietrichGebert/ponytail",
    "language": "JavaScript",
-   "delta": 1088,
-   "stars": 168080
+   "delta": 1480,
+   "stars": 169560
+  },
+  {
+   "full_name": "stablyai/orca",
+   "language": "TypeScript",
+   "delta": 1460,
+   "stars": 99674
+  },
+  {
+   "full_name": "simbasjungles/free-my-tv",
+   "language": "Java",
+   "delta": 1453,
+   "stars": 1739
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 1154,
+   "stars": 298609
+  },
+  {
+   "full_name": "anomalyco/opencode",
+   "language": "TypeScript",
+   "delta": 1105,
+   "stars": 218864
   },
   {
    "full_name": "ly05010419/MacNativeGames",
    "language": "C",
-   "delta": 1000,
-   "stars": 1670
+   "delta": 1101,
+   "stars": 2771
+  },
+  {
+   "full_name": "deepseek-ai/deepseek-recipe",
+   "language": "Rust",
+   "delta": 1056,
+   "stars": 1488
+  },
+  {
+   "full_name": "Comfy-Org/ComfyUI",
+   "language": "Python",
+   "delta": 1039,
+   "stars": 140716
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-21T07:08:28+08:00",
+ "generated_at": "2026-10-22T07:12:05+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -39,10 +39,11 @@
   "2026-10-18",
   "2026-10-19",
   "2026-10-20",
-  "2026-10-21"
+  "2026-10-21",
+  "2026-10-22"
  ],
- "tracked_repos": 3709,
- "latest_date": "2026-10-21",
+ "tracked_repos": 3792,
+ "latest_date": "2026-10-22",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -376,21 +377,21 @@
   },
   {
    "date": "2026-10-14",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
    "total_gain": 93215,
    "gainers": 584,
    "top_name": "morluto/rea",
    "top_delta": 45453,
-   "new_repos": 81,
+   "new_repos": 80,
    "prev": "2026-10-13"
   },
   {
    "date": "2026-10-15",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 75922,
-   "gainers": 591,
+   "total_gain": 75884,
+   "gainers": 590,
    "top_name": "morluto/rea",
    "top_delta": 34323,
    "new_repos": 71,
@@ -398,10 +399,10 @@
   },
   {
    "date": "2026-10-16",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 67315,
-   "gainers": 589,
+   "total_gain": 67301,
+   "gainers": 588,
    "top_name": "morluto/rea",
    "top_delta": 28446,
    "new_repos": 64,
@@ -409,10 +410,10 @@
   },
   {
    "date": "2026-10-17",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 36001,
-   "gainers": 576,
+   "total_gain": 35980,
+   "gainers": 575,
    "top_name": "debpalash/VoiceStudio",
    "top_delta": 2048,
    "new_repos": 80,
@@ -420,10 +421,10 @@
   },
   {
    "date": "2026-10-18",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 34792,
-   "gainers": 591,
+   "total_gain": 34783,
+   "gainers": 590,
    "top_name": "debpalash/VoiceStudio",
    "top_delta": 2145,
    "new_repos": 60,
@@ -431,10 +432,10 @@
   },
   {
    "date": "2026-10-19",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 42472,
-   "gainers": 566,
+   "total_gain": 42470,
+   "gainers": 565,
    "top_name": "google-research/harness2",
    "top_delta": 4628,
    "new_repos": 81,
@@ -442,10 +443,10 @@
   },
   {
    "date": "2026-10-20",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 54735,
-   "gainers": 591,
+   "total_gain": 54733,
+   "gainers": 590,
    "top_name": "google-research/harness2",
    "top_delta": 5821,
    "new_repos": 73,
@@ -453,7 +454,7 @@
   },
   {
    "date": "2026-10-21",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 49597,
    "gainers": 569,
@@ -461,67 +462,78 @@
    "top_delta": 6397,
    "new_repos": 71,
    "prev": "2026-10-20"
+  },
+  {
+   "date": "2026-10-22",
+   "repos": 797,
+   "is_first": false,
+   "total_gain": 52153,
+   "gainers": 561,
+   "top_name": "Gathin23/cleanyourtv",
+   "top_delta": 7396,
+   "new_repos": 89,
+   "prev": "2026-10-21"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 66844,
-   "stars": 67059,
+   "delta": 67374,
+   "stars": 67589,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 37138,
-   "stars": 298609,
+   "delta": 38353,
+   "stars": 299824,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 31993,
-   "stars": 169560,
+   "delta": 33961,
+   "stars": 171528,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 26994,
-   "stars": 284875,
+   "delta": 27804,
+   "stars": 285685,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 26174,
-   "stars": 58518,
+   "delta": 26464,
+   "stars": 58808,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 25248,
-   "stars": 86408,
+   "delta": 25888,
+   "stars": 87048,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 23922,
-   "stars": 47726,
+   "delta": 24131,
+   "stars": 47935,
    "language": "Go"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 19597,
-   "stars": 58965,
+   "delta": 20136,
+   "stars": 59504,
    "language": "HTML"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 18739,
-   "stars": 68455,
+   "delta": 19468,
+   "stars": 69184,
    "language": "TypeScript"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 13405,
-   "stars": 58011,
+   "delta": 13554,
+   "stars": 58160,
    "language": "Python"
   }
  ],
@@ -530,62 +542,62 @@
   {
    "full_name": "Gathin23/cleanyourtv",
    "language": "Java",
-   "delta": 6397,
-   "stars": 11502
+   "delta": 7396,
+   "stars": 18898
   },
   {
-   "full_name": "MadsLorentzen/ai-job-search",
+   "full_name": "deepseek-ai/DeepInfer",
    "language": "Python",
-   "delta": 3311,
-   "stars": 60419
+   "delta": 5802,
+   "stars": 17753
+  },
+  {
+   "full_name": "cloudflare/security-audit-skill",
+   "language": "JavaScript",
+   "delta": 2235,
+   "stars": 36290
   },
   {
    "full_name": "DietrichGebert/ponytail",
    "language": "JavaScript",
-   "delta": 1480,
-   "stars": 169560
+   "delta": 1968,
+   "stars": 171528
   },
   {
    "full_name": "stablyai/orca",
    "language": "TypeScript",
-   "delta": 1460,
-   "stars": 99674
+   "delta": 1504,
+   "stars": 101178
   },
   {
-   "full_name": "simbasjungles/free-my-tv",
-   "language": "Java",
-   "delta": 1453,
-   "stars": 1739
+   "full_name": "pengchujin/aerial-tv",
+   "language": "Kotlin",
+   "delta": 1491,
+   "stars": 2026
+  },
+  {
+   "full_name": "Graphify-Labs/graphify",
+   "language": "Python",
+   "delta": 1396,
+   "stars": 131569
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 1154,
-   "stars": 298609
-  },
-  {
-   "full_name": "anomalyco/opencode",
-   "language": "TypeScript",
-   "delta": 1105,
-   "stars": 218864
+   "delta": 1215,
+   "stars": 299824
   },
   {
    "full_name": "ly05010419/MacNativeGames",
    "language": "C",
-   "delta": 1101,
-   "stars": 2771
-  },
-  {
-   "full_name": "deepseek-ai/deepseek-recipe",
-   "language": "Rust",
    "delta": 1056,
-   "stars": 1488
+   "stars": 3827
   },
   {
-   "full_name": "Comfy-Org/ComfyUI",
-   "language": "Python",
-   "delta": 1039,
-   "stars": 140716
+   "full_name": "wheresryan22/anatomy",
+   "language": "JavaScript",
+   "delta": 954,
+   "stars": 18502
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

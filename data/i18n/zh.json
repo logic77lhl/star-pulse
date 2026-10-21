@@ -205,6 +205,11 @@
    "src": "Turn your coding agents into research agents",
    "zh": "把你的编程智能体变成科研智能体"
   },
+  "1261698251": {
+   "by": "mymemory",
+   "src": "freehire — the open-source search engine for job seekers",
+   "zh": "freehire —面向求职者的开源搜索引擎"
+  },
   "1266797999": {
    "by": "llm",
    "src": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
@@ -4350,6 +4355,11 @@
    "src": "Open source canva alternative",
    "zh": "开源Canva替代方案"
   },
+  "1412860333": {
+   "by": "mymemory",
+   "src": "TacClaw-Infinity: research code and dataset resources for a large-scale Vision-Tactile-Language-Action dataset.",
+   "zh": "TacClaw-Infinity ：用于大规模视觉-触觉-语言-动作数据集的研究代码和数据集资源。"
+  },
   "1412939352": {
    "by": "mymemory",
    "src": "A Civilization-style strategy game about governing Israel from 15 May 1948. Real ministers, real map, every fact sourced. Unity + deterministic C# sim.",
@@ -4395,10 +4405,20 @@
    "src": "Seven AI advisors (Bezos, Paul Graham, Hormozi, Gary Vee, Dan Martell, Gino Wickman, Buffett) debate your business decision in Claude Code, live around a table.",
    "zh": "七位人工智能顾问（贝索斯、保罗·格雷厄姆、霍尔莫齐、加里·维、丹·马爹利、吉诺·威克曼、巴菲特）围坐在一张桌子旁，讨论你在《克劳德准则》中的商业决策。"
   },
+  "1413837358": {
+   "by": "mymemory",
+   "src": "忙碌了一天，回到家，你打开麦当劳，却突然纠结：今天吃了什么？这周点了几次？这个月花了多少钱？热量会不会超标？  于是有了 **McLife Desk 麦门人生工作台**。它记录每一次点麦：日期、餐品、金额与热量，生成专属点餐日历；按当月消费次数和金额解锁麦门等级，还能通过趣味测试发现自己的麦门消费人格。  它不劝你戒掉麦当劳，只陪你在忙碌、独处和奖励自己的时刻，看见自己的选择，管理预算与生活节奏。",
+   "zh": "忙碌了一天回到家McLife你打开麦当劳 Desk  于是有了 * 麦门人生工作台*却突然纠结今天吃了什么这周点了几次这个月花了多少钱热量会不会超标。它记录每一"
+  },
   "1413838499": {
    "by": "mymemory",
    "src": "Introduction to Semiconductor Manufacturing",
    "zh": "半导体制造概论"
+  },
+  "1413882558": {
+   "by": "mymemory",
+   "src": "NCM: Next Concept Modeling",
+   "zh": "NCM ：下一个概念建模"
   },
   "1414114267": {
    "by": "mymemory",
@@ -4449,6 +4469,11 @@
    "by": "mymemory",
    "src": "A design system for AI applications. Material, physical, tactile, technical.",
    "zh": "人工智能应用的设计系统。材料、物理、触觉、技术。"
+  },
+  "1415387508": {
+   "by": "mymemory",
+   "src": "麦麦碳账本 · 基于麦当劳 MCP 的个人餐饮碳足迹估算与减排模拟器 | Personal dining carbon footprint estimator powered by McDonald's MCP",
+   "zh": "麦麦碳账本 · 基于麦当劳 MCP 的个人餐饮碳足迹估算与减排模拟器 |由麦当劳MCP提供支持的个人用餐碳足迹估算器"
   },
   "1415404215": {
    "by": "mymemory",
@@ -4505,6 +4530,11 @@
    "src": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
    "zh": "Qwen-Image 2.1 NSFW/姿势出图技能：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Co"
   },
+  "1416497190": {
+   "by": "mymemory",
+   "src": "DeepSeek Harness 破甲 (mirror of YuJunZhiXue/dsh-purge) — 上游即将删库，此为本仓库全量镜像：含全部分支/73 个 tag/完整提交历史。原作者署名与二开要求见 README 署名章节。",
+   "zh": "DeepSeek线束破甲（玉君智学镜像/dsh-purge ） — 上游即将删库，此为本仓库全量镜像 ：含全部分支/73 个 TAG/完整提交历史。原作者署名与"
+  },
   "1416502082": {
    "by": "mymemory",
    "src": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
@@ -4540,6 +4570,11 @@
    "src": "Bring back the fun. Open-source SVM blockchain development focused on art, NFTs, memes and their communities. Experimental testnet live.",
    "zh": "带回乐趣。开源SVM区块链开发专注于艺术、NFT、模因及其社区。Experimental testnet live."
   },
+  "1417945786": {
+   "by": "mymemory",
+   "src": "AI 短剧 · 漫剧 Skill（技能包）精选：剧本、改编、分镜、Seedance / 可灵 / MiniMax 视频提示词，千问、豆包、龙虾 OpenClaw、WorkBuddy、Claude Code、Codex 等智能体可用 | Curated agent skills for AI short drama, micro drama / microdrama, vertical drama",
+   "zh": "AI 短剧 · 漫剧 Skill技能包精选 ： Seedance/剧本、改编、分镜、 可灵/MiniMax 视频提示词， OpenClaw WorkBuddy千"
+  },
   "1418054191": {
    "by": "mymemory",
    "src": "Native PC port (Linux/Windows) of inFAMOUS Second Son (PS4, CUSA00223) — in development, playable; runs your own game dump; no game or firmware files included. Motion sensor emulation. | Port nativo p",
@@ -4549,6 +4584,16 @@
    "by": "mymemory",
    "src": "Overdrive, a PS5 homebrew game store with 1,800+ games.",
    "zh": "Overdrive是一家拥有1800多款游戏的PS5自制游戏商店。"
+  },
+  "1418204947": {
+   "by": "mymemory",
+   "src": "GEO 医生：一句话装进 AI 助手，查清豆包、DeepSeek、ChatGPT、Claude 为什么不推荐你，改资料、写内容、再复查。开源中英双语 GEO（生成式引擎优化）skill。",
+   "zh": "GEO 医生：一句话装进 AI 助手，查清豆包、 DeepSeek、 ChatGPT、 Claude 为什么不推荐你，改资料、写内容、再复查。开源中英双语 GE"
+  },
+  "1418421680": {
+   "by": "mymemory",
+   "src": "Fail-Closed 账号环境管理器:11项环境指纹审计(Block-on-Fail)、手写STUN协议栈的WebRTC泄漏探针、Kill-Switch断网急停、多账号快照隔离、配置漂移自愈 —— 让真实IP在物理上无法泄漏",
+   "zh": "失效关闭账号环境管理器： 11项环境指纹审计 (Block-on-Fail)、手写 STUN协议栈的 WebRTC泄漏探针、 Kill-Switch断网急停、多"
   },
   "1418878693": {
    "by": "mymemory",
@@ -4569,6 +4614,11 @@
    "by": "mymemory",
    "src": "A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, with the low-level libraries around them. The foundation under Kitten Space Agency",
    "zh": "用于制作游戏或您自己的游戏引擎的免费开源C #框架。直接访问原生API和Vulkan ，周围有低级库。小猫航天局（ Kitten Space Agency ）旗"
+  },
+  "1419948432": {
+   "by": "mymemory",
+   "src": "Show an agent a problem: mark up, record, send",
+   "zh": "向客服代表展示问题：标记、记录、发送"
   },
   "1419982962": {
    "by": "mymemory",
@@ -4665,10 +4715,35 @@
    "src": "A fast, ad-free home screen for Google TV. Open source, built with Claude Code. One button to undo.",
    "zh": "Google TV的快速无广告主屏幕。开源，使用Claude Code构建。只需一个按钮即可撤消。"
   },
+  "1426220635": {
+   "by": "mymemory",
+   "src": "ascii shark components in typescript",
+   "zh": "类型脚本中的ascii shark组件"
+  },
   "1426240325": {
    "by": "mymemory",
    "src": "Prompts for you to use REA (Reverse Engineer Anything), get the most out of it, and clone or break down any program",
    "zh": "提示您使用REA （ Reverse Engineer Anything ） ，充分利用它，并克隆或分解任何程序"
+  },
+  "1426270002": {
+   "by": "mymemory",
+   "src": "Ely Office: offline-first desktop apps in Rust and GPUI",
+   "zh": "Ely Office ： Rust和GPUI中的离线优先桌面应用程序"
+  },
+  "1426780056": {
+   "by": "mymemory",
+   "src": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
+   "zh": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面没有广告，面向开机自动接管。小米、TCL等中国市场电视的tvOS风格启动器。"
+  },
+  "1427107663": {
+   "by": "mymemory",
+   "src": "Official Inference Code of EAGLE-4",
+   "zh": "EAGLE-4的官方推理代码"
+  },
+  "1428058681": {
+   "by": "mymemory",
+   "src": "CVE-2026-109618/109619 PHP session.upload_progress Exploit Research — POC & Analysis",
+   "zh": "CVE-2026-109618/109619 PHP session.upload_progress漏洞利用研究— POC和分析"
   },
   "14614344": {
    "by": "llm",
@@ -4695,6 +4770,11 @@
    "src": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
    "zh": "Ever Gauzy：开源业务管理平台（ERP / CRM / HRM / ATS / 项目管理）"
   },
+  "214587193": {
+   "by": "mymemory",
+   "src": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+   "zh": "Postgres开发平台。Supabase为您提供了一个专用的Postgres数据库，用于构建您的Web、移动和人工智能应用程序。"
+  },
   "283211901": {
    "by": "llm",
    "src": "Browse media content with your own rules on Android TV",
@@ -4719,6 +4799,11 @@
    "by": "mymemory",
    "src": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
    "zh": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘/阿里云盘/中国移动云盘/天翼云盘/迅雷云盘/夸克网盘"
+  },
+  "572984571": {
+   "by": "mymemory",
+   "src": "The open alternative to Salesforce, designed for AI.",
+   "zh": "Salesforce的开放式替代方案，专为人工智能而设计。"
   },
   "589831718": {
    "by": "mymemory",

@@ -25,6 +25,11 @@
    "src": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biolog",
    "zh": "将任何AI特工变成AI科学家。全球25万多名科学家使用的排名第一的科学代理技能库。177项即用型验证技能加上100多个涵盖生物学的科学数据库"
   },
+  "1092047360": {
+   "by": "mymemory",
+   "src": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+   "zh": "以示例为导向的可视化Claude准则指南--从基本概念到高级客服代表，其中的复制粘贴模板可立即带来价值。"
+  },
   "1100776768": {
    "by": "mymemory",
    "src": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
@@ -4355,6 +4360,11 @@
    "src": "Open source canva alternative",
    "zh": "开源Canva替代方案"
   },
+  "1412834960": {
+   "by": "mymemory",
+   "src": "A C# Windows companion for Realm of the Mad God Exalt featuring real-time DPS tracking, player/party overlays, ability & loot logs, and gameplay utilities with updated combat calculation fixes.",
+   "zh": "疯神之域的C # Windows伴侣Exalt具有实时DPS跟踪、玩家/派对叠加、能力和战利品日志以及更新的战斗计算修复的游戏实用程序。"
+  },
   "1412860333": {
    "by": "mymemory",
    "src": "TacClaw-Infinity: research code and dataset resources for a large-scale Vision-Tactile-Language-Action dataset.",
@@ -4395,6 +4405,11 @@
    "src": "🍔 麦门认证机 — 上传任意图片，AI 鉴定麦门身份：认证梗图卡 + 真实营养数据套餐推荐 + 一键领券。2026 麦当劳程序员创意开发大赛参赛作品",
    "zh": "🍔 麦门认证机 — 上传任意图片， AI 鉴定麦门身份：认证梗图卡 + 真实营养数据套餐推荐 + 一键领券。2026 麦当劳程序员创意开发大赛参赛作品"
   },
+  "1413530204": {
+   "by": "mymemory",
+   "src": "A 1:1 scale streamed Earth for BeamNG.drive: real elevation and satellite imagery, floating origin, LOD streaming from a companion server",
+   "zh": "用于BeamNG.drive的1: 1比例流式地球：真实海拔和卫星图像、浮动原点、来自配套服务器的LOD流"
+  },
   "1413549354": {
    "by": "mymemory",
    "src": "A fast, free and open-source GIS in pure Rust.",
@@ -4434,6 +4449,11 @@
    "by": "mymemory",
    "src": "Trace-native CI/CD for AI agents: grade production traces, cluster failures, freeze them into replayable regression tests, and block PRs that regress. Self-hostable.",
    "zh": "跟踪AI代理的本地CI/CD ：对生产跟踪、集群故障进行分级，将其冻结为可重播的回归测试，并阻止回归的PR。自托管。"
+  },
+  "1414599291": {
+   "by": "mymemory",
+   "src": "Don't reverse engineer it twice. 16,000+ open-source tools built by reverse engineering closed apps, APIs, devices, protocols, file formats, games and AI tools. Search site + agent skill + MCP server,",
+   "zh": "不要对其进行两次逆向工程。通过逆向工程封闭的应用程序、API、设备、协议、文件格式、游戏和人工智能工具构建的16,000多种开源工具。搜索站点+代理技能+ MC"
   },
   "1414685342": {
    "by": "mymemory",
@@ -4489,6 +4509,16 @@
    "by": "mymemory",
    "src": "Native Windows port of Shadow of the Colossus (PS4, CUSA08809) - bring your own game dump. Port nativo para PC.",
    "zh": "Shadow of the Colossus （ PS4 ， CUSA08809 ）的原生Windows端口-带上您自己的游戏转储。Port nativo pa"
+  },
+  "1415782260": {
+   "by": "mymemory",
+   "src": "Crash Team Racing: Nitro-Fueled (PS4) running natively on Windows 10/11. Windows fork of SacredFire, built on bbport and shadPS4. No game files included.",
+   "zh": "Crash Team Racing ： Nitro-Fueled （ PS4 ）在Windows 10/11上本机运行。SacredFire的Windows分支"
+  },
+  "1415805767": {
+   "by": "mymemory",
+   "src": "不要问 AI，问薯条。一个结合麦当劳 MCP 与 AI 答案之书的 Skill。",
+   "zh": "不要问 AI ，问薯条。一个结合麦当劳 MCP 与 AI 答案之书的技能。"
   },
   "1415904147": {
    "by": "mymemory",
@@ -4605,6 +4635,11 @@
    "src": "基于 REA 深度拆解并高保真还原 Claude 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000+ 行逆向分析手册。",
    "zh": "基于 REA 深度拆解并高保真还原 CLAUDE 官方桌面端 UI。纯手写 30 个独立 React 组件与 8 项硬核交互物理算法，附带 3000 + 行逆向"
   },
+  "1419211419": {
+   "by": "mymemory",
+   "src": "NSH runs modules written in TSX — natively on iOS, Android, macOS, Windows, Linux, GPUI and the web",
+   "zh": "NSH运行用TSX编写的模块—本地在iOS、Android、macOS、Windows、Linux、GPUI和Web上运行"
+  },
   "1419719507": {
    "by": "mymemory",
    "src": "iOS 16 userland + XNU on Redmi Note 10 Pro (sweet, SM7150)",
@@ -4645,6 +4680,11 @@
    "src": "Open-source version of Scion: version control built for coding agents.",
    "zh": "Scion的开源版本：为编码代理构建的版本控制。"
   },
+  "1421102338": {
+   "by": "mymemory",
+   "src": "CVE-2026-63030 + CVE-2026-60137 exploit RCE chain.",
+   "zh": "CVE-2026-63030 + CVE-2026-60137利用RCE链。"
+  },
   "1421172752": {
    "by": "mymemory",
    "src": "麦当劳 MCP 聚会/团餐组织助手 — 基于 Model Context Protocol 的派对预订与团餐规划 CLI/Skill",
@@ -4675,10 +4715,25 @@
    "src": "Reason Network: your team's coding agents, talking to each other. The engine behind `reason network`.",
    "zh": "原因网络：您团队的编码代理，彼此交谈。“理性网络”背后的引擎。"
   },
+  "1422357371": {
+   "by": "mymemory",
+   "src": "🧬 钝核｜人机亲密实验室 · Bluntcore Intimacy Lab｜人机恋、成人 AI、Prompt、Memory、Agent、模型床测与实验记录。",
+   "zh": "🧬 钝核｜人机亲密实验室 · Bluntcore亲密实验室｜人机恋、成人 AI、提示、记忆、代理、模型床测与实验记录。"
+  },
   "1422399929": {
    "by": "mymemory",
    "src": "There is no official XScreenSaver GitHub repository.",
    "zh": "没有官方的XScreenSaver GitHub存储库。"
+  },
+  "1422434082": {
+   "by": "mymemory",
+   "src": "A native Mach-O iOS/macOS port of Mario Kart 8 Deluxe, with LAN, online and wireless multiplayer",
+   "zh": "马里奥赛车8豪华版的原生Mach-O iOS/macOS端口，带局域网、在线和无线多人游戏"
+  },
+  "1422653739": {
+   "by": "mymemory",
+   "src": "DriveClub (PS4, version 1.28) running natively on Windows",
+   "zh": "在Windows上本机运行的DriveClub （ PS4 ，版本1.28 ）"
   },
   "1422783076": {
    "by": "mymemory",
@@ -4710,6 +4765,26 @@
    "src": "让你的agent一键直出商业级产品宣传片：会作曲，能指着画面改。Commercial-grade launch films by your coding agent — point at the frame to change it.",
    "zh": "让你的代理能指着画面改。商一键直出商业级产品宣传片：会作曲 ，由您的编码代理商进行商业级发布电影—指向框架以进行更改。"
   },
+  "1424613188": {
+   "by": "mymemory",
+   "src": "Take the ads, tracking and clutter out of your Fire TV over ADB, no root. Every step can be undone. Comes with its own open-source home screen.",
+   "zh": "通过ADB将广告、跟踪和混乱从Fire TV中移除，没有根。每个步骤都可以撤消。自带开源主屏幕。"
+  },
+  "1425154779": {
+   "by": "mymemory",
+   "src": "The 100% Pure x86-64 Assembly Systems Language",
+   "zh": "100%纯x86-64汇编系统语言"
+  },
+  "1425469723": {
+   "by": "mymemory",
+   "src": "Run iOS and macOS on non-Apple ARM64 hardware through UEFI.",
+   "zh": "通过UEFI在非Apple ARM64硬件上运行iOS和macOS。"
+  },
+  "1425658028": {
+   "by": "mymemory",
+   "src": "A tool to generate normal maps from any sprite and animated sprite sheet.",
+   "zh": "用于从任何精灵和动画精灵表生成法线贴图的工具。"
+  },
   "1426080579": {
    "by": "mymemory",
    "src": "A fast, ad-free home screen for Google TV. Open source, built with Claude Code. One button to undo.",
@@ -4735,15 +4810,35 @@
    "src": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
    "zh": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面没有广告，面向开机自动接管。小米、TCL等中国市场电视的tvOS风格启动器。"
   },
+  "1426877531": {
+   "by": "mymemory",
+   "src": "Run many Claude Code and Codex agents side by side, in one sidebar that tells you which one needs you. An unofficial fork of Warp.",
+   "zh": "在一个侧边栏中并排运行许多Claude Code和Codex代理，告诉您哪一个需要您。曲速的非官方分叉。"
+  },
   "1427107663": {
    "by": "mymemory",
    "src": "Official Inference Code of EAGLE-4",
    "zh": "EAGLE-4的官方推理代码"
   },
+  "1427696883": {
+   "by": "mymemory",
+   "src": "Import .sql files into TypeScript with full type inference and zero codegen.",
+   "zh": "将.sql文件导入到具有完整类型推断和零代码的TypeScript中。"
+  },
   "1428058681": {
    "by": "mymemory",
    "src": "CVE-2026-109618/109619 PHP session.upload_progress Exploit Research — POC & Analysis",
    "zh": "CVE-2026-109618/109619 PHP session.upload_progress漏洞利用研究— POC和分析"
+  },
+  "1428098303": {
+   "by": "mymemory",
+   "src": "Proof-of-Concept (PoC) exploit for php2shell (CVE-2026-109618 / CVE-2026-109619), demonstrating remote code execution in vulnerable PHP environments. For security research and educational purposes onl",
+   "zh": "Php2shell的概念验证（ PoC ）漏洞利用（ CVE-2026-109618/CVE-2026-109619 ） ，演示在易受攻击的PHP环境中远程执行"
+  },
+  "1428268121": {
+   "by": "mymemory",
+   "src": "A php2shell exploit that requires no modifications to the official version, and does not require display_errors or limit_memory.",
+   "zh": "一个php2shell漏洞，不需要修改官方版本，也不需要display_errors或limit_memory。"
   },
   "14614344": {
    "by": "llm",
@@ -4754,6 +4849,11 @@
    "by": "llm",
    "src": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
    "zh": "Hugging Face Transformers：文本、视觉、音频与多模态的顶尖模型定义框架，兼顾推理与训练"
+  },
+  "160919119": {
+   "by": "mymemory",
+   "src": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+   "zh": "FastAPI框架，高性能，易于学习，快速编码，可投入生产"
   },
   "173228436": {
    "by": "mymemory",
@@ -4769,6 +4869,11 @@
    "by": "llm",
    "src": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
    "zh": "Ever Gauzy：开源业务管理平台（ERP / CRM / HRM / ATS / 项目管理）"
+  },
+  "1903522": {
+   "by": "mymemory",
+   "src": "The PHP Interpreter",
+   "zh": "PHP解释器"
   },
   "214587193": {
    "by": "mymemory",
@@ -4794,6 +4899,11 @@
    "by": "mymemory",
    "src": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
    "zh": "ArtCraft是艺术家、设计师和电影制作人的特意制作引擎"
+  },
+  "518122174": {
+   "by": "mymemory",
+   "src": "Minecraft 启动器 Plain Craft Launcher（PCL）。",
+   "zh": "Minecraft 启动器 Plain Craft Launcher （ PCL ）。"
   },
   "523325759": {
    "by": "mymemory",

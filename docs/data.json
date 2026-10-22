@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T07:12:05+08:00",
+ "generated_at": "2026-10-23T07:14:04+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -40,10 +40,11 @@
   "2026-10-19",
   "2026-10-20",
   "2026-10-21",
-  "2026-10-22"
+  "2026-10-22",
+  "2026-10-23"
  ],
- "tracked_repos": 3792,
- "latest_date": "2026-10-22",
+ "tracked_repos": 3862,
+ "latest_date": "2026-10-23",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -473,67 +474,78 @@
    "top_delta": 7396,
    "new_repos": 89,
    "prev": "2026-10-21"
+  },
+  {
+   "date": "2026-10-23",
+   "repos": 797,
+   "is_first": false,
+   "total_gain": 40888,
+   "gainers": 530,
+   "top_name": "Gathin23/cleanyourtv",
+   "top_delta": 4966,
+   "new_repos": 83,
+   "prev": "2026-10-22"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 67374,
-   "stars": 67589,
+   "delta": 67757,
+   "stars": 67972,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 38353,
-   "stars": 299824,
+   "delta": 39385,
+   "stars": 300856,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 33961,
-   "stars": 171528,
+   "delta": 35827,
+   "stars": 173394,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 27804,
-   "stars": 285685,
+   "delta": 28614,
+   "stars": 286495,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 26464,
-   "stars": 58808,
+   "delta": 26759,
+   "stars": 59103,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 25888,
-   "stars": 87048,
+   "delta": 26431,
+   "stars": 87591,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 24131,
-   "stars": 47935,
+   "delta": 24259,
+   "stars": 48063,
    "language": "Go"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 20136,
-   "stars": 59504,
+   "delta": 20654,
+   "stars": 60022,
    "language": "HTML"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 19468,
-   "stars": 69184,
+   "delta": 20263,
+   "stars": 69979,
    "language": "TypeScript"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 13554,
-   "stars": 58160,
+   "delta": 13726,
+   "stars": 58332,
    "language": "Python"
   }
  ],
@@ -542,62 +554,62 @@
   {
    "full_name": "Gathin23/cleanyourtv",
    "language": "Java",
-   "delta": 7396,
-   "stars": 18898
-  },
-  {
-   "full_name": "deepseek-ai/DeepInfer",
-   "language": "Python",
-   "delta": 5802,
-   "stars": 17753
+   "delta": 4966,
+   "stars": 23864
   },
   {
    "full_name": "cloudflare/security-audit-skill",
    "language": "JavaScript",
-   "delta": 2235,
-   "stars": 36290
+   "delta": 3157,
+   "stars": 39447
+  },
+  {
+   "full_name": "deepseek-ai/DeepInfer",
+   "language": "Python",
+   "delta": 2080,
+   "stars": 19833
   },
   {
    "full_name": "DietrichGebert/ponytail",
    "language": "JavaScript",
-   "delta": 1968,
-   "stars": 171528
-  },
-  {
-   "full_name": "stablyai/orca",
-   "language": "TypeScript",
-   "delta": 1504,
-   "stars": 101178
-  },
-  {
-   "full_name": "pengchujin/aerial-tv",
-   "language": "Kotlin",
-   "delta": 1491,
-   "stars": 2026
+   "delta": 1866,
+   "stars": 173394
   },
   {
    "full_name": "Graphify-Labs/graphify",
    "language": "Python",
-   "delta": 1396,
-   "stars": 131569
+   "delta": 1328,
+   "stars": 132897
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 1215,
-   "stars": 299824
+   "delta": 1032,
+   "stars": 300856
   },
   {
-   "full_name": "ly05010419/MacNativeGames",
-   "language": "C",
-   "delta": 1056,
-   "stars": 3827
+   "full_name": "pengchujin/aerial-tv",
+   "language": "Kotlin",
+   "delta": 1016,
+   "stars": 3042
   },
   {
-   "full_name": "wheresryan22/anatomy",
+   "full_name": "affaan-m/ECC",
    "language": "JavaScript",
-   "delta": 954,
-   "stars": 18502
+   "delta": 810,
+   "stars": 286495
+  },
+  {
+   "full_name": "heygen-com/hyperframes",
+   "language": "TypeScript",
+   "delta": 795,
+   "stars": 69979
+  },
+  {
+   "full_name": "simbasjungles/free-my-tv",
+   "language": "Java",
+   "delta": 716,
+   "stars": 3408
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

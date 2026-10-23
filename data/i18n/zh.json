@@ -10,6 +10,11 @@
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
    "zh": "每个座席跨会话的持久上下文–捕获座席在会话期间执行的所有操作，使用AI对其进行压缩，并将相关上下文注入到未来的会话中。与CLA配合使用"
   },
+  "1057664813": {
+   "by": "mymemory",
+   "src": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+   "zh": "VoxCPM2 ：用于多语言语音生成、创意语音设计和真实克隆的无标记TTS"
+  },
   "1073224795": {
    "by": "mymemory",
    "src": "An agentic skills framework & software development methodology that works.",
@@ -104,6 +109,11 @@
    "by": "mymemory",
    "src": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
    "zh": "人工智能编码代理的上下文窗口优化。沙盒工具输出（减少98 ％ ） ，保持会话内存，并通过MCP +钩子在17个平台上强制路由。"
+  },
+  "1166129534": {
+   "by": "mymemory",
+   "src": "OpenShell is the safe, private runtime for autonomous AI agents.",
+   "zh": "OpenShell是自主AI代理的安全、私有运行时。"
   },
   "1172273835": {
    "by": "llm",
@@ -4575,6 +4585,11 @@
    "src": "Scout: the open-source browser agent, by Outcrawl. Mirrored automatically from Outcrawl's own repository.",
    "zh": "Scout ： Outcrawl的开源浏览器代理。从Outcrawl自己的存储库自动镜像。"
   },
+  "1416828644": {
+   "by": "mymemory",
+   "src": "AI 跨境电商运营智能体工具箱 · 把运营 SOP 拆成 7 个可复用的 AI Agent 工作流，含 Prompt、模板与真实案例",
+   "zh": "AI 跨境电商运营智能体工具箱 · 把运营 SOP 拆成 7 个可复用的 AI Agent 工作流，含提示、模板与真实案例"
+  },
   "1416887041": {
    "by": "mymemory",
    "src": "Fast CPU OCR: line detection, CTC recognition, reading order, markdown",
@@ -4594,6 +4609,11 @@
    "by": "mymemory",
    "src": "We're rebuilding and open-sourcing the world’s software from scratch.",
    "zh": "我们正在从头开始重建和开源全球软件。"
+  },
+  "1417558351": {
+   "by": "mymemory",
+   "src": "在浏览器中用微信官方基础库运行小程序，支持 Chrome DevTools 调试与 Playwright E2E 测试",
+   "zh": "在浏览器中用微信官方基础库运行小程序，支持 Chrome DevTools调试与剧作家E2E 测试"
   },
   "1417843932": {
    "by": "mymemory",
@@ -4665,6 +4685,11 @@
    "src": "Turn your regular JavaScript code into a neural net.",
    "zh": "将常规JavaScript代码转换为神经网络。"
   },
+  "1420177366": {
+   "by": "mymemory",
+   "src": "高性价比人生指南·海外版：高性价比留学。出国留学奖学金、免学费、政府全奖、带薪读博，德国日本学手艺有人发钱，美加澳奖学金单独成节。不是你花钱去留学，是你拿钱去留学。71 条，只引官方来源。关注作者：微信视频号 Becky在地球村",
+   "zh": "高性价比人生指南·海外版 ：贝基高性价比留学。出国留学奖学金、免学费、政府全奖、带薪读博德国日本学手艺有人发钱，贝基美加澳奖学金单独成节。不是你花钱去留学是你拿"
+  },
   "1420305104": {
    "by": "mymemory",
    "src": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
@@ -4730,6 +4755,11 @@
    "src": "A native Mach-O iOS/macOS port of Mario Kart 8 Deluxe, with LAN, online and wireless multiplayer",
    "zh": "马里奥赛车8豪华版的原生Mach-O iOS/macOS端口，带局域网、在线和无线多人游戏"
   },
+  "1422474621": {
+   "by": "mymemory",
+   "src": "Work-in-progress static recompilation of The Legend of Zelda: Breath of the Wild (Switch, v1.8.2) for Windows and Linux. Bring your own dump: no game files, keys or dumping tools included.",
+   "zh": "Windows和Linux版The Legend of Zelda: Breath of the Wild （ Switch ， v1.8.2 ）正在进行静态重"
+  },
   "1422653739": {
    "by": "mymemory",
    "src": "DriveClub (PS4, version 1.28) running natively on Windows",
@@ -4749,6 +4779,11 @@
    "by": "mymemory",
    "src": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
    "zh": "您的电视，减去广告。在ADB上播放任何Android电视，并为其提供一个干净的、受tvOS启发的启动器。与Claude Code一起在一个下午打造。"
+  },
+  "1423919056": {
+   "by": "mymemory",
+   "src": "PandaCode: a calm desktop workspace for coding agents",
+   "zh": "PandaCode ：平静的编码代理桌面工作区"
   },
   "1424070461": {
    "by": "mymemory",
@@ -4774,6 +4809,11 @@
    "by": "mymemory",
    "src": "The 100% Pure x86-64 Assembly Systems Language",
    "zh": "100%纯x86-64汇编系统语言"
+  },
+  "1425429552": {
+   "by": "mymemory",
+   "src": "Offline FairPlay App Store IPA decryption with independent key derivation",
+   "zh": "使用独立密钥派生的离线FairPlay App Store IPA解密"
   },
   "1425469723": {
    "by": "mymemory",
@@ -4820,6 +4860,11 @@
    "src": "Official Inference Code of EAGLE-4",
    "zh": "EAGLE-4的官方推理代码"
   },
+  "1427126014": {
+   "by": "mymemory",
+   "src": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+   "zh": "11日内交易的Claude技能：扫描数千张图表，跟踪突发新闻，每次进出时间，并在冒一美元的风险之前重播每个结果。"
+  },
   "1427696883": {
    "by": "mymemory",
    "src": "Import .sql files into TypeScript with full type inference and zero codegen.",
@@ -4839,6 +4884,21 @@
    "by": "mymemory",
    "src": "A php2shell exploit that requires no modifications to the official version, and does not require display_errors or limit_memory.",
    "zh": "一个php2shell漏洞，不需要修改官方版本，也不需要display_errors或limit_memory。"
+  },
+  "1428714039": {
+   "by": "mymemory",
+   "src": "Extract huge archives in place: the archive shrinks as your files hatch, so you only need room for the output. ZIP, 7z, tar, split archives.",
+   "zh": "将庞大的存档提取到位：存档会随着文件的填充而缩小，因此您只需要输出空间。ZIP、7z、tar、拆分存档。"
+  },
+  "1428848843": {
+   "by": "mymemory",
+   "src": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+   "zh": "拍摄iPhone激光雷达和照片，重建可编辑的Three.js房间，并在浏览器中浏览它们。"
+  },
+  "1429116361": {
+   "by": "mymemory",
+   "src": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
+   "zh": "在华硕A16 （ Snapdragon X2 Elite ）上启动macOS的EL2虚拟机管理程序和工具链，带有Adreno Metal/IOGPU堆栈"
   },
   "14614344": {
    "by": "llm",
@@ -4879,6 +4939,11 @@
    "by": "mymemory",
    "src": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
    "zh": "Postgres开发平台。Supabase为您提供了一个专用的Postgres数据库，用于构建您的Web、移动和人工智能应用程序。"
+  },
+  "27193779": {
+   "by": "mymemory",
+   "src": "Node.js JavaScript runtime ✨🐢🚀✨",
+   "zh": "Node.js JavaScript运行时 ✨🐢🚀✨"
   },
   "283211901": {
    "by": "llm",

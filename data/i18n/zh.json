@@ -35,6 +35,11 @@
    "src": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
    "zh": "以示例为导向的可视化Claude准则指南--从基本概念到高级客服代表，其中的复制粘贴模板可立即带来价值。"
   },
+  "1097346685": {
+   "by": "mymemory",
+   "src": "The design language that makes your AI harness better at design.",
+   "zh": "让您的人工智能更好地进行设计的设计语言。"
+  },
   "1100776768": {
    "by": "mymemory",
    "src": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
@@ -185,10 +190,20 @@
    "src": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
    "zh": "面向 Claude Code、Codex 与 Pi 的 38 种编辑级图表版式，自包含 HTML + SVG，无阴影、不用 Mermaid"
   },
+  "1219009070": {
+   "by": "mymemory",
+   "src": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+   "zh": "AWS支持的官方MCP服务器、技能和插件，以帮助AI代理在AWS上构建"
+  },
   "1222527844": {
    "by": "mymemory",
    "src": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have th",
    "zh": "人工智能代理的独立审计。由人类或智能体本身运行，以回答AI智能体经济中最关键的问题。客服代表是否在做应该做的事情？使用iFixAi ，您可以"
+  },
+  "1222917575": {
+   "by": "mymemory",
+   "src": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+   "zh": "Claude Code、Cursor和Codex的防AI倾斜设计技能。"
   },
   "1223939135": {
    "by": "llm",
@@ -249,6 +264,16 @@
    "by": "llm",
    "src": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
    "zh": "在自有硬件上运行前沿 MoE 模型：纯 C、零依赖、专家从磁盘流式加载"
+  },
+  "1309102418": {
+   "by": "mymemory",
+   "src": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+   "zh": "考虑一下吧。开箱即用的开源AI代理· 想到，就能做到。开源、开箱即用的 AI Agent。"
+  },
+  "1315850547": {
+   "by": "mymemory",
+   "src": "A Tiny biped duck robot 🦆",
+   "zh": "微型双足鸭机器人 🦆"
   },
   "1322250666": {
    "by": "mymemory",
@@ -4430,6 +4455,11 @@
    "src": "Seven AI advisors (Bezos, Paul Graham, Hormozi, Gary Vee, Dan Martell, Gino Wickman, Buffett) debate your business decision in Claude Code, live around a table.",
    "zh": "七位人工智能顾问（贝索斯、保罗·格雷厄姆、霍尔莫齐、加里·维、丹·马爹利、吉诺·威克曼、巴菲特）围坐在一张桌子旁，讨论你在《克劳德准则》中的商业决策。"
   },
+  "1413789019": {
+   "by": "mymemory",
+   "src": "Free Figma alternative made on Rust",
+   "zh": "在Rust上制作的免费Figma替代品"
+  },
   "1413837358": {
    "by": "mymemory",
    "src": "忙碌了一天，回到家，你打开麦当劳，却突然纠结：今天吃了什么？这周点了几次？这个月花了多少钱？热量会不会超标？  于是有了 **McLife Desk 麦门人生工作台**。它记录每一次点麦：日期、餐品、金额与热量，生成专属点餐日历；按当月消费次数和金额解锁麦门等级，还能通过趣味测试发现自己的麦门消费人格。  它不劝你戒掉麦当劳，只陪你在忙碌、独处和奖励自己的时刻，看见自己的选择，管理预算与生活节奏。",
@@ -4444,6 +4474,11 @@
    "by": "mymemory",
    "src": "NCM: Next Concept Modeling",
    "zh": "NCM ：下一个概念建模"
+  },
+  "1414050342": {
+   "by": "mymemory",
+   "src": "REA：逆向一切 通过一个 MCP 服务，逆向分析二进制文件、应用程序和运行时行为。 看到喜欢的功能，弄清它的工作原理，深入到二进制层面。",
+   "zh": "REA ：逆向一切 通过一个 MCP 服务， MCP ， MCP逆向分析二进制文件、应用程序和运行时行为。 看到喜欢的功能， MCP弄清它的工作原理 ，深入到二"
   },
   "1414114267": {
    "by": "mymemory",
@@ -4510,6 +4545,11 @@
    "src": "flybrainlabs authority nodes, complete simulation replay, archives, and service APIs.",
    "zh": "flybrainlabs权限节点、完整的模拟重播、存档和服务API。"
   },
+  "1415404414": {
+   "by": "mymemory",
+   "src": "flybrainlabs native and WebAssembly simulation engines and browser mining.",
+   "zh": "flybrainlabs原生和WebAssembly模拟引擎和浏览器挖掘。"
+  },
   "1415556604": {
    "by": "mymemory",
    "src": "从主题或文章制作完整手绘讲解视频：按部位描线、逐字书写、VoiceStudio 配音、五项内置制作依赖。",
@@ -4554,6 +4594,11 @@
    "by": "mymemory",
    "src": "Total Commander optimizes desktop software utility configurations with its robust and efficient command-line interface, enabling users to seamlessly...",
    "zh": "Total Commander凭借其强大高效的命令行界面优化桌面软件实用程序配置，使用户能够无缝..."
+  },
+  "1415972784": {
+   "by": "mymemory",
+   "src": "Experimental Darling runtime patches and tools for testing the macOS League client on Linux",
+   "zh": "用于在Linux上测试macOS League客户端的实验性Darling运行时补丁和工具"
   },
   "1416044960": {
    "by": "mymemory",
@@ -4645,6 +4690,16 @@
    "src": "Fail-Closed 账号环境管理器:11项环境指纹审计(Block-on-Fail)、手写STUN协议栈的WebRTC泄漏探针、Kill-Switch断网急停、多账号快照隔离、配置漂移自愈 —— 让真实IP在物理上无法泄漏",
    "zh": "失效关闭账号环境管理器： 11项环境指纹审计 (Block-on-Fail)、手写 STUN协议栈的 WebRTC泄漏探针、 Kill-Switch断网急停、多"
   },
+  "1418639621": {
+   "by": "mymemory",
+   "src": "DSH 插件：每天替你刷一轮 B站，读字幕挑出值得的、写一份日报，值得的 @ 你",
+   "zh": "DSH 插件：每天替你刷一轮 B站 ，读字幕挑出值得的、写一份日报 ，值得的 @ 你"
+  },
+  "1418815593": {
+   "by": "mymemory",
+   "src": "Multiple windows for Claude Desktop with different APIs at the same time: keep your official Claude subscription in one window and run other windows on custom / third-party APIs (cc-switch). Windows.",
+   "zh": "同时使用不同API的Claude Desktop的多个窗口：将您的官方Claude订阅保留在一个窗口中，并在自定义/第三方API （ cc-switch ）上运"
+  },
   "1418878693": {
    "by": "mymemory",
    "src": "Your home as a live 3D model in the Mac menu bar and on iPhone — lights and ACs via Smart Life, Home Assistant, Philips Hue and Apple Home.",
@@ -4715,6 +4770,11 @@
    "src": "麦当劳 MCP 聚会/团餐组织助手 — 基于 Model Context Protocol 的派对预订与团餐规划 CLI/Skill",
    "zh": "麦当劳 MCP聚会/团餐组织助手—基于模型上下文协议的派对预订与团餐规划CLI/技能"
   },
+  "1421186614": {
+   "by": "mymemory",
+   "src": "Franco: an outbound sales agent that runs on your Claude Code or Codex subscription",
+   "zh": "Franco ：在您的Claude Code或Codex订阅上运行的出站销售代理"
+  },
   "1421389432": {
    "by": "mymemory",
    "src": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with OpenAI, ChatGPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon and plugin, copilot for 3D, bpy",
@@ -4760,6 +4820,11 @@
    "src": "Work-in-progress static recompilation of The Legend of Zelda: Breath of the Wild (Switch, v1.8.2) for Windows and Linux. Bring your own dump: no game files, keys or dumping tools included.",
    "zh": "Windows和Linux版The Legend of Zelda: Breath of the Wild （ Switch ， v1.8.2 ）正在进行静态重"
   },
+  "1422597771": {
+   "by": "mymemory",
+   "src": "Agent harness for learning difficult things.",
+   "zh": "代理利用学习困难的事情。"
+  },
   "1422653739": {
    "by": "mymemory",
    "src": "DriveClub (PS4, version 1.28) running natively on Windows",
@@ -4779,6 +4844,11 @@
    "by": "mymemory",
    "src": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
    "zh": "您的电视，减去广告。在ADB上播放任何Android电视，并为其提供一个干净的、受tvOS启发的启动器。与Claude Code一起在一个下午打造。"
+  },
+  "1423892373": {
+   "by": "mymemory",
+   "src": "Unlock FP/BF16 instruction issue rate on Nvidia 3000's cards to their professional equivalents",
+   "zh": "将Nvidia 3000卡上的FP/BF16指令发布率解锁到专业版"
   },
   "1423919056": {
    "by": "mymemory",
@@ -4845,6 +4915,11 @@
    "src": "Ely Office: offline-first desktop apps in Rust and GPUI",
    "zh": "Ely Office ： Rust和GPUI中的离线优先桌面应用程序"
   },
+  "1426502712": {
+   "by": "mymemory",
+   "src": "A personal home screen for Samsung The Frame. A starting point to fork and adapt.",
+   "zh": "三星The Frame的个人主屏幕。分叉和适应的起点。"
+  },
   "1426780056": {
    "by": "mymemory",
    "src": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
@@ -4899,6 +4974,16 @@
    "by": "mymemory",
    "src": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
    "zh": "在华硕A16 （ Snapdragon X2 Elite ）上启动macOS的EL2虚拟机管理程序和工具链，带有Adreno Metal/IOGPU堆栈"
+  },
+  "1429213407": {
+   "by": "mymemory",
+   "src": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
+   "zh": "Php2shell高保真扫描仪（ CVE-2026-109618和CVE-2026-109619 ）"
+  },
+  "1431545439": {
+   "by": "mymemory",
+   "src": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
+   "zh": "腾讯通4090和实验性腾讯通4070 Ti SUPER的GPU张量解锁源；本地生成的固件"
   },
   "14614344": {
    "by": "llm",
@@ -5025,6 +5110,11 @@
    "src": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropi",
    "zh": "最快、最轻的人工智能网关。使用Python SDK的Rust核心。调用100多个OpenAI （或本机）格式的LLM API ，包括成本跟踪、护栏、负载平衡和日"
   },
+  "691058691": {
+   "by": "mymemory",
+   "src": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
+   "zh": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍 ，这里都能满足你"
+  },
   "701547123": {
    "by": "mymemory",
    "src": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
@@ -5079,6 +5169,11 @@
    "by": "mymemory",
    "src": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows",
    "zh": "Claude Code是一个代理编码工具，它位于您的终端中，了解您的代码库，并通过执行日常任务、解释复杂代码和处理git工作流程来帮助您更快地编码"
+  },
+  "968197216": {
+   "by": "mymemory",
+   "src": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+   "zh": "一个开源的人工智能代理，将双子座的力量直接带入您的终端。"
   },
   "975734319": {
    "by": "mymemory",

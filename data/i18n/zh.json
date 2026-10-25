@@ -100,6 +100,11 @@
    "src": "Skills for Real Engineers. Straight from my .agents directory.",
    "zh": "面向真正工程师的技能集，直接来自作者的 .agents 目录"
   },
+  "1152014594": {
+   "by": "mymemory",
+   "src": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local S",
+   "zh": "适用于Claude Code的通用SEO技能。26个子技能+ 19个子代理，涵盖技术SEO、E-E-A-T、SCHEMA、GEO/AEO、代理准备（ Light"
+  },
   "1155787322": {
    "by": "llm",
    "src": "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB read",
@@ -264,6 +269,11 @@
    "by": "llm",
    "src": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
    "zh": "在自有硬件上运行前沿 MoE 模型：纯 C、零依赖、专家从磁盘流式加载"
+  },
+  "1293238217": {
+   "by": "mymemory",
+   "src": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+   "zh": "轻量级的真实IDE中带有pi的Vibe代码，可根据您的工作方式自行定制—您需要的Vibe"
   },
   "1309102418": {
    "by": "mymemory",
@@ -4725,6 +4735,11 @@
    "src": "A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, with the low-level libraries around them. The foundation under Kitten Space Agency",
    "zh": "用于制作游戏或您自己的游戏引擎的免费开源C #框架。直接访问原生API和Vulkan ，周围有低级库。小猫航天局（ Kitten Space Agency ）旗"
   },
+  "1419857441": {
+   "by": "mymemory",
+   "src": "11 Claude skills that copy the investors you trust, watch the news and Congress, size every trade to your budget, and never place an order without your yes.",
+   "zh": "11克劳德技能可以复制您信任的投资者，观看新闻和国会，根据您的预算调整每笔交易的规模，并且在没有您的同意的情况下永远不会下订单。"
+  },
   "1419948432": {
    "by": "mymemory",
    "src": "Show an agent a problem: mark up, record, send",
@@ -4779,6 +4794,11 @@
    "by": "mymemory",
    "src": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with OpenAI, ChatGPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon and plugin, copilot for 3D, bpy",
    "zh": "适用于Blender的AI助手和MCP服务器：可视化聊天、场景工具、多代理工作流程。适用于OpenAI、ChatGPT、Claude、Gemini、Ollama"
+  },
+  "1421490995": {
+   "by": "mymemory",
+   "src": "A fast, multi-threaded Redis® and Valkey alternative written in Rust: drop-in compatible, with full-text and vector search built in",
+   "zh": "用Rust编写的快速、多线程的Redis ®和Valkey替代方案：插件兼容，内置全文和矢量搜索"
   },
   "1421497958": {
    "by": "mymemory",
@@ -4844,6 +4864,16 @@
    "by": "mymemory",
    "src": "Your TV, minus the ads. Debloat any Android TV over ADB and give it a clean, tvOS-inspired launcher. Built in an afternoon with Claude Code.",
    "zh": "您的电视，减去广告。在ADB上播放任何Android电视，并为其提供一个干净的、受tvOS启发的启动器。与Claude Code一起在一个下午打造。"
+  },
+  "1423410732": {
+   "by": "mymemory",
+   "src": "Desktop tool for Sony A7C II (ILCE-7CM2) firmware 2.01: one-click FL2/FL3, custom Creative Looks (LUT/DCP), electronic shutter sound, Vertical Display and factory restore. Windows/macOS. | Sony A7C II",
+   "zh": "适用于索尼A7C II （ ILCE-7CM2 ）固件2.01的桌面工具：一键式FL2/FL3、自定义创意外观（ LUT/DCP ）、电子快门声音、垂直显示和出"
+  },
+  "1423689866": {
+   "by": "mymemory",
+   "src": "Play your own Tears of the Kingdom and Breath of the Wild natively on Apple silicon Mac, iPhone and iPad. Not an emulator: the game's ARM64 code runs directly, NVN rebuilt on Metal. Bring your own gam",
+   "zh": "在Apple Silicon Mac、iPhone和iPad上玩自己的《王国之泪》和《荒野之息》。不是模拟器：游戏的ARM64代码直接运行， NVN在Metal"
   },
   "1423892373": {
    "by": "mymemory",
@@ -4940,10 +4970,20 @@
    "src": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
    "zh": "11日内交易的Claude技能：扫描数千张图表，跟踪突发新闻，每次进出时间，并在冒一美元的风险之前重播每个结果。"
   },
+  "1427489759": {
+   "by": "mymemory",
+   "src": "Stream any torrent, video or audio, and skip to any moment in about a second. Free, open-source desktop app for Windows, macOS and Linux. No servers, no accounts, no telemetry.",
+   "zh": "流式传输任何种子、视频或音频，并在大约一秒钟内跳到任何时刻。适用于Windows、macOS和Linux的免费开源桌面应用程序。没有服务器，没有帐户，没有遥测。"
+  },
   "1427696883": {
    "by": "mymemory",
    "src": "Import .sql files into TypeScript with full type inference and zero codegen.",
    "zh": "将.sql文件导入到具有完整类型推断和零代码的TypeScript中。"
+  },
+  "1427861485": {
+   "by": "mymemory",
+   "src": "Steering-first neuron explorer for Qwen3.5-4B: push every MLP neuron, keep every rollout, browse the results",
+   "zh": "Qwen3.5-4B的Steering-first neuron explorer ：推送每个MLP神经元，保留每次推出，浏览结果"
   },
   "1428058681": {
    "by": "mymemory",
@@ -4959,6 +4999,11 @@
    "by": "mymemory",
    "src": "A php2shell exploit that requires no modifications to the official version, and does not require display_errors or limit_memory.",
    "zh": "一个php2shell漏洞，不需要修改官方版本，也不需要display_errors或limit_memory。"
+  },
+  "1428369484": {
+   "by": "mymemory",
+   "src": "A community-built phone app for Clean Your TV: clean up an Android TV from your phone. No laptop, no coding agent, nothing uninstalled.",
+   "zh": "社区打造的电话应用程序，用于清洁电视：从手机中清理Android电视。没有笔记本电脑，没有编码代理，没有卸载。"
   },
   "1428714039": {
    "by": "mymemory",
@@ -4980,10 +5025,20 @@
    "src": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
    "zh": "Php2shell高保真扫描仪（ CVE-2026-109618和CVE-2026-109619 ）"
   },
+  "1430513158": {
+   "by": "mymemory",
+   "src": "A Claude Code plugin that teaches Claude to write idiomatic, robust Rust",
+   "zh": "Claude Code插件，教Claude编写习惯用法、强健的Rust"
+  },
   "1431545439": {
    "by": "mymemory",
    "src": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
    "zh": "腾讯通4090和实验性腾讯通4070 Ti SUPER的GPU张量解锁源；本地生成的固件"
+  },
+  "1431851693": {
+   "by": "mymemory",
+   "src": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
+   "zh": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root ，根可还原，支持 AI 智能体一键执行。"
   },
   "14614344": {
    "by": "llm",
@@ -5039,6 +5094,11 @@
    "by": "mymemory",
    "src": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
    "zh": "Flutter可以轻松快速地为移动设备及其他设备构建漂亮的应用程序"
+  },
+  "332880689": {
+   "by": "mymemory",
+   "src": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 360+ one-click services on your own servers.",
+   "zh": "Vercel、Heroku和Netlify的开源、自托管PaaS替代品，让您可以在自己的服务器上轻松部署静态站点、数据库、全栈应用程序和360 +一键式服务。"
   },
   "45717250": {
    "by": "mymemory",
@@ -5149,6 +5209,11 @@
    "by": "mymemory",
    "src": "Notes of the book System Desgin Interview - An Insider's Guide",
    "zh": "《System Desgin Interview - An Insider's Guide》一书的笔记"
+  },
+  "909213664": {
+   "by": "mymemory",
+   "src": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+   "zh": "TradingAgent ：多代理LLM金融交易框架"
   },
   "913030762": {
    "by": "llm",

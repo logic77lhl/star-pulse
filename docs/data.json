@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T06:26:53+08:00",
+ "generated_at": "2026-10-26T06:27:57+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -43,10 +43,11 @@
   "2026-10-22",
   "2026-10-23",
   "2026-10-24",
-  "2026-10-25"
+  "2026-10-25",
+  "2026-10-26"
  ],
- "tracked_repos": 3989,
- "latest_date": "2026-10-25",
+ "tracked_repos": 4066,
+ "latest_date": "2026-10-26",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -509,131 +510,142 @@
    "top_delta": 3775,
    "new_repos": 65,
    "prev": "2026-10-24"
+  },
+  {
+   "date": "2026-10-26",
+   "repos": 798,
+   "is_first": false,
+   "total_gain": 41878,
+   "gainers": 565,
+   "top_name": "Zagitta/gpu-unlock",
+   "top_delta": 3742,
+   "new_repos": 82,
+   "prev": "2026-10-25"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 68420,
-   "stars": 68635,
+   "delta": 68755,
+   "stars": 68970,
    "language": "HTML"
   },
   {
+   "full_name": "debpalash/VoiceStudio",
+   "delta": 59226,
+   "stars": 86654,
+   "language": "Python"
+  },
+  {
    "full_name": "mattpocock/skills",
-   "delta": 41012,
-   "stars": 302483,
+   "delta": 41721,
+   "stars": 303192,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 37918,
-   "stars": 175485,
+   "delta": 38575,
+   "stars": 176142,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 30162,
-   "stars": 288043,
+   "delta": 30919,
+   "stars": 288800,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 27562,
-   "stars": 88722,
+   "delta": 27989,
+   "stars": 89149,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 27324,
-   "stars": 59668,
+   "delta": 27689,
+   "stars": 60033,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 24397,
-   "stars": 48201,
+   "delta": 24457,
+   "stars": 48261,
    "language": "Go"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 21734,
-   "stars": 71450,
+   "delta": 22394,
+   "stars": 72110,
    "language": "TypeScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 21344,
-   "stars": 60712,
+   "delta": 21668,
+   "stars": 61036,
    "language": "HTML"
-  },
-  {
-   "full_name": "ayghri/i-have-adhd",
-   "delta": 13990,
-   "stars": 58596,
-   "language": "Python"
   }
  ],
- "cumulative_comparable": 206,
+ "cumulative_comparable": 207,
  "daily_top": [
+  {
+   "full_name": "Zagitta/gpu-unlock",
+   "language": "C",
+   "delta": 3742,
+   "stars": 6481
+  },
   {
    "full_name": "Gathin23/cleanyourtv",
    "language": "Java",
-   "delta": 3775,
-   "stars": 31572
+   "delta": 3240,
+   "stars": 34812
   },
   {
    "full_name": "cloudflare/security-audit-skill",
    "language": "JavaScript",
-   "delta": 2330,
-   "stars": 44371
+   "delta": 2364,
+   "stars": 46735
   },
   {
-   "full_name": "Zagitta/gpu-unlock",
+   "full_name": "JustAResearcher/gpu-unlock-ada",
    "language": "C",
-   "delta": 2228,
-   "stars": 2739
+   "delta": 1884,
+   "stars": 2528
+  },
+  {
+   "full_name": "Nutlope/hallmark",
+   "language": "CSS",
+   "delta": 1561,
+   "stars": 33618
+  },
+  {
+   "full_name": "seedds/nxnative",
+   "language": "C",
+   "delta": 1266,
+   "stars": 4128
+  },
+  {
+   "full_name": "pbakaus/impeccable",
+   "language": "Rust",
+   "delta": 1260,
+   "stars": 87593
   },
   {
    "full_name": "affaan-m/ECC",
    "language": "JavaScript",
-   "delta": 756,
-   "stars": 288043
+   "delta": 757,
+   "stars": 288800
   },
   {
-   "full_name": "xevrion/hatchzip",
-   "language": "Rust",
-   "delta": 752,
-   "stars": 1673
-  },
-  {
-   "full_name": "deepseek-ai/DeepInfer",
-   "language": "Python",
-   "delta": 746,
-   "stars": 21816
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 720,
-   "stars": 175485
+   "full_name": "makecindy/cindy",
+   "language": "TypeScript",
+   "delta": 743,
+   "stars": 4790
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 697,
-   "stars": 302483
-  },
-  {
-   "full_name": "heygen-com/hyperframes",
-   "language": "TypeScript",
-   "delta": 686,
-   "stars": 71450
-  },
-  {
-   "full_name": "NVIDIA/OpenShell",
-   "language": "Rust",
-   "delta": 684,
-   "stars": 19431
+   "delta": 709,
+   "stars": 303192
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

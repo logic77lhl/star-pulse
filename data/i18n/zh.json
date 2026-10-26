@@ -120,6 +120,11 @@
    "src": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
    "zh": "人工智能编码代理的上下文窗口优化。沙盒工具输出（减少98 ％ ） ，保持会话内存，并通过MCP +钩子在17个平台上强制路由。"
   },
+  "1165277268": {
+   "by": "mymemory",
+   "src": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+   "zh": "让您的人工智能代理看到整个互联网。阅读和搜索Twitter、Reddit、YouTube、GitHub、Bilibili、XiaoHongShu —一个CLI "
+  },
   "1166129534": {
    "by": "mymemory",
    "src": "OpenShell is the safe, private runtime for autonomous AI agents.",
@@ -154,6 +159,11 @@
    "by": "mymemory",
    "src": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
    "zh": "在您的机器上运行的作业搜索。基于Claude Code构建的人工智能求职框架：评估帖子、定制简历、撰写求职信、准备面试。分叉并拥有它。"
+  },
+  "1187630119": {
+   "by": "mymemory",
+   "src": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills befo",
+   "zh": "人工智能代理技能的安全扫描仪。在Claude Code、Codex和MCP技能中检测漏洞、恶意模式、安全风险、提示注入、数据泄露和供应链风险"
   },
   "1195360525": {
    "by": "llm",
@@ -194,6 +204,11 @@
    "by": "llm",
    "src": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
    "zh": "面向 Claude Code、Codex 与 Pi 的 38 种编辑级图表版式，自包含 HTML + SVG，无阴影、不用 Mermaid"
+  },
+  "1215145625": {
+   "by": "mymemory",
+   "src": "Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, Cursor & any agent",
+   "zh": "Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计 ：网页/App/可编辑PPTX原型/动画/信息图· · 84 六个候选挑三"
   },
   "1219009070": {
    "by": "mymemory",
@@ -289,6 +304,11 @@
    "by": "mymemory",
    "src": "Tool for automatic PS5 executables porting to Linux and Windows",
    "zh": "用于自动将PS5可执行文件移植到Linux和Windows的工具"
+  },
+  "1332461149": {
+   "by": "mymemory",
+   "src": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+   "zh": "持久性AI队友的本地首选桌面工作区。使用专用工作区、任务队列、文件共享、浏览器控制和代理间协作运行Codex、Claude和Grok。"
   },
   "1352965805": {
    "by": "llm",
@@ -4735,6 +4755,11 @@
    "src": "A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, with the low-level libraries around them. The foundation under Kitten Space Agency",
    "zh": "用于制作游戏或您自己的游戏引擎的免费开源C #框架。直接访问原生API和Vulkan ，周围有低级库。小猫航天局（ Kitten Space Agency ）旗"
   },
+  "1419850273": {
+   "by": "mymemory",
+   "src": "Uncharted: The Nathan Drake Collection PC port (no game files)",
+   "zh": "未知： Nathan Drake Collection PC端口（无游戏文件）"
+  },
   "1419857441": {
    "by": "mymemory",
    "src": "11 Claude skills that copy the investors you trust, watch the news and Congress, size every trade to your budget, and never place an order without your yes.",
@@ -4759,6 +4784,11 @@
    "by": "mymemory",
    "src": "高性价比人生指南·海外版：高性价比留学。出国留学奖学金、免学费、政府全奖、带薪读博，德国日本学手艺有人发钱，美加澳奖学金单独成节。不是你花钱去留学，是你拿钱去留学。71 条，只引官方来源。关注作者：微信视频号 Becky在地球村",
    "zh": "高性价比人生指南·海外版 ：贝基高性价比留学。出国留学奖学金、免学费、政府全奖、带薪读博德国日本学手艺有人发钱，贝基美加澳奖学金单独成节。不是你花钱去留学是你拿"
+  },
+  "1420259750": {
+   "by": "mymemory",
+   "src": "Claude Guardian is an all-in-one Claude account safety and risk prevention skill.Claude防封实战 It intelligently assesses your device, account history, network environment, and payment options, then provi",
+   "zh": "Claude Guardian是一个多合一的Claude帐户安全和风险防范技能。Claude防封实战它智能地评估您的设备、帐户历史记录、网络环境和付款选项，然后"
   },
   "1420305104": {
    "by": "mymemory",
@@ -4804,6 +4834,11 @@
    "by": "mymemory",
    "src": "Official repository for MOSS-Image, a 5B-parameter base DiT model with high-quality text rendering, layout generation, and efficient fine-tuning.",
    "zh": "MOSS-Image的官方存储库，这是一个基于5B参数的DiT模型，具有高质量的文本渲染、布局生成和高效的微调。"
+  },
+  "1421822085": {
+   "by": "mymemory",
+   "src": "dsh-purge Community · DeepSeek Harness 社区维护版：宿主兼容、状态诊断、提示词管理、更新与本机备份回滚。基于小杨 / YuJunZhiXue 的 dsh-purge。",
+   "zh": "dsh-purge社区· DeepSeek线束社区维护版：宿主兼容、状态诊断、提示词管理、更新与本机备份回滚。基于小杨/YuJunZhiXue 的 dsh-pu"
   },
   "1421825221": {
    "by": "mymemory",
@@ -4905,6 +4940,11 @@
    "src": "Take the ads, tracking and clutter out of your Fire TV over ADB, no root. Every step can be undone. Comes with its own open-source home screen.",
    "zh": "通过ADB将广告、跟踪和混乱从Fire TV中移除，没有根。每个步骤都可以撤消。自带开源主屏幕。"
   },
+  "1425063138": {
+   "by": "mymemory",
+   "src": "A free, open-source alternative to Burp Suite: an intercepting proxy and web app security testing suite with Repeater, Intruder, Collaborator and a built-in OWASP ZAP scanner. Linux, AGPL-3.0.",
+   "zh": "Burp Suite的免费开源替代品：具有Repeater、Intruder、Collaborator和内置OWASP ZAP扫描仪的拦截代理和Web应用安全测"
+  },
   "1425154779": {
    "by": "mymemory",
    "src": "The 100% Pure x86-64 Assembly Systems Language",
@@ -4945,10 +4985,20 @@
    "src": "Ely Office: offline-first desktop apps in Rust and GPUI",
    "zh": "Ely Office ： Rust和GPUI中的离线优先桌面应用程序"
   },
+  "1426287665": {
+   "by": "mymemory",
+   "src": "Incremental rust builds up to 92x faster than cargo/rustc",
+   "zh": "增量生锈的速度比货物/生锈快92倍"
+  },
   "1426502712": {
    "by": "mymemory",
    "src": "A personal home screen for Samsung The Frame. A starting point to fork and adapt.",
    "zh": "三星The Frame的个人主屏幕。分叉和适应的起点。"
+  },
+  "1426503435": {
+   "by": "mymemory",
+   "src": "Windows GPU UNLOCK: RTX3090 UEFI port, Korean no-reset Windows boot guide, verified source and benchmark evidence",
+   "zh": "Windows GPU解锁： RTX3090 UEFI端口、韩语不重置Windows启动指南、已验证的源和基准证据"
   },
   "1426780056": {
    "by": "mymemory",
@@ -4969,6 +5019,11 @@
    "by": "mymemory",
    "src": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
    "zh": "11日内交易的Claude技能：扫描数千张图表，跟踪突发新闻，每次进出时间，并在冒一美元的风险之前重播每个结果。"
+  },
+  "1427401105": {
+   "by": "mymemory",
+   "src": "Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.",
+   "zh": "在iPhone/iPad上玩您自己的Switch游戏—一键式macOS应用，无终端。|把切换游戏装进iPhone ：图形界面一键构建 ，自不用命令行。带游戏。"
   },
   "1427489759": {
    "by": "mymemory",
@@ -5005,6 +5060,11 @@
    "src": "A community-built phone app for Clean Your TV: clean up an Android TV from your phone. No laptop, no coding agent, nothing uninstalled.",
    "zh": "社区打造的电话应用程序，用于清洁电视：从手机中清理Android电视。没有笔记本电脑，没有编码代理，没有卸载。"
   },
+  "1428714029": {
+   "by": "mymemory",
+   "src": "vibe coded supermimic within 1h, LAFAN passed within 1.5 gpuh training",
+   "zh": "vibe编码的supermimic在1小时内， LAFAN在1.5 gpuh培训内通过"
+  },
   "1428714039": {
    "by": "mymemory",
    "src": "Extract huge archives in place: the archive shrinks as your files hatch, so you only need room for the output. ZIP, 7z, tar, split archives.",
@@ -5030,15 +5090,50 @@
    "src": "A Claude Code plugin that teaches Claude to write idiomatic, robust Rust",
    "zh": "Claude Code插件，教Claude编写习惯用法、强健的Rust"
   },
+  "1431464445": {
+   "by": "mymemory",
+   "src": "Opensource Revenue-first analytics for indie hackers & solo founders",
+   "zh": "面向独立黑客和个人创始人的开源收入优先分析"
+  },
   "1431545439": {
    "by": "mymemory",
    "src": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
    "zh": "腾讯通4090和实验性腾讯通4070 Ti SUPER的GPU张量解锁源；本地生成的固件"
   },
+  "1431830406": {
+   "by": "mymemory",
+   "src": "The agent skills I use every day. Works with Claude Code and Codex.",
+   "zh": "我每天使用的代理技能。适用于Claude Code和Codex。"
+  },
   "1431851693": {
    "by": "mymemory",
    "src": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
    "zh": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root ，根可还原，支持 AI 智能体一键执行。"
+  },
+  "1432875224": {
+   "by": "mymemory",
+   "src": "Rust Google Drive direct downloader using pinned libaria2",
+   "zh": "使用固定libaria2的Rust Google Drive直接下载器"
+  },
+  "1432980411": {
+   "by": "mymemory",
+   "src": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
+   "zh": "词光 · Word Atlas — 7,298个单词的雅思图解词汇，英国/美国音频和FSRS复习。开源APP + CC BY 4.0数据集。"
+  },
+  "1433057196": {
+   "by": "mymemory",
+   "src": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language.",
+   "zh": "人工智能代理人以证据为先的家谱技能（ Codex、Claude Code ） ：前苏联各地的教会书籍、民事、军事、驱逐和镇压记录。以您的语言回复。"
+  },
+  "1433653089": {
+   "by": "mymemory",
+   "src": "A public release of the Steal My Bitcoin challenge",
+   "zh": "“窃取我的比特币”挑战赛公开发布"
+  },
+  "1433904617": {
+   "by": "mymemory",
+   "src": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …",
+   "zh": "一张照片中的AI数字人物对话视频： Renoise MCP生成+ 5种编辑风格+ 48个创作者级包装组件。Claude Code/Codex/OpenClaw/"
   },
   "14614344": {
    "by": "llm",
@@ -5164,6 +5259,11 @@
    "by": "mymemory",
    "src": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
    "zh": "具有强GPU加速的Python中的张量和动态神经网络"
+  },
+  "664013991": {
+   "by": "mymemory",
+   "src": "📨 The ultimate agentic social media scheduling tool 🤖",
+   "zh": "📨 终极代理社交媒体调度工具 🤖"
   },
   "671269505": {
    "by": "mymemory",

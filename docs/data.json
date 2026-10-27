@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T07:46:50+08:00",
+ "generated_at": "2026-10-28T07:43:03+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -45,10 +45,11 @@
   "2026-10-24",
   "2026-10-25",
   "2026-10-26",
-  "2026-10-27"
+  "2026-10-27",
+  "2026-10-28"
  ],
- "tracked_repos": 4136,
- "latest_date": "2026-10-27",
+ "tracked_repos": 4199,
+ "latest_date": "2026-10-28",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -533,131 +534,142 @@
    "top_delta": 4357,
    "new_repos": 79,
    "prev": "2026-10-26"
+  },
+  {
+   "date": "2026-10-28",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 42461,
+   "gainers": 558,
+   "top_name": "Nutlope/hallmark",
+   "top_delta": 2694,
+   "new_repos": 74,
+   "prev": "2026-10-27"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 69289,
-   "stars": 69504,
+   "delta": 69745,
+   "stars": 69960,
    "language": "HTML"
   },
   {
-   "full_name": "debpalash/VoiceStudio",
-   "delta": 61725,
-   "stars": 89153,
-   "language": "Python"
-  },
-  {
    "full_name": "mattpocock/skills",
-   "delta": 42583,
-   "stars": 304054,
+   "delta": 43390,
+   "stars": 304861,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 39536,
-   "stars": 177103,
+   "delta": 40587,
+   "stars": 178154,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 31932,
-   "stars": 289813,
+   "delta": 32974,
+   "stars": 290855,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 28618,
-   "stars": 89778,
+   "delta": 29274,
+   "stars": 90434,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 28072,
-   "stars": 60416,
+   "delta": 28344,
+   "stars": 60688,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 24556,
-   "stars": 48360,
+   "delta": 24809,
+   "stars": 48613,
    "language": "Go"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 23321,
-   "stars": 73037,
+   "delta": 24204,
+   "stars": 73920,
    "language": "TypeScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 22004,
-   "stars": 61372,
+   "delta": 22409,
+   "stars": 61777,
    "language": "HTML"
+  },
+  {
+   "full_name": "ayghri/i-have-adhd",
+   "delta": 14447,
+   "stars": 59053,
+   "language": "Python"
   }
  ],
- "cumulative_comparable": 207,
+ "cumulative_comparable": 206,
  "daily_top": [
+  {
+   "full_name": "Nutlope/hallmark",
+   "language": "CSS",
+   "delta": 2694,
+   "stars": 38935
+  },
   {
    "full_name": "Gathin23/cleanyourtv",
    "language": "Python",
-   "delta": 4357,
-   "stars": 39169
+   "delta": 2633,
+   "stars": 41802
   },
   {
    "full_name": "Zagitta/gpu-unlock",
    "language": "C",
-   "delta": 3153,
-   "stars": 9634
+   "delta": 1669,
+   "stars": 11303
   },
   {
-   "full_name": "Nutlope/hallmark",
-   "language": "CSS",
-   "delta": 2623,
-   "stars": 36241
+   "full_name": "unclebob/ub-mode",
+   "language": null,
+   "delta": 1539,
+   "stars": 2198
   },
   {
-   "full_name": "debpalash/VoiceStudio",
+   "full_name": "rddmwmddr/android-ad-cleaner",
    "language": "Python",
-   "delta": 2499,
-   "stars": 89153
-  },
-  {
-   "full_name": "seedds/nxnative",
-   "language": "Objective-C",
-   "delta": 1907,
-   "stars": 6035
-  },
-  {
-   "full_name": "makecindy/cindy",
-   "language": "TypeScript",
-   "delta": 1640,
-   "stars": 6430
+   "delta": 1359,
+   "stars": 3214
   },
   {
    "full_name": "pbakaus/impeccable",
    "language": "Rust",
-   "delta": 1550,
-   "stars": 89143
-  },
-  {
-   "full_name": "TauricResearch/TradingAgents",
-   "language": "Python",
-   "delta": 1530,
-   "stars": 116046
+   "delta": 1320,
+   "stars": 90463
   },
   {
    "full_name": "JetBrains/thinkrail",
    "language": "TypeScript",
-   "delta": 1285,
-   "stars": 2863
+   "delta": 1092,
+   "stars": 3955
   },
   {
-   "full_name": "JustAResearcher/gpu-unlock-ada",
-   "language": "C",
-   "delta": 1280,
-   "stars": 3808
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 1051,
+   "stars": 178154
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 1042,
+   "stars": 290855
+  },
+  {
+   "full_name": "makecindy/cindy",
+   "language": "TypeScript",
+   "delta": 1007,
+   "stars": 7437
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

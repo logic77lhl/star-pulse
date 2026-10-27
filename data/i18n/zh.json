@@ -50,6 +50,11 @@
    "src": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support",
    "zh": "人工智能将文档或主题转换为真实的原生PowerPoint演示文稿，包括原生形状、转场和动画、数据支持的图表和表格、演讲者笔记中的音频旁白和支持"
   },
+  "1124219907": {
+   "by": "mymemory",
+   "src": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+   "zh": "DeepTutor ：终身个性化辅导。https://deeptutor.info/。"
+  },
   "1129940957": {
    "by": "mymemory",
    "src": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
@@ -269,6 +274,11 @@
    "by": "mymemory",
    "src": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
    "zh": "用于多阶段安全审核的编码代理技能，具有经过独立验证的机器可读结果"
+  },
+  "1273646780": {
+   "by": "mymemory",
+   "src": "LIST OF ALL MY JAILBREAKS",
+   "zh": "我所有的JAILBREAK列表"
   },
   "1277471539": {
    "by": "llm",
@@ -4710,6 +4720,11 @@
    "src": "Overdrive, a PS5 homebrew game store with 1,800+ games.",
    "zh": "Overdrive是一家拥有1800多款游戏的PS5自制游戏商店。"
   },
+  "1418204810": {
+   "by": "mymemory",
+   "src": "All your computers and your phone, working as one desk. Screens, apps, files, clipboard, calls, texts, notifications, mouse and keyboard, shared between Mac, Windows, Linux and Android. Free and open",
+   "zh": "您的所有电脑和手机，就像一张办公桌。屏幕、应用程序、文件、剪贴板、通话、短信、通知、鼠标和键盘，在Mac、Windows、Linux和Android之间共享。免"
+  },
   "1418204947": {
    "by": "mymemory",
    "src": "GEO 医生：一句话装进 AI 助手，查清豆包、DeepSeek、ChatGPT、Claude 为什么不推荐你，改资料、写内容、再复查。开源中英双语 GEO（生成式引擎优化）skill。",
@@ -4744,6 +4759,11 @@
    "by": "mymemory",
    "src": "NSH runs modules written in TSX — natively on iOS, Android, macOS, Windows, Linux, GPUI and the web",
    "zh": "NSH运行用TSX编写的模块—本地在iOS、Android、macOS、Windows、Linux、GPUI和Web上运行"
+  },
+  "1419708427": {
+   "by": "mymemory",
+   "src": "Professional Blender 5.2 workflows as Agent Skills for Claude Code, Codex, Gemini CLI, Copilot and Cursor: modeling, UVs, PBR, baking, rigging, animation, export and QA.",
+   "zh": "专业Blender 5.2工作流程作为Claude Code、Codex、Gemini CLI、Copilot和Cursor的代理技能：建模、UV、PBR、烘焙"
   },
   "1419719507": {
    "by": "mymemory",
@@ -4795,6 +4815,11 @@
    "src": "Ears for coding agents: let AI hear, review and make sound. CPU-only, open source.",
    "zh": "编码代理的耳朵：让人工智能听到、审查和发出声音。仅限CPU ，开源。"
   },
+  "1420454266": {
+   "by": "mymemory",
+   "src": "a social media for devs",
+   "zh": "面向开发人员的社交媒体"
+  },
   "1420531062": {
    "by": "mymemory",
    "src": "Repository for Timestral, the time-series foundation model by Mistral AI",
@@ -4804,6 +4829,11 @@
    "by": "mymemory",
    "src": "Open-source version of Scion: version control built for coding agents.",
    "zh": "Scion的开源版本：为编码代理构建的版本控制。"
+  },
+  "1420807520": {
+   "by": "mymemory",
+   "src": "BIMCraft: building information modeling; an open-source, clean-room take on the Revit workflow in pure Rust, built to be driven by agents",
+   "zh": "BIMCraft ：建筑信息建模；在纯Rust中采用开源、无尘室的Revit工作流程，由代理驱动"
   },
   "1421102338": {
    "by": "mymemory",
@@ -4905,6 +4935,11 @@
    "src": "Desktop tool for Sony A7C II (ILCE-7CM2) firmware 2.01: one-click FL2/FL3, custom Creative Looks (LUT/DCP), electronic shutter sound, Vertical Display and factory restore. Windows/macOS. | Sony A7C II",
    "zh": "适用于索尼A7C II （ ILCE-7CM2 ）固件2.01的桌面工具：一键式FL2/FL3、自定义创意外观（ LUT/DCP ）、电子快门声音、垂直显示和出"
   },
+  "1423413755": {
+   "by": "mymemory",
+   "src": "🐟 中国二手交易暗语全书与避坑合规指南 (闲鱼 / 转转 / 小红书 4,476+ 条实战暗号变体、卖家潜台词透视与买家验货防割指南)",
+   "zh": "🐟 中国二手交易暗语全书与避坑合规指南 (闲鱼/转转/小红书4,476 + 条实战暗号变体、卖家潜台词透视与买家验货防割指南)"
+  },
   "1423689866": {
    "by": "mymemory",
    "src": "Play your own Tears of the Kingdom and Breath of the Wild natively on Apple silicon Mac, iPhone and iPad. Not an emulator: the game's ARM64 code runs directly, NVN rebuilt on Metal. Bring your own gam",
@@ -4935,10 +4970,25 @@
    "src": "让你的agent一键直出商业级产品宣传片：会作曲，能指着画面改。Commercial-grade launch films by your coding agent — point at the frame to change it.",
    "zh": "让你的代理能指着画面改。商一键直出商业级产品宣传片：会作曲 ，由您的编码代理商进行商业级发布电影—指向框架以进行更改。"
   },
+  "1424399708": {
+   "by": "mymemory",
+   "src": "Zero Breach — local, read-only scanner that checks a computer for indicators of the AdFection / Candiru ad-delivered spyware campaign. No network, no admin, no dependencies.",
+   "zh": "Zero Breach —本地只读扫描仪，用于检查计算机是否存在AdFection/Candiru广告投放间谍软件活动的指标。没有网络，没有管理员，没有依赖关系"
+  },
+  "1424563458": {
+   "by": "mymemory",
+   "src": "pi extension: /purge swaps pi's built-in assistant persona for your own prompt file",
+   "zh": "pi扩展：/purge将pi的内置助理角色替换为您自己的提示文件"
+  },
   "1424613188": {
    "by": "mymemory",
    "src": "Take the ads, tracking and clutter out of your Fire TV over ADB, no root. Every step can be undone. Comes with its own open-source home screen.",
    "zh": "通过ADB将广告、跟踪和混乱从Fire TV中移除，没有根。每个步骤都可以撤消。自带开源主屏幕。"
+  },
+  "1424777000": {
+   "by": "mymemory",
+   "src": "Debloat a slow, ad-filled Android TV over Wi-Fi and give it a fast Apple TV-style home screen. One prompt for Claude Code, or do it by hand.",
+   "zh": "通过Wi-Fi播放缓慢、充满广告的Android TV ，并为其提供快速的Apple TV风格主屏幕。一个Claude Code的提示，或手动提示。"
   },
   "1425063138": {
    "by": "mymemory",
@@ -4989,6 +5039,11 @@
    "by": "mymemory",
    "src": "Incremental rust builds up to 92x faster than cargo/rustc",
    "zh": "增量生锈的速度比货物/生锈快92倍"
+  },
+  "1426441603": {
+   "by": "mymemory",
+   "src": "Free fork of NotProton: Windows Steam games in Mac Steam, on CodeWeavers' Wine and Apple's Game Porting Toolkit",
+   "zh": "NotProton的免费分支： Mac Steam中的Windows Steam游戏、CodeWeavers 'Wine和Apple的游戏移植工具包"
   },
   "1426502712": {
    "by": "mymemory",
@@ -5090,6 +5145,11 @@
    "src": "A Claude Code plugin that teaches Claude to write idiomatic, robust Rust",
    "zh": "Claude Code插件，教Claude编写习惯用法、强健的Rust"
   },
+  "1431010194": {
+   "by": "mymemory",
+   "src": "Create Apple style dimensional drawings of UI components.",
+   "zh": "创建UI组件的Apple风格尺寸图。"
+  },
   "1431464445": {
    "by": "mymemory",
    "src": "Opensource Revenue-first analytics for indie hackers & solo founders",
@@ -5115,6 +5175,11 @@
    "src": "Rust Google Drive direct downloader using pinned libaria2",
    "zh": "使用固定libaria2的Rust Google Drive直接下载器"
   },
+  "1432883796": {
+   "by": "mymemory",
+   "src": "One persona, many coding agents. Replace or inject system prompts across codex, claude, opencode, grok, omp, hermes, pi, zcode - with a local web console.",
+   "zh": "一个角色，多个编码代理。使用本地Web控制台替换或注入codex、claude、opencode、grok、omp、hermes、pi、zcode中的系统提示。"
+  },
   "1432980411": {
    "by": "mymemory",
    "src": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
@@ -5125,10 +5190,20 @@
    "src": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language.",
    "zh": "人工智能代理人以证据为先的家谱技能（ Codex、Claude Code ） ：前苏联各地的教会书籍、民事、军事、驱逐和镇压记录。以您的语言回复。"
   },
+  "1433636611": {
+   "by": "mymemory",
+   "src": "Decrypt IPA's on MacOS",
+   "zh": "在MacOS上解密IPA"
+  },
   "1433653089": {
    "by": "mymemory",
    "src": "A public release of the Steal My Bitcoin challenge",
    "zh": "“窃取我的比特币”挑战赛公开发布"
+  },
+  "1433846971": {
+   "by": "mymemory",
+   "src": "Self-hosted web and AI crawler analytics for Generative Engine Optimization (GEO). Track visitors, AI search referrals, crawl logs, content coverage, and conversions. Jointly published by 猎看科技 · 北京日报社",
+   "zh": "用于生成引擎优化(GEO)的自托管网络和人工智能爬虫分析。跟踪访客、人工智能搜索引荐、爬网日志、内容覆盖率和转化率。联合出版商猎看科技· 北京日报社"
   },
   "1433904617": {
    "by": "mymemory",

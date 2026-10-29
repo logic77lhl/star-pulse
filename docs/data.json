@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T07:43:03+08:00",
+ "generated_at": "2026-10-29T08:00:27+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -46,10 +46,11 @@
   "2026-10-25",
   "2026-10-26",
   "2026-10-27",
-  "2026-10-28"
+  "2026-10-28",
+  "2026-10-29"
  ],
- "tracked_repos": 4199,
- "latest_date": "2026-10-28",
+ "tracked_repos": 4264,
+ "latest_date": "2026-10-29",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -545,131 +546,142 @@
    "top_delta": 2694,
    "new_repos": 74,
    "prev": "2026-10-27"
+  },
+  {
+   "date": "2026-10-29",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 49979,
+   "gainers": 554,
+   "top_name": "interplains/Zero-Breach-Toolkit",
+   "top_delta": 2205,
+   "new_repos": 67,
+   "prev": "2026-10-28"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 69745,
-   "stars": 69960,
+   "delta": 70411,
+   "stars": 70626,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 43390,
-   "stars": 304861,
+   "delta": 44276,
+   "stars": 305747,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 40587,
-   "stars": 178154,
+   "delta": 41602,
+   "stars": 179169,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 32974,
-   "stars": 290855,
+   "delta": 33861,
+   "stars": 291742,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 29274,
-   "stars": 90434,
+   "delta": 29827,
+   "stars": 90987,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 28344,
-   "stars": 60688,
+   "delta": 28588,
+   "stars": 60932,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 24809,
-   "stars": 48613,
+   "delta": 25023,
+   "stars": 48827,
    "language": "Go"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 24204,
-   "stars": 73920,
+   "delta": 24997,
+   "stars": 74713,
    "language": "TypeScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 22409,
-   "stars": 61777,
+   "delta": 23063,
+   "stars": 62431,
    "language": "HTML"
   },
   {
    "full_name": "ayghri/i-have-adhd",
-   "delta": 14447,
-   "stars": 59053,
+   "delta": 14622,
+   "stars": 59228,
    "language": "Python"
   }
  ],
  "cumulative_comparable": 206,
  "daily_top": [
   {
-   "full_name": "Nutlope/hallmark",
-   "language": "CSS",
-   "delta": 2694,
-   "stars": 38935
-  },
-  {
-   "full_name": "Gathin23/cleanyourtv",
+   "full_name": "interplains/Zero-Breach-Toolkit",
    "language": "Python",
-   "delta": 2633,
-   "stars": 41802
-  },
-  {
-   "full_name": "Zagitta/gpu-unlock",
-   "language": "C",
-   "delta": 1669,
-   "stars": 11303
-  },
-  {
-   "full_name": "unclebob/ub-mode",
-   "language": null,
-   "delta": 1539,
-   "stars": 2198
-  },
-  {
-   "full_name": "rddmwmddr/android-ad-cleaner",
-   "language": "Python",
-   "delta": 1359,
-   "stars": 3214
+   "delta": 2205,
+   "stars": 2743
   },
   {
    "full_name": "pbakaus/impeccable",
    "language": "Rust",
-   "delta": 1320,
-   "stars": 90463
+   "delta": 2129,
+   "stars": 92592
   },
   {
-   "full_name": "JetBrains/thinkrail",
-   "language": "TypeScript",
-   "delta": 1092,
-   "stars": 3955
+   "full_name": "HKUDS/DeepTutor",
+   "language": "Python",
+   "delta": 2117,
+   "stars": 47928
   },
   {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 1051,
-   "stars": 178154
+   "full_name": "Gathin23/cleanyourtv",
+   "language": "Python",
+   "delta": 2023,
+   "stars": 43825
   },
   {
-   "full_name": "affaan-m/ECC",
-   "language": "JavaScript",
-   "delta": 1042,
-   "stars": 290855
+   "full_name": "elayadesign/ai-design-skills",
+   "language": null,
+   "delta": 1830,
+   "stars": 11083
   },
   {
-   "full_name": "makecindy/cindy",
-   "language": "TypeScript",
-   "delta": 1007,
-   "stars": 7437
+   "full_name": "Nutlope/hallmark",
+   "language": "CSS",
+   "delta": 1733,
+   "stars": 40668
+  },
+  {
+   "full_name": "togg53192-cmd/jailbreaks",
+   "language": null,
+   "delta": 1591,
+   "stars": 7063
+  },
+  {
+   "full_name": "unclebob/ub-mode",
+   "language": null,
+   "delta": 1526,
+   "stars": 3724
+  },
+  {
+   "full_name": "anhao/ai-pose-gallery-zh",
+   "language": "HTML",
+   "delta": 1526,
+   "stars": 1860
+  },
+  {
+   "full_name": "rddmwmddr/android-ad-cleaner",
+   "language": "Python",
+   "delta": 1062,
+   "stars": 4276
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

@@ -35,6 +35,11 @@
    "src": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
    "zh": "以示例为导向的可视化Claude准则指南--从基本概念到高级客服代表，其中的复制粘贴模板可立即带来价值。"
   },
+  "1092407718": {
+   "by": "mymemory",
+   "src": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+   "zh": "宏是团队的统一工作区：电子邮件、聊天、文档、任务、座席、呼叫和CRM — @ —通过共享AI内存链接在一起。"
+  },
   "1097346685": {
    "by": "mymemory",
    "src": "The design language that makes your AI harness better at design.",
@@ -44,6 +49,11 @@
    "by": "mymemory",
    "src": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
    "zh": "由Anthropic管理的高质量Claude Code插件的官方目录。"
+  },
+  "1106846196": {
+   "by": "mymemory",
+   "src": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+   "zh": "与世博会项目和世博会应用服务合作的人工智能代理技能集合"
   },
   "1113573066": {
    "by": "mymemory",
@@ -4855,6 +4865,11 @@
    "src": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with OpenAI, ChatGPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon and plugin, copilot for 3D, bpy",
    "zh": "适用于Blender的AI助手和MCP服务器：可视化聊天、场景工具、多代理工作流程。适用于OpenAI、ChatGPT、Claude、Gemini、Ollama"
   },
+  "1421473933": {
+   "by": "mymemory",
+   "src": "Awesome Reverse Engineering Anything: tools, projects, case studies and research papers for websites, games, apps, binaries, firmware and communication protocols.",
+   "zh": "Awesome Reverse Engineering Anything ：网站、游戏、应用程序、二进制文件、固件和通信协议的工具、项目、案例研究和研究论文。"
+  },
   "1421490995": {
    "by": "mymemory",
    "src": "A fast, multi-threaded Redis® and Valkey alternative written in Rust: drop-in compatible, with full-text and vector search built in",
@@ -4864,6 +4879,11 @@
    "by": "mymemory",
    "src": "Official repository for MOSS-Image, a 5B-parameter base DiT model with high-quality text rendering, layout generation, and efficient fine-tuning.",
    "zh": "MOSS-Image的官方存储库，这是一个基于5B参数的DiT模型，具有高质量的文本渲染、布局生成和高效的微调。"
+  },
+  "1421799582": {
+   "by": "mymemory",
+   "src": "Official Hi3D v1.0: high-resolution 3D geometry refinement built on Sparc3D. Inference code, model weights, and documentation.",
+   "zh": "官方Hi3D v1.0 ：基于Sparc3D构建的高分辨率3D几何细化。推理代码、模型权重和文档。"
   },
   "1421822085": {
    "by": "mymemory",
@@ -5115,6 +5135,11 @@
    "src": "A community-built phone app for Clean Your TV: clean up an Android TV from your phone. No laptop, no coding agent, nothing uninstalled.",
    "zh": "社区打造的电话应用程序，用于清洁电视：从手机中清理Android电视。没有笔记本电脑，没有编码代理，没有卸载。"
   },
+  "1428439343": {
+   "by": "mymemory",
+   "src": "The ESP32-S3 bench guide as a React app: live pinout, lessons with interactive simulators, a code reader for the esp-labs firmware, and the bench log. In 11 languages.",
+   "zh": "作为React应用程序的ESP32-S3测试指南：实时引脚布局、交互式模拟器的课程、esp-labs固件的代码读取器和测试台日志。支持11种语言。"
+  },
   "1428714029": {
    "by": "mymemory",
    "src": "vibe coded supermimic within 1h, LAFAN passed within 1.5 gpuh training",
@@ -5129,6 +5154,11 @@
    "by": "mymemory",
    "src": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
    "zh": "拍摄iPhone激光雷达和照片，重建可编辑的Three.js房间，并在浏览器中浏览它们。"
+  },
+  "1428854046": {
+   "by": "mymemory",
+   "src": "An Open Source template for a proactive AI agent that gets your work done and keeps you in the loop.",
+   "zh": "面向积极主动的AI代理的开源模板，可完成您的工作并让您随时掌握最新动态。"
   },
   "1429116361": {
    "by": "mymemory",
@@ -5170,6 +5200,16 @@
    "src": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
    "zh": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root ，根可还原，支持 AI 智能体一键执行。"
   },
+  "1431986839": {
+   "by": "mymemory",
+   "src": "BAMA: Build Any Mac App. Agent skills to research, clone, design, build, optimize, and test native macOS apps with Swift and SwiftUI.",
+   "zh": "BAMA ：构建任何Mac应用程序。使用Swift和SwiftUI研究、克隆、设计、构建、优化和测试原生macOS应用的代理技能。"
+  },
+  "1432512301": {
+   "by": "mymemory",
+   "src": "A free AI assistant and survival library that runs on your own computer, with no internet needed. Shows the source of every answer.",
+   "zh": "一个免费的人工智能助手和生存库，在您自己的计算机上运行，无需互联网。显示每个答案的来源。"
+  },
   "1432875224": {
    "by": "mymemory",
    "src": "Rust Google Drive direct downloader using pinned libaria2",
@@ -5189,6 +5229,11 @@
    "by": "mymemory",
    "src": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language.",
    "zh": "人工智能代理人以证据为先的家谱技能（ Codex、Claude Code ） ：前苏联各地的教会书籍、民事、军事、驱逐和镇压记录。以您的语言回复。"
+  },
+  "1433297111": {
+   "by": "mymemory",
+   "src": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and Linux, Android phones and iPhone backups.",
+   "zh": "免费、开源、离线检查已知雇佣军间谍软件的痕迹。适用于Windows、macOS和Linux、Android手机和iPhone备份。"
   },
   "1433636611": {
    "by": "mymemory",
@@ -5210,6 +5255,21 @@
    "src": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …",
    "zh": "一张照片中的AI数字人物对话视频： Renoise MCP生成+ 5种编辑风格+ 48个创作者级包装组件。Claude Code/Codex/OpenClaw/"
   },
+  "1434017230": {
+   "by": "mymemory",
+   "src": "Free Claude skill: make Claude build award-level, cinematic landing pages. By MotionSites.",
+   "zh": "免费Claude技能：让Claude构建奖项级别的电影登录页面。由MotionSites提供。"
+  },
+  "1434616998": {
+   "by": "mymemory",
+   "src": "How to build useful, profitable apps in 2026. Clone it and point your coding agent at AGENTS.md.",
+   "zh": "如何在2026年构建实用、盈利的应用程序。克隆它，并将您的编码代理指向AGENTS.md。"
+  },
+  "1435695423": {
+   "by": "mymemory",
+   "src": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
+   "zh": "中文版 AI 姿势参考图库 · 1439组/2878张图片/ 完整汉化· 零依赖静态画廊"
+  },
   "14614344": {
    "by": "llm",
    "src": "A good looking terminal emulator which mimics the old cathode display...",
@@ -5229,6 +5289,11 @@
    "by": "mymemory",
    "src": "Ghidra is a software reverse engineering (SRE) framework",
    "zh": "Ghidra是一个软件逆向工程（ SRE ）框架"
+  },
+  "175635390": {
+   "by": "mymemory",
+   "src": "One has no future if one couldn't teach themself.",
+   "zh": "一个人如果不能自学，就没有未来。"
   },
   "18408635": {
    "by": "mymemory",
@@ -5429,6 +5494,11 @@
    "by": "mymemory",
    "src": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federa",
    "zh": "🌊 原始代理线束。部署智能多玩家群体，协调自主工作流程，构建对话式人工智能系统。具有自适应记忆、自我学习智能、federa"
+  },
+  "997737944": {
+   "by": "mymemory",
+   "src": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+   "zh": "π RuView将商用WiFi信号转化为实时空间智能、生命体征监测和存在检测--所有这些都无需一个像素的视频。"
   }
  },
  "note": "GitHub 仓库简介的中文翻译缓存。键是 repo_id（仓库改名不会失效）。由 python -m star_pulse translate 生成，请提交进 git 以便 CI 复用。",

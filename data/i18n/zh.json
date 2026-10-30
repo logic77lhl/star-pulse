@@ -15,6 +15,11 @@
    "src": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
    "zh": "VoxCPM2 ：用于多语言语音生成、创意语音设计和真实克隆的无标记TTS"
   },
+  "1061953414": {
+   "by": "mymemory",
+   "src": "Public repository for Agent Skills",
+   "zh": "座席技能的公共存储库"
+  },
   "1073224795": {
    "by": "mymemory",
    "src": "An agentic skills framework & software development methodology that works.",
@@ -5045,6 +5050,11 @@
    "src": "The 100% Pure x86-64 Assembly Systems Language",
    "zh": "100%纯x86-64汇编系统语言"
   },
+  "1425227613": {
+   "by": "mymemory",
+   "src": "Build AI phone agents on your own computer and test every change with an AI caller. Open source, runs free with no API keys, cents per call with your own keys. Imports Dialogflow CX.",
+   "zh": "在您自己的计算机上构建AI电话代理，并使用AI呼叫者测试每项更改。开源，无需API密钥即可免费运行，每次通话使用自己的密钥只需几美分。导入Dialogflow "
+  },
   "1425358398": {
    "by": "mymemory",
    "src": "Multi-user anti-filtering panel, with an effortless installation and supporting more than 20 protocols to circumvent filtering plus the telegram proxy.",
@@ -5250,6 +5260,11 @@
    "src": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
    "zh": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root ，根可还原，支持 AI 智能体一键执行。"
   },
+  "1431928459": {
+   "by": "mymemory",
+   "src": "Self-hosted PaaS on your own Kubernetes.",
+   "zh": "在您自己的Kubernetes上自托管PaaS。"
+  },
   "1431986839": {
    "by": "mymemory",
    "src": "BAMA: Build Any Mac App. Agent skills to research, clone, design, build, optimize, and test native macOS apps with Swift and SwiftUI.",
@@ -5279,6 +5294,11 @@
    "by": "mymemory",
    "src": "One persona, many coding agents. Replace or inject system prompts across codex, claude, opencode, grok, omp, hermes, pi, zcode - with a local web console.",
    "zh": "一个角色，多个编码代理。使用本地Web控制台替换或注入codex、claude、opencode、grok、omp、hermes、pi、zcode中的系统提示。"
+  },
+  "1432967563": {
+   "by": "mymemory",
+   "src": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
+   "zh": "dsh-go — DeepSeek线束装进口袋：手机本机运行 ，也能遥控你的电脑。"
   },
   "1432980411": {
    "by": "mymemory",
@@ -5325,6 +5345,11 @@
    "src": "Image-driven 3D scene generation system. Users provide a reference image and prompt words, and the system generates previewable, replayable, and traceable scene results according to the camera traject",
    "zh": "图像驱动的3D场景生成系统。用户提供参考图片和提示词，系统根据摄像头轨迹生成可预览、可重播、可追溯的场景结果"
   },
+  "1434445560": {
+   "by": "mymemory",
+   "src": "One-click character swap for videos: an open-source, local Higgsfield Genjutsu alternative built on ComfyUI and MiniMax H3, with FLUX.3 Klein relighting.",
+   "zh": "一键式视频角色交换：基于ComfyUI和MiniMax H3构建的开源本地Higgsfield Genjutsu替代方案，具有FLUX.3 Klein重新点亮功"
+  },
   "1434616998": {
    "by": "mymemory",
    "src": "How to build useful, profitable apps in 2026. Clone it and point your coding agent at AGENTS.md.",
@@ -5335,6 +5360,11 @@
    "src": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊",
    "zh": "中文版 AI 姿势参考图库 · 1439组/2878张图片/ 完整汉化· 零依赖静态画廊"
   },
+  "1435761182": {
+   "by": "mymemory",
+   "src": "Fast, accurate OCR with correctness assessment.",
+   "zh": "具有正确性评估的快速、准确的OCR。"
+  },
   "1436254894": {
    "by": "mymemory",
    "src": "Say cheese! Star this repo and your profile picture gets printed out on a receipt printer.",
@@ -5344,6 +5374,46 @@
    "by": "mymemory",
    "src": "Free interactive 3D science lessons for high school · 铜匠实验室 · https://lab.tongjiang.app",
    "zh": "高中免费互动3D科学课· 铜匠实验室 · https://lab.tongjiang.app"
+  },
+  "1436721854": {
+   "by": "mymemory",
+   "src": "RuiC-PoseAtlas｜姿态 + 衣装双图鉴：288 组人体姿态 × 5 视角 × 1,439 张人台线稿，加 1,407 套无人物衣装 × 8 分类 × 86 个三语标签。中/英/日切换、搜索筛选、键盘浏览、原图下载，纯静态零依赖。",
+   "zh": "RuiC-PoseAtlas ｜姿态 + 衣装双图鉴： 288 组人体姿态 × 5 视角 张人台线稿× 1,439 ，加 1,407 套无人物衣装 × 8 分类"
+  },
+  "1437131455": {
+   "by": "mymemory",
+   "src": "Git for Global Law: the law of every country as one git history, each country's record a submodule, every commit one law taking effect",
+   "zh": "Git for Global Law ：每个国家的法律作为一个git历史，每个国家的记录一个子模块，每个提交一个法律生效"
+  },
+  "1438018242": {
+   "by": "mymemory",
+   "src": "1407 张 AI 女装参考图集与虚拟试穿网站，支持中英检索、OpenAI Images / Gemini / 豆包及自定义 Base URL、API Key、模型。https://github.com/paipiange/nvzhuang",
+   "zh": "1407 张 AI 女装参考图集与虚拟试穿网站，支持中英检索、 OpenAI Images/Gemini/豆包及自定义Base URL、 API密钥、模型。ht"
+  },
+  "1438326535": {
+   "by": "mymemory",
+   "src": "RUN · 润：海外移居手册（欧洲 36 国 · 110 条路线 · 主要移民地区）",
+   "zh": "RUN · 润：海外移居手册 （欧洲 36 国 · 110 条路线 · 主要移民地区）"
+  },
+  "1438394948": {
+   "by": "mymemory",
+   "src": "Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows x86-64, with a Vulkan renderer. Game files not included.",
+   "zh": "使用Vulkan渲染器将《塞尔达传说：王国之泪》静态重新编译为本机Windows x86-64。游戏文件不包括在内。"
+  },
+  "1438540053": {
+   "by": "mymemory",
+   "src": "Mika — 你手机上的私人 AI 助理，替你操作 App、上网、把事办成。An on-device AI agent for Android that operates apps and the web to get things done for you.",
+   "zh": "Mika — 你手机上的私人 AI 助理，替你操作应用程序、上网、把事办成。Android设备上的AI代理，可运行应用程序和网络，为您完成任务。"
+  },
+  "1438623288": {
+   "by": "mymemory",
+   "src": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
+   "zh": "一种克劳德技能，将振动编码的人工智能外观用户界面转变为设计界面"
+  },
+  "1439430391": {
+   "by": "mymemory",
+   "src": "Procedurally generated Delft-blue floral page margins for LuaLaTeX, drawn in Lua",
+   "zh": "为LuaLaTeX程序生成的代尔夫特-蓝色花卉页边距，用Lua绘制"
   },
   "14614344": {
    "by": "llm",
@@ -5439,6 +5509,11 @@
    "by": "mymemory",
    "src": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
    "zh": "最强大、模块化的扩散模型GUI、API和后端，具有图形/节点界面。世界上最快的本地推理引擎。"
+  },
+  "598667202": {
+   "by": "mymemory",
+   "src": "Lightpanda: the headless browser designed for AI and automation",
+   "zh": "Lightpanda ：专为人工智能和自动化设计的无头浏览器"
   },
   "599547518": {
    "by": "mymemory",

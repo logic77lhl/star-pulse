@@ -255,6 +255,11 @@
    "src": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
    "zh": "开源 AI 销售系统：自托管 CRM，原生集成 AI 智能体与 WhatsApp，多租户、支持 MCP"
   },
+  "1224575142": {
+   "by": "mymemory",
+   "src": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw a",
+   "zh": "Orkas是一个面向桌面的开源（ MIT ）本地优先人工智能团队：指挥官将您的目标转化为待办事项，并协调16个内置的专业代理以及Claude Code、Code"
+  },
   "1230933500": {
    "by": "mymemory",
    "src": "TokenSpeed is a speed-of-light LLM inference engine.",
@@ -289,6 +294,11 @@
    "by": "llm",
    "src": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
    "zh": "让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码"
+  },
+  "1267485499": {
+   "by": "mymemory",
+   "src": "Free and open-source macOS menu bar toolkit.",
+   "zh": "免费开源的macOS菜单栏工具包。"
   },
   "1273427276": {
    "by": "mymemory",
@@ -5120,6 +5130,11 @@
    "src": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
    "zh": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面没有广告，面向开机自动接管。小米、TCL等中国市场电视的tvOS风格启动器。"
   },
+  "1426849370": {
+   "by": "mymemory",
+   "src": "Tigris — tvOS 27 style launcher for Android TV: Liquid Glass dock, Top Shelf, glass Control Center, photo screensaver. Agent-installable.",
+   "zh": "底格里斯—适用于Android TV的tvOS 27风格启动器：液晶玻璃底座、顶架、玻璃控制中心、照片屏幕保护程序。可代理安装。"
+  },
   "1426877531": {
    "by": "mymemory",
    "src": "Run many Claude Code and Codex agents side by side, in one sidebar that tells you which one needs you. An unofficial fork of Warp.",
@@ -5335,10 +5350,20 @@
    "src": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …",
    "zh": "一张照片中的AI数字人物对话视频： Renoise MCP生成+ 5种编辑风格+ 48个创作者级包装组件。Claude Code/Codex/OpenClaw/"
   },
+  "1433985108": {
+   "by": "mymemory",
+   "src": "UEFI pre-driver NVIDIA GPU unlocker for Windows Linux Hackintosh and all EFI-bootable system (Rust): SEC2 scrubber -> FWSEC/WPR2 -> signed Booter -> V67 four-write payload, read-back verified. Verifie",
+   "zh": "适用于Windows Linux Hackintosh和所有EFI可引导系统（ Rust ）的UEFI预驱动程序NVIDIA GPU解锁器： SEC2 scru"
+  },
   "1434017230": {
    "by": "mymemory",
    "src": "Free Claude skill: make Claude build award-level, cinematic landing pages. By MotionSites.",
    "zh": "免费Claude技能：让Claude构建奖项级别的电影登录页面。由MotionSites提供。"
+  },
+  "1434156379": {
+   "by": "mymemory",
+   "src": "从选题到剪映草稿的一站式 AI 短视频内容创作 Agent Skill",
+   "zh": "从选题到剪映草稿的一站式 AI短视频内容创作特工技能"
   },
   "1434335249": {
    "by": "mymemory",
@@ -5350,10 +5375,25 @@
    "src": "One-click character swap for videos: an open-source, local Higgsfield Genjutsu alternative built on ComfyUI and MiniMax H3, with FLUX.3 Klein relighting.",
    "zh": "一键式视频角色交换：基于ComfyUI和MiniMax H3构建的开源本地Higgsfield Genjutsu替代方案，具有FLUX.3 Klein重新点亮功"
   },
+  "1434463018": {
+   "by": "mymemory",
+   "src": "Free, open-source book search, reader and library.",
+   "zh": "免费开源图书搜索、阅读器和图书馆。"
+  },
   "1434616998": {
    "by": "mymemory",
    "src": "How to build useful, profitable apps in 2026. Clone it and point your coding agent at AGENTS.md.",
    "zh": "如何在2026年构建实用、盈利的应用程序。克隆它，并将您的编码代理指向AGENTS.md。"
+  },
+  "1435333593": {
+   "by": "mymemory",
+   "src": "DeepSeek API pricing guide for models, cache hits, and peak hours (2026).",
+   "zh": "DeepSeek API模型、缓存命中率和高峰时段定价指南（ 2026年）。"
+  },
+  "1435672472": {
+   "by": "mymemory",
+   "src": "See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.",
+   "zh": "看看您的应用程序实际上是如何组合在一起的。由Claude或Codex绘制的交互式简单英文代码库地图。"
   },
   "1435695423": {
    "by": "mymemory",
@@ -5364,6 +5404,11 @@
    "by": "mymemory",
    "src": "Fast, accurate OCR with correctness assessment.",
    "zh": "具有正确性评估的快速、准确的OCR。"
+  },
+  "1436184001": {
+   "by": "mymemory",
+   "src": "免 ROOT 免 Termux，一个 APK 在安卓手机上跑 DeepSeek Harness。引擎内嵌 App 进程 · 读屏操作 App · 改系统设置 · 定时/条件自动化 · 可选 Shizuku",
+   "zh": "免 ROOT 免 Termux ，一个 APK DeepSeek在安卓手机上跑线束。引擎内嵌应用程序进程·读屏操作应用程序改系统设置· ·定时/条件自动化· 可"
   },
   "1436254894": {
    "by": "mymemory",
@@ -5380,10 +5425,20 @@
    "src": "RuiC-PoseAtlas｜姿态 + 衣装双图鉴：288 组人体姿态 × 5 视角 × 1,439 张人台线稿，加 1,407 套无人物衣装 × 8 分类 × 86 个三语标签。中/英/日切换、搜索筛选、键盘浏览、原图下载，纯静态零依赖。",
    "zh": "RuiC-PoseAtlas ｜姿态 + 衣装双图鉴： 288 组人体姿态 × 5 视角 张人台线稿× 1,439 ，加 1,407 套无人物衣装 × 8 分类"
   },
+  "1436834115": {
+   "by": "mymemory",
+   "src": "An AI live-stream host that runs on one server: voice, face, chat, memory, posts. The base yoki runs on. By Jacke_pp · contact: DM @Jacke_pp on X",
+   "zh": "在一台服务器上运行的AI直播主机：语音、面部、聊天、记忆、帖子。基础yoki继续运行。By Jacke_pp ·联系人： DM @ Jacke_pp on X"
+  },
   "1437131455": {
    "by": "mymemory",
    "src": "Git for Global Law: the law of every country as one git history, each country's record a submodule, every commit one law taking effect",
    "zh": "Git for Global Law ：每个国家的法律作为一个git历史，每个国家的记录一个子模块，每个提交一个法律生效"
+  },
+  "1437774066": {
+   "by": "mymemory",
+   "src": "VERY experimental Nintendo Switch 2 emulator",
+   "zh": "非常实验性的Nintendo Switch 2仿真器"
   },
   "1438018242": {
    "by": "mymemory",
@@ -5410,10 +5465,25 @@
    "src": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
    "zh": "一种克劳德技能，将振动编码的人工智能外观用户界面转变为设计界面"
   },
+  "1439372976": {
+   "by": "mymemory",
+   "src": "232 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
+   "zh": "232像素的艺术效果，每一个都是一小段代码。再加上克劳德守则技能，可以自己制作。"
+  },
   "1439430391": {
    "by": "mymemory",
    "src": "Procedurally generated Delft-blue floral page margins for LuaLaTeX, drawn in Lua",
    "zh": "为LuaLaTeX程序生成的代尔夫特-蓝色花卉页边距，用Lua绘制"
+  },
+  "1440160468": {
+   "by": "mymemory",
+   "src": "Install Linux next to Windows without a USB stick",
+   "zh": "在没有U盘的情况下在Windows旁边安装Linux"
+  },
+  "1440705679": {
+   "by": "mymemory",
+   "src": "Towards a More Autonomous Agent System",
+   "zh": "迈向更自主的Agent系统"
   },
   "14614344": {
    "by": "llm",
@@ -5454,6 +5524,11 @@
    "by": "mymemory",
    "src": "The PHP Interpreter",
    "zh": "PHP解释器"
+  },
+  "212639071": {
+   "by": "mymemory",
+   "src": "Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS, Elastic, Network, Virtualization. DevOps Interview Questions",
+   "zh": "Linux、Jenkins、AWS、SRE、Prometheus、Docker、Python、Ansible、Git、Kubernetes、Terraform、"
   },
   "214587193": {
    "by": "mymemory",

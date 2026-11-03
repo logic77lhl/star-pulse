@@ -15,6 +15,11 @@
    "src": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
    "zh": "VoxCPM2 ：用于多语言语音生成、创意语音设计和真实克隆的无标记TTS"
   },
+  "1061041576": {
+   "by": "mymemory",
+   "src": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+   "zh": "无需培训的语言模型修改：消除审查、抑制SLOP、减少嘲讽等"
+  },
   "1061953414": {
    "by": "mymemory",
    "src": "Public repository for Agent Skills",
@@ -29,6 +34,16 @@
    "by": "mymemory",
    "src": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, a",
    "zh": "一个完整的人工智能机构，触手可及--从前端向导到Reddit社区忍者，从奇思妙想的注入者到现实检查者。每位客服代表都是具有个性、流程、"
+  },
+  "1075431749": {
+   "by": "mymemory",
+   "src": "The best ChatGPT that $100 can buy.",
+   "zh": "$ 100可以买到的最好的ChatGPT。"
+  },
+  "1078528927": {
+   "by": "mymemory",
+   "src": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+   "zh": "Worktrunk是用于Git工作树管理的CLI ，专为并行AI代理工作流程而设计"
   },
   "1079456184": {
    "by": "mymemory",
@@ -140,6 +155,11 @@
    "src": "Production-grade engineering skills for AI coding agents.",
    "zh": "AI编码代理的生产级工程技能。"
   },
+  "1161958643": {
+   "by": "mymemory",
+   "src": "Computer use CLI for AI agents",
+   "zh": "AI代理的计算机使用CLI"
+  },
   "1164477708": {
    "by": "mymemory",
    "src": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
@@ -154,6 +174,11 @@
    "by": "mymemory",
    "src": "OpenShell is the safe, private runtime for autonomous AI agents.",
    "zh": "OpenShell是自主AI代理的安全、私有运行时。"
+  },
+  "1170821064": {
+   "by": "mymemory",
+   "src": "The open-source app everyone uses to manage agents at work",
+   "zh": "每个人都使用的开源应用程序来管理工作中的代理"
   },
   "1172273835": {
    "by": "llm",
@@ -329,6 +354,11 @@
    "by": "mymemory",
    "src": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
    "zh": "轻量级的真实IDE中带有pi的Vibe代码，可根据您的工作方式自行定制—您需要的Vibe"
+  },
+  "1307001698": {
+   "by": "mymemory",
+   "src": "FreeToken brings datacenter-scale model serving to your desktop. Run massive models locally, fast and efficiently.",
+   "zh": "FreeToken将数据中心规模的模型提供给您的桌面。在本地快速高效地运行大规模模型。"
   },
   "1309102418": {
    "by": "mymemory",
@@ -5235,6 +5265,11 @@
    "src": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
    "zh": "Php2shell高保真扫描仪（ CVE-2026-109618和CVE-2026-109619 ）"
   },
+  "1429490473": {
+   "by": "mymemory",
+   "src": "36 video effects for Claude Code: drop in a talking-head clip, type /effects orbit. Face tracking, behind-your-head layers. By @vibha.in.progress",
+   "zh": "Claude Code的36个视频效果：放入一个会说话的片段，类型/效果轨道。面部跟踪，头后层。通过@ vibha.in.progress"
+  },
   "1429583155": {
    "by": "mymemory",
    "src": "创业公司做 AI 产品的 7 步 Agent Skill 合集：验证 → BP → 政策 → 路演 → 获客 → 定价 → 注册。",
@@ -5265,6 +5300,11 @@
    "src": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
    "zh": "腾讯通4090和实验性腾讯通4070 Ti SUPER的GPU张量解锁源；本地生成的固件"
   },
+  "1431769161": {
+   "by": "mymemory",
+   "src": "破甲CodeX。面向小白的实用 Skills 与插件，可直接破甲CodeX发挥出模型最大的潜能，附完整教程和示例。",
+   "zh": "破甲CodeX。面向小白的实用 Skills 与插件，可直接破甲 CodeX发挥出模型最大的潜能 ，附完整教程和示例。"
+  },
   "1431830406": {
    "by": "mymemory",
    "src": "The agent skills I use every day. Works with Claude Code and Codex.",
@@ -5290,10 +5330,20 @@
    "src": "A Windows your apps recognize.",
    "zh": "您的应用程序识别的Windows。"
   },
+  "1432420324": {
+   "by": "mymemory",
+   "src": "A compatibility layer for porting Switch games to Android, one game at a time",
+   "zh": "用于将Switch游戏移植到Android的兼容层，一次移植一个游戏"
+  },
   "1432512301": {
    "by": "mymemory",
    "src": "A free AI assistant and survival library that runs on your own computer, with no internet needed. Shows the source of every answer.",
    "zh": "一个免费的人工智能助手和生存库，在您自己的计算机上运行，无需互联网。显示每个答案的来源。"
+  },
+  "1432695352": {
+   "by": "mymemory",
+   "src": "Unofficial native Windows port of Tears of the Kingdom 1.4.3 using static recompilation. Builds locally from the player's own extracted game dump; no game files included.",
+   "zh": "使用静态重新编译的非官方原生Windows Tears of the Kingdom 1.4.3。从玩家自己提取的游戏转储本地构建；不包括游戏文件。"
   },
   "1432859403": {
    "by": "mymemory",
@@ -5325,10 +5375,25 @@
    "src": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language.",
    "zh": "人工智能代理人以证据为先的家谱技能（ Codex、Claude Code ） ：前苏联各地的教会书籍、民事、军事、驱逐和镇压记录。以您的语言回复。"
   },
+  "1433111563": {
+   "by": "mymemory",
+   "src": "Self-hosted, sharable kanban for humans and agents. One 4.5 MB binary, 4.5 MB of RAM, 10 to 60 tokens per agent reply, starts in 2 ms, zero setup.",
+   "zh": "适用于人员和代理的自托管、可共享看板。一个4.5 MB的二进制文件， 4.5 MB的RAM ，每个代理回复10到60个令牌，在2毫秒内开始，零设置。"
+  },
+  "1433269248": {
+   "by": "mymemory",
+   "src": "Tool to dump unencrypted romFS and exeFS for Switch 2 games",
+   "zh": "用于转储Switch 2游戏的未加密romFS和exeFS的工具"
+  },
   "1433297111": {
    "by": "mymemory",
    "src": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and Linux, Android phones and iPhone backups.",
    "zh": "免费、开源、离线检查已知雇佣军间谍软件的痕迹。适用于Windows、macOS和Linux、Android手机和iPhone备份。"
+  },
+  "1433612617": {
+   "by": "mymemory",
+   "src": "Run ARM64 Linux userspace and desktop applications on iPhone and iPad.",
+   "zh": "在iPhone和iPad上运行ARM64 Linux用户空间和桌面应用程序。"
   },
   "1433636611": {
    "by": "mymemory",
@@ -5349,6 +5414,11 @@
    "by": "mymemory",
    "src": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …",
    "zh": "一张照片中的AI数字人物对话视频： Renoise MCP生成+ 5种编辑风格+ 48个创作者级包装组件。Claude Code/Codex/OpenClaw/"
+  },
+  "1433974029": {
+   "by": "mymemory",
+   "src": "Skills for AI coding agents.",
+   "zh": "人工智能编码代理的技能。"
   },
   "1433985108": {
    "by": "mymemory",
@@ -5385,10 +5455,20 @@
    "src": "How to build useful, profitable apps in 2026. Clone it and point your coding agent at AGENTS.md.",
    "zh": "如何在2026年构建实用、盈利的应用程序。克隆它，并将您的编码代理指向AGENTS.md。"
   },
+  "1434992606": {
+   "by": "mymemory",
+   "src": "Native Windows video motion capture with ExMR, FlowHMR and GVHMR, contact correction, humanoid retargeting, and FBX/VMD export.",
+   "zh": "使用ExMR、FlowHMR和GVHMR、接触校正、人形重定向和FBX/VMD导出的本机Windows视频动作捕获。"
+  },
   "1435333593": {
    "by": "mymemory",
    "src": "DeepSeek API pricing guide for models, cache hits, and peak hours (2026).",
    "zh": "DeepSeek API模型、缓存命中率和高峰时段定价指南（ 2026年）。"
+  },
+  "1435475558": {
+   "by": "mymemory",
+   "src": "🤖 Open-source, local-first alternative to Grok Bot, OpenAI dots and Claude Duet. Your own AI bots on any model: GPT, Claude, Gemini, Grok, DeepSeek, Kimi, GLM and 70+ more through one Modelflare key.",
+   "zh": "🤖 开源， Grok Bot、OpenAI DOT和Claude Duet的本地首选替代品。通过一个Modelflare密钥，您可以在任何型号上使用自己的人工智"
   },
   "1435672472": {
    "by": "mymemory",
@@ -5435,6 +5515,16 @@
    "src": "Git for Global Law: the law of every country as one git history, each country's record a submodule, every commit one law taking effect",
    "zh": "Git for Global Law ：每个国家的法律作为一个git历史，每个国家的记录一个子模块，每个提交一个法律生效"
   },
+  "1437343601": {
+   "by": "mymemory",
+   "src": "Real-time FFT ocean renderer for three.js (WebGL2): shore breakers, foam, caustics, underwater rendering and buoyancy at 170–300 fps",
+   "zh": "用于three.js （ WebGL2 ）的实时FFT海洋渲染器：破岸、泡沫、腐蚀、水下渲染和170-300 fps的浮力"
+  },
+  "1437555556": {
+   "by": "mymemory",
+   "src": "Idol: a single image to 3D Gaussians. Inference SDK and demo.",
+   "zh": "偶像： 3D高斯的单个图像。推理SDK和演示。"
+  },
   "1437774066": {
    "by": "mymemory",
    "src": "VERY experimental Nintendo Switch 2 emulator",
@@ -5444,6 +5534,11 @@
    "by": "mymemory",
    "src": "1407 张 AI 女装参考图集与虚拟试穿网站，支持中英检索、OpenAI Images / Gemini / 豆包及自定义 Base URL、API Key、模型。https://github.com/paipiange/nvzhuang",
    "zh": "1407 张 AI 女装参考图集与虚拟试穿网站，支持中英检索、 OpenAI Images/Gemini/豆包及自定义Base URL、 API密钥、模型。ht"
+  },
+  "1438029127": {
+   "by": "mymemory",
+   "src": "A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same.",
+   "zh": "一种Claude Code技能，可对任何动画帧进行逐帧逆向工程，然后证明副本的移动方式相同。"
   },
   "1438326535": {
    "by": "mymemory",
@@ -5460,10 +5555,35 @@
    "src": "Mika — 你手机上的私人 AI 助理，替你操作 App、上网、把事办成。An on-device AI agent for Android that operates apps and the web to get things done for you.",
    "zh": "Mika — 你手机上的私人 AI 助理，替你操作应用程序、上网、把事办成。Android设备上的AI代理，可运行应用程序和网络，为您完成任务。"
   },
+  "1438607462": {
+   "by": "mymemory",
+   "src": "AI 作图素材库 · 中文版（脸 / 姿势 / 服装）",
+   "zh": "AI 作图素材库 · 中文版（脸/姿势/服装）"
+  },
   "1438623288": {
    "by": "mymemory",
    "src": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
    "zh": "一种克劳德技能，将振动编码的人工智能外观用户界面转变为设计界面"
+  },
+  "1438724252": {
+   "by": "mymemory",
+   "src": "Pika H3 Flex: video and audio generation inference",
+   "zh": "Pika H3 Flex ：视频和音频生成推断"
+  },
+  "1438732649": {
+   "by": "mymemory",
+   "src": "HairDeck: Animation-Ready Stylized Hair Cards from a Single Image",
+   "zh": "HairDeck ：单张图像中的动画风格发卡"
+  },
+  "1439244319": {
+   "by": "mymemory",
+   "src": "Play any game",
+   "zh": "玩任何游戏"
+  },
+  "1439308037": {
+   "by": "mymemory",
+   "src": "花叔开源的全球鸟类贴纸库 · Stickers for all 11,064 living bird species, with names in 43 languages and structured data",
+   "zh": "花叔开源的全球鸟类贴纸库 ·所有11,064种活鸟的贴纸，有43种语言的名称和结构化数据"
   },
   "1439372976": {
    "by": "mymemory",
@@ -5475,6 +5595,16 @@
    "src": "Procedurally generated Delft-blue floral page margins for LuaLaTeX, drawn in Lua",
    "zh": "为LuaLaTeX程序生成的代尔夫特-蓝色花卉页边距，用Lua绘制"
   },
+  "1439522537": {
+   "by": "mymemory",
+   "src": "A Claude Code skill that turns any machine into a 3D simulator you can take apart",
+   "zh": "Claude Code技能，可将任何机器变成可拆卸的3D模拟器"
+  },
+  "1439885901": {
+   "by": "mymemory",
+   "src": "Autonomous pentest legion — AI commander + worker swarm + layered fact-intent graph. 3rd Tencent Intelligent Attack-Defense online champion (634 teams · 8h unattended · 1B tokens beat 4.5B). The Nüwa",
+   "zh": "自主Pentest军团— AI指挥官+工作者群体+分层事实意图。第三届腾讯智能攻击防御在线冠军（ 634支队伍· 8小时无人值守· 10亿代币击败4.5B ）。"
+  },
   "1440160468": {
    "by": "mymemory",
    "src": "Install Linux next to Windows without a USB stick",
@@ -5484,6 +5614,46 @@
    "by": "mymemory",
    "src": "Towards a More Autonomous Agent System",
    "zh": "迈向更自主的Agent系统"
+  },
+  "1440956372": {
+   "by": "mymemory",
+   "src": "Craft Anything: understand how any software works, and craft your own.",
+   "zh": "制作任何东西：了解任何软件的工作原理，并制作自己的软件。"
+  },
+  "1441272552": {
+   "by": "mymemory",
+   "src": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置。Desktop Android leak audit: permissions, endpoints, data flows, reversible fixes.",
+   "zh": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置。桌面Android泄漏审核：权限、端点、数据流、可逆修复。"
+  },
+  "1441344216": {
+   "by": "mymemory",
+   "src": "One button: why the game stutters, why it lags and why it won't start. Pitstop measures with PresentMon, explains in plain words, fixes Windows only, and undoes every change in one click.",
+   "zh": "一个按钮：为什么游戏口吃，为什么它会滞后以及为什么它不会开始。使用PresentMon停止进站测量，用简单的语言解释，仅修复Windows ，并在一次单击中撤消"
+  },
+  "1441517767": {
+   "by": "mymemory",
+   "src": "Agent skill: describe your stack in a sentence, get an architecture diagram with official logos",
+   "zh": "代理技能：在句子中描述您的堆栈，获取带有官方徽标的架构图"
+  },
+  "1441526188": {
+   "by": "mymemory",
+   "src": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
+   "zh": "免费Claude技能：带有three.js + Remotion的病毒式动画故事短片（ 3D世界中的2D角色）"
+  },
+  "1442056769": {
+   "by": "mymemory",
+   "src": "The lossless, headless coding agent harness. One 7 MB static binary, four tools, plain stdin/stdout, no silent cuts.",
+   "zh": "无损、无头编码代理线束。一个7 MB静态二进制文件，四个工具，普通标准输入/标准输出，无静音切割。"
+  },
+  "1442356805": {
+   "by": "mymemory",
+   "src": "Value your Steam stash in the terminal and print it as a share card: per game, per market, what sold and what sits. One Windows portable build, no account.",
+   "zh": "在终端中珍惜您的Steam藏品，并将其打印为共享卡片：每场比赛，每个市场，出售的内容和位置。一个Windows便携式版本，无帐户。"
+  },
+  "145693916": {
+   "by": "mymemory",
+   "src": "🐍 Geometric Computer Vision Library for Spatial AI",
+   "zh": "用于空间AI的🐍几何计算机视觉库"
   },
   "14614344": {
    "by": "llm",
@@ -5559,6 +5729,11 @@
    "by": "mymemory",
    "src": "An Open Source Machine Learning Framework for Everyone",
    "zh": "面向所有人的开源机器学习框架"
+  },
+  "470730648": {
+   "by": "mymemory",
+   "src": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+   "zh": "Hyprland是一款独立的、高度可定制的动态平铺Wayland合成器，不会牺牲外观。"
   },
   "476507964": {
    "by": "mymemory",
@@ -5659,6 +5834,11 @@
    "by": "mymemory",
    "src": "Official inference framework for 1-bit LLMs",
    "zh": "1位LLM的官方推理框架"
+  },
+  "872119017": {
+   "by": "mymemory",
+   "src": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks",
+   "zh": "🕷️ 最好的Web抓取框架，可处理从单个请求到全面爬网的所有内容！不要害羞，在这里加入： https://discord.gg/EMgGbDceNQ并按照这里获"
   },
   "888092115": {
    "by": "llm",

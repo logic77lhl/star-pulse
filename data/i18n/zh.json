@@ -5,6 +5,11 @@
    "src": "Kronos: A Foundation Model for the Language of Financial Markets",
    "zh": "Kronos ：金融市场语言的基础模型"
   },
+  "1020672081": {
+   "by": "mymemory",
+   "src": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+   "zh": "基于 剧作家和AI实现的闲鱼多任务实时/定时监控与智能分析系统配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中 ，找到心仪产品。"
+  },
   "1048065319": {
    "by": "mymemory",
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
@@ -154,6 +159,11 @@
    "by": "mymemory",
    "src": "Production-grade engineering skills for AI coding agents.",
    "zh": "AI编码代理的生产级工程技能。"
+  },
+  "1160497244": {
+   "by": "mymemory",
+   "src": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+   "zh": "轻盈、蓬松且始终免费- AWS本地模拟器替代方案"
   },
   "1161958643": {
    "by": "mymemory",
@@ -354,6 +364,11 @@
    "by": "mymemory",
    "src": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
    "zh": "轻量级的真实IDE中带有pi的Vibe代码，可根据您的工作方式自行定制—您需要的Vibe"
+  },
+  "1304469751": {
+   "by": "mymemory",
+   "src": "Local voice dictation for mac, windows and linux",
+   "zh": "Mac、Windows和Linux的本地语音听写"
   },
   "1307001698": {
    "by": "mymemory",
@@ -5265,10 +5280,20 @@
    "src": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
    "zh": "Php2shell高保真扫描仪（ CVE-2026-109618和CVE-2026-109619 ）"
   },
+  "1429489373": {
+   "by": "mymemory",
+   "src": "WeVisOne-VL is a powerful VLM by the WeChat Vision Team at Tencent, unifying object-level and pixel-level perception from points and boxes to masks and alpha mattes.",
+   "zh": "WeVisOne-VL是腾讯微信愿景团队的强大VLM ，统一了从点和框到面具和alpha mattes的对象级和像素级感知。"
+  },
   "1429490473": {
    "by": "mymemory",
    "src": "36 video effects for Claude Code: drop in a talking-head clip, type /effects orbit. Face tracking, behind-your-head layers. By @vibha.in.progress",
    "zh": "Claude Code的36个视频效果：放入一个会说话的片段，类型/效果轨道。面部跟踪，头后层。通过@ vibha.in.progress"
+  },
+  "1429553852": {
+   "by": "mymemory",
+   "src": "SSH, SFTP, port forwarding, VNC/RDP and an AI assistant、MCP in one native window — a Go desktop app built on Viva, with no webview.",
+   "zh": "SSH、SFTP、端口转发、VNC/RDP和AI助手、MCP在一个本机窗口中—基于Viva构建的Go桌面应用程序，没有Web视图。"
   },
   "1429583155": {
    "by": "mymemory",
@@ -5325,6 +5350,11 @@
    "src": "BAMA: Build Any Mac App. Agent skills to research, clone, design, build, optimize, and test native macOS apps with Swift and SwiftUI.",
    "zh": "BAMA ：构建任何Mac应用程序。使用Swift和SwiftUI研究、克隆、设计、构建、优化和测试原生macOS应用的代理技能。"
   },
+  "1432115490": {
+   "by": "mymemory",
+   "src": "Static XSS audit skill with 14 layers of checks for React, TypeScript, and JavaScript projects.",
+   "zh": "静态XSS审核技能，对React、TypeScript和JavaScript项目进行14层检查。"
+  },
   "1432413816": {
    "by": "mymemory",
    "src": "A Windows your apps recognize.",
@@ -5339,6 +5369,16 @@
    "by": "mymemory",
    "src": "A free AI assistant and survival library that runs on your own computer, with no internet needed. Shows the source of every answer.",
    "zh": "一个免费的人工智能助手和生存库，在您自己的计算机上运行，无需互联网。显示每个答案的来源。"
+  },
+  "1432590994": {
+   "by": "mymemory",
+   "src": "Search inside documents, code, and even screenshots - instantly and locally. A free, open-source file launcher with OCR, semantic search, and MCP agent access.",
+   "zh": "即时在本地搜索文档、代码甚至屏幕截图。具有OCR、语义搜索和MCP代理访问权限的免费开源文件启动器。"
+  },
+  "1432649361": {
+   "by": "mymemory",
+   "src": "AI-first external attack surface assessment with continuous discovery, evidence-based vulnerability validation, and developer-agent MCP integration.",
+   "zh": "通过持续发现、基于证据的漏洞验证和开发人员-代理MCP集成，进行首次人工智能外部攻击面评估。"
   },
   "1432695352": {
    "by": "mymemory",
@@ -5404,6 +5444,11 @@
    "by": "mymemory",
    "src": "A public release of the Steal My Bitcoin challenge",
    "zh": "“窃取我的比特币”挑战赛公开发布"
+  },
+  "1433819596": {
+   "by": "mymemory",
+   "src": "Cloudflare turnstile and challenge page solver in Rust (full reverse, request based)",
+   "zh": "Rust中的Cloudflare转门和挑战页面求解器（全反向，基于请求）"
   },
   "1433846971": {
    "by": "mymemory",
@@ -5530,6 +5575,11 @@
    "src": "VERY experimental Nintendo Switch 2 emulator",
    "zh": "非常实验性的Nintendo Switch 2仿真器"
   },
+  "1437936317": {
+   "by": "mymemory",
+   "src": "Complete logs of the experiments in the blog post 'LLMs can understand and write neural network weights'",
+   "zh": "博客文章“LLM可以理解和编写神经网络权重”中的完整实验日志"
+  },
   "1438018242": {
    "by": "mymemory",
    "src": "1407 张 AI 女装参考图集与虚拟试穿网站，支持中英检索、OpenAI Images / Gemini / 豆包及自定义 Base URL、API Key、模型。https://github.com/paipiange/nvzhuang",
@@ -5564,6 +5614,11 @@
    "by": "mymemory",
    "src": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
    "zh": "一种克劳德技能，将振动编码的人工智能外观用户界面转变为设计界面"
+  },
+  "1438656257": {
+   "by": "mymemory",
+   "src": "AI coworkers that run your work. Self-hostable, AGPL-3.0.",
+   "zh": "管理您工作的人工智能同事。自托管， AGPL-3.0。"
   },
   "1438724252": {
    "by": "mymemory",
@@ -5610,15 +5665,30 @@
    "src": "Install Linux next to Windows without a USB stick",
    "zh": "在没有U盘的情况下在Windows旁边安装Linux"
   },
+  "1440461338": {
+   "by": "mymemory",
+   "src": "21 个题材的 AI 漫剧全流程 Skill：一句点子生成企划案、资产图提示词、分集剧本、分镜与视频提示词。可用于 Claude Code、WorkBuddy、DeepSeek",
+   "zh": "21 个题材的 AI漫剧全流程技能：一句点子生成企划案、资产图提示词、分集剧本、分镜与视频提示词。可用于 Claude Code、 WorkBuddy、 Dee"
+  },
   "1440705679": {
    "by": "mymemory",
    "src": "Towards a More Autonomous Agent System",
    "zh": "迈向更自主的Agent系统"
   },
+  "1440927503": {
+   "by": "mymemory",
+   "src": "VERY experimental Nintendo Switch 2 emulator",
+   "zh": "非常实验性的Nintendo Switch 2仿真器"
+  },
   "1440956372": {
    "by": "mymemory",
    "src": "Craft Anything: understand how any software works, and craft your own.",
    "zh": "制作任何东西：了解任何软件的工作原理，并制作自己的软件。"
+  },
+  "1441183469": {
+   "by": "mymemory",
+   "src": "AVault - Call Recorder (No Root Required) | Privacy-first, hardware-encrypted audio vault for Android 12-16+. Rootless call recording via Shizuku with AES-256-GCM, biometrics & auto-cleanup.",
+   "zh": "AVault -通话录音机（无根要求） |以隐私为先、硬件加密的音频保管库，适用于Android 12-16 +。通过Shizuku使用AES-256-GCM、"
   },
   "1441272552": {
    "by": "mymemory",

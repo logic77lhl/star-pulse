@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T08:35:08+08:00",
+ "generated_at": "2026-11-05T08:52:39+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -53,10 +53,11 @@
   "2026-11-01",
   "2026-11-02",
   "2026-11-03",
-  "2026-11-04"
+  "2026-11-04",
+  "2026-11-05"
  ],
- "tracked_repos": 5058,
- "latest_date": "2026-11-04",
+ "tracked_repos": 5246,
+ "latest_date": "2026-11-05",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -533,21 +534,21 @@
   },
   {
    "date": "2026-10-27",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 55181,
    "gainers": 575,
    "top_name": "Gathin23/cleanyourtv",
    "top_delta": 4357,
-   "new_repos": 79,
+   "new_repos": 78,
    "prev": "2026-10-26"
   },
   {
    "date": "2026-10-28",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
-   "total_gain": 42461,
-   "gainers": 558,
+   "total_gain": 42342,
+   "gainers": 557,
    "top_name": "Nutlope/hallmark",
    "top_delta": 2694,
    "new_repos": 74,
@@ -555,10 +556,10 @@
   },
   {
    "date": "2026-10-29",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
-   "total_gain": 49979,
-   "gainers": 554,
+   "total_gain": 49918,
+   "gainers": 553,
    "top_name": "interplains/Zero-Breach-Toolkit",
    "top_delta": 2205,
    "new_repos": 67,
@@ -566,10 +567,10 @@
   },
   {
    "date": "2026-10-30",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
-   "total_gain": 40979,
-   "gainers": 512,
+   "total_gain": 40953,
+   "gainers": 511,
    "top_name": "pbakaus/impeccable",
    "top_delta": 2666,
    "new_repos": 124,
@@ -577,10 +578,10 @@
   },
   {
    "date": "2026-10-31",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
-   "total_gain": 39276,
-   "gainers": 526,
+   "total_gain": 39189,
+   "gainers": 525,
    "top_name": "ccch1mneyyy/dsh-Go",
    "top_delta": 2280,
    "new_repos": 129,
@@ -588,10 +589,10 @@
   },
   {
    "date": "2026-11-01",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
-   "total_gain": 40617,
-   "gainers": 489,
+   "total_gain": 40576,
+   "gainers": 488,
    "top_name": "pingdotgg/t3code",
    "top_delta": 2702,
    "new_repos": 185,
@@ -599,10 +600,10 @@
   },
   {
    "date": "2026-11-02",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
-   "total_gain": 46676,
-   "gainers": 484,
+   "total_gain": 46644,
+   "gainers": 483,
    "top_name": "deepseek-ai/dsh-superagent-prototype",
    "top_delta": 4986,
    "new_repos": 76,
@@ -610,10 +611,10 @@
   },
   {
    "date": "2026-11-03",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 54663,
-   "gainers": 432,
+   "total_gain": 54603,
+   "gainers": 431,
    "top_name": "deepseek-ai/dsh-superagent-prototype",
    "top_delta": 6334,
    "new_repos": 266,
@@ -621,139 +622,150 @@
   },
   {
    "date": "2026-11-04",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 46745,
-   "gainers": 509,
+   "total_gain": 46672,
+   "gainers": 508,
    "top_name": "storytold/craft-anything",
    "top_delta": 3872,
    "new_repos": 115,
    "prev": "2026-11-03"
+  },
+  {
+   "date": "2026-11-05",
+   "repos": 798,
+   "is_first": false,
+   "total_gain": 41254,
+   "gainers": 447,
+   "top_name": "storytold/craft-anything",
+   "top_delta": 3394,
+   "new_repos": 190,
+   "prev": "2026-11-04"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 72857,
-   "stars": 73072,
+   "delta": 73221,
+   "stars": 73436,
    "language": "HTML"
   },
   {
-   "full_name": "debpalash/VoiceStudio",
-   "delta": 72627,
-   "stars": 100055,
-   "language": "Python"
-  },
-  {
    "full_name": "mattpocock/skills",
-   "delta": 49975,
-   "stars": 311446,
+   "delta": 51840,
+   "stars": 313311,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 46165,
-   "stars": 183732,
+   "delta": 46980,
+   "stars": 184547,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 38677,
-   "stars": 296558,
+   "delta": 39373,
+   "stars": 297254,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 31970,
-   "stars": 93130,
+   "delta": 32307,
+   "stars": 93467,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 30211,
-   "stars": 62555,
+   "delta": 30453,
+   "stars": 62797,
    "language": "JavaScript"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 28645,
-   "stars": 78361,
+   "delta": 29233,
+   "stars": 78949,
    "language": "TypeScript"
   },
   {
+   "full_name": "cathrynlavery/diagram-design",
+   "delta": 25647,
+   "stars": 65015,
+   "language": "HTML"
+  },
+  {
    "full_name": "alibaba/open-code-review",
-   "delta": 25557,
-   "stars": 49361,
+   "delta": 25626,
+   "stars": 49430,
    "language": "Go"
   },
   {
-   "full_name": "cathrynlavery/diagram-design",
-   "delta": 25293,
-   "stars": 64661,
-   "language": "HTML"
+   "full_name": "JustVugg/colibri",
+   "delta": 17467,
+   "stars": 47763,
+   "language": "C"
   }
  ],
- "cumulative_comparable": 207,
+ "cumulative_comparable": 206,
  "daily_top": [
   {
    "full_name": "storytold/craft-anything",
    "language": "Rust",
-   "delta": 3872,
-   "stars": 8378
-  },
-  {
-   "full_name": "deepseek-ai/dsh-superagent-prototype",
-   "language": "TypeScript",
-   "delta": 3247,
-   "stars": 16717
+   "delta": 3394,
+   "stars": 11772
   },
   {
    "full_name": "vercel-labs/agent-desktop",
    "language": "Rust",
-   "delta": 2779,
-   "stars": 12719
-  },
-  {
-   "full_name": "D4Vinci/Scrapling",
-   "language": "Python",
-   "delta": 1838,
-   "stars": 94818
+   "delta": 2373,
+   "stars": 15092
   },
   {
    "full_name": "ccch1mneyyy/dsh-Go",
    "language": "Dart",
-   "delta": 1478,
-   "stars": 7450
-  },
-  {
-   "full_name": "BryceYuuu/RUN",
-   "language": "Python",
-   "delta": 1446,
-   "stars": 3032
-  },
-  {
-   "full_name": "heydamir/unslop",
-   "language": "JavaScript",
-   "delta": 1201,
-   "stars": 7533
+   "delta": 2036,
+   "stars": 9486
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 1160,
-   "stars": 311446
+   "delta": 1865,
+   "stars": 313311
+  },
+  {
+   "full_name": "deepseek-ai/dsh-superagent-prototype",
+   "language": "TypeScript",
+   "delta": 1852,
+   "stars": 18569
+  },
+  {
+   "full_name": "D4Vinci/Scrapling",
+   "language": "Python",
+   "delta": 1719,
+   "stars": 96537
+  },
+  {
+   "full_name": "govijr/terminal-mac",
+   "language": "Swift",
+   "delta": 1269,
+   "stars": 1528
+  },
+  {
+   "full_name": "heydamir/unslop",
+   "language": "JavaScript",
+   "delta": 1144,
+   "stars": 8677
   },
   {
    "full_name": "thedotmack/claude-mem",
    "language": "TypeScript",
-   "delta": 1089,
-   "stars": 111884
+   "delta": 970,
+   "stars": 112854
   },
   {
-   "full_name": "Donchitos/Claude-Code-Game-Studios",
-   "language": "Shell",
-   "delta": 1033,
-   "stars": 34652
+   "full_name": "floci-io/floci",
+   "language": "Java",
+   "delta": 850,
+   "stars": 29618
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

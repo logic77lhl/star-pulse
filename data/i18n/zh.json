@@ -10,6 +10,11 @@
    "src": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
    "zh": "基于 剧作家和AI实现的闲鱼多任务实时/定时监控与智能分析系统配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中 ，找到心仪产品。"
   },
+  "1042367133": {
+   "by": "mymemory",
+   "src": "💫 Toolkit to help you get started with SDD or any other process!",
+   "zh": "帮助您开始使用SDD或任何其他流程的工💫具包！"
+  },
   "1048065319": {
    "by": "mymemory",
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
@@ -170,6 +175,11 @@
    "src": "Computer use CLI for AI agents",
    "zh": "AI代理的计算机使用CLI"
   },
+  "1162410458": {
+   "by": "mymemory",
+   "src": "📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达",
+   "zh": "📡 您自己的人工智能新闻雷达。生成英文和中文的每日简报。| 用 AI 构建你专属的新闻雷达"
+  },
   "1164477708": {
    "by": "mymemory",
    "src": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
@@ -209,6 +219,11 @@
    "by": "llm",
    "src": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
    "zh": "开放多智能体互动课堂：一键获得沉浸式多智能体学习体验"
+  },
+  "1179264259": {
+   "by": "mymemory",
+   "src": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+   "zh": "使用Garry Tan确切的Claude Code设置： 23个自以为是的工具，分别担任首席执行官、设计师、工程经理、发布经理、文档工程师和QA"
   },
   "1183888342": {
    "by": "mymemory",
@@ -284,6 +299,11 @@
    "by": "mymemory",
    "src": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
    "zh": "Claude Code、Cursor和Codex的防AI倾斜设计技能。"
+  },
+  "1222953295": {
+   "by": "mymemory",
+   "src": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM",
+   "zh": "Auto Ontology是一个Python框架，用于在数据上构建基于图的语义推理层。它为LLM提供了确定性的查询生成、更好的上下文检索和更可解释的人工智能"
   },
   "1223939135": {
    "by": "llm",
@@ -385,6 +405,11 @@
    "src": "A Tiny biped duck robot 🦆",
    "zh": "微型双足鸭机器人 🦆"
   },
+  "1319154759": {
+   "by": "mymemory",
+   "src": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+   "zh": "在8.24 GB RAM的单个CPU上运行推理的2.78万亿参数Kimi K3。便携式C99 ：无BLAS、无框架、无GPU。"
+  },
   "1322250666": {
    "by": "mymemory",
    "src": "Tool for automatic PS5 executables porting to Linux and Windows",
@@ -394,6 +419,11 @@
    "by": "mymemory",
    "src": "Open-source Grok Bot alternative with a virtual machine that bots can use",
    "zh": "使用机器人可以使用的虚拟机的开源Grok机器人替代方案"
+  },
+  "1331882604": {
+   "by": "mymemory",
+   "src": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus e",
+   "zh": "从任何AI代理商处获取适合制作的图像、视频、音频和3D ：通过场景MCP选择合适的型号、消费前定价并保持角色和品牌一致的技能，以及"
   },
   "1332461149": {
    "by": "mymemory",
@@ -5310,6 +5340,11 @@
    "src": "A Claude Code plugin that teaches Claude to write idiomatic, robust Rust",
    "zh": "Claude Code插件，教Claude编写习惯用法、强健的Rust"
   },
+  "1430664237": {
+   "by": "mymemory",
+   "src": "Connect AI agents to real iPhones and Androids",
+   "zh": "将人工智能代理连接到真实的iPhone和机器人"
+  },
   "1431010194": {
    "by": "mymemory",
    "src": "Create Apple style dimensional drawings of UI components.",
@@ -5354,6 +5389,11 @@
    "by": "mymemory",
    "src": "Static XSS audit skill with 14 layers of checks for React, TypeScript, and JavaScript projects.",
    "zh": "静态XSS审核技能，对React、TypeScript和JavaScript项目进行14层检查。"
+  },
+  "1432397417": {
+   "by": "mymemory",
+   "src": "赛博小雅直播版 · 组件版数字人（Vidu s2）· 免费开源 AGPL-3.0 · 作者：天工开帧（抖音/B站/YouTube 同名）",
+   "zh": "赛博小雅直播版 · 组件版数字人（ Vidu s2 ） · 免费开源 AGPL-3.0 · 作者：天工开帧 （抖音/B站/YouTube 同名）"
   },
   "1432413816": {
    "by": "mymemory",
@@ -5555,6 +5595,11 @@
    "src": "An AI live-stream host that runs on one server: voice, face, chat, memory, posts. The base yoki runs on. By Jacke_pp · contact: DM @Jacke_pp on X",
    "zh": "在一台服务器上运行的AI直播主机：语音、面部、聊天、记忆、帖子。基础yoki继续运行。By Jacke_pp ·联系人： DM @ Jacke_pp on X"
   },
+  "1436993930": {
+   "by": "mymemory",
+   "src": "A AI Browser run any site JavaScript from Python with the real Firefox engine. Headless SpiderMonkey + Necko for automation and scraping.",
+   "zh": "AI浏览器使用真正的Firefox引擎从Python运行任何站点JavaScript。无头蜘蛛猴+ Necko ，用于自动化和刮擦。"
+  },
   "1437131455": {
    "by": "mymemory",
    "src": "Git for Global Law: the law of every country as one git history, each country's record a submodule, every commit one law taking effect",
@@ -5620,6 +5665,11 @@
    "src": "AI coworkers that run your work. Self-hostable, AGPL-3.0.",
    "zh": "管理您工作的人工智能同事。自托管， AGPL-3.0。"
   },
+  "1438661890": {
+   "by": "mymemory",
+   "src": "逆向一切视频：实拍口播、桌拍、AI 视频、3D、代码动效、混剪，逐镜拆出画面、花字、剪辑和声音是怎么做的，并给出复刻方案。Reverse-engineer any video, shot by shot.",
+   "zh": "逆向一切视频：实拍口播、桌拍、 AI 视频、3D、代码动效、混剪 ，逆并给出复刻方案。向逐镜拆出画面、花字、剪辑和声音是怎么做的工程任何视频，通过镜头拍摄。"
+  },
   "1438724252": {
    "by": "mymemory",
    "src": "Pika H3 Flex: video and audio generation inference",
@@ -5629,6 +5679,11 @@
    "by": "mymemory",
    "src": "HairDeck: Animation-Ready Stylized Hair Cards from a Single Image",
    "zh": "HairDeck ：单张图像中的动画风格发卡"
+  },
+  "1439006206": {
+   "by": "mymemory",
+   "src": "A bilingual reference studio for poses, costumes, and AI character creation.",
+   "zh": "提供姿势、服装和人工智能角色创作的双语参考工作室。"
   },
   "1439244319": {
    "by": "mymemory",
@@ -5659,6 +5714,11 @@
    "by": "mymemory",
    "src": "Autonomous pentest legion — AI commander + worker swarm + layered fact-intent graph. 3rd Tencent Intelligent Attack-Defense online champion (634 teams · 8h unattended · 1B tokens beat 4.5B). The Nüwa",
    "zh": "自主Pentest军团— AI指挥官+工作者群体+分层事实意图。第三届腾讯智能攻击防御在线冠军（ 634支队伍· 8小时无人值守· 10亿代币击败4.5B ）。"
+  },
+  "1440151033": {
+   "by": "mymemory",
+   "src": "A research prototype for zero-knowledge proofs of AI inference. Not maintained.",
+   "zh": "人工智能推断零知识证明的研究原型。未维护。"
   },
   "1440160468": {
    "by": "mymemory",
@@ -5705,6 +5765,11 @@
    "src": "Agent skill: describe your stack in a sentence, get an architecture diagram with official logos",
    "zh": "代理技能：在句子中描述您的堆栈，获取带有官方徽标的架构图"
   },
+  "1441521221": {
+   "by": "mymemory",
+   "src": "知了 Cicada · 任意会议与直播的实时字幕、同声传译、AI 会议纪要（macOS）。Live subtitles, interpreting and meeting notes for any call or stream on your Mac.",
+   "zh": "知了 Cicada · 任意会议与直播的实时字幕、同声传译、AI 会议纪要（ macOS ） Mac上任何通话或流媒体。的实时字幕、口译和会议笔记。"
+  },
   "1441526188": {
    "by": "mymemory",
    "src": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
@@ -5715,10 +5780,30 @@
    "src": "The lossless, headless coding agent harness. One 7 MB static binary, four tools, plain stdin/stdout, no silent cuts.",
    "zh": "无损、无头编码代理线束。一个7 MB静态二进制文件，四个工具，普通标准输入/标准输出，无静音切割。"
   },
+  "1442223451": {
+   "by": "mymemory",
+   "src": "Uncensored AI API and browser chat: DeepSeek and GLM models, streaming, Python and TypeScript examples, pricing and setup guides.",
+   "zh": "未经审查的AI API和浏览器聊天： DeepSeek和GLM模型、流媒体、Python和TypeScript示例、定价和设置指南。"
+  },
   "1442356805": {
    "by": "mymemory",
    "src": "Value your Steam stash in the terminal and print it as a share card: per game, per market, what sold and what sits. One Windows portable build, no account.",
    "zh": "在终端中珍惜您的Steam藏品，并将其打印为共享卡片：每场比赛，每个市场，出售的内容和位置。一个Windows便携式版本，无帐户。"
+  },
+  "1443759946": {
+   "by": "mymemory",
+   "src": "Entire MacOS running in your terminal.",
+   "zh": "整个MacOS在您的终端中运行。"
+  },
+  "1443985070": {
+   "by": "mymemory",
+   "src": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
+   "zh": "让你的命令行 代理 在后台自己接活、自己跟进到底平时不烦你；遇到拿不准的事才发卡片找你拍板。"
+  },
+  "1444372497": {
+   "by": "mymemory",
+   "src": "YellowFruit third-party client",
+   "zh": "YellowFruit第三方客户端"
   },
   "145693916": {
    "by": "mymemory",
@@ -5795,6 +5880,11 @@
    "src": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 360+ one-click services on your own servers.",
    "zh": "Vercel、Heroku和Netlify的开源、自托管PaaS替代品，让您可以在自己的服务器上轻松部署静态站点、数据库、全栈应用程序和360 +一键式服务。"
   },
+  "441903012": {
+   "by": "mymemory",
+   "src": "This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps",
+   "zh": "这个存储库最初是我自己在公共项目中的学习，现在已经成为社区中许多人的结构化学习地图。我们有3年的时间涵盖DevOps的所有内容"
+  },
   "45717250": {
    "by": "mymemory",
    "src": "An Open Source Machine Learning Framework for Everyone",
@@ -5870,6 +5960,11 @@
    "src": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
    "zh": "具有强GPU加速的Python中的张量和动态神经网络"
   },
+  "662766482": {
+   "by": "mymemory",
+   "src": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+   "zh": "🚀 公关代理人：最初的开源公关审稿人。此项目不是Qodo免费会员等级。"
+  },
   "664013991": {
    "by": "mymemory",
    "src": "📨 The ultimate agentic social media scheduling tool 🤖",
@@ -5899,6 +5994,11 @@
    "by": "mymemory",
    "src": "A native, user-mode, multi-process, graphical debugger.",
    "zh": "本机、用户模式、多进程、图形调试器。"
+  },
+  "770153867": {
+   "by": "mymemory",
+   "src": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+   "zh": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。使用自动化AI工作流程从主题或关键字生成高清短视频。"
   },
   "838253246": {
    "by": "mymemory",

@@ -15,6 +15,11 @@
    "src": "💫 Toolkit to help you get started with SDD or any other process!",
    "zh": "帮助您开始使用SDD或任何其他流程的工💫具包！"
   },
+  "1044296738": {
+   "by": "mymemory",
+   "src": "Open-Source Frontier Voice AI",
+   "zh": "开源前沿语音AI"
+  },
   "1048065319": {
    "by": "mymemory",
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
@@ -99,6 +104,11 @@
    "by": "mymemory",
    "src": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
    "zh": "在工具输出、日志、文件和RAG块到达LLM之前对其进行压缩。编码代理的令牌减少20% ， JSON的令牌减少60-95% ，答案相同。库、代理、MCP服务器。"
+  },
+  "1132001614": {
+   "by": "mymemory",
+   "src": "Browser automation CLI for AI agents",
+   "zh": "适用于AI代理的浏览器自动化CLI"
   },
   "1134543109": {
    "by": "mymemory",
@@ -245,6 +255,11 @@
    "src": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video produc",
    "zh": "首个开源智能体视频制作系统：12 条生产流水线、100+ 工具、700+ 技能与制作知识文件"
   },
+  "1197652028": {
+   "by": "mymemory",
+   "src": "Agent Skills for Google products and technologies",
+   "zh": "Google产品和技术的代理技能"
+  },
   "1200597263": {
    "by": "mymemory",
    "src": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, e",
@@ -284,6 +299,11 @@
    "by": "mymemory",
    "src": "Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, Cursor & any agent",
    "zh": "Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计 ：网页/App/可编辑PPTX原型/动画/信息图· · 84 六个候选挑三"
+  },
+  "1216954187": {
+   "by": "mymemory",
+   "src": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+   "zh": "ConardLi的开源Skills系列，包括网页设计、知识检索、图像生成等。"
   },
   "1219009070": {
    "by": "mymemory",
@@ -5395,6 +5415,11 @@
    "src": "赛博小雅直播版 · 组件版数字人（Vidu s2）· 免费开源 AGPL-3.0 · 作者：天工开帧（抖音/B站/YouTube 同名）",
    "zh": "赛博小雅直播版 · 组件版数字人（ Vidu s2 ） · 免费开源 AGPL-3.0 · 作者：天工开帧 （抖音/B站/YouTube 同名）"
   },
+  "1432398049": {
+   "by": "mymemory",
+   "src": "Uncensored AI API and models — one key for Claude, GPT, Gemini, Grok, DeepSeek, GLM, Qwen and Kimi, with uncensored and abliterated variants where available. OpenAI- and Anthropic-compatible. Pay per",
+   "zh": "未经审查的AI API和模型— Claude、GPT、Gemini、Grok、DeepSeek、GLM、Qwen和Kimi的一个密钥，在可用的情况下具有未经审查"
+  },
   "1432413816": {
    "by": "mymemory",
    "src": "A Windows your apps recognize.",
@@ -5635,6 +5660,11 @@
    "src": "A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same.",
    "zh": "一种Claude Code技能，可对任何动画帧进行逐帧逆向工程，然后证明副本的移动方式相同。"
   },
+  "1438282469": {
+   "by": "mymemory",
+   "src": "341 种代码动画风格提示词、196 张参考静帧与离线挑选器，封装为 Claude Code / Codex Skill，支持一键导入与 HTML 视频渲染。",
+   "zh": "341 种代码动画风格提示词、196 张参考静帧与离线挑选器，封装为 Claude Code/Codex Skill ，支持一键导入与 HTML 视频渲染。"
+  },
   "1438326535": {
    "by": "mymemory",
    "src": "RUN · 润：海外移居手册（欧洲 36 国 · 110 条路线 · 主要移民地区）",
@@ -5775,6 +5805,16 @@
    "src": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion",
    "zh": "免费Claude技能：带有three.js + Remotion的病毒式动画故事短片（ 3D世界中的2D角色）"
   },
+  "1441849727": {
+   "by": "mymemory",
+   "src": "Nintendo Switch userland code execution using Civilization 7 game cartridge",
+   "zh": "任天堂Switch用户区代码执行使用文明7游戏墨盒"
+  },
+  "1441897000": {
+   "by": "mymemory",
+   "src": "Blazing-fast native notes app for macOS & Windows. Rust + GPUI, local-first, compatible with Feishu/Lark DocxXML.",
+   "zh": "适用于macOS和Windows的超快速原生笔记应用。Rust + GPUI ，本地优先，兼容Feishu/Lark DocxXML。"
+  },
   "1442056769": {
    "by": "mymemory",
    "src": "The lossless, headless coding agent harness. One 7 MB static binary, four tools, plain stdin/stdout, no silent cuts.",
@@ -5805,6 +5845,21 @@
    "src": "YellowFruit third-party client",
    "zh": "YellowFruit第三方客户端"
   },
+  "1444569395": {
+   "by": "mymemory",
+   "src": "Ask 970 data brokers to delete your data. Free, local, no account, no server.",
+   "zh": "要求970个数据代理删除您的数据。免费、本地、无帐户、无服务器。"
+  },
+  "1444635695": {
+   "by": "mymemory",
+   "src": "Muse4AI — let your AI agent make the pictures and the videos. Local Windows bridge for Muse via REST, MCP, and OAuth.",
+   "zh": "Muse4AI —让您的AI代理制作图片和视频。通过REST、MCP和OAuth为Muse提供本地Windows网桥。"
+  },
+  "1445802355": {
+   "by": "mymemory",
+   "src": "Google_AI_Pro_2Year_ZeroCost_Auto",
+   "zh": "Google_AI_Pro_2年_零成本_自动"
+  },
   "145693916": {
    "by": "mymemory",
    "src": "🐍 Geometric Computer Vision Library for Spatial AI",
@@ -5834,6 +5889,11 @@
    "by": "mymemory",
    "src": "One has no future if one couldn't teach themself.",
    "zh": "一个人如果不能自学，就没有未来。"
+  },
+  "18106269": {
+   "by": "mymemory",
+   "src": "Extremely Fast Compression algorithm",
+   "zh": "极快的压缩算法"
   },
   "18408635": {
    "by": "mymemory",

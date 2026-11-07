@@ -35,6 +35,11 @@
    "src": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
    "zh": "VoxCPM2 ：用于多语言语音生成、创意语音设计和真实克隆的无标记TTS"
   },
+  "106017343": {
+   "by": "mymemory",
+   "src": "A utility-first CSS framework for rapid UI development.",
+   "zh": "实用程序优先的CSS框架，用于快速UI开发。"
+  },
   "1061041576": {
    "by": "mymemory",
    "src": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
@@ -114,6 +119,11 @@
    "by": "mymemory",
    "src": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
    "zh": "在工具输出、日志、文件和RAG块到达LLM之前对其进行压缩。编码代理的令牌减少20% ， JSON的令牌减少60-95% ，答案相同。库、代理、MCP服务器。"
+  },
+  "1131202426": {
+   "by": "mymemory",
+   "src": "An open source design system that's fully customizable and agent ready",
+   "zh": "完全可定制和代理就绪的开源设计系统"
   },
   "1132001614": {
    "by": "mymemory",
@@ -405,6 +415,11 @@
    "src": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search",
    "zh": "XERJ是人工智能搜索数据的新方式。其自动索引功能可激活代理了解您的数据，而无需浪费grep和sed的代币。一个命令可对代码、文档、日志和PDF进行索引以进行搜"
   },
+  "1285492676": {
+   "by": "mymemory",
+   "src": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
+   "zh": "通过家庭网络从家庭助理控制您的三星设备，无需云帐户。"
+  },
   "1286080397": {
    "by": "llm",
    "src": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
@@ -444,6 +459,11 @@
    "by": "mymemory",
    "src": "Tool for automatic PS5 executables porting to Linux and Windows",
    "zh": "用于自动将PS5可执行文件移植到Linux和Windows的工具"
+  },
+  "1324949198": {
+   "by": "mymemory",
+   "src": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣",
+   "zh": "一个上下文压缩插件，用于长达一个月的单个会话（数十亿令牌） ，小上下文窗口（ 100K上下文就足够了）和令牌节上下文压缩插件月级长会话会话省兼顾小窗口（令牌减少"
   },
   "1331261687": {
    "by": "mymemory",
@@ -5885,6 +5905,16 @@
    "src": "Value your Steam stash in the terminal and print it as a share card: per game, per market, what sold and what sits. One Windows portable build, no account.",
    "zh": "在终端中珍惜您的Steam藏品，并将其打印为共享卡片：每场比赛，每个市场，出售的内容和位置。一个Windows便携式版本，无帐户。"
   },
+  "1442375804": {
+   "by": "mymemory",
+   "src": "Emulate macOS on iOS and iPadOS",
+   "zh": "在iOS和iPadOS上模拟macOS"
+  },
+  "1443186633": {
+   "by": "mymemory",
+   "src": "A small, fast container runtime for macOS, Windows and Linux",
+   "zh": "适用于macOS、Windows和Linux的小型快速容器运行时"
+  },
   "1443759946": {
    "by": "mymemory",
    "src": "Entire MacOS running in your terminal.",
@@ -5899,6 +5929,11 @@
    "by": "mymemory",
    "src": "3D modeling in Python, built for LLMs.",
    "zh": "Python中的3D建模，专为LLM构建。"
+  },
+  "1444112593": {
+   "by": "mymemory",
+   "src": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
+   "zh": "用代码制作的电影。短片、YouTube长视频、广告、解释器和音乐视频： AI编码代理编写脚本、构建代码中的每个帧、设计声音并向您提供MP4。"
   },
   "1444372497": {
    "by": "mymemory",
@@ -5920,10 +5955,35 @@
    "src": "A lightweight 2.5D character player for the web, with lip sync and webcam face tracking.",
    "zh": "轻巧的2.5D网络角色扮演者，具有唇部同步和网络摄像头面部跟踪功能。"
   },
+  "1445695976": {
+   "by": "mymemory",
+   "src": "A native music player you extend with plugins",
+   "zh": "使用插件扩展的原生音乐播放器"
+  },
   "1445802355": {
    "by": "mymemory",
    "src": "Google_AI_Pro_2Year_ZeroCost_Auto",
    "zh": "Google_AI_Pro_2年_零成本_自动"
+  },
+  "1446515117": {
+   "by": "mymemory",
+   "src": "GIF 工厂：按风格制作像素、人物与宠物、粘土吉祥物、光栅卡与动态海报的 GIF Skill。",
+   "zh": "GIF 工厂：按风格制作像素、人物与宠物、粘土吉祥物、光栅卡与动态海报的 GIF技能。"
+  },
+  "1446962520": {
+   "by": "mymemory",
+   "src": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
+   "zh": "《塞尔达传说：时光之塔》原生重编任天堂Switch 2翻拍"
+  },
+  "1447586025": {
+   "by": "mymemory",
+   "src": "Headless 3D and VFX engine for agents. Research preview.",
+   "zh": "代理的无头3D和VFX引擎。研究预览。"
+  },
+  "1448807268": {
+   "by": "mymemory",
+   "src": "Ocarina of Time running natively on Windows, no emulator. Built on your PC from your own copy. No game files included.",
+   "zh": "时间之笛在Windows上本机运行，没有模拟器。从您自己的副本构建在您的PC上。不包括游戏文件。"
   },
   "145693916": {
    "by": "mymemory",
@@ -5944,6 +6004,11 @@
    "by": "mymemory",
    "src": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
    "zh": "FastAPI框架，高性能，易于学习，快速编码，可投入生产"
+  },
+  "162998479": {
+   "by": "mymemory",
+   "src": "Hunt down social media accounts by username across social networks",
+   "zh": "通过社交网络中的用户名查找社交媒体帐户"
   },
   "173228436": {
    "by": "mymemory",

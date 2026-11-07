@@ -10,6 +10,11 @@
    "src": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
    "zh": "基于 剧作家和AI实现的闲鱼多任务实时/定时监控与智能分析系统配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中 ，找到心仪产品。"
   },
+  "10270250": {
+   "by": "mymemory",
+   "src": "The library for web and native user interfaces.",
+   "zh": "用于Web和本机用户界面的库。"
+  },
   "1042367133": {
    "by": "mymemory",
    "src": "💫 Toolkit to help you get started with SDD or any other process!",
@@ -94,6 +99,11 @@
    "by": "mymemory",
    "src": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support",
    "zh": "人工智能将文档或主题转换为真实的原生PowerPoint演示文稿，包括原生形状、转场和动画、数据支持的图表和表格、演讲者笔记中的音频旁白和支持"
+  },
+  "11225014": {
+   "by": "mymemory",
+   "src": "Distributed reliable key-value store for the most critical data of a distributed system",
+   "zh": "分布式系统最关键数据的分布式可靠键值存储"
   },
   "1124219907": {
    "by": "mymemory",
@@ -5475,6 +5485,11 @@
    "src": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
    "zh": "词光 · Word Atlas — 7,298个单词的雅思图解词汇，英国/美国音频和FSRS复习。开源APP + CC BY 4.0数据集。"
   },
+  "1433010899": {
+   "by": "mymemory",
+   "src": "Capri, the Project Capricorn construct from Cyberpunk: Edgerunners 2, living on your desktop and narrating what Claude Code is doing.",
+   "zh": "Capri ，来自赛博朋克： Edgerunners 2的摩羯座项目构造，生活在您的桌面上，并讲述Claude Code正在做什么。"
+  },
   "1433057196": {
    "by": "mymemory",
    "src": "Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation and repression records across the former USSR. Replies in your language.",
@@ -5505,10 +5520,20 @@
    "src": "Decrypt IPA's on MacOS",
    "zh": "在MacOS上解密IPA"
   },
+  "1433651946": {
+   "by": "mymemory",
+   "src": "Caldo's skills",
+   "zh": "卡尔多的技能"
+  },
   "1433653089": {
    "by": "mymemory",
    "src": "A public release of the Steal My Bitcoin challenge",
    "zh": "“窃取我的比特币”挑战赛公开发布"
+  },
+  "1433732249": {
+   "by": "mymemory",
+   "src": "Draw a pixel-art koi from a GitHub account's public activity, as a looping GIF for a profile README.",
+   "zh": "从GitHub帐户的公共活动中绘制像素艺术koi ，作为配置文件自述文件的循环GIF。"
   },
   "1433819596": {
    "by": "mymemory",
@@ -5570,10 +5595,20 @@
    "src": "Native Windows video motion capture with ExMR, FlowHMR and GVHMR, contact correction, humanoid retargeting, and FBX/VMD export.",
    "zh": "使用ExMR、FlowHMR和GVHMR、接触校正、人形重定向和FBX/VMD导出的本机Windows视频动作捕获。"
   },
+  "1435318598": {
+   "by": "mymemory",
+   "src": "映间 MARGIN · 重新设计 B 站首页与视频播放页预览版 (Chrome / Edge 扩展) | A Chrome/Edge extension that redesigns Bilibili home, video and search pages with liquid glass controls and shader backgrounds.",
+   "zh": "映间 边距· 重新设计 B 站首页与视频播放页预览版 （ Chrome/Edge 扩展） |一个Chrome/Edge扩展，使用液态玻璃控件和着色器背景重新设计"
+  },
   "1435333593": {
    "by": "mymemory",
    "src": "DeepSeek API pricing guide for models, cache hits, and peak hours (2026).",
    "zh": "DeepSeek API模型、缓存命中率和高峰时段定价指南（ 2026年）。"
+  },
+  "1435375337": {
+   "by": "mymemory",
+   "src": "This repository will be used to develop a rain generator, actually it use white noises to simulate wind and have an integrated thunderstorm simulator.",
+   "zh": "该存储库将用于开发雨水发生器，实际上它使用白噪声来模拟风，并具有集成的雷暴模拟器。"
   },
   "1435475558": {
    "by": "mymemory",
@@ -5609,6 +5644,11 @@
    "by": "mymemory",
    "src": "Free interactive 3D science lessons for high school · 铜匠实验室 · https://lab.tongjiang.app",
    "zh": "高中免费互动3D科学课· 铜匠实验室 · https://lab.tongjiang.app"
+  },
+  "1436650356": {
+   "by": "mymemory",
+   "src": "A mind map for your Claude/ChatGPT chats — macOS menu-bar app",
+   "zh": "Claude/ChatGPT聊天的思维导图— macOS菜单栏应用"
   },
   "1436721854": {
    "by": "mymemory",
@@ -5659,6 +5699,11 @@
    "by": "mymemory",
    "src": "A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same.",
    "zh": "一种Claude Code技能，可对任何动画帧进行逐帧逆向工程，然后证明副本的移动方式相同。"
+  },
+  "1438135351": {
+   "by": "mymemory",
+   "src": "澜姿：从姿势线稿和衣装集给社区鲸鱼娘大肥鱼模特出图，调整姿势加变装，也可装进 DeepSeek Harness。Lanpose generates images of the community whale-girl Dafeiyu from pose sketches and costumes, and installs into DeepSeek Harness.",
+   "zh": "DeepSeek Harness Lanpose也可装进从姿势。素描和服装中生成社区鲸澜姿从姿势线稿和衣装集给社区鲸鱼娘大肥鱼模特出图调整姿势加变装鱼女孩Daf"
   },
   "1438282469": {
    "by": "mymemory",
@@ -5765,6 +5810,11 @@
    "src": "Towards a More Autonomous Agent System",
    "zh": "迈向更自主的Agent系统"
   },
+  "1440888502": {
+   "by": "mymemory",
+   "src": "High-performance remote desktop over QUIC · Rust + Tauri + React",
+   "zh": "基于QUIC的高性能远程桌面· Rust + Tauri + React"
+  },
   "1440927503": {
    "by": "mymemory",
    "src": "VERY experimental Nintendo Switch 2 emulator",
@@ -5815,6 +5865,11 @@
    "src": "Blazing-fast native notes app for macOS & Windows. Rust + GPUI, local-first, compatible with Feishu/Lark DocxXML.",
    "zh": "适用于macOS和Windows的超快速原生笔记应用。Rust + GPUI ，本地优先，兼容Feishu/Lark DocxXML。"
   },
+  "1441959881": {
+   "by": "mymemory",
+   "src": "StudyOnTV (Tiledaoti TV) — open-source Android TV app where kids unlock screen time by answering questions. Runs fully on the TV: no server, no account. Parents scan a QR code and manage questions fro",
+   "zh": "StudyOnTV （ Tiledaoti TV ） —开源Android TV应用程序，孩子们可以通过回答问题来解锁屏幕时间。在电视上完全运行：没有服务器，没"
+  },
   "1442056769": {
    "by": "mymemory",
    "src": "The lossless, headless coding agent harness. One 7 MB static binary, four tools, plain stdin/stdout, no silent cuts.",
@@ -5840,6 +5895,11 @@
    "src": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
    "zh": "让你的命令行 代理 在后台自己接活、自己跟进到底平时不烦你；遇到拿不准的事才发卡片找你拍板。"
   },
+  "1444005452": {
+   "by": "mymemory",
+   "src": "3D modeling in Python, built for LLMs.",
+   "zh": "Python中的3D建模，专为LLM构建。"
+  },
   "1444372497": {
    "by": "mymemory",
    "src": "YellowFruit third-party client",
@@ -5854,6 +5914,11 @@
    "by": "mymemory",
    "src": "Muse4AI — let your AI agent make the pictures and the videos. Local Windows bridge for Muse via REST, MCP, and OAuth.",
    "zh": "Muse4AI —让您的AI代理制作图片和视频。通过REST、MCP和OAuth为Muse提供本地Windows网桥。"
+  },
+  "1445112696": {
+   "by": "mymemory",
+   "src": "A lightweight 2.5D character player for the web, with lip sync and webcam face tracking.",
+   "zh": "轻巧的2.5D网络角色扮演者，具有唇部同步和网络摄像头面部跟踪功能。"
   },
   "1445802355": {
    "by": "mymemory",
@@ -5900,6 +5965,11 @@
    "src": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
    "zh": "用于指令和登月舱的原始阿波罗11号制导计算机（ AGC ）源代码。"
   },
+  "186024298": {
+   "by": "mymemory",
+   "src": "A new type of shell",
+   "zh": "一种新型的外壳"
+  },
   "189829392": {
    "by": "llm",
    "src": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
@@ -5919,6 +5989,11 @@
    "by": "mymemory",
    "src": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
    "zh": "Postgres开发平台。Supabase为您提供了一个专用的Postgres数据库，用于构建您的Web、移动和人工智能应用程序。"
+  },
+  "24195339": {
+   "by": "mymemory",
+   "src": "Deliver web apps with confidence 🚀",
+   "zh": "放心交付网络应用 🚀"
   },
   "27193779": {
    "by": "mymemory",
@@ -5940,6 +6015,11 @@
    "src": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 360+ one-click services on your own servers.",
    "zh": "Vercel、Heroku和Netlify的开源、自托管PaaS替代品，让您可以在自己的服务器上轻松部署静态站点、数据库、全栈应用程序和360 +一键式服务。"
   },
+  "340547520": {
+   "by": "mymemory",
+   "src": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+   "zh": "以思维速度编写代码– Zed是Atom和Tree-sitter创建者的高性能多人代码编辑器。"
+  },
   "441903012": {
    "by": "mymemory",
    "src": "This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps",
@@ -5949,6 +6029,11 @@
    "by": "mymemory",
    "src": "An Open Source Machine Learning Framework for Everyone",
    "zh": "面向所有人的开源机器学习框架"
+  },
+  "458058": {
+   "by": "mymemory",
+   "src": "The Symfony PHP framework",
+   "zh": "Symfony PHP框架"
   },
   "470730648": {
    "by": "mymemory",
@@ -5964,6 +6049,11 @@
    "by": "mymemory",
    "src": "Minecraft 启动器 Plain Craft Launcher（PCL）。",
    "zh": "Minecraft 启动器 Plain Craft Launcher （ PCL ）。"
+  },
+  "523043277": {
+   "by": "mymemory",
+   "src": "An extremely fast Python linter and code formatter, written in Rust.",
+   "zh": "用Rust编写的非常快的Python linter和代码格式化程序。"
   },
   "523325759": {
    "by": "mymemory",
@@ -6000,6 +6090,11 @@
    "src": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
    "zh": "节点版本管理器-兼容POSIX的bash脚本，用于管理多个活动的node.js版本。"
   },
+  "6201092": {
+   "by": "mymemory",
+   "src": "🎥 Command line media player",
+   "zh": "🎥 命令行媒体播放器"
+  },
   "645238879": {
    "by": "llm",
    "src": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
@@ -6035,6 +6130,11 @@
    "src": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropi",
    "zh": "最快、最轻的人工智能网关。使用Python SDK的Rust核心。调用100多个OpenAI （或本机）格式的LLM API ，包括成本跟踪、护栏、负载平衡和日"
   },
+  "6838921": {
+   "by": "mymemory",
+   "src": "The Prometheus monitoring system and time series database.",
+   "zh": "Prometheus监控系统和时间序列数据库。"
+  },
   "691058691": {
    "by": "mymemory",
    "src": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
@@ -6054,6 +6154,11 @@
    "by": "mymemory",
    "src": "A native, user-mode, multi-process, graphical debugger.",
    "zh": "本机、用户模式、多进程、图形调试器。"
+  },
+  "7634677": {
+   "by": "mymemory",
+   "src": "General purpose TLS and crypto library",
+   "zh": "通用TLS和加密库"
   },
   "770153867": {
    "by": "mymemory",

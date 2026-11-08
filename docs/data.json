@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T07:36:22+08:00",
+ "generated_at": "2026-11-09T07:39:15+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -57,10 +57,11 @@
   "2026-11-05",
   "2026-11-06",
   "2026-11-07",
-  "2026-11-08"
+  "2026-11-08",
+  "2026-11-09"
  ],
- "tracked_repos": 5530,
- "latest_date": "2026-11-08",
+ "tracked_repos": 5864,
+ "latest_date": "2026-11-09",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -677,131 +678,142 @@
    "top_delta": 2521,
    "new_repos": 47,
    "prev": "2026-11-07"
+  },
+  {
+   "date": "2026-11-09",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 37654,
+   "gainers": 351,
+   "top_name": "sherlock-project/sherlock",
+   "top_delta": 2980,
+   "new_repos": 336,
+   "prev": "2026-11-08"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "debpalash/VoiceStudio",
-   "delta": 76410,
-   "stars": 103838,
+   "delta": 77523,
+   "stars": 104951,
    "language": "Python"
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 73986,
-   "stars": 74201,
+   "delta": 74164,
+   "stars": 74379,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 56199,
-   "stars": 317670,
+   "delta": 57010,
+   "stars": 318481,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 48800,
-   "stars": 186367,
+   "delta": 49348,
+   "stars": 186915,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 41284,
-   "stars": 299165,
+   "delta": 41815,
+   "stars": 299696,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 33297,
-   "stars": 94457,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 31054,
-   "stars": 63398,
+   "delta": 33566,
+   "stars": 94726,
    "language": "JavaScript"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 30842,
-   "stars": 80558,
+   "delta": 31359,
+   "stars": 81075,
    "language": "TypeScript"
   },
   {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "delta": 31261,
+   "stars": 63605,
+   "language": "JavaScript"
+  },
+  {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 26308,
-   "stars": 65676,
+   "delta": 26506,
+   "stars": 65874,
    "language": "HTML"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 25816,
-   "stars": 49620,
+   "delta": 25855,
+   "stars": 49659,
    "language": "Go"
   }
  ],
- "cumulative_comparable": 206,
+ "cumulative_comparable": 205,
  "daily_top": [
+  {
+   "full_name": "sherlock-project/sherlock",
+   "language": "Python",
+   "delta": 2980,
+   "stars": 103368
+  },
+  {
+   "full_name": "meta/astryx",
+   "language": "TypeScript",
+   "delta": 2149,
+   "stars": 16614
+  },
   {
    "full_name": "storytold/craft-anything",
    "language": "Rust",
-   "delta": 2521,
-   "stars": 20526
-  },
-  {
-   "full_name": "cloudflare/security-audit-skill",
-   "language": "JavaScript",
-   "delta": 1720,
-   "stars": 65659
+   "delta": 1999,
+   "stars": 22525
   },
   {
    "full_name": "zortos293/Lichii",
    "language": "C++",
-   "delta": 1586,
-   "stars": 5517
+   "delta": 1285,
+   "stars": 6802
   },
   {
-   "full_name": "ccch1mneyyy/dsh-Go",
-   "language": "Dart",
-   "delta": 1401,
-   "stars": 14322
-  },
-  {
-   "full_name": "Albert-Weasker/niubigeo",
+   "full_name": "milind-soni/OpenMausBot",
    "language": "TypeScript",
-   "delta": 1211,
-   "stars": 10090
+   "delta": 1273,
+   "stars": 18203
   },
   {
-   "full_name": "JenkinWoo/sheeridVerify",
-   "language": "JavaScript",
-   "delta": 1009,
-   "stars": 1651
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 982,
-   "stars": 317670
+   "full_name": "NotRexed/Hookshot",
+   "language": "C++",
+   "delta": 1253,
+   "stars": 3017
   },
   {
    "full_name": "debpalash/VoiceStudio",
    "language": "Python",
-   "delta": 965,
-   "stars": 103838
+   "delta": 1113,
+   "stars": 104951
   },
   {
-   "full_name": "JuneYaooo/rea-video",
-   "language": "Python",
-   "delta": 686,
-   "stars": 3661
+   "full_name": "anefzaoui/misterdownloadmanager",
+   "language": "Rust",
+   "delta": 1013,
+   "stars": 1420
   },
   {
    "full_name": "Minireel/HGhub",
    "language": "TypeScript",
-   "delta": 655,
-   "stars": 2275
+   "delta": 962,
+   "stars": 3237
+  },
+  {
+   "full_name": "anthropics/skills",
+   "language": "Python",
+   "delta": 835,
+   "stars": 189590
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

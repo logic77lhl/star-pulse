@@ -460,6 +460,11 @@
    "src": "Tool for automatic PS5 executables porting to Linux and Windows",
    "zh": "用于自动将PS5可执行文件移植到Linux和Windows的工具"
   },
+  "1323115536": {
+   "by": "mymemory",
+   "src": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+   "zh": "NVIDIA Kubernetes引擎(NVKE)。裸机上GPU Kubernetes的管理平面。"
+  },
   "1324949198": {
    "by": "mymemory",
    "src": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣",
@@ -5565,6 +5570,11 @@
    "src": "Self-hosted web and AI crawler analytics for Generative Engine Optimization (GEO). Track visitors, AI search referrals, crawl logs, content coverage, and conversions. Jointly published by 猎看科技 · 北京日报社",
    "zh": "用于生成引擎优化(GEO)的自托管网络和人工智能爬虫分析。跟踪访客、人工智能搜索引荐、爬网日志、内容覆盖率和转化率。联合出版商猎看科技· 北京日报社"
   },
+  "1433858477": {
+   "by": "mymemory",
+   "src": "把 GitHub 界面翻译成简体中文、繁体中文的浏览器扩展，支持企业版站点；附带下载加速、搜索净化、自动加载、图片预览、新标签页打开、下载文件夹（Chrome、Edge、Firefox、Safari）",
+   "zh": "把 GitHub 界面翻译成简体中文、繁体中文的浏览器扩展，支持企业版站点 ；附带下载加速、搜索净化、自动加载、图片预览、新标签页打开、下载文件夹 （ Chro"
+  },
   "1433904617": {
    "by": "mymemory",
    "src": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …",
@@ -5615,6 +5625,11 @@
    "src": "Native Windows video motion capture with ExMR, FlowHMR and GVHMR, contact correction, humanoid retargeting, and FBX/VMD export.",
    "zh": "使用ExMR、FlowHMR和GVHMR、接触校正、人形重定向和FBX/VMD导出的本机Windows视频动作捕获。"
   },
+  "1435299335": {
+   "by": "mymemory",
+   "src": "Privacy-first WeChat Mini Program starter for manufacturing employee self-service and auditable MES integration.",
+   "zh": "隐私为先的微信小程序启动器，用于制造员工自助服务和可审计的MES集成。"
+  },
   "1435318598": {
    "by": "mymemory",
    "src": "映间 MARGIN · 重新设计 B 站首页与视频播放页预览版 (Chrome / Edge 扩展) | A Chrome/Edge extension that redesigns Bilibili home, video and search pages with liquid glass controls and shader backgrounds.",
@@ -5624,6 +5639,11 @@
    "by": "mymemory",
    "src": "DeepSeek API pricing guide for models, cache hits, and peak hours (2026).",
    "zh": "DeepSeek API模型、缓存命中率和高峰时段定价指南（ 2026年）。"
+  },
+  "1435353917": {
+   "by": "mymemory",
+   "src": "App store for BMW iDrive 7 / iDrive 8 head units: install and update apps from GitHub repos, URLs and USB sticks",
+   "zh": "适用于宝马iDrive 7/iDrive 8主机的应用商店：从GitHub存储库、URL和USB记忆棒安装和更新应用程序"
   },
   "1435375337": {
    "by": "mymemory",
@@ -5704,6 +5724,11 @@
    "by": "mymemory",
    "src": "VERY experimental Nintendo Switch 2 emulator",
    "zh": "非常实验性的Nintendo Switch 2仿真器"
+  },
+  "1437814166": {
+   "by": "mymemory",
+   "src": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
+   "zh": "misterdownloadmanager ：适用于Windows、Mac和Linux的纯Rust从头开始编写的终极开源洁净室下载管理器"
   },
   "1437936317": {
    "by": "mymemory",
@@ -5805,6 +5830,11 @@
    "src": "A Claude Code skill that turns any machine into a 3D simulator you can take apart",
    "zh": "Claude Code技能，可将任何机器变成可拆卸的3D模拟器"
   },
+  "1439854729": {
+   "by": "mymemory",
+   "src": "歸藏设计 · DeepSeek Harness 插件：网页 PPT、图文卡片、网页排版、去 AI 味四个 skill，一套设计系统；作品库、内容生产工作流、语气档案",
+   "zh": "歸藏设计 · DeepSeek线束插件：网页 PPT、图文卡片、网页排版、去 AI味四个技能一套设计系统；作品库、内容生产工作流、语气档案"
+  },
   "1439885901": {
    "by": "mymemory",
    "src": "Autonomous pentest legion — AI commander + worker swarm + layered fact-intent graph. 3rd Tencent Intelligent Attack-Defense online champion (634 teams · 8h unattended · 1B tokens beat 4.5B). The Nüwa",
@@ -5845,6 +5875,11 @@
    "src": "Craft Anything: understand how any software works, and craft your own.",
    "zh": "制作任何东西：了解任何软件的工作原理，并制作自己的软件。"
   },
+  "1440971520": {
+   "by": "mymemory",
+   "src": "Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。",
+   "zh": "CAGE ：为 Claude 特化的轻量化虚拟机，克劳德彻底杜绝网络泄露。多平台适配，克劳德支持多账号管理、远程部署、移动端操控。"
+  },
   "1441183469": {
    "by": "mymemory",
    "src": "AVault - Call Recorder (No Root Required) | Privacy-first, hardware-encrypted audio vault for Android 12-16+. Rootless call recording via Shizuku with AES-256-GCM, biometrics & auto-cleanup.",
@@ -5854,6 +5889,11 @@
    "by": "mymemory",
    "src": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置。Desktop Android leak audit: permissions, endpoints, data flows, reversible fixes.",
    "zh": "手机隐私审计：用 adb 扫出 Android 应用的权限、上报端点与数据流向，并给出可回滚的处置。桌面Android泄漏审核：权限、端点、数据流、可逆修复。"
+  },
+  "1441332955": {
+   "by": "mymemory",
+   "src": "The package registry and command-line tool for assembly projects.",
+   "zh": "程序集项目的包注册表和命令行工具。"
   },
   "1441344216": {
    "by": "mymemory",
@@ -5915,6 +5955,11 @@
    "src": "A small, fast container runtime for macOS, Windows and Linux",
    "zh": "适用于macOS、Windows和Linux的小型快速容器运行时"
   },
+  "1443650212": {
+   "by": "mymemory",
+   "src": "A GPU task manager for Windows, Linux, and WSL: per-process VRAM, GPU activity, and LLM model/KV-cache insights (Windows AMD and NVIDIA).",
+   "zh": "适用于Windows、Linux和WSL的GPU任务管理器：每进程VRAM、GPU活动和LLM模型/KV缓存洞察（ Windows AMD和NVIDIA ）。"
+  },
   "1443759946": {
    "by": "mymemory",
    "src": "Entire MacOS running in your terminal.",
@@ -5970,20 +6015,50 @@
    "src": "GIF 工厂：按风格制作像素、人物与宠物、粘土吉祥物、光栅卡与动态海报的 GIF Skill。",
    "zh": "GIF 工厂：按风格制作像素、人物与宠物、粘土吉祥物、光栅卡与动态海报的 GIF技能。"
   },
+  "1446546399": {
+   "by": "mymemory",
+   "src": "Boxshelf public beta for Windows, Android (AYN Thor) and Linux / Steam Deck: a TV-style 3D box-art shelf for your emulators, Steam games and media apps.",
+   "zh": "适用于Windows、Android （ AYN Thor ）和Linux/Steam Deck的Boxshelf公共测试版：适用于模拟器、Steam游戏和媒体"
+  },
   "1446962520": {
    "by": "mymemory",
    "src": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
    "zh": "《塞尔达传说：时光之塔》原生重编任天堂Switch 2翻拍"
+  },
+  "1447145240": {
+   "by": "mymemory",
+   "src": "Let AI agents operate a real iPhone. Local MCP server and agent, no jailbreak, no extra hardware.",
+   "zh": "让人工智能代理操作真正的iPhone。本地MCP服务器和代理，没有越狱，没有额外的硬件。"
+  },
+  "1447227957": {
+   "by": "mymemory",
+   "src": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to the CEO of OpenAI.",
+   "zh": "监控您的RAM ，并将任何“相当糟糕”的未使用容量直接报告给OpenAI的首席执行官。"
+  },
+  "1447408881": {
+   "by": "mymemory",
+   "src": "the ultimate vocal synthesizer - sing, speak, beatbox, and more",
+   "zh": "终极声音合成器-唱歌、说话、节拍器等"
   },
   "1447586025": {
    "by": "mymemory",
    "src": "Headless 3D and VFX engine for agents. Research preview.",
    "zh": "代理的无头3D和VFX引擎。研究预览。"
   },
+  "1448515937": {
+   "by": "mymemory",
+   "src": "Let AI agents use your phone, with you in the loop.",
+   "zh": "让人工智能代理与您一起使用您的手机。"
+  },
   "1448807268": {
    "by": "mymemory",
    "src": "Ocarina of Time running natively on Windows, no emulator. Built on your PC from your own copy. No game files included.",
    "zh": "时间之笛在Windows上本机运行，没有模拟器。从您自己的副本构建在您的PC上。不包括游戏文件。"
+  },
+  "1449518822": {
+   "by": "mymemory",
+   "src": "Accelerate high-latency GEO inflight Wi-Fi via warm BBR TCP multiplexing + 1-RTT Ground-TLS + zlib (zero dependencies)",
+   "zh": "通过暖BBR TCP复用+ 1-RTT Ground-TLS + zlib （零依赖）加速高延迟GEO机上Wi-Fi"
   },
   "145693916": {
    "by": "mymemory",
@@ -6084,6 +6159,11 @@
    "by": "mymemory",
    "src": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
    "zh": "以思维速度编写代码– Zed是Atom和Tree-sitter创建者的高性能多人代码编辑器。"
+  },
+  "400501136": {
+   "by": "mymemory",
+   "src": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+   "zh": "与Contact的多关节动态。通用物理模拟器。"
   },
   "441903012": {
    "by": "mymemory",
@@ -6234,6 +6314,11 @@
    "by": "mymemory",
    "src": "Official inference framework for 1-bit LLMs",
    "zh": "1位LLM的官方推理框架"
+  },
+  "849553306": {
+   "by": "mymemory",
+   "src": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+   "zh": "旨在帮助开发人员快速开始使用Claude API构建可部署应用程序的项目集合"
   },
   "872119017": {
    "by": "mymemory",

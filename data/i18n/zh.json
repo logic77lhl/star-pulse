@@ -30,6 +30,11 @@
    "src": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Cla",
    "zh": "每个座席跨会话的持久上下文–捕获座席在会话期间执行的所有操作，使用AI对其进行压缩，并将相关上下文注入到未来的会话中。与CLA配合使用"
   },
+  "1056618941": {
+   "by": "mymemory",
+   "src": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+   "zh": "使用Claude、ChatGPT和其他AI助手配置和自动化Home Assistant。"
+  },
   "1057664813": {
    "by": "mymemory",
    "src": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
@@ -124,6 +129,11 @@
    "by": "mymemory",
    "src": "An open source design system that's fully customizable and agent ready",
    "zh": "完全可定制和代理就绪的开源设计系统"
+  },
+  "1131513930": {
+   "by": "mymemory",
+   "src": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-f",
+   "zh": "LLM 驱动的多市场股票智能分析系统：基于LLM支持零成本定时运行。的多市场股票分析系统多源行情、实时新闻、决策看板与自动推送，具有多源市场数据、实时新闻、决策"
   },
   "1132001614": {
    "by": "mymemory",
@@ -289,6 +299,11 @@
    "by": "mymemory",
    "src": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
    "zh": "🪨 为什么在很少令牌做恶作剧时使用许多令牌。病毒技能+编码代理的代理，通过像穴居人一样说话来削减65%的代币。"
+  },
+  "1202057891": {
+   "by": "mymemory",
+   "src": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+   "zh": "Garry's Opinionated OpenClaw/Hermès Agent Brain"
   },
   "1206390571": {
    "by": "llm",
@@ -3780,6 +3795,11 @@
    "src": "CJ DeFi 做市与套利实战手册 · 顶级高手 CJ（@gch_enbsbxbs）502篇推文体系化精解与全量开源数据集",
    "zh": "CJ DeFi 做市与套利实战手册：502 篇推文体系化精解与全量开源数据集"
   },
+  "1367501425": {
+   "by": "mymemory",
+   "src": "Engineering workflow pack for AI coding agents: PRD interviews, task breakdown, and bespoke design.",
+   "zh": "AI编码代理的工程工作流程包： PRD面试、任务细分和定制设计。"
+  },
   "1367606050": {
    "by": "llm",
    "src": "Official Project Page for Recurrent Looped Transformer (RLT)",
@@ -5680,6 +5700,11 @@
    "src": "Say cheese! Star this repo and your profile picture gets printed out on a receipt printer.",
    "zh": "说奶酪！给这个仓库加星标，您的个人资料图片就会在收据打印机上打印出来。"
   },
+  "1436502942": {
+   "by": "mymemory",
+   "src": "The workflows and skills the MiniMax Code team uses to build MiniMax Code. Open source, install and use.",
+   "zh": "MiniMax代码团队用于构建MiniMax代码的工作流程和技能。开源、安装和使用。"
+  },
   "1436598075": {
    "by": "mymemory",
    "src": "Free interactive 3D science lessons for high school · 铜匠实验室 · https://lab.tongjiang.app",
@@ -5699,6 +5724,11 @@
    "by": "mymemory",
    "src": "An AI live-stream host that runs on one server: voice, face, chat, memory, posts. The base yoki runs on. By Jacke_pp · contact: DM @Jacke_pp on X",
    "zh": "在一台服务器上运行的AI直播主机：语音、面部、聊天、记忆、帖子。基础yoki继续运行。By Jacke_pp ·联系人： DM @ Jacke_pp on X"
+  },
+  "1436875616": {
+   "by": "mymemory",
+   "src": "Vibe 知识大赏：一个知识点 → 一条有旁白、每句有出处的精品知识短片（Claude Code skill · 44 套风格 · 代码逐帧成片）",
+   "zh": "氛围知识大赏：一个知识点 → 一条有旁白、每句有出处的精品知识短片（克劳德密码技巧· 44 套风格 · 代码逐帧成片）"
   },
   "1436993930": {
    "by": "mymemory",
@@ -5730,10 +5760,20 @@
    "src": "misterdownloadmanager: The ultimate open-source, clean-room download manager written from scratch in pure Rust for Windows, Mac, and Linux",
    "zh": "misterdownloadmanager ：适用于Windows、Mac和Linux的纯Rust从头开始编写的终极开源洁净室下载管理器"
   },
+  "1437836875": {
+   "by": "mymemory",
+   "src": "Declarative dragging for SVG on the web",
+   "zh": "网络上SVG的声明式拖动"
+  },
   "1437936317": {
    "by": "mymemory",
    "src": "Complete logs of the experiments in the blog post 'LLMs can understand and write neural network weights'",
    "zh": "博客文章“LLM可以理解和编写神经网络权重”中的完整实验日志"
+  },
+  "1437981635": {
+   "by": "mymemory",
+   "src": "remote + silent denial of service for all Android phones. https://smsofdeath.com/ for writeup.",
+   "zh": "适用于所有Android手机的远程+无提示拒绝服务。https://smsofdeath.com/用于写入。"
   },
   "1438018242": {
    "by": "mymemory",
@@ -5749,6 +5789,11 @@
    "by": "mymemory",
    "src": "澜姿：从姿势线稿和衣装集给社区鲸鱼娘大肥鱼模特出图，调整姿势加变装，也可装进 DeepSeek Harness。Lanpose generates images of the community whale-girl Dafeiyu from pose sketches and costumes, and installs into DeepSeek Harness.",
    "zh": "DeepSeek Harness Lanpose也可装进从姿势。素描和服装中生成社区鲸澜姿从姿势线稿和衣装集给社区鲸鱼娘大肥鱼模特出图调整姿势加变装鱼女孩Daf"
+  },
+  "1438254436": {
+   "by": "mymemory",
+   "src": "🐋 Run 284B DeepSeek-V4-Flash (<59GiB RAM, 44.4 tok/s pp, 9.1-14.7 tok/s) & 30B MoEs (25-111 tok/s) on a pure 64GB CPU at 256K ctx (0 GPUs). SwiGLU-H2, Stockfish-PVS L3 & 13ms Claude Code restore.",
+   "zh": "在256K ctx （ 0个GPU ）的纯64GB CPU上🐋运行284B DeepSeek-V4-Flash （ < 59GiB RAM ， 44.4 tok"
   },
   "1438282469": {
    "by": "mymemory",
@@ -5840,6 +5885,11 @@
    "src": "Autonomous pentest legion — AI commander + worker swarm + layered fact-intent graph. 3rd Tencent Intelligent Attack-Defense online champion (634 teams · 8h unattended · 1B tokens beat 4.5B). The Nüwa",
    "zh": "自主Pentest军团— AI指挥官+工作者群体+分层事实意图。第三届腾讯智能攻击防御在线冠军（ 634支队伍· 8小时无人值守· 10亿代币击败4.5B ）。"
   },
+  "1440128748": {
+   "by": "mymemory",
+   "src": "Unofficial tweaks for the Dia browser, kept in place across updates",
+   "zh": "DIA浏览器的非官方调整，在更新中保持不变"
+  },
   "1440151033": {
    "by": "mymemory",
    "src": "A research prototype for zero-knowledge proofs of AI inference. Not maintained.",
@@ -5860,6 +5910,11 @@
    "src": "Towards a More Autonomous Agent System",
    "zh": "迈向更自主的Agent系统"
   },
+  "1440879836": {
+   "by": "mymemory",
+   "src": "📚 微信读书无损全书导出工具 — 一键导出双字体精排 PDF / EPUB / 纯 Markdown 笔记（适配 Obsidian & Notion），攻克网页端翻页漏字问题。",
+   "zh": "📚 微信读书无损全书导出工具 — 一键导出双字体精排 PDF/EPUB/纯Markdown 笔记（适配 Obsidian & Notion ） ，攻克网页端翻页"
+  },
   "1440888502": {
    "by": "mymemory",
    "src": "High-performance remote desktop over QUIC · Rust + Tauri + React",
@@ -5874,6 +5929,11 @@
    "by": "mymemory",
    "src": "Craft Anything: understand how any software works, and craft your own.",
    "zh": "制作任何东西：了解任何软件的工作原理，并制作自己的软件。"
+  },
+  "1440965926": {
+   "by": "mymemory",
+   "src": "NSP Box: A Switch 2 Game Packager. Experimental Windows tool for lawfully obtained game snapshots and extracted DLC, with reversible emulator patching.",
+   "zh": "NSP盒： Switch 2游戏包装器。用于合法获取游戏快照和提取DLC的实验性Windows工具，具有可逆的模拟器修补。"
   },
   "1440971520": {
    "by": "mymemory",
@@ -5900,6 +5960,16 @@
    "src": "One button: why the game stutters, why it lags and why it won't start. Pitstop measures with PresentMon, explains in plain words, fixes Windows only, and undoes every change in one click.",
    "zh": "一个按钮：为什么游戏口吃，为什么它会滞后以及为什么它不会开始。使用PresentMon停止进站测量，用简单的语言解释，仅修复Windows ，并在一次单击中撤消"
   },
+  "1441434221": {
+   "by": "mymemory",
+   "src": "Six Claude Code skills that make animations for reels, no footage needed: 3D cartoon explainer, stick figure, minimal line art, 3D map route, exploded view, line graph.",
+   "zh": "制作卷轴动画的六种Claude Code技能，无需镜头： 3D卡通解释器、手写人物、最小线条艺术、3D地图路线、分解视图、线条图。"
+  },
+  "1441507782": {
+   "by": "mymemory",
+   "src": "shadcn/ui, drawn by hand: 123 accessible React components that look drawn on paper, with a shadcn registry.",
+   "zh": "shadcn/ui ，手绘： 123个可访问的React组件，看起来在纸上绘制，具有shadcn注册表。"
+  },
   "1441517767": {
    "by": "mymemory",
    "src": "Agent skill: describe your stack in a sentence, get an architecture diagram with official logos",
@@ -5924,6 +5994,11 @@
    "by": "mymemory",
    "src": "Blazing-fast native notes app for macOS & Windows. Rust + GPUI, local-first, compatible with Feishu/Lark DocxXML.",
    "zh": "适用于macOS和Windows的超快速原生笔记应用。Rust + GPUI ，本地优先，兼容Feishu/Lark DocxXML。"
+  },
+  "1441934743": {
+   "by": "mymemory",
+   "src": "Static recompilation of Donkey Kong Bananza (Switch 2) to native Windows with Vulkan. Plays from the title screen through the first stage on an RTX 5060 Ti; still early, can crash. No game files inclu",
+   "zh": "使用Vulkan将Donkey Kong Bananza （ Switch 2 ）静态重新编译到本机窗口。在RTX 5060 Ti上从标题屏幕到第一阶段播放；仍"
   },
   "1441959881": {
    "by": "mymemory",
@@ -5950,6 +6025,11 @@
    "src": "Emulate macOS on iOS and iPadOS",
    "zh": "在iOS和iPadOS上模拟macOS"
   },
+  "1442519465": {
+   "by": "mymemory",
+   "src": "DeepSeek Harness 自媒体工作台插件：一句话记灵感，一键生成脚本、封面、配图和分镜",
+   "zh": "DeepSeek线束自媒体工作台插件：一句话记灵感 ，一键生成脚本、封面、配图和分镜"
+  },
   "1443186633": {
    "by": "mymemory",
    "src": "A small, fast container runtime for macOS, Windows and Linux",
@@ -5975,6 +6055,11 @@
    "src": "3D modeling in Python, built for LLMs.",
    "zh": "Python中的3D建模，专为LLM构建。"
   },
+  "1444096394": {
+   "by": "mymemory",
+   "src": "An agent skill that draws animated icons in one consistent style, for Claude Code, Codex and other coding agents. Comes with 2,600+ open-source icons for React, Vue and SVG, and a website to browse th",
+   "zh": "为Claude Code、Codex和其他编码代理以一种一致的风格绘制动画图标的代理技能。附带2,600多个React ， Vue和SVG的开源图标，以及一个用"
+  },
   "1444112593": {
    "by": "mymemory",
    "src": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
@@ -5990,10 +6075,20 @@
    "src": "Ask 970 data brokers to delete your data. Free, local, no account, no server.",
    "zh": "要求970个数据代理删除您的数据。免费、本地、无帐户、无服务器。"
   },
+  "1444573070": {
+   "by": "mymemory",
+   "src": "Agent skills",
+   "zh": "客服代表技能"
+  },
   "1444635695": {
    "by": "mymemory",
    "src": "Muse4AI — let your AI agent make the pictures and the videos. Local Windows bridge for Muse via REST, MCP, and OAuth.",
    "zh": "Muse4AI —让您的AI代理制作图片和视频。通过REST、MCP和OAuth为Muse提供本地Windows网桥。"
+  },
+  "1444637805": {
+   "by": "mymemory",
+   "src": "OpenAmika: MekaHime's AI companion Amika, open source. Live2D avatar, real-time voice, long-term memory, OpenRouter or Ollama brain.",
+   "zh": "OpenAmika ： MekaHime的人工智能伙伴Amika ，开源。Live2D头像、实时语音、长期记忆、OpenRouter或Ollama Brain。"
   },
   "1445112696": {
    "by": "mymemory",
@@ -6019,6 +6114,21 @@
    "by": "mymemory",
    "src": "Boxshelf public beta for Windows, Android (AYN Thor) and Linux / Steam Deck: a TV-style 3D box-art shelf for your emulators, Steam games and media apps.",
    "zh": "适用于Windows、Android （ AYN Thor ）和Linux/Steam Deck的Boxshelf公共测试版：适用于模拟器、Steam游戏和媒体"
+  },
+  "1446569267": {
+   "by": "mymemory",
+   "src": "Free people-search desktop app: look up a nickname, email, phone or site across 3,100+ public pages and get one readable report.",
+   "zh": "免费人员搜索桌面应用程序：在3,100多个公开页面上查找昵称、电子邮件、电话或网站，并获得一份可读的报告。"
+  },
+  "1446575402": {
+   "by": "mymemory",
+   "src": "Talk to a Hermes Agent profile through Home Assistant Assist",
+   "zh": "通过Home Assistant Assist与爱马仕客服代表对话"
+  },
+  "1446725477": {
+   "by": "mymemory",
+   "src": "Native UI components for C: about 150 of them, with spring motion and full keyboard support. Windows, macOS and Linux, no dependencies.",
+   "zh": "C的本机UI组件：约150个，具有弹簧运动和全键盘支持。Windows、macOS和Linux ，无依赖关系。"
   },
   "1446962520": {
    "by": "mymemory",
@@ -6059,6 +6169,16 @@
    "by": "mymemory",
    "src": "Accelerate high-latency GEO inflight Wi-Fi via warm BBR TCP multiplexing + 1-RTT Ground-TLS + zlib (zero dependencies)",
    "zh": "通过暖BBR TCP复用+ 1-RTT Ground-TLS + zlib （零依赖）加速高延迟GEO机上Wi-Fi"
+  },
+  "1450012790": {
+   "by": "mymemory",
+   "src": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. 把你自己的 Switch 游戏原生带到 iP",
+   "zh": "在iPhone、iPad和Mac上本地运行您自己的Switch游戏：游戏代码重写到ARM64 ，图形直接到Metal ，一个应用程序用于整个库。自带游戏和钥匙。"
+  },
+  "1450963843": {
+   "by": "mymemory",
+   "src": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
+   "zh": "适用于iOS 27.x的MobileGestalt编辑器，具有区域代码调整、设备预设、备份以及对7种语言的支持。"
   },
   "145693916": {
    "by": "mymemory",

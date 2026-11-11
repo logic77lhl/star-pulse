@@ -10,6 +10,11 @@
    "src": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
    "zh": "基于 剧作家和AI实现的闲鱼多任务实时/定时监控与智能分析系统配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中 ，找到心仪产品。"
   },
+  "1024661423": {
+   "by": "mymemory",
+   "src": "The personal finance app for everyone (by everyone)",
+   "zh": "适合所有人（由所有人）的个人理财应用程序"
+  },
   "10270250": {
    "by": "mymemory",
    "src": "The library for web and native user interfaces.",
@@ -289,6 +294,11 @@
    "by": "mymemory",
    "src": "Agent Skills for Google products and technologies",
    "zh": "Google产品和技术的代理技能"
+  },
+  "1200534650": {
+   "by": "mymemory",
+   "src": "A batteries-included framework for building web apps",
+   "zh": "用于构建Web应用程序的包含电池的框架"
   },
   "1200597263": {
    "by": "mymemory",
@@ -5885,6 +5895,11 @@
    "src": "Autonomous pentest legion — AI commander + worker swarm + layered fact-intent graph. 3rd Tencent Intelligent Attack-Defense online champion (634 teams · 8h unattended · 1B tokens beat 4.5B). The Nüwa",
    "zh": "自主Pentest军团— AI指挥官+工作者群体+分层事实意图。第三届腾讯智能攻击防御在线冠军（ 634支队伍· 8小时无人值守· 10亿代币击败4.5B ）。"
   },
+  "1440096236": {
+   "by": "mymemory",
+   "src": "The open LLM inference engine for AWS Trainium: NKI megakernels, 1M-token context, OpenAI-compatible API. By RunAnywhere.",
+   "zh": "适用于AWS Trainium的开放式LLM推理引擎： NKI megakernels、100万令牌上下文、OpenAI兼容API。由RunAnywhere提供"
+  },
   "1440128748": {
    "by": "mymemory",
    "src": "Unofficial tweaks for the Dia browser, kept in place across updates",
@@ -6025,6 +6040,11 @@
    "src": "Emulate macOS on iOS and iPadOS",
    "zh": "在iOS和iPadOS上模拟macOS"
   },
+  "1442385098": {
+   "by": "mymemory",
+   "src": "Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it, and test it on every one of them.",
+   "zh": "编写一次应用程序。它在网络、macOS、iOS和Linux上本地运行， AI代理可以构建、运行、查看并在其中的每一个上进行测试。"
+  },
   "1442519465": {
    "by": "mymemory",
    "src": "DeepSeek Harness 自媒体工作台插件：一句话记灵感，一键生成脚本、封面、配图和分镜",
@@ -6160,6 +6180,211 @@
    "src": "Let AI agents use your phone, with you in the loop.",
    "zh": "让人工智能代理与您一起使用您的手机。"
   },
+  "1448719333": {
+   "by": "mymemory",
+   "src": "Multi-Monitor Desktop Configuration Installer with Enhanced Display Options",
+   "zh": "带增强显示选项的多显示器桌面配置安装程序"
+  },
+  "1448721315": {
+   "by": "mymemory",
+   "src": "Adobe Substance 3D Creative Studio 2026 - Secure Asset Pipeline Desktop Installer",
+   "zh": "Adobe Substance 3D Creative Studio 2026 -安全资产管道桌面安装程序"
+  },
+  "1448724702": {
+   "by": "mymemory",
+   "src": "Auslogics Audio Studio 2026 Desktop Edition: Pre-Activated Standalone Setup",
+   "zh": "Auslogics Audio Studio 2026台式机版：预激活独立设置"
+  },
+  "1448726998": {
+   "by": "mymemory",
+   "src": "Autodesk Revit 2026 Complete Standalone Setup for Desktop",
+   "zh": "Autodesk Revit 2026桌面版完整独立设置"
+  },
+  "1448730777": {
+   "by": "mymemory",
+   "src": "Cellebrite UFED 2026 Standalone Desktop Setup with Pre-Configured Feature Set",
+   "zh": "带有预配置功能集的Cellebrite UFED 2026独立台式机设置"
+  },
+  "1448731208": {
+   "by": "mymemory",
+   "src": "Chief Architect Premier 2026: Pre-Configured Desktop Edition with All Features Enabled",
+   "zh": "Chief Architect Premier 2026 ：预配置桌面版，启用所有功能"
+  },
+  "1448732425": {
+   "by": "mymemory",
+   "src": "Chimera: Pre-configured Desktop Utility Suite with Full Installer",
+   "zh": "Chimera ：带完整安装程序的预配置桌面实用程序套件"
+  },
+  "1448732908": {
+   "by": "mymemory",
+   "src": "Cinebench 2026 Standalone Desktop Setup with Pre-Activated Features",
+   "zh": "Cinebench 2026独立台式机设置，具有预激活功能"
+  },
+  "1448734199": {
+   "by": "mymemory",
+   "src": "CLion full installer: complete standalone setup, all features activated",
+   "zh": "CLion完整安装程序：完成独立设置，所有功能均已激活"
+  },
+  "1448734795": {
+   "by": "mymemory",
+   "src": "CorelDraw 2026 Professional Desktop Installer with Ready-to-Run Utility Configuration",
+   "zh": "CorelDraw 2026专业桌面安装程序，带即用型实用程序配置"
+  },
+  "1448735964": {
+   "by": "mymemory",
+   "src": "daemon-pro: Complete Standalone Desktop Setup with Full Feature setup",
+   "zh": "daemon-pro ：使用全功能设置完成独立桌面设置"
+  },
+  "1448736973": {
+   "by": "mymemory",
+   "src": "Delta-Force-Cheat: Full Working Installer, All Features Active",
+   "zh": "Delta-Force-Cheat ：全功能安装程序，所有功能均处于活动状态"
+  },
+  "1448738845": {
+   "by": "mymemory",
+   "src": "directory-opus: complete standalone desktop setup with all features pre-enabled, ready to run",
+   "zh": "directory-opus ：完整的独立桌面设置，预先启用所有功能，准备运行"
+  },
+  "1448739787": {
+   "by": "mymemory",
+   "src": "DVD-Creator 2026: Full Desktop Build, Every Feature Enabled",
+   "zh": "DVD-Creator 2026 ：完整的桌面构建，每个功能均已启用"
+  },
+  "1448740855": {
+   "by": "mymemory",
+   "src": "DxO PhotoLab 10 desktop build for professional photo processing workflows",
+   "zh": "DxO PhotoLab 10桌面版，适用于专业照片处理工作流程"
+  },
+  "1448746345": {
+   "by": "mymemory",
+   "src": "Honkai Star Rail 2026 Trainer Tool: Complete Standalone Setup, Ready to Run",
+   "zh": "Honkai Star Rail 2026教练工具：完成独立设置，准备运行"
+  },
+  "1448746651": {
+   "by": "mymemory",
+   "src": "Honkai Star Rail 2026: Pre-Activated Standalone Desktop Edition, Ready to Run",
+   "zh": "Honkai Star Rail 2026 ：预激活的独立台式机版本，准备运行"
+  },
+  "1448746973": {
+   "by": "mymemory",
+   "src": "IBM SPSS Statistics 2026 Standalone Setup with Full Feature Configuration",
+   "zh": "具有完整功能配置的IBM SPSS Statistics 2026独立设置"
+  },
+  "1448749417": {
+   "by": "mymemory",
+   "src": "Kontakt 8 desktop utility config: opinionated dotfiles, ready to run",
+   "zh": "KONTAKT 8桌面实用程序配置：固执己见的点文件，准备运行"
+  },
+  "1448751207": {
+   "by": "mymemory",
+   "src": "Community-driven MetaTrader 5 bot with full features ready for desktop use",
+   "zh": "社区驱动的MetaTrader 5机器人，具有完整的功能，可供桌面使用"
+  },
+  "1448751363": {
+   "by": "mymemory",
+   "src": "Melodyne-5: Professional Audio Editing Desktop Suite with Full Feature Set",
+   "zh": "Melodyne-5 ：专业音频编辑桌面套件，配备全套功能"
+  },
+  "1448752369": {
+   "by": "mymemory",
+   "src": "Microsoft 365 2024 Standalone Desktop Setup with Pre-Configured Tools",
+   "zh": "使用预配置工具的Microsoft 365 2024独立桌面设置"
+  },
+  "1448754172": {
+   "by": "mymemory",
+   "src": "Multiaccountmanager 2026: Complete Standalone Setup, Fully Pre-Activated, Ready to Install",
+   "zh": "Multiaccountmanager 2026 ：完整的独立设置，完全预激活，准备安装"
+  },
+  "1448754654": {
+   "by": "mymemory",
+   "src": "Ninjatrader Bot 2026: a friendly, community-driven trading companion packed with powerful features",
+   "zh": "Ninjatrader Bot 2026 ：一个友好、社区驱动的交易伙伴，拥有强大的功能"
+  },
+  "1448755173": {
+   "by": "mymemory",
+   "src": "on1-photo-raw-max: complete standalone setup with advanced image tools",
+   "zh": "on1-photo-raw-max ：使用高级图像工具完成独立设置"
+  },
+  "1448755340": {
+   "by": "mymemory",
+   "src": "Ozone 12 Advanced: Professional Desktop Utility with Enhanced Configurations",
+   "zh": "Ozone 12 Advanced ：具有增强配置的专业桌面实用程序"
+  },
+  "1448756275": {
+   "by": "mymemory",
+   "src": "Payday 3 Trainer Tool - Fully Activated Desktop Build, Ready to Play",
+   "zh": "Payday 3 Trainer工具-完全激活的桌面构建，随时可玩"
+  },
+  "1448759974": {
+   "by": "mymemory",
+   "src": "reason-14: Full Working Installer for Professional Desktop Software, Ready to Run in 2026",
+   "zh": "原因-14 ：专业桌面软件的完整工作安装程序，准备在2026年运行"
+  },
+  "1448760003": {
+   "by": "mymemory",
+   "src": "Pump Fun 2026: Complete Desktop Utility Setup with Pre-Activated Features",
+   "zh": "Pump Fun 2026 ：具有预激活功能的完整桌面实用程序设置"
+  },
+  "1448760018": {
+   "by": "mymemory",
+   "src": "Quicken Deluxe Desktop Installer with Full Feature Set Enabled",
+   "zh": "启用全功能集的Quicken Deluxe桌面安装程序"
+  },
+  "1448760087": {
+   "by": "mymemory",
+   "src": "Robux-Generator: Full Installer, All Features Activated, Desktop-Ready",
+   "zh": "Robux-Generator ：完整安装程序，所有功能已激活，桌面就绪"
+  },
+  "1448760488": {
+   "by": "mymemory",
+   "src": "Rust External 2026: Full Standalone Trainer Setup, Tools and Dependencies Ready to Run",
+   "zh": "Rust External 2026 ：完整的独立培训师设置、工具和依赖项已准备好运行"
+  },
+  "1448760906": {
+   "by": "mymemory",
+   "src": "Android Screen Mirroring and Control Workflow, Simplified",
+   "zh": "Android屏幕镜像和控制工作流程，简化"
+  },
+  "1448761997": {
+   "by": "mymemory",
+   "src": "Adobe Acrobat Pro 2026: Secure Standalone PDF Document Processor for Desktop",
+   "zh": "Adobe Acrobat Pro 2026 ：桌面版安全独立PDF文档处理器"
+  },
+  "1448762587": {
+   "by": "mymemory",
+   "src": "Sketchup Pro 2026 Complete Standalone Desktop Setup with All Features Pre-Activated",
+   "zh": "Sketchup Pro 2026完整的独立桌面设置，所有功能均已预先激活"
+  },
+  "1448763320": {
+   "by": "mymemory",
+   "src": "Soundpad: Advanced Audio Processing for Professional DAW Workflows",
+   "zh": "Soundpad ：专业DAW工作流程的高级音频处理"
+  },
+  "1448763812": {
+   "by": "mymemory",
+   "src": "SP-Flash-Tool: Standalone Firmware Flashing Suite with Drivers and Utilities",
+   "zh": "SP-Flash-Tool ：带驱动程序和实用程序的独立固件闪存套件"
+  },
+  "1448765129": {
+   "by": "mymemory",
+   "src": "Sylenth 1 configuration utility: standalone desktop setup, ready to run",
+   "zh": "Sylenth 1配置实用程序：独立桌面设置，准备运行"
+  },
+  "1448766390": {
+   "by": "mymemory",
+   "src": "Ultra Iso 2026 desktop application with complete standalone setup and all features pre-configured fo",
+   "zh": "Ultra Iso 2026桌面应用程序，具有完整的独立设置和所有预先配置的功能"
+  },
+  "1448767034": {
+   "by": "mymemory",
+   "src": "Uttorent 2026: Desktop Installer for Seamless Torrent Management",
+   "zh": "Uttorent 2026 ：无缝Torrent管理的桌面安装程序"
+  },
+  "1448769026": {
+   "by": "mymemory",
+   "src": "Windows Optimizer: Advanced System Tweaks and Performance Enhancements",
+   "zh": "Windows优化器：高级系统调整和性能增强"
+  },
   "1448807268": {
    "by": "mymemory",
    "src": "Ocarina of Time running natively on Windows, no emulator. Built on your PC from your own copy. No game files included.",
@@ -6179,6 +6404,11 @@
    "by": "mymemory",
    "src": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
    "zh": "适用于iOS 27.x的MobileGestalt编辑器，具有区域代码调整、设备预设、备份以及对7种语言的支持。"
+  },
+  "1452123445": {
+   "by": "mymemory",
+   "src": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（简体中文防白苹果安全加固版）",
+   "zh": "iOS研究工具箱/系统配置与iPadOS简体中文防白苹果安全加固版 MobileGestalt"
   },
   "145693916": {
    "by": "mymemory",

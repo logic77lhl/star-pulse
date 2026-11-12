@@ -410,6 +410,11 @@
    "src": "freehire — the open-source search engine for job seekers",
    "zh": "freehire —面向求职者的开源搜索引擎"
   },
+  "1264986626": {
+   "by": "mymemory",
+   "src": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+   "zh": "使用您最强大的模型来审核您的代码库，并编写供更便宜的模型执行的计划。"
+  },
   "1266797999": {
    "by": "llm",
    "src": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
@@ -454,6 +459,11 @@
    "by": "mymemory",
    "src": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
    "zh": "轻量级的真实IDE中带有pi的Vibe代码，可根据您的工作方式自行定制—您需要的Vibe"
+  },
+  "1299769220": {
+   "by": "mymemory",
+   "src": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+   "zh": "OpenAI 的 Codex Security CLI 和 TypeScript SDK，用于查找、验证和修复安全漏洞。npm：https://www.npmj"
   },
   "1304469751": {
    "by": "mymemory",
@@ -6190,6 +6200,26 @@
    "src": "Adobe Substance 3D Creative Studio 2026 - Secure Asset Pipeline Desktop Installer",
    "zh": "Adobe Substance 3D Creative Studio 2026 -安全资产管道桌面安装程序"
   },
+  "1448721877": {
+   "by": "mymemory",
+   "src": "Aida 64 Extreme 2026: Complete Standalone Desktop Setup with Full Feature Configuration",
+   "zh": "Aida 64 Extreme 2026：完整独立式桌面版，具备全功能配置"
+  },
+  "1448722374": {
+   "by": "mymemory",
+   "src": "Aion 2 AI Prompt Engineering Toolkit - Standalone Desktop Trainer Setup",
+   "zh": "Aion 2 AI 提示工程工具包 - 独立桌面训练器设置"
+  },
+  "1448723952": {
+   "by": "mymemory",
+   "src": "Archicad 2026 complete standalone desktop setup with pre-configured ready-to-run installation build",
+   "zh": "Archicad 2026 完整版独立桌面版，预先配置了即用型安装版本"
+  },
+  "1448724231": {
+   "by": "mymemory",
+   "src": "Ashampoo WinOptimizer 2026 Standalone Setup with Full Feature Set Enabled",
+   "zh": "Ashampoo WinOptimizer 2026 独立安装程序，已启用全套功能"
+  },
   "1448724702": {
    "by": "mymemory",
    "src": "Auslogics Audio Studio 2026 Desktop Edition: Pre-Activated Standalone Setup",
@@ -6199,6 +6229,16 @@
    "by": "mymemory",
    "src": "Autodesk Revit 2026 Complete Standalone Setup for Desktop",
    "zh": "Autodesk Revit 2026桌面版完整独立设置"
+  },
+  "1448727509": {
+   "by": "mymemory",
+   "src": "Autodesk Inventor 2026 Professional Desktop Installer with Pre-Configured Full Feature Set",
+   "zh": "Autodesk Inventor 2026 Professional 桌面版安装程序，含预配置的完整功能集"
+  },
+  "1448729605": {
+   "by": "mymemory",
+   "src": "Burning Studio 2026: Complete Standalone Desktop Setup with Full Feature Configuration",
+   "zh": "Burning Studio 2026：完整的独立桌面安装，具备全功能配置"
   },
   "1448730777": {
    "by": "mymemory",
@@ -6230,20 +6270,50 @@
    "src": "CorelDraw 2026 Professional Desktop Installer with Ready-to-Run Utility Configuration",
    "zh": "CorelDraw 2026专业桌面安装程序，带即用型实用程序配置"
   },
+  "1448735676": {
+   "by": "mymemory",
+   "src": "Cubase Studio 2026 desktop setup with full plugin suite and complete feature set",
+   "zh": "Cubase Studio 2026桌面版，配备全套插件和完整功能集"
+  },
   "1448735964": {
    "by": "mymemory",
    "src": "daemon-pro: Complete Standalone Desktop Setup with Full Feature setup",
    "zh": "daemon-pro ：使用全功能设置完成独立桌面设置"
+  },
+  "1448736861": {
+   "by": "mymemory",
+   "src": "Delta Force Trainer Tool: Full Working Installer With All Tools and Configurations",
+   "zh": "《三角洲特种部队》辅助工具：功能齐全的安装程序，包含所有工具和配置"
+  },
+  "1448736961": {
+   "by": "mymemory",
+   "src": "Delta Executor for PC: Full Working Installer with All Tools Pre-Configured",
+   "zh": "适用于 PC 的 Delta Executor：完整版工作安装程序，所有工具均已预先配置"
   },
   "1448736973": {
    "by": "mymemory",
    "src": "Delta-Force-Cheat: Full Working Installer, All Features Active",
    "zh": "Delta-Force-Cheat ：全功能安装程序，所有功能均处于活动状态"
   },
+  "1448737811": {
+   "by": "mymemory",
+   "src": "Designcenter-NX: Full-Feature Desktop Installer for Immediate Deployment",
+   "zh": "Designcenter-NX：用于即时部署的全功能桌面安装程序"
+  },
+  "1448738290": {
+   "by": "mymemory",
+   "src": "Aomei Backupper 2026: Full-Feature Desktop Backup and Recovery Suite",
+   "zh": "AOMEI Backupper 2026：全功能桌面备份和恢复套件"
+  },
   "1448738845": {
    "by": "mymemory",
    "src": "directory-opus: complete standalone desktop setup with all features pre-enabled, ready to run",
    "zh": "directory-opus ：完整的独立桌面设置，预先启用所有功能，准备运行"
+  },
+  "1448739358": {
+   "by": "mymemory",
+   "src": "Display Fusion 2026 standalone desktop setup with complete feature configuration",
+   "zh": "Display Fusion 2026 独立桌面设置，具备完整的功能配置"
   },
   "1448739787": {
    "by": "mymemory",
@@ -6255,6 +6325,46 @@
    "src": "DxO PhotoLab 10 desktop build for professional photo processing workflows",
    "zh": "DxO PhotoLab 10桌面版，适用于专业照片处理工作流程"
   },
+  "1448740904": {
+   "by": "mymemory",
+   "src": "dxo-photolab-10: complete standalone config, ready to run, nothing held back",
+   "zh": "dxo-photolab-10：完整的独立配置，随时可运行，无任何限制"
+  },
+  "1448741352": {
+   "by": "mymemory",
+   "src": "Easy-Worship 2026: Complete Standalone Desktop Setup with All Features Enabled",
+   "zh": "Easy-Worship 2026：完整的独立桌面版安装，所有功能均已启用"
+  },
+  "1448742399": {
+   "by": "mymemory",
+   "src": "ExitLag installer with optimized system performance enhancements for desktop",
+   "zh": "ExitLag 安装程序，针对桌面版进行了系统性能优化"
+  },
+  "1448742423": {
+   "by": "mymemory",
+   "src": "Fabfilter Total 2026 security assessment toolkit with full feature validation and installer verifica",
+   "zh": "Fabfilter Total 2026 安全评估工具包，具备全功能验证和安装程序验证"
+  },
+  "1448744172": {
+   "by": "mymemory",
+   "src": "Fonepaw Unlocker 2026 Standalone Desktop Setup with Full Feature Set",
+   "zh": "Fonepaw Unlocker 2026 独立桌面版安装程序，含全套功能"
+  },
+  "1448744840": {
+   "by": "mymemory",
+   "src": "Fortnite Skin Swapper: Standalone 2026 Desktop Setup, Ready to Run",
+   "zh": "《堡垒之夜》皮肤切换器：2026版独立桌面版，开箱即用"
+  },
+  "1448744883": {
+   "by": "mymemory",
+   "src": "FoneTrans 2026: Complete Standalone Desktop Utility Setup and Configuration",
+   "zh": "FoneTrans 2026：完整的独立桌面实用工具安装和配置"
+  },
+  "1448745513": {
+   "by": "mymemory",
+   "src": "HitFilm: Fully Featured Desktop Video Editing and VFX Suite",
+   "zh": "HitFilm：功能齐全的桌面视频编辑和视觉特效套件"
+  },
   "1448746345": {
    "by": "mymemory",
    "src": "Honkai Star Rail 2026 Trainer Tool: Complete Standalone Setup, Ready to Run",
@@ -6264,6 +6374,11 @@
    "by": "mymemory",
    "src": "Honkai Star Rail 2026: Pre-Activated Standalone Desktop Edition, Ready to Run",
    "zh": "Honkai Star Rail 2026 ：预激活的独立台式机版本，准备运行"
+  },
+  "1448746909": {
+   "by": "mymemory",
+   "src": "IMEI Repair 2026: Standalone Installer and Complete Setup for Device Repair Solutions",
+   "zh": "IMEI Repair 2026：独立安装程序和设备维修解决方案完整安装"
   },
   "1448746973": {
    "by": "mymemory",
@@ -6290,15 +6405,30 @@
    "src": "Microsoft 365 2024 Standalone Desktop Setup with Pre-Configured Tools",
    "zh": "使用预配置工具的Microsoft 365 2024独立桌面设置"
   },
+  "1448752585": {
+   "by": "mymemory",
+   "src": "microstation-2026: Professional Desktop Utility Installer for Configuration and Deployment",
+   "zh": "MicroStation 2026：用于配置和部署的专业桌面实用程序安装程序"
+  },
   "1448754172": {
    "by": "mymemory",
    "src": "Multiaccountmanager 2026: Complete Standalone Setup, Fully Pre-Activated, Ready to Install",
    "zh": "Multiaccountmanager 2026 ：完整的独立设置，完全预激活，准备安装"
   },
+  "1448754381": {
+   "by": "mymemory",
+   "src": "MusicMakerUnlimited: Full-featured desktop music production installer, ready to run",
+   "zh": "MusicMakerUnlimited：功能齐全的桌面音乐制作安装程序，可随时运行"
+  },
   "1448754654": {
    "by": "mymemory",
    "src": "Ninjatrader Bot 2026: a friendly, community-driven trading companion packed with powerful features",
    "zh": "Ninjatrader Bot 2026 ：一个友好、社区驱动的交易伙伴，拥有强大的功能"
+  },
+  "1448754711": {
+   "by": "mymemory",
+   "src": "Musicmakerunlimited 2026: Full-Feature Desktop Installer with Complete Toolset",
+   "zh": "Musicmakerunlimited 2026：具备完整工具集的全面功能桌面版安装程序"
   },
   "1448755173": {
    "by": "mymemory",
@@ -6310,10 +6440,25 @@
    "src": "Ozone 12 Advanced: Professional Desktop Utility with Enhanced Configurations",
    "zh": "Ozone 12 Advanced ：具有增强配置的专业桌面实用程序"
   },
+  "1448755703": {
+   "by": "mymemory",
+   "src": "passfab-unlocker: Standalone Offline Password Recovery Solution",
+   "zh": "PassFab Unlocker：独立离线密码恢复解决方案"
+  },
   "1448756275": {
    "by": "mymemory",
    "src": "Payday 3 Trainer Tool - Fully Activated Desktop Build, Ready to Play",
    "zh": "Payday 3 Trainer工具-完全激活的桌面构建，随时可玩"
+  },
+  "1448757964": {
+   "by": "mymemory",
+   "src": "PhpStorm 2026 Standalone Desktop Setup with Full Feature Set Preconfigured",
+   "zh": "PhpStorm 2026 独立桌面版安装程序，预先配置完整功能集"
+  },
+  "1448758376": {
+   "by": "mymemory",
+   "src": "Power Director: Standalone Desktop Video Editing Suite with Complete Installer",
+   "zh": "PowerDirector：带完整安装程序的独立桌面视频编辑套件"
   },
   "1448759974": {
    "by": "mymemory",
@@ -6335,10 +6480,20 @@
    "src": "Robux-Generator: Full Installer, All Features Activated, Desktop-Ready",
    "zh": "Robux-Generator ：完整安装程序，所有功能已激活，桌面就绪"
   },
+  "1448760422": {
+   "by": "mymemory",
+   "src": "Rufus: Advanced USB Formatting and Bootable Drive Creation Utility",
+   "zh": "Rufus：高级 USB 格式化和可引导驱动器创建实用程序"
+  },
   "1448760488": {
    "by": "mymemory",
    "src": "Rust External 2026: Full Standalone Trainer Setup, Tools and Dependencies Ready to Run",
    "zh": "Rust External 2026 ：完整的独立培训师设置、工具和依赖项已准备好运行"
+  },
+  "1448760766": {
+   "by": "mymemory",
+   "src": "rx-11-audio-editor config: full standalone installer and dotfiles for professional audio editing",
+   "zh": "rx-11-audio-editor 配置：完整的独立安装程序和配置文件，用于专业音频编辑"
   },
   "1448760906": {
    "by": "mymemory",
@@ -6350,10 +6505,25 @@
    "src": "Adobe Acrobat Pro 2026: Secure Standalone PDF Document Processor for Desktop",
    "zh": "Adobe Acrobat Pro 2026 ：桌面版安全独立PDF文档处理器"
   },
+  "1448762064": {
+   "by": "mymemory",
+   "src": "Professional Desktop Installer with Enhanced Security Features",
+   "zh": "具备增强安全功能的专业桌面安装程序"
+  },
+  "1448762427": {
+   "by": "mymemory",
+   "src": "Serato DJ Pro 2026: Complete Standalone Setup with Full Feature Set",
+   "zh": "Serato DJ Pro 2026：具备全套功能的完整独立版配置"
+  },
   "1448762587": {
    "by": "mymemory",
    "src": "Sketchup Pro 2026 Complete Standalone Desktop Setup with All Features Pre-Activated",
    "zh": "Sketchup Pro 2026完整的独立桌面设置，所有功能均已预先激活"
+  },
+  "1448762870": {
+   "by": "mymemory",
+   "src": "Sony Vegas Pro 2026 standalone setup with pre-installed professional video editing and VFX tools",
+   "zh": "Sony Vegas Pro 2026 独立安装程序，预装专业视频编辑和视觉特效工具"
   },
   "1448763320": {
    "by": "mymemory",
@@ -6365,10 +6535,20 @@
    "src": "SP-Flash-Tool: Standalone Firmware Flashing Suite with Drivers and Utilities",
    "zh": "SP-Flash-Tool ：带驱动程序和实用程序的独立固件闪存套件"
   },
+  "1448764321": {
+   "by": "mymemory",
+   "src": "Startall Back 2026: Full Installer for Desktop Utility Configuration",
+   "zh": "Startall Back 2026：桌面实用程序配置完整安装程序"
+  },
   "1448765129": {
    "by": "mymemory",
    "src": "Sylenth 1 configuration utility: standalone desktop setup, ready to run",
    "zh": "Sylenth 1配置实用程序：独立桌面设置，准备运行"
+  },
+  "1448765279": {
+   "by": "mymemory",
+   "src": "Systemcare Pro: Complete Standalone Desktop Setup with All Features Pre-Configured and Ready to Run",
+   "zh": "Systemcare Pro：完整的独立桌面版安装，所有功能均已预先配置并可随时运行"
   },
   "1448766390": {
    "by": "mymemory",
@@ -6380,10 +6560,20 @@
    "src": "Uttorent 2026: Desktop Installer for Seamless Torrent Management",
    "zh": "Uttorent 2026 ：无缝Torrent管理的桌面安装程序"
   },
+  "1448768370": {
+   "by": "mymemory",
+   "src": "Standalone desktop audio modification suite with complete pre-configured setup for professional voic",
+   "zh": "独立式桌面音频修改套件，具备完整的预配置设置，适用于专业语音"
+  },
   "1448769026": {
    "by": "mymemory",
    "src": "Windows Optimizer: Advanced System Tweaks and Performance Enhancements",
    "zh": "Windows优化器：高级系统调整和性能增强"
+  },
+  "1448769268": {
+   "by": "mymemory",
+   "src": "Wondershare Recoverit Desktop Installer with Complete Data Recovery Capabilities",
+   "zh": "具备完整数据恢复功能的 Wondershare Recoverit 桌面版安装程序"
   },
   "1448807268": {
    "by": "mymemory",
@@ -6409,6 +6599,11 @@
    "by": "mymemory",
    "src": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（简体中文防白苹果安全加固版）",
    "zh": "iOS研究工具箱/系统配置与iPadOS简体中文防白苹果安全加固版 MobileGestalt"
+  },
+  "1452531582": {
+   "by": "mymemory",
+   "src": "Humanoid whole-body motion tracking with one differentiable world model.",
+   "zh": "使用一个可微分世界模型进行人形机器人全身动作跟踪。"
   },
   "145693916": {
    "by": "mymemory",
@@ -6589,6 +6784,11 @@
    "by": "mymemory",
    "src": "🎥 Command line media player",
    "zh": "🎥 命令行媒体播放器"
+  },
+  "63477660": {
+   "by": "mymemory",
+   "src": "All Algorithms implemented in Java",
+   "zh": "所有算法均以 Java 实现"
   },
   "645238879": {
    "by": "llm",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T09:55:43+08:00",
+ "generated_at": "2026-11-13T09:01:41+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -61,10 +61,11 @@
   "2026-11-09",
   "2026-11-10",
   "2026-11-11",
-  "2026-11-12"
+  "2026-11-12",
+  "2026-11-13"
  ],
- "tracked_repos": 6164,
- "latest_date": "2026-11-12",
+ "tracked_repos": 6230,
+ "latest_date": "2026-11-13",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -725,131 +726,142 @@
    "top_delta": 2296,
    "new_repos": 125,
    "prev": "2026-11-11"
+  },
+  {
+   "date": "2026-11-13",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 30746,
+   "gainers": 432,
+   "top_name": "janestreet/agent_skills",
+   "top_delta": 1867,
+   "new_repos": 71,
+   "prev": "2026-11-12"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "debpalash/VoiceStudio",
-   "delta": 80954,
-   "stars": 108382,
+   "delta": 81772,
+   "stars": 109200,
    "language": "Python"
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 74888,
-   "stars": 75103,
+   "delta": 75121,
+   "stars": 75336,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 60602,
-   "stars": 322073,
+   "delta": 61546,
+   "stars": 323017,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 51614,
-   "stars": 189181,
+   "delta": 52224,
+   "stars": 189791,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 43525,
-   "stars": 301406,
+   "delta": 44143,
+   "stars": 302024,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 34496,
-   "stars": 95656,
+   "delta": 34770,
+   "stars": 95930,
    "language": "JavaScript"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 33222,
-   "stars": 82938,
+   "delta": 33724,
+   "stars": 83440,
    "language": "TypeScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 31998,
-   "stars": 64342,
+   "delta": 32190,
+   "stars": 64534,
    "language": "JavaScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 27174,
-   "stars": 66542,
+   "delta": 27361,
+   "stars": 66729,
    "language": "HTML"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 26041,
-   "stars": 49845,
+   "delta": 26245,
+   "stars": 50049,
    "language": "Go"
   }
  ],
  "cumulative_comparable": 204,
  "daily_top": [
   {
-   "full_name": "meta/astryx",
-   "language": "TypeScript",
-   "delta": 2296,
-   "stars": 25079
+   "full_name": "janestreet/agent_skills",
+   "language": null,
+   "delta": 1867,
+   "stars": 7784
   },
   {
-   "full_name": "storytold/craft-anything",
-   "language": "Rust",
-   "delta": 2239,
-   "stars": 28498
+   "full_name": "meta/astryx",
+   "language": "TypeScript",
+   "delta": 1465,
+   "stars": 26544
   },
   {
    "full_name": "Lee-xeo/Claude-Cage",
    "language": "Go",
-   "delta": 2121,
-   "stars": 3347
+   "delta": 1428,
+   "stars": 4775
   },
   {
-   "full_name": "janestreet/agent_skills",
-   "language": null,
-   "delta": 2097,
-   "stars": 5917
+   "full_name": "storytold/craft-anything",
+   "language": "Rust",
+   "delta": 1362,
+   "stars": 29860
   },
   {
-   "full_name": "huamidev/GestaltX",
-   "language": "Swift",
-   "delta": 1551,
-   "stars": 6291
+   "full_name": "GoogleChrome/modern-web-guidance-src",
+   "language": "TypeScript",
+   "delta": 1150,
+   "stars": 2953
   },
   {
-   "full_name": "NotRexed/Hookshot",
-   "language": "C++",
-   "delta": 1319,
-   "stars": 7849
+   "full_name": "agentes-chat/agentes-chat",
+   "language": "TypeScript",
+   "delta": 966,
+   "stars": 1179
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 1174,
-   "stars": 322073
+   "delta": 944,
+   "stars": 323017
   },
   {
-   "full_name": "debpalash/VoiceStudio",
-   "language": "Python",
-   "delta": 1108,
-   "stars": 108382
+   "full_name": "NotRexed/Hookshot",
+   "language": "C++",
+   "delta": 938,
+   "stars": 8787
   },
   {
    "full_name": "we-promise/sure",
    "language": "Ruby",
-   "delta": 1065,
-   "stars": 12995
+   "delta": 925,
+   "stars": 13920
   },
   {
-   "full_name": "Edge0-AI/Edge0",
-   "language": "C++",
-   "delta": 859,
-   "stars": 10049
+   "full_name": "debpalash/VoiceStudio",
+   "language": "Python",
+   "delta": 818,
+   "stars": 109200
   }
  ],
  "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",

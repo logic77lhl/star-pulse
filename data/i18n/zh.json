@@ -1,5 +1,10 @@
 {
  "items": {
+  "1008713177": {
+   "by": "mymemory",
+   "src": "An open-source AI coding agent that lives in your terminal.",
+   "zh": "一款运行在终端中的开源 AI 编程代理。"
+  },
   "1011567289": {
    "by": "mymemory",
    "src": "Kronos: A Foundation Model for the Language of Financial Markets",
@@ -179,6 +184,11 @@
    "by": "mymemory",
    "src": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
    "zh": "一个用于改进Claude Code行为的CLAUDE.md文件，源自Andrej Karpathy对LLM编码陷阱的观察。"
+  },
+  "1143633223": {
+   "by": "mymemory",
+   "src": "Keep your coding agent up to date with the latest web best practices",
+   "zh": "让您的编码代理始终掌握最新的网络最佳实践"
   },
   "1144520675": {
    "by": "mymemory",
@@ -434,6 +444,11 @@
    "by": "mymemory",
    "src": "LIST OF ALL MY JAILBREAKS",
    "zh": "我所有的JAILBREAK列表"
+  },
+  "1274723381": {
+   "by": "mymemory",
+   "src": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+   "zh": "适用于Metal、CUDA和Vulkan的大语言模型（LLM）推理引擎。"
   },
   "1277471539": {
    "by": "llm",
@@ -6070,6 +6085,11 @@
    "src": "A GPU task manager for Windows, Linux, and WSL: per-process VRAM, GPU activity, and LLM model/KV-cache insights (Windows AMD and NVIDIA).",
    "zh": "适用于Windows、Linux和WSL的GPU任务管理器：每进程VRAM、GPU活动和LLM模型/KV缓存洞察（ Windows AMD和NVIDIA ）。"
   },
+  "1443699236": {
+   "by": "mymemory",
+   "src": "《搞机工具箱》Web移植版",
+   "zh": "《搞机工具箱》网页移植版"
+  },
   "1443759946": {
    "by": "mymemory",
    "src": "Entire MacOS running in your terminal.",
@@ -6590,10 +6610,20 @@
    "src": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Bring your own games and keys. 把你自己的 Switch 游戏原生带到 iP",
    "zh": "在iPhone、iPad和Mac上本地运行您自己的Switch游戏：游戏代码重写到ARM64 ，图形直接到Metal ，一个应用程序用于整个库。自带游戏和钥匙。"
   },
+  "1450794567": {
+   "by": "mymemory",
+   "src": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and",
+   "zh": "开源、自托管的 Slack 替代产品，您的团队和 AI 代理可以在频道和私信中协同工作。代理运行在Claude、ChatGPT/Codex、Gemini或Gro"
+  },
   "1450963843": {
    "by": "mymemory",
    "src": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
    "zh": "适用于iOS 27.x的MobileGestalt编辑器，具有区域代码调整、设备预设、备份以及对7种语言的支持。"
+  },
+  "1452008226": {
+   "by": "mymemory",
+   "src": "One self-hosted app for your shows, movies and music.",
+   "zh": "一款用于您的节目、电影和音乐的自托管应用程序。"
   },
   "1452123445": {
    "by": "mymemory",
@@ -6604,6 +6634,11 @@
    "by": "mymemory",
    "src": "Humanoid whole-body motion tracking with one differentiable world model.",
    "zh": "使用一个可微分世界模型进行人形机器人全身动作跟踪。"
+  },
+  "1453517867": {
+   "by": "mymemory",
+   "src": "Apex Neural Rendering (ANR) by Apex Compute",
+   "zh": "Apex Compute 的 Apex 神经渲染 (ANR)"
   },
   "145693916": {
    "by": "mymemory",
@@ -6780,6 +6815,11 @@
    "src": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
    "zh": "节点版本管理器-兼容POSIX的bash脚本，用于管理多个活动的node.js版本。"
   },
+  "612354784": {
+   "by": "mymemory",
+   "src": "LLM inference in C/C++",
+   "zh": "C/C++ 中的 LLM 推理"
+  },
   "6201092": {
    "by": "mymemory",
    "src": "🎥 Command line media player",
@@ -6884,6 +6924,11 @@
    "by": "mymemory",
    "src": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
    "zh": "跨平台Xcode替换。在Linux、Windows、macOS上使用SwiftPM构建和部署iOS应用。"
+  },
+  "903349957": {
+   "by": "mymemory",
+   "src": "Enable Hermès Watch Faces on any Apple Watch devices",
+   "zh": "在任何 Apple Watch 设备上启用爱马仕表盘"
   },
   "907604175": {
    "by": "mymemory",

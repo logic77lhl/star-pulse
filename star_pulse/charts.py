@@ -215,6 +215,56 @@ def hbar_chart(labels: list[str], values: list[float], *, unit: str = "stars") -
     return '<div class="hbars">' + "".join(rows) + "</div>"
 
 
+def leaderboard(
+    rows: list[dict], *, value_key: str = "delta", name_key: str = "full_name",
+    meta_key: str = "language", stars_key: str = "stars", limit: int = 10,
+) -> str:
+    """「一目了然」榜单：名次 + 项目名 + 横向条 + 大号数字，按值排序。
+
+    替代此前「表格 + 一列内联强度条」和「8 条相对增量折线」两种视图。
+
+    为什么这样更省力：Artificial Analysis 的 Intelligence 榜不画折线、不给
+    图例，只做三件事 —— 按值排序、名字贴在条上、数值直接标在末端。读者
+    不用读注释、不用对照图例、不用自己找第一名。这里保持同一套读法：
+
+      * 每行是一个真实仓库，仓库名是真实文本（可被选中、可点、窄屏不缩放）；
+      * 条长按峰值归一，第一名的条就是满格，量级一眼可分；
+      * 数值用等宽大号字放在**行的右侧固定位置**，不与条抢空间；
+      * 前三名用琥珀金标记，其余灰；语言作为次要信息放在名字下方。
+
+    纯 CSS，零 JS，停用脚本时仍是完整可读的榜单。
+    """
+    if not rows:
+        return '<p class="muted">窗口内没有可排名的仓库。</p>'
+    rows = rows[:limit]
+    peak = max((r.get(value_key) or 0) for r in rows) or 1
+    out = []
+    for i, r in enumerate(rows, 1):
+        val = int(r.get(value_key) or 0)
+        name = str(r.get(name_key) or "—")
+        width = max(1.5, val / peak * 100)
+        lang = str(r.get(meta_key) or "")
+        stars = r.get(stars_key)
+        meta = []
+        if lang:
+            meta.append(f'<span class="lang">{lang}</span>')
+        if isinstance(stars, (int, float)):
+            meta.append(f"<span>★ {int(stars):,}</span>")
+        meta_html = f'<span class="sub">{"".join(meta)}</span>' if meta else ""
+        top = " top" if i <= 3 else ""
+        out.append(
+            f'<div class="lb-row{top}" title="{name}　+{val:,}">'
+            f'<span class="lb-rank">{i}</span>'
+            f'<span class="lb-name"><a class="repo" href="https://github.com/{name}" '
+            f'target="_blank" rel="noopener">{name}'
+            f'<span class="ext" aria-hidden="true">↗</span></a>{meta_html}</span>'
+            f'<span class="lb-track"><i style="width:{width:.2f}%"></i></span>'
+            f'<span class="lb-val">+{val:,}</span>'
+            f"</div>"
+        )
+    return '<div class="leaderboard">' + "".join(out) + "</div>"
+
+
 def legend(names: list[str]) -> str:
     """折线图的 HTML 图例。放在 SVG 外面，文字才不会被 viewBox 缩放。"""
     if not names:

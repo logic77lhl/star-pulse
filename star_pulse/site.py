@@ -28,28 +28,50 @@ import sqlite3
 from collections import Counter
 from pathlib import Path
 
-from . import analyze, charts, i18n, theme
+from . import analyze, charts, i18n, narrate, theme
 from .config import Settings
-from .theme import esc, fmt_int, delta_html, delta_bar, kpi, repo_link, table
+from .theme import esc, fmt_int, delta_html, delta_bar, kpi, repo_link, table, takeaway
 
 # 周报文件名形如 2026-W40_2026-09-28_2026-10-04.html
 _REPORT_RE = re.compile(r"^(\d{4})-W(\d{2})_(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})$")
 
 
 # ── 页面片段 ────────────────────────────────────────────────────
-def _topbar(title: str, subtitle: str, meta: list[str]) -> str:
-    metas = "".join(f"<span>{m}</span>" for m in meta)
+def _section_cap(no: str, title: str, note: str = "") -> str:
+    """编号分区标题：给长页一个骨架，也充当前端锚点导航的落点。"""
+    tail = f'<span class="cap-note">{esc(note)}</span>' if note else ""
     return (
-        f'<header class="topbar"><h1>{title}</h1>'
-        f'<p class="note" style="margin:0 0 8px">{subtitle}</p>'
-        f'<div class="meta">{metas}</div></header>'
+        f'<div class="section-cap"><span class="no">{esc(no)}</span>'
+        f"<h3>{esc(title)}</h3><span class=\"line\"></span>{tail}</div>"
     )
 
 
-def _panel(title: str, body: str, *, note: str = "", more: str = "") -> str:
+def _topbar(title: str, subtitle: str, meta: list[str], *, eyebrow: str = "",
+            aside: str = "") -> str:
+    """首页 Hero：eyebrow + 大标题 + 导语 + 元信息，右侧可带一段竖线旁白。
+
+    旧版把「副标题」塞进 .note、元信息堆在一行，首屏没有钩子也没有层级。
+    这里改成对齐索引站的陈述/旁白两栏：左边说这是什么，右边说为什么这么做。
+    """
+    eyebrow_html = f'<div class="eyebrow">{esc(eyebrow)}</div>' if eyebrow else ""
+    metas = "".join(f"<span>{m}</span>" for m in meta)
+    left = (
+        f"{eyebrow_html}<h1>{title}</h1>"
+        f'<p class="lede">{subtitle}</p>'
+        f'<div class="meta">{metas}</div>'
+    )
+    right = f'<div class="hero-aside">{aside}</div>' if aside else ""
+    hero_cls = "topbar hero two-col" if aside else "topbar hero"
+    return f'<header class="{hero_cls}"><div class="hero-main">{left}</div>{right}</header>'
+
+
+def _panel(title: str, body: str, *, note: str = "", more: str = "",
+           conclusion: str = "") -> str:
+    """面板。conclusion 是标题下面的结论句（由 narrate.py 算好）。"""
     head = f'<div class="panel-head"><h2>{esc(title)}</h2>{more}</div>'
+    concl_html = conclusion  # 已经是渲染好的 HTML
     note_html = f'<p class="note">{note}</p>' if note else ""
-    return f'<section class="panel">{head}{note_html}{body}</section>'
+    return f'<section class="panel">{head}{concl_html}{note_html}{body}</section>'
 
 
 def _report_cards(reports_out: Path) -> str:
@@ -73,6 +95,21 @@ def _report_cards(reports_out: Path) -> str:
             f'<span class="rg">{esc(rg)}</span></a></li>'
         )
     return '<ul class="reports">' + "".join(items) + "</ul>"
+
+
+def _lang_bars(langs: list, limit: int = 8) -> str:
+    """首页「语言构成」小图。数据是当日快照里各语言的仓库计数，纯 CSS。"""
+    if not langs:
+        return '<p class="muted">暂无语言数据。</p>'
+    rows = langs[:limit]
+    hi = max((r["n"] for r in rows), default=1) or 1
+    items = "".join(
+        f'<div class="langrow"><span class="n">{esc(str(r["lang"]))}</span>'
+        f'<span class="t"><i style="width:{r["n"] / hi * 100:.0f}%"></i></span>'
+        f'<span class="c">{r["n"]:,}</span></div>'
+        for r in rows
+    )
+    return f'<div class="langbars">{items}</div>'
 
 
 def _daily_table(summary: list[dict]) -> str:
@@ -364,7 +401,7 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     spark = charts.sparkline([s["total_gain"] for s in core]) if len(core) >= 2 else ""
 
     kpis = (
-        kpi("今日新增星数", f"+{today_gain:,}", detail=wow, spark=spark)
+        kpi("今日新增星数", f"+{today_gain:,}", detail=wow, spark=spark, primary=True)
         + kpi("上涨项目", fmt_int(gainers), "个", detail=share)
         + kpi("追踪项目", fmt_int(len(projects)), "个", detail=f"数据日期 {latest or '—'}")
         + kpi("累计追踪", fmt_int(tracked), "个", detail=f"覆盖 {len(dates)} 天")
@@ -410,35 +447,88 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         else '<p class="muted">只有一天数据，还无法计算累计增长。</p>'
     )
 
-    # ── 走势图 ──
+    # ── 结论层：一次算出全部「一句话答案」，同时作为未来周报口播的事实来源 ──
+    narration = narrate.build_narration(
+        conn, dates, len(projects), daily_top, cumulative, comparable, langs
+    )
+    tk = narration.get("takeaways", {})
+
+    def _concl(key: str, label: str = "结论") -> str:
+        item = tk.get(key)
+        if not item:
+            return ""
+        return takeaway(esc(item["text"]), key=key, label=label)
+
+    # ── 视图：横向条榜（替代表格与那张 8 条折线） ──
+    daily_block = (
+        charts.leaderboard(daily_top, limit=10)
+        if daily_top else '<p class="muted">只有一天数据，还无法计算单日涨幅。</p>'
+    )
+    cumulative_block = (
+        charts.leaderboard(cumulative, limit=10)
+        if cumulative else '<p class="muted">只有一天数据，还无法计算累计增长。</p>'
+    )
+
+    # 每日新增走势保留（它回答「今天热不热闹」），但顶部先给结论
     bars = charts.css_bars([s["date"] for s in core], [s["total_gain"] for s in core])
-    trend_dates, trend_series = analyze.growth_series(conn, dates, limit=8)
-    if trend_series:
-        line = charts.line_chart(
-            trend_dates, [{"name": s["full_name"], "values": [p["gain"] for p in s["points"]]}
-                          for s in trend_series]
-        )
-        line_block = line + charts.legend([s["full_name"] for s in trend_series])
-    else:
-        line_block = '<p class="muted">还没有足够的数据画走势。</p>'
+    gains = [s["total_gain"] for s in core]
+    peak_val = max(gains, default=0)
+    avg_val = round(sum(gains) / len(gains)) if gains else 0
+    bars_legend = (
+        '<div class="chart-legend">'
+        f"<span>峰值 <b>+{peak_val:,}</b></span>"
+        f"<span>均值 <b>+{avg_val:,}</b></span>"
+        f"<span>最新 <b>+{today_gain:,}</b></span></div>"
+    )
 
     # ── 页脚 / 周报 ──
     reports_block = _report_cards(reports_out)
 
+    sitenav = (
+        '<nav class="sitenav">'
+        '<a class="brand" href="index.html"><span class="mark">L</span>'
+        '<span>logic77lhl <small>BUILD · SHIP · NOTE</small></span></a>'
+        '<div class="links">'
+        '<a href="#daily">当日涨幅</a><a href="#cumulative">累计增长</a>'
+        '<a href="#trend">走势</a><a href="#method">口径</a>'
+        '<a href="#reports">周报</a><a href="projects.html">项目名单</a>'
+        "</div>"
+        '<a class="src" href="https://github.com/logic77lhl/star-pulse">GitHub ↗</a>'
+        "</nav>"
+    )
+
+    aside = (
+        "<p>增量是个容易骗人的东西：口径不透明，也说不清两个数字之间隔了多久。</p>"
+        "<p>这里换了一条更笨的路 —— 只认自己拍下来的快照。宁可自己拍两张照片，"
+        "也不相信别人算好的差值。</p>"
+        '<p class="q">凡是「增量」，先问基数是什么。</p>'
+    )
+
     body = (
-        _topbar(
-            'star-pulse <span class="brand">· GitHub 星耀榜</span>',
-            "每日为候选池拍星数快照，用两个时间点相减得到真实增量。",
-            [f"数据截至 <b>{esc(str(latest or '—'))}</b>",
-             f"已积累 <b>{len(dates)}</b> 天",
-             f"时区 UTC+{settings.tz_offset_hours}",
-             "每日 04:00 自动采集"],
+        sitenav
+        + _topbar(
+            '每天给 800 个项目<br><span class="brand">拍一张星数快照。</span>',
+            "不用任何人的「增量」字段。每天 04:00 自己拍一次，用两个真实存在的日期相减 —— "
+            "涨了多少，只取决于两张照片。",
+            [f'<span class="pill">◷ 数据截至 <b>{esc(str(latest or "—"))}</b></span>',
+             f'<span class="pill">◈ 已积累 <b>{len(dates)}</b> 天</span>',
+             f'<span class="pill">◉ 追踪 <b>{len(projects):,}</b> 个</span>',
+             f'<span class="pill">◍ 覆盖 <b>{len(langs)}</b> 种语言</span>',
+             f'<span class="pill">↻ UTC+{settings.tz_offset_hours} · 04:00</span>'],
+            eyebrow=f"STAR-PULSE · {first or '—'} — {latest or '—'} · {len(dates)} DAYS",
+            aside=aside,
         )
+        # 首屏第一句就是今天的总判断，不是一堆等权卡片
+        + _concl("today", "今天怎么样")
         + f'<div class="kpis">{kpis}</div>'
         + banner
+        # 01 · 两个榜并排，各自先给一句答案
+        + _section_cap("01", "今天谁在涨", f"窗口 {dates[-2]} → {latest}" if len(dates) >= 2 else "")
+        + '<div class="grid-2" id="daily">'
         + _panel(
             "当日涨幅榜",
             daily_block,
+            conclusion=_concl("daily_top"),
             note=f"窗口 {dates[-2]} → {latest}。只比较相邻两个快照日，两个日期都真实存在，口径最干净。"
             if len(dates) >= 2 else "",
             more=f'<a class="more" href="projects.html">查看全部 {len(projects):,} 个项目 →</a>',
@@ -446,27 +536,47 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         + _panel(
             "累计增长榜",
             cumulative_block,
+            conclusion=_concl("cumulative_top"),
             note=(
                 f"窗口 {first} → {latest}。只统计<b>两端都有快照</b>的 {comparable:,} 个仓库 ——"
                 f"窗口对所有人一致才可比；中途进池的仓库不参与，避免把 3 天的增量和 26 天的增量放在一起排名。"
             ) if len(dates) >= 2 else "",
         )
+        + "</div>"
+        # 02 · 走势 + 语言构成，各自一句答案
+        + _section_cap("02", "走势与构成", f"{len(dates)} 天 · 服务端渲染")
+        + '<div class="grid-2" id="trend">'
         + _panel(
             "每日新增走势",
-            bars,
-            note="当天全部追踪仓库的新增星数合计，用来判断今天是不是「热闹的一天」。首日没有基线，不参与。",
+            bars + bars_legend,
+            conclusion=_concl("breadth"),
+            note="当天全部追踪仓库的新增星数合计。首日没有基线，不参与。",
         )
         + _panel(
-            "领涨仓库走势",
-            line_block,
-            note=(
-                "区间内累计增量最大的 8 个仓库。纵轴是相对区间首日的累计增量，"
-                "不是绝对星数 —— 否则 3 万星和 26 万星的曲线没法画在同一张图上。"
-            ),
+            "语言构成 · Top 8",
+            _lang_bars(langs),
+            conclusion=_concl("languages"),
+            note=f"按当日快照中有语言的仓库计数，共 {len(langs)} 种。",
         )
+        + "</div>"
+        # 03 · 口径说明（用真实机制撑住，不写功能清单）
+        + '<div id="method">' + _section_cap("03", "这份数据怎么来的") + "</div>"
+        + _panel(
+            "四路候选池 → 每天一张 → 两张照片相减",
+            '<div class="method">'
+            '<div class="m"><div class="t"><i>1</i> 四路候选池</div>'
+            "<p>种子清单、Trending 解析、池内续期、Search 补位，凑出当天要看的名单。</p></div>"
+            '<div class="m"><div class="t"><i>2</i> 每天拍一张</div>'
+            "<p>04:00 UTC 调 GitHub API 拿当前 star，和库里上一条快照相减，写入数据文件。</p></div>"
+            '<div class="m"><div class="t"><i>3</i> 看两张照片的差</div>'
+            "<p>看板读的是两张快照的差，不是任何人的「增量」字段。整条链路只用 Python 标准库。</p></div>"
+            "</div>",
+        )
+        # 04 · 逐日明细（不折叠：回归测试规定看板首屏必须直接可见）
+        + '<div id="history">' + _section_cap("04", "逐日明细与周报") + "</div>"
         + _panel("每天的情况", _daily_table(summary),
                  note="「新增星数合计」是当天全部追踪仓库的星数净增之和；首日没有对比基线。")
-        + _panel("历史周报", reports_block)
+        + '<div id="reports">' + _panel("历史周报", reports_block) + "</div>"
         + '<footer>由 <a href="https://github.com/logic77lhl/star-pulse">star-pulse</a> 自动生成。'
           '所有数值来自每日快照相减，未经任何模型改写。'
           '本页图表为服务端渲染的 SVG / CSS，不含任何外部脚本。</footer>'
@@ -500,6 +610,9 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
                 "cumulative_top": cumulative,
                 "cumulative_comparable": comparable,
                 "daily_top": daily_top,
+                # 结论层：页面文案、周报口播、视频字幕共用的唯一事实来源。
+                # spoken_order 给出串讲顺序，text 可直接朗读，facts 是可机读的数字。
+                "narration": narration,
                 "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",
                 "reports": [p.name for p in sorted(reports_out.glob("*.html"), reverse=True)],
             },

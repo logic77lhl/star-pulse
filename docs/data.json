@@ -875,5 +875,81 @@
   "2026-W39_2026-09-21_2026-09-27.html",
   "2026-W38_2026-09-14_2026-09-20.html",
   "2026-W38_2026-09-14_2026-09-14.html"
- ]
+ ],
+ "narration": {
+  "_warm": true,
+  "date": "2026-11-13",
+  "window": [
+   "2026-09-14",
+   "2026-11-13"
+  ],
+  "takeaways": {
+   "today": {
+    "key": "today",
+    "text": "今天全网新增 +30,746 颗星，比前一天少了 58%，是明显偏冷的一天；在已记录的 60 天里排第 49。最热闹的一天是 2026-10-13（+120,528）。",
+    "facts": {
+     "total_gain": 30746,
+     "avg_gain": 46662,
+     "days": 60,
+     "rank_by_gain": 49,
+     "wow_pct": -58,
+     "gainers": 432,
+     "peak_date": "2026-10-13",
+     "peak_gain": 120528
+    }
+   },
+   "daily_top": {
+    "key": "daily_top",
+    "text": "今天涨得最快的是 janestreet/agent_skills，+1,867；其次是 meta/astryx，+1,465。头名只占当日增量的 6%，涨得相当分散。",
+    "facts": {
+     "leader": "janestreet/agent_skills",
+     "leader_delta": 1867,
+     "runner_up": "meta/astryx",
+     "runner_up_delta": 1465,
+     "leader_share_pct": 6,
+     "total_gain": 30746
+    }
+   },
+   "cumulative_top": {
+    "key": "cumulative_top",
+    "text": "2026-09-14 到 2026-11-13 这段时间，debpalash/VoiceStudio 累计涨了 +81,772，是榜首；eternity4719/HowToLiveBetter 以 +75,121 紧随其后。这个榜只算两端都有快照的 204 个仓库，窗口对所有人一致。",
+    "facts": {
+     "leader": "debpalash/VoiceStudio",
+     "leader_delta": 81772,
+     "runner_up": "eternity4719/HowToLiveBetter",
+     "runner_up_delta": 75121,
+     "comparable": 204,
+     "start": "2026-09-14",
+     "end": "2026-11-13"
+    }
+   },
+   "breadth": {
+    "key": "breadth",
+    "text": "今天有 432 个项目在涨，占追踪池的 54%。",
+    "facts": {
+     "gainers": 432,
+     "tracked": 800,
+     "gainers_pct": 54
+    }
+   },
+   "languages": {
+    "key": "languages",
+    "text": "追踪的 800 个项目里，HTML 最多，178 个，占 22%；其次是 Python（154）。",
+    "facts": {
+     "top": "HTML",
+     "top_n": 178,
+     "top_pct": 22,
+     "distinct": 32,
+     "total_repos": 800
+    }
+   }
+  },
+  "spoken_order": [
+   "today",
+   "daily_top",
+   "cumulative_top",
+   "breadth",
+   "languages"
+  ]
+ }
 }

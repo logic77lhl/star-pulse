@@ -210,8 +210,17 @@ def test_site_build(tmp: Path) -> None:
     index = (docs / "index.html").read_text(encoding="utf-8")
     projects = (docs / "projects.html").read_text(encoding="utf-8")
 
-    for section in ("当日涨幅榜", "累计增长榜", "每日新增走势", "领涨仓库走势", "每天的情况", "历史周报"):
+    for section in ("当日涨幅榜", "累计增长榜", "每日新增走势", "语言构成", "每天的情况", "历史周报"):
         assert section in index, f"看板缺少板块：{section}"
+
+    # 「领涨仓库走势」那张 8 条相对增量折线已删除：信息量低、需要对照图例和
+    # 一段纵轴注释才能读懂，而「累计增长榜」用横向条回答的是同一个问题。
+    # 这里改为断言「结论前置」—— 每个视图先给一句由数据算出的答案。
+    assert "领涨仓库走势" not in index, "多序列折线已移除，不要再把它加回来"
+    assert 'class="takeaway"' in index, "看板必须有结论句（答案前置）"
+    assert 'class="leaderboard"' in index, "榜单应为一目了然的横向条榜"
+    assert "narration" in (docs / "data.json").read_text(encoding="utf-8"), \
+        "data.json 必须带上结论层，供周报口播 / 图文复用"
 
     # 首屏必须直接给到价值：指标条与两个榜单都在，不能全藏在折叠块后面
     for kpi_label in ("今日新增星数", "追踪项目", "累计追踪"):
@@ -222,7 +231,7 @@ def test_site_build(tmp: Path) -> None:
     # 图表改成服务端渲染的 SVG / CSS：没有 canvas，也没有任何外部脚本
     assert "<canvas" not in index, "图表不该再用 canvas"
     assert "<script" not in index, "看板必须是零 JS 的静态页"
-    assert "<svg" in index, "折线图应为服务端渲染的 SVG"
+    assert 'class="bars"' in index, "每日新增走势应为服务端渲染的 CSS 柱状图"
 
     # 硬性不变量：整站不得引用任何外部资源（含 CDN）。
     # 这正是本项目「零第三方依赖」的立身之本，此前 Chart.js 走 cdnjs 是唯一破例。

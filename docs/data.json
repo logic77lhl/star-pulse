@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T08:52:59+08:00",
+ "generated_at": "2026-11-15T07:50:44+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -63,14 +63,15 @@
   "2026-11-11",
   "2026-11-12",
   "2026-11-13",
-  "2026-11-14"
+  "2026-11-14",
+  "2026-11-15"
  ],
- "tracked_repos": 6294,
- "latest_date": "2026-11-14",
+ "tracked_repos": 6572,
+ "latest_date": "2026-11-15",
  "daily_summary": [
   {
    "date": "2026-09-14",
-   "repos": 798,
+   "repos": 797,
    "is_first": true,
    "total_gain": 0,
    "gainers": 0,
@@ -81,10 +82,10 @@
   },
   {
    "date": "2026-09-15",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 22297,
-   "gainers": 531,
+   "total_gain": 22280,
+   "gainers": 530,
    "top_name": "alibaba/open-code-review",
    "top_delta": 1771,
    "new_repos": 57,
@@ -92,10 +93,10 @@
   },
   {
    "date": "2026-09-16",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 27277,
-   "gainers": 513,
+   "total_gain": 27241,
+   "gainers": 512,
    "top_name": "alibaba/open-code-review",
    "top_delta": 2824,
    "new_repos": 100,
@@ -103,10 +104,10 @@
   },
   {
    "date": "2026-09-17",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 26693,
-   "gainers": 533,
+   "total_gain": 26674,
+   "gainers": 532,
    "top_name": "alibaba/open-code-review",
    "top_delta": 3270,
    "new_repos": 105,
@@ -114,10 +115,10 @@
   },
   {
    "date": "2026-09-18",
-   "repos": 616,
+   "repos": 615,
    "is_first": false,
-   "total_gain": 29181,
-   "gainers": 473,
+   "total_gain": 29163,
+   "gainers": 472,
    "top_name": "cloudflare/security-audit-skill",
    "top_delta": 3442,
    "new_repos": 41,
@@ -125,10 +126,10 @@
   },
   {
    "date": "2026-09-19",
-   "repos": 641,
+   "repos": 640,
    "is_first": false,
-   "total_gain": 34143,
-   "gainers": 441,
+   "total_gain": 34136,
+   "gainers": 440,
    "top_name": "browser-use/jev-ultrafast",
    "top_delta": 3505,
    "new_repos": 83,
@@ -136,10 +137,10 @@
   },
   {
    "date": "2026-09-20",
-   "repos": 666,
+   "repos": 665,
    "is_first": false,
-   "total_gain": 30235,
-   "gainers": 474,
+   "total_gain": 30223,
+   "gainers": 473,
    "top_name": "browser-use/jev-ultrafast",
    "top_delta": 2839,
    "new_repos": 84,
@@ -147,10 +148,10 @@
   },
   {
    "date": "2026-09-21",
-   "repos": 681,
+   "repos": 680,
    "is_first": false,
-   "total_gain": 37333,
-   "gainers": 515,
+   "total_gain": 37324,
+   "gainers": 514,
    "top_name": "browser-use/jev-ultrafast",
    "top_delta": 3493,
    "new_repos": 76,
@@ -158,10 +159,10 @@
   },
   {
    "date": "2026-09-22",
-   "repos": 714,
+   "repos": 713,
    "is_first": false,
-   "total_gain": 46658,
-   "gainers": 524,
+   "total_gain": 46655,
+   "gainers": 523,
    "top_name": "NandhaKishorM/laya",
    "top_delta": 6145,
    "new_repos": 81,
@@ -169,10 +170,10 @@
   },
   {
    "date": "2026-09-23",
-   "repos": 738,
+   "repos": 737,
    "is_first": false,
-   "total_gain": 39255,
-   "gainers": 538,
+   "total_gain": 39252,
+   "gainers": 537,
    "top_name": "NandhaKishorM/laya",
    "top_delta": 6395,
    "new_repos": 84,
@@ -180,10 +181,10 @@
   },
   {
    "date": "2026-09-24",
-   "repos": 751,
+   "repos": 750,
    "is_first": false,
-   "total_gain": 36534,
-   "gainers": 562,
+   "total_gain": 36528,
+   "gainers": 561,
    "top_name": "NandhaKishorM/laya",
    "top_delta": 3969,
    "new_repos": 75,
@@ -191,10 +192,10 @@
   },
   {
    "date": "2026-09-25",
-   "repos": 776,
+   "repos": 775,
    "is_first": false,
-   "total_gain": 30960,
-   "gainers": 578,
+   "total_gain": 30954,
+   "gainers": 577,
    "top_name": "NandhaKishorM/laya",
    "top_delta": 2644,
    "new_repos": 72,
@@ -202,10 +203,10 @@
   },
   {
    "date": "2026-09-26",
-   "repos": 785,
+   "repos": 784,
    "is_first": false,
-   "total_gain": 27358,
-   "gainers": 568,
+   "total_gain": 27353,
+   "gainers": 567,
    "top_name": "eternity4719/HowToLiveBetter",
    "top_delta": 2044,
    "new_repos": 80,
@@ -213,10 +214,10 @@
   },
   {
    "date": "2026-09-27",
-   "repos": 795,
+   "repos": 794,
    "is_first": false,
-   "total_gain": 28309,
-   "gainers": 616,
+   "total_gain": 28301,
+   "gainers": 615,
    "top_name": "paperclipai/paperclip",
    "top_delta": 2332,
    "new_repos": 63,
@@ -224,10 +225,10 @@
   },
   {
    "date": "2026-09-28",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
-   "total_gain": 33071,
-   "gainers": 614,
+   "total_gain": 33067,
+   "gainers": 613,
    "top_name": "vectorize-io/hindsight",
    "top_delta": 5099,
    "new_repos": 55,
@@ -235,10 +236,10 @@
   },
   {
    "date": "2026-09-29",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
-   "total_gain": 42533,
-   "gainers": 584,
+   "total_gain": 42530,
+   "gainers": 583,
    "top_name": "debpalash/VoiceStudio",
    "top_delta": 4048,
    "new_repos": 92,
@@ -246,10 +247,10 @@
   },
   {
    "date": "2026-09-30",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
-   "total_gain": 37899,
-   "gainers": 620,
+   "total_gain": 37893,
+   "gainers": 619,
    "top_name": "debpalash/VoiceStudio",
    "top_delta": 3988,
    "new_repos": 56,
@@ -257,10 +258,10 @@
   },
   {
    "date": "2026-10-01",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
-   "total_gain": 38919,
-   "gainers": 555,
+   "total_gain": 38911,
+   "gainers": 554,
    "top_name": "eternity4719/HowToLiveBetter",
    "top_delta": 3948,
    "new_repos": 76,
@@ -268,10 +269,10 @@
   },
   {
    "date": "2026-10-02",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 28420,
-   "gainers": 526,
+   "total_gain": 28418,
+   "gainers": 525,
    "top_name": "Niko1221/Strata",
    "top_delta": 1674,
    "new_repos": 121,
@@ -279,10 +280,10 @@
   },
   {
    "date": "2026-10-03",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 26643,
-   "gainers": 549,
+   "total_gain": 26639,
+   "gainers": 548,
    "top_name": "eternity4719/HowToLiveBetter",
    "top_delta": 1911,
    "new_repos": 83,
@@ -290,10 +291,10 @@
   },
   {
    "date": "2026-10-04",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 27732,
-   "gainers": 548,
+   "total_gain": 27731,
+   "gainers": 547,
    "top_name": "Niko1221/Strata",
    "top_delta": 2145,
    "new_repos": 83,
@@ -301,10 +302,10 @@
   },
   {
    "date": "2026-10-05",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 48889,
-   "gainers": 524,
+   "total_gain": 48884,
+   "gainers": 523,
    "top_name": "eternity4719/HowToLiveBetter",
    "top_delta": 5068,
    "new_repos": 140,
@@ -312,10 +313,10 @@
   },
   {
    "date": "2026-10-06",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 23925,
-   "gainers": 521,
+   "total_gain": 23921,
+   "gainers": 520,
    "top_name": "Niko1221/Strata",
    "top_delta": 1475,
    "new_repos": 124,
@@ -323,10 +324,10 @@
   },
   {
    "date": "2026-10-07",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 42467,
-   "gainers": 554,
+   "total_gain": 42466,
+   "gainers": 553,
    "top_name": "storytold/photocraft",
    "top_delta": 4283,
    "new_repos": 114,
@@ -334,10 +335,10 @@
   },
   {
    "date": "2026-10-08",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 66232,
-   "gainers": 512,
+   "total_gain": 66230,
+   "gainers": 511,
    "top_name": "storytold/photocraft",
    "top_delta": 10563,
    "new_repos": 150,
@@ -345,7 +346,7 @@
   },
   {
    "date": "2026-10-09",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
    "total_gain": 76123,
    "gainers": 584,
@@ -356,10 +357,10 @@
   },
   {
    "date": "2026-10-10",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 85715,
-   "gainers": 553,
+   "total_gain": 85714,
+   "gainers": 552,
    "top_name": "morluto/rea",
    "top_delta": 19324,
    "new_repos": 98,
@@ -367,10 +368,10 @@
   },
   {
    "date": "2026-10-11",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 80731,
-   "gainers": 532,
+   "total_gain": 80730,
+   "gainers": 531,
    "top_name": "morluto/rea",
    "top_delta": 26097,
    "new_repos": 74,
@@ -378,10 +379,10 @@
   },
   {
    "date": "2026-10-12",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 86772,
-   "gainers": 520,
+   "total_gain": 86769,
+   "gainers": 519,
    "top_name": "morluto/rea",
    "top_delta": 31382,
    "new_repos": 75,
@@ -389,7 +390,7 @@
   },
   {
    "date": "2026-10-13",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 120528,
    "gainers": 505,
@@ -400,10 +401,10 @@
   },
   {
    "date": "2026-10-14",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
-   "total_gain": 93215,
-   "gainers": 584,
+   "total_gain": 93214,
+   "gainers": 583,
    "top_name": "morluto/rea",
    "top_delta": 45453,
    "new_repos": 80,
@@ -411,7 +412,7 @@
   },
   {
    "date": "2026-10-15",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
    "total_gain": 75883,
    "gainers": 589,
@@ -422,7 +423,7 @@
   },
   {
    "date": "2026-10-16",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
    "total_gain": 67300,
    "gainers": 587,
@@ -433,7 +434,7 @@
   },
   {
    "date": "2026-10-17",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
    "total_gain": 35980,
    "gainers": 575,
@@ -444,10 +445,10 @@
   },
   {
    "date": "2026-10-18",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
-   "total_gain": 34783,
-   "gainers": 590,
+   "total_gain": 34781,
+   "gainers": 589,
    "top_name": "debpalash/VoiceStudio",
    "top_delta": 2145,
    "new_repos": 60,
@@ -455,7 +456,7 @@
   },
   {
    "date": "2026-10-19",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
    "total_gain": 42470,
    "gainers": 565,
@@ -466,7 +467,7 @@
   },
   {
    "date": "2026-10-20",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
    "total_gain": 54731,
    "gainers": 589,
@@ -477,10 +478,10 @@
   },
   {
    "date": "2026-10-21",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
-   "total_gain": 49597,
-   "gainers": 569,
+   "total_gain": 49596,
+   "gainers": 568,
    "top_name": "Gathin23/cleanyourtv",
    "top_delta": 6397,
    "new_repos": 71,
@@ -488,7 +489,7 @@
   },
   {
    "date": "2026-10-22",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
    "total_gain": 52152,
    "gainers": 560,
@@ -499,7 +500,7 @@
   },
   {
    "date": "2026-10-23",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
    "total_gain": 40883,
    "gainers": 529,
@@ -510,10 +511,10 @@
   },
   {
    "date": "2026-10-24",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
-   "total_gain": 38902,
-   "gainers": 582,
+   "total_gain": 38901,
+   "gainers": 581,
    "top_name": "Gathin23/cleanyourtv",
    "top_delta": 3933,
    "new_repos": 67,
@@ -521,10 +522,10 @@
   },
   {
    "date": "2026-10-25",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
-   "total_gain": 33104,
-   "gainers": 556,
+   "total_gain": 33103,
+   "gainers": 555,
    "top_name": "Gathin23/cleanyourtv",
    "top_delta": 3775,
    "new_repos": 65,
@@ -532,10 +533,10 @@
   },
   {
    "date": "2026-10-26",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
-   "total_gain": 41876,
-   "gainers": 564,
+   "total_gain": 41874,
+   "gainers": 563,
    "top_name": "Zagitta/gpu-unlock",
    "top_delta": 3742,
    "new_repos": 82,
@@ -543,7 +544,7 @@
   },
   {
    "date": "2026-10-27",
-   "repos": 796,
+   "repos": 795,
    "is_first": false,
    "total_gain": 55181,
    "gainers": 575,
@@ -554,7 +555,7 @@
   },
   {
    "date": "2026-10-28",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 42341,
    "gainers": 556,
@@ -565,7 +566,7 @@
   },
   {
    "date": "2026-10-29",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 49917,
    "gainers": 552,
@@ -576,7 +577,7 @@
   },
   {
    "date": "2026-10-30",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 40952,
    "gainers": 510,
@@ -587,7 +588,7 @@
   },
   {
    "date": "2026-10-31",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 39188,
    "gainers": 524,
@@ -598,7 +599,7 @@
   },
   {
    "date": "2026-11-01",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 40576,
    "gainers": 488,
@@ -609,7 +610,7 @@
   },
   {
    "date": "2026-11-02",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 46644,
    "gainers": 483,
@@ -620,7 +621,7 @@
   },
   {
    "date": "2026-11-03",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
    "total_gain": 54602,
    "gainers": 430,
@@ -631,7 +632,7 @@
   },
   {
    "date": "2026-11-04",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
    "total_gain": 46672,
    "gainers": 508,
@@ -642,10 +643,10 @@
   },
   {
    "date": "2026-11-05",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
-   "total_gain": 41254,
-   "gainers": 447,
+   "total_gain": 41252,
+   "gainers": 446,
    "top_name": "storytold/craft-anything",
    "top_delta": 3394,
    "new_repos": 190,
@@ -653,7 +654,7 @@
   },
   {
    "date": "2026-11-06",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
    "total_gain": 45771,
    "gainers": 480,
@@ -664,7 +665,7 @@
   },
   {
    "date": "2026-11-07",
-   "repos": 797,
+   "repos": 796,
    "is_first": false,
    "total_gain": 32409,
    "gainers": 428,
@@ -675,10 +676,10 @@
   },
   {
    "date": "2026-11-08",
-   "repos": 798,
+   "repos": 797,
    "is_first": false,
-   "total_gain": 34936,
-   "gainers": 527,
+   "total_gain": 34934,
+   "gainers": 526,
    "top_name": "storytold/craft-anything",
    "top_delta": 2521,
    "new_repos": 47,
@@ -686,10 +687,10 @@
   },
   {
    "date": "2026-11-09",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 37654,
-   "gainers": 351,
+   "total_gain": 37653,
+   "gainers": 350,
    "top_name": "sherlock-project/sherlock",
    "top_delta": 2980,
    "new_repos": 336,
@@ -697,10 +698,10 @@
   },
   {
    "date": "2026-11-10",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 77883,
-   "gainers": 507,
+   "total_gain": 77882,
+   "gainers": 506,
    "top_name": "sherlock-project/sherlock",
    "top_delta": 3884,
    "new_repos": 204,
@@ -708,10 +709,10 @@
   },
   {
    "date": "2026-11-11",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 65779,
-   "gainers": 536,
+   "total_gain": 65778,
+   "gainers": 535,
    "top_name": "huamidev/GestaltX",
    "top_delta": 2707,
    "new_repos": 126,
@@ -719,10 +720,10 @@
   },
   {
    "date": "2026-11-12",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 73497,
-   "gainers": 512,
+   "total_gain": 73496,
+   "gainers": 511,
    "top_name": "meta/astryx",
    "top_delta": 2296,
    "new_repos": 125,
@@ -730,7 +731,7 @@
   },
   {
    "date": "2026-11-13",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
    "total_gain": 30746,
    "gainers": 432,
@@ -741,206 +742,217 @@
   },
   {
    "date": "2026-11-14",
-   "repos": 800,
+   "repos": 799,
    "is_first": false,
-   "total_gain": 24532,
-   "gainers": 421,
+   "total_gain": 24531,
+   "gainers": 420,
    "top_name": "GoogleChrome/modern-web-guidance-src",
    "top_delta": 1894,
    "new_repos": 68,
    "prev": "2026-11-13"
+  },
+  {
+   "date": "2026-11-15",
+   "repos": 799,
+   "is_first": false,
+   "total_gain": 26528,
+   "gainers": 323,
+   "top_name": "libracoder/kiri",
+   "top_delta": 1497,
+   "new_repos": 283,
+   "prev": "2026-11-14"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "debpalash/VoiceStudio",
-   "delta": 82552,
-   "stars": 109980,
+   "delta": 83243,
+   "stars": 110671,
    "language": "Python"
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 75365,
-   "stars": 75580,
+   "delta": 75552,
+   "stars": 75767,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 62358,
-   "stars": 323829,
+   "delta": 63008,
+   "stars": 324479,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 52800,
-   "stars": 190367,
+   "delta": 53344,
+   "stars": 190911,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 44585,
-   "stars": 302466,
+   "delta": 45155,
+   "stars": 303036,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 35062,
-   "stars": 96222,
+   "delta": 35280,
+   "stars": 96440,
    "language": "JavaScript"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 34228,
-   "stars": 83944,
+   "delta": 34625,
+   "stars": 84341,
    "language": "TypeScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 32344,
-   "stars": 64688,
+   "delta": 32520,
+   "stars": 64864,
    "language": "JavaScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 27525,
-   "stars": 66893,
+   "delta": 27757,
+   "stars": 67125,
    "language": "HTML"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 26816,
-   "stars": 50620,
+   "delta": 27603,
+   "stars": 51407,
    "language": "Go"
   }
  ],
- "cumulative_comparable": 205,
+ "cumulative_comparable": 204,
  "daily_top": [
+  {
+   "full_name": "libracoder/kiri",
+   "language": "Rust",
+   "delta": 1497,
+   "stars": 3711
+  },
   {
    "full_name": "GoogleChrome/modern-web-guidance-src",
    "language": "TypeScript",
-   "delta": 1894,
-   "stars": 4847
+   "delta": 1153,
+   "stars": 6000
   },
   {
-   "full_name": "we-promise/sure",
-   "language": "Ruby",
+   "full_name": "deepseek-ai/chat-demo",
+   "language": "TypeScript",
+   "delta": 1023,
+   "stars": 1733
+  },
+  {
+   "full_name": "ChromeDevTools/chrome-devtools-mcp",
+   "language": "TypeScript",
    "delta": 823,
-   "stars": 14743
+   "stars": 56275
   },
   {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 812,
-   "stars": 323829
+   "full_name": "alibaba/open-code-review",
+   "language": "Go",
+   "delta": 787,
+   "stars": 51407
   },
   {
    "full_name": "debpalash/VoiceStudio",
    "language": "Python",
-   "delta": 780,
-   "stars": 109980
+   "delta": 691,
+   "stars": 110671
   },
   {
    "full_name": "cloudflare/security-audit-skill",
    "language": "JavaScript",
-   "delta": 710,
-   "stars": 71930
+   "delta": 679,
+   "stars": 72609
   },
   {
-   "full_name": "openai/codex-security",
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 650,
+   "stars": 324479
+  },
+  {
+   "full_name": "backnotprop/plannotator",
    "language": "TypeScript",
-   "delta": 703,
-   "stars": 13130
+   "delta": 650,
+   "stars": 11101
   },
   {
-   "full_name": "Edge0-AI/Edge0",
-   "language": "C++",
-   "delta": 667,
-   "stars": 10938
-  },
-  {
-   "full_name": "expo/exact",
-   "language": "Rust",
-   "delta": 648,
-   "stars": 4007
-  },
-  {
-   "full_name": "pbakaus/impeccable",
-   "language": "Rust",
-   "delta": 606,
-   "stars": 109605
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 576,
-   "stars": 190367
+   "full_name": "tradermonty/claude-trading-skills",
+   "language": "Python",
+   "delta": 613,
+   "stars": 4782
   }
  ],
  "narration": {
   "_warm": true,
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "window": [
    "2026-09-14",
-   "2026-11-14"
+   "2026-11-15"
   ],
   "takeaways": {
    "today": {
     "key": "today",
-    "text": "今天全网新增 +24,532 颗星，低于 61 天均值（+46,299）；在已记录的 61 天里排第 59。最热闹的一天是 2026-10-13（+120,528）。",
+    "text": "今天全网新增 +26,528 颗星，低于 62 天均值（+45,977）；在已记录的 62 天里排第 59。最热闹的一天是 2026-10-13（+120,528）。",
     "facts": {
-     "total_gain": 24532,
-     "avg_gain": 46299,
-     "days": 61,
+     "total_gain": 26528,
+     "avg_gain": 45977,
+     "days": 62,
      "rank_by_gain": 59,
-     "wow_pct": -20,
-     "gainers": 421,
+     "wow_pct": 8,
+     "gainers": 323,
      "peak_date": "2026-10-13",
      "peak_gain": 120528
     }
    },
    "daily_top": {
     "key": "daily_top",
-    "text": "今天涨得最快的是 GoogleChrome/modern-web-guidance-src，+1,894；其次是 we-promise/sure，+823。头名只占当日增量的 8%，涨得相当分散。",
+    "text": "今天涨得最快的是 libracoder/kiri，+1,497；其次是 GoogleChrome/modern-web-guidance-src，+1,153。头名只占当日增量的 6%，涨得相当分散。",
     "facts": {
-     "leader": "GoogleChrome/modern-web-guidance-src",
-     "leader_delta": 1894,
-     "runner_up": "we-promise/sure",
-     "runner_up_delta": 823,
-     "leader_share_pct": 8,
-     "total_gain": 24532
+     "leader": "libracoder/kiri",
+     "leader_delta": 1497,
+     "runner_up": "GoogleChrome/modern-web-guidance-src",
+     "runner_up_delta": 1153,
+     "leader_share_pct": 6,
+     "total_gain": 26528
     }
    },
    "cumulative_top": {
     "key": "cumulative_top",
-    "text": "2026-09-14 到 2026-11-14 这段时间，debpalash/VoiceStudio 累计涨了 +82,552，是榜首；eternity4719/HowToLiveBetter 以 +75,365 紧随其后。这个榜只算两端都有快照的 205 个仓库，窗口对所有人一致。",
+    "text": "2026-09-14 到 2026-11-15 这段时间，debpalash/VoiceStudio 累计涨了 +83,243，是榜首；eternity4719/HowToLiveBetter 以 +75,552 紧随其后。这个榜只算两端都有快照的 204 个仓库，窗口对所有人一致。",
     "facts": {
      "leader": "debpalash/VoiceStudio",
-     "leader_delta": 82552,
+     "leader_delta": 83243,
      "runner_up": "eternity4719/HowToLiveBetter",
-     "runner_up_delta": 75365,
-     "comparable": 205,
+     "runner_up_delta": 75552,
+     "comparable": 204,
      "start": "2026-09-14",
-     "end": "2026-11-14"
+     "end": "2026-11-15"
     }
    },
    "breadth": {
     "key": "breadth",
-    "text": "今天有 421 个项目在涨，占追踪池的 53%。",
+    "text": "今天有 323 个项目在涨，占追踪池的 40%。",
     "facts": {
-     "gainers": 421,
-     "tracked": 800,
-     "gainers_pct": 53
+     "gainers": 323,
+     "tracked": 799,
+     "gainers_pct": 40
     }
    },
    "languages": {
     "key": "languages",
-    "text": "追踪的 800 个项目里，HTML 最多，173 个，占 22%；其次是 Python（160）。",
+    "text": "追踪的 799 个项目里，Rust 最多，118 个，占 15%；其次是 Python（112）。",
     "facts": {
-     "top": "HTML",
-     "top_n": 173,
-     "top_pct": 22,
-     "distinct": 31,
-     "total_repos": 800
+     "top": "Rust",
+     "top_n": 118,
+     "top_pct": 15,
+     "distinct": 29,
+     "total_repos": 799
     }
    }
   },

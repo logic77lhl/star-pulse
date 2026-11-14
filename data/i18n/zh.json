@@ -6670,6 +6670,11 @@
    "src": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and support for 7 languages.",
    "zh": "适用于iOS 27.x的MobileGestalt编辑器，具有区域代码调整、设备预设、备份以及对7种语言的支持。"
   },
+  "1451554320": {
+   "by": "mymemory",
+   "src": "Static recompilation of Mario Kart World (Nintendo Switch 2) to a native PC program",
+   "zh": "将《马里奥赛车世界》（Nintendo Switch 2）静态重编译为原生 PC 程序"
+  },
   "1452008226": {
    "by": "mymemory",
    "src": "One self-hosted app for your shows, movies and music.",
@@ -6694,6 +6699,16 @@
    "by": "mymemory",
    "src": "Apex Neural Rendering (ANR) by Apex Compute",
    "zh": "Apex Compute 的 Apex 神经渲染 (ANR)"
+  },
+  "1455006582": {
+   "by": "mymemory",
+   "src": "Chat Demo",
+   "zh": "聊天演示"
+  },
+  "1455815512": {
+   "by": "mymemory",
+   "src": "Lightweight portable FFmpeg GUI & lossless video trimmer for Windows (ready-to-use .exe). Supports English, Russian, Chinese, German, French & Italian.",
+   "zh": "轻量级便携式 FFmpeg 图形用户界面和无损视频剪辑工具，适用于 Windows（即用型 .exe）。支持英语、俄语、中文、德语、法语和意大利语。"
   },
   "145693916": {
    "by": "mymemory",
@@ -6844,6 +6859,16 @@
    "by": "mymemory",
    "src": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
    "zh": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘/阿里云盘/中国移动云盘/天翼云盘/迅雷云盘/夸克网盘"
+  },
+  "543101941": {
+   "by": "mymemory",
+   "src": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+   "zh": "使用 Univer Office SDK 构建您自己的 AI 办公套件。将编辑、计算、协作和文件处理功能集成到您的产品中，供人和 AI 代理使用。基于可扩展的开"
+  },
+  "543516398": {
+   "by": "mymemory",
+   "src": "A WiFi security auditing software",
+   "zh": "一款 Wi-Fi 安全审计软件"
   },
   "572984571": {
    "by": "mymemory",
@@ -7039,6 +7064,11 @@
    "by": "llm",
    "src": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok B",
    "zh": "从 Anthropic、OpenAI、Google、xAI 等产品中提取的系统提示词集合"
+  },
+  "979392131": {
+   "by": "mymemory",
+   "src": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+   "zh": "AG-UI：代理与用户交互协议。将代理引入前端应用程序。"
   },
   "995029641": {
    "by": "mymemory",

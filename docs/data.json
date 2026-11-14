@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T09:01:41+08:00",
+ "generated_at": "2026-11-14T08:52:59+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -62,10 +62,11 @@
   "2026-11-10",
   "2026-11-11",
   "2026-11-12",
-  "2026-11-13"
+  "2026-11-13",
+  "2026-11-14"
  ],
- "tracked_repos": 6230,
- "latest_date": "2026-11-13",
+ "tracked_repos": 6294,
+ "latest_date": "2026-11-14",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -737,209 +738,208 @@
    "top_delta": 1867,
    "new_repos": 71,
    "prev": "2026-11-12"
+  },
+  {
+   "date": "2026-11-14",
+   "repos": 800,
+   "is_first": false,
+   "total_gain": 24532,
+   "gainers": 421,
+   "top_name": "GoogleChrome/modern-web-guidance-src",
+   "top_delta": 1894,
+   "new_repos": 68,
+   "prev": "2026-11-13"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "debpalash/VoiceStudio",
-   "delta": 81772,
-   "stars": 109200,
+   "delta": 82552,
+   "stars": 109980,
    "language": "Python"
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 75121,
-   "stars": 75336,
+   "delta": 75365,
+   "stars": 75580,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 61546,
-   "stars": 323017,
+   "delta": 62358,
+   "stars": 323829,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 52224,
-   "stars": 189791,
+   "delta": 52800,
+   "stars": 190367,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 44143,
-   "stars": 302024,
+   "delta": 44585,
+   "stars": 302466,
    "language": "JavaScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 34770,
-   "stars": 95930,
+   "delta": 35062,
+   "stars": 96222,
    "language": "JavaScript"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 33724,
-   "stars": 83440,
+   "delta": 34228,
+   "stars": 83944,
    "language": "TypeScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 32190,
-   "stars": 64534,
+   "delta": 32344,
+   "stars": 64688,
    "language": "JavaScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 27361,
-   "stars": 66729,
+   "delta": 27525,
+   "stars": 66893,
    "language": "HTML"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 26245,
-   "stars": 50049,
+   "delta": 26816,
+   "stars": 50620,
    "language": "Go"
   }
  ],
- "cumulative_comparable": 204,
+ "cumulative_comparable": 205,
  "daily_top": [
-  {
-   "full_name": "janestreet/agent_skills",
-   "language": null,
-   "delta": 1867,
-   "stars": 7784
-  },
-  {
-   "full_name": "meta/astryx",
-   "language": "TypeScript",
-   "delta": 1465,
-   "stars": 26544
-  },
-  {
-   "full_name": "Lee-xeo/Claude-Cage",
-   "language": "Go",
-   "delta": 1428,
-   "stars": 4775
-  },
-  {
-   "full_name": "storytold/craft-anything",
-   "language": "Rust",
-   "delta": 1362,
-   "stars": 29860
-  },
   {
    "full_name": "GoogleChrome/modern-web-guidance-src",
    "language": "TypeScript",
-   "delta": 1150,
-   "stars": 2953
-  },
-  {
-   "full_name": "agentes-chat/agentes-chat",
-   "language": "TypeScript",
-   "delta": 966,
-   "stars": 1179
-  },
-  {
-   "full_name": "mattpocock/skills",
-   "language": "Shell",
-   "delta": 944,
-   "stars": 323017
-  },
-  {
-   "full_name": "NotRexed/Hookshot",
-   "language": "C++",
-   "delta": 938,
-   "stars": 8787
+   "delta": 1894,
+   "stars": 4847
   },
   {
    "full_name": "we-promise/sure",
    "language": "Ruby",
-   "delta": 925,
-   "stars": 13920
+   "delta": 823,
+   "stars": 14743
+  },
+  {
+   "full_name": "mattpocock/skills",
+   "language": "Shell",
+   "delta": 812,
+   "stars": 323829
   },
   {
    "full_name": "debpalash/VoiceStudio",
    "language": "Python",
-   "delta": 818,
-   "stars": 109200
+   "delta": 780,
+   "stars": 109980
+  },
+  {
+   "full_name": "cloudflare/security-audit-skill",
+   "language": "JavaScript",
+   "delta": 710,
+   "stars": 71930
+  },
+  {
+   "full_name": "openai/codex-security",
+   "language": "TypeScript",
+   "delta": 703,
+   "stars": 13130
+  },
+  {
+   "full_name": "Edge0-AI/Edge0",
+   "language": "C++",
+   "delta": 667,
+   "stars": 10938
+  },
+  {
+   "full_name": "expo/exact",
+   "language": "Rust",
+   "delta": 648,
+   "stars": 4007
+  },
+  {
+   "full_name": "pbakaus/impeccable",
+   "language": "Rust",
+   "delta": 606,
+   "stars": 109605
+  },
+  {
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 576,
+   "stars": 190367
   }
- ],
- "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",
- "reports": [
-  "2026-W45_2026-11-02_2026-11-08.html",
-  "2026-W44_2026-10-26_2026-11-01.html",
-  "2026-W43_2026-10-19_2026-10-25.html",
-  "2026-W42_2026-10-12_2026-10-18.html",
-  "2026-W41_2026-10-05_2026-10-11.html",
-  "2026-W40_2026-09-28_2026-10-04.html",
-  "2026-W39_2026-09-21_2026-09-27.html",
-  "2026-W38_2026-09-14_2026-09-20.html",
-  "2026-W38_2026-09-14_2026-09-14.html"
  ],
  "narration": {
   "_warm": true,
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "window": [
    "2026-09-14",
-   "2026-11-13"
+   "2026-11-14"
   ],
   "takeaways": {
    "today": {
     "key": "today",
-    "text": "今天全网新增 +30,746 颗星，比前一天少了 58%，是明显偏冷的一天；在已记录的 60 天里排第 49。最热闹的一天是 2026-10-13（+120,528）。",
+    "text": "今天全网新增 +24,532 颗星，低于 61 天均值（+46,299）；在已记录的 61 天里排第 59。最热闹的一天是 2026-10-13（+120,528）。",
     "facts": {
-     "total_gain": 30746,
-     "avg_gain": 46662,
-     "days": 60,
-     "rank_by_gain": 49,
-     "wow_pct": -58,
-     "gainers": 432,
+     "total_gain": 24532,
+     "avg_gain": 46299,
+     "days": 61,
+     "rank_by_gain": 59,
+     "wow_pct": -20,
+     "gainers": 421,
      "peak_date": "2026-10-13",
      "peak_gain": 120528
     }
    },
    "daily_top": {
     "key": "daily_top",
-    "text": "今天涨得最快的是 janestreet/agent_skills，+1,867；其次是 meta/astryx，+1,465。头名只占当日增量的 6%，涨得相当分散。",
+    "text": "今天涨得最快的是 GoogleChrome/modern-web-guidance-src，+1,894；其次是 we-promise/sure，+823。头名只占当日增量的 8%，涨得相当分散。",
     "facts": {
-     "leader": "janestreet/agent_skills",
-     "leader_delta": 1867,
-     "runner_up": "meta/astryx",
-     "runner_up_delta": 1465,
-     "leader_share_pct": 6,
-     "total_gain": 30746
+     "leader": "GoogleChrome/modern-web-guidance-src",
+     "leader_delta": 1894,
+     "runner_up": "we-promise/sure",
+     "runner_up_delta": 823,
+     "leader_share_pct": 8,
+     "total_gain": 24532
     }
    },
    "cumulative_top": {
     "key": "cumulative_top",
-    "text": "2026-09-14 到 2026-11-13 这段时间，debpalash/VoiceStudio 累计涨了 +81,772，是榜首；eternity4719/HowToLiveBetter 以 +75,121 紧随其后。这个榜只算两端都有快照的 204 个仓库，窗口对所有人一致。",
+    "text": "2026-09-14 到 2026-11-14 这段时间，debpalash/VoiceStudio 累计涨了 +82,552，是榜首；eternity4719/HowToLiveBetter 以 +75,365 紧随其后。这个榜只算两端都有快照的 205 个仓库，窗口对所有人一致。",
     "facts": {
      "leader": "debpalash/VoiceStudio",
-     "leader_delta": 81772,
+     "leader_delta": 82552,
      "runner_up": "eternity4719/HowToLiveBetter",
-     "runner_up_delta": 75121,
-     "comparable": 204,
+     "runner_up_delta": 75365,
+     "comparable": 205,
      "start": "2026-09-14",
-     "end": "2026-11-13"
+     "end": "2026-11-14"
     }
    },
    "breadth": {
     "key": "breadth",
-    "text": "今天有 432 个项目在涨，占追踪池的 54%。",
+    "text": "今天有 421 个项目在涨，占追踪池的 53%。",
     "facts": {
-     "gainers": 432,
+     "gainers": 421,
      "tracked": 800,
-     "gainers_pct": 54
+     "gainers_pct": 53
     }
    },
    "languages": {
     "key": "languages",
-    "text": "追踪的 800 个项目里，HTML 最多，178 个，占 22%；其次是 Python（154）。",
+    "text": "追踪的 800 个项目里，HTML 最多，173 个，占 22%；其次是 Python（160）。",
     "facts": {
      "top": "HTML",
-     "top_n": 178,
+     "top_n": 173,
      "top_pct": 22,
-     "distinct": 32,
+     "distinct": 31,
      "total_repos": 800
     }
    }
@@ -951,5 +951,17 @@
    "breadth",
    "languages"
   ]
- }
+ },
+ "raw_snapshots": "data/snapshots/YYYY-MM-DD.json",
+ "reports": [
+  "2026-W45_2026-11-02_2026-11-08.html",
+  "2026-W44_2026-10-26_2026-11-01.html",
+  "2026-W43_2026-10-19_2026-10-25.html",
+  "2026-W42_2026-10-12_2026-10-18.html",
+  "2026-W41_2026-10-05_2026-10-11.html",
+  "2026-W40_2026-09-28_2026-10-04.html",
+  "2026-W39_2026-09-21_2026-09-27.html",
+  "2026-W38_2026-09-14_2026-09-20.html",
+  "2026-W38_2026-09-14_2026-09-14.html"
+ ]
 }

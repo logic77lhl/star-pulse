@@ -22,6 +22,16 @@
   --serif:"Iowan Old Style","Palatino Linotype",Georgia,"Songti SC","SimSun","宋体",serif;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   --mono:ui-monospace,SFMono-Regular,"Cascadia Mono",Consolas,monospace;
+
+  /* ── 统一控件令牌 ────────────────────────────────────
+     一页里所有可点控件共用同一套边框 / 底色 / 圆角 / 字号 / 状态。
+     只分两种尺寸：tag=28px（导航、筛选、分段、分页），field=32px（输入、动作）。
+     ── */
+  --ctl-border:#333d4b;
+  --ctl-bg:#0e131a;
+  --ctl-radius:7px;
+  --ctl-fs:11.5px;
+  --ctl-h:28px;
 }
 *{box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased}
@@ -44,17 +54,34 @@ a:hover{text-decoration:underline}
 .brand .mark{color:var(--gold);font-size:22px;line-height:1;transform:translateY(1px)}
 .brand .ttl{font-family:var(--serif);font-size:30px;letter-spacing:.02em}
 .brand .sub{font-family:var(--mono);font-size:9.5px;letter-spacing:.34em;color:var(--ink-3);text-indent:.34em}
-.nav{display:flex;gap:6px;margin-left:4px}
-.nav a{font-family:var(--mono);font-size:10px;letter-spacing:.12em;padding:5px 9px;border-radius:5px;
-  border:1px solid var(--line);color:var(--ink-2);background:#0d1117;text-decoration:none}
-.nav a:hover{border-color:var(--gold);color:var(--gold-hi);text-decoration:none}
-.nav a.on{border-color:var(--gold);color:var(--gold-hi);background:rgba(232,189,92,.08)}
+/* 所有可点控件的唯一基类。active 由 .on / [aria-current] / .on 触发。 */
+.ctl{display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  height:var(--ctl-h);padding:0 11px;
+  border:1px solid var(--ctl-border);border-radius:var(--ctl-radius);
+  background:var(--ctl-bg);color:var(--ink-2);
+  font-family:var(--sans);font-size:var(--ctl-fs);letter-spacing:.02em;
+  line-height:1;text-decoration:none;white-space:nowrap;cursor:pointer;
+  transition:border-color .15s,color .15s,background .15s}
+.ctl:hover{border-color:#5b6678;color:var(--ink);text-decoration:none}
+.ctl.on,.ctl[aria-current="page"]{border-color:var(--gold);color:var(--gold-hi);
+  background:rgba(232,189,92,.1)}
+.ctl:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+/* 强调动作：只换边框与文字色，不换尺寸，避免「另一个按钮」的错觉 */
+.ctl.accent{border-color:rgba(232,189,92,.5);color:var(--gold-hi)}
+.ctl.accent:hover{border-color:var(--gold);background:rgba(232,189,92,.12)}
+/* 输入类沿用同一套外壳 */
+.ctl.field{justify-content:flex-start;height:32px;padding:0 10px;cursor:text}
+input.ctl.field{width:100%}
+select.ctl.field{font-family:var(--sans);cursor:pointer;padding-right:24px}
+.ctl.field::placeholder{color:var(--ink-4)}
+.ctl.field:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,189,92,.1);outline:none}
 
-.mast-stats{display:flex;gap:22px;flex-wrap:wrap}
+.nav{display:flex;gap:6px;margin-left:4px}
+.mast-stats{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-end}
 .mast-stats div{display:flex;flex-direction:column;gap:2px;min-width:56px}
 .mast-stats b{font-family:var(--mono);font-size:19px;font-weight:700;color:var(--ink);
   font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.mast-stats span{font-size:10px;letter-spacing:.18em;color:var(--ink-3)}
+.mast-stats span{font-size:10px;letter-spacing:.12em;color:var(--ink-3)}
 .mast-note{margin:18px 0 0;font-family:var(--serif);font-size:13.5px;line-height:1.7;
   color:var(--ink-2);max-width:820px}
 .mast-note b{color:var(--gold-hi);font-weight:600}
@@ -67,49 +94,26 @@ a:hover{text-decoration:underline}
 .frow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .frow .lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;color:var(--ink-3);
   width:36px;flex:none;text-transform:uppercase}
-.chip{--cc:#3a4350;display:inline-flex;align-items:center;gap:6px;
-  border:1px solid var(--cc);background:#0d1117;color:var(--ink-2);
-  font-size:12px;padding:3px 8px;border-radius:5px;cursor:pointer;
-  transition:border-color .14s,color .14s,background .14s;white-space:nowrap}
-.chip i{font-family:var(--mono);font-style:normal;font-size:9.5px;color:var(--ink-3)}
-.chip:hover{border-color:#5b6678;color:var(--ink)}
-.chip.on{border-color:var(--gold);color:var(--gold-hi);background:rgba(232,189,92,.1)}
+.chip{--cc:#3a4350;gap:6px;border-color:var(--cc)}
+.chip i{font-family:var(--mono);font-style:normal;font-size:10px;color:var(--ink-3)}
 .chip.on i{color:var(--gold)}
 .chip.dim{opacity:.38}
 .chip.q-传说{--cc:rgba(232,189,92,.5)} .chip.q-史诗{--cc:rgba(167,139,250,.5)}
 .chip.q-稀有{--cc:rgba(106,168,255,.5)} .chip.q-优秀{--cc:rgba(79,209,165,.5)}
 .chip.q-普通{--cc:rgba(139,151,168,.42)}
-.chip.on.q-传说{background:rgba(232,189,92,.14)}
-.chip.on.q-史诗{background:rgba(167,139,250,.14)}
-.chip.on.q-稀有{background:rgba(106,168,255,.14)}
-.chip.on.q-优秀{background:rgba(79,209,165,.12)}
 
-.search{display:flex;align-items:center;gap:9px;flex:1;min-width:180px}
-.search input{width:100%;background:#0c1016;border:1px solid var(--line);border-radius:6px;
-  color:var(--ink);font-family:var(--mono);font-size:12px;padding:7px 11px;outline:none;transition:.15s}
-.search input::placeholder{color:var(--ink-4)}
-.search input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,189,92,.1)}
-select{background:#0c1016;border:1px solid var(--line);border-radius:6px;color:var(--ink-2);
-  font-family:var(--mono);font-size:11px;padding:7px 9px;outline:none;cursor:pointer}
-select:focus{border-color:var(--gold)}
-.btn{border:1px solid var(--line);background:#0d1117;color:var(--ink-3);border-radius:6px;
-  font-size:11px;padding:7px 11px;cursor:pointer;transition:.15s}
-.btn:hover{border-color:#5b6678;color:var(--ink)}
-.btn.draw{border-color:rgba(232,189,92,.45);color:var(--gold-hi);background:rgba(232,189,92,.06)}
-.btn.draw:hover{border-color:var(--gold);background:rgba(232,189,92,.12)}
+.search{display:flex;align-items:center;gap:8px;flex:1;min-width:180px}
+.seg{display:inline-flex;gap:0}
+.seg .ctl+ .ctl{border-top-left-radius:0;border-bottom-left-radius:0;margin-left:-1px}
+.seg .ctl:first-child{border-top-right-radius:0;border-bottom-right-radius:0}
+.btn{}
 
-/* ── 结果条 ───────────────────────────────────────── */
 .resultbar{max-width:1460px;margin:0 auto;padding:16px 26px 12px;display:flex;
-  align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .resultbar .cnt{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
 .resultbar .cnt b{color:var(--gold-hi);font-size:15px}
-.resultbar .right{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.resultbar .right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .resultbar .hint{font-size:11.5px;color:var(--ink-3)}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#0b0f15}
-.seg button{border:0;background:transparent;color:var(--ink-3);font-family:var(--mono);
-  font-size:9.5px;letter-spacing:.08em;padding:5px 9px;cursor:pointer;white-space:nowrap}
-.seg button+button{border-left:1px solid var(--line)}
-.seg button.on{background:rgba(232,189,92,.12);color:var(--gold-hi)}
 
 /* ── 卡片网格 ─────────────────────────────────────── */
 .grid{max-width:1460px;margin:0 auto;padding:0 26px 40px;
@@ -204,13 +208,8 @@ select:focus{border-color:var(--gold)}
 .mleft-act{justify-content:center;width:100%}
 .mob-act{display:none}
 .mtabs{display:none;gap:6px}
-.mtabs button{border:1px solid #333b48;background:#0d1117;color:var(--ink-3);
-  font-family:var(--mono);font-size:10px;letter-spacing:.12em;padding:5px 11px;border-radius:5px;cursor:pointer}
-.mtabs button.on{border-color:var(--gold);color:var(--gold-hi);background:rgba(232,189,92,.1)}
-.modal-close{position:fixed;top:18px;right:22px;width:36px;height:36px;border-radius:50%;
-  border:1px solid #333b48;background:#12161e;color:var(--ink-2);font-size:17px;cursor:pointer;
-  line-height:1;z-index:101}
-.modal-close:hover{border-color:var(--gold);color:var(--gold-hi)}
+.modal-close{position:fixed;top:18px;right:22px;width:32px;height:32px;padding:0;
+  border-radius:var(--ctl-radius);font-size:15px;z-index:101}
 
 .mcard{--qc:#39424f;--qg:transparent;width:100%;flex:none;align-self:flex-start;
   border:2px solid var(--qc);border-radius:14px;overflow:hidden;
@@ -375,10 +374,10 @@ select:focus{border-color:var(--gold)}
       <span class="ttl">星耀卡库</span>
       <span class="sub">STAR-PULSE CODEX</span>
       <div class="nav">
-        <a href="index.html">首页</a>
-        <a href="projects.html">项目</a>
-        <a class="on" href="codex.html">图鉴</a>
-        <a href="#" id="aboutBtn">口径</a>
+        <a class="ctl" href="index.html">首页</a>
+        <a class="ctl" href="projects.html">项目</a>
+        <a class="ctl on" href="codex.html" aria-current="page">图鉴</a>
+        <a class="ctl" href="#" id="aboutBtn">口径</a>
       </div>
     </div>
     <div class="mast-stats">
@@ -406,16 +405,16 @@ select:focus{border-color:var(--gold)}
     <div class="frow" id="row-ch"><span class="lbl">档案</span></div>
     <div class="frow">
       <div class="search">
-        <input id="q" type="search" placeholder="搜仓库名 / 简介 / 语言…" autocomplete="off" spellcheck="false" aria-label="搜索仓库">
+        <input class="ctl field" id="q" type="search" placeholder="搜仓库名 / 简介 / 语言…" autocomplete="off" spellcheck="false" aria-label="搜索仓库">
       </div>
-      <select id="sort" aria-label="排序">
+      <select class="ctl field" id="sort" aria-label="排序">
         <option value="depth">按档案深度</option>
         <option value="stars">按体量（星数）</option>
         <option value="rate">按势（日均）</option>
         <option value="recent">按最近观测</option>
         <option value="name">按名字</option>
       </select>
-      <button class="btn" id="reset">清空</button>
+      <button class="ctl" id="reset">清空</button>
     </div>
   </div>
 </section>
@@ -423,10 +422,10 @@ select:focus{border-color:var(--gold)}
 <div class="resultbar">
   <div class="cnt"><b id="count">—</b> <span id="countOf"></span></div>
   <div class="right">
-    <button class="btn draw" id="draw">抽一张</button>
+    <button class="ctl accent" id="draw">抽一张</button>
     <div class="seg" id="modeSeg" title="等级口径">
-      <button data-mode="archive" class="on">档案深度</button>
-      <button data-mode="rank">组内分位</button>
+      <button class="ctl on" data-mode="archive">档案深度</button>
+      <button class="ctl" data-mode="rank">组内分位</button>
     </div>
     <div class="hint" id="sortedHint">点任意卡片展开完整档案</div>
   </div>
@@ -455,12 +454,12 @@ select:focus{border-color:var(--gold)}
 </footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="卡片详情">
-  <button class="modal-close" id="close" aria-label="关闭">✕</button>
+  <button class="ctl modal-close" id="close" aria-label="关闭">✕</button>
   <div class="modal-panel" id="panel"></div>
 </div>
 
 <div class="modal" id="about" role="dialog" aria-modal="true" aria-label="口径说明">
-  <button class="modal-close" id="aboutClose" aria-label="关闭">✕</button>
+  <button class="ctl modal-close" id="aboutClose" aria-label="关闭">✕</button>
   <div class="modal-panel about-panel">
     <div class="about-body">
       <h2>这张卡库是怎么算的</h2>
@@ -627,7 +626,7 @@ function buildChips(){
     const vals = DIMS[dim].values;
     for (const v of vals){
       const b = document.createElement("button");
-      b.className = "chip" + (dim === "q" ? " q-" + v : "");
+      b.className = "ctl chip" + (dim === "q" ? " q-" + v : "");
       b.dataset.dim = dim; b.dataset.val = v;
       if (dim === "ch" && COHORT_DESC[v]) b.title = COHORT_DESC[v];
       if (dim === "t" && TRAIT_DESC[v]) b.title = TRAIT_DESC[v];
@@ -842,8 +841,8 @@ function openCard(c){
   $("panel").innerHTML = `
     <div class="mwrap" data-tab="info">
       <div class="mtabs">
-        <button data-tab="info" class="on">档案</button>
-        <button data-tab="card">卡面</button>
+        <button class="ctl on" data-tab="info">档案</button>
+        <button class="ctl" data-tab="card">卡面</button>
       </div>
       <div class="mcols">
     <div class="mleft">

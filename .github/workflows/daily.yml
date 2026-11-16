@@ -85,9 +85,10 @@ jobs:
       # 而翻译缓存以 repo_id 为键、只增不减 —— 每周跑一次永远追不上新进池的速度
       # （实测覆盖率长期停在 22%）。每日跑一次才是稳态需求：约 90 条/天。
       #
-      # --limit 200：MyMemory 免费额度按字符算（填邮箱 5 万字符/天，约 600 条），
-      # 200 条 × 约 80 字符 ≈ 1.6 万字符，留足余量；当前欠账约 620 条，
-      # 三四天即可补齐，之后每天只需补当天的增量。
+      # --limit 300：MyMemory 免费额度按字符算（填邮箱 5 万字符/天，约 600 条），
+      # 300 条 × 约 80 字符 ≈ 2.4 万字符，留足余量。
+      # --scope all：卡片图鉴覆盖全库 6,000+ 个仓库，只翻当天看板永远补不齐。
+      # 按星数降序推进，先让最显眼的卡有中文，再逐日补长尾。
       #
       # continue-on-error：翻译只是锦上添花，缺了就是显示英文原文。
       # 绝不能因为它超时或额度用尽，让当天的快照和站点都产不出来。
@@ -99,7 +100,7 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
           I18N_EMAIL: ${{ secrets.I18N_EMAIL }}
-        run: python -m star_pulse translate --limit 200
+        run: python -m star_pulse translate --scope all --limit 300
 
       - name: 重建站点
         if: always() && steps.fresh.outputs.produced == 'true'

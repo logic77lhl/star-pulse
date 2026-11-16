@@ -22,15 +22,18 @@ from __future__ import annotations
 
 import html as html_mod
 import json
+import logging
 import re
 import shutil
 import sqlite3
 from collections import Counter
 from pathlib import Path
 
-from . import analyze, charts, i18n, narrate, theme
+from . import analyze, cards, charts, i18n, narrate, theme
 from .config import Settings
 from .theme import esc, fmt_int, delta_html, delta_bar, kpi, repo_link, table, takeaway
+
+log = logging.getLogger("star_pulse.site")
 
 # 周报文件名形如 2026-W40_2026-09-28_2026-10-04.html
 _REPORT_RE = re.compile(r"^(\d{4})-W(\d{2})_(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})$")
@@ -344,7 +347,8 @@ def _projects_page(
             ),
             more=f'<span class="more muted">共 {len(projects):,} 个</span>',
         )
-        + '<footer>由 <a href="https://github.com/logic77lhl/star-pulse">star-pulse</a> 自动生成。'
+        + '<footer><a href="codex.html">卡库图鉴</a> · 由 '
+          '<a href="https://github.com/logic77lhl/star-pulse">star-pulse</a> 自动生成。'
           '所有数值来自每日快照相减，未经任何模型改写。</footer>'
     )
     return theme.page(f"项目名单 · star-pulse（{latest}）", body, script=_PROJECTS_JS)
@@ -577,7 +581,8 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         + _panel("每天的情况", _daily_table(summary),
                  note="「新增星数合计」是当天全部追踪仓库的星数净增之和；首日没有对比基线。")
         + '<div id="reports">' + _panel("历史周报", reports_block) + "</div>"
-        + '<footer>由 <a href="https://github.com/logic77lhl/star-pulse">star-pulse</a> 自动生成。'
+        + '<footer><a href="codex.html">卡库图鉴</a> · 由 '
+          '<a href="https://github.com/logic77lhl/star-pulse">star-pulse</a> 自动生成。'
           '所有数值来自每日快照相减，未经任何模型改写。'
           '本页图表为服务端渲染的 SVG / CSS，不含任何外部脚本。</footer>'
     )
@@ -623,6 +628,14 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     )
     (docs / ".nojekyll").write_text("", encoding="utf-8")
 
+    # 卡片图鉴：构建产物，和看板共用同一份快照库。失败绝不能拖垮看板 ——
+    # 少一个图鉴页面是小事，少一天快照是大事。
+    try:
+        card_stats = cards.build_cards(settings, conn)
+    except Exception:  # noqa: BLE001
+        log.exception("卡片图鉴生成失败，跳过（不影响看板与快照）")
+        card_stats = {"error": "cards build failed"}
+
     return {
         "docs": str(docs),
         "snapshot_days": len(dates),
@@ -630,4 +643,5 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
         "reports_archived": copied,
         "index": str(docs / "index.html"),
         "projects": str(docs / "projects.html"),
+        "cards": card_stats,
     }

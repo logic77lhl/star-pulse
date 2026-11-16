@@ -390,6 +390,33 @@ def _pick(row: dict, *keys, default=None):
     return default
 
 
+def _topics_out(value) -> list[str] | None:
+    """把 topics 归一成字符串列表写进快照。
+
+    分类规则（analyze.classify）本来就会读 topics，但历史快照里没有这个字段，
+    CI 又是从快照回灌数据库 —— 结果就是线上分类永远拿不到 topics。
+    这里开始把它带上；旧快照缺字段时返回 None，不会覆盖库里已有的值。
+    """
+    if isinstance(value, (list, tuple)):
+        return [str(t) for t in value if str(t).strip()]
+    if isinstance(value, str) and value.strip():
+        try:
+            parsed = json.loads(value)
+        except json.JSONDecodeError:
+            return [value.strip()]
+        return [str(t) for t in parsed] if isinstance(parsed, list) else [value.strip()]
+    return None
+
+
+def _topics_json(value) -> str | None:
+    """回灌时把快照里的 topics 存成 JSON 字符串（与 repo.topics 的存储格式一致）。"""
+    if isinstance(value, (list, tuple)):
+        return json.dumps([str(t) for t in value if str(t).strip()], ensure_ascii=False)
+    if isinstance(value, str) and value.strip():
+        return value
+    return None
+
+
 def _snapshot_record(r: dict) -> dict | None:
     """把仓库行归一成快照 JSON 里的一条记录。
 
@@ -408,6 +435,7 @@ def _snapshot_record(r: dict) -> dict | None:
         "open_issues": _pick(r, "open_issues", "_open_issues"),
         "language": r.get("language"),
         "description": (r.get("description") or "")[:200],
+        "topics": _topics_out(r.get("topics")),
         "repo_created": r.get("repo_created"),
         "is_archived": int(r.get("is_archived") or 0),
         "is_fork": int(r.get("is_fork") or 0),
@@ -558,7 +586,7 @@ def import_snapshot_jsons(conn: sqlite3.Connection, snapshots_dir: Path) -> Impo
                     "name": name,
                     "description": r.get("description"),
                     "language": r.get("language"),
-                    "topics": None,
+                    "topics": _topics_json(r.get("topics")),
                     "homepage": None,
                     "license": None,
                     "repo_created": r.get("repo_created"),

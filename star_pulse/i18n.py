@@ -174,7 +174,10 @@ def translate_missing(
         if not desc:
             stats["skipped_empty"] += 1
             continue
-        if rid in cache and (cache[rid] or {}).get("zh"):
+        cached = cache.get(rid) or {}
+        # 只有「缓存的原文」与当前简介一致时才算译过。仓库改了简介而缓存不重翻，
+        # 页面就会拿旧译文配新简介 —— 这比不翻译更糟。
+        if cached.get("zh") and (cached.get("src") or "").strip() == desc:
             stats["skipped_cached"] += 1
             continue
         todo.append(it)

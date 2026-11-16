@@ -27,7 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from star_pulse import analyze, db, render  # noqa: E402
+from star_pulse import analyze, cards, db, render  # noqa: E402
 from star_pulse.config import load_settings  # noqa: E402
 
 # (repo, 期末总星, 本周新增, 语言, 创建日期, 描述, 期望分类)
@@ -902,6 +902,88 @@ def test_report_uses_translation_cache(tmp: Path) -> None:
     print("  [PASS] 周报「一句话」回退链正确（LLM 解读 > 翻译缓存 > 英文原文）")
 
 
+def test_topics_roundtrip(tmp: Path) -> None:
+    """topics 必须进快照 JSON，并在回灌后留在 repo 表里。
+
+    历史快照没有这个字段，而 CI 每次都是从 JSON 回灌数据库。少了这条，
+    线上分类永远拿不到 topics，只能靠简介关键词，散修比例会虚高。
+    """
+    root = tmp / "topics"
+    settings = load_settings(root)
+    conn = db.connect(settings.db_path)
+    db.init_schema(conn)
+    repo = {
+        "repo_id": 424242, "full_name": "a/topic-repo", "owner": "a", "name": "topic-repo",
+        "description": "An agent harness.", "language": "Python",
+        "topics": ["mcp", "agent"], "homepage": None, "license": "MIT",
+        "repo_created": "2026-01-01", "is_archived": 0, "is_fork": 0,
+    }
+    db.upsert_repos(conn, [repo], START)
+    db.upsert_snapshots(conn, [{
+        "repo_id": 424242, "snap_date": START, "stars": 100, "forks": 1,
+        "open_issues": 0, "pushed_at": None, "source": "test",
+        "collected_at": f"{START}T00:00:00Z",
+    }])
+    path = db.export_snapshot_json(settings.snapshots_dir, START,
+                                   [{**repo, "_stars": 100}])
+    assert path is not None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    assert data["repos"][0]["topics"] == ["mcp", "agent"], "topics 必须写进快照"
+
+    rebuilt = db.connect(root / "rebuilt.db")
+    db.init_schema(rebuilt)
+    db.import_snapshot_jsons(rebuilt, settings.snapshots_dir)
+    row = rebuilt.execute(
+        "SELECT topics FROM repo WHERE repo_id = 424242"
+    ).fetchone()
+    assert row and "mcp" in (row["topics"] or ""), "回灌后 topics 不能丢"
+
+    # 旧快照没有 topics 时，不能把已有值抹掉（COALESCE 语义）
+    legacy = tmp / "legacy-snapshots"
+    legacy.mkdir(parents=True, exist_ok=True)
+    (legacy / f"{END}.json").write_text(json.dumps({
+        "date": END, "count": 1,
+        "repos": [{
+            "full_name": "a/topic-repo", "repo_id": 424242, "stars": 120,
+            "forks": 1, "open_issues": 0, "language": "Python",
+            "description": "An agent harness.", "repo_created": "2026-01-01",
+            "is_archived": 0, "is_fork": 0,
+        }],
+    }, ensure_ascii=False), encoding="utf-8")
+    db.import_snapshot_jsons(rebuilt, legacy)
+    row2 = rebuilt.execute(
+        "SELECT topics FROM repo WHERE repo_id = 424242"
+    ).fetchone()
+    assert row2 and "mcp" in (row2["topics"] or ""), "旧快照不应抹掉已有 topics"
+    print("  [PASS] topics 进快照并可回灌，旧快照不会抹掉已有值")
+
+
+def test_cards_build(tmp: Path) -> None:
+    """卡片图鉴：一仓一卡、字段齐全、构建确定、页面引用数据文件。"""
+    settings, conn = _seed(tmp / "cards")
+    stats = cards.build_cards(settings, conn)
+    js = (settings.root / "docs" / "cards-data.js").read_text(encoding="utf-8")
+    payload = json.loads(re.search(r"window\.CARDS = (\[.*\]);", js, re.S).group(1))
+    meta = json.loads(re.search(r"window\.CARDS_META = (\{.*?\});", js, re.S).group(1))
+
+    assert stats["cards"] == len(PUBLISHED_W37)
+    assert meta["total"] == len(PUBLISHED_W37)
+    assert meta["latest"] == END
+    assert len({c["id"] for c in payload}) == len(payload), "repo_id 必须唯一"
+    for c in payload:
+        assert {"id", "n", "f", "c", "s", "d", "ch", "v", "vk", "ds", "t"} <= set(c)
+    # 两天快照 → 初现组、追踪期速度、有曲线
+    assert all(c["ch"] == "初现" for c in payload)
+    assert all(c["vk"] == "tracked" and c["sx"] for c in payload)
+    # 页面必须引用同目录的数据文件
+    page = (settings.root / "docs" / "codex.html").read_text(encoding="utf-8")
+    assert 'src="cards-data.js"' in page
+    # 同一份数据重复构建必须字节一致，否则每天都会产生无意义的 diff
+    cards.build_cards(settings, conn)
+    assert (settings.root / "docs" / "cards-data.js").read_text(encoding="utf-8") == js
+    print("  [PASS] 卡片图鉴：一仓一卡、字段齐全、构建确定")
+
+
 def main() -> int:
     print("star-pulse 回归测试")
     print("=" * 58)
@@ -927,6 +1009,8 @@ def main() -> int:
         test_range_gain_aligned_window(tmp)
         test_workflow_yaml_is_structurally_sane()
         test_report_uses_translation_cache(tmp)
+        test_topics_roundtrip(tmp)
+        test_cards_build(tmp)
     print("=" * 58)
     print("全部通过")
     return 0

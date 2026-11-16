@@ -18,7 +18,7 @@ import logging
 import sys
 from pathlib import Path
 
-from . import analyze, db, github_api, i18n, llm, pipeline, render, retention
+from . import analyze, cards, db, github_api, i18n, llm, pipeline, render, retention
 from . import site as site_builder
 from .config import load_settings
 from .net import BudgetExceeded, Http
@@ -231,6 +231,18 @@ def cmd_site(settings, args) -> int:
     return 0
 
 
+def cmd_cards(settings, args) -> int:
+    """只生成卡片图鉴（docs/codex.html + docs/cards-data.js）。
+
+    单独给一个命令，是为了本地改卡片时不必重建整个站点 —— `site` 会重写
+    projects.html / data.json，本地没有 topics 时会和 CI 产物产生分类漂移。
+    """
+    conn = prepare(settings)
+    stats = cards.build_cards(settings, conn)
+    print(json.dumps(stats, ensure_ascii=False, indent=2))
+    return 0
+
+
 def cmd_translate(settings, args) -> int:
     """给仓库简介生成中文译文，写入 data/i18n/zh.json。
 
@@ -250,6 +262,25 @@ def cmd_translate(settings, args) -> int:
     if not latest:
         print(json.dumps({"error": "还没有任何快照，先跑 run-daily"}, ensure_ascii=False))
         return 2
+
+    if args.scope == "all":
+        # 全库按星数降序：卡片图鉴覆盖的是 6,000+ 个历史仓库，只翻当天看板
+        # 永远补不齐。先翻最显眼的高星项目，逐日推进即可。
+        rows = conn.execute(
+            """
+            SELECT r.repo_id, r.full_name, r.description, r.language, r.topics,
+                   (SELECT s.stars FROM snapshot s
+                    WHERE s.repo_id = r.repo_id
+                    ORDER BY s.snap_date DESC LIMIT 1) AS stars
+            FROM repo r
+            WHERE r.is_fork = 0 AND r.is_archived = 0
+              AND r.description IS NOT NULL AND r.description <> ''
+            ORDER BY stars DESC
+            """
+        ).fetchall()
+    else:
+        rows = analyze.project_rows(conn, latest, None)
+
     items = [
         {
             "repo_id": r["repo_id"],
@@ -259,7 +290,7 @@ def cmd_translate(settings, args) -> int:
             "topics": r["topics"],
             "stars": r["stars"],
         }
-        for r in analyze.project_rows(conn, latest, None)
+        for r in rows
         if (r.get("description") or "").strip()
     ]
     if args.limit:
@@ -355,6 +386,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("rebuild", help="从 JSON 快照重建 SQLite")
     sub.add_parser("stats", help="查看快照覆盖情况")
     sub.add_parser("site", help="生成 docs/ 静态站点（GitHub Pages）")
+    sub.add_parser("cards", help="只生成卡片图鉴（docs/codex.html + cards-data.js）")
 
     p_prune = sub.add_parser("prune", help="裁剪旧快照（保留最近 N 个，先记账再删）")
     p_prune.add_argument("--keep-days", type=int, default=0,
@@ -377,6 +409,8 @@ def main(argv: list[str] | None = None) -> int:
     p_tr = sub.add_parser("translate", help="给仓库简介生成中文译文（LLM 或免费机翻）")
     p_tr.add_argument("--limit", type=int, default=0, help="只处理前 N 个仓库（试跑用）")
     p_tr.add_argument("--batch", type=int, default=60, help="每次请求翻译多少条（默认 60）")
+    p_tr.add_argument("--scope", choices=("board", "all"), default="board",
+                      help="board=当天看板（默认）；all=全库按星数降序，补卡片简介用")
 
     args = parser.parse_args(argv)
     setup_logging(args.verbose)
@@ -391,6 +425,7 @@ def main(argv: list[str] | None = None) -> int:
         "rebuild": cmd_rebuild,
         "stats": cmd_stats,
         "site": cmd_site,
+        "cards": cmd_cards,
         "prune": cmd_prune,
         "snapshot-count": cmd_snapshot_count,
     }

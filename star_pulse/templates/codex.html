@@ -644,6 +644,38 @@ function sigil(id, cls){
   return `<svg class="${cls||'sig'}" viewBox="0 0 100 100" aria-hidden="true">${s}</svg>`;
 }
 
+/* ── URL 状态：筛选/排序/口径写进地址栏 ─────────────
+   浏览器的「后退」、刷新、以及把链接发给别人，都应该回到同一个视图，
+   而不是一律退回默认的「全部 · 按档案深度」。 */
+const URL_KEYS = ["f", "c", "q", "t", "ch", "s", "sort", "mode"];
+
+function loadURL(){
+  const p = new URLSearchParams(location.search);
+  for (const k of ["f", "c", "q", "t", "ch"]){
+    const v = p.get(k);
+    if (v) v.split(",").filter(Boolean).forEach(x => state[k].add(x));
+  }
+  const sort = p.get("sort");
+  if (sort && SORTS[sort]) state.sort = sort;
+  const mode = p.get("mode");
+  if (mode === "rank" || mode === "archive") state.mode = mode;
+  const text = p.get("s");
+  if (text) state.text = text;
+}
+
+function syncURL(){
+  const p = new URLSearchParams(location.search);
+  URL_KEYS.forEach(k => p.delete(k));
+  for (const k of ["f", "c", "q", "t", "ch"]){
+    if (state[k].size) p.set(k, [...state[k]].join(","));
+  }
+  if (state.sort !== "depth") p.set("sort", state.sort);
+  if (state.mode !== "archive") p.set("mode", state.mode);
+  if (state.text) p.set("s", state.text);
+  const qs = p.toString();
+  history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
+}
+
 /* ── 筛选芯片 ─────────────────────────────────────── */
 function buildChips(){
   for (const dim of Object.keys(DIMS)){
@@ -653,6 +685,7 @@ function buildChips(){
       const b = document.createElement("button");
       b.className = "ctl chip" + (dim === "q" ? " q-" + v : "");
       b.dataset.dim = dim; b.dataset.val = v;
+      if (state[dim].has(v)) b.classList.add("on");
       if (dim === "ch" && COHORT_DESC[v]) b.title = COHORT_DESC[v];
       if (dim === "t" && TRAIT_DESC[v]) b.title = TRAIT_DESC[v];
       if (dim === "q") b.title = {传说:"组内前 0.5%",史诗:"组内前 2%",稀有:"组内前 8%",
@@ -800,6 +833,7 @@ function apply(){
     }
   }, {rootMargin:"900px 0px"});
   observer.observe($("sentinel"));
+  syncURL();
 }
 
 /* ── 详情 ─────────────────────────────────────────── */
@@ -1040,6 +1074,9 @@ $("mFac").textContent   = Object.keys(META.factions || {}).length || "—";
 $("mCls").textContent   = Object.keys(META.classes || {}).length || "—";
 $("mNew").textContent   = CARDS.filter(isNew).length.toLocaleString("en-US");
 $("fDays").textContent  = META.days || "—";
+loadURL();
+$("q").value = state.text;
+$("sort").value = state.sort;
 buildChips();
 updateModeUI();
 apply();

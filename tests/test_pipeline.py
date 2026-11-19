@@ -137,6 +137,11 @@ def test_ranking_matches_published(tmp: Path) -> None:
     assert 'class="hbars"' in html, "HTML 未包含增长分布图"
     assert "<canvas" not in html and "cdnjs" not in html, "周报不该再用 canvas / CDN"
 
+    # 十张卡：零 JS 的服务端渲染，一卡对应榜单一名
+    assert "本周十张卡" in html, "周报缺少十张卡区块"
+    assert html.count('class="wcard') >= 10, "周报应输出 10 张卡"
+    assert html.count('class="wc-spark"') >= 10, "卡面应带本周走势曲线"
+
     # 分类规则
     for item, (*_head, expected_cat) in zip(
         meta["top"], sorted(PUBLISHED_W37, key=lambda x: -x[2])

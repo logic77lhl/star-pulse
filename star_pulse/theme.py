@@ -59,6 +59,9 @@ _TOKENS_LIGHT = """
   --head-bg:     rgba(251, 249, 245, .85);
   --glow:        radial-gradient(900px 380px at 8% -12%, rgba(246, 200, 0, .14), transparent 60%),
                  radial-gradient(700px 340px at 92% -4%, rgba(3, 105, 161, .05), transparent 55%);
+  /* 档案深度色标：与卡库同一套低饱和矿物色 */
+  --t-legendary: #8a6200; --t-epic: #9c5a2e; --t-rare: #2f6d8c;
+  --t-uncommon:  #4a7a55; --t-common: #9a958a;
 """
 
 _TOKENS_DARK = """
@@ -85,6 +88,8 @@ _TOKENS_DARK = """
   --head-bg:     rgba(11, 13, 16, .82);
   --glow:        radial-gradient(900px 380px at 8% -12%, rgba(255, 210, 30, .06), transparent 60%),
                  radial-gradient(700px 340px at 92% -4%, rgba(125, 211, 252, .05), transparent 55%);
+  --t-legendary: #ffd21e; --t-epic: #c99a5a; --t-rare: #6fb6d6;
+  --t-uncommon:  #6cc79a; --t-common: #8b9199;
 """
 
 
@@ -418,6 +423,46 @@ footer a { color: var(--text-2); }
 @media print { body { background: var(--bg); } }
 """
 
+# ── 周报十张卡：服务端渲染，零 JS ──────────────────────────
+# 卡面颜色 = 档案深度（我们追踪了多久），不评价项目好坏。
+WEEKLY_CARDS_CSS = """
+.wcards { display: grid; gap: 14px; margin-top: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); }
+.wcard { --qc: var(--border-2); background: var(--surface); border: 1px solid var(--border);
+  border-top: 3px solid var(--qc); border-radius: 12px; padding: 13px 14px;
+  display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow); }
+.wcard.a-成型 { --qc: var(--t-legendary); }
+.wcard.a-成长 { --qc: var(--t-epic); }
+.wcard.a-观察 { --qc: var(--t-rare); }
+.wcard.a-初现 { --qc: var(--t-uncommon); }
+.wcard.a-一瞥 { --qc: var(--t-common); }
+.wc-top { display: flex; align-items: center; gap: 8px; font-family: var(--mono);
+  font-size: 9.5px; color: var(--text-3); letter-spacing: .06em; }
+.wc-rank { color: var(--qc); font-weight: 700; }
+.wc-tier { color: var(--qc); }
+.wc-depth { margin-left: auto; }
+.wc-num { font-family: var(--mono); font-size: 27px; font-weight: 800; color: var(--up);
+  letter-spacing: -.03em; line-height: 1.12; font-variant-numeric: tabular-nums; }
+.wc-cap { font-family: var(--mono); font-size: 8.5px; letter-spacing: .2em; color: var(--text-3); }
+.wc-spark svg { width: 100%; height: 26px; display: block; margin-top: 2px; }
+.wc-name { font-family: var(--mono); font-size: 12.5px; color: var(--text);
+  word-break: break-all; margin-top: 2px; }
+.wc-desc { margin: 0; font-size: 12px; line-height: 1.55; color: var(--text-2);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; min-height: 37px; }
+.wc-meta { display: flex; flex-wrap: wrap; gap: 5px; font-family: var(--mono);
+  font-size: 9px; color: var(--text-3); }
+.wc-meta span { border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px;
+  background: var(--surface-2); }
+.wc-foot { margin-top: auto; display: flex; justify-content: space-between; gap: 8px;
+  padding-top: 8px; border-top: 1px solid var(--border); font-family: var(--mono);
+  font-size: 10px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+  .wcards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .wc-num { font-size: 22px; }
+}
+"""
+
 CSS = CSS.replace("__TOKENS__", _TOKENS_LIGHT)
 DARK_CSS = (
     "@media (prefers-color-scheme: dark) {\n:root {" + _TOKENS_DARK + "}\n}\n"
@@ -450,6 +495,7 @@ SITENAV_CSS = """
 .anchors a:hover{color:var(--accent);text-decoration:none}
 """
 CSS = CSS + SITENAV_CSS
+CSS = CSS + WEEKLY_CARDS_CSS
 
 
 def sitenav(active: str = "") -> str:

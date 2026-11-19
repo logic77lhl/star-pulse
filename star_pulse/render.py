@@ -118,7 +118,7 @@ def build_report(
     }
 
     md = _markdown(settings, label, start, end, meta)
-    html = _html(settings, label, start, end, meta)
+    html = _html(settings, conn, label, start, end, meta)
     return md, html, meta
 
 
@@ -265,9 +265,96 @@ def _emph(text: str) -> str:
     return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc(text))
 
 
-def _html(settings: Settings, label: str, start: str, end: str, meta: dict) -> str:
+def _cohort(depth: int) -> str:
+    """档案深度分组。与卡库（star_pulse/cards.py）同一口径，不另立一套。"""
+    if depth >= 30:
+        return "成型"
+    if depth >= 14:
+        return "成长"
+    if depth >= 7:
+        return "观察"
+    if depth >= 2:
+        return "初现"
+    return "一瞥"
+
+
+def _spark_svg(history: list[tuple[str, int]]) -> str:
+    """把区间内的星数序列画成一条内联 SVG 折线（零 JS、零外部资源）。"""
+    if len(history) < 2:
+        return ""
+    vals = [v for _d, v in history]
+    lo, hi = min(vals), max(vals)
+    W, H = 100, 26
+    n = len(vals)
+
+    def y(v: int) -> float:
+        return H - 2 if hi == lo else H - 2 - (v - lo) / (hi - lo) * (H - 6)
+
+    pts = " ".join(f"{i / (n - 1) * W:.1f},{y(v):.1f}" for i, v in enumerate(vals))
+    area = f"0,{H} {pts} {W},{H}"
+    return (
+        f'<div class="wc-spark"><svg viewBox="0 0 {W} {H}" preserveAspectRatio="none" '
+        f'aria-hidden="true"><polygon points="{area}" fill="var(--up-soft)"/>'
+        f'<polyline points="{pts}" fill="none" stroke="var(--up)" stroke-width="1.3" '
+        f'stroke-linejoin="round" stroke-linecap="round"/></svg></div>'
+    )
+
+
+def weekly_cards(
+    conn: sqlite3.Connection, top: list[dict], start: str, end: str, limit: int = 10
+) -> str:
+    """周报的十张卡：本周新增 Star 前十，纯服务端渲染。
+
+    卡面颜色是档案深度 —— 只说明我们追踪了多久，不评价项目好坏；
+    大数字是本周新增，和榜单同一口径。
+    """
+    rows = top[:limit]
+    if not rows:
+        return ""
+    ids = [r["repo_id"] for r in rows]
+    marks = ",".join("?" * len(ids))
+    depth = {
+        r["repo_id"]: r["n"]
+        for r in conn.execute(
+            f"SELECT repo_id, COUNT(*) AS n FROM snapshot "
+            f"WHERE repo_id IN ({marks}) GROUP BY repo_id",
+            ids,
+        )
+    }
+    cards = []
+    for rank, item in enumerate(rows, 1):
+        d = depth.get(item["repo_id"], 0)
+        history = analyze.daily_history(conn, item["repo_id"], start, end)
+        flags = item.get("flags") or []
+        flag_html = (
+            f'<span class="tag plain">⚠ {esc("、".join(flags))}</span>' if flags else ""
+        )
+        cards.append(
+            f'<article class="wcard a-{_cohort(d)}">'
+            f'<div class="wc-top"><span class="wc-rank">#{rank:02d}</span>'
+            f'<span class="wc-tier">{_cohort(d)}</span>'
+            f'<span class="wc-depth">档案 {d} 条</span></div>'
+            f'<div class="wc-num">+{item["delta"]:,}</div>'
+            f'<div class="wc-cap">本周新增星数</div>'
+            f"{_spark_svg(history)}"
+            f'<div class="wc-name">{esc(item["full_name"])}</div>'
+            f'<p class="wc-desc">{esc(_truncate(item.get("summary") or "", 80))}</p>'
+            f'<div class="wc-meta"><span>{esc(item.get("language") or "—")}</span>'
+            f'<span>{esc(item.get("category") or "其他")}</span>{flag_html}</div>'
+            f'<div class="wc-foot"><span>总星 {item["stars_after"]:,}</span>'
+            f'<span>区间 {item.get("span_days", 0)} 天</span></div>'
+            "</article>"
+        )
+    return "".join(cards)
+
+
+def _html(
+    settings: Settings, conn: sqlite3.Connection,
+    label: str, start: str, end: str, meta: dict,
+) -> str:
     cov = meta["coverage"]
     top = meta["top"]
+    cards_block = weekly_cards(conn, top, start, end)
 
     if top:
         rows = []
@@ -350,7 +437,14 @@ def _html(settings: Settings, label: str, start: str, end: str, meta: dict) -> s
         f'　·　快照覆盖 {cov["distinct_days"]} 天</p>'
         f'<div class="meta"><span><a href="../index.html">← 返回看板</a></span></div></header>'
         f"{banner}"
-        f'<section class="panel"><div class="panel-head"><h2>本周新增 Star Top {len(top)}</h2></div>'
+        + (
+            f'<section class="panel"><div class="panel-head"><h2>本周十张卡 · Top {min(10, len(top))}</h2></div>'
+            f'<p class="note">按本周新增星数排序。卡面颜色是<b>档案深度</b> —— '
+            f'只说明我们追踪了它多久，不评价项目好坏。完整 20 名见下表。</p>'
+            f'<div class="wcards">{cards_block}</div></section>'
+            if cards_block else ""
+        )
+        + f'<section class="panel"><div class="panel-head"><h2>本周新增 Star Top {len(top)}</h2></div>'
         f"{top_table}</section>"
         + (f'<section class="panel">{chart_block}</section>' if chart_block else "")
         + '<section class="panel"><div class="panel-head"><h2>新项目榜（周期内创建）</h2></div>'

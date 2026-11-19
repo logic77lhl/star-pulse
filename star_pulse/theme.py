@@ -424,6 +424,57 @@ DARK_CSS = (
 )
 CSS = CSS + DARK_CSS
 
+# ── 站点导航：四个视图共用一条 ─────────────────────────────────
+# 首页、项目名单、周报、卡库此前各写各的头部，导致「从图鉴进首页就回不去」。
+# 这里把跨页导航收成一份：任何一页都在同一位置给出另外两页的入口。
+# 样式同时被 theme.CSS（看板/项目/周报）和卡库模板（cards.py 注入）复用。
+SITENAV_CSS = """
+.sitenav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  padding:16px 0;border-bottom:1px solid var(--border);margin-bottom:4px;font-size:12.5px}
+.sitenav .brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:13px;
+  color:var(--text)}
+.sitenav .brand:hover{text-decoration:none;color:var(--accent)}
+.sitenav .brand .mark{width:24px;height:24px;border-radius:7px;background:var(--accent-fill);
+  color:#1b1a17;display:grid;place-items:center;font-weight:800;flex:none}
+.sitenav .brand small{color:var(--text-3);font-size:9.5px;letter-spacing:.12em}
+.sitenav .links{display:flex;flex-wrap:wrap;gap:4px 18px}
+.sitenav .links a{color:var(--text-2)}
+.sitenav .links a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.sitenav .links a[aria-current="page"]{color:var(--accent);font-weight:650;text-decoration:none}
+.sitenav .src{font-family:var(--mono);font-size:11.5px;color:var(--text-3)}
+.sitenav .src:hover{color:var(--accent);text-decoration:none}
+/* 页内锚点：长页才有的第二行，弱于站点导航 */
+.anchors{display:flex;flex-wrap:wrap;gap:4px 14px;padding:9px 0 0;font-family:var(--mono);
+  font-size:11px;letter-spacing:.02em;color:var(--text-3)}
+.anchors a{color:var(--text-3)}
+.anchors a:hover{color:var(--accent);text-decoration:none}
+"""
+CSS = CSS + SITENAV_CSS
+
+
+def sitenav(active: str = "") -> str:
+    """站点导航。active 取 index / projects / codex，用于高亮当前页。
+
+    三个视图是同一个产品的三个入口，导航必须在同一位置、同一套文案 ——
+    否则「从图鉴点进首页」之后就找不到回图鉴的路（此前正是如此）。
+    """
+    def item(href: str, label: str, key: str) -> str:
+        cur = ' aria-current="page"' if key == active else ""
+        return f'<a href="{href}"{cur}>{label}</a>'
+
+    return (
+        '<nav class="sitenav">'
+        '<a class="brand" href="index.html"><span class="mark">L</span>'
+        "<span>logic77lhl <small>BUILD · SHIP · NOTE</small></span></a>"
+        '<div class="links">'
+        + item("index.html", "看板", "index")
+        + item("projects.html", "项目名单", "projects")
+        + item("codex.html", "卡库图鉴", "codex")
+        + "</div>"
+        '<a class="src" href="https://github.com/logic77lhl/star-pulse">GitHub ↗</a>'
+        "</nav>"
+    )
+
 
 def page(title: str, body: str, *, script: str = "", lang: str = "zh-CN") -> str:
     """包一个完整 HTML 文档。script 为空时不会插入空的 <script> 标签。

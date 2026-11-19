@@ -328,11 +328,11 @@ def _projects_page(
         "</div>"
     )
     body = (
-        _topbar(
+        theme.sitenav("projects")
+        + _topbar(
             "项目名单",
             "按星数排序的全部追踪仓库。可搜索、按类目或语言筛选、按多种维度排序。",
-            [f'<a href="index.html">← 返回看板</a>',
-             f"数据日期 <b>{esc(latest)}</b>",
+            [f"数据日期 <b>{esc(latest)}</b>",
              f"共 <b>{len(projects):,}</b> 个"],
         )
         + _panel(
@@ -488,16 +488,11 @@ def build_site(settings: Settings, conn: sqlite3.Connection) -> dict:
     # ── 页脚 / 周报 ──
     reports_block = _report_cards(reports_out)
 
-    sitenav = (
-        '<nav class="sitenav">'
-        '<a class="brand" href="index.html"><span class="mark">L</span>'
-        '<span>logic77lhl <small>BUILD · SHIP · NOTE</small></span></a>'
-        '<div class="links">'
+    sitenav = theme.sitenav("index") + (
+        '<nav class="anchors">'
         '<a href="#daily">当日涨幅</a><a href="#cumulative">累计增长</a>'
         '<a href="#trend">走势</a><a href="#method">口径</a>'
-        '<a href="#reports">周报</a><a href="projects.html">项目名单</a>'
-        "</div>"
-        '<a class="src" href="https://github.com/logic77lhl/star-pulse">GitHub ↗</a>'
+        '<a href="#reports">周报</a>'
         "</nav>"
     )
 

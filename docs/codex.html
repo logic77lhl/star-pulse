@@ -27,6 +27,8 @@
   --accent-fill:#f6c800; --accent-soft:rgba(246,200,0,.18);
   --up:#b45309; --down:#0f9d6b;
   --line:#e7e2d7; --panel:#ffffff; --panel-2:#f5f2ea;
+  /* 与 theme.py 命名对齐的别名：共享的 .sitenav 直接用 --text / --accent */
+  --text:var(--ink); --text-2:var(--ink-2); --text-3:var(--ink-3); --accent:var(--gold);
   --shadow:0 1px 2px rgba(28,26,22,.04),0 8px 24px rgba(28,26,22,.05);
   --shadow-hover:0 2px 4px rgba(28,26,22,.07),0 16px 40px rgba(28,26,22,.13);
   --head-bg:rgba(251,249,245,.9);
@@ -76,8 +78,32 @@ button{font:inherit;color:inherit}
 a{color:var(--gold);text-decoration:none}
 a:hover{text-decoration:underline}
 
+/* ── 站点导航（与首页/项目/周报共用同一条，由 cards.py 注入） ── */
+.sitebar{max-width:1460px;margin:0 auto;padding:18px 26px 0}
+
+.sitenav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  padding:16px 0;border-bottom:1px solid var(--border);margin-bottom:4px;font-size:12.5px}
+.sitenav .brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:13px;
+  color:var(--text)}
+.sitenav .brand:hover{text-decoration:none;color:var(--accent)}
+.sitenav .brand .mark{width:24px;height:24px;border-radius:7px;background:var(--accent-fill);
+  color:#1b1a17;display:grid;place-items:center;font-weight:800;flex:none}
+.sitenav .brand small{color:var(--text-3);font-size:9.5px;letter-spacing:.12em}
+.sitenav .links{display:flex;flex-wrap:wrap;gap:4px 18px}
+.sitenav .links a{color:var(--text-2)}
+.sitenav .links a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.sitenav .links a[aria-current="page"]{color:var(--accent);font-weight:650;text-decoration:none}
+.sitenav .src{font-family:var(--mono);font-size:11.5px;color:var(--text-3)}
+.sitenav .src:hover{color:var(--accent);text-decoration:none}
+/* 页内锚点：长页才有的第二行，弱于站点导航 */
+.anchors{display:flex;flex-wrap:wrap;gap:4px 14px;padding:9px 0 0;font-family:var(--mono);
+  font-size:11px;letter-spacing:.02em;color:var(--text-3)}
+.anchors a{color:var(--text-3)}
+.anchors a:hover{color:var(--accent);text-decoration:none}
+
+
 /* ── 报头（对齐首页 .sitenav / .topbar 的纸感） ─────────── */
-.mast{max-width:1460px;margin:0 auto;padding:30px 26px 0}
+.mast{max-width:1460px;margin:0 auto;padding:22px 26px 0}
 .mast-top{display:flex;align-items:flex-end;justify-content:space-between;gap:26px;flex-wrap:wrap}
 .brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .brand .mark{color:var(--gold);font-size:22px;line-height:1;transform:translateY(1px)}
@@ -390,18 +416,14 @@ select.ctl.field{cursor:pointer;padding-right:24px}
   </div>
 </noscript>
 
+<div class="sitebar"><nav class="sitenav"><a class="brand" href="index.html"><span class="mark">L</span><span>logic77lhl <small>BUILD · SHIP · NOTE</small></span></a><div class="links"><a href="index.html">看板</a><a href="projects.html">项目名单</a><a href="codex.html" aria-current="page">卡库图鉴</a></div><a class="src" href="https://github.com/logic77lhl/star-pulse">GitHub ↗</a></nav></div>
+
 <header class="mast">
   <div class="mast-top">
     <div class="brand">
       <span class="mark">✦</span>
       <span class="ttl">星耀卡库</span>
       <span class="sub">STAR-PULSE CODEX</span>
-      <div class="nav">
-        <a class="ctl" href="index.html">首页</a>
-        <a class="ctl" href="projects.html">项目</a>
-        <a class="ctl on" href="codex.html" aria-current="page">图鉴</a>
-        <a class="ctl" href="#" id="aboutBtn">口径</a>
-      </div>
     </div>
     <div class="mast-stats">
       <div><b id="mCards">—</b><span>张卡</span></div>
@@ -415,7 +437,7 @@ select.ctl.field{cursor:pointer;padding-right:24px}
   <p class="mast-note">
     一个仓库，一张卡。编号是 <b>repo_id</b>，永不重复；数值随快照更新，卡本身不重发。
     <br>数据截至 <b id="mDate">—</b>，共 <b id="mDays2">—</b> 天快照。阵营看语言家族，职业看它在做什么。
-    等级有两种口径：<b>档案深度</b>是事实，<b>组内分位</b>是排名，右上角可切换。
+    等级有两种口径：<b>档案深度</b>是事实，<b>组内分位</b>是排名。完整口径见 <a href="#" id="aboutBtn">这里</a>。
   </p>
 </header>
 

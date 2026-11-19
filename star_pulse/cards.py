@@ -33,7 +33,7 @@ from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 
-from . import analyze, i18n
+from . import analyze, i18n, theme
 from .config import Settings
 
 log = logging.getLogger("star_pulse.cards")
@@ -318,7 +318,12 @@ def build_cards(settings: Settings, conn: sqlite3.Connection) -> dict:
 
     if not TEMPLATE.is_file():
         raise FileNotFoundError(f"卡片模板缺失：{TEMPLATE}")
-    (docs / "codex.html").write_text(TEMPLATE.read_text(encoding="utf-8"), encoding="utf-8")
+    # 站点导航与看板/项目/周报共用同一份（theme.sitenav / SITENAV_CSS）——
+    # 三个视图的入口必须在同一位置、同一套文案，否则「从图鉴进首页就回不去」。
+    page = TEMPLATE.read_text(encoding="utf-8")
+    page = page.replace("<!--__SITENAV__-->", theme.sitenav("codex"))
+    page = page.replace("/*__SITENAV_CSS__*/", theme.SITENAV_CSS)
+    (docs / "codex.html").write_text(page, encoding="utf-8")
 
     log.info("卡片：%d 张，最新快照 %s，中文简介 %d 张（%.0f%%）",
              len(payload), latest, meta["translated"],

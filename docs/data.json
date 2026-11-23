@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T08:16:32+08:00",
+ "generated_at": "2026-11-23T08:46:21+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -71,10 +71,11 @@
   "2026-11-19",
   "2026-11-20",
   "2026-11-21",
-  "2026-11-22"
+  "2026-11-22",
+  "2026-11-23"
  ],
- "tracked_repos": 7146,
- "latest_date": "2026-11-22",
+ "tracked_repos": 7543,
+ "latest_date": "2026-11-23",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -845,197 +846,208 @@
    "top_delta": 1737,
    "new_repos": 187,
    "prev": "2026-11-21"
+  },
+  {
+   "date": "2026-11-23",
+   "repos": 799,
+   "is_first": false,
+   "total_gain": 35692,
+   "gainers": 251,
+   "top_name": "ItsNotRexed/Leonida",
+   "top_delta": 9810,
+   "new_repos": 397,
+   "prev": "2026-11-22"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "debpalash/VoiceStudio",
-   "delta": 88540,
-   "stars": 115968,
+   "delta": 89088,
+   "stars": 116516,
    "language": "Python"
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 76729,
-   "stars": 76944,
+   "delta": 76869,
+   "stars": 77084,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 68297,
-   "stars": 329768,
+   "delta": 69017,
+   "stars": 330488,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 58795,
-   "stars": 196362,
+   "delta": 59318,
+   "stars": 196885,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 50488,
-   "stars": 308369,
+   "delta": 51148,
+   "stars": 309029,
    "language": "JavaScript"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 38121,
-   "stars": 87837,
+   "delta": 38564,
+   "stars": 88280,
    "language": "TypeScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 37420,
-   "stars": 98580,
+   "delta": 37634,
+   "stars": 98794,
    "language": "JavaScript"
   },
   {
    "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 33896,
-   "stars": 66240,
+   "delta": 34038,
+   "stars": 66382,
    "language": "JavaScript"
   },
   {
    "full_name": "alibaba/open-code-review",
-   "delta": 31299,
-   "stars": 55103,
+   "delta": 31613,
+   "stars": 55417,
    "language": "Go"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 30423,
-   "stars": 69791,
+   "delta": 30925,
+   "stars": 70293,
    "language": "HTML"
   }
  ],
  "cumulative_comparable": 203,
  "daily_top": [
   {
+   "full_name": "ItsNotRexed/Leonida",
+   "language": "Python",
+   "delta": 9810,
+   "stars": 15027
+  },
+  {
    "full_name": "elementalsouls/Claude-BugHunter",
    "language": "Python",
-   "delta": 1737,
-   "stars": 16035
+   "delta": 1767,
+   "stars": 17802
   },
   {
    "full_name": "firecrawl/firecrawl",
    "language": "TypeScript",
-   "delta": 891,
-   "stars": 206180
-  },
-  {
-   "full_name": "obra/superpowers",
-   "language": "Shell",
-   "delta": 864,
-   "stars": 323715
+   "delta": 855,
+   "stars": 207035
   },
   {
    "full_name": "mattpocock/skills",
    "language": "Shell",
-   "delta": 803,
-   "stars": 329768
+   "delta": 720,
+   "stars": 330488
   },
   {
-   "full_name": "erkamyaman/rust-anything",
-   "language": "Rust",
-   "delta": 747,
-   "stars": 7410
-  },
-  {
-   "full_name": "DietrichGebert/ponytail",
-   "language": "JavaScript",
-   "delta": 721,
-   "stars": 196362
-  },
-  {
-   "full_name": "XiaoYouChR/Ghost-Downloader-3",
+   "full_name": "mvanhorn/last30days-skill",
    "language": "Python",
-   "delta": 717,
-   "stars": 14433
+   "delta": 718,
+   "stars": 72711
   },
   {
    "full_name": "HKUDS/CLI-Anything",
    "language": "Python",
-   "delta": 674,
-   "stars": 62068
+   "delta": 712,
+   "stars": 62780
+  },
+  {
+   "full_name": "XinaTian/MROffice",
+   "language": "TypeScript",
+   "delta": 704,
+   "stars": 2127
+  },
+  {
+   "full_name": "XiaoYouChR/Ghost-Downloader-3",
+   "language": "Python",
+   "delta": 703,
+   "stars": 15136
+  },
+  {
+   "full_name": "affaan-m/ECC",
+   "language": "JavaScript",
+   "delta": 660,
+   "stars": 309029
   },
   {
    "full_name": "zhouxiaoka/autoclip",
    "language": "Python",
-   "delta": 645,
-   "stars": 12838
-  },
-  {
-   "full_name": "mjmirza/app-store-compliance",
-   "language": "Shell",
-   "delta": 636,
-   "stars": 3392
+   "delta": 590,
+   "stars": 13428
   }
  ],
  "narration": {
   "_warm": true,
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "window": [
    "2026-09-14",
-   "2026-11-22"
+   "2026-11-23"
   ],
   "takeaways": {
    "today": {
     "key": "today",
-    "text": "今天全网新增 +25,840 颗星，低于 69 天均值（+44,296）；在已记录的 69 天里排第 65。最热闹的一天是 2026-10-13（+120,528）。",
+    "text": "今天全网新增 +35,692 颗星，比前一天多了 38%，是明显偏热的一天；在已记录的 70 天里排第 42。最热闹的一天是 2026-10-13（+120,528）。",
     "facts": {
-     "total_gain": 25840,
-     "avg_gain": 44296,
-     "days": 69,
-     "rank_by_gain": 65,
-     "wow_pct": -18,
-     "gainers": 323,
+     "total_gain": 35692,
+     "avg_gain": 44174,
+     "days": 70,
+     "rank_by_gain": 42,
+     "wow_pct": 38,
+     "gainers": 251,
      "peak_date": "2026-10-13",
      "peak_gain": 120528
     }
    },
    "daily_top": {
     "key": "daily_top",
-    "text": "今天涨得最快的是 elementalsouls/Claude-BugHunter，+1,737；其次是 firecrawl/firecrawl，+891。头名只占当日增量的 7%，涨得相当分散。",
+    "text": "今天涨得最快的是 ItsNotRexed/Leonida，+9,810；其次是 elementalsouls/Claude-BugHunter，+1,767。光是第一名就占了当日全部增量的 27%。",
     "facts": {
-     "leader": "elementalsouls/Claude-BugHunter",
-     "leader_delta": 1737,
-     "runner_up": "firecrawl/firecrawl",
-     "runner_up_delta": 891,
-     "leader_share_pct": 7,
-     "total_gain": 25840
+     "leader": "ItsNotRexed/Leonida",
+     "leader_delta": 9810,
+     "runner_up": "elementalsouls/Claude-BugHunter",
+     "runner_up_delta": 1767,
+     "leader_share_pct": 27,
+     "total_gain": 35692
     }
    },
    "cumulative_top": {
     "key": "cumulative_top",
-    "text": "2026-09-14 到 2026-11-22 这段时间，debpalash/VoiceStudio 累计涨了 +88,540，是榜首；eternity4719/HowToLiveBetter 以 +76,729 紧随其后。这个榜只算两端都有快照的 203 个仓库，窗口对所有人一致。",
+    "text": "2026-09-14 到 2026-11-23 这段时间，debpalash/VoiceStudio 累计涨了 +89,088，是榜首；eternity4719/HowToLiveBetter 以 +76,869 紧随其后。这个榜只算两端都有快照的 203 个仓库，窗口对所有人一致。",
     "facts": {
      "leader": "debpalash/VoiceStudio",
-     "leader_delta": 88540,
+     "leader_delta": 89088,
      "runner_up": "eternity4719/HowToLiveBetter",
-     "runner_up_delta": 76729,
+     "runner_up_delta": 76869,
      "comparable": 203,
      "start": "2026-09-14",
-     "end": "2026-11-22"
+     "end": "2026-11-23"
     }
    },
    "breadth": {
     "key": "breadth",
-    "text": "今天有 323 个项目在涨，占追踪池的 40%。",
+    "text": "今天有 251 个项目在涨，占追踪池的 31%。",
     "facts": {
-     "gainers": 323,
+     "gainers": 251,
      "tracked": 799,
-     "gainers_pct": 40
+     "gainers_pct": 31
     }
    },
    "languages": {
     "key": "languages",
-    "text": "追踪的 799 个项目里，Python 最多，143 个，占 18%；其次是 Jupyter Notebook（104）。",
+    "text": "追踪的 799 个项目里，HTML 最多，187 个，占 23%；其次是 Python（101）。",
     "facts": {
-     "top": "Python",
-     "top_n": 143,
-     "top_pct": 18,
-     "distinct": 29,
+     "top": "HTML",
+     "top_n": 187,
+     "top_pct": 23,
+     "distinct": 24,
      "total_repos": 799
     }
    }

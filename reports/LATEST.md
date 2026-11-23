@@ -1,6 +1,6 @@
-# GitHub 星耀榜 · 2026-W46
+# GitHub 星耀榜 · 2026-W47
 
-统计周期：**2026-11-09 ~ 2026-11-15**（UTC+8）　｜　数据截至：2026-11-16　｜　快照覆盖：64 天
+统计周期：**2026-11-16 ~ 2026-11-22**（UTC+8）　｜　数据截至：2026-11-23　｜　快照覆盖：71 天
 
 ---
 
@@ -8,26 +8,26 @@
 
 | 排名 | 项目 | 本周新增 | 总星 | 语言 | 分类 | 一句话 |
 |---:|---|---:|---:|---|---|---|
-| 1 | [meta/astryx](https://github.com/meta/astryx) | +9,930 | 26,544 | TypeScript | Agent Skill | 完全可定制和代理就绪的开源设计系统 |
-| 2 | [storytold/craft-anything](https://github.com/storytold/craft-anything) | +7,335 | 29,860 | Rust | 其他 | 制作任何东西：了解任何软件的工作原理，并制作自己的软件。 |
-| 3 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | +6,950 | 72,609 | JavaScript | Agent Skill | 用于多阶段安全审核的编码代理技能，具有经过独立验证的机器可读结果 |
-| 4 | [mattpocock/skills](https://github.com/mattpocock/skills) | +5,998 | 324,479 | Shell | Agent Skill | 面向真正工程师的技能集，直接来自作者的 .agents 目录 |
-| 5 | [NotRexed/Hookshot](https://github.com/NotRexed/Hookshot) | +5,770 | 8,787 | C++ | 其他 | 《塞尔达传说：时光之塔》原生重编任天堂Switch 2翻拍 |
-| 6 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | +5,720 | 110,671 | Python | 媒体生成 | 开源全本地的 ElevenLabs 替代：声音克隆、设计、视频配音与有声书，支持 646 种语言 |
-| 7 | [Minireel/HGhub](https://github.com/Minireel/HGhub) | +5,613 | 8,850 | Rust | 其他 | YellowFruit第三方客户端 |
-| 8 | [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) | +5,584 | 108,952 | Python | 数据与基础设施 | 通过社交网络中的用户名查找社交媒体帐户 |
-| 9 | [Lee-xeo/Claude-Cage](https://github.com/Lee-xeo/Claude-Cage) | +4,165 | 4,775 | Go | Agent Skill | CAGE ：为 Claude 特化的轻量化虚拟机，克劳德彻底杜绝网络泄露。多平台适配，克劳德支持多账号管理、远程部署、移动端操控。 |
-| 10 | [anefzaoui/misterdownloadmanager](https://github.com/anefzaoui/misterdownloadmanager) | +4,108 | 5,528 | Rust | 其他 | misterdownloadmanager ：适用于Windows、Mac和Linux的纯Rust从头开始编写的终极开源洁净室下载管理器 |
-| 11 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | +4,021 | 110,207 | Rust | Agent Skill | 让您的人工智能更好地进行设计的设计语言。 |
-| 12 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | +3,996 | 190,911 | JavaScript | Agent Skill | 让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码 |
-| 13 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | +3,340 | 303,036 | JavaScript | Agent Skill | 智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体 |
-| 14 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | +3,266 | 84,341 | TypeScript | Agent Skill | 写 HTML、渲染视频，为智能体而生 |
-| 15 | [tangerineturtle1/NX2navi](https://github.com/tangerineturtle1/NX2navi) | +2,821 | 4,093 | C | 其他 |  |
-| 16 | [anthropics/skills](https://github.com/anthropics/skills) | +2,719 | 192,309 | Python | Agent Skill | 座席技能的公共存储库 |
-| 17 | [libracoder/kiri](https://github.com/libracoder/kiri) | +2,526 | 3,711 | Rust | 开发工具 | 适用于macOS、Windows和Linux的小型快速容器运行时 |
-| 18 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | +2,350 | 49,902 | Rust | Agent Skill | 适用于AI代理的浏览器自动化CLI |
-| 19 | [Edge0-AI/Edge0](https://github.com/Edge0-AI/Edge0) | +2,265 | 11,432 | C++ | 模型与训练 | 在大约2.5 GB的RAM中运行35B MoE模型。权重从SSD流式传输；经过训练的路由器预测加载提前一步。支持Mac、iPhone、And… |
-| 20 | [shanselman/gputaskman](https://github.com/shanselman/gputaskman) | +2,236 | 3,221 | Python | 模型与训练 | 适用于Windows、Linux和WSL的GPU任务管理器：每进程VRAM、GPU活动和LLM模型/KV缓存洞察（ Windows AMD和… |
+| 1 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | +9,627 | 16,035 | Python | Agent Skill | 一个用于漏洞挖掘和外部红队工作的 Claude Code 技能包——82 项技能、15 个斜杠命令、681 个披露报告模式（涵盖 24 个核… |
+| 2 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | +4,921 | 196,362 | JavaScript | Agent Skill | 让 AI 智能体像房间里最懒的资深工程师那样思考：最好的代码是你从没写过的代码 |
+| 3 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | +4,629 | 115,968 | Python | 媒体生成 | 开源全本地的 ElevenLabs 替代：声音克隆、设计、视频配音与有声书，支持 646 种语言 |
+| 4 | [mattpocock/skills](https://github.com/mattpocock/skills) | +4,610 | 329,768 | Shell | Agent Skill | 面向真正工程师的技能集，直接来自作者的 .agents 目录 |
+| 5 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | +4,536 | 308,369 | JavaScript | Agent Skill | 智能体运行框架的性能优化系统：技能、直觉、记忆与安全，面向各类编程智能体 |
+| 6 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | +3,791 | 114,532 | Rust | Agent Skill | 让您的人工智能更好地进行设计的设计语言。 |
+| 7 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | +3,474 | 76,689 | JavaScript | Agent Skill | 用于多阶段安全审核的编码代理技能，具有经过独立验证的机器可读结果 |
+| 8 | [dream-num/univer](https://github.com/dream-num/univer) | +3,342 | 28,935 | TypeScript | Agent Skill | 使用 Univer Office SDK 构建您自己的 AI 办公套件。将编辑、计算、协作和文件处理功能集成到您的产品中，供人和 AI 代理… |
+| 9 | [kajisho5/ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill) | +3,316 | 9,273 | Python | Agent Skill | 编码代理的本地视频编辑器： 42个FFmpeg工具，具有机器可读的合同和MCP服务器，适用于Claude Code、Cursor和Codex… |
+| 10 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | +3,102 | 87,837 | TypeScript | Agent Skill | 写 HTML、渲染视频，为智能体而生 |
+| 11 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | +3,055 | 55,103 | Go | Agent Skill | 在阿里规模上验证过的混合架构代码评审工具：确定性流水线 + LLM 智能体，行级精确评论 |
+| 12 | [simplexai-labs/linger](https://github.com/simplexai-labs/linger) | +3,042 | 3,385 | TypeScript | Agent Skill | Linger is An Open-Source Personal Agent That Runs Fully on Your PC. We… |
+| 13 | [ersinkoc/phonebox](https://github.com/ersinkoc/phonebox) | +2,623 | 3,870 | C# | Agent Skill | 将旧的安卓手机变成可定制的桌面面板和触摸控制面板，适用于 Windows、Linux 和 macOS。提供 115 个小部件，用于系统统计、… |
+| 14 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | +2,408 | 69,791 | HTML | Agent Skill | 面向 Claude Code、Codex 与 Pi 的 38 种编辑级图表版式，自包含 HTML + SVG，无阴影、不用 Mermaid |
+| 15 | [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) | +2,278 | 5,213 | TypeScript | 其他 | 聊天演示 |
+| 16 | [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui) | +2,212 | 20,042 | TypeScript | Agent Skill | AG-UI：代理与用户交互协议。将代理引入前端应用程序。 |
+| 17 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | +2,142 | 11,419 | TypeScript | Agent Skill | 一个专为与 Stitch MCP 服务器配合使用的 Agent Skills 库。每项技能均遵循 Agent Skills 开放标准，以便与… |
+| 18 | [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) | +2,093 | 3,744 | Python | Agent Skill | 用于评估 AI 代理技能的多层框架，包括质量关卡、语义重叠检测、合成评估数据集生成以及实时代理评估，后者用于衡量技能如何影响 |
+| 19 | [microsoft/markitdown](https://github.com/microsoft/markitdown) | +1,965 | 197,530 | Python | 开发工具 | 把文件与办公文档转换为 Markdown 的 Python 工具 |
+| 20 | [Tencent/LoopForge](https://github.com/Tencent/LoopForge) | +1,798 | 3,255 | Go | Agent Skill | 用于交付编码代理的自托管工作流。使用脚本和人工审批关卡编排 CodeBuddy、Codex 和 Claude Code。包括用于编码助手的本… |
 
 ## 新项目榜（周期内创建，按当前总星排序）
 
@@ -35,48 +35,46 @@
 
 | 排名 | 项目 | 当前星数 | 创建日期 | 语言 | 分类 |
 |---:|---|---:|---|---|---|
-| 1 | [huamidev/GestaltX](https://github.com/huamidev/GestaltX) | 7,735 | 2026-11-09 | Swift | 开发工具 |
-| 2 | [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo) | 2,935 | 2026-11-12 | TypeScript | 其他 |
-| 3 | [apex-compute/ANR](https://github.com/apex-compute/ANR) | 2,199 | 2026-11-11 | C++ | 其他 |
-| 4 | [Kianuni/Erosion-CN](https://github.com/Kianuni/Erosion-CN) | 2,126 | 2026-11-10 | Swift | 其他 |
-| 5 | [FrigadeHQ/yogurt](https://github.com/FrigadeHQ/yogurt) | 1,641 | 2026-11-10 | TypeScript | 其他 |
-| 6 | [HybridRobotics/supermimic](https://github.com/HybridRobotics/supermimic) | 1,554 | 2026-11-10 | Python | 模型与训练 |
-| 7 | [agentes-chat/agentes-chat](https://github.com/agentes-chat/agentes-chat) | 1,507 | 2026-11-09 | TypeScript | Agent Skill |
-| 8 | [HolyArrs/HolyArrs](https://github.com/HolyArrs/HolyArrs) | 1,258 | 2026-11-09 | Go | 本地优先 |
-| 9 | [DevedevT/FFmpeg-GUI-Editor-Windows](https://github.com/DevedevT/FFmpeg-GUI-Editor-Windows) | 1,228 | 2026-11-12 | Visual Basic .NET | 媒体生成 |
-| 10 | [adriadam10/mkw-recomp](https://github.com/adriadam10/mkw-recomp) | 1,222 | 2026-11-09 | C | 其他 |
-| 11 | [Noniv/abyssal-garden](https://github.com/Noniv/abyssal-garden) | 1,058 | 2026-11-12 | JavaScript | 模型与训练 |
-| 12 | [hitkeeen/blender-ai-mcp-addon](https://github.com/hitkeeen/blender-ai-mcp-addon) | 1,046 | 2026-11-12 | — | Agent Skill |
-| 13 | [duwqijlk/muse-protocol](https://github.com/duwqijlk/muse-protocol) | 1,008 | 2026-11-14 | Python | 其他 |
-| 14 | [Eynnzerr/TelemetryCleaner](https://github.com/Eynnzerr/TelemetryCleaner) | 991 | 2026-11-11 | Kotlin | 其他 |
-| 15 | [kolbicz/WQFiles](https://github.com/kolbicz/WQFiles) | 925 | 2026-11-09 | Objective-C | 数据与基础设施 |
-| 16 | [alexeyw/lot-map](https://github.com/alexeyw/lot-map) | 888 | 2026-11-09 | TypeScript | Agent Skill |
-| 17 | [serveroshq/panel](https://github.com/serveroshq/panel) | 846 | 2026-11-09 | PHP | 数据与基础设施 |
-| 18 | [JDhruv14/line-art-animation](https://github.com/JDhruv14/line-art-animation) | 829 | 2026-11-10 | TypeScript | Agent Skill |
-| 19 | [ZiChuanLan/freebie-radar](https://github.com/ZiChuanLan/freebie-radar) | 795 | 2026-11-12 | TypeScript | 其他 |
-| 20 | [opencoredev/islandcn](https://github.com/opencoredev/islandcn) | 733 | 2026-11-13 | TypeScript | 其他 |
+| 1 | [ItsNotRexed/Leonida](https://github.com/ItsNotRexed/Leonida) | 15,027 | 2026-11-20 | Python | 其他 |
+| 2 | [erkamyaman/rust-anything](https://github.com/erkamyaman/rust-anything) | 7,998 | 2026-11-16 | Rust | Agent Skill |
+| 3 | [krisgfx9/Wireless-Device-Battery-Monitor](https://github.com/krisgfx9/Wireless-Device-Battery-Monitor) | 5,808 | 2026-11-16 | C++ | 其他 |
+| 4 | [bookwjitchieni1986/blender-ai-mcp-addon](https://github.com/bookwjitchieni1986/blender-ai-mcp-addon) | 2,746 | 2026-11-19 | — | Agent Skill |
+| 5 | [gylive/google-ultra](https://github.com/gylive/google-ultra) | 2,598 | 2026-11-17 | Python | 其他 |
+| 6 | [iamajmeena/neonclipping](https://github.com/iamajmeena/neonclipping) | 2,094 | 2026-11-19 | Python | 媒体生成 |
+| 7 | [sybil-solutions/inference-optimisation-skill](https://github.com/sybil-solutions/inference-optimisation-skill) | 1,961 | 2026-11-16 | Python | Agent Skill |
+| 8 | [EL4CTEO/fast-anything](https://github.com/EL4CTEO/fast-anything) | 1,900 | 2026-11-21 | Rust | Agent Skill |
+| 9 | [omonkeyz/xbox-emulator](https://github.com/omonkeyz/xbox-emulator) | 1,316 | 2026-11-21 | Rust | 其他 |
+| 10 | [R0Y00/Xbox2Windows](https://github.com/R0Y00/Xbox2Windows) | 1,307 | 2026-11-20 | Python | 科研教育 |
+| 11 | [Lemxy/WinRust](https://github.com/Lemxy/WinRust) | 1,233 | 2026-11-17 | Rust | 其他 |
+| 12 | [chuanqisun/spaceship](https://github.com/chuanqisun/spaceship) | 1,047 | 2026-11-16 | HTML | 其他 |
+| 13 | [siliconjungle/shapeshift-labs-ink-studio](https://github.com/siliconjungle/shapeshift-labs-ink-studio) | 1,029 | 2026-11-16 | JavaScript | 媒体生成 |
+| 14 | [hatsunemiku-ai/google-one-tools](https://github.com/hatsunemiku-ai/google-one-tools) | 1,027 | 2026-11-20 | Python | 开发工具 |
+| 15 | [sourmitocand1987/VividFrame-GPU](https://github.com/sourmitocand1987/VividFrame-GPU) | 905 | 2026-11-18 | — | 媒体生成 |
+| 16 | [Bodila51/gtavi-claudecode](https://github.com/Bodila51/gtavi-claudecode) | 902 | 2026-11-18 | Python | Agent Skill |
+| 17 | [bothaggsigym1988/frameglide](https://github.com/bothaggsigym1988/frameglide) | 855 | 2026-11-18 | — | 媒体生成 |
+| 18 | [boringmarketer/boring-marketing-skills](https://github.com/boringmarketer/boring-marketing-skills) | 796 | 2026-11-16 | Python | Agent Skill |
+| 19 | [MSNightmare/FastUnlock](https://github.com/MSNightmare/FastUnlock) | 680 | 2026-11-19 | — | 其他 |
+| 20 | [0marContreras/gta6recomp](https://github.com/0marContreras/gta6recomp) | 649 | 2026-11-18 | — | 其他 |
 
 ## 分类透视
 
 | 分类 | 数量 | 占比 |
 |---|---:|---:|
-| Agent Skill | 10 | 50% |
-| 其他 | 5 | 25% |
-| 模型与训练 | 2 | 10% |
+| Agent Skill | 17 | 85% |
 | 媒体生成 | 1 | 5% |
-| 数据与基础设施 | 1 | 5% |
+| 其他 | 1 | 5% |
 | 开发工具 | 1 | 5% |
 
 ## 数据质量
 
-- 快照覆盖 **64 天**（2026-09-14 ~ 2026-11-16），累计 50,381 条记录
+- 快照覆盖 **71 天**（2026-09-14 ~ 2026-11-23），累计 55,980 条记录
 - 增量时间跨度上限 **10 天**，超出即剔除
-- 因跨度超限被剔除 **10** 个仓库（快照断档导致，非同口径比较）
-  - addyosmani/agent-skills：跨度 34 天，+12,704（2026-10-10 → 2026-11-13）
-  - Alishahryar1/free-claude-code：跨度 31 天，+10,112（2026-10-13 → 2026-11-13）
-  - JuliusBrussee/caveman：跨度 30 天，+7,560（2026-10-16 → 2026-11-15）
-  - dream-num/univer：跨度 46 天，+2,628（2026-09-30 → 2026-11-15）
-  - ruvnet/RuView：跨度 12 天，+2,501（2026-10-29 → 2026-11-10）
+- 因跨度超限被剔除 **6** 个仓库（快照断档导致，非同口径比较）
+  - obra/superpowers：跨度 21 天，+13,683（2026-11-01 → 2026-11-22）
+  - HKUDS/CLI-Anything：跨度 33 天，+6,858（2026-10-20 → 2026-11-22）
+  - n8n-io/n8n：跨度 62 天，+6,166（2026-09-18 → 2026-11-19）
+  - cursor/plugins：跨度 34 天，+5,391（2026-10-19 → 2026-11-22）
+  - zhouxiaoka/autoclip：跨度 61 天，+4,640（2026-09-22 → 2026-11-22）
 - 未发现疑似刷星迹象
 
 ---

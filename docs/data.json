@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T10:46:56+08:00",
+ "generated_at": "2026-11-28T10:37:10+08:00",
  "tz_offset_hours": 8,
  "snapshot_dates": [
   "2026-09-14",
@@ -76,10 +76,11 @@
   "2026-11-24",
   "2026-11-25",
   "2026-11-26",
-  "2026-11-27"
+  "2026-11-27",
+  "2026-11-28"
  ],
- "tracked_repos": 7969,
- "latest_date": "2026-11-27",
+ "tracked_repos": 8169,
+ "latest_date": "2026-11-28",
  "daily_summary": [
   {
    "date": "2026-09-14",
@@ -886,217 +887,228 @@
   },
   {
    "date": "2026-11-26",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
    "total_gain": 35021,
    "gainers": 310,
    "top_name": "elementalsouls/Claude-BugHunter",
    "top_delta": 1496,
-   "new_repos": 130,
+   "new_repos": 129,
    "prev": "2026-11-25"
   },
   {
    "date": "2026-11-27",
-   "repos": 799,
+   "repos": 798,
    "is_first": false,
-   "total_gain": 41473,
-   "gainers": 348,
+   "total_gain": 41361,
+   "gainers": 347,
    "top_name": "4lwayz/portwatch-vi",
    "top_delta": 1638,
    "new_repos": 140,
    "prev": "2026-11-26"
+  },
+  {
+   "date": "2026-11-28",
+   "repos": 798,
+   "is_first": false,
+   "total_gain": 33498,
+   "gainers": 263,
+   "top_name": "elementalsouls/Claude-BugHunter",
+   "top_delta": 1465,
+   "new_repos": 245,
+   "prev": "2026-11-27"
   }
  ],
  "cumulative_top": [
   {
    "full_name": "debpalash/VoiceStudio",
-   "delta": 91522,
-   "stars": 118950,
+   "delta": 91988,
+   "stars": 119416,
    "language": "Python"
   },
   {
    "full_name": "eternity4719/HowToLiveBetter",
-   "delta": 77514,
-   "stars": 77729,
+   "delta": 77610,
+   "stars": 77825,
    "language": "HTML"
   },
   {
    "full_name": "mattpocock/skills",
-   "delta": 72189,
-   "stars": 333660,
+   "delta": 72834,
+   "stars": 334305,
    "language": "Shell"
   },
   {
    "full_name": "DietrichGebert/ponytail",
-   "delta": 61842,
-   "stars": 199409,
+   "delta": 62601,
+   "stars": 200168,
    "language": "JavaScript"
   },
   {
    "full_name": "affaan-m/ECC",
-   "delta": 53476,
-   "stars": 311357,
+   "delta": 54025,
+   "stars": 311906,
    "language": "JavaScript"
   },
   {
    "full_name": "heygen-com/hyperframes",
-   "delta": 41208,
-   "stars": 90924,
+   "delta": 41848,
+   "stars": 91564,
    "language": "TypeScript"
   },
   {
    "full_name": "tt-a1i/archify",
-   "delta": 39462,
-   "stars": 100622,
-   "language": "JavaScript"
-  },
-  {
-   "full_name": "bilawalsidhu/gods-eye-view",
-   "delta": 34725,
-   "stars": 67069,
+   "delta": 39827,
+   "stars": 100987,
    "language": "JavaScript"
   },
   {
    "full_name": "cathrynlavery/diagram-design",
-   "delta": 34545,
-   "stars": 73913,
+   "delta": 35123,
+   "stars": 74491,
    "language": "HTML"
   },
   {
+   "full_name": "bilawalsidhu/gods-eye-view",
+   "delta": 34856,
+   "stars": 67200,
+   "language": "JavaScript"
+  },
+  {
    "full_name": "alibaba/open-code-review",
-   "delta": 32864,
-   "stars": 56668,
+   "delta": 33108,
+   "stars": 56912,
    "language": "Go"
   }
  ],
  "cumulative_comparable": 203,
  "daily_top": [
   {
-   "full_name": "4lwayz/portwatch-vi",
-   "language": "JavaScript",
-   "delta": 1638,
-   "stars": 5913
-  },
-  {
    "full_name": "elementalsouls/Claude-BugHunter",
    "language": "Python",
-   "delta": 1588,
-   "stars": 24719
+   "delta": 1465,
+   "stars": 26184
   },
   {
-   "full_name": "Belobug/VIctory-Belobug-AMD",
-   "language": "Rust",
-   "delta": 1479,
-   "stars": 3139
-  },
-  {
-   "full_name": "alesha-pro/llm.asm",
-   "language": "Assembly",
-   "delta": 1249,
-   "stars": 1593
-  },
-  {
-   "full_name": "RMvdesi/obsidian-prism",
-   "language": "JavaScript",
-   "delta": 1235,
-   "stars": 2327
-  },
-  {
-   "full_name": "avatarmanz/VIctory-7900XTX",
-   "language": "Rust",
-   "delta": 933,
-   "stars": 1853
-  },
-  {
-   "full_name": "XiaoYouChR/Ghost-Downloader-3",
-   "language": "Python",
-   "delta": 896,
-   "stars": 19224
-  },
-  {
-   "full_name": "firecrawl/firecrawl",
+   "full_name": "nexu-io/opengame",
    "language": "TypeScript",
-   "delta": 888,
-   "stars": 211011
+   "delta": 1220,
+   "stars": 2313
+  },
+  {
+   "full_name": "Pixel679-cmyk/windows-titlebar-blur-customizer",
+   "language": "C++",
+   "delta": 1154,
+   "stars": 1505
+  },
+  {
+   "full_name": "4lwayz/portwatch-vi",
+   "language": "JavaScript",
+   "delta": 886,
+   "stars": 6799
+  },
+  {
+   "full_name": "mjmirza/app-store-compliance",
+   "language": "Shell",
+   "delta": 883,
+   "stars": 7959
+  },
+  {
+   "full_name": "Reukix/Reloc",
+   "language": "Swift",
+   "delta": 832,
+   "stars": 1716
   },
   {
    "full_name": "obra/superpowers",
    "language": "Shell",
-   "delta": 867,
-   "stars": 327551
+   "delta": 814,
+   "stars": 328365
   },
   {
-   "full_name": "cathrynlavery/diagram-design",
-   "language": "HTML",
-   "delta": 795,
-   "stars": 73913
+   "full_name": "DietrichGebert/ponytail",
+   "language": "JavaScript",
+   "delta": 759,
+   "stars": 200168
+  },
+  {
+   "full_name": "firecrawl/firecrawl",
+   "language": "TypeScript",
+   "delta": 714,
+   "stars": 211725
+  },
+  {
+   "full_name": "XiaoYouChR/Ghost-Downloader-3",
+   "language": "Python",
+   "delta": 684,
+   "stars": 19908
   }
  ],
  "narration": {
   "_warm": true,
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "window": [
    "2026-09-14",
-   "2026-11-27"
+   "2026-11-28"
   ],
   "takeaways": {
    "today": {
     "key": "today",
-    "text": "今天全网新增 +41,473 颗星，低于 74 天均值（+43,918）；在已记录的 74 天里排第 30。最热闹的一天是 2026-10-13（+120,528）。",
+    "text": "今天全网新增 +33,498 颗星，低于 75 天均值（+43,778）；在已记录的 75 天里排第 50。最热闹的一天是 2026-10-13（+120,528）。",
     "facts": {
-     "total_gain": 41473,
-     "avg_gain": 43918,
-     "days": 74,
-     "rank_by_gain": 30,
-     "wow_pct": 18,
-     "gainers": 348,
+     "total_gain": 33498,
+     "avg_gain": 43778,
+     "days": 75,
+     "rank_by_gain": 50,
+     "wow_pct": -19,
+     "gainers": 263,
      "peak_date": "2026-10-13",
      "peak_gain": 120528
     }
    },
    "daily_top": {
     "key": "daily_top",
-    "text": "今天涨得最快的是 4lwayz/portwatch-vi，+1,638；其次是 elementalsouls/Claude-BugHunter，+1,588。头名只占当日增量的 4%，涨得相当分散。",
+    "text": "今天涨得最快的是 elementalsouls/Claude-BugHunter，+1,465；其次是 nexu-io/opengame，+1,220。头名只占当日增量的 4%，涨得相当分散。",
     "facts": {
-     "leader": "4lwayz/portwatch-vi",
-     "leader_delta": 1638,
-     "runner_up": "elementalsouls/Claude-BugHunter",
-     "runner_up_delta": 1588,
+     "leader": "elementalsouls/Claude-BugHunter",
+     "leader_delta": 1465,
+     "runner_up": "nexu-io/opengame",
+     "runner_up_delta": 1220,
      "leader_share_pct": 4,
-     "total_gain": 41473
+     "total_gain": 33498
     }
    },
    "cumulative_top": {
     "key": "cumulative_top",
-    "text": "2026-09-14 到 2026-11-27 这段时间，debpalash/VoiceStudio 累计涨了 +91,522，是榜首；eternity4719/HowToLiveBetter 以 +77,514 紧随其后。这个榜只算两端都有快照的 203 个仓库，窗口对所有人一致。",
+    "text": "2026-09-14 到 2026-11-28 这段时间，debpalash/VoiceStudio 累计涨了 +91,988，是榜首；eternity4719/HowToLiveBetter 以 +77,610 紧随其后。这个榜只算两端都有快照的 203 个仓库，窗口对所有人一致。",
     "facts": {
      "leader": "debpalash/VoiceStudio",
-     "leader_delta": 91522,
+     "leader_delta": 91988,
      "runner_up": "eternity4719/HowToLiveBetter",
-     "runner_up_delta": 77514,
+     "runner_up_delta": 77610,
      "comparable": 203,
      "start": "2026-09-14",
-     "end": "2026-11-27"
+     "end": "2026-11-28"
     }
    },
    "breadth": {
     "key": "breadth",
-    "text": "今天有 348 个项目在涨，占追踪池的 44%。",
+    "text": "今天有 263 个项目在涨，占追踪池的 33%。",
     "facts": {
-     "gainers": 348,
-     "tracked": 799,
-     "gainers_pct": 44
+     "gainers": 263,
+     "tracked": 798,
+     "gainers_pct": 33
     }
    },
    "languages": {
     "key": "languages",
-    "text": "追踪的 799 个项目里，HTML 最多，173 个，占 22%；其次是 Python（112）。",
+    "text": "追踪的 798 个项目里，HTML 最多，194 个，占 24%；其次是 Python（153）。",
     "facts": {
      "top": "HTML",
-     "top_n": 173,
-     "top_pct": 22,
-     "distinct": 25,
-     "total_repos": 799
+     "top_n": 194,
+     "top_pct": 24,
+     "distinct": 29,
+     "total_repos": 798
     }
    }
   },
